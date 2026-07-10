@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.9rem;
+
+  /* Haru brand palette — warm cream base, deep ink text, coral signature accent */
+  --background: #fbf7f2;
+  --foreground: #221c17;
+
+  --card: #ffffff;
+  --card-foreground: #221c17;
+
+  --popover: #ffffff;
+  --popover-foreground: #221c17;
+
+  --primary: #e8583f;
+  --primary-foreground: #fff8f5;
+
+  --secondary: #eef0e6;
+  --secondary-foreground: #3a4030;
+
+  --muted: #f1ece4;
+  --muted-foreground: #78705f;
+
+  --accent: #f4c95d;
+  --accent-foreground: #2b2210;
+
+  --destructive: #c0392b;
+  --destructive-foreground: #fff5f4;
+
+  --success: #5b8a63;
+  --success-foreground: #f2f8f0;
+
+  --warning: #d38a1f;
+  --warning-foreground: #2b2003;
+
+  --border: #e7ded2;
+  --input: #e7ded2;
+  --ring: #e8583f;
+
+  --am: #f4c95d;
+  --am-foreground: #2b2210;
+  --pm: #6b6ad6;
+  --pm-foreground: #f4f3fd;
+}
+
+.dark {
+  --background: #17130f;
+  --foreground: #f4ede4;
+
+  --card: #211b15;
+  --card-foreground: #f4ede4;
+
+  --popover: #211b15;
+  --popover-foreground: #f4ede4;
+
+  --primary: #f0704f;
+  --primary-foreground: #1c1108;
+
+  --secondary: #262620;
+  --secondary-foreground: #e4e6d9;
+
+  --muted: #241f18;
+  --muted-foreground: #a89c88;
+
+  --accent: #f4c95d;
+  --accent-foreground: #2b2210;
+
+  --destructive: #e06355;
+  --destructive-foreground: #1c0d0a;
+
+  --success: #7dab84;
+  --success-foreground: #0f1c11;
+
+  --warning: #e3a53a;
+  --warning-foreground: #1f1602;
+
+  --border: #322a21;
+  --input: #322a21;
+  --ring: #f0704f;
+
+  --am: #f4c95d;
+  --am-foreground: #2b2210;
+  --pm: #8382e8;
+  --pm-foreground: #16153a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-am: var(--am);
+  --color-am-foreground: var(--am-foreground);
+  --color-pm: var(--pm);
+  --color-pm-foreground: var(--pm-foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01";
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+}
