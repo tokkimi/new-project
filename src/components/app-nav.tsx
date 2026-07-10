@@ -1,17 +1,19 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-const TABS = [
-  { href: "/app/shelf", label: "Mon étagère" },
-  { href: "/app/scan", label: "Scanner" },
-  { href: "/app/routine", label: "Ma routine" },
-];
-
 export function AppNav() {
+  const t = useTranslations("nav");
   const pathname = usePathname();
+
+  const TABS = [
+    { href: "/app/shelf", label: t("shelf") },
+    { href: "/app/scan", label: t("scan") },
+    { href: "/app/routine", label: t("routine") },
+  ];
+
   return (
     <nav className="flex items-center gap-1 rounded-full bg-muted p-1">
       {TABS.map((tab) => {

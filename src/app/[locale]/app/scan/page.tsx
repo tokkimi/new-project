@@ -1,25 +1,25 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Camera, Check, Loader2, RotateCcw, ArrowRight } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useShelf } from "@/lib/shelf-store";
 import { PRODUCT_CATALOG } from "@/data/catalog";
-import { CATEGORY_LABELS, findIngredient, type Product } from "@/data/ingredients";
-
-const ANALYSIS_STEPS = [
-  "Lecture de la liste INCI...",
-  "Identification des actifs...",
-  "Vérification des conflits connus...",
-];
+import { findIngredient, type Product } from "@/data/ingredients";
 
 type Phase = "idle" | "analyzing" | "result";
 
 export default function ScanPage() {
+  const t = useTranslations("scanPage");
+  const tCategories = useTranslations("categories");
+  const tIngredients = useTranslations("ingredients");
+  const analysisSteps = t.raw("steps") as string[];
+
   const { shelf, addProduct } = useShelf();
   const [phase, setPhase] = React.useState<Phase>("idle");
   const [stepIndex, setStepIndex] = React.useState(0);
@@ -45,7 +45,7 @@ export default function ScanPage() {
     const interval = setInterval(() => {
       i += 1;
       setStepIndex(i);
-      if (i >= ANALYSIS_STEPS.length) {
+      if (i >= analysisSteps.length) {
         clearInterval(interval);
         setMatched(pick);
         setPhase("result");
@@ -62,10 +62,8 @@ export default function ScanPage() {
   return (
     <div className="mx-auto flex max-w-lg flex-col items-center gap-8 text-center">
       <div>
-        <h1 className="font-serif text-3xl">Scanner un produit</h1>
-        <p className="mt-1 text-muted-foreground">
-          Photographie l&apos;étiquette (liste INCI) et laisse Haru l&apos;analyser.
-        </p>
+        <h1 className="font-serif text-3xl">{t("title")}</h1>
+        <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
       </div>
 
       <input
@@ -97,10 +95,8 @@ export default function ScanPage() {
                 <Camera className="size-7" />
               </span>
               <div>
-                <p className="font-medium">Prendre une photo ou importer une image</p>
-                <p className="text-sm text-muted-foreground">
-                  Démo : n&apos;importe quelle image déclenche l&apos;analyse
-                </p>
+                <p className="font-medium">{t("dropTitle")}</p>
+                <p className="text-sm text-muted-foreground">{t("dropSubtitle")}</p>
               </div>
             </Card>
             <Button
@@ -108,7 +104,7 @@ export default function ScanPage() {
               className="mt-2"
               onClick={() => startScan()}
             >
-              ...ou lance une démo sans photo
+              {t("demoWithoutPhoto")}
             </Button>
           </motion.div>
         )}
@@ -126,14 +122,14 @@ export default function ScanPage() {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={preview}
-                  alt="Aperçu du produit scanné"
+                  alt=""
                   className="h-28 w-28 rounded-xl object-cover"
                 />
               ) : (
                 <Loader2 className="size-10 animate-spin text-primary" />
               )}
               <div className="flex flex-col gap-2">
-                {ANALYSIS_STEPS.map((step, i) => (
+                {analysisSteps.map((step, i) => (
                   <p
                     key={step}
                     className={`text-sm transition-colors ${
@@ -163,25 +159,24 @@ export default function ScanPage() {
               <div>
                 <p className="font-serif text-xl">{matched.name}</p>
                 <p className="text-sm text-muted-foreground">
-                  {matched.brand} · {CATEGORY_LABELS[matched.category]}
+                  {matched.brand} · {tCategories(matched.category)}
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-1.5">
-                {matched.ingredientIds.map((id) => (
-                  <Badge key={id}>{findIngredient(id)?.name}</Badge>
-                ))}
+                {matched.ingredientIds.map((id) =>
+                  findIngredient(id) ? (
+                    <Badge key={id}>{tIngredients(`${id}.name`)}</Badge>
+                  ) : null
+                )}
               </div>
               <div className="mt-2 flex gap-2">
                 <Button variant="outline" onClick={reset}>
                   <RotateCcw className="size-4" />
-                  Scanner autre chose
+                  {t("scanAnother")}
                 </Button>
                 <Button asChild>
-                  <Link
-                    href="/app/shelf"
-                    onClick={() => addProduct(matched)}
-                  >
-                    Ajouter à l&apos;étagère
+                  <Link href="/app/shelf" onClick={() => addProduct(matched)}>
+                    {t("addToShelf")}
                     <ArrowRight className="size-4" />
                   </Link>
                 </Button>

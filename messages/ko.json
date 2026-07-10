@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "Haru — 내 스킨케어 루틴, 완벽 해독",
+    "description": "Haru는 보유 중인 제품의 성분을 분석하고, 성분 충돌을 감지하고, 이상적인 아침/저녁 루틴을 만들어줍니다. 간단하고, 실용적이고, 군더더기 없이."
+  },
+  "localeSwitcher": {
+    "en": "English",
+    "ko": "한국어"
+  },
+  "nav": {
+    "howItWorks": "이용 방법",
+    "features": "주요 기능",
+    "ingredients": "성분 데이터베이스",
+    "tryApp": "앱 사용해보기",
+    "shelf": "내 화장대",
+    "scan": "스캔",
+    "routine": "내 루틴",
+    "profile": "프로필",
+    "signIn": "로그인",
+    "signOut": "로그아웃"
+  },
+  "hero": {
+    "badge": "K-뷰티 루틴에서 영감을 받았습니다",
+    "titleLine1": "내 스킨케어 루틴,",
+    "titleLine2": "드디어 완벽 해독.",
+    "subtitle": "Haru는 이미 가지고 있는 제품을 스캔하고, 성분 충돌을 찾아내고, 이상적인 아침/저녁 루틴을 만들어줍니다 — 어려운 용어도, 세 시간짜리 검색도 필요 없어요.",
+    "ctaPrimary": "내 루틴 만들기",
+    "ctaSecondary": "이용 방법 보기",
+    "disclaimer": "화장대 제품 12개까지 무료 · 신용카드 불필요"
+  },
+  "howItWorks": {
+    "eyebrow": "이용 방법",
+    "title": "세 단계, 번거로움 없이",
+    "steps": [
+      {
+        "title": "화장대를 추가하세요",
+        "text": "제품의 전성분 리스트를 촬영하거나 데이터베이스에서 선택하세요 — 제품당 30초면 충분해요."
+      },
+      {
+        "title": "충돌을 감지해드려요",
+        "text": "Haru는 제품의 활성 성분을 규칙 엔진과 대조합니다: 과도한 각질 제거, 성분 비활성화, 불필요한 중복까지."
+      },
+      {
+        "title": "정돈된 아침/저녁 루틴",
+        "text": "모든 제품이 올바른 단계, 올바른 순서로 정렬되고, 두 성분이 궁합이 안 맞을 땐 명확한 대안을 제시해드려요."
+      }
+    ]
+  },
+  "featureShowcase": {
+    "eyebrow": "실제 예시",
+    "title": "실제 화장대에서 Haru가 보는 것",
+    "subtitle": "인기 제품 8개로 만든 예시 — 이미 화장실에 있을 법한 제품들이에요.",
+    "eveningRoutine": "저녁 루틴",
+    "alertsDetected": "경고 {count}건 감지됨",
+    "whatHaruSuggests": "Haru의 제안",
+    "amCount": "{count}개 제품",
+    "amLabel": "아침",
+    "pmCount": "{count}개 제품",
+    "pmLabel": "저녁",
+    "conflictCount": "충돌 {count}건",
+    "conflictLabel": "해결 필요"
+  },
+  "ingredientBase": {
+    "eyebrow": "성분 데이터베이스",
+    "title": "Haru가 대신 살펴보는 활성 성분들",
+    "subtitle": "규칙 엔진은 계속 업데이트됩니다. 이미 다루고 있는 핵심 성분들이에요.",
+    "timeLabel": {
+      "am": "아침",
+      "pm": "저녁",
+      "both": "아침 & 저녁"
+    }
+  },
+  "finalCta": {
+    "title": "이제 무엇과 무엇이 맞는지 추측하지 마세요.",
+    "subtitle": "화장대를 추가하면 나머지는 저희가 처리할게요. 무료로 시작하세요.",
+    "cta": "내 루틴 만들기"
+  },
+  "footer": {
+    "tagline": "Haru는 스킨케어 루틴의 성분을 해독해서 나쁜 조합과 불필요한 지출을 막아드려요.",
+    "app": "앱 사용하기",
+    "ingredients": "성분",
+    "howItWorks": "이용 방법",
+    "rights": "Haru. 마케팅 문구 없이, 정성껏 만들었습니다."
+  },
+  "shelf": {
+    "title": "내 화장대",
+    "subtitle": "Haru가 추적 중인 제품 {count}개.",
+    "scan": "스캔",
+    "addProduct": "제품 추가",
+    "emptyTitle": "화장대가 비어 있어요",
+    "emptyText": "몇 가지 제품을 추가하면 Haru가 루틴을 만들고 잠재적인 충돌을 찾아드려요.",
+    "readyTitle": "루틴을 확인할 준비가 되셨나요?",
+    "readyText": "Haru가 제품 순서를 정하고 충돌을 표시해드려요.",
+    "viewRoutine": "내 루틴 보기",
+    "remove": "{name} 삭제"
+  },
+  "addProductDialog": {
+    "title": "화장대에 추가",
+    "description": "데이터베이스에서 제품을 선택하세요 — 실제 v1에서는 포장을 스캔하는 방식으로 진행됩니다.",
+    "searchPlaceholder": "브랜드나 제품을 검색하세요...",
+    "noResults": "일치하는 제품이 없어요."
+  },
+  "scanPage": {
+    "title": "제품 스캔",
+    "subtitle": "라벨(전성분 리스트)을 촬영하면 Haru가 분석해드려요.",
+    "dropTitle": "사진을 찍거나 이미지를 업로드하세요",
+    "dropSubtitle": "데모: 어떤 이미지든 분석이 시작돼요",
+    "demoWithoutPhoto": "...또는 사진 없이 데모 실행하기",
+    "steps": [
+      "전성분 리스트 읽는 중...",
+      "활성 성분 확인 중...",
+      "알려진 충돌 검사 중..."
+    ],
+    "scanAnother": "다른 제품 스캔하기",
+    "addToShelf": "화장대에 추가"
+  },
+  "routinePage": {
+    "title": "내 루틴",
+    "subtitle": "화장대 제품 {count}개를 기반으로 구성했어요.",
+    "morning": "아침",
+    "evening": "저녁",
+    "steps": "{count}단계",
+    "noProducts": "이 시간대에 해당하는 제품이 없어요.",
+    "conflictsDetected": "감지된 충돌",
+    "noConflictsTitle": "충돌이 감지되지 않았어요 🎉",
+    "noConflictsText": "화장대의 성분들이 서로 잘 어울려요.",
+    "duplicateActives": "중복된 활성 성분",
+    "duplicateTitle": "같은 강력 활성 성분이 들어간 제품이 {count}개 있어요",
+    "backToRoutine": "루틴으로 돌아가기"
+  },
+  "conflictDetail": {
+    "notFound": "존재하지 않는(또는 더 이상 존재하지 않는) 충돌이에요.",
+    "why": "표시된 이유",
+    "suggestion": "Haru의 제안",
+    "disclaimer": "이 권장 사항은 일반적인 내용이며, 피부과 전문의의 조언을 대신할 수 없습니다. 특히 민감성 피부이거나 처방받은 치료를 받고 있다면 더욱 그렇습니다."
+  },
+  "severity": {
+    "avoid": "피하세요",
+    "space_out": "간격 두기",
+    "sequence": "순서 조정",
+    "note": "알아두면 좋아요"
+  },
+  "categories": {
+    "cleanser": "클렌저",
+    "toner": "토너",
+    "essence": "에센스",
+    "serum": "세럼",
+    "spot": "부분 케어",
+    "eye": "아이크림",
+    "moisturizer": "크림",
+    "oil": "오일",
+    "sunscreen": "선크림"
+  },
+  "ingredients": {
+    "retinol": { "name": "레티놀 / 레티노이드", "summary": "세포 재생, 안티에이징, 여드름 케어." },
+    "vitamin_c": { "name": "비타민 C (L-AA)", "summary": "항산화, 광채, 대기오염 방지." },
+    "niacinamide": { "name": "나이아신아마이드", "summary": "피지 조절, 진정, 피부 장벽 강화." },
+    "aha": { "name": "AHA (글리콜산 / 락틱애씨드)", "summary": "각질 제거, 피부결과 톤 개선." },
+    "bha": { "name": "BHA (살리실산)", "summary": "각질 제거, 모공 케어, 트러블 완화." },
+    "benzoyl_peroxide": { "name": "과산화벤조일", "summary": "항균 작용, 염증성 여드름 치료." },
+    "vitamin_e": { "name": "비타민 E", "summary": "항산화, 비타민 C와 자주 함께 사용." },
+    "peptides": { "name": "펩타이드 / 구리 펩타이드", "summary": "탄력 개선, 피부 장벽 회복." },
+    "hyaluronic_acid": { "name": "히알루론산", "summary": "수분 공급, 탄력 채우기." },
+    "centella": { "name": "센텔라 아시아티카 (병풀)", "summary": "진정, 재생 — K-뷰티의 대표 성분." },
+    "spf": { "name": "선크림 (SPF)", "summary": "자외선 차단 — 아침 루틴의 마지막 단계." },
+    "ceramides": { "name": "세라마이드", "summary": "피부 장벽을 복원해요." }
+  },
+  "conflictRules": {
+    "retinol_aha_bha": {
+      "headline": "과도한 각질 제거 위험이 높아요",
+      "reason": "레티놀과 AHA는 둘 다 세포 재생 속도를 높여요. 같은 날 저녁에 함께 사용하면 붉어짐, 자극, 각질 들뜸이 배가될 수 있어요.",
+      "recommendation": "겹쳐 사용하지 말고 저녁을 나눠 번갈아 사용하세요 (예: 월/수/금은 레티놀, 나머지 날은 AHA)."
+    },
+    "retinol_bha": {
+      "headline": "과도한 각질 제거 위험이 높아요",
+      "reason": "AHA와 같은 원리예요: BHA와 레티놀을 함께 쓰면 이미 예민해진 피부 장벽에 자극이 누적돼요.",
+      "recommendation": "각각 다른 저녁에 사용하고, 절대 동시에 사용하지 마세요."
+    },
+    "retinol_benzoyl": {
+      "headline": "과산화벤조일이 레티놀을 비활성화시켜요",
+      "reason": "과산화벤조일은 레티놀을 산화시켜 효과를 크게 떨어뜨리고, 함께 사용하면 피부 자극도 심해질 수 있어요.",
+      "recommendation": "과산화벤조일은 아침에, 레티놀은 몇 시간 간격을 두고 저녁에 사용하거나 요일을 나눠서 사용하세요."
+    },
+    "vitc_retinol_timing": {
+      "headline": "강력한 두 성분, 서로 다른 타이밍이 필요해요",
+      "reason": "L-AA 비타민 C는 활성 레티놀과 가까운 pH에서 불안정해요. 함께 사용하면 두 성분의 효과가 일부 상쇄되고 자극이 생길 수 있어요.",
+      "recommendation": "비타민 C는 아침(항산화 + 보호), 레티놀은 저녁에. 간단하고 효과적이며 충돌이 전혀 없어요."
+    },
+    "aha_bha_together": {
+      "headline": "각질 제거 성분이 중복돼요",
+      "reason": "같은 날 저녁에 두 가지 화학적 각질 제거 성분을 사용하면 피부 장벽 손상 위험이 커져요. 특히 민감성 피부라면 더욱 그래요.",
+      "recommendation": "저녁마다 하나씩 선택하거나, 내성이 강한 피부라면 낮은 빈도로 조합을 시작해보세요."
+    },
+    "niacinamide_vitc_myth": {
+      "headline": "속설: 이 조합은 사실 안전해요",
+      "reason": "나이아신아마이드와 비타민 C가 만나면 효과 없는 화합물이 된다는 속설은 실제 루틴과는 무관한, 매우 높은 온도에서 진행된 오래된 연구에서 비롯됐어요.",
+      "recommendation": "함께 사용해도 문제없어요. 피부가 반응한다면 이 조합 때문이 아니라 농도를 먼저 확인해보세요."
+    },
+    "peptides_aha": {
+      "headline": "산성 pH가 일부 펩타이드를 비활성화시킬 수 있어요",
+      "reason": "많은 펩타이드는 중성 pH에서 가장 잘 작용해요. 직전에 바른 산성 각질 제거 성분이 그 효과를 떨어뜨릴 수 있어요.",
+      "recommendation": "펩타이드는 다른 시간대(아침 루틴, 또는 pH가 중화된 후)에 사용하세요."
+    },
+    "spf_am_only": {
+      "headline": "레티놀은 광과민성을 높여요",
+      "reason": "레티놀은 피부를 자외선에 더 민감하게 만들어요. 저녁에 사용하는 제품이니 정작 중요한 건 다음 날 아침의 선크림이에요.",
+      "recommendation": "같은 날 저녁에 신경 쓸 조합은 없어요 — 레티놀을 사용한 다음 날 아침엔 선크림을 꼭 바르세요."
+    }
+  },
+  "auth": {
+    "signIn": "로그인",
+    "signUp": "계정 만들기",
+    "signOut": "로그아웃",
+    "name": "이름",
+    "email": "이메일",
+    "password": "비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "signInCta": "로그인",
+    "signUpCta": "계정 만들기",
+    "noAccount": "아직 계정이 없으신가요?",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "createOne": "계정 만들기",
+    "signInInstead": "로그인하기",
+    "orContinueWith": "또는",
+    "errorInvalidCredentials": "이메일 또는 비밀번호가 올바르지 않아요.",
+    "errorEmailTaken": "이미 이 이메일로 가입된 계정이 있어요.",
+    "errorGeneric": "문제가 발생했어요. 다시 시도해주세요.",
+    "errorWeakPassword": "비밀번호는 최소 8자 이상이어야 해요.",
+    "signInSubtitle": "로그인하면 여러 기기에서 화장대를 동기화할 수 있어요.",
+    "signUpSubtitle": "계정을 만들면 화장대와 루틴을 저장할 수 있어요."
+  },
+  "profile": {
+    "title": "프로필",
+    "memberSince": "{date}부터 회원",
+    "shelfCount": "추적 중인 제품 {count}개",
+    "signOutCta": "로그아웃",
+    "deleteAccount": "계정 삭제",
+    "deleteAccountConfirm": "계정과 화장대가 영구적으로 삭제되며 되돌릴 수 없어요.",
+    "language": "언어",
+    "theme": "테마",
+    "themeLight": "라이트",
+    "themeDark": "다크",
+    "themeSystem": "시스템 설정"
+  },
+  "common": {
+    "back": "뒤로",
+    "cancel": "취소",
+    "save": "저장",
+    "loading": "불러오는 중..."
+  }
+}

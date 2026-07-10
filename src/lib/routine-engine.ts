@@ -122,15 +122,14 @@ export function buildRoutine(products: Product[]): RoutineResult {
   };
 }
 
-export function severityMeta(severity: ConflictRule["severity"]) {
+export function severityTone(severity: ConflictRule["severity"]) {
   switch (severity) {
     case "avoid":
-      return { label: "À éviter", tone: "destructive" as const };
+      return "destructive" as const;
     case "space_out":
-      return { label: "À espacer", tone: "warning" as const };
     case "sequence":
-      return { label: "À séquencer", tone: "warning" as const };
+      return "warning" as const;
     case "note":
-      return { label: "Bon à savoir", tone: "success" as const };
+      return "success" as const;
   }
 }

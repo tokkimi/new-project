@@ -1,20 +1,25 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { ArrowLeft, Layers } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Badge, type badgeVariants } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CONFLICT_RULES } from "@/data/ingredients";
 import { findProduct } from "@/data/catalog";
-import { severityMeta } from "@/lib/routine-engine";
+import { severityTone } from "@/lib/routine-engine";
 import type { VariantProps } from "class-variance-authority";
 
 export default function ConflictDetailPage() {
   const params = useParams<{ id: string }>();
   const searchParams = useSearchParams();
+  const t = useTranslations("conflictDetail");
+  const tSeverity = useTranslations("severity");
+  const tConflicts = useTranslations("conflictRules");
+  const tRoutine = useTranslations("routinePage");
 
   const rule = CONFLICT_RULES.find((r) => r.id === params.id);
   const productA = findProduct(searchParams.get("a") ?? "");
@@ -23,30 +28,33 @@ export default function ConflictDetailPage() {
   if (!rule) {
     return (
       <div className="mx-auto max-w-lg text-center">
-        <p className="text-muted-foreground">Ce conflit n&apos;existe pas (ou plus).</p>
+        <p className="text-muted-foreground">{t("notFound")}</p>
         <Button asChild variant="link">
-          <Link href="/app/routine">Retour à la routine</Link>
+          <Link href="/app/routine">{tRoutine("backToRoutine")}</Link>
         </Button>
       </div>
     );
   }
-
-  const meta = severityMeta(rule.severity);
 
   return (
     <div className="mx-auto flex max-w-2xl flex-col gap-6">
       <Button asChild variant="ghost" size="sm" className="w-fit -ml-2">
         <Link href="/app/routine">
           <ArrowLeft className="size-4" />
-          Retour à la routine
+          {tRoutine("backToRoutine")}
         </Link>
       </Button>
 
       <div>
-        <Badge variant={meta.tone as VariantProps<typeof badgeVariants>["variant"]} className="mb-3">
-          {meta.label}
+        <Badge
+          variant={severityTone(rule.severity) as VariantProps<typeof badgeVariants>["variant"]}
+          className="mb-3"
+        >
+          {tSeverity(rule.severity)}
         </Badge>
-        <h1 className="text-balance font-serif text-3xl">{rule.headline}</h1>
+        <h1 className="text-balance font-serif text-3xl">
+          {tConflicts(`${rule.id}.headline`)}
+        </h1>
       </div>
 
       {(productA || productB) && (
@@ -58,23 +66,23 @@ export default function ConflictDetailPage() {
       )}
 
       <Card className="gap-3">
-        <h2 className="font-serif text-lg">Pourquoi c&apos;est signalé</h2>
-        <p className="leading-relaxed text-muted-foreground">{rule.reason}</p>
+        <h2 className="font-serif text-lg">{t("why")}</h2>
+        <p className="leading-relaxed text-muted-foreground">
+          {tConflicts(`${rule.id}.reason`)}
+        </p>
       </Card>
 
       <Card className="gap-3 border-primary/25 bg-primary/5">
         <h2 className="flex items-center gap-2 font-serif text-lg">
           <Layers className="size-4 text-primary" />
-          Ce que Haru te propose
+          {t("suggestion")}
         </h2>
-        <p className="leading-relaxed text-muted-foreground">{rule.recommendation}</p>
+        <p className="leading-relaxed text-muted-foreground">
+          {tConflicts(`${rule.id}.recommendation`)}
+        </p>
       </Card>
 
-      <p className="text-xs text-muted-foreground">
-        Ces recommandations sont générales et ne remplacent pas l&apos;avis
-        d&apos;un dermatologue, notamment en cas de peau sensible ou de
-        traitement prescrit.
-      </p>
+      <p className="text-xs text-muted-foreground">{t("disclaimer")}</p>
     </div>
   );
 }

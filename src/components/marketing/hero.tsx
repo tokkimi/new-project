@@ -1,12 +1,15 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section className="relative overflow-hidden bg-grain">
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -23,7 +26,7 @@ export function Hero() {
         >
           <Badge className="mb-6">
             <Sparkles className="size-3" />
-            Inspiré des routines K-beauty
+            {t("badge")}
           </Badge>
         </motion.div>
 
@@ -33,9 +36,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.05 }}
           className="text-balance font-serif text-4xl leading-[1.1] tracking-tight md:text-6xl"
         >
-          Ta routine skincare,
+          {t("titleLine1")}
           <br />
-          <span className="text-primary">enfin décodée.</span>
+          <span className="text-primary">{t("titleLine2")}</span>
         </motion.h1>
 
         <motion.p
@@ -44,9 +47,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.12 }}
           className="mt-6 max-w-xl text-balance text-lg text-muted-foreground"
         >
-          Haru scanne les produits que tu possèdes déjà, repère les conflits
-          d&apos;ingrédients et construit ta routine matin/soir idéale —
-          sans jargon, sans y passer trois heures.
+          {t("subtitle")}
         </motion.p>
 
         <motion.div
@@ -57,12 +58,12 @@ export function Hero() {
         >
           <Button asChild size="lg">
             <Link href="/app/shelf">
-              Construire ma routine
+              {t("ctaPrimary")}
               <ArrowRight className="size-4" />
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <a href="#comment-ca-marche">Voir comment ça marche</a>
+            <a href="#how-it-works">{t("ctaSecondary")}</a>
           </Button>
         </motion.div>
 
@@ -72,7 +73,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-5 text-xs text-muted-foreground"
         >
-          Gratuit pour ton étagère jusqu&apos;à 12 produits · sans carte bancaire
+          {t("disclaimer")}
         </motion.p>
       </div>
     </section>

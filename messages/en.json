@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "Haru — your skincare routine, decoded",
+    "description": "Haru analyzes your product ingredients, flags active conflicts, and builds your ideal AM/PM routine. Simple, useful, no fluff."
+  },
+  "localeSwitcher": {
+    "en": "English",
+    "ko": "한국어"
+  },
+  "nav": {
+    "howItWorks": "How it works",
+    "features": "Features",
+    "ingredients": "Ingredient base",
+    "tryApp": "Try the app",
+    "shelf": "My shelf",
+    "scan": "Scan",
+    "routine": "My routine",
+    "profile": "Profile",
+    "signIn": "Sign in",
+    "signOut": "Sign out"
+  },
+  "hero": {
+    "badge": "Inspired by K-beauty routines",
+    "titleLine1": "Your skincare routine,",
+    "titleLine2": "finally decoded.",
+    "subtitle": "Haru scans the products you already own, spots ingredient conflicts, and builds your ideal morning/evening routine — no jargon, no three-hour research rabbit hole.",
+    "ctaPrimary": "Build my routine",
+    "ctaSecondary": "See how it works",
+    "disclaimer": "Free for up to 12 products on your shelf · no credit card"
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "Three steps, zero friction",
+    "steps": [
+      {
+        "title": "Add your shelf",
+        "text": "Photograph a product's ingredient list or pick it from our database — 30 seconds per product."
+      },
+      {
+        "title": "We detect conflicts",
+        "text": "Haru cross-references your products' actives with our rule engine: over-exfoliation, active deactivation, useless duplicates."
+      },
+      {
+        "title": "Your ordered AM/PM routine",
+        "text": "Every product at the right step, in the right order, with clear alternatives when two actives don't mix well."
+      }
+    ]
+  },
+  "featureShowcase": {
+    "eyebrow": "In practice",
+    "title": "What Haru sees in a real shelf",
+    "subtitle": "Example with 8 popular products — the ones you probably already own.",
+    "eveningRoutine": "Evening routine",
+    "alertsDetected": "{count, plural, one {# alert detected} other {# alerts detected}}",
+    "whatHaruSuggests": "What Haru suggests",
+    "amCount": "{count} products",
+    "amLabel": "in the morning",
+    "pmCount": "{count} products",
+    "pmLabel": "in the evening",
+    "conflictCount": "{count} conflicts",
+    "conflictLabel": "to fix"
+  },
+  "ingredientBase": {
+    "eyebrow": "Ingredient base",
+    "title": "The actives we watch for you",
+    "subtitle": "Our rule engine keeps growing. Here's the core set of actives already covered.",
+    "timeLabel": {
+      "am": "Morning",
+      "pm": "Evening",
+      "both": "AM & PM"
+    }
+  },
+  "finalCta": {
+    "title": "Stop guessing what goes with what.",
+    "subtitle": "Add your shelf, we'll handle the rest. Free to start.",
+    "cta": "Build my routine"
+  },
+  "footer": {
+    "tagline": "Haru decodes your skincare routine's ingredients so you can avoid bad combinations — and wasted money.",
+    "app": "The app",
+    "ingredients": "Ingredients",
+    "howItWorks": "How it works",
+    "rights": "Haru. Made with care, no marketing fluff."
+  },
+  "shelf": {
+    "title": "My shelf",
+    "subtitle": "{count, plural, one {# product} other {# products}} tracked by Haru.",
+    "scan": "Scan",
+    "addProduct": "Add a product",
+    "emptyTitle": "Your shelf is empty",
+    "emptyText": "Add a few products so Haru can build your routine and catch potential conflicts.",
+    "readyTitle": "Ready to see your routine?",
+    "readyText": "Haru orders your products and flags any conflicts.",
+    "viewRoutine": "View my routine",
+    "remove": "Remove {name}"
+  },
+  "addProductDialog": {
+    "title": "Add to your shelf",
+    "description": "Pick a product from our database — in a real v1, this step happens by scanning the packaging.",
+    "searchPlaceholder": "Search a brand or product...",
+    "noResults": "No product matches."
+  },
+  "scanPage": {
+    "title": "Scan a product",
+    "subtitle": "Photograph the label (ingredient list) and let Haru analyze it.",
+    "dropTitle": "Take a photo or upload an image",
+    "dropSubtitle": "Demo: any image triggers the analysis",
+    "demoWithoutPhoto": "...or run a demo without a photo",
+    "steps": [
+      "Reading the ingredient list...",
+      "Identifying actives...",
+      "Checking known conflicts..."
+    ],
+    "scanAnother": "Scan something else",
+    "addToShelf": "Add to shelf"
+  },
+  "routinePage": {
+    "title": "My routine",
+    "subtitle": "{count, plural, one {Built from the # product on your shelf.} other {Built from the # products on your shelf.}}",
+    "morning": "Morning",
+    "evening": "Evening",
+    "steps": "{count, plural, one {# step} other {# steps}}",
+    "noProducts": "No product for this time of day.",
+    "conflictsDetected": "Conflicts detected",
+    "noConflictsTitle": "No conflicts detected 🎉",
+    "noConflictsText": "The actives on your shelf play nicely together.",
+    "duplicateActives": "Duplicate actives",
+    "duplicateTitle": "You have {count} products with the same strong active",
+    "backToRoutine": "Back to routine"
+  },
+  "conflictDetail": {
+    "notFound": "This conflict doesn't exist (anymore).",
+    "why": "Why it's flagged",
+    "suggestion": "What Haru suggests",
+    "disclaimer": "These recommendations are general and don't replace advice from a dermatologist, especially for sensitive skin or a prescribed treatment."
+  },
+  "severity": {
+    "avoid": "Avoid",
+    "space_out": "Space out",
+    "sequence": "Sequence",
+    "note": "Good to know"
+  },
+  "categories": {
+    "cleanser": "Cleanser",
+    "toner": "Toner",
+    "essence": "Essence",
+    "serum": "Serum",
+    "spot": "Spot treatment",
+    "eye": "Eye cream",
+    "moisturizer": "Moisturizer",
+    "oil": "Oil",
+    "sunscreen": "SPF"
+  },
+  "ingredients": {
+    "retinol": { "name": "Retinol / Retinoids", "summary": "Cell renewal, anti-aging, acne." },
+    "vitamin_c": { "name": "Vitamin C (L-AA)", "summary": "Antioxidant, glow, anti-pollution protection." },
+    "niacinamide": { "name": "Niacinamide", "summary": "Regulates sebum, soothes, strengthens the barrier." },
+    "aha": { "name": "AHA (glycolic / lactic)", "summary": "Exfoliant, texture and tone." },
+    "bha": { "name": "BHA (salicylic acid)", "summary": "Exfoliant, unclogs pores, anti-blemish." },
+    "benzoyl_peroxide": { "name": "Benzoyl peroxide", "summary": "Antibacterial, treats inflammatory acne." },
+    "vitamin_e": { "name": "Vitamin E", "summary": "Antioxidant, often paired with vitamin C." },
+    "peptides": { "name": "Peptides / Copper peptides", "summary": "Firmness, barrier repair." },
+    "hyaluronic_acid": { "name": "Hyaluronic acid", "summary": "Hydration, plumping." },
+    "centella": { "name": "Centella asiatica (Cica)", "summary": "Soothing, repairing — a K-beauty staple." },
+    "spf": { "name": "Sunscreen (SPF)", "summary": "UV protection — the final morning step." },
+    "ceramides": { "name": "Ceramides", "summary": "Restores the skin barrier." }
+  },
+  "conflictRules": {
+    "retinol_aha_bha": {
+      "headline": "High over-exfoliation risk",
+      "reason": "Retinol and AHAs both speed up cell turnover: combined the same night, they multiply redness, sensitivity and peeling.",
+      "recommendation": "Alternate nights (e.g. retinol Mon/Wed/Fri, AHA the other nights) instead of layering them."
+    },
+    "retinol_bha": {
+      "headline": "High over-exfoliation risk",
+      "reason": "Same logic as with AHAs: BHA and retinol stack irritation on an already fragile skin barrier.",
+      "recommendation": "Give each its own evening, never both at once."
+    },
+    "retinol_benzoyl": {
+      "headline": "Benzoyl peroxide deactivates retinol",
+      "reason": "Benzoyl peroxide oxidizes retinol and significantly reduces its efficacy, on top of irritating skin if combined.",
+      "recommendation": "Use benzoyl peroxide in the morning and keep retinol for the evening, spaced by a few hours — or alternate days."
+    },
+    "vitc_retinol_timing": {
+      "headline": "Two powerful actives, two different moments",
+      "reason": "L-AA vitamin C is unstable at a pH close to active retinol; combining them can neutralize part of their efficacy and irritate skin.",
+      "recommendation": "Vitamin C in the morning (antioxidant + protection), retinol at night. Simple, effective, zero conflict."
+    },
+    "aha_bha_together": {
+      "headline": "Stacking exfoliants",
+      "reason": "Using two chemical exfoliants the same evening raises the risk of a damaged skin barrier, especially on sensitive skin.",
+      "recommendation": "Pick one per evening, or reserve the combo for very tolerant skin starting at low frequency."
+    },
+    "niacinamide_vitc_myth": {
+      "headline": "Myth: this combination is actually safe",
+      "reason": "The belief that niacinamide + vitamin C form an ineffective complex comes from old studies at very high temperatures, not representative of a real routine.",
+      "recommendation": "You can use them together without issue. If your skin reacts, this combination isn't the cause — look at concentration instead."
+    },
+    "peptides_aha": {
+      "headline": "Acidic pH can deactivate some peptides",
+      "reason": "Many peptides work best at neutral pH; an acidic exfoliant applied right before can reduce their efficacy.",
+      "recommendation": "Apply peptides at another time (morning routine, or a layer after rinsing/neutralizing the pH)."
+    },
+    "spf_am_only": {
+      "headline": "Retinol increases photosensitivity",
+      "reason": "Retinol makes skin more sensitive to UV. Since it's an evening product, the real thing to manage is your SPF the next morning.",
+      "recommendation": "No same-evening application to manage — just make sure to apply SPF the morning after a retinol night."
+    }
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "signOut": "Sign out",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "signInCta": "Sign in",
+    "signUpCta": "Create my account",
+    "noAccount": "No account yet?",
+    "hasAccount": "Already have an account?",
+    "createOne": "Create one",
+    "signInInstead": "Sign in instead",
+    "orContinueWith": "or",
+    "errorInvalidCredentials": "Incorrect email or password.",
+    "errorEmailTaken": "An account with this email already exists.",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "errorWeakPassword": "Password must be at least 8 characters.",
+    "signInSubtitle": "Sign in to sync your shelf across devices.",
+    "signUpSubtitle": "Create an account to save your shelf and routine."
+  },
+  "profile": {
+    "title": "Profile",
+    "memberSince": "Member since {date}",
+    "shelfCount": "{count, plural, one {# product tracked} other {# products tracked}}",
+    "signOutCta": "Sign out",
+    "deleteAccount": "Delete account",
+    "deleteAccountConfirm": "This permanently deletes your account and shelf. This can't be undone.",
+    "language": "Language",
+    "theme": "Appearance",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System"
+  },
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Loading..."
+  }
+}

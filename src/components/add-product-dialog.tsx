@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useTranslations } from "next-intl";
 import { Plus, Search } from "lucide-react";
 import {
   Dialog,
@@ -14,10 +15,14 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATALOG } from "@/data/catalog";
-import { CATEGORY_LABELS, findIngredient } from "@/data/ingredients";
+import { findIngredient } from "@/data/ingredients";
 import { useShelf } from "@/lib/shelf-store";
 
 export function AddProductDialog() {
+  const t = useTranslations("addProductDialog");
+  const tShelf = useTranslations("shelf");
+  const tCategories = useTranslations("categories");
+  const tIngredients = useTranslations("ingredients");
   const { shelf, addProduct } = useShelf();
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
@@ -34,30 +39,27 @@ export function AddProductDialog() {
       <DialogTrigger asChild>
         <Button>
           <Plus className="size-4" />
-          Ajouter un produit
+          {tShelf("addProduct")}
         </Button>
       </DialogTrigger>
       <DialogContent className="max-h-[80vh] overflow-hidden">
         <DialogHeader>
-          <DialogTitle>Ajouter à ton étagère</DialogTitle>
-          <DialogDescription>
-            Choisis un produit de notre base — en v1 réelle, cette étape se
-            fait en scannant l&apos;emballage.
-          </DialogDescription>
+          <DialogTitle>{t("title")}</DialogTitle>
+          <DialogDescription>{t("description")}</DialogDescription>
         </DialogHeader>
         <div className="relative">
           <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Rechercher une marque ou un produit..."
+            placeholder={t("searchPlaceholder")}
             className="pl-9"
           />
         </div>
         <div className="flex max-h-80 flex-col gap-2 overflow-y-auto pr-1">
           {filtered.length === 0 && (
             <p className="py-6 text-center text-sm text-muted-foreground">
-              Aucun produit ne correspond.
+              {t("noResults")}
             </p>
           )}
           {filtered.map((p) => (
@@ -73,15 +75,17 @@ export function AddProductDialog() {
               <div className="min-w-0">
                 <p className="truncate text-sm font-medium">{p.name}</p>
                 <p className="text-xs text-muted-foreground">
-                  {p.brand} · {CATEGORY_LABELS[p.category]}
+                  {p.brand} · {tCategories(p.category)}
                 </p>
               </div>
               <div className="flex shrink-0 gap-1">
-                {p.ingredientIds.slice(0, 2).map((id) => (
-                  <Badge key={id} variant="secondary" className="text-[10px]">
-                    {findIngredient(id)?.name.split(" ")[0]}
-                  </Badge>
-                ))}
+                {p.ingredientIds.slice(0, 2).map((id) =>
+                  findIngredient(id) ? (
+                    <Badge key={id} variant="secondary" className="text-[10px]">
+                      {tIngredients(`${id}.name`).split(" ")[0]}
+                    </Badge>
+                  ) : null
+                )}
               </div>
             </button>
           ))}
