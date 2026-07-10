@@ -1,9 +1,11 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/logo";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 
 export function SiteFooter() {
   const t = useTranslations("footer");
+  const tNewsletter = useTranslations("newsletterSignup");
 
   return (
     <footer className="border-t border-border/60">
@@ -22,6 +24,12 @@ export function SiteFooter() {
           <a href="#how-it-works" className="hover:text-foreground">
             {t("howItWorks")}
           </a>
+        </div>
+      </div>
+      <div className="border-t border-border/60 px-6 py-8">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm font-medium">{tNewsletter("title")}</p>
+          <NewsletterSignup />
         </div>
       </div>
       <div className="border-t border-border/60 py-4 text-center text-xs text-muted-foreground">

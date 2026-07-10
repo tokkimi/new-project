@@ -77,6 +77,12 @@
       "award": "Award"
     }
   },
+  "newsletterSignup": {
+    "title": "Get beauty news in your inbox, every Friday.",
+    "placeholder": "you@example.com",
+    "cta": "Subscribe",
+    "done": "You're subscribed!"
+  },
   "ingredientBase": {
     "eyebrow": "Ingredient base",
     "title": "The actives we watch for you",

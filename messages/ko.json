@@ -77,6 +77,12 @@
       "award": "수상"
     }
   },
+  "newsletterSignup": {
+    "title": "매주 금요일, 뷰티 뉴스를 메일함으로 받아보세요.",
+    "placeholder": "you@example.com",
+    "cta": "구독하기",
+    "done": "구독이 완료되었어요!"
+  },
   "ingredientBase": {
     "eyebrow": "성분 데이터베이스",
     "title": "Haru가 대신 살펴보는 활성 성분들",
