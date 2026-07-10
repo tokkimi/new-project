@@ -10,19 +10,97 @@ datasource db {
   provider = "postgresql"
 }
 
+enum Role {
+  USER
+  ADMIN
+}
+
+enum SubscriptionStatus {
+  NONE
+  TRIALING
+  ACTIVE
+  PAST_DUE
+  CANCELED
+}
+
 model User {
   id           String   @id @default(cuid())
   name         String?
   email        String   @unique
   passwordHash String
+  role         Role     @default(USER)
   locale       String?
   theme        String?
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
-  shelfItems ShelfItem[]
+  // Stripe / subscription
+  stripeCustomerId     String?            @unique
+  stripeSubscriptionId String?            @unique
+  subscriptionStatus   SubscriptionStatus @default(NONE)
+  subscriptionPriceId  String?
+  currentPeriodEnd     DateTime?
+
+  newsletterSubscribed Boolean @default(true)
+
+  shelfItems  ShelfItem[]
+  skinProfile SkinProfile?
+  auditRuns   AuditRun[]
 
   @@map("users")
+}
+
+model SkinProfile {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skinType      String // oily | dry | combination | normal | sensitive
+  concerns      String[] // acne, aging, pigmentation, redness, dehydration, pores, dullness
+  ageRange      String? // teens | 20s | 30s | 40s | 50plus
+  sensitivities String[] // fragrance, essential-oils, alcohol, silicones...
+  climate       String? // humid | dry | temperate | cold
+  goals         String[]
+  budget        String? // low | mid | high
+  updatedAt     DateTime @updatedAt
+
+  @@map("skin_profiles")
+}
+
+model AuditRun {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  result    Json
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@map("audit_runs")
+}
+
+model Product {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+  name            String
+  brand           String
+  category        String
+  ingredientIds   String[]
+  fullIngredients String? // raw INCI list
+  origin          String? // country of origin / brand HQ
+  description     String?
+  usageSteps      String[]
+  imageUrl        String?
+  officialUrl     String?
+  price           Float?
+  currency        String?  @default("EUR")
+  skinTypes       String[] // which skin types this suits
+  concerns        String[] // which concerns it targets
+  featured        Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  shelfItems ShelfItem[]
+
+  @@map("products")
 }
 
 model ShelfItem {
@@ -30,9 +108,75 @@ model ShelfItem {
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   addedAt   DateTime @default(now())
 
   @@unique([userId, productId])
   @@index([userId])
   @@map("shelf_items")
+}
+
+model NewsItem {
+  id          String   @id @default(cuid())
+  category    String // innovation | launch | ingredient-trend | brand-news | award
+  title       String
+  summary     String
+  sourceName  String?
+  sourceUrl   String?
+  imageUrl    String?
+  featured    Boolean  @default(false)
+  publishedAt DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+  @@index([publishedAt])
+  @@map("news_items")
+}
+
+model NewsletterSubscriber {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  confirmed    Boolean  @default(true)
+  subscribedAt DateTime @default(now())
+
+  @@map("newsletter_subscribers")
+}
+
+model Newsletter {
+  id        String    @id @default(cuid())
+  subject   String
+  bodyHtml  String
+  status    String    @default("draft") // draft | sent
+  sentAt    DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@map("newsletters")
+}
+
+model SeoMeta {
+  id          String   @id @default(cuid())
+  path        String // e.g. "/", "/app/shelf"
+  locale      String
+  title       String?
+  description String?
+  ogImage     String?
+  updatedAt   DateTime @updatedAt
+
+  @@unique([path, locale])
+  @@map("seo_meta")
+}
+
+model Event {
+  id        String   @id @default(cuid())
+  type      String // page_view | signup | scan_completed | routine_built | audit_run | checkout_started | subscription_active
+  path      String?
+  userId    String?
+  locale    String?
+  createdAt DateTime @default(now())
+
+  @@index([type])
+  @@index([createdAt])
+  @@map("events")
 }
