@@ -61,6 +61,22 @@
     "conflictCount": "{count} conflicts",
     "conflictLabel": "to fix"
   },
+  "beautyNews": {
+    "eyebrow": "Beauty news",
+    "title": "What's new in beauty",
+    "subtitle": "Innovations, launches, and trends worth knowing about — refreshed every Friday morning.",
+    "updatedLabel": "Updated weekly, every Friday",
+    "all": "All",
+    "readMore": "Read more",
+    "empty": "No news yet — check back soon.",
+    "categories": {
+      "innovation": "Innovation",
+      "launch": "Launch",
+      "ingredient-trend": "Ingredient trend",
+      "brand-news": "Brand news",
+      "award": "Award"
+    }
+  },
   "ingredientBase": {
     "eyebrow": "Ingredient base",
     "title": "The actives we watch for you",
@@ -101,12 +117,30 @@
     "searchPlaceholder": "Search a brand or product...",
     "noResults": "No product matches."
   },
+  "faceScanPage": {
+    "title": "Face scan",
+    "subtitle": "Take a well-lit, makeup-free photo and Haru will analyze visible skin concerns.",
+    "disclaimer": "Not a medical device. This gives a general visual read, not a clinical diagnosis — for real dermatological concerns, see a professional.",
+    "captureTitle": "Take or upload a photo",
+    "captureHint": "Face the camera directly in natural light, no makeup or filters",
+    "steps": [
+      "Detecting face position...",
+      "Checking lighting and framing...",
+      "Preparing analysis..."
+    ],
+    "comingSoonTitle": "Analysis engine coming soon",
+    "comingSoonText": "The capture flow is ready — we're finishing the AI analysis engine before showing real results here. Your skin quiz answers already power your routine audit in the meantime.",
+    "retake": "Retake photo",
+    "goToQuiz": "Take the skin quiz instead",
+    "privacyNote": "Your photo is analyzed and discarded — it isn't stored."
+  },
   "scanPage": {
     "title": "Scan a product",
     "subtitle": "Photograph the label (ingredient list) and let Haru analyze it.",
     "dropTitle": "Take a photo or upload an image",
     "dropSubtitle": "Demo: any image triggers the analysis",
     "demoWithoutPhoto": "...or run a demo without a photo",
+    "faceScanCta": "Looking for a face scan instead?",
     "steps": [
       "Reading the ingredient list...",
       "Identifying actives...",

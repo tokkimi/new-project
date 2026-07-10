@@ -3,43 +3,27 @@
 import * as React from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { Camera, Check, Loader2, RotateCcw, ArrowRight, FileText } from "lucide-react";
+import { Camera, Loader2, RotateCcw, ShieldCheck, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { useShelf, useCatalog } from "@/lib/shelf-store";
-import { findIngredient } from "@/data/ingredients";
-import type { Product } from "@/generated/prisma/client";
 
 type Phase = "idle" | "analyzing" | "result";
 
-export default function ScanPage() {
-  const t = useTranslations("scanPage");
-  const tCategories = useTranslations("categories");
-  const tIngredients = useTranslations("ingredients");
+export default function FaceScanPage() {
+  const t = useTranslations("faceScanPage");
   const analysisSteps = t.raw("steps") as string[];
 
-  const { shelf, addProduct } = useShelf();
-  const { catalog } = useCatalog();
   const [phase, setPhase] = React.useState<Phase>("idle");
   const [stepIndex, setStepIndex] = React.useState(0);
-  const [matched, setMatched] = React.useState<Product | null>(null);
   const [preview, setPreview] = React.useState<string | null>(null);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
 
-  const startScan = (file?: File) => {
-    if (file) {
-      const url = URL.createObjectURL(file);
-      setPreview(url);
-    }
+  const startScan = (file: File) => {
+    const url = URL.createObjectURL(file);
+    setPreview(url);
     setPhase("analyzing");
     setStepIndex(0);
-
-    const candidates = catalog.filter(
-      (p) => !shelf.some((s) => s.id === p.id) && p.ingredientIds.length > 0
-    );
-    const pick = candidates[Math.floor(Math.random() * candidates.length)] ?? catalog[0];
 
     let i = 0;
     const interval = setInterval(() => {
@@ -47,34 +31,38 @@ export default function ScanPage() {
       setStepIndex(i);
       if (i >= analysisSteps.length) {
         clearInterval(interval);
-        setMatched(pick ?? null);
         setPhase("result");
       }
-    }, 650);
+    }, 600);
   };
 
   const reset = () => {
-    setPhase("idle");
-    setMatched(null);
+    if (preview) URL.revokeObjectURL(preview);
     setPreview(null);
+    setPhase("idle");
   };
 
   return (
-    <div className="mx-auto flex max-w-lg flex-col items-center gap-8 text-center">
+    <div className="mx-auto flex max-w-lg flex-col items-center gap-6 text-center">
       <div>
         <h1 className="font-serif text-3xl">{t("title")}</h1>
         <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
       </div>
 
+      <p className="flex items-start gap-2 rounded-xl bg-muted/60 p-3 text-left text-xs text-muted-foreground">
+        <ShieldCheck className="mt-0.5 size-4 shrink-0" />
+        {t("disclaimer")}
+      </p>
+
       <input
         ref={fileInputRef}
         type="file"
         accept="image/*"
-        capture="environment"
+        capture="user"
         className="hidden"
         onChange={(e) => {
           const file = e.target.files?.[0];
-          startScan(file);
+          if (file) startScan(file);
         }}
       />
 
@@ -95,20 +83,10 @@ export default function ScanPage() {
                 <Camera className="size-7" />
               </span>
               <div>
-                <p className="font-medium">{t("dropTitle")}</p>
-                <p className="text-sm text-muted-foreground">{t("dropSubtitle")}</p>
+                <p className="font-medium">{t("captureTitle")}</p>
+                <p className="text-sm text-muted-foreground">{t("captureHint")}</p>
               </div>
             </Card>
-            <Button
-              variant="link"
-              className="mt-2"
-              onClick={() => startScan()}
-            >
-              {t("demoWithoutPhoto")}
-            </Button>
-            <Button variant="link" asChild>
-              <Link href="/app/face-scan">{t("faceScanCta")}</Link>
-            </Button>
           </motion.div>
         )}
 
@@ -126,7 +104,7 @@ export default function ScanPage() {
                 <img
                   src={preview}
                   alt=""
-                  className="h-28 w-28 rounded-xl object-cover"
+                  className="h-32 w-32 rounded-2xl object-cover"
                 />
               ) : (
                 <Loader2 className="size-10 animate-spin text-primary" />
@@ -148,56 +126,27 @@ export default function ScanPage() {
           </motion.div>
         )}
 
-        {phase === "result" && matched && (
+        {phase === "result" && (
           <motion.div
             key="result"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="w-full"
           >
-            <Card className="w-full items-center gap-4 py-10">
-              {matched.imageUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={matched.imageUrl}
-                  alt=""
-                  className="h-20 w-20 rounded-xl object-cover"
-                />
-              ) : (
-                <span className="flex size-14 items-center justify-center rounded-full bg-success/10 text-success">
-                  <Check className="size-6" />
-                </span>
-              )}
-              <div>
-                <p className="font-serif text-xl">{matched.name}</p>
-                <p className="text-sm text-muted-foreground">
-                  {matched.brand} · {tCategories(matched.category)}
-                  {matched.origin ? ` · ${matched.origin}` : ""}
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-1.5">
-                {matched.ingredientIds.map((id) =>
-                  findIngredient(id) ? (
-                    <Badge key={id}>{tIngredients(`${id}.name`)}</Badge>
-                  ) : null
-                )}
-              </div>
+            <Card className="w-full items-center gap-4 py-12 text-center">
+              <span className="flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Sparkles className="size-6" />
+              </span>
+              <h2 className="font-serif text-xl">{t("comingSoonTitle")}</h2>
+              <p className="max-w-sm text-sm text-muted-foreground">{t("comingSoonText")}</p>
+              <p className="text-xs text-muted-foreground">{t("privacyNote")}</p>
               <div className="mt-2 flex flex-wrap justify-center gap-2">
                 <Button variant="outline" onClick={reset}>
                   <RotateCcw className="size-4" />
-                  {t("scanAnother")}
-                </Button>
-                <Button variant="outline" asChild>
-                  <Link href={`/app/product/${matched.slug}`}>
-                    <FileText className="size-4" />
-                    {t("viewSheet")}
-                  </Link>
+                  {t("retake")}
                 </Button>
                 <Button asChild>
-                  <Link href="/app/shelf" onClick={() => addProduct(matched)}>
-                    {t("addToShelf")}
-                    <ArrowRight className="size-4" />
-                  </Link>
+                  <Link href="/app/quiz">{t("goToQuiz")}</Link>
                 </Button>
               </div>
             </Card>

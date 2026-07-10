@@ -61,6 +61,22 @@
     "conflictCount": "충돌 {count}건",
     "conflictLabel": "해결 필요"
   },
+  "beautyNews": {
+    "eyebrow": "뷰티 뉴스",
+    "title": "지금 뷰티 업계에서 일어나는 일",
+    "subtitle": "알아둘 만한 혁신, 신제품, 트렌드 — 매주 금요일 아침에 업데이트돼요.",
+    "updatedLabel": "매주 금요일 업데이트",
+    "all": "전체",
+    "readMore": "더 보기",
+    "empty": "아직 뉴스가 없어요 — 곧 확인해주세요.",
+    "categories": {
+      "innovation": "혁신",
+      "launch": "신제품 출시",
+      "ingredient-trend": "성분 트렌드",
+      "brand-news": "브랜드 소식",
+      "award": "수상"
+    }
+  },
   "ingredientBase": {
     "eyebrow": "성분 데이터베이스",
     "title": "Haru가 대신 살펴보는 활성 성분들",
@@ -101,12 +117,30 @@
     "searchPlaceholder": "브랜드나 제품을 검색하세요...",
     "noResults": "일치하는 제품이 없어요."
   },
+  "faceScanPage": {
+    "title": "얼굴 스캔",
+    "subtitle": "조명이 좋은 곳에서 화장을 하지 않은 사진을 찍으면 Haru가 눈에 보이는 피부 고민을 분석해드려요.",
+    "disclaimer": "의료기기가 아니에요. 임상 진단이 아닌 일반적인 시각적 참고용입니다 — 실제 피부과 상담이 필요한 경우 전문의를 찾아주세요.",
+    "captureTitle": "사진을 찍거나 업로드하세요",
+    "captureHint": "자연광 아래에서 카메라를 정면으로 바라보세요, 화장이나 필터 없이",
+    "steps": [
+      "얼굴 위치 감지 중...",
+      "조명과 구도 확인 중...",
+      "분석 준비 중..."
+    ],
+    "comingSoonTitle": "분석 엔진 준비 중",
+    "comingSoonText": "촬영 플로우는 준비됐어요 — 실제 결과를 보여드리기 전에 AI 분석 엔진을 마무리하고 있어요. 그동안은 피부 퀴즈 답변이 루틴 진단에 반영되고 있어요.",
+    "retake": "다시 촬영하기",
+    "goToQuiz": "대신 피부 퀴즈 하러 가기",
+    "privacyNote": "사진은 분석 후 즉시 폐기되며 저장되지 않아요."
+  },
   "scanPage": {
     "title": "제품 스캔",
     "subtitle": "라벨(전성분 리스트)을 촬영하면 Haru가 분석해드려요.",
     "dropTitle": "사진을 찍거나 이미지를 업로드하세요",
     "dropSubtitle": "데모: 어떤 이미지든 분석이 시작돼요",
     "demoWithoutPhoto": "...또는 사진 없이 데모 실행하기",
+    "faceScanCta": "얼굴 스캔을 찾으시나요?",
     "steps": [
       "전성분 리스트 읽는 중...",
       "활성 성분 확인 중...",
