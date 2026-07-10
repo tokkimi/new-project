@@ -12,6 +12,7 @@ export function AppNav() {
     { href: "/app/shelf", label: t("shelf") },
     { href: "/app/scan", label: t("scan") },
     { href: "/app/routine", label: t("routine") },
+    { href: "/app/audit", label: t("audit") },
   ];
 
   return (

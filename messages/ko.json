@@ -15,6 +15,7 @@
     "shelf": "내 화장대",
     "scan": "스캔",
     "routine": "내 루틴",
+    "audit": "진단",
     "profile": "프로필",
     "signIn": "로그인",
     "signOut": "로그아웃"
@@ -112,7 +113,24 @@
       "알려진 충돌 검사 중..."
     ],
     "scanAnother": "다른 제품 스캔하기",
+    "viewSheet": "전체 제품 정보 보기",
     "addToShelf": "화장대에 추가"
+  },
+  "productDetail": {
+    "notFound": "존재하지 않거나 삭제된 제품이에요.",
+    "back": "뒤로",
+    "origin": "원산지",
+    "price": "가격",
+    "howToUse": "사용 방법",
+    "fullIngredients": "전성분 리스트 (INCI)",
+    "trackedActives": "Haru가 추적하는 활성 성분",
+    "officialSite": "공식 사이트",
+    "suitedFor": "추천 피부 타입",
+    "targets": "타겟 고민",
+    "addToShelf": "화장대에 추가",
+    "alreadyOnShelf": "이미 화장대에 있어요",
+    "conflictWarning": "추가하면 현재 화장대와 {count}건의 충돌이 생겨요",
+    "noConflict": "현재 화장대와 충돌 없음"
   },
   "routinePage": {
     "title": "내 루틴",
@@ -150,6 +168,120 @@
     "moisturizer": "크림",
     "oil": "오일",
     "sunscreen": "선크림"
+  },
+  "skinTypes": {
+    "oily": "지성",
+    "dry": "건성",
+    "combination": "복합성",
+    "normal": "중성",
+    "sensitive": "민감성"
+  },
+  "concerns": {
+    "acne": "여드름",
+    "aging": "노화 / 잔주름",
+    "hydration": "수분",
+    "redness": "홍조",
+    "pigmentation": "색소침착 / 기미",
+    "pores": "모공",
+    "dullness": "칙칙함",
+    "barrier": "피부 장벽"
+  },
+  "sensitivities": {
+    "fragrance": "향료",
+    "essential-oils": "에센셜 오일",
+    "alcohol": "알코올(변성)",
+    "silicones": "실리콘"
+  },
+  "climates": {
+    "humid": "습함",
+    "dry": "건조함",
+    "temperate": "온화함",
+    "cold": "추움"
+  },
+  "ageRanges": {
+    "teens": "10대",
+    "20s": "20대",
+    "30s": "30대",
+    "40s": "40대",
+    "50plus": "50대 이상"
+  },
+  "budgets": {
+    "low": "저가형",
+    "mid": "중가형",
+    "high": "고가 / 더마코스메틱"
+  },
+  "quiz": {
+    "title": "내 피부 프로필",
+    "subtitle": "몇 가지 질문에 답하면 Haru가 일반적인 루틴이 아니라 진짜 당신의 피부에 맞는 조언을 드릴 수 있어요.",
+    "stepOf": "{total}단계 중 {current}단계",
+    "skinTypeQuestion": "당신의 피부를 어떻게 설명하시겠어요?",
+    "concernsQuestion": "어떤 고민을 해결하고 싶으세요? (여러 개 선택 가능)",
+    "ageRangeQuestion": "연령대가 어떻게 되세요?",
+    "sensitivitiesQuestion": "알고 있는 민감 성분이 있나요?",
+    "climateQuestion": "거주 지역의 기후는 어떤가요?",
+    "budgetQuestion": "스킨케어 예산은 어느 정도인가요?",
+    "back": "뒤로",
+    "next": "다음",
+    "finish": "프로필 저장하기",
+    "skip": "건너뛰기 — 잘 모르겠어요",
+    "savedTitle": "프로필이 저장되었어요",
+    "savedText": "이제 Haru가 루틴 진단과 제품 추천에 이 정보를 반영할게요.",
+    "viewAudit": "내 루틴 진단 보기",
+    "editProfile": "피부 프로필 수정하기"
+  },
+  "auditPage": {
+    "title": "루틴 진단",
+    "subtitle": "충돌뿐 아니라 피부 프로필까지 반영한 전체 루틴 점검이에요.",
+    "scoreLabel": "루틴 건강 점수",
+    "missingStepsTitle": "빠진 단계",
+    "missingStep": {
+      "cleanser": "루틴에 클렌저가 없어요",
+      "moisturizer": "루틴에 크림(모이스처라이저)이 없어요",
+      "sunscreen": "아침 루틴에 선크림이 없어요"
+    },
+    "missingStepHint": {
+      "cleanser": "클렌저는 모든 루틴의 기본이에요 — 없으면 활성 성분이 깨끗한 피부가 아니라 하루의 노폐물 위에 얹혀요.",
+      "moisturizer": "크림을 생략하면 지성 피부는 피지를 과다 분비할 수 있고, 활성 성분이 장벽을 보호해줄 기반 없이 남게 돼요.",
+      "sunscreen": "선크림이 없으면 다른 모든 제품의 효과가 무너져요 — 특히 각질 제거나 레티놀 사용 후엔 자외선 민감도가 높아져서 더욱 중요해요."
+    },
+    "mismatchTitle": "피부에 안 맞을 수 있는 제품",
+    "mismatchReason": "이 제품은 당신의 피부 타입/프로필엔 너무 강할 수 있어요",
+    "alternativesLabel": "더 잘 맞는 대안",
+    "noAlternatives": "아직 카탈로그에 더 잘 맞는 대안이 없어요",
+    "noIssuesTitle": "지적할 사항 없음 — 탄탄한 루틴이에요",
+    "noIssuesText": "필수 단계가 모두 갖춰져 있고 모든 제품이 피부 프로필에 잘 맞아요.",
+    "upgradeTitle": "맞춤형 루틴 진단 잠금 해제하기",
+    "upgradeText": "빠진 단계, 피부 프로필 매칭, 제품 대안까지 포함한 전체 진단은 Haru 프리미엄 기능이에요.",
+    "upgradeCta": "프리미엄 보기",
+    "needsProfileTitle": "먼저 피부 프로필을 완성해주세요",
+    "needsProfileText": "몇 가지 질문만 답하면 일반적인 루틴이 아니라 실제 당신의 피부를 기준으로 진단해드려요.",
+    "needsProfileCta": "피부 퀴즈 시작하기",
+    "signInPrompt": "루틴 진단을 실행하려면 로그인하세요."
+  },
+  "upgradePage": {
+    "title": "Haru 프리미엄",
+    "subtitle": "일반적인 루틴이 아니라 맞춤형 조언을 받아보세요.",
+    "freeTitle": "무료",
+    "freePrice": "₩0",
+    "freeFeatures": [
+      "화장대 제품 12개까지",
+      "성분 충돌 감지",
+      "아침/저녁 루틴 빌더",
+      "제품 스캔(데모)"
+    ],
+    "premiumTitle": "프리미엄",
+    "premiumPrice": "₩9,900/월",
+    "premiumFeatures": [
+      "무료 플랜의 모든 기능",
+      "전체 피부 프로필 퀴즈",
+      "맞춤형 루틴 진단",
+      "피부에 맞는 제품 대안 추천",
+      "화장대 제품 무제한"
+    ],
+    "subscribeCta": "프리미엄 구독하기",
+    "currentPlanLabel": "현재 플랜",
+    "manageBilling": "결제 관리",
+    "comingSoon": "아직 결제 기능이 설정되지 않았어요 — 곧 확인해주세요."
   },
   "ingredients": {
     "retinol": { "name": "레티놀 / 레티노이드", "summary": "세포 재생, 안티에이징, 여드름 케어." },

@@ -2,90 +2,94 @@
 
 import * as React from "react";
 import { useSession } from "next-auth/react";
-import { DEMO_SHELF, type Product } from "@/data/ingredients";
-import { findProduct } from "@/data/catalog";
+import type { Product } from "@/generated/prisma/client";
 
-const STORAGE_KEY = "haru:shelf";
+const STORAGE_KEY = "haru:shelf:v2"; // v2 = stores product IDs, not full snapshots
 
-// --- Guest mode: shelf persisted in localStorage, no account required. ---
+let catalogCache: Product[] | null = null;
+let catalogPromise: Promise<Product[]> | null = null;
 
-let guestState: Product[] = DEMO_SHELF;
-let guestInitialized = false;
-const guestListeners = new Set<() => void>();
+async function loadCatalog(): Promise<Product[]> {
+  if (catalogCache) return catalogCache;
+  if (!catalogPromise) {
+    catalogPromise = fetch("/api/products")
+      .then((res) => (res.ok ? res.json() : { products: [] }))
+      .then(({ products }: { products: Product[] }) => {
+        catalogCache = products;
+        return products;
+      })
+      .catch(() => []);
+  }
+  return catalogPromise;
+}
 
-function loadFromStorage(): Product[] {
+// --- Guest mode: a set of product IDs persisted in localStorage. ---
+
+function loadGuestIds(): string[] {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as Product[]) : DEMO_SHELF;
+    return raw ? (JSON.parse(raw) as string[]) : [];
   } catch {
-    return DEMO_SHELF;
+    return [];
   }
 }
 
-function ensureGuestInitialized() {
-  if (!guestInitialized) {
-    guestState = loadFromStorage();
-    guestInitialized = true;
-  }
-}
-
-function persistGuest() {
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(guestState));
-}
-
-function emitGuest() {
-  for (const listener of guestListeners) listener();
-}
-
-function subscribeGuest(listener: () => void) {
-  guestListeners.add(listener);
-  return () => guestListeners.delete(listener);
-}
-
-function getGuestSnapshot() {
-  ensureGuestInitialized();
-  return guestState;
-}
-
-function getServerSnapshot() {
-  return DEMO_SHELF;
-}
-
-function addGuestProduct(product: Product) {
-  ensureGuestInitialized();
-  if (guestState.some((p) => p.id === product.id)) return;
-  guestState = [...guestState, product];
-  persistGuest();
-  emitGuest();
-}
-
-function removeGuestProduct(id: string) {
-  ensureGuestInitialized();
-  guestState = guestState.filter((p) => p.id !== id);
-  persistGuest();
-  emitGuest();
-}
-
-function resetGuestToDemo() {
-  guestState = DEMO_SHELF;
-  persistGuest();
-  emitGuest();
-}
-
-function clearGuestShelf() {
-  guestState = [];
-  persistGuest();
-  emitGuest();
+function persistGuestIds(ids: string[]) {
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
 }
 
 function useGuestShelf() {
-  const shelf = React.useSyncExternalStore(subscribeGuest, getGuestSnapshot, getServerSnapshot);
-  return {
-    shelf,
-    addProduct: (p: Product) => addGuestProduct(p),
-    removeProduct: (id: string) => removeGuestProduct(id),
-    resetToDemo: resetGuestToDemo,
-  };
+  const [catalog, setCatalog] = React.useState<Product[]>([]);
+  const [ids, setIds] = React.useState<string[]>([]);
+  const [hydrated, setHydrated] = React.useState(false);
+
+  React.useEffect(() => {
+    let cancelled = false;
+    loadCatalog().then((products) => {
+      if (cancelled) return;
+      setCatalog(products);
+
+      const raw = window.localStorage.getItem(STORAGE_KEY);
+      if (raw === null) {
+        // First visit ever: seed with the curated starter set so the app
+        // demonstrates value immediately instead of showing an empty shelf.
+        const starter = products.filter((p) => p.featured).map((p) => p.id);
+        setIds(starter);
+        persistGuestIds(starter);
+      } else {
+        setIds(loadGuestIds());
+      }
+      setHydrated(true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const shelf = React.useMemo(
+    () => ids.map((id) => catalog.find((p) => p.id === id)).filter((p): p is Product => !!p),
+    [ids, catalog]
+  );
+
+  const addProduct = React.useCallback((product: Product) => {
+    setIds((prev) => {
+      if (prev.includes(product.id)) return prev;
+      const next = [...prev, product.id];
+      persistGuestIds(next);
+      return next;
+    });
+    setCatalog((prev) => (prev.some((p) => p.id === product.id) ? prev : [...prev, product]));
+  }, []);
+
+  const removeProduct = React.useCallback((id: string) => {
+    setIds((prev) => {
+      const next = prev.filter((pid) => pid !== id);
+      persistGuestIds(next);
+      return next;
+    });
+  }, []);
+
+  return { shelf, loaded: hydrated, addProduct, removeProduct };
 }
 
 /**
@@ -94,18 +98,17 @@ function useGuestShelf() {
  * later sign-out starts from a clean guest shelf instead of duplicating it.
  */
 export async function importGuestShelf() {
-  ensureGuestInitialized();
-  const productIds = guestState.map((p) => p.id);
-  if (productIds.length === 0) return;
+  const ids = loadGuestIds();
+  if (ids.length === 0) return;
 
   try {
     await fetch("/api/shelf/import", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ productIds }),
+      body: JSON.stringify({ productIds: ids }),
     });
   } finally {
-    clearGuestShelf();
+    persistGuestIds([]);
   }
 }
 
@@ -119,10 +122,10 @@ function useDbShelf(enabled: boolean) {
     if (!enabled) return;
     let cancelled = false;
     fetch("/api/shelf")
-      .then((res) => (res.ok ? res.json() : { productIds: [] }))
-      .then(({ productIds }: { productIds: string[] }) => {
+      .then((res) => (res.ok ? res.json() : { products: [] }))
+      .then(({ products }: { products: Product[] }) => {
         if (cancelled) return;
-        setShelf(productIds.map(findProduct).filter((p): p is Product => !!p));
+        setShelf(products);
         setLoaded(true);
       })
       .catch(() => setLoaded(true));
@@ -145,7 +148,7 @@ function useDbShelf(enabled: boolean) {
     fetch(`/api/shelf/${id}`, { method: "DELETE" }).catch(() => {});
   }, []);
 
-  return { shelf, loaded, addProduct, removeProduct, resetToDemo: () => {} };
+  return { shelf, loaded, addProduct, removeProduct };
 }
 
 export function useShelf() {
@@ -154,4 +157,25 @@ export function useShelf() {
   const db = useDbShelf(status === "authenticated");
 
   return status === "authenticated" ? db : guest;
+}
+
+/** Full product catalog (for pickers, scan mock, etc.) — cached across calls. */
+export function useCatalog() {
+  const [catalog, setCatalog] = React.useState<Product[]>([]);
+  const [loaded, setLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    let cancelled = false;
+    loadCatalog().then((products) => {
+      if (!cancelled) {
+        setCatalog(products);
+        setLoaded(true);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return { catalog, loaded };
 }

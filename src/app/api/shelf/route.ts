@@ -3,7 +3,8 @@ import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { shelfItemSchema } from "@/lib/validation";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
-import { PRODUCT_CATALOG } from "@/data/catalog";
+import { findProductById } from "@/lib/products";
+import { logEvent } from "@/lib/events";
 
 export async function GET() {
   const session = await auth();
@@ -14,9 +15,10 @@ export async function GET() {
   const items = await db.shelfItem.findMany({
     where: { userId: session.user.id },
     orderBy: { addedAt: "asc" },
+    include: { product: true },
   });
 
-  return NextResponse.json({ productIds: items.map((i) => i.productId) });
+  return NextResponse.json({ products: items.map((i) => i.product) });
 }
 
 export async function POST(request: Request) {
@@ -39,17 +41,20 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid_input" }, { status: 400 });
   }
 
-  if (!PRODUCT_CATALOG.some((p) => p.id === parsed.data.productId)) {
+  const product = await findProductById(parsed.data.productId);
+  if (!product) {
     return NextResponse.json({ error: "unknown_product" }, { status: 400 });
   }
 
   await db.shelfItem.upsert({
     where: {
-      userId_productId: { userId: session.user.id, productId: parsed.data.productId },
+      userId_productId: { userId: session.user.id, productId: product.id },
     },
-    create: { userId: session.user.id, productId: parsed.data.productId },
+    create: { userId: session.user.id, productId: product.id },
     update: {},
   });
+
+  await logEvent("shelf_item_added", { userId: session.user.id });
 
   return NextResponse.json({ ok: true }, { status: 201 });
 }

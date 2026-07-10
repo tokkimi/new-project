@@ -20,6 +20,8 @@ export type ConflictRule = {
 // Display text (name, summary, headline, reason, recommendation, category labels)
 // lives in messages/{locale}.json under ingredients.*, conflictRules.*, categories.* —
 // keep this file to structural/rule data only so it stays locale-independent.
+// Product data lives in the database (see src/lib/products.ts) so it can be
+// managed from the admin backend.
 
 export const INGREDIENTS: Ingredient[] = [
   { id: "retinol", aliases: ["retinol", "retinal", "tretinoin", "adapalene"], timePref: "pm", layerWeight: 40 },
@@ -45,49 +47,6 @@ export const CONFLICT_RULES: ConflictRule[] = [
   { id: "niacinamide_vitc_myth", a: "niacinamide", b: "vitamin_c", severity: "note" },
   { id: "peptides_aha", a: "peptides", b: "aha", severity: "space_out" },
   { id: "spf_am_only", a: "spf", b: "retinol", severity: "note" },
-];
-
-export type ProductCategory =
-  | "cleanser"
-  | "toner"
-  | "essence"
-  | "serum"
-  | "spot"
-  | "eye"
-  | "moisturizer"
-  | "oil"
-  | "sunscreen";
-
-export const CATEGORY_ORDER: Record<ProductCategory, number> = {
-  cleanser: 0,
-  toner: 10,
-  essence: 15,
-  serum: 20,
-  spot: 50,
-  eye: 60,
-  moisturizer: 70,
-  oil: 80,
-  sunscreen: 90,
-};
-
-export type Product = {
-  id: string;
-  name: string;
-  brand: string;
-  category: ProductCategory;
-  ingredientIds: string[];
-  image?: string;
-};
-
-export const DEMO_SHELF: Product[] = [
-  { id: "p1", name: "Advanced Snail Mucin Essence", brand: "COSRX", category: "essence", ingredientIds: ["niacinamide", "hyaluronic_acid", "centella"] },
-  { id: "p2", name: "Vitamin C 23 Serum", brand: "Round Lab", category: "serum", ingredientIds: ["vitamin_c", "vitamin_e"] },
-  { id: "p3", name: "Retinol 0.3% Night Treatment", brand: "Some By Mi", category: "serum", ingredientIds: ["retinol", "peptides"] },
-  { id: "p4", name: "BHA Blackhead Power Liquid", brand: "COSRX", category: "toner", ingredientIds: ["bha"] },
-  { id: "p5", name: "Glycolic Acid 7% Toning Solution", brand: "Beauty of Joseon", category: "toner", ingredientIds: ["aha"] },
-  { id: "p6", name: "Rice + Probiotic Barrier Cream", brand: "Beauty of Joseon", category: "moisturizer", ingredientIds: ["ceramides", "centella"] },
-  { id: "p7", name: "Relief Sun Rice + Probiotics SPF50+", brand: "Beauty of Joseon", category: "sunscreen", ingredientIds: ["spf"] },
-  { id: "p8", name: "Acne Spot Gel 5%", brand: "La Roche-Posay", category: "spot", ingredientIds: ["benzoyl_peroxide"] },
 ];
 
 export function findIngredient(id: string): Ingredient | undefined {

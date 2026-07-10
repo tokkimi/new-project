@@ -14,9 +14,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { PRODUCT_CATALOG } from "@/data/catalog";
 import { findIngredient } from "@/data/ingredients";
-import { useShelf } from "@/lib/shelf-store";
+import { useShelf, useCatalog } from "@/lib/shelf-store";
 
 export function AddProductDialog() {
   const t = useTranslations("addProductDialog");
@@ -24,10 +23,11 @@ export function AddProductDialog() {
   const tCategories = useTranslations("categories");
   const tIngredients = useTranslations("ingredients");
   const { shelf, addProduct } = useShelf();
+  const { catalog } = useCatalog();
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
 
-  const available = PRODUCT_CATALOG.filter(
+  const available = catalog.filter(
     (p) => !shelf.some((s) => s.id === p.id)
   );
   const filtered = available.filter((p) =>

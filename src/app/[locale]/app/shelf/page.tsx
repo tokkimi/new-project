@@ -47,10 +47,10 @@ export default function ShelfPage() {
           {shelf.map((p) => (
             <Card key={p.id} className="gap-3">
               <div className="flex items-start justify-between gap-2">
-                <div>
-                  <p className="font-medium leading-snug">{p.name}</p>
+                <Link href={`/app/product/${p.slug}`} className="min-w-0">
+                  <p className="truncate font-medium leading-snug hover:underline">{p.name}</p>
                   <p className="text-xs text-muted-foreground">{p.brand}</p>
-                </div>
+                </Link>
                 <button
                   onClick={() => removeProduct(p.id)}
                   className="rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-destructive/10 hover:text-destructive"

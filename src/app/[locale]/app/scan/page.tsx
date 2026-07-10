@@ -3,14 +3,14 @@
 import * as React from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { Camera, Check, Loader2, RotateCcw, ArrowRight } from "lucide-react";
+import { Camera, Check, Loader2, RotateCcw, ArrowRight, FileText } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { useShelf } from "@/lib/shelf-store";
-import { PRODUCT_CATALOG } from "@/data/catalog";
-import { findIngredient, type Product } from "@/data/ingredients";
+import { useShelf, useCatalog } from "@/lib/shelf-store";
+import { findIngredient } from "@/data/ingredients";
+import type { Product } from "@/generated/prisma/client";
 
 type Phase = "idle" | "analyzing" | "result";
 
@@ -21,6 +21,7 @@ export default function ScanPage() {
   const analysisSteps = t.raw("steps") as string[];
 
   const { shelf, addProduct } = useShelf();
+  const { catalog } = useCatalog();
   const [phase, setPhase] = React.useState<Phase>("idle");
   const [stepIndex, setStepIndex] = React.useState(0);
   const [matched, setMatched] = React.useState<Product | null>(null);
@@ -35,11 +36,10 @@ export default function ScanPage() {
     setPhase("analyzing");
     setStepIndex(0);
 
-    const candidates = PRODUCT_CATALOG.filter(
+    const candidates = catalog.filter(
       (p) => !shelf.some((s) => s.id === p.id) && p.ingredientIds.length > 0
     );
-    const pick =
-      candidates[Math.floor(Math.random() * candidates.length)] ?? PRODUCT_CATALOG[0];
+    const pick = candidates[Math.floor(Math.random() * candidates.length)] ?? catalog[0];
 
     let i = 0;
     const interval = setInterval(() => {
@@ -47,7 +47,7 @@ export default function ScanPage() {
       setStepIndex(i);
       if (i >= analysisSteps.length) {
         clearInterval(interval);
-        setMatched(pick);
+        setMatched(pick ?? null);
         setPhase("result");
       }
     }, 650);
@@ -153,13 +153,23 @@ export default function ScanPage() {
             className="w-full"
           >
             <Card className="w-full items-center gap-4 py-10">
-              <span className="flex size-14 items-center justify-center rounded-full bg-success/10 text-success">
-                <Check className="size-6" />
-              </span>
+              {matched.imageUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={matched.imageUrl}
+                  alt=""
+                  className="h-20 w-20 rounded-xl object-cover"
+                />
+              ) : (
+                <span className="flex size-14 items-center justify-center rounded-full bg-success/10 text-success">
+                  <Check className="size-6" />
+                </span>
+              )}
               <div>
                 <p className="font-serif text-xl">{matched.name}</p>
                 <p className="text-sm text-muted-foreground">
                   {matched.brand} · {tCategories(matched.category)}
+                  {matched.origin ? ` · ${matched.origin}` : ""}
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-1.5">
@@ -169,10 +179,16 @@ export default function ScanPage() {
                   ) : null
                 )}
               </div>
-              <div className="mt-2 flex gap-2">
+              <div className="mt-2 flex flex-wrap justify-center gap-2">
                 <Button variant="outline" onClick={reset}>
                   <RotateCcw className="size-4" />
                   {t("scanAnother")}
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link href={`/app/product/${matched.slug}`}>
+                    <FileText className="size-4" />
+                    {t("viewSheet")}
+                  </Link>
                 </Button>
                 <Button asChild>
                   <Link href="/app/shelf" onClick={() => addProduct(matched)}>

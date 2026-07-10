@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { AlertTriangle, Sun, Moon, Layers } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { DEMO_SHELF } from "@/data/ingredients";
+import { useCatalog } from "@/lib/shelf-store";
 import { buildRoutine } from "@/lib/routine-engine";
 
 export function FeatureShowcase() {
@@ -13,8 +13,10 @@ export function FeatureShowcase() {
   const tCategories = useTranslations("categories");
   const tSeverity = useTranslations("severity");
   const tConflicts = useTranslations("conflictRules");
+  const { catalog } = useCatalog();
 
-  const routine = buildRoutine(DEMO_SHELF);
+  const featured = catalog.filter((p) => p.featured);
+  const routine = buildRoutine(featured);
   const headlineWarning = routine.warnings.find((w) => w.rule.severity === "avoid");
 
   return (

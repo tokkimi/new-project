@@ -15,6 +15,7 @@
     "shelf": "My shelf",
     "scan": "Scan",
     "routine": "My routine",
+    "audit": "Audit",
     "profile": "Profile",
     "signIn": "Sign in",
     "signOut": "Sign out"
@@ -112,7 +113,24 @@
       "Checking known conflicts..."
     ],
     "scanAnother": "Scan something else",
+    "viewSheet": "View full product sheet",
     "addToShelf": "Add to shelf"
+  },
+  "productDetail": {
+    "notFound": "This product doesn't exist (or was removed).",
+    "back": "Back",
+    "origin": "Origin",
+    "price": "Price",
+    "howToUse": "How to use",
+    "fullIngredients": "Full ingredient list (INCI)",
+    "trackedActives": "Actives we track",
+    "officialSite": "Official site",
+    "suitedFor": "Suited for",
+    "targets": "Targets",
+    "addToShelf": "Add to shelf",
+    "alreadyOnShelf": "Already on your shelf",
+    "conflictWarning": "Adding this would create {count, plural, one {# conflict} other {# conflicts}} with your current shelf",
+    "noConflict": "No conflict with your current shelf"
   },
   "routinePage": {
     "title": "My routine",
@@ -150,6 +168,120 @@
     "moisturizer": "Moisturizer",
     "oil": "Oil",
     "sunscreen": "SPF"
+  },
+  "skinTypes": {
+    "oily": "Oily",
+    "dry": "Dry",
+    "combination": "Combination",
+    "normal": "Normal",
+    "sensitive": "Sensitive"
+  },
+  "concerns": {
+    "acne": "Acne",
+    "aging": "Aging / fine lines",
+    "hydration": "Hydration",
+    "redness": "Redness",
+    "pigmentation": "Pigmentation / dark spots",
+    "pores": "Pores",
+    "dullness": "Dullness",
+    "barrier": "Barrier repair"
+  },
+  "sensitivities": {
+    "fragrance": "Fragrance",
+    "essential-oils": "Essential oils",
+    "alcohol": "Alcohol (denat.)",
+    "silicones": "Silicones"
+  },
+  "climates": {
+    "humid": "Humid",
+    "dry": "Dry",
+    "temperate": "Temperate",
+    "cold": "Cold"
+  },
+  "ageRanges": {
+    "teens": "Teens",
+    "20s": "20s",
+    "30s": "30s",
+    "40s": "40s",
+    "50plus": "50+"
+  },
+  "budgets": {
+    "low": "Budget-friendly",
+    "mid": "Mid-range",
+    "high": "High-end / dermocosmetic"
+  },
+  "quiz": {
+    "title": "Your skin profile",
+    "subtitle": "A few questions so Haru's advice is actually about your skin — not a generic routine.",
+    "stepOf": "Step {current} of {total}",
+    "skinTypeQuestion": "How would you describe your skin?",
+    "concernsQuestion": "What are you looking to address? (pick a few)",
+    "ageRangeQuestion": "What's your age range?",
+    "sensitivitiesQuestion": "Any known sensitivities?",
+    "climateQuestion": "What's your climate like?",
+    "budgetQuestion": "What's your skincare budget?",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Save my profile",
+    "skip": "Skip — I'm not sure",
+    "savedTitle": "Profile saved",
+    "savedText": "Haru will now factor this into your routine audit and product suggestions.",
+    "viewAudit": "View my routine audit",
+    "editProfile": "Edit my skin profile"
+  },
+  "auditPage": {
+    "title": "Routine audit",
+    "subtitle": "A full check of your routine against your skin profile — not just conflicts.",
+    "scoreLabel": "Routine health score",
+    "missingStepsTitle": "Missing steps",
+    "missingStep": {
+      "cleanser": "No cleanser in your routine",
+      "moisturizer": "No moisturizer in your routine",
+      "sunscreen": "No SPF in your morning routine"
+    },
+    "missingStepHint": {
+      "cleanser": "A cleanser is the foundation of any routine — without one, actives sit on top of the day's buildup instead of clean skin.",
+      "moisturizer": "Skipping moisturizer can push oily skin to overproduce sebum and leaves actives without a barrier-supporting base.",
+      "sunscreen": "No SPF undoes the benefit of every other product — especially after exfoliants or retinol, which increase UV sensitivity."
+    },
+    "mismatchTitle": "Products that may not fit your skin",
+    "mismatchReason": "This product may be too strong for your skin type or profile",
+    "alternativesLabel": "Better-suited alternatives",
+    "noAlternatives": "No better-suited alternative in our catalog yet",
+    "noIssuesTitle": "Nothing to flag — solid routine",
+    "noIssuesText": "Every essential step is covered and every product fits your skin profile.",
+    "upgradeTitle": "Unlock your personalized routine audit",
+    "upgradeText": "The full audit — missing steps, skin-profile matching, and product alternatives — is a Haru Premium feature.",
+    "upgradeCta": "See Premium",
+    "needsProfileTitle": "Complete your skin profile first",
+    "needsProfileText": "A few quick questions and Haru can check your routine against your actual skin, not a generic one.",
+    "needsProfileCta": "Take the skin quiz",
+    "signInPrompt": "Sign in to run a routine audit."
+  },
+  "upgradePage": {
+    "title": "Haru Premium",
+    "subtitle": "Personalized advice, not a generic routine.",
+    "freeTitle": "Free",
+    "freePrice": "€0",
+    "freeFeatures": [
+      "Shelf up to 12 products",
+      "Ingredient conflict detection",
+      "AM/PM routine builder",
+      "Product scan (demo)"
+    ],
+    "premiumTitle": "Premium",
+    "premiumPrice": "€6.99/mo",
+    "premiumFeatures": [
+      "Everything in Free",
+      "Full skin profile quiz",
+      "Personalized routine audit",
+      "Product alternatives matched to your skin",
+      "Unlimited shelf products"
+    ],
+    "subscribeCta": "Subscribe to Premium",
+    "currentPlanLabel": "Your current plan",
+    "manageBilling": "Manage billing",
+    "comingSoon": "Payments aren't configured yet — check back soon."
   },
   "ingredients": {
     "retinol": { "name": "Retinol / Retinoids", "summary": "Cell renewal, anti-aging, acne." },

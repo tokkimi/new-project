@@ -1,12 +1,6 @@
-import {
-  CATEGORY_ORDER,
-  CONFLICT_RULES,
-  INGREDIENTS,
-  type ConflictRule,
-  type Product,
-  type TimeSlot,
-  findIngredient,
-} from "@/data/ingredients";
+import { CONFLICT_RULES, INGREDIENTS, type ConflictRule, type TimeSlot, findIngredient } from "@/data/ingredients";
+import { categoryOrder } from "@/lib/categories";
+import type { Product } from "@/generated/prisma/client";
 
 export type RoutineStep = {
   product: Product;
@@ -56,7 +50,7 @@ function buildSlot(products: Product[], slot: TimeSlot): RoutineStep[] {
       const maxWeight = actives.length
         ? Math.max(...actives.map((id) => findIngredient(id)?.layerWeight ?? 0))
         : 0;
-      const order = CATEGORY_ORDER[p.category] + maxWeight / 100;
+      const order = categoryOrder(p.category) + maxWeight / 100;
       return { product: p, order };
     })
     .sort((a, b) => a.order - b.order);
@@ -120,6 +114,15 @@ export function buildRoutine(products: Product[]): RoutineResult {
     warnings,
     duplicateActives: findDuplicates(products),
   };
+}
+
+/** Warnings that a candidate product would introduce if added to an existing shelf. */
+export function previewAddConflicts(candidate: Product, shelf: Product[]): RoutineWarning[] {
+  if (shelf.some((p) => p.id === candidate.id)) return [];
+  const withCandidate = buildRoutine([...shelf, candidate]).warnings;
+  return withCandidate.filter(
+    (w) => w.productA.id === candidate.id || w.productB.id === candidate.id
+  );
 }
 
 export function severityTone(severity: ConflictRule["severity"]) {

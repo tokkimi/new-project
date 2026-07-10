@@ -3,7 +3,7 @@ import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
-import { PRODUCT_CATALOG } from "@/data/catalog";
+import { findProductsByIds } from "@/lib/products";
 
 const importSchema = z.object({
   productIds: z.array(z.string().trim().min(1).max(100)).max(200),
@@ -30,14 +30,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid_input" }, { status: 400 });
   }
 
-  const validIds = parsed.data.productIds.filter((id) =>
-    PRODUCT_CATALOG.some((p) => p.id === id)
-  );
+  const validProducts = await findProductsByIds(parsed.data.productIds);
 
   await db.shelfItem.createMany({
-    data: validIds.map((productId) => ({ userId: session.user.id, productId })),
+    data: validProducts.map((p) => ({ userId: session.user.id, productId: p.id })),
     skipDuplicates: true,
   });
 
-  return NextResponse.json({ ok: true, imported: validIds.length });
+  return NextResponse.json({ ok: true, imported: validProducts.length });
 }

@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/card";
 import { Badge, type badgeVariants } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CONFLICT_RULES } from "@/data/ingredients";
-import { findProduct } from "@/data/catalog";
+import { useCatalog } from "@/lib/shelf-store";
 import { severityTone } from "@/lib/routine-engine";
 import type { VariantProps } from "class-variance-authority";
 
@@ -20,10 +20,11 @@ export default function ConflictDetailPage() {
   const tSeverity = useTranslations("severity");
   const tConflicts = useTranslations("conflictRules");
   const tRoutine = useTranslations("routinePage");
+  const { catalog } = useCatalog();
 
   const rule = CONFLICT_RULES.find((r) => r.id === params.id);
-  const productA = findProduct(searchParams.get("a") ?? "");
-  const productB = findProduct(searchParams.get("b") ?? "");
+  const productA = catalog.find((p) => p.id === searchParams.get("a"));
+  const productB = catalog.find((p) => p.id === searchParams.get("b"));
 
   if (!rule) {
     return (
