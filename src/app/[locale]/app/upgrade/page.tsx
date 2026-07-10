@@ -6,6 +6,7 @@ import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { hasPremiumAccess } from "@/lib/entitlements";
 import { SubscribeButton } from "@/components/subscribe-button";
+import { ManageBillingButton } from "@/components/manage-billing-button";
 
 export default async function UpgradePage() {
   const t = await getTranslations("upgradePage");
@@ -14,7 +15,7 @@ export default async function UpgradePage() {
   const user = session?.user?.id
     ? await db.user.findUnique({
         where: { id: session.user.id },
-        select: { role: true, subscriptionStatus: true },
+        select: { role: true, subscriptionStatus: true, stripeCustomerId: true },
       })
     : null;
 
@@ -64,7 +65,10 @@ export default async function UpgradePage() {
             ))}
           </ul>
           {isPremium ? (
-            <Badge className="w-fit">{t("currentPlanLabel")}</Badge>
+            <div className="flex items-center gap-2">
+              <Badge className="w-fit">{t("currentPlanLabel")}</Badge>
+              {user?.stripeCustomerId && <ManageBillingButton label={t("manageBilling")} />}
+            </div>
           ) : (
             <SubscribeButton
               subscribeLabel={t("subscribeCta")}
