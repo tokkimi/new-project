@@ -173,6 +173,13 @@
     "resultSubtitle": "13개 항목에 대한 AI 시각 분석이며, 제품 카탈로그와 연계해 제안해드려요 — 임상 진단이 아니에요.",
     "resultDisclaimer": "Haru의 AI는 일반 조명에서 촬영된 사진에서 실제로 보이는 내용을 바탕으로 추정합니다 — UV, 편광, 3D 스캔이 아니에요. 의료 기기나 진단이 아니에요 — 실제 피부 고민은 전문의와 상담하세요.",
     "overallScoreLabel": "종합 피부 점수",
+    "skinTypes": {
+      "oily": "지성 피부",
+      "dry": "건성 피부",
+      "combination": "복합성 피부",
+      "normal": "중성 피부",
+      "sensitive": "민감성 피부"
+    },
     "summaryGood": "전반적으로 피부 상태가 균형 잡혀 있어요 — 지금 루틴을 유지하세요.",
     "summaryOk": "몇 군데는 조금 더 신경 쓰면 좋겠어요.",
     "summaryAttention": "이번엔 눈에 띄는 부분이 여러 군데 있어요 — 여기에 집중해보세요.",

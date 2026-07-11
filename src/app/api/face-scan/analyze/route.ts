@@ -22,9 +22,17 @@ const MODULE_DESCRIPTIONS: Record<string, string> = {
   radiance: "overall glow, luminosity, and evenness of the skin",
 };
 
+const SKIN_TYPES = ["oily", "dry", "combination", "normal", "sensitive"] as const;
+
+const LOCALE_NAMES: Record<string, string> = {
+  en: "English",
+  ko: "Korean (한국어)",
+};
+
 const TOOL = {
   name: "report_face_scan",
-  description: "Report whether a human face is visible, and if so, a 0-9 severity score for each module.",
+  description:
+    "Report whether a human face is visible, and if so, a full zone-by-zone skin analysis: overall skin type, a written summary, and a 0-9 severity score plus a short observation note for each module.",
   input_schema: {
     type: "object" as const,
     properties: {
@@ -33,34 +41,70 @@ const TOOL = {
         description:
           "True only if a real human face is clearly visible in the photo. False for objects, rooms, pets, screenshots, blank/blurry images, or anything that isn't a person's face.",
       },
-      scores: {
+      skinType: {
+        type: "string",
+        enum: [...SKIN_TYPES],
+        description:
+          "Overall visible skin type read holistically from the whole face (T-zone shine vs cheeks, visible pore size, flaking, reactivity). Only meaningful when faceDetected is true.",
+      },
+      summary: {
+        type: "string",
+        description:
+          "2-3 sentences summarizing what is specifically visible in THIS photo (not generic advice). Encouraging, factual, no medical claims. Only meaningful when faceDetected is true. Write in the requested output language.",
+      },
+      modules: {
         type: "object",
-        description: "One integer 0-9 per module key. Only meaningful when faceDetected is true.",
+        description:
+          "One entry per module. Only meaningful when faceDetected is true.",
         properties: Object.fromEntries(
           MODULES.map((m) => [
             m,
-            { type: "integer", minimum: 0, maximum: 9, description: MODULE_DESCRIPTIONS[m] },
+            {
+              type: "object",
+              properties: {
+                score: {
+                  type: "integer",
+                  minimum: 0,
+                  maximum: 9,
+                  description: MODULE_DESCRIPTIONS[m],
+                },
+                note: {
+                  type: "string",
+                  description:
+                    "One short specific sentence on what you actually see for this module in THIS photo, naming the facial zone when relevant (e.g. forehead, temples, nose/T-zone, cheeks, under-eyes, jawline, chin). Write in the requested output language.",
+                },
+              },
+              required: ["score", "note"],
+            },
           ])
         ),
         required: [...MODULES],
       },
     },
-    required: ["faceDetected", "scores"],
+    required: ["faceDetected", "skinType", "summary", "modules"],
   },
 };
 
-const SYSTEM_PROMPT = `You are a visual skincare estimation assistant embedded in a consumer skincare app called Haru. You are shown a user-submitted photo, in ordinary visible light (not UV, not polarized, no 3D scan — just what's actually visible in this photo).
+function buildSystemPrompt(localeName: string) {
+  return `You are a meticulous visual skincare estimation assistant embedded in a consumer skincare app called Haru. You are shown a user-submitted photo, in ordinary visible light (not UV, not polarized, no 3D scan — just what's actually visible in this photo).
 
 FIRST, decide faceDetected: true only if a real human face is clearly visible and identifiable as a face in the photo. If the photo shows anything else — a room, an object, a fireplace, a pet, a screenshot, a blank or overly dark/blurry image, or anything where you cannot actually make out a face — set faceDetected to false. Do not be lenient here; when in doubt, false.
 
-If faceDetected is true, your job is a general COSMETIC visual read, not a medical or dermatological diagnosis. Rate each of these 13 modules independently on a 0-9 severity scale, based ONLY on what is actually visible in THIS specific photo:
+If faceDetected is true, your job is a thorough general COSMETIC visual read, not a medical or dermatological diagnosis. Work zone by zone before you score anything: deliberately look at the forehead, temples, nose bridge and T-zone, both cheeks, under-eye area, jawline, chin, and hairline edge in turn. Then rate each of these 13 modules independently on a 0-9 severity scale, based ONLY on what is actually visible in THIS specific photo:
 ${MODULES.map((m) => `- ${m}: ${MODULE_DESCRIPTIONS[m]}`).join("\n")}
 
 Scoring guide: 0-2 = clear/not notable, 3-4 = mild, 5-6 = moderate, 7-8 = notable, 9 = severe. Most real photos have a realistic spread across these scores — do not default every module to the same value, and do not assume the worst. Base every score strictly on this photo, not general assumptions about skin.
 
-If faceDetected is false, still fill the scores object with all zeros (it will be ignored).
+For each module also write a one-sentence "note": a specific, concrete observation about what you actually see (mention the facial zone when it's localized, e.g. "light shine across the T-zone, cheeks stay matte"), not a generic definition of the module.
+
+Also determine the overall skinType (oily, dry, combination, normal, or sensitive) from the whole face, and write a 2-3 sentence summary of what is specifically visible in this photo — grounded, specific, encouraging tone, no medical claims.
+
+If faceDetected is false, still fill skinType with "normal", summary with an empty string, and every module's score with 0 and note with an empty string — none of it will be used.
+
+Write every piece of text output (summary and all module notes) in ${localeName}.
 
 Call the report_face_scan tool with your result. Do not include any other commentary.`;
+}
 
 export async function POST(request: Request) {
   const { ok } = rateLimit(clientKey(request, "face-scan-analyze"), {
@@ -98,6 +142,8 @@ export async function POST(request: Request) {
   if (!image) {
     return NextResponse.json({ error: "invalid_input" }, { status: 400 });
   }
+  const locale = typeof body?.locale === "string" ? body.locale : "en";
+  const localeName = LOCALE_NAMES[locale] ?? LOCALE_NAMES.en;
 
   const parsed = parseDataUrl(image);
   if (!parsed) {
@@ -108,8 +154,8 @@ export async function POST(request: Request) {
     const client = getVisionClient();
     const message = await client.messages.create({
       model: "claude-haiku-4-5-20251001",
-      max_tokens: 1024,
-      system: SYSTEM_PROMPT,
+      max_tokens: 2048,
+      system: buildSystemPrompt(localeName),
       tools: [TOOL],
       tool_choice: { type: "tool", name: "report_face_scan" },
       messages: [
@@ -135,17 +181,27 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "analysis_failed" }, { status: 502 });
     }
 
-    const input = toolUse.input as { faceDetected: boolean; scores: Record<string, number> };
+    const input = toolUse.input as {
+      faceDetected: boolean;
+      skinType?: string;
+      summary?: string;
+      modules: Record<string, { score: number; note?: string }>;
+    };
     if (!input.faceDetected) {
       return NextResponse.json({ error: "no_face_detected" }, { status: 422 });
     }
 
     const rawModules: RawModuleResult[] = MODULES.map((id) => ({
       id,
-      score: Number(input.scores?.[id] ?? 0),
+      score: Number(input.modules?.[id]?.score ?? 0),
+      note: input.modules?.[id]?.note,
     }));
 
-    const analysis = buildFaceScanAnalysis(rawModules);
+    const skinType = SKIN_TYPES.includes(input.skinType as (typeof SKIN_TYPES)[number])
+      ? (input.skinType as (typeof SKIN_TYPES)[number])
+      : undefined;
+
+    const analysis = buildFaceScanAnalysis(rawModules, { skinType, summary: input.summary });
 
     if (!premium) {
       // Atomic, race-safe decrement: only succeeds if a credit was still there.

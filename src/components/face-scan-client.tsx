@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Camera,
@@ -75,6 +75,7 @@ function fileToDataUrl(file: File): Promise<string> {
 export function FaceScanClient() {
   const t = useTranslations("faceScanPage");
   const tCategories = useTranslations("categories");
+  const locale = useLocale();
   const analysisSteps = t.raw("steps") as string[];
 
   const { catalog } = useCatalog();
@@ -105,7 +106,7 @@ export function FaceScanClient() {
       const res = await fetch("/api/face-scan/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image: dataUrl }),
+        body: JSON.stringify({ image: dataUrl, locale }),
       });
 
       if (res.status === 501) {
@@ -373,7 +374,14 @@ export function FaceScanClient() {
                   <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
                     {t("overallScoreLabel")}
                   </p>
-                  <p className="mt-1 max-w-xs text-sm text-muted-foreground">{t(summaryKey)}</p>
+                  {analysis.skinType && (
+                    <span className="mt-1 inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+                      {t(`skinTypes.${analysis.skinType}`)}
+                    </span>
+                  )}
+                  <p className="mt-1 max-w-xs text-sm text-muted-foreground">
+                    {analysis.summary || t(summaryKey)}
+                  </p>
                 </div>
                 <SkinScoreRing score={analysis.overallScore} />
               </div>
@@ -429,7 +437,13 @@ export function FaceScanClient() {
                             transition={{ duration: 0.2 }}
                             className="overflow-hidden"
                           >
-                            <div className="grid gap-4 bg-secondary/30 px-4 py-4 sm:grid-cols-2">
+                            <div className="flex flex-col gap-4 bg-secondary/30 px-4 py-4">
+                              {finding.note && (
+                                <p className="text-sm italic leading-relaxed text-foreground/80">
+                                  “{finding.note}”
+                                </p>
+                              )}
+                              <div className="grid gap-4 sm:grid-cols-2">
                               {finding.flagged ? (
                                 <>
                                   <div>
@@ -460,6 +474,7 @@ export function FaceScanClient() {
                                   {t("noConcern")}
                                 </p>
                               )}
+                              </div>
                             </div>
                           </motion.div>
                         )}

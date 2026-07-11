@@ -17,11 +17,9 @@ export default function Icon() {
           borderRadius: 96,
         }}
       >
-        <svg width="300" height="300" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M12 3c-2.8 3.2-5 6.4-5 9.5A5 5 0 0 0 12 17a5 5 0 0 0 5-4.5C17 9.4 14.8 6.2 12 3Z"
-            fill="#fff8f5"
-          />
+        <svg width="300" height="300" viewBox="0 0 28 28" fill="none">
+          <path d="M7.5 17.5a6.5 6.5 0 0 1 13 0Z" fill="#fff8f5" />
+          <path d="M6.5 17.5h15" stroke="#fff8f5" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
       </div>
     ),

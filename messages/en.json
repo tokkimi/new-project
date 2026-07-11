@@ -173,6 +173,13 @@
     "resultSubtitle": "An AI visual read across 13 modules, cross-referenced with our product catalog — not a clinical diagnosis.",
     "resultDisclaimer": "Haru's AI estimates this from what's actually visible in your photo, in ordinary light — not UV, polarized light, or a 3D scan. It isn't a dermatological device or diagnosis — see a professional for real skin concerns.",
     "overallScoreLabel": "Overall skin score",
+    "skinTypes": {
+      "oily": "Oily skin",
+      "dry": "Dry skin",
+      "combination": "Combination skin",
+      "normal": "Normal skin",
+      "sensitive": "Sensitive skin"
+    },
     "summaryGood": "Your skin looks balanced overall — keep your current routine going.",
     "summaryOk": "A few areas could use some extra care.",
     "summaryAttention": "Several areas stood out this time — here's where to focus.",

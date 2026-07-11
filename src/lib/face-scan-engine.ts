@@ -81,10 +81,14 @@ const MODULE_CATEGORY: Record<ModuleId, string> = {
   radiance: "serum",
 };
 
+export type SkinType = "oily" | "dry" | "combination" | "normal" | "sensitive";
+
 export type RawModuleResult = {
   id: ModuleId;
   /** 0 (clear) to 9 (severe), a direct visual read of this specific photo. */
   score: number;
+  /** Short model-written observation specific to this photo, e.g. "T-zone shows visible shine, cheeks are matte." */
+  note?: string;
 };
 
 export type ModuleFinding = {
@@ -95,6 +99,7 @@ export type ModuleFinding = {
   concern: Concern;
   ingredientId: string;
   category: string;
+  note?: string;
 };
 
 export type FaceScanAnalysis = {
@@ -102,6 +107,8 @@ export type FaceScanAnalysis = {
   overallScore: number;
   flaggedConcerns: Concern[];
   suggestedIngredientIds: string[];
+  skinType?: SkinType;
+  summary?: string;
 };
 
 function severityFromScore(score: number): ZoneSeverity {
@@ -111,7 +118,10 @@ function severityFromScore(score: number): ZoneSeverity {
 }
 
 /** Turns the model's raw 0-9 per-module scores into the full analysis the UI/routine builder consume. */
-export function buildFaceScanAnalysis(rawModules: RawModuleResult[]): FaceScanAnalysis {
+export function buildFaceScanAnalysis(
+  rawModules: RawModuleResult[],
+  extra?: { skinType?: SkinType; summary?: string }
+): FaceScanAnalysis {
   const modules: ModuleFinding[] = MODULES.map((id) => {
     const raw = rawModules.find((m) => m.id === id);
     const score = Math.max(0, Math.min(9, Math.round(raw?.score ?? 0)));
@@ -124,6 +134,7 @@ export function buildFaceScanAnalysis(rawModules: RawModuleResult[]): FaceScanAn
       concern,
       ingredientId: CONCERN_INGREDIENT[concern],
       category: MODULE_CATEGORY[id],
+      note: raw?.note,
     };
   });
 
@@ -138,7 +149,14 @@ export function buildFaceScanAnalysis(rawModules: RawModuleResult[]): FaceScanAn
     new Set(modules.filter((m) => m.flagged).map((m) => m.ingredientId))
   );
 
-  return { modules, overallScore, flaggedConcerns, suggestedIngredientIds };
+  return {
+    modules,
+    overallScore,
+    flaggedConcerns,
+    suggestedIngredientIds,
+    skinType: extra?.skinType,
+    summary: extra?.summary,
+  };
 }
 
 /**
