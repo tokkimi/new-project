@@ -1,61 +1,56 @@
 import { NextResponse } from "next/server";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
 import { isVisionConfigured, getVisionClient, parseDataUrl } from "@/lib/vision";
-import { buildFaceScanAnalysis, FACE_ZONES, type RawZoneResult } from "@/lib/face-scan-engine";
-import { CONCERNS } from "@/lib/validation";
+import { buildFaceScanAnalysis, MODULES, type RawModuleResult } from "@/lib/face-scan-engine";
 
-const SEVERITIES = ["low", "medium", "attention"] as const;
-
-const ZONE_SCHEMA = {
-  type: "object",
-  properties: {
-    flagged: {
-      type: "boolean",
-      description: "Whether this zone shows a visible concern worth flagging.",
-    },
-    severity: { type: "string", enum: [...SEVERITIES] },
-    concern: {
-      type: ["string", "null"],
-      enum: [...CONCERNS, null],
-      description: "The single best-fitting concern if flagged, else null.",
-    },
-  },
-  required: ["flagged", "severity", "concern"],
+const MODULE_DESCRIPTIONS: Record<string, string> = {
+  pores: "visible pore size and density",
+  blackheads: "visible blackheads/congestion, mainly around the nose and T-zone",
+  wrinkles: "fine lines and wrinkles (e.g. crow's feet, forehead lines)",
+  redness: "visible redness or reactive-looking skin",
+  spots: "dark spots, sun spots, or uneven pigmentation",
+  acne: "active blemishes and inflammation",
+  acneScars: "post-acne marks or textured scarring",
+  darkCircles: "under-eye darkness or discoloration",
+  texture: "skin texture roughness or unevenness",
+  oiliness: "visible shine / excess sebum",
+  dryness: "visible dryness, flaking, or tightness",
+  sensitivity: "visible signs of a strained/reactive skin barrier",
+  radiance: "overall glow, luminosity, and evenness of the skin",
 };
 
 const TOOL = {
   name: "report_face_scan",
-  description: "Report the structured visual skin-condition read for each of the 5 face zones.",
+  description: "Report a 0-9 severity score for each of the 13 skin-condition modules.",
   input_schema: {
     type: "object" as const,
     properties: {
-      zones: {
+      scores: {
         type: "object",
-        properties: Object.fromEntries(FACE_ZONES.map((z) => [z, ZONE_SCHEMA])),
-        required: [...FACE_ZONES],
+        description: "One integer 0-9 per module key.",
+        properties: Object.fromEntries(
+          MODULES.map((m) => [
+            m,
+            { type: "integer", minimum: 0, maximum: 9, description: MODULE_DESCRIPTIONS[m] },
+          ])
+        ),
+        required: [...MODULES],
       },
     },
-    required: ["zones"],
+    required: ["scores"],
   },
 };
 
-const SYSTEM_PROMPT = `You are a visual skincare estimation assistant embedded in a consumer skincare app called Haru. You are shown a user-submitted selfie-style photo. Your job is a general COSMETIC visual read, not a medical or dermatological diagnosis — similar to what a beauty counter consultant might eyeball.
+const SYSTEM_PROMPT = `You are a visual skincare estimation assistant embedded in a consumer skincare app called Haru. You are shown a user-submitted selfie-style photo, in ordinary visible light (not UV, not polarized, no 3D scan — just what's actually visible in this photo). Your job is a general COSMETIC visual read, not a medical or dermatological diagnosis.
 
-Assess these 5 face zones independently, based ONLY on what is actually visible in this specific photo (lighting, texture, visible pores, shine, redness, dullness, fine lines, blemishes, under-eye area, etc.) — do not default to a generic pattern or assume every zone has an issue:
-- forehead
-- nose
-- cheeks
-- underEye (the under-eye area)
-- chin (chin and jawline)
+Rate each of these 13 modules independently on a 0-9 severity scale, based ONLY on what is actually visible in THIS specific photo:
+${MODULES.map((m) => `- ${m}: ${MODULE_DESCRIPTIONS[m]}`).join("\n")}
 
-For each zone, decide:
-- flagged: true only if something is genuinely visible worth noting; most real photos should have some zones flagged and some clear, not all-or-nothing.
-- severity: "low" (barely worth mentioning), "medium" (visible, worth addressing), or "attention" (clearly visible, worth prioritizing). Use "low" whenever flagged is false.
-- concern: if flagged, pick exactly ONE best-fitting label from this fixed list: ${CONCERNS.join(", ")}. If not flagged, use null.
+Scoring guide: 0-2 = clear/not notable, 3-4 = mild, 5-6 = moderate, 7-8 = notable, 9 = severe. Most real photos have a realistic spread across these scores — do not default every module to the same value, and do not assume the worst. Base every score strictly on this photo, not general assumptions about skin.
 
-If the photo doesn't clearly show a face (too blurry, obstructed, not a person), do your best effort from whatever is visible and lean toward flagged: false with severity "low" rather than guessing wildly.
+If the photo doesn't clearly show a face (too blurry, obstructed, not a person), score conservatively low across modules rather than guessing wildly.
 
-Call the report_face_scan tool with your structured result. Do not include any other commentary.`;
+Call the report_face_scan tool with your scores. Do not include any other commentary.`;
 
 export async function POST(request: Request) {
   const { ok } = rateLimit(clientKey(request, "face-scan-analyze"), {
@@ -101,7 +96,7 @@ export async function POST(request: Request) {
                 data: parsed.base64,
               },
             },
-            { type: "text", text: "Analyze this photo for the 5 face zones." },
+            { type: "text", text: "Analyze this photo across the 13 modules." },
           ],
         },
       ],
@@ -112,15 +107,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "analysis_failed" }, { status: 502 });
     }
 
-    const input = toolUse.input as { zones: Record<string, RawZoneResult> };
-    const rawZones: RawZoneResult[] = FACE_ZONES.map((id) => ({
+    const input = toolUse.input as { scores: Record<string, number> };
+    const rawModules: RawModuleResult[] = MODULES.map((id) => ({
       id,
-      flagged: !!input.zones[id]?.flagged,
-      severity: input.zones[id]?.severity ?? "low",
-      concern: input.zones[id]?.concern ?? null,
+      score: Number(input.scores?.[id] ?? 0),
     }));
 
-    const analysis = buildFaceScanAnalysis(rawZones);
+    const analysis = buildFaceScanAnalysis(rawModules);
     return NextResponse.json({ analysis });
   } catch (error) {
     console.error("face-scan analyze error", error);

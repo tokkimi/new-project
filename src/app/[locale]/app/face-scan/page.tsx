@@ -8,27 +8,56 @@ import {
   Loader2,
   RotateCcw,
   ShieldCheck,
-  Sparkles,
   Check,
   ArrowRight,
   ClipboardCheck,
   AlertTriangle,
   WandSparkles,
+  ChevronDown,
+  Target,
+  CircleDot,
+  Grid3x3,
+  Droplet,
+  Wind,
+  Flame,
+  ShieldAlert,
+  MapPin,
+  AlertCircle,
+  CircleDashed,
+  Waves,
+  Moon,
+  Sparkles,
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { ProductVisual } from "@/components/product-visual";
-import { FaceMap, severityBadgeClass } from "@/components/face-map";
+import { SkinScoreRing, ModuleScoreBar, severityBadgeClass } from "@/components/skin-score";
 import { useCatalog, useShelf } from "@/lib/shelf-store";
 import { buildRoutine } from "@/lib/routine-engine";
 import {
   buildSuggestedRoutine,
+  MODULES,
   type FaceScanAnalysis,
-  type FaceZoneId,
+  type ModuleId,
 } from "@/lib/face-scan-engine";
 
-const ZONE_ORDER: FaceZoneId[] = ["forehead", "nose", "cheeks", "underEye", "chin"];
+const MODULE_ICON: Record<ModuleId, React.ComponentType<{ className?: string }>> = {
+  pores: Target,
+  blackheads: CircleDot,
+  texture: Grid3x3,
+  oiliness: Droplet,
+  dryness: Wind,
+  redness: Flame,
+  sensitivity: ShieldAlert,
+  spots: MapPin,
+  acne: AlertCircle,
+  acneScars: CircleDashed,
+  wrinkles: Waves,
+  darkCircles: Moon,
+  radiance: Sparkles,
+};
 
 type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error";
 
@@ -54,6 +83,7 @@ export default function FaceScanPage() {
   const [preview, setPreview] = React.useState<string | null>(null);
   const [analysis, setAnalysis] = React.useState<FaceScanAnalysis | null>(null);
   const [added, setAdded] = React.useState(false);
+  const [expanded, setExpanded] = React.useState<ModuleId | null>(null);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   const startScan = async (file: File) => {
@@ -62,6 +92,7 @@ export default function FaceScanPage() {
     setPhase("analyzing");
     setStepIndex(0);
     setAdded(false);
+    setExpanded(null);
 
     const stepTimer = setInterval(() => {
       setStepIndex((i) => Math.min(i + 1, analysisSteps.length - 1));
@@ -85,6 +116,9 @@ export default function FaceScanPage() {
       }
       const data = await res.json();
       setAnalysis(data.analysis);
+      setExpanded(
+        (data.analysis as FaceScanAnalysis).modules.find((m) => m.flagged)?.id ?? null
+      );
       setPhase("result");
     } catch {
       setPhase("error");
@@ -109,7 +143,13 @@ export default function FaceScanPage() {
     [suggestedProducts]
   );
 
-  const flaggedCount = analysis?.zones.filter((z) => z.flagged).length ?? 0;
+  const summaryKey = !analysis
+    ? "summaryGood"
+    : analysis.overallScore >= 75
+      ? "summaryGood"
+      : analysis.overallScore >= 50
+        ? "summaryOk"
+        : "summaryAttention";
 
   return (
     <div
@@ -266,33 +306,115 @@ export default function FaceScanPage() {
               <p className="mt-1 text-muted-foreground">{t("resultSubtitle")}</p>
             </div>
 
-            <Card className="items-center gap-4 py-8 text-center">
-              <FaceMap zones={analysis.zones} />
-              <p className="max-w-sm text-sm font-medium">
-                {t("summary", { count: flaggedCount })}
-              </p>
+            <Card className="flex-row flex-wrap items-center gap-6 py-8 sm:flex-nowrap">
+              {preview && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={preview}
+                  alt=""
+                  className="mx-auto h-32 w-32 shrink-0 rounded-2xl object-cover sm:mx-0"
+                />
+              )}
+              <div className="flex flex-1 flex-col items-center gap-4 sm:flex-row sm:justify-between">
+                <div className="text-center sm:text-left">
+                  <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                    {t("overallScoreLabel")}
+                  </p>
+                  <p className="mt-1 max-w-xs text-sm text-muted-foreground">{t(summaryKey)}</p>
+                </div>
+                <SkinScoreRing score={analysis.overallScore} />
+              </div>
             </Card>
 
-            <div className="grid gap-3 sm:grid-cols-2">
-              {ZONE_ORDER.map((zoneId) => {
-                const zone = analysis.zones.find((z) => z.id === zoneId);
-                if (!zone) return null;
-                return (
-                  <Card key={zoneId} className="gap-2 p-4 text-left">
-                    <div className="flex items-center justify-between gap-2">
-                      <p className="font-medium">{t(`zones.${zoneId}.name`)}</p>
-                      <span className={severityBadgeClass(zone.severity)}>
-                        {t(`severity.${zone.severity}`)}
-                      </span>
+            <div className="flex flex-col gap-3">
+              <h2 className="font-serif text-lg">{t("modulesSectionTitle")}</h2>
+              <div className="flex flex-col divide-y divide-border/60 overflow-hidden rounded-2xl bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03),0_10px_30px_-16px_rgba(0,0,0,0.12)]">
+                {MODULES.map((moduleId) => {
+                  const finding = analysis.modules.find((m) => m.id === moduleId);
+                  if (!finding) return null;
+                  const Icon = MODULE_ICON[moduleId];
+                  const isOpen = expanded === moduleId;
+                  return (
+                    <div key={moduleId}>
+                      <button
+                        type="button"
+                        onClick={() => setExpanded(isOpen ? null : moduleId)}
+                        className="flex w-full items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-secondary/40"
+                      >
+                        <span
+                          className={cn(
+                            "flex size-9 shrink-0 items-center justify-center rounded-full",
+                            finding.severity === "attention" && "bg-destructive/10 text-destructive",
+                            finding.severity === "medium" && "bg-am/25 text-am-foreground",
+                            finding.severity === "low" && "bg-success/15 text-success"
+                          )}
+                        >
+                          <Icon className="size-4" />
+                        </span>
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-sm font-medium">
+                            {t(`modules.${moduleId}.name`)}
+                          </p>
+                        </div>
+                        <ModuleScoreBar score={finding.score} />
+                        <span className={severityBadgeClass(finding.severity)}>
+                          {t(`severity.${finding.severity}`)}
+                        </span>
+                        <ChevronDown
+                          className={cn(
+                            "size-4 shrink-0 text-muted-foreground transition-transform",
+                            isOpen && "rotate-180"
+                          )}
+                        />
+                      </button>
+                      <AnimatePresence initial={false}>
+                        {isOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="grid gap-4 bg-secondary/30 px-4 py-4 sm:grid-cols-2">
+                              {finding.flagged ? (
+                                <>
+                                  <div>
+                                    <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                                      {t("causesLabel")}
+                                    </p>
+                                    <ul className="flex flex-col gap-1 text-sm text-muted-foreground">
+                                      {(t.raw(`modules.${moduleId}.causes`) as string[]).map(
+                                        (c) => (
+                                          <li key={c}>• {c}</li>
+                                        )
+                                      )}
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                                      {t("tipsLabel")}
+                                    </p>
+                                    <ul className="flex flex-col gap-1 text-sm text-muted-foreground">
+                                      {(t.raw(`modules.${moduleId}.tips`) as string[]).map((tip) => (
+                                        <li key={tip}>• {tip}</li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                </>
+                              ) : (
+                                <p className="text-sm text-muted-foreground sm:col-span-2">
+                                  {t("noConcern")}
+                                </p>
+                              )}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
-                    <p className="text-sm text-muted-foreground">
-                      {zone.flagged && zone.concern
-                        ? t(`concernDescriptions.${zone.concern}`)
-                        : t(`zones.${zoneId}.clearText`)}
-                    </p>
-                  </Card>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
 
             {suggestedProducts.length > 0 && (
@@ -348,18 +470,6 @@ export default function FaceScanPage() {
                 </Button>
               </Card>
             )}
-
-            <Card className="gap-3 text-left">
-              <h2 className="font-serif text-lg">{t("careSectionTitle")}</h2>
-              <ul className="flex flex-col gap-2.5">
-                {analysis.careTipIds.map((tipId) => (
-                  <li key={tipId} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                    <Sparkles className="mt-0.5 size-4 shrink-0 text-primary" />
-                    {t(`careTips.${tipId}`)}
-                  </li>
-                ))}
-              </ul>
-            </Card>
 
             <p className="flex items-start gap-2 rounded-xl bg-muted/60 p-3 text-left text-xs text-muted-foreground">
               <ShieldCheck className="mt-0.5 size-4 shrink-0" />
