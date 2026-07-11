@@ -41,6 +41,10 @@ model User {
   subscriptionPriceId  String?
   currentPeriodEnd     DateTime?
 
+  // One-time face-scan purchases (9€/scan) for non-subscribers; subscribers
+  // get unlimited scans via hasPremiumAccess() instead of spending credits.
+  faceScanCredits Int @default(0)
+
   newsletterSubscribed Boolean @default(true)
 
   shelfItems  ShelfItem[]

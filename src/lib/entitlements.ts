@@ -15,3 +15,16 @@ export function hasPremiumAccess(user: EntitlementUser): boolean {
 export function isAdmin(user: EntitlementUser): boolean {
   return user?.role === "ADMIN";
 }
+
+type FaceScanUser = {
+  role: Role;
+  subscriptionStatus: SubscriptionStatus;
+  faceScanCredits: number;
+} | null | undefined;
+
+/** Premium subscribers get unlimited face scans; everyone else spends a purchased credit. */
+export function canUseFaceScan(user: FaceScanUser): boolean {
+  if (!user) return false;
+  if (hasPremiumAccess(user)) return true;
+  return user.faceScanCredits > 0;
+}

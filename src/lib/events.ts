@@ -8,7 +8,9 @@ export type EventType =
   | "audit_run"
   | "shelf_item_added"
   | "checkout_started"
-  | "subscription_active";
+  | "subscription_active"
+  | "scan_checkout_started"
+  | "face_scan_credit_purchased";
 
 /**
  * Fire-and-forget analytics event. Never throws — a broken analytics

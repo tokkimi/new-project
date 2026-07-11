@@ -10,6 +10,7 @@ export function AppNav({ className }: { className?: string }) {
 
   const TABS = [
     { href: "/app/shelf", label: t("shelf") },
+    { href: "/app/products", label: t("products") },
     { href: "/app/scan", label: t("scan") },
     { href: "/app/routine", label: t("routine") },
     { href: "/app/audit", label: t("audit") },

@@ -14,6 +14,7 @@
     "tryApp": "Try the app",
     "shelf": "My shelf",
     "scan": "Scan",
+    "products": "Products",
     "routine": "My routine",
     "audit": "Audit",
     "profile": "Profile",
@@ -48,6 +49,16 @@
         "text": "Every product at the right step, in the right order, with clear alternatives when two actives don't mix well."
       }
     ]
+  },
+  "productShowcase": {
+    "eyebrow": "The core of Haru",
+    "title": "A real, free product database",
+    "subtitle": "Search or scan any product to get its full composition, origin, and how to use it — free, no account required.",
+    "latestTitle": "New arrivals",
+    "koreaTitle": "Made in Korea",
+    "koreaSubtitle": "The K-beauty essentials behind our routines",
+    "seeAll": "See all",
+    "browseAllCta": "Browse the full database"
   },
   "featureShowcase": {
     "eyebrow": "In practice",
@@ -139,6 +150,25 @@
     "retake": "Retake photo",
     "goToQuiz": "Take the skin quiz instead",
     "privacyNote": "Your photo is analyzed and discarded — it isn't stored.",
+    "signInPrompt": "Sign in to run a face scan.",
+    "signInCta": "Sign in",
+    "paywallFeatures": [
+      "13-point AI skin analysis from a single photo",
+      "An overall skin score plus a detailed breakdown per module",
+      "Real causes and actionable tips for every flagged area",
+      "A routine and product picks built from your actual result"
+    ],
+    "scanPrice": "€9",
+    "scanPriceHint": "One scan, pay once — no subscription needed",
+    "buyCta": "Buy my scan",
+    "comingSoon": "Payments aren't configured yet — check back soon.",
+    "unlimitedWithPremium": "Unlimited scans with Haru Premium",
+    "premiumGlitchHint": "Something looks off with your account — try refreshing the page.",
+    "noFaceTitle": "No face detected",
+    "noFaceText": "We couldn't find a clear face in that photo. Make sure your face fills the frame, in good lighting, facing the camera — no credit is charged for this attempt.",
+    "noCreditsTitle": "No scan available",
+    "noCreditsText": "You don't have a scan credit left. Buy another scan or subscribe to Haru Premium for unlimited scans.",
+    "noCreditsCta": "Back to face scan",
     "resultTitle": "Your skin snapshot",
     "resultSubtitle": "An AI visual read across 13 modules, cross-referenced with our product catalog — not a clinical diagnosis.",
     "resultDisclaimer": "Haru's AI estimates this from what's actually visible in your photo, in ordinary light — not UV, polarized light, or a 3D scan. It isn't a dermatological device or diagnosis — see a professional for real skin concerns.",
@@ -358,6 +388,15 @@
     "illegibleTitle": "Couldn't read that label",
     "illegibleText": "Try again with the ingredients list in focus, filling more of the frame."
   },
+  "productsPage": {
+    "title": "Product database",
+    "subtitle": "Every product Haru tracks — free to browse, search, and scan. Full composition, origin, and how to use each one.",
+    "searchPlaceholder": "Search a brand or product...",
+    "allCategories": "All",
+    "resultsCount": "{count, plural, one {# product} other {# products}}",
+    "noResultsTitle": "No products match",
+    "noResultsText": "Try a different search term or category."
+  },
   "productDetail": {
     "notFound": "This product doesn't exist (or was removed).",
     "back": "Back",
@@ -376,6 +415,8 @@
   },
   "routinePage": {
     "title": "My routine",
+    "signInPrompt": "Sign in to build your personalized routine.",
+    "signInCta": "Sign in",
     "subtitle": "{count, plural, one {Built from the # product on your shelf.} other {Built from the # products on your shelf.}}",
     "morning": "Morning",
     "evening": "Evening",

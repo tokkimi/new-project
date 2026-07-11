@@ -14,6 +14,7 @@
     "tryApp": "앱 사용해보기",
     "shelf": "내 화장대",
     "scan": "스캔",
+    "products": "제품",
     "routine": "내 루틴",
     "audit": "진단",
     "profile": "프로필",
@@ -48,6 +49,16 @@
         "text": "모든 제품이 올바른 단계, 올바른 순서로 정렬되고, 두 성분이 궁합이 안 맞을 땐 명확한 대안을 제시해드려요."
       }
     ]
+  },
+  "productShowcase": {
+    "eyebrow": "Haru의 핵심",
+    "title": "진짜, 무료 제품 데이터베이스",
+    "subtitle": "제품을 검색하거나 스캔하면 전성분, 원산지, 사용법까지 전부 확인할 수 있어요 — 무료, 회원가입 불필요.",
+    "latestTitle": "신상품",
+    "koreaTitle": "메이드 인 코리아",
+    "koreaSubtitle": "우리 루틴의 근간이 되는 K-뷰티 필수템",
+    "seeAll": "전체 보기",
+    "browseAllCta": "전체 데이터베이스 둘러보기"
   },
   "featureShowcase": {
     "eyebrow": "실제 예시",
@@ -139,6 +150,25 @@
     "retake": "다시 촬영하기",
     "goToQuiz": "대신 피부 퀴즈 하러 가기",
     "privacyNote": "사진은 분석 후 즉시 폐기되며 저장되지 않아요.",
+    "signInPrompt": "얼굴 스캔을 하려면 로그인하세요.",
+    "signInCta": "로그인",
+    "paywallFeatures": [
+      "사진 한 장으로 13개 항목 AI 피부 분석",
+      "종합 피부 점수와 항목별 상세 분석",
+      "발견된 각 부위에 대한 실제 원인과 실천 가능한 팁",
+      "분석 결과를 바탕으로 한 루틴과 제품 추천"
+    ],
+    "scanPrice": "9€",
+    "scanPriceHint": "스캔 1회, 일회성 결제 — 구독 없이 이용 가능",
+    "buyCta": "스캔 구매하기",
+    "comingSoon": "결제가 아직 설정되지 않았어요 — 곧 다시 확인해주세요.",
+    "unlimitedWithPremium": "Haru Premium으로 무제한 스캔",
+    "premiumGlitchHint": "계정에 문제가 있는 것 같아요 — 페이지를 새로고침해보세요.",
+    "noFaceTitle": "얼굴이 감지되지 않았어요",
+    "noFaceText": "사진에서 얼굴을 명확히 찾지 못했어요. 얼굴이 프레임을 채우도록, 조명이 밝은 곳에서 카메라를 정면으로 바라보고 다시 시도해주세요 — 이번 시도는 요금이 청구되지 않아요.",
+    "noCreditsTitle": "이용 가능한 스캔이 없어요",
+    "noCreditsText": "남은 스캔 크레딧이 없어요. 스캔을 추가로 구매하거나 Haru Premium을 구독하면 무제한으로 이용할 수 있어요.",
+    "noCreditsCta": "얼굴 스캔으로 돌아가기",
     "resultTitle": "피부 분석 결과",
     "resultSubtitle": "13개 항목에 대한 AI 시각 분석이며, 제품 카탈로그와 연계해 제안해드려요 — 임상 진단이 아니에요.",
     "resultDisclaimer": "Haru의 AI는 일반 조명에서 촬영된 사진에서 실제로 보이는 내용을 바탕으로 추정합니다 — UV, 편광, 3D 스캔이 아니에요. 의료 기기나 진단이 아니에요 — 실제 피부 고민은 전문의와 상담하세요.",
@@ -306,6 +336,15 @@
     "illegibleTitle": "라벨을 읽지 못했어요",
     "illegibleText": "전성분 리스트에 초점을 맞추고 화면에 더 크게 담아 다시 시도해주세요."
   },
+  "productsPage": {
+    "title": "제품 데이터베이스",
+    "subtitle": "Haru가 추적하는 모든 제품 — 무료로 검색하고 스캔할 수 있어요. 전성분, 원산지, 사용법까지 전부 담았어요.",
+    "searchPlaceholder": "브랜드나 제품을 검색하세요...",
+    "allCategories": "전체",
+    "resultsCount": "제품 {count}개",
+    "noResultsTitle": "일치하는 제품이 없어요",
+    "noResultsText": "다른 검색어나 카테고리로 시도해보세요."
+  },
   "productDetail": {
     "notFound": "존재하지 않거나 삭제된 제품이에요.",
     "back": "뒤로",
@@ -324,6 +363,8 @@
   },
   "routinePage": {
     "title": "내 루틴",
+    "signInPrompt": "맞춤 루틴을 만들려면 로그인하세요.",
+    "signInCta": "로그인",
     "subtitle": "화장대 제품 {count}개를 기반으로 구성했어요.",
     "morning": "아침",
     "evening": "저녁",

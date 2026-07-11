@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type Stripe from "stripe";
-import { getStripe, isStripeConfigured } from "@/lib/stripe";
+import { getStripe } from "@/lib/stripe";
 import { db } from "@/lib/db";
 import { logEvent } from "@/lib/events";
 import type { SubscriptionStatus } from "@/generated/prisma/client";
@@ -50,7 +50,7 @@ async function syncSubscription(subscription: Stripe.Subscription) {
 }
 
 export async function POST(request: Request) {
-  if (!isStripeConfigured() || !process.env.STRIPE_WEBHOOK_SECRET) {
+  if (!process.env.STRIPE_SECRET_KEY || !process.env.STRIPE_WEBHOOK_SECRET) {
     return NextResponse.json({ error: "stripe_not_configured" }, { status: 503 });
   }
 
@@ -83,6 +83,17 @@ export async function POST(request: Request) {
           subscription.metadata.userId = checkoutSession.metadata.userId;
         }
         await syncSubscription(subscription);
+      } else if (
+        checkoutSession.mode === "payment" &&
+        checkoutSession.metadata?.purpose === "face_scan_credit" &&
+        checkoutSession.metadata?.userId
+      ) {
+        const userId = checkoutSession.metadata.userId;
+        await db.user.update({
+          where: { id: userId },
+          data: { faceScanCredits: { increment: 1 } },
+        });
+        await logEvent("face_scan_credit_purchased", { userId });
       }
       break;
     }
