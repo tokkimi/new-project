@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useShelf, useCatalog } from "@/lib/shelf-store";
 import { findIngredient } from "@/data/ingredients";
+import { ProductVisual } from "@/components/product-visual";
 import type { Product } from "@/generated/prisma/client";
 
 type Phase = "idle" | "analyzing" | "result";
@@ -156,18 +157,21 @@ export default function ScanPage() {
             className="w-full"
           >
             <Card className="w-full items-center gap-4 py-10">
-              {matched.imageUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={matched.imageUrl}
-                  alt=""
-                  className="h-20 w-20 rounded-xl object-cover"
-                />
-              ) : (
-                <span className="flex size-14 items-center justify-center rounded-full bg-success/10 text-success">
-                  <Check className="size-6" />
+              <div className="relative">
+                {matched.imageUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={matched.imageUrl}
+                    alt=""
+                    className="h-20 w-20 rounded-2xl object-cover"
+                  />
+                ) : (
+                  <ProductVisual category={matched.category} size="md" />
+                )}
+                <span className="absolute -bottom-1.5 -right-1.5 flex size-6 items-center justify-center rounded-full border-2 border-card bg-success text-success-foreground">
+                  <Check className="size-3.5" />
                 </span>
-              )}
+              </div>
               <div>
                 <p className="font-serif text-xl">{matched.name}</p>
                 <p className="text-sm text-muted-foreground">

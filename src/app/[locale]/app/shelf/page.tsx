@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AddProductDialog } from "@/components/add-product-dialog";
+import { ProductVisual } from "@/components/product-visual";
 import { useShelf } from "@/lib/shelf-store";
 import { findIngredient } from "@/data/ingredients";
 
@@ -45,32 +46,35 @@ export default function ShelfPage() {
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {shelf.map((p) => (
-            <Card key={p.id} className="gap-3">
-              <div className="flex items-start justify-between gap-2">
-                <Link href={`/app/product/${p.slug}`} className="min-w-0">
-                  <p className="truncate font-medium leading-snug hover:underline">{p.name}</p>
-                  <p className="text-xs text-muted-foreground">{p.brand}</p>
-                </Link>
+            <Card key={p.id} className="gap-0 overflow-hidden p-0">
+              <div className="relative">
+                <ProductVisual category={p.category} size="lg" className="rounded-none" />
                 <button
                   onClick={() => removeProduct(p.id)}
-                  className="rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-destructive/10 hover:text-destructive"
+                  className="absolute right-2 top-2 rounded-full bg-background/90 p-1.5 text-muted-foreground shadow-sm backdrop-blur transition-colors hover:bg-destructive/10 hover:text-destructive"
                   aria-label={t("remove", { name: p.name })}
                 >
                   <Trash2 className="size-4" />
                 </button>
+                <Badge variant="secondary" className="absolute left-2 top-2">
+                  {tCategories(p.category)}
+                </Badge>
               </div>
-              <Badge variant="secondary" className="w-fit">
-                {tCategories(p.category)}
-              </Badge>
-              {p.ingredientIds.length > 0 && (
-                <div className="flex flex-wrap gap-1.5">
-                  {p.ingredientIds.map((id) => (
-                    <Badge key={id} variant="outline" className="text-[11px]">
-                      {findIngredient(id) ? tIngredients(`${id}.name`) : id}
-                    </Badge>
-                  ))}
-                </div>
-              )}
+              <div className="flex flex-col gap-3 p-4">
+                <Link href={`/app/product/${p.slug}`} className="min-w-0">
+                  <p className="truncate font-medium leading-snug hover:underline">{p.name}</p>
+                  <p className="text-xs text-muted-foreground">{p.brand}</p>
+                </Link>
+                {p.ingredientIds.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {p.ingredientIds.map((id) => (
+                      <Badge key={id} variant="outline" className="text-[11px]">
+                        {findIngredient(id) ? tIngredients(`${id}.name`) : id}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
+              </div>
             </Card>
           ))}
         </div>

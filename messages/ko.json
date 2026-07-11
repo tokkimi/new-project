@@ -27,7 +27,9 @@
     "subtitle": "Haru는 이미 가지고 있는 제품을 스캔하고, 성분 충돌을 찾아내고, 이상적인 아침/저녁 루틴을 만들어줍니다 — 어려운 용어도, 세 시간짜리 검색도 필요 없어요.",
     "ctaPrimary": "내 루틴 만들기",
     "ctaSecondary": "이용 방법 보기",
-    "disclaimer": "화장대 제품 12개까지 무료 · 신용카드 불필요"
+    "disclaimer": "화장대 제품 12개까지 무료 · 신용카드 불필요",
+    "matchBadgeTitle": "완벽한 매칭",
+    "matchBadgeSubtitle": "내 피부 프로필 기준"
   },
   "howItWorks": {
     "eyebrow": "이용 방법",

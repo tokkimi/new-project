@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/logo";
 import { AppNav } from "@/components/app-nav";
+import { BottomNav } from "@/components/bottom-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { HeaderAuthStatus } from "@/components/header-auth-status";
@@ -13,17 +14,18 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <Link href="/">
             <Logo />
           </Link>
-          <AppNav />
+          <AppNav className="hidden sm:flex" />
           <div className="flex items-center gap-3">
             <LocaleSwitcher className="hidden lg:inline-flex" />
-            <ThemeToggle className="hidden sm:inline-flex" />
+            <ThemeToggle />
             <HeaderAuthStatus />
           </div>
         </div>
       </header>
-      <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10 pb-24 sm:pb-10">
         {children}
       </main>
+      <BottomNav />
     </div>
   );
 }

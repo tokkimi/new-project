@@ -27,7 +27,9 @@
     "subtitle": "Haru scans the products you already own, spots ingredient conflicts, and builds your ideal morning/evening routine — no jargon, no three-hour research rabbit hole.",
     "ctaPrimary": "Build my routine",
     "ctaSecondary": "See how it works",
-    "disclaimer": "Free for up to 12 products on your shelf · no credit card"
+    "disclaimer": "Free for up to 12 products on your shelf · no credit card",
+    "matchBadgeTitle": "Perfect match",
+    "matchBadgeSubtitle": "for your skin profile"
   },
   "howItWorks": {
     "eyebrow": "How it works",

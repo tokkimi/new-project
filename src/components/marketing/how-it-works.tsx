@@ -29,7 +29,7 @@ export function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative flex flex-col items-start gap-4 rounded-2xl border border-border bg-card p-7"
+              className="relative flex flex-col items-start gap-4 rounded-2xl bg-card p-7 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_10px_30px_-16px_rgba(0,0,0,0.12)]"
             >
               <span className="absolute right-6 top-6 font-serif text-3xl text-muted-foreground/30">
                 0{i + 1}

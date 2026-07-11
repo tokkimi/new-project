@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-export function AppNav() {
+export function AppNav({ className }: { className?: string }) {
   const t = useTranslations("nav");
   const pathname = usePathname();
 
@@ -16,7 +16,7 @@ export function AppNav() {
   ];
 
   return (
-    <nav className="flex items-center gap-1 rounded-full bg-muted p-1">
+    <nav className={cn("items-center gap-1 rounded-full bg-muted p-1", className)}>
       {TABS.map((tab) => {
         const active = pathname?.startsWith(tab.href);
         return (

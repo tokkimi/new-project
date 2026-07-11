@@ -6,6 +6,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { HeroIllustration } from "@/components/marketing/hero-illustration";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -18,63 +19,69 @@ export function Hero() {
         <div className="absolute left-0 top-96 h-72 w-72 rounded-full bg-pm/15 blur-3xl" />
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col items-center px-6 pb-20 pt-20 text-center md:pb-28 md:pt-28">
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Badge className="mb-6">
-            <Sparkles className="size-3" />
-            {t("badge")}
-          </Badge>
-        </motion.div>
+      <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-20 pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-32 lg:pt-28">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Badge className="mb-6">
+              <Sparkles className="size-3" />
+              {t("badge")}
+            </Badge>
+          </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.05 }}
-          className="text-balance font-serif text-4xl leading-[1.1] tracking-tight md:text-6xl"
-        >
-          {t("titleLine1")}
-          <br />
-          <span className="text-primary">{t("titleLine2")}</span>
-        </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.05 }}
+            className="text-balance font-serif text-4xl leading-[1.1] tracking-tight md:text-6xl"
+          >
+            {t("titleLine1")}
+            <br />
+            <span className="text-primary">{t("titleLine2")}</span>
+          </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.12 }}
-          className="mt-6 max-w-xl text-balance text-lg text-muted-foreground"
-        >
-          {t("subtitle")}
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.12 }}
+            className="mt-6 max-w-xl text-balance text-lg text-muted-foreground"
+          >
+            {t("subtitle")}
+          </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.18 }}
-          className="mt-9 flex flex-col items-center gap-3 sm:flex-row"
-        >
-          <Button asChild size="lg">
-            <Link href="/app/shelf">
-              {t("ctaPrimary")}
-              <ArrowRight className="size-4" />
-            </Link>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <a href="#how-it-works">{t("ctaSecondary")}</a>
-          </Button>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.18 }}
+            className="mt-9 flex flex-col items-center gap-3 sm:flex-row lg:items-start"
+          >
+            <Button asChild size="lg">
+              <Link href="/app/shelf">
+                {t("ctaPrimary")}
+                <ArrowRight className="size-4" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href="#how-it-works">{t("ctaSecondary")}</a>
+            </Button>
+          </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-5 text-xs text-muted-foreground"
-        >
-          {t("disclaimer")}
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-5 text-xs text-muted-foreground"
+          >
+            {t("disclaimer")}
+          </motion.p>
+        </div>
+
+        <div className="mt-4 lg:mt-0">
+          <HeroIllustration />
+        </div>
       </div>
     </section>
   );

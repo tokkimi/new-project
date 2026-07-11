@@ -2,6 +2,7 @@ import { Plus } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ProductVisual } from "@/components/product-visual";
 import { db } from "@/lib/db";
 
 export default async function AdminProductsPage() {
@@ -26,6 +27,7 @@ export default async function AdminProductsPage() {
         <table className="w-full text-sm">
           <thead className="border-b border-border text-left text-xs uppercase tracking-wide text-muted-foreground">
             <tr>
+              <th className="p-3"></th>
               <th className="p-3">Name</th>
               <th className="p-3">Brand</th>
               <th className="p-3">Category</th>
@@ -36,6 +38,9 @@ export default async function AdminProductsPage() {
           <tbody>
             {products.map((p) => (
               <tr key={p.id} className="border-b border-border/60 last:border-0">
+                <td className="p-3">
+                  <ProductVisual category={p.category} size="sm" />
+                </td>
                 <td className="p-3">
                   <Link href={`/admin/products/${p.id}`} className="font-medium hover:underline">
                     {p.name}

@@ -6,6 +6,7 @@ import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export function SiteHeader() {
   const t = useTranslations("nav");
@@ -36,9 +37,10 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <LocaleSwitcher className="hidden sm:inline-flex" />
           <ThemeToggle className="hidden sm:inline-flex" />
-          <Button asChild size="sm">
+          <Button asChild size="sm" className="hidden sm:inline-flex">
             <Link href="/app/shelf">{t("tryApp")}</Link>
           </Button>
+          <MobileMenu navItems={NAV} />
         </div>
       </div>
     </header>
