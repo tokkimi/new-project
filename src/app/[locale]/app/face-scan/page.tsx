@@ -3,20 +3,47 @@
 import * as React from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { Camera, Loader2, RotateCcw, ShieldCheck, Sparkles } from "lucide-react";
+import {
+  Camera,
+  Loader2,
+  RotateCcw,
+  ShieldCheck,
+  Sparkles,
+  Check,
+  ArrowRight,
+  ClipboardCheck,
+} from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ProductVisual } from "@/components/product-visual";
+import { FaceMap, severityBadgeClass } from "@/components/face-map";
+import { useCatalog, useShelf } from "@/lib/shelf-store";
+import { buildRoutine } from "@/lib/routine-engine";
+import {
+  analyzeFaceScan,
+  buildSuggestedRoutine,
+  type FaceScanAnalysis,
+  type FaceZoneId,
+} from "@/lib/face-scan-engine";
+
+const ZONE_ORDER: FaceZoneId[] = ["forehead", "nose", "cheeks", "underEye", "chin"];
 
 type Phase = "idle" | "analyzing" | "result";
 
 export default function FaceScanPage() {
   const t = useTranslations("faceScanPage");
+  const tCategories = useTranslations("categories");
   const analysisSteps = t.raw("steps") as string[];
+
+  const { catalog } = useCatalog();
+  const { addProduct } = useShelf();
 
   const [phase, setPhase] = React.useState<Phase>("idle");
   const [stepIndex, setStepIndex] = React.useState(0);
   const [preview, setPreview] = React.useState<string | null>(null);
+  const [analysis, setAnalysis] = React.useState<FaceScanAnalysis | null>(null);
+  const [added, setAdded] = React.useState(false);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   const startScan = (file: File) => {
@@ -24,6 +51,7 @@ export default function FaceScanPage() {
     setPreview(url);
     setPhase("analyzing");
     setStepIndex(0);
+    setAdded(false);
 
     let i = 0;
     const interval = setInterval(() => {
@@ -31,6 +59,7 @@ export default function FaceScanPage() {
       setStepIndex(i);
       if (i >= analysisSteps.length) {
         clearInterval(interval);
+        setAnalysis(analyzeFaceScan());
         setPhase("result");
       }
     }, 600);
@@ -39,20 +68,42 @@ export default function FaceScanPage() {
   const reset = () => {
     if (preview) URL.revokeObjectURL(preview);
     setPreview(null);
+    setAnalysis(null);
     setPhase("idle");
   };
 
-  return (
-    <div className="mx-auto flex max-w-lg flex-col items-center gap-6 text-center">
-      <div>
-        <h1 className="font-serif text-3xl">{t("title")}</h1>
-        <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
-      </div>
+  const suggestedProducts = React.useMemo(
+    () => (analysis ? buildSuggestedRoutine(catalog, analysis) : []),
+    [catalog, analysis]
+  );
+  const suggestedRoutine = React.useMemo(
+    () => buildRoutine(suggestedProducts),
+    [suggestedProducts]
+  );
 
-      <p className="flex items-start gap-2 rounded-xl bg-muted/60 p-3 text-left text-xs text-muted-foreground">
-        <ShieldCheck className="mt-0.5 size-4 shrink-0" />
-        {t("disclaimer")}
-      </p>
+  const flaggedCount = analysis?.zones.filter((z) => z.flagged).length ?? 0;
+
+  return (
+    <div
+      className={
+        phase === "result"
+          ? "mx-auto flex max-w-2xl flex-col gap-6"
+          : "mx-auto flex max-w-lg flex-col items-center gap-6 text-center"
+      }
+    >
+      {phase !== "result" && (
+        <>
+          <div>
+            <h1 className="font-serif text-3xl">{t("title")}</h1>
+            <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
+          </div>
+
+          <p className="flex items-start gap-2 rounded-xl bg-muted/60 p-3 text-left text-xs text-muted-foreground">
+            <ShieldCheck className="mt-0.5 size-4 shrink-0" />
+            {t("disclaimer")}
+          </p>
+        </>
+      )}
 
       <input
         ref={fileInputRef}
@@ -126,30 +177,128 @@ export default function FaceScanPage() {
           </motion.div>
         )}
 
-        {phase === "result" && (
+        {phase === "result" && analysis && (
           <motion.div
             key="result"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="w-full"
+            className="flex w-full flex-col gap-6"
           >
-            <Card className="w-full items-center gap-4 py-12 text-center">
-              <span className="flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Sparkles className="size-6" />
-              </span>
-              <h2 className="font-serif text-xl">{t("comingSoonTitle")}</h2>
-              <p className="max-w-sm text-sm text-muted-foreground">{t("comingSoonText")}</p>
-              <p className="text-xs text-muted-foreground">{t("privacyNote")}</p>
-              <div className="mt-2 flex flex-wrap justify-center gap-2">
-                <Button variant="outline" onClick={reset}>
-                  <RotateCcw className="size-4" />
-                  {t("retake")}
-                </Button>
-                <Button asChild>
-                  <Link href="/app/quiz">{t("goToQuiz")}</Link>
-                </Button>
-              </div>
+            <div className="text-center">
+              <h1 className="font-serif text-3xl">{t("resultTitle")}</h1>
+              <p className="mt-1 text-muted-foreground">{t("resultSubtitle")}</p>
+            </div>
+
+            <Card className="items-center gap-4 py-8 text-center">
+              <FaceMap zones={analysis.zones} />
+              <p className="max-w-sm text-sm font-medium">
+                {t("summary", { count: flaggedCount })}
+              </p>
             </Card>
+
+            <div className="grid gap-3 sm:grid-cols-2">
+              {ZONE_ORDER.map((zoneId) => {
+                const zone = analysis.zones.find((z) => z.id === zoneId);
+                if (!zone) return null;
+                return (
+                  <Card key={zoneId} className="gap-2 p-4 text-left">
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="font-medium">{t(`zones.${zoneId}.name`)}</p>
+                      <span className={severityBadgeClass(zone.severity)}>
+                        {t(`severity.${zone.severity}`)}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      {zone.flagged ? t(`zones.${zoneId}.flaggedText`) : t(`zones.${zoneId}.clearText`)}
+                    </p>
+                  </Card>
+                );
+              })}
+            </div>
+
+            {suggestedProducts.length > 0 && (
+              <Card className="gap-4 text-left">
+                <div>
+                  <h2 className="font-serif text-lg">{t("routineSectionTitle")}</h2>
+                  <p className="text-sm text-muted-foreground">{t("routineSectionText")}</p>
+                </div>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {[...suggestedRoutine.am, ...suggestedRoutine.pm]
+                    .filter(
+                      (step, i, arr) =>
+                        arr.findIndex((s) => s.product.id === step.product.id) === i
+                    )
+                    .map((step) => (
+                      <div
+                        key={step.product.id}
+                        className="flex items-center gap-3 rounded-xl bg-secondary/40 px-3 py-2"
+                      >
+                        <ProductVisual
+                          category={step.product.category}
+                          size="sm"
+                          className="size-10 rounded-lg"
+                        />
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-sm font-medium">{step.product.name}</p>
+                          <p className="text-xs text-muted-foreground">
+                            {tCategories(step.product.category)}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+                <Button
+                  onClick={() => {
+                    suggestedProducts.forEach((p) => addProduct(p));
+                    setAdded(true);
+                  }}
+                  disabled={added}
+                  className="mt-1 self-start"
+                >
+                  {added ? (
+                    <>
+                      <Check className="size-4" />
+                      {t("addedToShelf")}
+                    </>
+                  ) : (
+                    <>
+                      <ClipboardCheck className="size-4" />
+                      {t("addToShelf")}
+                    </>
+                  )}
+                </Button>
+              </Card>
+            )}
+
+            <Card className="gap-3 text-left">
+              <h2 className="font-serif text-lg">{t("careSectionTitle")}</h2>
+              <ul className="flex flex-col gap-2.5">
+                {analysis.careTipIds.map((tipId) => (
+                  <li key={tipId} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                    <Sparkles className="mt-0.5 size-4 shrink-0 text-primary" />
+                    {t(`careTips.${tipId}`)}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+
+            <p className="flex items-start gap-2 rounded-xl bg-muted/60 p-3 text-left text-xs text-muted-foreground">
+              <ShieldCheck className="mt-0.5 size-4 shrink-0" />
+              {t("resultDisclaimer")}
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-2">
+              <Button variant="outline" onClick={reset}>
+                <RotateCcw className="size-4" />
+                {t("retake")}
+              </Button>
+              <Button asChild variant="outline">
+                <Link href="/app/quiz">
+                  {t("goToQuiz")}
+                  <ArrowRight className="size-4" />
+                </Link>
+              </Button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

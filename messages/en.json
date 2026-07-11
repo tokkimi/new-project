@@ -136,11 +136,61 @@
       "Checking lighting and framing...",
       "Preparing analysis..."
     ],
-    "comingSoonTitle": "Analysis engine coming soon",
-    "comingSoonText": "The capture flow is ready — we're finishing the AI analysis engine before showing real results here. Your skin quiz answers already power your routine audit in the meantime.",
     "retake": "Retake photo",
     "goToQuiz": "Take the skin quiz instead",
-    "privacyNote": "Your photo is analyzed and discarded — it isn't stored."
+    "privacyNote": "Your photo is analyzed and discarded — it isn't stored.",
+    "resultTitle": "Your skin snapshot",
+    "resultSubtitle": "A simulated visual read across 5 zones, cross-referenced with our product catalog — not a clinical diagnosis.",
+    "resultDisclaimer": "Haru estimates this from the photo's visual patterns using a simplified model. It isn't a dermatological device or diagnosis — see a professional for real skin concerns.",
+    "summary": "{count, plural, =0 {Nothing major stands out today — your skin looks balanced. Keep your current routine going.} one {# zone could use a little extra care.} other {# zones could use a little extra care.}}",
+    "zoneMapTitle": "Zones analyzed",
+    "severity": {
+      "low": "Clear",
+      "medium": "To watch",
+      "attention": "Priority"
+    },
+    "zones": {
+      "forehead": {
+        "name": "Forehead",
+        "flaggedText": "Visible shine and slightly enlarged pores in this area.",
+        "clearText": "Balanced — no major shine or congestion detected."
+      },
+      "nose": {
+        "name": "Nose",
+        "flaggedText": "A few visible blackheads and light congestion around the nose.",
+        "clearText": "Pores look clear on the nose."
+      },
+      "cheeks": {
+        "name": "Cheeks",
+        "flaggedText": "Slight tightness on the cheeks — a sign of dehydration.",
+        "clearText": "Cheeks look well hydrated with even texture."
+      },
+      "underEye": {
+        "name": "Under-eyes",
+        "flaggedText": "Faint fine lines and slight dullness starting to show under the eyes.",
+        "clearText": "Smooth under-eye area, no visible fine lines."
+      },
+      "chin": {
+        "name": "Chin & jawline",
+        "flaggedText": "Some redness and reactive-looking skin along the chin and jawline.",
+        "clearText": "Calm along the chin and jawline, no redness detected."
+      }
+    },
+    "routineSectionTitle": "A routine that targets what we found",
+    "routineSectionText": "Built from our product catalog to address the flagged zones above.",
+    "addToShelf": "Add this routine to my shelf",
+    "addedToShelf": "Added to your shelf",
+    "careSectionTitle": "Care tips for you",
+    "careTips": {
+      "doubleCleanse": "Double cleanse in the evening (oil cleanser, then a gentle water-based one) to fully remove sunscreen and buildup.",
+      "spfReapply": "Reapply SPF every 2–3 hours if you're outdoors during the day — it's the single highest-impact anti-aging step.",
+      "gentleExfoliation": "Exfoliate 1–2x a week with a gentle BHA/AHA instead of daily scrubs — over-exfoliating makes pores and texture worse.",
+      "barrierSupport": "Prioritize a barrier-repair moisturizer (ceramides, centella) before reintroducing strong actives.",
+      "handsOff": "Avoid touching or picking at your face during the day — it transfers oil and bacteria and can worsen breakouts.",
+      "sleepHydration": "Layer a lightweight hydrating essence before your moisturizer at night to counter overnight water loss.",
+      "pillowcase": "Change your pillowcase weekly — it collects oil and bacteria that can aggravate breakout-prone skin.",
+      "patchTestActives": "Patch-test any new active on your inner arm for 48h before applying it to a reactive, redness-prone face."
+    }
   },
   "scanPage": {
     "title": "Scan a product",

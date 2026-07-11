@@ -9,7 +9,12 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
+    // Prisma Migrate needs advisory locks, which don't work reliably over a
+    // pgbouncer transaction-pooled connection — prefer the unpooled URL for
+    // CLI commands (migrate/generate) when the integration provides one.
     url:
+      process.env["POSTGRES_URL_NON_POOLING"] ??
+      process.env["DATABASE_URL_UNPOOLED"] ??
       process.env["DATABASE_URL"] ??
       process.env["POSTGRES_PRISMA_URL"] ??
       process.env["POSTGRES_URL"],
