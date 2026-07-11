@@ -195,4 +195,199 @@ export const NEWS: SeedNews[] = [
     sourceUrl: "https://www.yankodesign.com/2026/05/30/the-skincare-device-concept-that-makes-every-other-one-look-lazy/",
     publishedAt: "2026-05-30",
   },
+
+  // --- Added in a later research pass (see below for the same real/verifiable sourcing standard) ---
+
+  // Innovation
+  {
+    category: "innovation",
+    title: "Amorepacific lance l'application « AMORE MALL » sur ChatGPT",
+    summary:
+      "Amorepacific devient la première entreprise de beauté coréenne à déployer une application sur ChatGPT, avec des recommandations de produits personnalisées et une comparaison des ingrédients directement dans la conversation.",
+    sourceName: "Amorepacific (communiqué officiel)",
+    sourceUrl: "https://www.apgroup.com/int/en/news/2026-03-13-1.html",
+    publishedAt: "2026-03-13",
+  },
+  {
+    category: "innovation",
+    title: "Amorepacific intègre son diagnostic cutané par IA au miroir connecté de Samsung au CES 2026",
+    summary:
+      "Entraînée sur plus de 450 000 cas, la technologie d'analyse optique d'Amorepacific évalue pores, rougeurs, pigmentation et rides pour recommander des soins personnalisés via le « AI Beauty Mirror » de Samsung.",
+    sourceName: "PRNewswire",
+    sourceUrl:
+      "https://www.prnewswire.com/apac/news-releases/amorepacific-showcases-innovative-technologies-at-ces-2026-302652331.html",
+    publishedAt: "2026-01-05",
+  },
+  {
+    category: "innovation",
+    title: "SmartSKN lance K-OWN, une plateforme de cosmétique coréenne sur mesure pilotée par des robots et l'IA",
+    summary:
+      "La plateforme permet de composer sa propre formule de soin coréen, fabriquée à la demande par des mini-laboratoires robotisés à partir d'une analyse de peau réalisée par IA.",
+    sourceName: "PRNewswire",
+    sourceUrl:
+      "https://www.prnewswire.com/news-releases/smartskn-launches-k-own-the-worlds-first-ai-custom-korean-skincare-platform-powered-by-robots-302402049.html",
+    publishedAt: "2025-03-14",
+  },
+  {
+    category: "innovation",
+    title: "APR lance en Corée le « Booster Pro X2 », un dispositif de soin piloté par IA",
+    summary:
+      "Successeur du Booster Pro de Medicube, l'appareil ajoute un mode « AI » qui recommande un protocole selon l'usage, portant à sept le nombre total de modes disponibles.",
+    sourceName: "The Asia Business Daily",
+    sourceUrl: "https://www.asiae.co.kr/en/article/2026032315063955549",
+    publishedAt: "2026-03-23",
+  },
+
+  // Launch
+  {
+    category: "launch",
+    title: "Beauty of Joseon lance une crème raffermissante au rétinol fermenté",
+    summary:
+      "La Revive Firming Moisturizer associe rétinol fermenté encapsulé et céramides au ginseng pour un effet raffermissant quotidien tout en restant douce pour les peaux sensibles.",
+    sourceName: "Beauty Packaging",
+    sourceUrl: "https://www.beautypackaging.com/breaking-news/beauty-of-joseon-debuts-moisturizer-with-fermented-retinol/",
+    publishedAt: "2026-01-23",
+  },
+  {
+    category: "launch",
+    title: "Anua présente son sérum brumisable PDRN Collagen Glow lors d'un lancement à New York",
+    summary:
+      "Le nouveau spray de la gamme PDRN d'Anua utilise des micro-capsules bleues qui éclatent à l'application pour une hydratation instantanée, utilisable avant, pendant et après le maquillage.",
+    sourceName: "PRNewswire",
+    sourceUrl:
+      "https://www.prnewswire.com/news-releases/anua-spotlights-its-newest-pdrn-product-innovation-with-launch-event-in-new-york-city-302682103.html",
+    publishedAt: "2026-02-08",
+  },
+  {
+    category: "launch",
+    title: "APR déploie le Booster Pro X2 de Medicube aux États-Unis et au Royaume-Uni",
+    summary:
+      "Après son lancement en Corée, l'appareil de soin nouvelle génération arrive sur TikTok Shop puis Amazon aux États-Unis avant le Royaume-Uni ; la gamme Booster Pro dépasse déjà six millions d'unités vendues dans le monde.",
+    sourceName: "Seoul Economic Daily",
+    sourceUrl: "https://en.sedaily.com/news/2026/06/11/apr-launches-next-generation-beauty-device-booster-pro-x2",
+    publishedAt: "2026-06-11",
+  },
+  {
+    category: "launch",
+    title: "Kiss New York lance sa première ligne de soins coréens sur Amazon",
+    summary:
+      "La marque américaine dévoile une collection de 25 produits inspirés des formats et ingrédients K-beauty, pensée pour un public qui découvre tout juste ces routines.",
+    sourceName: "Mass Market Retailers",
+    sourceUrl: "https://massmarketretailers.com/kiss-new-york-launches-1st-korean-skincare-line/",
+    publishedAt: "2026-06-27",
+  },
+
+  // Ingredient trend
+  {
+    category: "ingredient-trend",
+    title: "Les spicules, présentées comme un « microneedling en flacon », s'imposent comme tendance K-beauty",
+    summary:
+      "Ces microstructures issues d'éponges d'eau douce créent des microcanaux temporaires dans l'épiderme pour stimuler le renouvellement cellulaire et améliorer la pénétration des actifs ; la Corée mène cette vague d'ingrédients.",
+    sourceName: "CNN Underscored",
+    sourceUrl: "https://us.cnn.com/cnn-underscored/beauty/spicule-skin-care",
+    publishedAt: "2026-07-04",
+  },
+  {
+    category: "ingredient-trend",
+    title: "Le bêta-glucane s'impose comme l'actif barrière incontournable de 2026",
+    summary:
+      "Ce polysaccharide dérivé de l'avoine, des champignons ou des algues apaise, retient l'eau et renforce la barrière cutanée ; les recherches en ligne pour cet ingrédient ont bondi de 51 % en un an.",
+    sourceName: "Vogue Adria",
+    sourceUrl: "https://vogueadria.com/beta-glucan-skincare-routine-dehydrated-skin/",
+    publishedAt: "2026-05-21",
+  },
+  {
+    category: "ingredient-trend",
+    title: "Le champignon des neiges (tremella), présenté comme un substitut végétal à l'acide hyaluronique, gagne du terrain",
+    summary:
+      "Capable de retenir jusqu'à 500 fois son poids en eau, cette tremelle séduit pour son profil végan et son effet repulpant, selon les dermatologues cités par Skincare.com.",
+    sourceName: "Skincare.com (L'Oréal)",
+    sourceUrl: "https://www.skincare.com/expert-advice/skin-care-advice/what-is-snow-mushroom-in-skincare",
+    publishedAt: "2026-05-05",
+  },
+  {
+    category: "ingredient-trend",
+    title: "NMN et postbiotiques, deux ingrédients à surveiller parmi les tendances soin de 2026",
+    summary:
+      "Refinery29 identifie le NMN, précurseur du NAD+, et les postbiotiques issus de la fermentation comme des actifs montants pour soutenir le microbiome et la barrière cutanée.",
+    sourceName: "Refinery29",
+    sourceUrl: "https://www.refinery29.com/en-us/skincare-trends-2026",
+    publishedAt: "2025-12-24",
+  },
+
+  // Brand news
+  {
+    category: "brand-news",
+    title: "Goodai Global désigné acquéreur préférentiel de la marque coréenne Skinfood",
+    summary:
+      "Le consortium formé par Goodai Global et The Hahm Partners est choisi pour racheter Skinfood, marque historique de cosmétique coréenne, pour environ 150 milliards de wons (108 millions de dollars).",
+    sourceName: "BeautyMatter",
+    sourceUrl: "https://beautymatter.com/articles/goodai-global-acquires-k-beauty-brand-skinfood",
+    publishedAt: "2025-12-01",
+  },
+  {
+    category: "brand-news",
+    title: "Goodai Global rachète le distributeur américain Hansung USA avant son introduction en Bourse",
+    summary:
+      "Surnommé le « L'Oréal coréen », Goodai Global sécurise le contrôle direct de réseaux de distribution K-beauty aux États-Unis, dont Ulta Beauty, Costco et Target, pour environ 100 milliards de wons.",
+    sourceName: "KED Global",
+    sourceUrl: "https://www.kedglobal.com/mergers-acquisitions/newsView/ked202602020005",
+    publishedAt: "2026-02-02",
+  },
+  {
+    category: "brand-news",
+    title: "Goodai Global lève 600 millions de dollars auprès de fonds de capital-investissement coréens",
+    summary:
+      "IMM Private Equity et cinq autres fonds coréens investissent 800 milliards de wons dans cette maison de marques K-beauty, la valorisant à 3,1 milliards de dollars en vue d'une introduction en Bourse.",
+    sourceName: "KED Global",
+    sourceUrl: "https://www.kedglobal.com/private-equity/newsView/ked202507270002",
+    publishedAt: "2025-07-27",
+  },
+  {
+    category: "brand-news",
+    title: "Bain Capital cède une partie de sa participation dans le fabricant d'appareils Classys",
+    summary:
+      "Le fonds américain vend 8,25 % du capital du fabricant coréen d'appareils esthétiques Classys pour environ 324 milliards de wons (226 millions de dollars) via un placement accéléré.",
+    sourceName: "KED Global",
+    sourceUrl: "https://www.kedglobal.com/private-equity/newsView/ked202602250008",
+    publishedAt: "2026-02-25",
+  },
+
+  // Award
+  {
+    category: "award",
+    title: "KCC Silicon remporte un prix du meilleur ingrédient à in-cosmetics Korea 2026",
+    summary:
+      "Le matériau siliconé SeraSense RBS 12 de KCC Silicon décroche l'argent dans la catégorie « Best Functional Ingredients » de l'Innovation Zone, lors du salon tenu au COEX de Séoul.",
+    sourceName: "The Asia Business Daily",
+    sourceUrl: "https://www.asiae.co.kr/en/article/2026070309195049279",
+    publishedAt: "2026-07-03",
+  },
+  {
+    category: "award",
+    title: "Labio remporte le tout premier « K-Innovative Ingredient Award » à in-cosmetics Korea 2026",
+    summary:
+      "L'ingrédient BIO-Placenta de Labio, combinant facteurs de croissance et actifs sénolytiques (NMN, carnosine), reçoit ce nouveau prix récompensant le meilleur actif développé par un fabricant coréen.",
+    sourceName: "CosinKorea",
+    sourceUrl: "https://www.cosinkorea.com/news/article.html?no=57789",
+    publishedAt: "2026-07-01",
+  },
+  {
+    category: "award",
+    title: "Le fond de teint cushion de TIRTIR élu « produit K-beauty préféré » aux Allure Readers' Choice Awards 2026",
+    summary:
+      "Le Mask Fit Red Cushion, dont l'ambassadeur mondial est V du groupe BTS, figure parmi les lauréats votés par les lectrices et lecteurs du magazine Allure.",
+    sourceName: "StarNews Korea",
+    sourceUrl: "https://www.starnewskorea.com/en/star/2026/05/21/2026052106485149065",
+    publishedAt: "2026-05-21",
+  },
+  {
+    category: "award",
+    title: "Hwahae dévoile les lauréats de ses Beauty Awards 2026 (édition de mi-année)",
+    summary:
+      "Ces prix, décernés deux fois par an, récompensent les produits les mieux notés par les utilisateurs de la plateforme coréenne d'avis beauté Hwahae, forte de plus de 10 millions d'avis vérifiés.",
+    sourceName: "The Monodist",
+    sourceUrl: "https://themonodist.com/hwahae-beauty-awards-2026-mid-year/",
+    publishedAt: "2026-05-21",
+  },
 ];
