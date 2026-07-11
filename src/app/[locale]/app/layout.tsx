@@ -15,8 +15,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             <Logo />
           </Link>
           <AppNav className="hidden sm:flex" />
-          <div className="flex items-center gap-3">
-            <LocaleSwitcher className="hidden lg:inline-flex" />
+          <div className="flex items-center gap-2 sm:gap-3">
+            <LocaleSwitcher compact className="sm:hidden" />
+            <LocaleSwitcher className="hidden sm:inline-flex" />
             <ThemeToggle />
             <HeaderAuthStatus />
           </div>

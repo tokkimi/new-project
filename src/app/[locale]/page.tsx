@@ -31,7 +31,7 @@ export default async function Home({
 
   const newsItems = await db.newsItem.findMany({
     orderBy: { publishedAt: "desc" },
-    take: 12,
+    take: 50,
   });
 
   return (

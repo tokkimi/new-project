@@ -121,7 +121,7 @@
   },
   "addProductDialog": {
     "title": "Add to your shelf",
-    "description": "Pick a product from our database — in a real v1, this step happens by scanning the packaging.",
+    "description": "Search our product database, or scan the packaging instead for an instant match.",
     "searchPlaceholder": "Search a brand or product...",
     "noResults": "No product matches."
   },
@@ -196,7 +196,7 @@
     "title": "Scan a product",
     "subtitle": "Photograph the label (ingredient list) and let Haru analyze it.",
     "dropTitle": "Take a photo or upload an image",
-    "dropSubtitle": "Demo: any image triggers the analysis",
+    "dropSubtitle": "Take a photo of the label, or upload one from your gallery",
     "demoWithoutPhoto": "...or run a demo without a photo",
     "faceScanCta": "Looking for a face scan instead?",
     "steps": [
@@ -359,7 +359,7 @@
       "Shelf up to 12 products",
       "Ingredient conflict detection",
       "AM/PM routine builder",
-      "Product scan (demo)"
+      "Product scan"
     ],
     "premiumTitle": "Premium",
     "premiumPrice": "€6.99/mo",
