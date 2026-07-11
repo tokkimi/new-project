@@ -3,33 +3,47 @@ import type { Product } from "@/generated/prisma/client";
 
 export type FaceZoneId = "forehead" | "nose" | "cheeks" | "underEye" | "chin";
 export type ZoneSeverity = "low" | "medium" | "attention";
+export type Concern = (typeof CONCERNS)[number];
 
-type ZoneDef = {
-  id: FaceZoneId;
-  concern: (typeof CONCERNS)[number];
-  ingredientId: string;
-  category: string;
+export const FACE_ZONES: FaceZoneId[] = ["forehead", "nose", "cheeks", "underEye", "chin"];
+
+// Anatomical mapping — which product category applies to a given face zone.
+// This is fixed (a fact about skincare routines), unlike the concern found
+// there, which comes from the actual photo analysis.
+const ZONE_CATEGORY: Record<FaceZoneId, string> = {
+  forehead: "toner",
+  nose: "toner",
+  cheeks: "essence",
+  underEye: "eye",
+  chin: "serum",
 };
 
-// Deliberately simple, deterministic-per-run mapping: one plausible concern
-// per face region, tied to a real active/category from the ingredient rule
-// engine and product catalog so the "suggested routine" below is built from
-// real data, not invented claims. This is a simulated visual read, not a
-// real computer-vision model — the UI is explicit about that.
-const ZONES: ZoneDef[] = [
-  { id: "forehead", concern: "pores", ingredientId: "niacinamide", category: "toner" },
-  { id: "nose", concern: "acne", ingredientId: "bha", category: "toner" },
-  { id: "cheeks", concern: "hydration", ingredientId: "hyaluronic_acid", category: "essence" },
-  { id: "underEye", concern: "aging", ingredientId: "peptides", category: "eye" },
-  { id: "chin", concern: "redness", ingredientId: "centella", category: "serum" },
-];
+// Which active ingredient (from our tracked taxonomy) best addresses each
+// concern, used to prefer a matching product when building a routine.
+const CONCERN_INGREDIENT: Record<Concern, string> = {
+  acne: "bha",
+  aging: "peptides",
+  hydration: "hyaluronic_acid",
+  redness: "centella",
+  pigmentation: "vitamin_c",
+  pores: "niacinamide",
+  dullness: "vitamin_c",
+  barrier: "ceramides",
+};
+
+export type RawZoneResult = {
+  id: FaceZoneId;
+  flagged: boolean;
+  severity: ZoneSeverity;
+  concern: Concern | null;
+};
 
 export type ZoneFinding = {
   id: FaceZoneId;
   flagged: boolean;
   severity: ZoneSeverity;
-  concern: (typeof CONCERNS)[number];
-  ingredientId: string;
+  concern: Concern | null;
+  ingredientId: string | null;
   category: string;
 };
 
@@ -43,7 +57,7 @@ export type CareTipId =
   | "pillowcase"
   | "patchTestActives";
 
-const CARE_TIPS: { id: CareTipId; concerns: (typeof CONCERNS)[number][] }[] = [
+const CARE_TIPS: { id: CareTipId; concerns: Concern[] }[] = [
   { id: "doubleCleanse", concerns: [] },
   { id: "spfReapply", concerns: [] },
   { id: "gentleExfoliation", concerns: ["pores", "acne", "dullness"] },
@@ -56,38 +70,32 @@ const CARE_TIPS: { id: CareTipId; concerns: (typeof CONCERNS)[number][] }[] = [
 
 export type FaceScanAnalysis = {
   zones: ZoneFinding[];
-  flaggedConcerns: (typeof CONCERNS)[number][];
+  flaggedConcerns: Concern[];
   suggestedIngredientIds: string[];
   careTipIds: CareTipId[];
 };
 
-function rollSeverity(): ZoneSeverity {
-  return Math.random() < 0.3 ? "attention" : "medium";
-}
-
-export function analyzeFaceScan(): FaceScanAnalysis {
-  const zones: ZoneFinding[] = ZONES.map((z) => {
-    const flagged = Math.random() < 0.6;
+/** Turns the model's raw per-zone read into the full analysis the UI/routine builder consume. */
+export function buildFaceScanAnalysis(rawZones: RawZoneResult[]): FaceScanAnalysis {
+  const zones: ZoneFinding[] = FACE_ZONES.map((id) => {
+    const raw = rawZones.find((z) => z.id === id);
+    const flagged = raw?.flagged ?? false;
+    const concern = flagged ? raw?.concern ?? null : null;
     return {
-      id: z.id,
+      id,
       flagged,
-      severity: flagged ? rollSeverity() : "low",
-      concern: z.concern,
-      ingredientId: z.ingredientId,
-      category: z.category,
+      severity: flagged ? raw?.severity ?? "medium" : "low",
+      concern,
+      ingredientId: concern ? CONCERN_INGREDIENT[concern] : null,
+      category: ZONE_CATEGORY[id],
     };
   });
 
-  if (zones.every((z) => !z.flagged)) {
-    const idx = Math.floor(Math.random() * zones.length);
-    zones[idx] = { ...zones[idx], flagged: true, severity: "medium" };
-  }
-
   const flaggedConcerns = Array.from(
-    new Set(zones.filter((z) => z.flagged).map((z) => z.concern))
+    new Set(zones.filter((z) => z.flagged && z.concern).map((z) => z.concern as Concern))
   );
   const suggestedIngredientIds = Array.from(
-    new Set(zones.filter((z) => z.flagged).map((z) => z.ingredientId))
+    new Set(zones.filter((z) => z.ingredientId).map((z) => z.ingredientId as string))
   );
 
   const universal = CARE_TIPS.filter((t) => t.concerns.length === 0).map((t) => t.id);
@@ -102,12 +110,12 @@ export function analyzeFaceScan(): FaceScanAnalysis {
 /**
  * Turns the analysis into a real product routine from the actual catalog:
  * always covers cleanse/moisturize/protect, plus one product per flagged
- * zone's category, preferring a match on the zone's suggested active.
+ * zone's category, preferring a match on that zone's concern-derived active.
  */
 export function buildSuggestedRoutine(catalog: Product[], analysis: FaceScanAnalysis): Product[] {
-  const flaggedCategories = analysis.zones.filter((z) => z.flagged).map((z) => z.category);
+  const flaggedZones = analysis.zones.filter((z) => z.flagged);
   const desiredCategories = Array.from(
-    new Set(["cleanser", ...flaggedCategories, "moisturizer", "sunscreen"])
+    new Set(["cleanser", ...flaggedZones.map((z) => z.category), "moisturizer", "sunscreen"])
   );
 
   const picked: Product[] = [];

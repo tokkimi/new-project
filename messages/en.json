@@ -140,8 +140,8 @@
     "goToQuiz": "Take the skin quiz instead",
     "privacyNote": "Your photo is analyzed and discarded — it isn't stored.",
     "resultTitle": "Your skin snapshot",
-    "resultSubtitle": "A simulated visual read across 5 zones, cross-referenced with our product catalog — not a clinical diagnosis.",
-    "resultDisclaimer": "Haru estimates this from the photo's visual patterns using a simplified model. It isn't a dermatological device or diagnosis — see a professional for real skin concerns.",
+    "resultSubtitle": "An AI visual read across 5 zones, cross-referenced with our product catalog — not a clinical diagnosis.",
+    "resultDisclaimer": "Haru's AI estimates this from what's actually visible in your photo. It isn't a dermatological device or diagnosis — see a professional for real skin concerns.",
     "summary": "{count, plural, =0 {Nothing major stands out today — your skin looks balanced. Keep your current routine going.} one {# zone could use a little extra care.} other {# zones could use a little extra care.}}",
     "zoneMapTitle": "Zones analyzed",
     "severity": {
@@ -152,30 +152,39 @@
     "zones": {
       "forehead": {
         "name": "Forehead",
-        "flaggedText": "Visible shine and slightly enlarged pores in this area.",
-        "clearText": "Balanced — no major shine or congestion detected."
+        "clearText": "Balanced — no major concern detected here."
       },
       "nose": {
         "name": "Nose",
-        "flaggedText": "A few visible blackheads and light congestion around the nose.",
-        "clearText": "Pores look clear on the nose."
+        "clearText": "Looks clear around the nose."
       },
       "cheeks": {
         "name": "Cheeks",
-        "flaggedText": "Slight tightness on the cheeks — a sign of dehydration.",
-        "clearText": "Cheeks look well hydrated with even texture."
+        "clearText": "Cheeks look balanced with even texture."
       },
       "underEye": {
         "name": "Under-eyes",
-        "flaggedText": "Faint fine lines and slight dullness starting to show under the eyes.",
-        "clearText": "Smooth under-eye area, no visible fine lines."
+        "clearText": "Smooth under-eye area, nothing notable."
       },
       "chin": {
         "name": "Chin & jawline",
-        "flaggedText": "Some redness and reactive-looking skin along the chin and jawline.",
-        "clearText": "Calm along the chin and jawline, no redness detected."
+        "clearText": "Calm along the chin and jawline."
       }
     },
+    "concernDescriptions": {
+      "acne": "Some visible blemishes or congestion in this area.",
+      "aging": "Faint fine lines or a slight loss of firmness visible here.",
+      "hydration": "Signs of dehydration — some tightness or flaking.",
+      "redness": "Visible redness or reactive-looking skin.",
+      "pigmentation": "Some visible dark spots or uneven tone.",
+      "pores": "Visible shine and slightly enlarged pores.",
+      "dullness": "A slightly dull or uneven texture.",
+      "barrier": "Signs of a strained skin barrier — sensitivity or flakiness."
+    },
+    "unavailableTitle": "AI analysis isn't set up yet",
+    "unavailableText": "The photo analysis engine hasn't been connected on this deployment. Your skin quiz answers already power your routine audit in the meantime.",
+    "errorTitle": "Analysis didn't go through",
+    "errorText": "Something went wrong reading that photo. Try again with better lighting, facing the camera directly.",
     "routineSectionTitle": "A routine that targets what we found",
     "routineSectionText": "Built from our product catalog to address the flagged zones above.",
     "addToShelf": "Add this routine to my shelf",
@@ -197,7 +206,6 @@
     "subtitle": "Photograph the label (ingredient list) and let Haru analyze it.",
     "dropTitle": "Take a photo or upload an image",
     "dropSubtitle": "Take a photo of the label, or upload one from your gallery",
-    "demoWithoutPhoto": "...or run a demo without a photo",
     "faceScanCta": "Looking for a face scan instead?",
     "steps": [
       "Reading the ingredient list...",
@@ -206,7 +214,15 @@
     ],
     "scanAnother": "Scan something else",
     "viewSheet": "View full product sheet",
-    "addToShelf": "Add to shelf"
+    "addToShelf": "Add to shelf",
+    "unavailableTitle": "AI analysis isn't set up yet",
+    "unavailableText": "The label-reading engine hasn't been connected on this deployment. You can still add products manually from the catalog.",
+    "errorTitle": "Analysis didn't go through",
+    "errorText": "Something went wrong reading that photo. Try again with the label in focus and good lighting.",
+    "unmatchedTitle": "Not in our catalog yet",
+    "unmatchedText": "We read the label but this isn't one of our tracked products yet. Here's what we could detect on it:",
+    "illegibleTitle": "Couldn't read that label",
+    "illegibleText": "Try again with the ingredients list in focus, filling more of the frame."
   },
   "productDetail": {
     "notFound": "This product doesn't exist (or was removed).",

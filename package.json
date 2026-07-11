@@ -13,6 +13,7 @@
     "seed:test-accounts": "tsx prisma/seed-test-accounts.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.111.0",
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "@radix-ui/react-dialog": "^1.1.19",

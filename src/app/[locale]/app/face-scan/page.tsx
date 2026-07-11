@@ -12,6 +12,8 @@ import {
   Check,
   ArrowRight,
   ClipboardCheck,
+  AlertTriangle,
+  WandSparkles,
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
@@ -21,7 +23,6 @@ import { FaceMap, severityBadgeClass } from "@/components/face-map";
 import { useCatalog, useShelf } from "@/lib/shelf-store";
 import { buildRoutine } from "@/lib/routine-engine";
 import {
-  analyzeFaceScan,
   buildSuggestedRoutine,
   type FaceScanAnalysis,
   type FaceZoneId,
@@ -29,7 +30,16 @@ import {
 
 const ZONE_ORDER: FaceZoneId[] = ["forehead", "nose", "cheeks", "underEye", "chin"];
 
-type Phase = "idle" | "analyzing" | "result";
+type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error";
+
+function fileToDataUrl(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
 
 export default function FaceScanPage() {
   const t = useTranslations("faceScanPage");
@@ -46,23 +56,41 @@ export default function FaceScanPage() {
   const [added, setAdded] = React.useState(false);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
 
-  const startScan = (file: File) => {
+  const startScan = async (file: File) => {
     const url = URL.createObjectURL(file);
     setPreview(url);
     setPhase("analyzing");
     setStepIndex(0);
     setAdded(false);
 
-    let i = 0;
-    const interval = setInterval(() => {
-      i += 1;
-      setStepIndex(i);
-      if (i >= analysisSteps.length) {
-        clearInterval(interval);
-        setAnalysis(analyzeFaceScan());
-        setPhase("result");
+    const stepTimer = setInterval(() => {
+      setStepIndex((i) => Math.min(i + 1, analysisSteps.length - 1));
+    }, 700);
+
+    try {
+      const dataUrl = await fileToDataUrl(file);
+      const res = await fetch("/api/face-scan/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: dataUrl }),
+      });
+
+      if (res.status === 501) {
+        setPhase("unavailable");
+        return;
       }
-    }, 600);
+      if (!res.ok) {
+        setPhase("error");
+        return;
+      }
+      const data = await res.json();
+      setAnalysis(data.analysis);
+      setPhase("result");
+    } catch {
+      setPhase("error");
+    } finally {
+      clearInterval(stepTimer);
+    }
   };
 
   const reset = () => {
@@ -177,6 +205,55 @@ export default function FaceScanPage() {
           </motion.div>
         )}
 
+        {phase === "unavailable" && (
+          <motion.div
+            key="unavailable"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="w-full"
+          >
+            <Card className="w-full items-center gap-4 py-12 text-center">
+              <span className="flex size-14 items-center justify-center rounded-full bg-muted text-muted-foreground">
+                <WandSparkles className="size-6" />
+              </span>
+              <h2 className="font-serif text-xl">{t("unavailableTitle")}</h2>
+              <p className="max-w-sm text-sm text-muted-foreground">{t("unavailableText")}</p>
+              <div className="mt-2 flex flex-wrap justify-center gap-2">
+                <Button variant="outline" onClick={reset}>
+                  <RotateCcw className="size-4" />
+                  {t("retake")}
+                </Button>
+                <Button asChild>
+                  <Link href="/app/quiz">{t("goToQuiz")}</Link>
+                </Button>
+              </div>
+            </Card>
+          </motion.div>
+        )}
+
+        {phase === "error" && (
+          <motion.div
+            key="error"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="w-full"
+          >
+            <Card className="w-full items-center gap-4 py-12 text-center">
+              <span className="flex size-14 items-center justify-center rounded-full bg-destructive/10 text-destructive">
+                <AlertTriangle className="size-6" />
+              </span>
+              <h2 className="font-serif text-xl">{t("errorTitle")}</h2>
+              <p className="max-w-sm text-sm text-muted-foreground">{t("errorText")}</p>
+              <Button variant="outline" onClick={reset} className="mt-2">
+                <RotateCcw className="size-4" />
+                {t("retake")}
+              </Button>
+            </Card>
+          </motion.div>
+        )}
+
         {phase === "result" && analysis && (
           <motion.div
             key="result"
@@ -209,7 +286,9 @@ export default function FaceScanPage() {
                       </span>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      {zone.flagged ? t(`zones.${zoneId}.flaggedText`) : t(`zones.${zoneId}.clearText`)}
+                      {zone.flagged && zone.concern
+                        ? t(`concernDescriptions.${zone.concern}`)
+                        : t(`zones.${zoneId}.clearText`)}
                     </p>
                   </Card>
                 );
