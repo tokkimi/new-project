@@ -830,7 +830,8 @@
     },
     "routineProductsTitle": "Products in this routine",
     "routineProductsText": "Click a product to edit its moment, category, notes, favorite status or remove it.",
-    "viewSheet": "View sheet"
+    "viewSheet": "View sheet",
+    "embedUnavailable": "This video cannot be embedded here yet. Save a YouTube, Instagram Reel, or TikTok video to play it directly in Haru."
   },
   "accountSettings": {
     "title": "Account information",
@@ -893,5 +894,132 @@
       "Immediate actions and a realistic plan over the next weeks.",
       "Product suggestions based on what your routine is missing."
     ]
+  },
+  "goodHabits": {
+    "eyebrow": "Good habits",
+    "title": "Start with skin logic, then personalize.",
+    "subtitle": "Haru does not pretend everyone needs the same routine. The base is simple: cleanse, treat carefully, moisturize, protect. Then the details change by skin type.",
+    "guide": "Guide",
+    "amLabel": "AM",
+    "pmLabel": "PM",
+    "bothLabel": "Both",
+    "watchOutLabel": "Watch out",
+    "rulesTitle": "Rules Haru uses when checking a routine",
+    "ingredientsTitle": "Ingredient base Haru watches",
+    "trackedFallback": "Tracked by Haru's compatibility rules.",
+    "disclaimer": "Based on dermatologist-style routine basics: gentle cleansing, moisturizing, broad-spectrum SPF 30+, cautious active use, and sunscreen reapplication outdoors. Haru is guidance, not a medical diagnosis.",
+    "daily": [
+      {
+        "title": "Morning is protection",
+        "text": "Cleanse only if you wake up oily or sweaty, hydrate, then finish with broad-spectrum SPF 30 or higher every day."
+      },
+      {
+        "title": "Evening is removal and repair",
+        "text": "Remove sunscreen and makeup, cleanse gently, then use treatment only if your skin tolerates it. Finish with moisturizer."
+      },
+      {
+        "title": "SPF is the non-negotiable step",
+        "text": "Reapply about every 2 hours when outdoors, and after sweating or swimming. Actives work better when UV is controlled."
+      },
+      {
+        "title": "Do less when skin is irritated",
+        "text": "Pause retinoids, acids, scrubs and fragrance-heavy extras when skin stings, flakes, burns, or stays red."
+      }
+    ],
+    "routines": [
+      {
+        "type": "Dry or tight skin",
+        "am": "Gentle rinse or creamy cleanser -> hydrating toner/serum -> ceramide moisturizer -> SPF.",
+        "pm": "Cleanser -> hydrating serum on damp skin -> richer moisturizer or sleeping mask.",
+        "avoid": "Avoid foaming cleansers that leave skin squeaky, daily acids, and layering too many actives."
+      },
+      {
+        "type": "Oily or breakout-prone skin",
+        "am": "Light cleanser -> niacinamide or calming serum -> gel moisturizer -> lightweight SPF.",
+        "pm": "Cleanser -> BHA 2-4 nights/week or acne treatment -> non-comedogenic moisturizer.",
+        "avoid": "Do not skip moisturizer; over-stripping often makes oiliness worse."
+      },
+      {
+        "type": "Sensitive or redness-prone skin",
+        "am": "Minimal cleanse -> centella/panthenol serum -> barrier cream -> mineral or gentle SPF.",
+        "pm": "Cleanser -> soothing serum -> ceramide moisturizer. Add actives one at a time only.",
+        "avoid": "Avoid starting retinol, vitamin C and exfoliating acids in the same week."
+      },
+      {
+        "type": "Combination skin",
+        "am": "Gentle cleanser where needed -> light hydration -> moisturizer only where dry -> SPF.",
+        "pm": "Cleanser -> treatment by zone: BHA on oily areas, barrier care on dry areas -> moisturizer.",
+        "avoid": "Do not force one heavy routine on the whole face if your T-zone and cheeks behave differently."
+      },
+      {
+        "type": "Dullness or uneven tone",
+        "am": "Cleanser -> vitamin C or niacinamide -> moisturizer -> SPF.",
+        "pm": "Cleanser -> gentle AHA 1-3 nights/week or retinoid on alternate nights -> moisturizer.",
+        "avoid": "Do not exfoliate daily for glow. Irritation creates more uneven tone."
+      },
+      {
+        "type": "First simple routine",
+        "am": "Cleanser if needed -> moisturizer -> SPF.",
+        "pm": "Cleanser -> moisturizer.",
+        "avoid": "Add only one new product at a time, then wait 1-2 weeks before adding another active."
+      }
+    ],
+    "rules": [
+      "Apply thinnest textures before thicker creams.",
+      "Keep retinoids mostly at night and pair them with morning SPF.",
+      "Use exfoliating acids gradually; more tingle is not more result.",
+      "Patch test new actives, especially if your skin is reactive.",
+      "A routine that you can repeat beats a 12-step routine you abandon."
+    ],
+    "ingredients": {
+      "retinol": {
+        "name": "Retinoids",
+        "summary": "Texture, visible aging, breakouts; mostly night use."
+      },
+      "vitamin_c": {
+        "name": "Vitamin C",
+        "summary": "Morning antioxidant and tone support."
+      },
+      "niacinamide": {
+        "name": "Niacinamide",
+        "summary": "Barrier, oil balance, redness and tone support."
+      },
+      "aha": {
+        "name": "AHA",
+        "summary": "Surface exfoliation for texture and glow."
+      },
+      "bha": {
+        "name": "BHA",
+        "summary": "Oil-soluble pore and blackhead support."
+      },
+      "benzoyl_peroxide": {
+        "name": "Benzoyl peroxide",
+        "summary": "Acne active; can be drying and bleaching."
+      },
+      "vitamin_e": {
+        "name": "Vitamin E",
+        "summary": "Antioxidant often paired with vitamin C."
+      },
+      "peptides": {
+        "name": "Peptides",
+        "summary": "Firmness and barrier-supporting signal ingredients."
+      },
+      "hyaluronic_acid": {
+        "name": "Hyaluronic acid",
+        "summary": "Hydration support, best sealed with moisturizer."
+      },
+      "centella": {
+        "name": "Centella / cica",
+        "summary": "Soothing support for visible redness."
+      },
+      "spf": {
+        "name": "SPF",
+        "summary": "Daily UV protection; the final morning step."
+      },
+      "ceramides": {
+        "name": "Ceramides",
+        "summary": "Barrier lipids for dryness and sensitivity."
+      }
+    }
   }
 }

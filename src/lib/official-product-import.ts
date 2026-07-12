@@ -61,6 +61,39 @@ export const OFFICIAL_PRODUCT_SOURCES: OfficialProductSource[] = [
   { brand: "Emma Lewisham", baseUrl: "https://emmalewisham.com", origin: "New Zealand" },
   { brand: "Manucurist", baseUrl: "https://us.manucurist.com", origin: "France" },
   { brand: "Typology", baseUrl: "https://us.typology.com", origin: "France" },
+  { brand: "TULA", baseUrl: "https://www.tula.com", origin: "United States" },
+  { brand: "Truly", baseUrl: "https://www.trulybeauty.com", origin: "United States" },
+  { brand: "First Aid Beauty", baseUrl: "https://www.firstaidbeauty.com", origin: "United States" },
+  { brand: "Murad", baseUrl: "https://www.murad.com", origin: "United States" },
+  { brand: "Dermalogica", baseUrl: "https://www.dermalogica.com", origin: "United States" },
+  { brand: "Sunday Riley", baseUrl: "https://sundayriley.com", origin: "United States" },
+  { brand: "Kate Somerville", baseUrl: "https://www.katesomerville.com", origin: "United States" },
+  { brand: "Mario Badescu", baseUrl: "https://www.mariobadescu.com", origin: "United States" },
+  { brand: "Tatcha", baseUrl: "https://www.tatcha.com", origin: "United States" },
+  { brand: "Supergoop!", baseUrl: "https://supergoop.com", origin: "United States" },
+  { brand: "COOLA", baseUrl: "https://coola.com", origin: "United States" },
+  { brand: "Peace Out", baseUrl: "https://peaceoutskincare.com", origin: "United States" },
+  { brand: "Starface", baseUrl: "https://starface.world", origin: "United States" },
+  { brand: "Kinship", baseUrl: "https://lovekinship.com", origin: "United States" },
+  { brand: "Three Ships", baseUrl: "https://www.threeshipsbeauty.com", origin: "Canada" },
+  { brand: "Mad Hippie", baseUrl: "https://madhippie.com", origin: "United States" },
+  { brand: "DERMA E", baseUrl: "https://dermae.com", origin: "United States" },
+  { brand: "ACURE", baseUrl: "https://acure.com", origin: "United States" },
+  { brand: "Andalou Naturals", baseUrl: "https://andalou.com", origin: "United States" },
+  { brand: "Pacifica", baseUrl: "https://www.pacificabeauty.com", origin: "United States" },
+  { brand: "Fenty Skin", baseUrl: "https://fentybeauty.com", origin: "United States" },
+  { brand: "Rhode", baseUrl: "https://www.rhodeskin.com", origin: "United States" },
+  { brand: "Saie", baseUrl: "https://saiehello.com", origin: "United States" },
+  { brand: "Glossier", baseUrl: "https://www.glossier.com", origin: "United States" },
+  { brand: "111SKIN", baseUrl: "https://111skin.com", origin: "United Kingdom" },
+  { brand: "EltaMD", baseUrl: "https://eltamd.com", origin: "United States" },
+  { brand: "Revision Skincare", baseUrl: "https://revisionskincare.com", origin: "United States" },
+  { brand: "PCA Skin", baseUrl: "https://www.pcaskin.com", origin: "United States" },
+  { brand: "Jan Marini", baseUrl: "https://www.janmarini.com", origin: "United States" },
+  { brand: "IMAGE Skincare", baseUrl: "https://imageskincare.com", origin: "United States" },
+  { brand: "Hydrinity", baseUrl: "https://hydrinity.com", origin: "United States" },
+  { brand: "Colorescience", baseUrl: "https://www.colorescience.com", origin: "United States" },
+  { brand: "SENTÉ", baseUrl: "https://sentelabs.com", origin: "United States" },
 ];
 
 type ShopifyProduct = {
@@ -205,7 +238,10 @@ function usageFor(category: string, ingredientIds: string[]): string[] {
 
 function isSkincareProduct(product: ShopifyProduct): boolean {
   const text = `${product.title} ${product.product_type ?? ""} ${(product.tags ?? []).join(" ")}`.toLowerCase();
-  if (/\b(shampoo|conditioner|fragrance|candle|brush|tool|bag|apparel|hat|shirt|supplement|gummy)\b/.test(text)) return false;
+  if (/\b(shampoo|conditioner|fragrance|candle|brush|tool|bag|apparel|hat|shirt|supplement|gummy|nail|cuticle|polish|mascara|lipstick|eyeliner|brow)\b/.test(text)) return false;
+  if (/\b(free gift|gift with purchase|first purchase|first order|discount code|clearance|routine set|skincare routine|skin care routine)\b/.test(text)) return false;
+  if (/\b\d+\s*(?:ea|set|sets|sheet|sheets|patch|patches|pc|pcs|piece|pieces|pack|packs|count|ct)\b|\b\d+(?:ea|set|sets|pcs|ct)\b/i.test(product.title)) return false;
+  if (product.title.includes("+")) return false;
   return /\b(cleanser|cleansing|toner|essence|serum|ampoule|cream|moisturizer|moisturiser|sunscreen|spf|mask|balm|oil|peel|pad|exfoliant|lotion|mist|eye|skin|face|acne|pore|barrier|hydrating|bright)\b/.test(text);
 }
 

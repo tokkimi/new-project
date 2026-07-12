@@ -25,6 +25,68 @@ type InitialPreference = Pick<Preference, "routineSlot" | "customCategory" | "no
 type Note = { id: string; title: string; body: string };
 type SavedLink = { id: string; title: string; url: string; platform: string | null; note: string | null };
 
+function embedUrl(rawUrl: string): string | null {
+  try {
+    const url = new URL(rawUrl);
+    const host = url.hostname.toLowerCase();
+
+    if (host.includes("youtu.be")) {
+      const id = url.pathname.split("/").filter(Boolean)[0];
+      return id ? `https://www.youtube-nocookie.com/embed/${id}` : null;
+    }
+
+    if (host.includes("youtube.com")) {
+      const id = url.searchParams.get("v") ?? url.pathname.match(/\/shorts\/([^/?]+)/)?.[1];
+      return id ? `https://www.youtube-nocookie.com/embed/${id}` : null;
+    }
+
+    if (host.includes("instagram.com")) {
+      const path = url.pathname.replace(/\/$/, "");
+      if (/\/(p|reel|tv)\//.test(path)) return `https://www.instagram.com${path}/embed`;
+    }
+
+    if (host.includes("tiktok.com")) {
+      const id = url.pathname.match(/video\/(\d+)/)?.[1];
+      return id ? `https://www.tiktok.com/embed/v2/${id}` : null;
+    }
+  } catch {
+    return null;
+  }
+
+  return null;
+}
+
+function SavedVideoCard({ link }: { link: SavedLink }) {
+  const t = useTranslations("routineWorkspace");
+  const embed = embedUrl(link.url);
+
+  return (
+    <Card className="gap-3">
+      <div className="flex items-center justify-between gap-3">
+        <p className="font-medium">{link.title}</p>
+        <Badge className="w-fit">{link.platform ?? t("link")}</Badge>
+      </div>
+      {embed ? (
+        <div className="overflow-hidden rounded-md border border-border bg-muted">
+          <iframe
+            src={embed}
+            title={link.title}
+            className="aspect-video w-full"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      ) : (
+        <div className="rounded-md border border-border bg-muted p-4 text-sm text-muted-foreground">
+          {t("embedUnavailable")}
+        </div>
+      )}
+      {link.note && <p className="text-sm text-muted-foreground">{link.note}</p>}
+    </Card>
+  );
+}
+
 function ProductRow({
   product,
   pref,
@@ -330,7 +392,9 @@ export function RoutineWorkspace() {
             <Button onClick={addLink}><Plus className="size-4" /> {t("save")}</Button>
           </Card>
           <div className="grid gap-3">
-            {links.map((l) => <Card key={l.id} className="gap-1"><Badge className="w-fit">{l.platform ?? t("link")}</Badge><a className="font-medium underline-offset-4 hover:underline" href={l.url} target="_blank" rel="noreferrer">{l.title}</a><p className="text-sm text-muted-foreground">{l.note}</p></Card>)}
+            {links.map((link) => (
+              <SavedVideoCard key={link.id} link={link} />
+            ))}
           </div>
         </div>
       )}

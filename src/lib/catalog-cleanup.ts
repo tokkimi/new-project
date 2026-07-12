@@ -39,7 +39,7 @@ const SLUG_BRANDS: Record<string, string> = {
   coreelle: "Coreelle",
 };
 
-const BAD_BRANDS = new Set(["gwp", "free gift ghost", "free", "clearance"]);
+const BAD_BRANDS = new Set(["gwp", "free gift ghost", "free", "clearance", "shopify_me"]);
 const GENERATED_SUFFIX = /\s*(?:routine edit|travel size|refill pack|duo set|glow edition|barrier edit|sensitive edit|hydration edit)$/i;
 
 const SET_OR_BUNDLE_PATTERN =
@@ -47,6 +47,12 @@ const SET_OR_BUNDLE_PATTERN =
 
 const MULTI_PRODUCT_PATTERN =
   /\b(?:cleanser|toner|essence|serum|ampoule|cream|moisturizer|sunscreen|sun\s*cream|mask|pad|oil|balm|shampoo|treatment)\b\s*(?:\+|&|and)\s*\b(?:cleanser|toner|essence|serum|ampoule|cream|moisturizer|sunscreen|sun\s*cream|mask|pad|oil|balm|shampoo|treatment)\b/i;
+
+const NON_FACE_CARE_PATTERN =
+  /\b(?:nail|nails|cuticle|polish|lacquer|manicure|pedicure|hair|scalp|shampoo|conditioner|mascara|lipstick|eyeliner|brow|fragrance|candle|apparel)\b/i;
+
+const MULTI_UNIT_PATTERN =
+  /\b\d+\s*(?:ea|set|sets|sheet|sheets|patch|patches|pc|pcs|piece|pieces|pack|packs|count|ct)\b|\b\d+(?:ea|set|sets|pcs|ct)\b/i;
 
 function brandFromUrl(officialUrl?: string | null): string | null {
   if (!officialUrl) return null;
@@ -94,10 +100,20 @@ export function shouldExcludeProduct(product: CatalogLike): boolean {
     product.slug.includes("haru-expanded") ||
     product.slug.includes("moida-set") ||
     product.slug.includes("special-price-moida") ||
+    product.slug.includes("special-price") ||
+    product.slug.includes("free-gift") ||
+    product.slug.includes("gift-") ||
+    product.slug.includes("-gift") ||
+    product.slug.includes("shopify-me") ||
+    product.slug.includes("clearance") ||
     product.slug.includes("1-deal") ||
     text.includes("sca_clone_freegift") ||
     text.includes("bogos.io free gift") ||
     text.includes("used for the app bogos") ||
+    text.includes("discount codes") ||
+    text.includes("expiration date") ||
+    text.includes("first purchase") ||
+    text.includes("first order") ||
     text.includes("free gift") ||
     text.includes("free gifts") ||
     text.includes("get free") ||
@@ -105,16 +121,20 @@ export function shouldExcludeProduct(product: CatalogLike): boolean {
     text.includes("routine set") ||
     text.includes("skin care routine") ||
     text.includes("skincare routine") ||
+    /\broutine\b/i.test(text) ||
     text.includes("10-step") ||
     text.includes("10 step") ||
     text.includes("moida set") ||
     text.includes("best of k-beauty") ||
-    /\b\d+\s*ea\b/i.test(name) ||
+    name.includes("+") ||
+    MULTI_UNIT_PATTERN.test(name) ||
     SET_OR_BUNDLE_PATTERN.test(name) ||
     MULTI_PRODUCT_PATTERN.test(name) ||
+    NON_FACE_CARE_PATTERN.test(text) ||
     product.brand.toLowerCase() === "moida" ||
     product.brand.toLowerCase() === "free gift ghost" ||
     product.brand.toLowerCase() === "gwp" ||
+    product.brand.toLowerCase() === "shopify_me" ||
     /^\(?free gift\)?/i.test(name)
   );
 }
