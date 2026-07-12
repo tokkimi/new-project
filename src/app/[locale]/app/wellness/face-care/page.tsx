@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -37,8 +37,7 @@ export default async function FaceCarePage({ params }: { params: Promise<{ local
             <div className="flex items-start gap-4">
               <FaceDiagram variant={routine.steps[0].diagram} className="size-20 shrink-0" />
               <div>
-                <Sparkles className="size-5 text-primary" />
-                <h2 className="mt-1 font-serif text-2xl">{routine.name[lang]}</h2>
+                <h2 className="font-serif text-2xl">{routine.name[lang]}</h2>
                 <p className="mt-1 text-sm text-muted-foreground">{routine.goal[lang]}</p>
               </div>
             </div>

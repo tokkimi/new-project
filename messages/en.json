@@ -848,7 +848,22 @@
     "themeDark": "Dark",
     "themeSystem": "System",
     "settingsTitle": "Settings",
-    "settingsSubtitle": "Account, preferences, security and access."
+    "settingsSubtitle": "Account, preferences, security and access.",
+    "tabs": {
+      "scans": "My scans",
+      "audits": "My audits",
+      "progress": "Progress",
+      "account": "Account settings"
+    },
+    "scansEmpty": "No scans saved yet. Run a face scan and it will show up here.",
+    "auditsEmpty": "No audits run yet. Check your routine from the Audit tab.",
+    "scoreLabel": "Score",
+    "startScan": "Start a new scan",
+    "openAudit": "Run an audit",
+    "compareTitle": "Reading your history",
+    "compareText": "Comparisons should be read carefully: Haru flags photo quality and never treats lighting as guaranteed improvement.",
+    "routineChangesTitle": "Routine changes",
+    "routineChangesText": "Products added after a scan or audit will be grouped here so you can understand what changed and why."
   },
   "common": {
     "back": "Back",
@@ -859,6 +874,7 @@
   "routineWorkspace": {
     "title": "My routine space",
     "subtitle": "Your morning and evening routine, saved products, notes and beauty videos in one place.",
+    "tipOfTheDay": "Tip of the day",
     "scan": "Scan",
     "favorite": "Favorite",
     "remove": "Remove",

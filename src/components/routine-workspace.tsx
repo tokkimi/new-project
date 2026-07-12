@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Camera, ChevronDown, Heart, LinkIcon, NotebookPen, Pencil, Plus, Trash2 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { ProductImage } from "@/components/product-image";
 import { AddProductDialog } from "@/components/add-product-dialog";
 import { RoutineContent } from "@/components/routine-content";
+import { TipOfTheDay } from "@/components/tip-of-the-day";
 import { useShelf } from "@/lib/shelf-store";
 import type { Product } from "@/generated/prisma/client";
 
@@ -166,6 +167,7 @@ function ProductRow({
 
 export function RoutineWorkspace() {
   const t = useTranslations("routineWorkspace");
+  const locale = useLocale();
   const { shelf, addProduct, removeProduct } = useShelf();
   const [tab, setTab] = React.useState("routine");
   const [preferences, setPreferences] = React.useState<Record<string, Preference>>({});
@@ -281,6 +283,8 @@ export function RoutineWorkspace() {
           <AddProductDialog existingProducts={shelf} onProductAdded={handleProductAdded} />
         </div>
       </div>
+
+      <TipOfTheDay locale={locale} label={t("tipOfTheDay")} />
 
       <div className="flex gap-1 overflow-x-auto rounded-full bg-muted p-1">
         {tabs.map(([id, label]) => (
