@@ -61,7 +61,7 @@ function RoutineColumn({
   );
 }
 
-export function RoutineContent() {
+export function RoutineContent({ compact = false }: { compact?: boolean }) {
   const t = useTranslations("routinePage");
   const tCategories = useTranslations("categories");
   const tSeverity = useTranslations("severity");
@@ -72,7 +72,7 @@ export function RoutineContent() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h1 className="font-serif text-3xl">{t("title")}</h1>
+        <h1 className={compact ? "font-serif text-2xl" : "font-serif text-3xl"}>{t("title")}</h1>
         <p className="mt-1 text-muted-foreground">{t("subtitle", { count: shelf.length })}</p>
       </div>
 

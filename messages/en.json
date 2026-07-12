@@ -9,14 +9,14 @@
   },
   "nav": {
     "howItWorks": "How it works",
-    "features": "Features",
-    "ingredients": "Ingredient base",
+    "features": "Good habits",
+    "ingredients": "Ingredients",
     "tryApp": "Open app",
     "shelf": "My shelf",
-    "scan": "Scan",
+    "scan": "Product scan",
     "products": "Products",
-    "routine": "My routine",
-    "audit": "Audit",
+    "routine": "Routine",
+    "audit": "Shelf audit",
     "profile": "Profile",
     "signIn": "Sign in",
     "signOut": "Sign out"
@@ -34,19 +34,19 @@
   },
   "howItWorks": {
     "eyebrow": "How it works",
-    "title": "Three steps, zero friction",
+    "title": "From product scan to a routine that makes sense",
     "steps": [
       {
-        "title": "Add your shelf",
-        "text": "Photograph a product's ingredient list or pick it from our database — 30 seconds per product."
+        "title": "Scan a product for free",
+        "text": "Photograph the product or its ingredient list. Haru tries to match it to the database and opens the product sheet when it finds it."
       },
       {
-        "title": "We detect conflicts",
-        "text": "Haru cross-references your products' actives with our rule engine: over-exfoliation, active deactivation, useless duplicates."
+        "title": "Build your shelf",
+        "text": "Add the products you actually use so Haru can check missing basics, duplicates, conflicts, and skin-type mismatches."
       },
       {
-        "title": "Your ordered AM/PM routine",
-        "text": "Every product at the right step, in the right order, with clear alternatives when two actives don't mix well."
+        "title": "Audit before you add more",
+        "text": "The audit explains what is working, what is missing, what to stop mixing, and which products would complete the routine."
       }
     ]
   },
@@ -374,10 +374,10 @@
   },
   "scanPage": {
     "title": "Scan a product",
-    "subtitle": "Photograph the label (ingredient list) and let Haru analyze it.",
-    "dropTitle": "Take a photo or upload an image",
+    "subtitle": "Free product scan: photograph the label or packaging and Haru will try to open the matching product sheet.",
+    "dropTitle": "Scan a product for free",
     "dropSubtitle": "Take a photo of the label, or upload one from your gallery",
-    "faceScanCta": "Looking for a face scan instead?",
+    "faceScanCta": "Need a face scan instead?",
     "steps": [
       "Reading the ingredient list...",
       "Identifying actives...",
@@ -625,19 +625,20 @@
     "freeTitle": "Free",
     "freePrice": "€0",
     "freeFeatures": [
-      "Shelf up to 12 products",
-      "Ingredient conflict detection",
-      "AM/PM routine builder",
-      "Product scan"
+      "Free product scan",
+      "Full product database browsing",
+      "Product sheets with origin, composition notes, skin type and usage",
+      "Basic shelf and routine builder",
+      "Bottom navigation across the app"
     ],
     "premiumTitle": "Premium",
     "premiumPrice": "€6.99/mo",
     "premiumFeatures": [
-      "Everything in Free",
-      "Full skin profile quiz",
-      "Personalized routine audit",
-      "Product alternatives matched to your skin",
-      "Unlimited shelf products"
+      "Everything in the free plan",
+      "Complete shelf audit by skin profile",
+      "Missing-step and product-change recommendations",
+      "Unlimited saved products on your shelf",
+      "Face scan access when AI vision and billing are configured"
     ],
     "subscribeCta": "Subscribe to Premium",
     "currentPlanLabel": "Your current plan",
@@ -645,18 +646,54 @@
     "comingSoon": "Payments aren't configured yet — check back soon."
   },
   "ingredients": {
-    "retinol": { "name": "Retinol / Retinoids", "summary": "Cell renewal, anti-aging, acne." },
-    "vitamin_c": { "name": "Vitamin C (L-AA)", "summary": "Antioxidant, glow, anti-pollution protection." },
-    "niacinamide": { "name": "Niacinamide", "summary": "Regulates sebum, soothes, strengthens the barrier." },
-    "aha": { "name": "AHA (glycolic / lactic)", "summary": "Exfoliant, texture and tone." },
-    "bha": { "name": "BHA (salicylic acid)", "summary": "Exfoliant, unclogs pores, anti-blemish." },
-    "benzoyl_peroxide": { "name": "Benzoyl peroxide", "summary": "Antibacterial, treats inflammatory acne." },
-    "vitamin_e": { "name": "Vitamin E", "summary": "Antioxidant, often paired with vitamin C." },
-    "peptides": { "name": "Peptides / Copper peptides", "summary": "Firmness, barrier repair." },
-    "hyaluronic_acid": { "name": "Hyaluronic acid", "summary": "Hydration, plumping." },
-    "centella": { "name": "Centella asiatica (Cica)", "summary": "Soothing, repairing — a K-beauty staple." },
-    "spf": { "name": "Sunscreen (SPF)", "summary": "UV protection — the final morning step." },
-    "ceramides": { "name": "Ceramides", "summary": "Restores the skin barrier." }
+    "retinol": {
+      "name": "Retinol / Retinoids",
+      "summary": "Cell renewal, anti-aging, acne."
+    },
+    "vitamin_c": {
+      "name": "Vitamin C (L-AA)",
+      "summary": "Antioxidant, glow, anti-pollution protection."
+    },
+    "niacinamide": {
+      "name": "Niacinamide",
+      "summary": "Regulates sebum, soothes, strengthens the barrier."
+    },
+    "aha": {
+      "name": "AHA (glycolic / lactic)",
+      "summary": "Exfoliant, texture and tone."
+    },
+    "bha": {
+      "name": "BHA (salicylic acid)",
+      "summary": "Exfoliant, unclogs pores, anti-blemish."
+    },
+    "benzoyl_peroxide": {
+      "name": "Benzoyl peroxide",
+      "summary": "Antibacterial, treats inflammatory acne."
+    },
+    "vitamin_e": {
+      "name": "Vitamin E",
+      "summary": "Antioxidant, often paired with vitamin C."
+    },
+    "peptides": {
+      "name": "Peptides / Copper peptides",
+      "summary": "Firmness, barrier repair."
+    },
+    "hyaluronic_acid": {
+      "name": "Hyaluronic acid",
+      "summary": "Hydration, plumping."
+    },
+    "centella": {
+      "name": "Centella asiatica (Cica)",
+      "summary": "Soothing, repairing — a K-beauty staple."
+    },
+    "spf": {
+      "name": "Sunscreen (SPF)",
+      "summary": "UV protection — the final morning step."
+    },
+    "ceramides": {
+      "name": "Ceramides",
+      "summary": "Restores the skin barrier."
+    }
   },
   "conflictRules": {
     "retinol_aha_bha": {

@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Geist, Geist_Mono, Fraunces, Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/components/auth-provider";
+import { BottomNav } from "@/components/bottom-nav";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -96,7 +97,7 @@ export default async function RootLayout({
       data-lang={locale}
       className={`${fontVars} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col pb-24 font-sans">
         <NextIntlClientProvider>
           <AuthProvider>
             <ThemeProvider
@@ -106,6 +107,7 @@ export default async function RootLayout({
               disableTransitionOnChange
             >
               {children}
+              <BottomNav />
             </ThemeProvider>
           </AuthProvider>
         </NextIntlClientProvider>

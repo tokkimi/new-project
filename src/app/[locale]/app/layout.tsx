@@ -1,10 +1,9 @@
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/logo";
-import { AppNav } from "@/components/app-nav";
-import { BottomNav } from "@/components/bottom-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { HeaderAuthStatus } from "@/components/header-auth-status";
+import { Button } from "@/components/ui/button";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -14,11 +13,13 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <Link href="/">
             <Logo />
           </Link>
-          <AppNav className="hidden sm:flex" />
           <div className="flex items-center gap-2 sm:gap-3">
             <LocaleSwitcher compact className="sm:hidden" />
             <LocaleSwitcher className="hidden sm:inline-flex" />
             <ThemeToggle />
+            <Button asChild size="sm" className="hidden sm:inline-flex">
+              <Link href="/app/upgrade">Premium</Link>
+            </Button>
             <HeaderAuthStatus />
           </div>
         </div>
@@ -26,7 +27,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10 pb-28 sm:pb-32">
         {children}
       </main>
-      <BottomNav />
     </div>
   );
 }

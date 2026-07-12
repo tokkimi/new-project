@@ -9,14 +9,14 @@
   },
   "nav": {
     "howItWorks": "이용 방법",
-    "features": "주요 기능",
-    "ingredients": "성분 데이터베이스",
+    "features": "Good habits",
+    "ingredients": "Ingredients",
     "tryApp": "앱 열기",
     "shelf": "내 화장대",
-    "scan": "스캔",
+    "scan": "Product scan",
     "products": "제품",
-    "routine": "내 루틴",
-    "audit": "진단",
+    "routine": "Routine",
+    "audit": "Shelf audit",
     "profile": "프로필",
     "signIn": "로그인",
     "signOut": "로그아웃"
@@ -33,20 +33,20 @@
     "matchBadgeSubtitle": "내 피부 프로필 기준"
   },
   "howItWorks": {
-    "eyebrow": "이용 방법",
-    "title": "세 단계, 번거로움 없이",
+    "eyebrow": "How it works",
+    "title": "From product scan to a routine that makes sense",
     "steps": [
       {
-        "title": "화장대를 추가하세요",
-        "text": "제품의 전성분 리스트를 촬영하거나 데이터베이스에서 선택하세요 — 제품당 30초면 충분해요."
+        "title": "Scan a product for free",
+        "text": "Photograph the product or its ingredient list. Haru tries to match it to the database and opens the product sheet when it finds it."
       },
       {
-        "title": "충돌을 감지해드려요",
-        "text": "Haru는 제품의 활성 성분을 규칙 엔진과 대조합니다: 과도한 각질 제거, 성분 비활성화, 불필요한 중복까지."
+        "title": "Build your shelf",
+        "text": "Add the products you actually use so Haru can check missing basics, duplicates, conflicts, and skin-type mismatches."
       },
       {
-        "title": "정돈된 아침/저녁 루틴",
-        "text": "모든 제품이 올바른 단계, 올바른 순서로 정렬되고, 두 성분이 궁합이 안 맞을 땐 명확한 대안을 제시해드려요."
+        "title": "Audit before you add more",
+        "text": "The audit explains what is working, what is missing, what to stop mixing, and which products would complete the routine."
       }
     ]
   },
@@ -195,7 +195,11 @@
     "modules": {
       "pores": {
         "name": "모공",
-        "causes": ["과도한 피지 분비", "나이에 따른 콜라겐 감소", "각질 관리 부족으로 인한 노폐물 축적"],
+        "causes": [
+          "과도한 피지 분비",
+          "나이에 따른 콜라겐 감소",
+          "각질 관리 부족으로 인한 노폐물 축적"
+        ],
         "tips": [
           "나이아신아마이드는 피지를 조절하고 시간이 지나면서 모공을 개선하는 데 도움이 돼요",
           "순한 BHA 토너를 주 2~3회 사용하면 모공이 막히는 걸 막아줘요",
@@ -204,7 +208,11 @@
       },
       "blackheads": {
         "name": "블랙헤드",
-        "causes": ["모공 속에서 산화된 피지", "각질 세포 축적", "불충분하거나 불규칙한 세안"],
+        "causes": [
+          "모공 속에서 산화된 피지",
+          "각질 세포 축적",
+          "불충분하거나 불규칙한 세안"
+        ],
         "tips": [
           "저녁에는 이중 세안으로 선크림과 유분을 완전히 제거하세요",
           "BHA(살리실산) 토너는 모공 속 노폐물을 녹이는 데 도움이 돼요",
@@ -213,7 +221,11 @@
       },
       "texture": {
         "name": "피부결",
-        "causes": ["각질 세포 축적", "수분 부족", "불규칙한 각질 관리 습관"],
+        "causes": [
+          "각질 세포 축적",
+          "수분 부족",
+          "불규칙한 각질 관리 습관"
+        ],
         "tips": [
           "순한 AHA를 주 1~2회 사용하면 과도한 자극 없이 결을 매끄럽게 해줘요",
           "히알루론산으로 수분을 층층이 더하면 거친 부위가 부드러워져요",
@@ -222,7 +234,11 @@
       },
       "oiliness": {
         "name": "유분",
-        "causes": ["선천적으로 높은 피지 분비", "과도한 세안이나 피부 자극", "높은 온도와 습도"],
+        "causes": [
+          "선천적으로 높은 피지 분비",
+          "과도한 세안이나 피부 자극",
+          "높은 온도와 습도"
+        ],
         "tips": [
           "나이아신아마이드는 과도한 건조 없이 피지를 조절해줘요",
           "보습제를 건너뛰지 마세요 — 건조해진 피부는 오히려 피지를 더 분비할 수 있어요",
@@ -231,7 +247,11 @@
       },
       "dryness": {
         "name": "건조함",
-        "causes": ["약해진 피부 장벽", "건조하거나 추운 기후", "과도한 각질 관리나 강한 클렌저"],
+        "causes": [
+          "약해진 피부 장벽",
+          "건조하거나 추운 기후",
+          "과도한 각질 관리나 강한 클렌저"
+        ],
         "tips": [
           "세라마이드는 피부의 자연 보습 장벽을 재건하는 데 도움이 돼요",
           "촉촉한 피부 위에 히알루론산을 바르고 보습제로 마무리해 수분을 가둬주세요",
@@ -240,7 +260,11 @@
       },
       "redness": {
         "name": "붉은기",
-        "causes": ["예민하거나 자극받은 피부", "날씨, 열, 마찰", "한 번에 너무 많은 액티브 성분 사용"],
+        "causes": [
+          "예민하거나 자극받은 피부",
+          "날씨, 열, 마찰",
+          "한 번에 너무 많은 액티브 성분 사용"
+        ],
         "tips": [
           "시카(병풀추출물)는 붉은기를 진정시키는 데 가장 꾸준히 효과적인 성분 중 하나예요",
           "피부가 진정될 때까지 루틴을 잠시 단순화하세요",
@@ -249,7 +273,11 @@
       },
       "sensitivity": {
         "name": "민감도",
-        "causes": ["손상된 피부 장벽", "각질 제거 성분의 과사용", "제품 속 향료나 알코올"],
+        "causes": [
+          "손상된 피부 장벽",
+          "각질 제거 성분의 과사용",
+          "제품 속 향료나 알코올"
+        ],
         "tips": [
           "액티브 성분을 다시 쓰기 전에 세라마이드가 풍부한 보습제로 장벽을 먼저 재건하세요",
           "피부가 진정될 때까지 여러 액티브(레티놀 + AHA/BHA)를 함께 쓰지 마세요",
@@ -258,7 +286,11 @@
       },
       "spots": {
         "name": "색소침착",
-        "causes": ["오랜 시간의 자외선 노출", "과거 트러블로 인한 염증 후 흔적", "호르몬 변화"],
+        "causes": [
+          "오랜 시간의 자외선 노출",
+          "과거 트러블로 인한 염증 후 흔적",
+          "호르몬 변화"
+        ],
         "tips": [
           "아침에 비타민C를 사용하면 기존 색소를 옅게 하고 새로운 색소 생성을 막아줘요",
           "매일 선크림을 바르는 것이 색소가 짙어지는 걸 막는 가장 효과적인 방법이에요",
@@ -267,7 +299,11 @@
       },
       "acne": {
         "name": "활성 트러블",
-        "causes": ["과도한 유분과 막힌 모공의 결합", "세균 증식", "호르몬 변화"],
+        "causes": [
+          "과도한 유분과 막힌 모공의 결합",
+          "세균 증식",
+          "호르몬 변화"
+        ],
         "tips": [
           "BHA(살리실산) 토너는 모공 속 노폐물을 정리하는 데 도움이 돼요",
           "벤조일퍼옥사이드는 염증성 트러블 부위에 부분적으로 사용할 수 있어요",
@@ -276,7 +312,11 @@
       },
       "acneScars": {
         "name": "트러블 흔적",
-        "causes": ["과거 트러블로 인한 염증", "짜거나 만진 습관", "느린 세포 재생으로 흔적이 오래 남음"],
+        "causes": [
+          "과거 트러블로 인한 염증",
+          "짜거나 만진 습관",
+          "느린 세포 재생으로 흔적이 오래 남음"
+        ],
         "tips": [
           "나이아신아마이드와 비타민C는 남아있는 색소 흔적을 옅게 하는 데 도움이 돼요",
           "순한 정기적인 각질 관리(AHA)는 흔적이 옅어지는 속도를 높여줘요",
@@ -285,7 +325,11 @@
       },
       "wrinkles": {
         "name": "잔주름·주름",
-        "causes": ["나이에 따른 콜라겐 감소", "반복되는 표정", "누적된 자외선 노출"],
+        "causes": [
+          "나이에 따른 콜라겐 감소",
+          "반복되는 표정",
+          "누적된 자외선 노출"
+        ],
         "tips": [
           "레티놀은 잔주름 개선에 가장 많이 연구된 성분이에요",
           "펩타이드는 레티놀과 함께 피부 탄력을 지원해줘요",
@@ -294,7 +338,11 @@
       },
       "darkCircles": {
         "name": "다크서클",
-        "causes": ["혈관이 비치는 얇은 눈가 피부", "수면 부족이나 수분 부족", "눈가의 자연적인 색소침착"],
+        "causes": [
+          "혈관이 비치는 얇은 눈가 피부",
+          "수면 부족이나 수분 부족",
+          "눈가의 자연적인 색소침착"
+        ],
         "tips": [
           "펩타이드 아이크림은 붓기와 잔주름 개선에 도움이 돼요",
           "약지로 부드럽게 두드려 흡수시키세요 — 눈가를 문지르지 마세요",
@@ -303,7 +351,11 @@
       },
       "radiance": {
         "name": "피부 톤·광채",
-        "causes": ["칙칙한 각질 세포 축적", "수분 부족", "불규칙한 루틴"],
+        "causes": [
+          "칙칙한 각질 세포 축적",
+          "수분 부족",
+          "불규칙한 루틴"
+        ],
         "tips": [
           "비타민C는 꾸준히 사용하면 피부를 밝히고 광채를 더해줘요",
           "순한 각질 관리는 그 아래 신선한 피부를 드러내줘요",
@@ -322,10 +374,10 @@
   },
   "scanPage": {
     "title": "제품 스캔",
-    "subtitle": "라벨(전성분 리스트)을 촬영하면 Haru가 분석해드려요.",
-    "dropTitle": "사진을 찍거나 이미지를 업로드하세요",
+    "subtitle": "Free product scan: photograph the label or packaging and Haru will try to open the matching product sheet.",
+    "dropTitle": "Scan a product for free",
     "dropSubtitle": "제품 라벨 사진을 찍거나 갤러리에서 업로드하세요",
-    "faceScanCta": "얼굴 스캔을 찾으시나요?",
+    "faceScanCta": "Need a face scan instead?",
     "steps": [
       "전성분 리스트 읽는 중...",
       "활성 성분 확인 중...",
@@ -573,19 +625,20 @@
     "freeTitle": "무료",
     "freePrice": "₩0",
     "freeFeatures": [
-      "화장대 제품 12개까지",
-      "성분 충돌 감지",
-      "아침/저녁 루틴 빌더",
-      "제품 스캔"
+      "Free product scan",
+      "Full product database browsing",
+      "Product sheets with origin, composition notes, skin type and usage",
+      "Basic shelf and routine builder",
+      "Bottom navigation across the app"
     ],
     "premiumTitle": "프리미엄",
     "premiumPrice": "₩9,900/월",
     "premiumFeatures": [
-      "무료 플랜의 모든 기능",
-      "전체 피부 프로필 퀴즈",
-      "맞춤형 루틴 진단",
-      "피부에 맞는 제품 대안 추천",
-      "화장대 제품 무제한"
+      "Everything in the free plan",
+      "Complete shelf audit by skin profile",
+      "Missing-step and product-change recommendations",
+      "Unlimited saved products on your shelf",
+      "Face scan access when AI vision and billing are configured"
     ],
     "subscribeCta": "프리미엄 구독하기",
     "currentPlanLabel": "현재 플랜",
@@ -593,18 +646,54 @@
     "comingSoon": "아직 결제 기능이 설정되지 않았어요 — 곧 확인해주세요."
   },
   "ingredients": {
-    "retinol": { "name": "레티놀 / 레티노이드", "summary": "세포 재생, 안티에이징, 여드름 케어." },
-    "vitamin_c": { "name": "비타민 C (L-AA)", "summary": "항산화, 광채, 대기오염 방지." },
-    "niacinamide": { "name": "나이아신아마이드", "summary": "피지 조절, 진정, 피부 장벽 강화." },
-    "aha": { "name": "AHA (글리콜산 / 락틱애씨드)", "summary": "각질 제거, 피부결과 톤 개선." },
-    "bha": { "name": "BHA (살리실산)", "summary": "각질 제거, 모공 케어, 트러블 완화." },
-    "benzoyl_peroxide": { "name": "과산화벤조일", "summary": "항균 작용, 염증성 여드름 치료." },
-    "vitamin_e": { "name": "비타민 E", "summary": "항산화, 비타민 C와 자주 함께 사용." },
-    "peptides": { "name": "펩타이드 / 구리 펩타이드", "summary": "탄력 개선, 피부 장벽 회복." },
-    "hyaluronic_acid": { "name": "히알루론산", "summary": "수분 공급, 탄력 채우기." },
-    "centella": { "name": "센텔라 아시아티카 (병풀)", "summary": "진정, 재생 — K-뷰티의 대표 성분." },
-    "spf": { "name": "선크림 (SPF)", "summary": "자외선 차단 — 아침 루틴의 마지막 단계." },
-    "ceramides": { "name": "세라마이드", "summary": "피부 장벽을 복원해요." }
+    "retinol": {
+      "name": "레티놀 / 레티노이드",
+      "summary": "세포 재생, 안티에이징, 여드름 케어."
+    },
+    "vitamin_c": {
+      "name": "비타민 C (L-AA)",
+      "summary": "항산화, 광채, 대기오염 방지."
+    },
+    "niacinamide": {
+      "name": "나이아신아마이드",
+      "summary": "피지 조절, 진정, 피부 장벽 강화."
+    },
+    "aha": {
+      "name": "AHA (글리콜산 / 락틱애씨드)",
+      "summary": "각질 제거, 피부결과 톤 개선."
+    },
+    "bha": {
+      "name": "BHA (살리실산)",
+      "summary": "각질 제거, 모공 케어, 트러블 완화."
+    },
+    "benzoyl_peroxide": {
+      "name": "과산화벤조일",
+      "summary": "항균 작용, 염증성 여드름 치료."
+    },
+    "vitamin_e": {
+      "name": "비타민 E",
+      "summary": "항산화, 비타민 C와 자주 함께 사용."
+    },
+    "peptides": {
+      "name": "펩타이드 / 구리 펩타이드",
+      "summary": "탄력 개선, 피부 장벽 회복."
+    },
+    "hyaluronic_acid": {
+      "name": "히알루론산",
+      "summary": "수분 공급, 탄력 채우기."
+    },
+    "centella": {
+      "name": "센텔라 아시아티카 (병풀)",
+      "summary": "진정, 재생 — K-뷰티의 대표 성분."
+    },
+    "spf": {
+      "name": "선크림 (SPF)",
+      "summary": "자외선 차단 — 아침 루틴의 마지막 단계."
+    },
+    "ceramides": {
+      "name": "세라마이드",
+      "summary": "피부 장벽을 복원해요."
+    }
   },
   "conflictRules": {
     "retinol_aha_bha": {

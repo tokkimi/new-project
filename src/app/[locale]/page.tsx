@@ -4,10 +4,9 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/marketing/hero";
 import { HowItWorks } from "@/components/marketing/how-it-works";
-import { FeatureShowcase } from "@/components/marketing/feature-showcase";
 import { ProductShowcase } from "@/components/marketing/product-showcase";
 import { BeautyNews } from "@/components/marketing/beauty-news";
-import { IngredientBase } from "@/components/marketing/ingredient-base";
+import { GoodHabits } from "@/components/marketing/good-habits";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { db } from "@/lib/db";
 import { getRecentNews } from "@/lib/news-queries";
@@ -85,9 +84,8 @@ export default async function Home({
         <Hero />
         <HowItWorks />
         <ProductShowcase latest={products.latest} madeInKorea={products.madeInKorea} />
-        <FeatureShowcase />
+        <GoodHabits />
         <BeautyNews items={newsItems} />
-        <IngredientBase />
         <FinalCta />
       </main>
       <SiteFooter />

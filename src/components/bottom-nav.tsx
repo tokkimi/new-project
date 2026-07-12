@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { ShoppingBag, Camera, CalendarClock, Sparkles, LayoutGrid } from "lucide-react";
+import { ShoppingBag, Camera, Sparkles, LayoutGrid, User } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
@@ -13,8 +13,8 @@ export function BottomNav() {
     { href: "/app/shelf", label: t("shelf"), icon: ShoppingBag },
     { href: "/app/products", label: t("products"), icon: LayoutGrid },
     { href: "/app/scan", label: t("scan"), icon: Camera },
-    { href: "/app/routine", label: t("routine"), icon: CalendarClock },
     { href: "/app/audit", label: t("audit"), icon: Sparkles },
+    { href: "/app/profile", label: t("profile"), icon: User },
   ];
 
   return (
