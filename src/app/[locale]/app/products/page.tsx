@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { db } from "@/lib/db";
 import { getSeoMetadata } from "@/lib/seo";
 import { ProductsBrowser } from "@/components/products-browser";
+import { listProducts } from "@/lib/products";
 
 export async function generateMetadata({
   params,
@@ -24,7 +24,7 @@ export default async function ProductsPage({
 
   const [t, products] = await Promise.all([
     getTranslations("productsPage"),
-    db.product.findMany({ orderBy: { name: "asc" } }),
+    listProducts(),
   ]);
 
   return (

@@ -32,3 +32,4 @@ next-env.d.ts
 
 # scratch research dumps (merged into src/lib/seed-data/ then deleted)
 /scratch-*.json
+.env*

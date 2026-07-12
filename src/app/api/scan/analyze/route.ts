@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { db } from "@/lib/db";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
 import { isVisionConfigured, getVisionClient, parseDataUrl } from "@/lib/vision";
 import { PRODUCT_CATEGORIES } from "@/lib/categories";
 import { INGREDIENTS } from "@/data/ingredients";
+import { listProducts } from "@/lib/products";
 
 const TOOL = {
   name: "report_label_read",
@@ -114,7 +114,7 @@ export async function POST(request: Request) {
     }
 
     // Try to match against the real catalog first.
-    const catalog = await db.product.findMany();
+    const catalog = await listProducts();
     const candidateWords = normalizeWords(`${read.brand ?? ""} ${read.productName ?? ""}`);
     let best: { product: (typeof catalog)[number]; score: number } | null = null;
     for (const product of catalog) {
