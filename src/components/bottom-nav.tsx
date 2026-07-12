@@ -9,7 +9,7 @@ export function BottomNav() {
   const t = useTranslations("nav");
   const pathname = usePathname();
 
-  if (!pathname?.startsWith("/app")) return null;
+  if (pathname !== "/" && !pathname?.startsWith("/app")) return null;
 
   const TABS = [
     { href: "/app/products", label: t("products"), icon: Grid2x2 },
