@@ -9,19 +9,36 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { ProductVisual } from "@/components/product-visual";
 import { cn } from "@/lib/utils";
-import { PRODUCT_CATEGORIES } from "@/lib/categories";
+import { TOP_LEVEL_CATEGORIES, categoryParent } from "@/lib/categories";
+import { SKIN_TYPES, CONCERNS } from "@/lib/validation";
 import type { Product } from "@/generated/prisma/client";
+
+const SELECT_CLASS =
+  "h-10 rounded-xl border border-input bg-card px-3 text-sm text-foreground";
 
 export function ProductsBrowser({ products }: { products: Product[] }) {
   const t = useTranslations("productsPage");
   const tCategories = useTranslations("categories");
+  const tSkinTypes = useTranslations("skinTypes");
+  const tConcerns = useTranslations("concerns");
   const [query, setQuery] = React.useState("");
   const [category, setCategory] = React.useState<string | "all">("all");
+  const [skinType, setSkinType] = React.useState<string | "all">("all");
+  const [concern, setConcern] = React.useState<string | "all">("all");
+  const [brand, setBrand] = React.useState<string | "all">("all");
+
+  const brands = React.useMemo(
+    () => Array.from(new Set(products.map((p) => p.brand))).sort((a, b) => a.localeCompare(b)),
+    [products]
+  );
 
   const filtered = products.filter((p) => {
     const matchesQuery = `${p.name} ${p.brand}`.toLowerCase().includes(query.toLowerCase());
-    const matchesCategory = category === "all" || p.category === category;
-    return matchesQuery && matchesCategory;
+    const matchesCategory = category === "all" || categoryParent(p.category) === category;
+    const matchesSkinType = skinType === "all" || p.skinTypes.includes(skinType);
+    const matchesConcern = concern === "all" || p.concerns.includes(concern);
+    const matchesBrand = brand === "all" || p.brand === brand;
+    return matchesQuery && matchesCategory && matchesSkinType && matchesConcern && matchesBrand;
   });
 
   return (
@@ -34,6 +51,45 @@ export function ProductsBrowser({ products }: { products: Product[] }) {
           placeholder={t("searchPlaceholder")}
           className="pl-9"
         />
+      </div>
+
+      <div className="flex flex-wrap gap-2">
+        <select
+          value={brand}
+          onChange={(e) => setBrand(e.target.value)}
+          className={SELECT_CLASS}
+        >
+          <option value="all">{t("allBrands")}</option>
+          {brands.map((b) => (
+            <option key={b} value={b}>
+              {b}
+            </option>
+          ))}
+        </select>
+        <select
+          value={skinType}
+          onChange={(e) => setSkinType(e.target.value)}
+          className={SELECT_CLASS}
+        >
+          <option value="all">{t("allSkinTypes")}</option>
+          {SKIN_TYPES.map((s) => (
+            <option key={s} value={s}>
+              {tSkinTypes(s)}
+            </option>
+          ))}
+        </select>
+        <select
+          value={concern}
+          onChange={(e) => setConcern(e.target.value)}
+          className={SELECT_CLASS}
+        >
+          <option value="all">{t("allConcerns")}</option>
+          {CONCERNS.map((c) => (
+            <option key={c} value={c}>
+              {tConcerns(c)}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="no-scrollbar flex gap-2 overflow-x-auto">
@@ -49,7 +105,7 @@ export function ProductsBrowser({ products }: { products: Product[] }) {
         >
           {t("allCategories")}
         </button>
-        {PRODUCT_CATEGORIES.map((c) => (
+        {TOP_LEVEL_CATEGORIES.map((c) => (
           <button
             key={c}
             type="button"

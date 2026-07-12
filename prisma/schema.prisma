@@ -85,7 +85,7 @@ model Product {
   id              String   @id @default(cuid())
   slug            String   @unique
   name            String
-  brand           String
+  brand           String // kept as free text for backward compat; brandRef is the normalized link
   category        String
   ingredientIds   String[]
   fullIngredients String? // raw INCI list
@@ -102,9 +102,63 @@ model Product {
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 
-  shelfItems ShelfItem[]
+  brandId String?
+  brandRef Brand? @relation(fields: [brandId], references: [id])
 
+  shelfItems ShelfItem[]
+  sources    ProductSource[]
+
+  @@index([category])
+  @@index([brandId])
+  @@index([origin])
+  @@index([ingredientIds], type: Gin)
+  @@index([skinTypes], type: Gin)
+  @@index([concerns], type: Gin)
   @@map("products")
+}
+
+model Brand {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  nameKo      String?
+  country     String? // HQ country — real value or null, never guessed
+  website     String?
+  description String?
+  crueltyFree Boolean?
+  vegan       Boolean?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  products Product[]
+
+  @@map("brands")
+}
+
+model Category {
+  id         String   @id @default(cuid())
+  slug       String   @unique
+  parentSlug String? // null = top-level category
+  nameEn     String
+  nameKo     String
+  order      Int // routine-step ordering; children share their parent's order
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([parentSlug])
+  @@map("categories")
+}
+
+model ProductSource {
+  id         String   @id @default(cuid())
+  productId  String
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  sourceName String
+  sourceUrl  String?
+  fetchedAt  DateTime @default(now())
+
+  @@index([productId])
+  @@map("product_sources")
 }
 
 model ShelfItem {

@@ -5,8 +5,10 @@ import { useRouter } from "@/i18n/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { PRODUCT_CATEGORIES } from "@/lib/categories";
+import { CATEGORY_TREE } from "@/lib/seed-data/categories";
 import type { Product } from "@/generated/prisma/client";
+
+const TOP_LEVEL = CATEGORY_TREE.filter((c) => c.parentSlug === null);
 
 function toCsv(arr: string[]) {
   return arr.join(", ");
@@ -82,11 +84,26 @@ export function ProductForm({ product }: { product?: Product }) {
             required
             className="h-11 w-full rounded-xl border border-input bg-card px-4 text-sm"
           >
-            {PRODUCT_CATEGORIES.map((c) => (
-              <option key={c} value={c}>
-                {c}
-              </option>
-            ))}
+            {TOP_LEVEL.map((parent) => {
+              const children = CATEGORY_TREE.filter((c) => c.parentSlug === parent.slug);
+              if (children.length === 0) {
+                return (
+                  <option key={parent.slug} value={parent.slug}>
+                    {parent.nameEn}
+                  </option>
+                );
+              }
+              return (
+                <optgroup key={parent.slug} label={parent.nameEn}>
+                  <option value={parent.slug}>{parent.nameEn} (generic)</option>
+                  {children.map((c) => (
+                    <option key={c.slug} value={c.slug}>
+                      {c.nameEn}
+                    </option>
+                  ))}
+                </optgroup>
+              );
+            })}
           </select>
         </Field>
         <Field label="Name">

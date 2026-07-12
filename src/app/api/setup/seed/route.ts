@@ -1,7 +1,14 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
-import { seedProducts, seedNews, seedTestAccounts } from "@/lib/seed-runner";
+import {
+  seedProducts,
+  seedNews,
+  seedTestAccounts,
+  seedCategories,
+  seedBrands,
+  seedProductSources,
+} from "@/lib/seed-runner";
 
 /**
  * One-time-use setup endpoint to populate a freshly connected production
@@ -26,9 +33,12 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
+  const categories = await seedCategories(db);
   const products = await seedProducts(db);
+  const brands = await seedBrands(db);
+  const sources = await seedProductSources(db);
   const news = await seedNews(db);
   const accounts = await seedTestAccounts(db);
 
-  return NextResponse.json({ ok: true, products, news, accounts });
+  return NextResponse.json({ ok: true, categories, products, brands, sources, news, accounts });
 }

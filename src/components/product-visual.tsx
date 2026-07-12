@@ -11,6 +11,7 @@ import {
   Package,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { categoryParent } from "@/lib/categories";
 
 const CATEGORY_STYLE: Record<
   string,
@@ -39,7 +40,7 @@ export function ProductVisual({
   size?: "sm" | "md" | "lg";
   className?: string;
 }) {
-  const style = CATEGORY_STYLE[category] ?? {
+  const style = CATEGORY_STYLE[category] ?? CATEGORY_STYLE[categoryParent(category)] ?? {
     icon: Package,
     className: "from-muted via-muted/50 to-transparent text-muted-foreground",
   };

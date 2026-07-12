@@ -2,6 +2,7 @@ import bcrypt from "bcryptjs";
 import type { PrismaClient } from "@/generated/prisma/client";
 import { PRODUCTS } from "@/lib/seed-data/products";
 import { NEWS } from "@/lib/seed-data/news";
+import { CATEGORY_TREE } from "@/lib/seed-data/categories";
 
 export async function seedProducts(db: PrismaClient): Promise<number> {
   for (const p of PRODUCTS) {
@@ -12,6 +13,83 @@ export async function seedProducts(db: PrismaClient): Promise<number> {
     });
   }
   return PRODUCTS.length;
+}
+
+export async function seedCategories(db: PrismaClient): Promise<number> {
+  for (const c of CATEGORY_TREE) {
+    await db.category.upsert({
+      where: { slug: c.slug },
+      create: c,
+      update: c,
+    });
+  }
+  return CATEGORY_TREE.length;
+}
+
+function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/**
+ * Normalizes the free-text Product.brand strings already in the catalog into
+ * real Brand rows, and links each product's brandId — additive, never
+ * touches the existing `brand` text field products still read directly.
+ */
+export async function seedBrands(db: PrismaClient): Promise<number> {
+  const products = await db.product.findMany({ select: { id: true, brand: true, origin: true } });
+
+  const byBrand = new Map<string, { name: string; origin: string | null; productIds: string[] }>();
+  for (const p of products) {
+    const key = p.brand.trim().toLowerCase();
+    const existing = byBrand.get(key);
+    if (existing) {
+      existing.productIds.push(p.id);
+      if (!existing.origin && p.origin) existing.origin = p.origin;
+    } else {
+      byBrand.set(key, { name: p.brand.trim(), origin: p.origin, productIds: [p.id] });
+    }
+  }
+
+  let count = 0;
+  for (const { name, origin, productIds } of byBrand.values()) {
+    const slug = slugify(name);
+    if (!slug) continue;
+    const brand = await db.brand.upsert({
+      where: { slug },
+      create: { slug, name, country: origin },
+      update: { name, country: origin ?? undefined },
+    });
+    await db.product.updateMany({ where: { id: { in: productIds } }, data: { brandId: brand.id } });
+    count++;
+  }
+  return count;
+}
+
+/** Backfills a first ProductSource row from each product's existing officialUrl, when present. */
+export async function seedProductSources(db: PrismaClient): Promise<number> {
+  const products = await db.product.findMany({
+    where: { officialUrl: { not: null } },
+    select: { id: true, brand: true, officialUrl: true },
+  });
+
+  let count = 0;
+  for (const p of products) {
+    if (!p.officialUrl) continue;
+    const existing = await db.productSource.findFirst({
+      where: { productId: p.id, sourceUrl: p.officialUrl },
+    });
+    if (existing) continue;
+    await db.productSource.create({
+      data: { productId: p.id, sourceName: `${p.brand} (official site)`, sourceUrl: p.officialUrl },
+    });
+    count++;
+  }
+  return count;
 }
 
 export async function seedNews(db: PrismaClient): Promise<number> {
