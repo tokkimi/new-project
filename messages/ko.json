@@ -550,7 +550,9 @@
     "pigmentation": "색소침착 / 기미",
     "pores": "모공",
     "dullness": "칙칙함",
-    "barrier": "피부 장벽"
+    "barrier": "피부 장벽",
+    "anti-aging": "Anti-aging / firmness",
+    "uv-protection": "UV protection"
   },
   "sensitivities": {
     "fragrance": "향료",

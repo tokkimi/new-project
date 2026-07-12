@@ -550,7 +550,9 @@
     "pigmentation": "Pigmentation / dark spots",
     "pores": "Pores",
     "dullness": "Dullness",
-    "barrier": "Barrier repair"
+    "barrier": "Barrier repair",
+    "anti-aging": "Anti-aging / firmness",
+    "uv-protection": "UV protection"
   },
   "sensitivities": {
     "fragrance": "Fragrance",
