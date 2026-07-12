@@ -32,12 +32,12 @@ const TOOL = {
   },
 };
 
-const SYSTEM_PROMPT = `You are a product-label reading assistant embedded in a consumer skincare app called Haru. You are shown a photo of a skincare product's packaging or ingredients label. Read exactly what's visible — do not invent a brand or product name if it isn't legible. If an ingredients/INCI list is visible in the photo, transcribe it as accurately as you can (it's fine if it's partial). Call the report_label_read tool with your result. Do not include any other commentary.`;
+const SYSTEM_PROMPT = `You are a product-label reading assistant embedded in a consumer skincare app called Haru. You are shown a photo of a skincare product's packaging or ingredients label. Read exactly what's visible; do not invent a brand or product name if it isn't legible. If an ingredients/INCI list is visible in the photo, transcribe it as accurately as you can (it's fine if it's partial). Call the report_label_read tool with your result. Do not include any other commentary.`;
 
 function normalizeWords(s: string): string[] {
   return s
     .toLowerCase()
-    .replace(/[^a-z0-9가-힣\s]/g, " ")
+    .replace(/[^a-z0-9\s]/g, " ")
     .split(/\s+/)
     .filter(Boolean);
 }
@@ -49,20 +49,59 @@ function matchScore(candidateWords: string[], targetWords: string[]): number {
   return overlap / targetWords.length;
 }
 
+function emptyScanResult(query: string) {
+  return {
+    matched: null,
+    read: {
+      legible: false,
+      brand: null,
+      productName: query || null,
+      category: null,
+      ingredientsText: null,
+    },
+    detectedIngredientIds: [],
+  };
+}
+
 export async function POST(request: Request) {
   const { ok } = rateLimit(clientKey(request, "scan-analyze"), { limit: 15, windowMs: 60 * 1000 });
   if (!ok) {
     return NextResponse.json({ error: "rate_limited" }, { status: 429 });
   }
 
-  if (!isVisionConfigured()) {
-    return NextResponse.json({ error: "vision_not_configured" }, { status: 501 });
-  }
-
   const body = await request.json().catch(() => null);
   const image = typeof body?.image === "string" ? body.image : null;
-  if (!image) {
+  const query = typeof body?.query === "string" ? body.query.trim() : "";
+  if (!image && !query) {
     return NextResponse.json({ error: "invalid_input" }, { status: 400 });
+  }
+
+  const catalog = await listProducts();
+  if (query) {
+    const candidateWords = normalizeWords(query);
+    let best: { product: (typeof catalog)[number]; score: number } | null = null;
+    for (const product of catalog) {
+      const targetWords = normalizeWords(`${product.brand} ${product.name} ${product.slug}`);
+      const score = matchScore(candidateWords, targetWords);
+      if (score >= 0.35 && (!best || score > best.score)) best = { product, score };
+    }
+    if (best) {
+      return NextResponse.json({
+        matched: best.product,
+        read: {
+          legible: true,
+          brand: best.product.brand,
+          productName: best.product.name,
+          category: best.product.category,
+          ingredientsText: best.product.fullIngredients,
+        },
+        detectedIngredientIds: best.product.ingredientIds,
+      });
+    }
+  }
+
+  if (!image || !isVisionConfigured()) {
+    return NextResponse.json(emptyScanResult(query));
   }
 
   const parsed = parseDataUrl(image);
@@ -113,8 +152,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ matched: null, read, detectedIngredientIds: [] });
     }
 
-    // Try to match against the real catalog first.
-    const catalog = await listProducts();
     const candidateWords = normalizeWords(`${read.brand ?? ""} ${read.productName ?? ""}`);
     let best: { product: (typeof catalog)[number]; score: number } | null = null;
     for (const product of catalog) {
@@ -125,12 +162,9 @@ export async function POST(request: Request) {
       }
     }
 
-    // Detect our tracked actives from any ingredients text we could read,
-    // even when the product isn't in our catalog.
     const ingredientsLower = (read.ingredientsText ?? "").toLowerCase();
     const detectedIngredientIds = ingredientsLower
-      ? INGREDIENTS.filter((ing) => ing.aliases.some((alias) => ingredientsLower.includes(alias)))
-          .map((ing) => ing.id)
+      ? INGREDIENTS.filter((ing) => ing.aliases.some((alias) => ingredientsLower.includes(alias))).map((ing) => ing.id)
       : [];
 
     return NextResponse.json({

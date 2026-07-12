@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Haru — your skincare routine, decoded",
-    "description": "Haru analyzes your product ingredients, flags active conflicts, and builds your ideal AM/PM routine. Simple, useful, no fluff."
+    "title": "Haru - your beauty routine, organized",
+    "description": "Save your products, build morning and evening routines, and keep your beauty notes and inspirations in one calm space."
   },
   "localeSwitcher": {
     "en": "English",
@@ -25,7 +25,7 @@
     "badge": "Inspired by K-beauty routines",
     "titleLine1": "Your skincare routine,",
     "titleLine2": "finally decoded.",
-    "subtitle": "Haru scans the products you already own, spots ingredient conflicts, and builds your ideal morning/evening routine — no jargon, no three-hour research rabbit hole.",
+    "subtitle": "Keep your skincare products, routines, notes and beauty inspiration in one place. Haru helps you understand what to use, when to use it, and what to keep simple.",
     "ctaPrimary": "Build my routine",
     "ctaSecondary": "See how it works",
     "disclaimer": "Free for up to 12 products on your shelf · no credit card",
@@ -34,31 +34,31 @@
   },
   "howItWorks": {
     "eyebrow": "How it works",
-    "title": "From product scan to a routine that makes sense",
+    "title": "From product to routine, without the confusion",
     "steps": [
       {
-        "title": "Scan a product for free",
-        "text": "Photograph the product or its ingredient list. Haru tries to match it to the database and opens the product sheet when it finds it."
+        "title": "Find or scan a product",
+        "text": "Search by name, brand, barcode, or take a photo of the packaging."
       },
       {
-        "title": "Build your shelf",
-        "text": "Add the products you actually use so Haru can check missing basics, duplicates, conflicts, and skin-type mismatches."
+        "title": "Save what you actually use",
+        "text": "Keep your products, favorites, notes and videos in your personal routine space."
       },
       {
-        "title": "Audit before you add more",
-        "text": "The audit explains what is working, what is missing, what to stop mixing, and which products would complete the routine."
+        "title": "Follow morning and evening steps",
+        "text": "See a clear routine and adjust products by morning, evening, category or pause."
       }
     ]
   },
   "productShowcase": {
     "eyebrow": "The core of Haru",
-    "title": "A real, free product database",
-    "subtitle": "Search or scan any product to get its full composition, origin, and how to use it — free, no account required.",
+    "title": "Beauty products, easy to compare",
+    "subtitle": "Browse product sheets with origin, composition notes, skin type, usage and frequency.",
     "latestTitle": "New arrivals",
     "koreaTitle": "Made in Korea",
     "koreaSubtitle": "The K-beauty essentials behind our routines",
     "seeAll": "See all",
-    "browseAllCta": "Browse the full database"
+    "browseAllCta": "Browse products"
   },
   "featureShowcase": {
     "eyebrow": "In practice",
@@ -389,8 +389,8 @@
     "scanAnother": "Scan something else",
     "viewSheet": "View full product sheet",
     "addToShelf": "Add to shelf",
-    "unavailableTitle": "AI analysis isn't set up yet",
-    "unavailableText": "The label-reading engine hasn't been connected on this deployment. You can still add products manually from the catalog.",
+    "unavailableTitle": "We could not read this product yet",
+    "unavailableText": "Try a clearer photo, or type the brand, product name or barcode above.",
     "errorTitle": "Analysis didn't go through",
     "errorText": "Something went wrong reading that photo. Try again with the label in focus and good lighting.",
     "unmatchedTitle": "Not in our catalog yet",
@@ -645,7 +645,7 @@
       "Complete shelf audit by skin profile",
       "Missing-step and product-change recommendations",
       "Unlimited saved products on your shelf",
-      "Face scan access when AI vision and billing are configured"
+      "Face scan access when photo tools are configured"
     ],
     "subscribeCta": "Subscribe to Premium",
     "currentPlanLabel": "Your current plan",

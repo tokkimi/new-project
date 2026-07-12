@@ -1,4 +1,5 @@
 import { GENERATED_PRODUCTS } from "./generated-products";
+import { EXTRA_GENERATED_PRODUCTS } from "./generated-products-extra";
 
 export type SeedProduct = {
   slug: string;
@@ -15925,4 +15926,8 @@ const CORE_PRODUCTS: SeedProduct[] = [
   },
 ];
 
-export const PRODUCTS: SeedProduct[] = [...CORE_PRODUCTS, ...GENERATED_PRODUCTS];
+export const PRODUCTS: SeedProduct[] = [
+  ...CORE_PRODUCTS,
+  ...GENERATED_PRODUCTS,
+  ...EXTRA_GENERATED_PRODUCTS,
+];

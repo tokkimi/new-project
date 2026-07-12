@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Haru — 내 스킨케어 루틴, 완벽 해독",
-    "description": "Haru는 보유 중인 제품의 성분을 분석하고, 성분 충돌을 감지하고, 이상적인 아침/저녁 루틴을 만들어줍니다. 간단하고, 실용적이고, 군더더기 없이."
+    "title": "Haru - your beauty routine, organized",
+    "description": "Save your products, build morning and evening routines, and keep your beauty notes and inspirations in one calm space."
   },
   "localeSwitcher": {
     "en": "English",
@@ -25,7 +25,7 @@
     "badge": "K-뷰티 루틴에서 영감을 받았습니다",
     "titleLine1": "내 스킨케어 루틴,",
     "titleLine2": "드디어 완벽 해독.",
-    "subtitle": "Haru는 이미 가지고 있는 제품을 스캔하고, 성분 충돌을 찾아내고, 이상적인 아침/저녁 루틴을 만들어줍니다 — 어려운 용어도, 세 시간짜리 검색도 필요 없어요.",
+    "subtitle": "Keep your skincare products, routines, notes and beauty inspiration in one place. Haru helps you understand what to use, when to use it, and what to keep simple.",
     "ctaPrimary": "내 루틴 만들기",
     "ctaSecondary": "이용 방법 보기",
     "disclaimer": "화장대 제품 12개까지 무료 · 신용카드 불필요",
@@ -34,31 +34,31 @@
   },
   "howItWorks": {
     "eyebrow": "How it works",
-    "title": "From product scan to a routine that makes sense",
+    "title": "From product to routine, without the confusion",
     "steps": [
       {
-        "title": "Scan a product for free",
-        "text": "Photograph the product or its ingredient list. Haru tries to match it to the database and opens the product sheet when it finds it."
+        "title": "Find or scan a product",
+        "text": "Search by name, brand, barcode, or take a photo of the packaging."
       },
       {
-        "title": "Build your shelf",
-        "text": "Add the products you actually use so Haru can check missing basics, duplicates, conflicts, and skin-type mismatches."
+        "title": "Save what you actually use",
+        "text": "Keep your products, favorites, notes and videos in your personal routine space."
       },
       {
-        "title": "Audit before you add more",
-        "text": "The audit explains what is working, what is missing, what to stop mixing, and which products would complete the routine."
+        "title": "Follow morning and evening steps",
+        "text": "See a clear routine and adjust products by morning, evening, category or pause."
       }
     ]
   },
   "productShowcase": {
     "eyebrow": "Haru의 핵심",
-    "title": "진짜, 무료 제품 데이터베이스",
-    "subtitle": "제품을 검색하거나 스캔하면 전성분, 원산지, 사용법까지 전부 확인할 수 있어요 — 무료, 회원가입 불필요.",
+    "title": "Beauty products, easy to compare",
+    "subtitle": "Browse product sheets with origin, composition notes, skin type, usage and frequency.",
     "latestTitle": "신상품",
     "koreaTitle": "메이드 인 코리아",
     "koreaSubtitle": "우리 루틴의 근간이 되는 K-뷰티 필수템",
     "seeAll": "전체 보기",
-    "browseAllCta": "전체 데이터베이스 둘러보기"
+    "browseAllCta": "Browse products"
   },
   "featureShowcase": {
     "eyebrow": "실제 예시",
@@ -389,8 +389,8 @@
     "scanAnother": "다른 제품 스캔하기",
     "viewSheet": "전체 제품 정보 보기",
     "addToShelf": "화장대에 추가",
-    "unavailableTitle": "AI 분석이 아직 설정되지 않았어요",
-    "unavailableText": "이 배포 환경에는 라벨 인식 엔진이 아직 연결되지 않았어요. 카탈로그에서 직접 제품을 추가할 수 있어요.",
+    "unavailableTitle": "We could not read this product yet",
+    "unavailableText": "Try a clearer photo, or type the brand, product name or barcode above.",
     "errorTitle": "분석이 완료되지 않았어요",
     "errorText": "사진을 읽는 중 문제가 발생했어요. 라벨에 초점을 맞추고 조명을 밝게 하여 다시 시도해주세요.",
     "unmatchedTitle": "아직 카탈로그에 없는 제품이에요",
@@ -645,7 +645,7 @@
       "Complete shelf audit by skin profile",
       "Missing-step and product-change recommendations",
       "Unlimited saved products on your shelf",
-      "Face scan access when AI vision and billing are configured"
+      "Face scan access when photo tools are configured"
     ],
     "subscribeCta": "프리미엄 구독하기",
     "currentPlanLabel": "현재 플랜",

@@ -50,10 +50,11 @@ export default function ScanPage() {
   const [stepIndex, setStepIndex] = React.useState(0);
   const [result, setResult] = React.useState<ScanResult | null>(null);
   const [preview, setPreview] = React.useState<string | null>(null);
+  const [query, setQuery] = React.useState("");
   const fileInputRef = React.useRef<HTMLInputElement>(null);
 
-  const startScan = async (file: File) => {
-    const url = URL.createObjectURL(file);
+  const startScan = async (file?: File) => {
+    const url = file ? URL.createObjectURL(file) : null;
     setPreview(url);
     setPhase("analyzing");
     setStepIndex(0);
@@ -63,17 +64,13 @@ export default function ScanPage() {
     }, 750);
 
     try {
-      const dataUrl = await fileToDataUrl(file);
+      const dataUrl = file ? await fileToDataUrl(file) : null;
       const res = await fetch("/api/scan/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image: dataUrl }),
+        body: JSON.stringify({ image: dataUrl, query }),
       });
 
-      if (res.status === 501) {
-        setPhase("unavailable");
-        return;
-      }
       if (!res.ok) {
         setPhase("error");
         return;
@@ -144,6 +141,20 @@ export default function ScanPage() {
               <div>
                 <p className="font-medium">{t("dropTitle")}</p>
                 <p className="text-sm text-muted-foreground">{t("dropSubtitle")}</p>
+              </div>
+            </Card>
+            <Card className="mt-4 gap-3 p-4 text-left">
+              <label className="text-sm font-medium">Code-barres, marque ou nom du produit</label>
+              <div className="flex gap-2">
+                <input
+                  className="h-10 min-w-0 flex-1 rounded-md border border-input bg-background px-3 text-sm"
+                  placeholder="Ex: COSRX Snail Essence, 880..."
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                />
+                <Button onClick={() => startScan()} disabled={!query.trim()}>
+                  Chercher
+                </Button>
               </div>
             </Card>
             <Button variant="link" asChild>

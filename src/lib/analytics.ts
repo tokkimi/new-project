@@ -15,6 +15,10 @@ export async function getDashboardStats() {
     newsletterSubscribers,
     eventCounts,
     recentUsers,
+    catalogIssues,
+    topShelfProducts,
+    latestUsers,
+    latestEvents,
   ] = await Promise.all([
     db.user.count(),
     db.user.count({ where: { createdAt: { gte: sevenDaysAgo } } }),
@@ -31,6 +35,28 @@ export async function getDashboardStats() {
     db.user.findMany({
       where: { createdAt: { gte: fourteenDaysAgo } },
       select: { createdAt: true },
+    }),
+    Promise.all([
+      db.product.count({ where: { OR: [{ imageUrl: null }, { imageUrl: "" }] } }),
+      db.product.count({ where: { OR: [{ fullIngredients: null }, { fullIngredients: "" }] } }),
+      db.product.count({ where: { usageSteps: { isEmpty: true } } }),
+      db.product.count({ where: { OR: [{ officialUrl: null }, { officialUrl: "" }] } }),
+    ]),
+    db.shelfItem.groupBy({
+      by: ["productId"],
+      _count: { productId: true },
+      orderBy: { _count: { productId: "desc" } },
+      take: 8,
+    }),
+    db.user.findMany({
+      orderBy: { createdAt: "desc" },
+      take: 8,
+      select: { id: true, name: true, email: true, role: true, subscriptionStatus: true, createdAt: true },
+    }),
+    db.event.findMany({
+      orderBy: { createdAt: "desc" },
+      take: 12,
+      select: { id: true, type: true, path: true, userId: true, locale: true, createdAt: true },
     }),
   ]);
 
@@ -65,5 +91,14 @@ export async function getDashboardStats() {
       shelfItemsAdded: eventMap["shelf_item_added"] ?? 0,
       checkoutsStarted: eventMap["checkout_started"] ?? 0,
     },
+    catalogIssues: {
+      missingImages: catalogIssues[0],
+      missingComposition: catalogIssues[1],
+      missingUsage: catalogIssues[2],
+      missingSource: catalogIssues[3],
+    },
+    topShelfProducts,
+    latestUsers,
+    latestEvents,
   };
 }

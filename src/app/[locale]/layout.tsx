@@ -6,6 +6,7 @@ import { Geist, Geist_Mono, Fraunces, Noto_Sans_KR, Noto_Serif_KR } from "next/f
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/components/auth-provider";
 import { BottomNav } from "@/components/bottom-nav";
+import { CookieBanner } from "@/components/cookie-banner";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -108,6 +109,7 @@ export default async function RootLayout({
             >
               {children}
               <BottomNav />
+              <CookieBanner />
             </ThemeProvider>
           </AuthProvider>
         </NextIntlClientProvider>

@@ -4,7 +4,7 @@ import { db } from "@/lib/db";
 import { redirect } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { ProfileActions } from "@/components/profile-actions";
-import { RoutineContent } from "@/components/routine-content";
+import { AccountSettingsForm } from "@/components/account-settings-form";
 
 export default async function ProfilePage() {
   const session = await auth();
@@ -38,7 +38,8 @@ export default async function ProfilePage() {
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-8">
       <div>
-        <h1 className="font-serif text-3xl">{t("title")}</h1>
+        <h1 className="font-serif text-3xl">Paramètres</h1>
+        <p className="mt-1 text-muted-foreground">Compte, préférences, sécurité et accès.</p>
       </div>
 
       <Card className="gap-4">
@@ -57,11 +58,9 @@ export default async function ProfilePage() {
         </div>
       </Card>
 
-      <ProfileActions />
+      <AccountSettingsForm name={user.name} email={user.email} />
 
-      <section className="border-t border-border pt-8">
-        <RoutineContent compact />
-      </section>
+      <ProfileActions />
     </div>
   );
 }
