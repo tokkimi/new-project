@@ -1,92 +1,60 @@
 # Haru Improvements Plan
 
 ## Current Architecture
+- Public home: `src/app/[locale]/page.tsx`, with product highlights, news, premium messaging, and public calls to action.
+- Connected app shell: `src/app/[locale]/app/layout.tsx`, with sticky top header and mobile bottom navigation.
+- Existing app routes: shelf, products, product scan, face scan, audit, profile, quiz, upgrade.
+- Auth: NextAuth-backed session helpers in `src/lib/auth.ts`; app shelf and audit data are user-scoped.
+- Data: Prisma models for products, shelf items, skin profile, subscriptions and related user data.
+- Translations: English and Korean JSON files in `messages/`.
 
-- Next.js App Router with localized public routes under `/[locale]`.
-- Public Home at `/[locale]` with marketing sections, recent products, beauty news, good habits, and Premium CTA.
-- Connected app under `/[locale]/app/*` with product scan, face scan, shelf/routine workspace, audit, profile, quiz, products, and upgrade.
-- Authentication uses NextAuth and server-side session checks.
-- Premium access is checked server-side through the entitlement helper and subscription status.
-- Data is stored in PostgreSQL through Prisma.
-- Product data includes name, brand, origin, category, composition notes, usage steps, image, official URL, skin types, and concerns.
-- Admin routes already exist for products, news, newsletter, SEO, users, and logs.
-- Translations currently exist for English and Korean.
+## Features To Preserve
+- Public product catalog and product detail pages.
+- Beauty news and product highlights on the public home.
+- Existing shelf, profile, audit, product scan, checkout and premium flows.
+- Product images, official source cleanup, and current catalog improvements.
 
-## Existing Pages To Preserve
+## New Routes
+- `/[locale]/app/today`: daily connected dashboard.
+- `/[locale]/app/progress`: scan history and progress overview.
+- `/[locale]/app/wellness`: stress, sleep, breathing, meditation and sounds.
+- `/[locale]/app/wellness/face-care`: face massage, face yoga and gentle mobility library.
 
-- `/[locale]` public Home.
-- `/[locale]/app/scan` product scan.
-- `/[locale]/app/face-scan` face scan.
-- `/[locale]/app/shelf` routine/product workspace.
-- `/[locale]/app/audit` routine audit.
-- `/[locale]/app/profile` account/profile settings.
-- `/[locale]/app/products` product database.
-- `/[locale]/app/upgrade` Premium presentation.
-- Admin routes under `/[locale]/admin/*`.
-- Legal page under `/[locale]/legal`.
+## Navigation
+- Main app navigation should stay focused on: Today, Shelf, Scan, Audit, Profile.
+- Wellness and Progress should be visible from Today and Profile without overloading the bottom bar.
+- Product scan remains available, but the main Scan entry should prioritize the Face Scan experience.
 
-## Must Keep On The Public Home
+## Face Scan Improvements
+- Show one full mobile-first result section per analyzed skin module.
+- Include visible result, confidence, practical gestures, and product recommendations inside each module.
+- Allow adding recommended products directly to the routine/shelf from each module.
+- Keep clear disclaimers: photo analysis is guidance, not a medical diagnosis.
 
-- General Haru Skin presentation.
-- Face Scan as the main product signal.
-- How Haru works.
-- Audit presentation without showing personal user data.
-- Latest products.
-- Beauty news and articles.
-- Premium benefits.
-- Footer with legal/navigation links.
+## Wellness Scope
+- Add integrated breathing, sound and relaxation tools without exposing external-source details.
+- Present frequencies only as relaxation supports, with no therapeutic claims.
+- Add face-care content with goal, duration, difficulty, zones, frequency, precautions and evidence level.
 
-## New Or Improved Routes
+## Free And Premium
+- Free: product base, simple profile, simple scan preview, basic routine, short audit, basic wellness exercises.
+- Premium: complete Face Scan, unlimited history, global audit, detailed progress, full wellness library and exportable reports.
+- Premium checks must remain server-side for paid-only actions.
 
-- `/[locale]/app/progress`: scan history, comparison over time, visual evolution, user notes, and confidence-aware progress.
-- `/[locale]/app/today`: personal daily dashboard with routine reminders, next action, recent scan, and audit shortcut.
-- `/[locale]/app/wellness`: stress, sleep, breathing, meditation, and relaxation sounds.
-- `/[locale]/app/wellness/face-care`: face massage, Gua Sha, Kobido-style massage, lymphatic drainage, scalp massage, and gentle face yoga.
-
-## Data Changes Needed Later
-
-- Additive scan history tables for saved scan metadata, consent, visible observations, confidence, recommendations, and comparison snapshots.
-- Additive wellness content tables for breathing, meditation, sounds, sleep, and face-care exercises.
-- Additive audit history table if audit reports should be saved and compared.
-- No destructive table or route changes.
-
-## Free And Premium Boundaries
-
-Free:
-- Product database.
-- Product scan.
-- Basic profile.
-- Basic routine workspace.
-- Limited or summary audit.
-- Beauty news.
-- General good habits.
-
-Premium:
-- Full face scan.
-- Unlimited scan history.
-- Complete shelf, routine, product, and global skin audit.
-- Progress tracking.
-- Advanced incompatibility detection.
-- Personalized multi-week plan.
-- Full wellness and face-care library.
-- Exportable reports.
+## Database Notes
+- Current changes should avoid destructive schema changes.
+- Future scan history needs additive models for stored scan metadata, consented images, module scores and recommendations.
+- User media must remain private and user-scoped.
 
 ## Regression Risks
-
-- Home must not become a personal dashboard.
-- Face Scan claims must stay non-medical and avoid impossible measurements.
-- Premium checks must remain server-side.
-- User photos and personal skin data must stay private.
-- Product imports must not reintroduce sets, bundles, promos, or fake duplicates.
-- English and Korean translations must stay valid.
+- App shell changes can affect mobile spacing and bottom navigation.
+- Scan result redesign can affect catalog loading and shelf add actions.
+- New routes need translation coverage for English and Korean.
+- Build may depend on production database and payment environment variables.
 
 ## Implementation Order
-
-1. Strengthen public Home: Face Scan, audit presentation, latest products, news, Premium.
-2. Improve Profile as a skin dossier.
-3. Store scan history securely and add Progress.
-4. Expand Product, Shelf, Routine, and Global Skin Audit.
-5. Add Today dashboard.
-6. Add Wellness: stress, breathing, meditation, sounds, sleep.
-7. Add Face Care: massage, Gua Sha, Kobido-style, scalp, and face yoga.
-
+1. Stabilize app navigation and mobile header.
+2. Redesign Face Scan result flow with module-level advice and product actions.
+3. Add Today, Progress and Wellness routes.
+4. Improve audit discoverability and mobile readability.
+5. Run lint, typecheck, and build where environment allows.

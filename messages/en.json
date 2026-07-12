@@ -13,13 +13,16 @@
     "ingredients": "Ingredients",
     "tryApp": "Open app",
     "shelf": "My shelf",
-    "scan": "Product scan",
+    "scan": "Scan",
     "products": "Products",
     "routine": "Routine",
-    "audit": "Shelf audit",
+    "audit": "Audit",
     "profile": "Profile",
     "signIn": "Sign in",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "today": "Today",
+    "wellness": "Wellness",
+    "progress": "Progress"
   },
   "hero": {
     "badge": "Inspired by K-beauty routines",
@@ -376,7 +379,87 @@
     "routineSectionTitle": "A routine that targets what we found",
     "routineSectionText": "Built from our product catalog to address the modules flagged above.",
     "addToShelf": "Add this routine to my shelf",
-    "addedToShelf": "Added to your shelf"
+    "addedToShelf": "Added to your shelf",
+    "resultEyebrow": "Face Scan result",
+    "modulesCount": "{count} areas to review",
+    "modulesSectionText": "Each section gives the visible result, useful daily gestures, and products that can support this specific area.",
+    "moduleDefaultNote": "This area needs steady support rather than an aggressive routine.",
+    "moduleScoreLabel": "Visible level",
+    "dailyActionsLabel": "Daily gestures",
+    "productsForThisArea": "Products to consider for this area",
+    "productsForThisAreaText": "Chosen from the catalog based on category, concern, skin type and key actives.",
+    "noProductsForModule": "No strong catalog match yet for this area.",
+    "addProduct": "Add to my routine",
+    "addedProduct": "Added",
+    "moduleDisclaimer": "Use these suggestions as routine guidance. If the skin is painful, swollen or persistently irritated, ask a dermatologist.",
+    "progressCta": "See progress",
+    "dailyActions": {
+      "pores": [
+        "Cleanse gently at night so sunscreen and sebum do not sit in the pores.",
+        "Use SPF every morning; stretched-looking pores are worsened by sun damage.",
+        "Keep exfoliating acids to a planned rhythm instead of using them every day."
+      ],
+      "blackheads": [
+        "Remove makeup and SPF fully before bed, then cleanse without scrubbing.",
+        "Use a BHA product gradually and pause if the skin feels tight or hot.",
+        "Avoid heavy layers on the nose and chin when the area is already congested."
+      ],
+      "texture": [
+        "Keep a simple cleanse, moisturize and SPF base before adding strong actives.",
+        "Do not scrub texture; use chemical exfoliation slowly and consistently.",
+        "Sleep and stress matter here because irritation can make texture look rougher."
+      ],
+      "oiliness": [
+        "Cleanse morning and evening, but avoid stripping foams that make skin rebound oily.",
+        "Use light layers and wait between products so the routine does not feel greasy.",
+        "Drink water through the day; dehydration can make skin feel oily and tight at once."
+      ],
+      "dryness": [
+        "Apply moisturizer while the skin is slightly damp after cleansing.",
+        "Avoid hot water and long cleansing sessions that remove too much barrier lipid.",
+        "Layer hydration first, then seal it with a cream when the skin feels tight."
+      ],
+      "redness": [
+        "Keep the routine short while the skin is reactive: cleanser, soothing serum, moisturizer, SPF.",
+        "Avoid stacking acids, retinoids and vitamin C on the same irritated evening.",
+        "Use lukewarm water and press products in gently instead of rubbing."
+      ],
+      "sensitivity": [
+        "Patch test new products for several days before using them all over the face.",
+        "Introduce one new active at a time so reactions are easier to understand.",
+        "Prioritize barrier repair on recovery nights instead of chasing faster results."
+      ],
+      "spots": [
+        "Use broad-spectrum SPF every morning and reapply when outdoors.",
+        "Pair brightening actives with patience; visible tone support takes consistent weeks.",
+        "Avoid picking marks because inflammation can deepen discoloration."
+      ],
+      "acne": [
+        "Cleanse after sweat and remove sunscreen before sleep.",
+        "Keep acne actives targeted; more layers can irritate and worsen breakouts.",
+        "Change pillowcases often and avoid touching active breakouts during the day."
+      ],
+      "acneScars": [
+        "Protect marks from sun every morning; UV keeps post-blemish color visible longer.",
+        "Use gentle resurfacing on a schedule, not on already irritated skin.",
+        "Do not pick healing blemishes; calm recovery reduces leftover marks."
+      ],
+      "wrinkles": [
+        "Use SPF daily; UV exposure is the biggest routine-level factor you can control.",
+        "Keep retinoids mostly at night and alternate with recovery nights.",
+        "Moisturize consistently so dehydration lines are less visible."
+      ],
+      "darkCircles": [
+        "Sleep consistency helps the under-eye area look less tired.",
+        "Use a tiny amount of eye product and avoid rubbing the area.",
+        "If puffiness is present, try a cool compress for a few minutes in the morning."
+      ],
+      "radiance": [
+        "Cleanse at night so dull buildup does not stay under the next routine.",
+        "Hydrate before moisturizer; glow often drops when the skin is dehydrated.",
+        "Use SPF daily because pigmentation and dullness come back quickly with UV exposure."
+      ]
+    }
   },
   "scanPage": {
     "title": "Scan a product",
