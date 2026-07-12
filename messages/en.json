@@ -417,7 +417,8 @@
     "frequency": "Frequency",
     "keyActives": "Key actives",
     "composition": "Composition",
-    "noTrackedActives": "None tracked yet"
+    "noTrackedActives": "None tracked yet",
+    "seeMore": "See more"
   },
   "productDetail": {
     "notFound": "This product doesn't exist (or was removed).",

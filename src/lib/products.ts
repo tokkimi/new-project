@@ -44,7 +44,7 @@ export function listProducts() {
   return db.product.findMany({ orderBy: { name: "asc" } }).catch(() => FALLBACK_PRODUCTS);
 }
 
-export const PRODUCTS_PAGE_SIZE = 60;
+export const PRODUCTS_BATCH_SIZE = 20;
 
 export type ProductSearchFilters = {
   q?: string;
@@ -55,11 +55,14 @@ export type ProductSearchFilters = {
 };
 
 /**
- * Paginated, filtered product search for the /app/products browser — the
- * catalog is now in the thousands, so that page must never load every row
- * at once (that's what was crashing/hanging the page).
+ * Filtered product search for the /app/products browser — the catalog is
+ * now in the thousands, so this page must never load every row at once
+ * (that's what was crashing/hanging the page). Always fetches from the
+ * start up to `limit`; the "See more" button just re-requests with a
+ * bigger limit (simpler than page/skip since a "load more" UI never jumps
+ * to a middle page).
  */
-export async function searchProducts(filters: ProductSearchFilters, page: number) {
+export async function searchProducts(filters: ProductSearchFilters, limit: number) {
   const where: Prisma.ProductWhereInput = {};
   if (filters.q) {
     where.OR = [
@@ -80,21 +83,19 @@ export async function searchProducts(filters: ProductSearchFilters, page: number
     where.brand = filters.brand;
   }
 
-  const safePage = Math.max(1, page);
+  const safeLimit = Math.max(PRODUCTS_BATCH_SIZE, limit);
 
   try {
     const [products, total] = await Promise.all([
-      db.product.findMany({
-        where,
-        orderBy: { name: "asc" },
-        take: PRODUCTS_PAGE_SIZE,
-        skip: (safePage - 1) * PRODUCTS_PAGE_SIZE,
-      }),
+      db.product.findMany({ where, orderBy: { name: "asc" }, take: safeLimit }),
       db.product.count({ where }),
     ]);
     return { products, total };
   } catch {
-    return { products: FALLBACK_PRODUCTS.slice(0, PRODUCTS_PAGE_SIZE), total: FALLBACK_PRODUCTS.length };
+    return {
+      products: FALLBACK_PRODUCTS.slice(0, safeLimit),
+      total: FALLBACK_PRODUCTS.length,
+    };
   }
 }
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getSeoMetadata } from "@/lib/seo";
 import { ProductsBrowser } from "@/components/products-browser";
-import { searchProducts, listBrandNames, PRODUCTS_PAGE_SIZE } from "@/lib/products";
+import { searchProducts, listBrandNames, PRODUCTS_BATCH_SIZE } from "@/lib/products";
 
 export async function generateMetadata({
   params,
@@ -20,7 +20,7 @@ type ProductsSearchParams = {
   skinType?: string;
   concern?: string;
   brand?: string;
-  page?: string;
+  limit?: string;
 };
 
 export default async function ProductsPage({
@@ -33,12 +33,12 @@ export default async function ProductsPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const sp = await searchParams;
-  const page = Math.max(1, Number(sp.page) || 1);
+  const limit = Math.max(PRODUCTS_BATCH_SIZE, Number(sp.limit) || PRODUCTS_BATCH_SIZE);
   const filters = { q: sp.q, category: sp.category, skinType: sp.skinType, concern: sp.concern, brand: sp.brand };
 
   const [t, { products, total }, brands] = await Promise.all([
     getTranslations("productsPage"),
-    searchProducts(filters, page),
+    searchProducts(filters, limit),
     listBrandNames(),
   ]);
 
@@ -51,8 +51,8 @@ export default async function ProductsPage({
       <ProductsBrowser
         products={products}
         total={total}
-        page={page}
-        pageSize={PRODUCTS_PAGE_SIZE}
+        limit={limit}
+        batchSize={PRODUCTS_BATCH_SIZE}
         brands={brands}
         filters={filters}
       />

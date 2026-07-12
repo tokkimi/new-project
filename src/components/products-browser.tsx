@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useTranslations } from "next-intl";
-import { FlaskConical, ListChecks, MapPin, Repeat, Search, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { FlaskConical, ListChecks, MapPin, Repeat, Search, Sparkles, Plus } from "lucide-react";
 import { Link, useRouter, usePathname } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -42,15 +42,15 @@ function frequencyFromUsage(product: Product): string {
 export function ProductsBrowser({
   products,
   total,
-  page,
-  pageSize,
+  limit,
+  batchSize,
   brands,
   filters,
 }: {
   products: Product[];
   total: number;
-  page: number;
-  pageSize: number;
+  limit: number;
+  batchSize: number;
   brands: string[];
   filters: ProductSearchFilters;
 }) {
@@ -70,7 +70,7 @@ export function ProductsBrowser({
   }
 
   const pushFilters = React.useCallback(
-    (next: Partial<ProductSearchFilters> & { page?: number }) => {
+    (next: Partial<ProductSearchFilters> & { limit?: number }, opts?: { scroll?: boolean }) => {
       const merged = { ...filters, ...next };
       const params = new URLSearchParams();
       if (merged.q) params.set("q", merged.q);
@@ -78,22 +78,22 @@ export function ProductsBrowser({
       if (merged.skinType) params.set("skinType", merged.skinType);
       if (merged.concern) params.set("concern", merged.concern);
       if (merged.brand) params.set("brand", merged.brand);
-      if (next.page && next.page > 1) params.set("page", String(next.page));
+      if (next.limit && next.limit > batchSize) params.set("limit", String(next.limit));
       const qs = params.toString();
-      router.push(qs ? `${pathname}?${qs}` : pathname);
+      router.push(qs ? `${pathname}?${qs}` : pathname, { scroll: opts?.scroll ?? true });
     },
-    [filters, pathname, router]
+    [filters, pathname, router, batchSize]
   );
 
   // Debounced text search — everything else re-navigates immediately.
   React.useEffect(() => {
     if (query === (filters.q ?? "")) return;
-    const id = setTimeout(() => pushFilters({ q: query || undefined, page: 1 }), 350);
+    const id = setTimeout(() => pushFilters({ q: query || undefined }), 350);
     return () => clearTimeout(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
-  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const hasMore = products.length < total;
 
   return (
     <div className="flex flex-col gap-6">
@@ -110,7 +110,7 @@ export function ProductsBrowser({
       <div className="flex flex-wrap gap-2">
         <select
           value={filters.brand ?? "all"}
-          onChange={(e) => pushFilters({ brand: e.target.value === "all" ? undefined : e.target.value, page: 1 })}
+          onChange={(e) => pushFilters({ brand: e.target.value === "all" ? undefined : e.target.value })}
           className={SELECT_CLASS}
         >
           <option value="all">{t("allBrands")}</option>
@@ -122,7 +122,7 @@ export function ProductsBrowser({
         </select>
         <select
           value={filters.skinType ?? "all"}
-          onChange={(e) => pushFilters({ skinType: e.target.value === "all" ? undefined : e.target.value, page: 1 })}
+          onChange={(e) => pushFilters({ skinType: e.target.value === "all" ? undefined : e.target.value })}
           className={SELECT_CLASS}
         >
           <option value="all">{t("allSkinTypes")}</option>
@@ -134,7 +134,7 @@ export function ProductsBrowser({
         </select>
         <select
           value={filters.concern ?? "all"}
-          onChange={(e) => pushFilters({ concern: e.target.value === "all" ? undefined : e.target.value, page: 1 })}
+          onChange={(e) => pushFilters({ concern: e.target.value === "all" ? undefined : e.target.value })}
           className={SELECT_CLASS}
         >
           <option value="all">{t("allConcerns")}</option>
@@ -149,7 +149,7 @@ export function ProductsBrowser({
       <div className="no-scrollbar flex gap-2 overflow-x-auto">
         <button
           type="button"
-          onClick={() => pushFilters({ category: undefined, page: 1 })}
+          onClick={() => pushFilters({ category: undefined })}
           className={cn(
             "shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors",
             !filters.category
@@ -163,7 +163,7 @@ export function ProductsBrowser({
           <button
             key={c}
             type="button"
-            onClick={() => pushFilters({ category: c, page: 1 })}
+            onClick={() => pushFilters({ category: c })}
             className={cn(
               "shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors",
               filters.category === c
@@ -263,28 +263,14 @@ export function ProductsBrowser({
             })}
           </div>
 
-          {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-3 pt-2">
+          {hasMore && (
+            <div className="flex justify-center pt-2">
               <Button
                 variant="outline"
-                size="sm"
-                disabled={page <= 1}
-                onClick={() => pushFilters({ page: page - 1 })}
+                onClick={() => pushFilters({ limit: limit + batchSize }, { scroll: false })}
               >
-                <ChevronLeft className="size-4" />
-                {t("previousPage")}
-              </Button>
-              <p className="text-sm text-muted-foreground">
-                {t("pageOf", { page, totalPages })}
-              </p>
-              <Button
-                variant="outline"
-                size="sm"
-                disabled={page >= totalPages}
-                onClick={() => pushFilters({ page: page + 1 })}
-              >
-                {t("nextPage")}
-                <ChevronRight className="size-4" />
+                <Plus className="size-4" />
+                {t("seeMore")}
               </Button>
             </div>
           )}
