@@ -13,13 +13,16 @@
     "ingredients": "Ingredients",
     "tryApp": "Open app",
     "shelf": "My shelf",
-    "scan": "Product scan",
+    "scan": "Scan",
     "products": "Products",
     "routine": "Routine",
-    "audit": "Shelf audit",
+    "audit": "Audit",
     "profile": "Profile",
     "signIn": "Sign in",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "today": "Today",
+    "wellness": "Wellness",
+    "progress": "Progress"
   },
   "hero": {
     "badge": "Inspired by K-beauty routines",
@@ -376,7 +379,87 @@
     "routineSectionTitle": "A routine that targets what we found",
     "routineSectionText": "Built from our product catalog to address the modules flagged above.",
     "addToShelf": "Add this routine to my shelf",
-    "addedToShelf": "Added to your shelf"
+    "addedToShelf": "Added to your shelf",
+    "resultEyebrow": "Face Scan result",
+    "modulesCount": "{count} areas to review",
+    "modulesSectionText": "Each section gives the visible result, useful daily gestures, and products that can support this specific area.",
+    "moduleDefaultNote": "This area needs steady support rather than an aggressive routine.",
+    "moduleScoreLabel": "Visible level",
+    "dailyActionsLabel": "Daily gestures",
+    "productsForThisArea": "Products to consider for this area",
+    "productsForThisAreaText": "Chosen from the catalog based on category, concern, skin type and key actives.",
+    "noProductsForModule": "No strong catalog match yet for this area.",
+    "addProduct": "Add to my routine",
+    "addedProduct": "Added",
+    "moduleDisclaimer": "Use these suggestions as routine guidance. If the skin is painful, swollen or persistently irritated, ask a dermatologist.",
+    "progressCta": "See progress",
+    "dailyActions": {
+      "pores": [
+        "Cleanse gently at night so sunscreen and sebum do not sit in the pores.",
+        "Use SPF every morning; stretched-looking pores are worsened by sun damage.",
+        "Keep exfoliating acids to a planned rhythm instead of using them every day."
+      ],
+      "blackheads": [
+        "Remove makeup and SPF fully before bed, then cleanse without scrubbing.",
+        "Use a BHA product gradually and pause if the skin feels tight or hot.",
+        "Avoid heavy layers on the nose and chin when the area is already congested."
+      ],
+      "texture": [
+        "Keep a simple cleanse, moisturize and SPF base before adding strong actives.",
+        "Do not scrub texture; use chemical exfoliation slowly and consistently.",
+        "Sleep and stress matter here because irritation can make texture look rougher."
+      ],
+      "oiliness": [
+        "Cleanse morning and evening, but avoid stripping foams that make skin rebound oily.",
+        "Use light layers and wait between products so the routine does not feel greasy.",
+        "Drink water through the day; dehydration can make skin feel oily and tight at once."
+      ],
+      "dryness": [
+        "Apply moisturizer while the skin is slightly damp after cleansing.",
+        "Avoid hot water and long cleansing sessions that remove too much barrier lipid.",
+        "Layer hydration first, then seal it with a cream when the skin feels tight."
+      ],
+      "redness": [
+        "Keep the routine short while the skin is reactive: cleanser, soothing serum, moisturizer, SPF.",
+        "Avoid stacking acids, retinoids and vitamin C on the same irritated evening.",
+        "Use lukewarm water and press products in gently instead of rubbing."
+      ],
+      "sensitivity": [
+        "Patch test new products for several days before using them all over the face.",
+        "Introduce one new active at a time so reactions are easier to understand.",
+        "Prioritize barrier repair on recovery nights instead of chasing faster results."
+      ],
+      "spots": [
+        "Use broad-spectrum SPF every morning and reapply when outdoors.",
+        "Pair brightening actives with patience; visible tone support takes consistent weeks.",
+        "Avoid picking marks because inflammation can deepen discoloration."
+      ],
+      "acne": [
+        "Cleanse after sweat and remove sunscreen before sleep.",
+        "Keep acne actives targeted; more layers can irritate and worsen breakouts.",
+        "Change pillowcases often and avoid touching active breakouts during the day."
+      ],
+      "acneScars": [
+        "Protect marks from sun every morning; UV keeps post-blemish color visible longer.",
+        "Use gentle resurfacing on a schedule, not on already irritated skin.",
+        "Do not pick healing blemishes; calm recovery reduces leftover marks."
+      ],
+      "wrinkles": [
+        "Use SPF daily; UV exposure is the biggest routine-level factor you can control.",
+        "Keep retinoids mostly at night and alternate with recovery nights.",
+        "Moisturize consistently so dehydration lines are less visible."
+      ],
+      "darkCircles": [
+        "Sleep consistency helps the under-eye area look less tired.",
+        "Use a tiny amount of eye product and avoid rubbing the area.",
+        "If puffiness is present, try a cool compress for a few minutes in the morning."
+      ],
+      "radiance": [
+        "Cleanse at night so dull buildup does not stay under the next routine.",
+        "Hydrate before moisturizer; glow often drops when the skin is dehydrated.",
+        "Use SPF daily because pigmentation and dullness come back quickly with UV exposure."
+      ]
+    }
   },
   "scanPage": {
     "title": "Scan a product",
@@ -538,7 +621,8 @@
     "hand": "Hand",
     "foot": "Foot",
     "neck": "Neck",
-    "hair": "Hair"
+    "hair": "Hair",
+    "treatment": "Treatment"
   },
   "skinTypes": {
     "oily": "Oily",
@@ -829,7 +913,8 @@
     },
     "routineProductsTitle": "Products in this routine",
     "routineProductsText": "Click a product to edit its moment, category, notes, favorite status or remove it.",
-    "viewSheet": "View sheet"
+    "viewSheet": "View sheet",
+    "embedUnavailable": "This video cannot be embedded here yet. Save a YouTube, Instagram Reel, or TikTok video to play it directly in Haru."
   },
   "accountSettings": {
     "title": "Account information",
@@ -858,5 +943,166 @@
     "responsibilityText": "Product sheets, routine guidance and beauty content are informational and do not replace advice from a dermatologist or healthcare professional.",
     "contactTitle": "Contact",
     "contactText": "For privacy, product or account requests, contact the operator through the support channel provided on Haru."
+  },
+  "auditShowcase": {
+    "eyebrow": "Skin audit",
+    "title": "Know what your routine is doing for your skin.",
+    "subtitle": "Haru audits your saved products, morning and evening steps, active ingredients, and skin profile to show what fits, what overlaps, and what may be missing.",
+    "ctaPrimary": "Run my audit",
+    "ctaSecondary": "Start with a face scan",
+    "note": "The audit gives beauty guidance from your routine and visible skin context. It does not diagnose or replace a dermatologist.",
+    "panelEyebrow": "Personal routine check",
+    "panelTitle": "What Haru reviews",
+    "priorityTitle": "The result stays simple",
+    "checks": [
+      {
+        "title": "Product audit",
+        "text": "Purpose, key actives, skin type fit, irritation risk, frequency, and how each product should be used."
+      },
+      {
+        "title": "Shelf audit",
+        "text": "Missing steps, redundant products, repeated actives, and products that do not match your goals."
+      },
+      {
+        "title": "Morning routine",
+        "text": "Order, hydration, sunscreen, and whether strong actives are placed safely for daytime use."
+      },
+      {
+        "title": "Evening routine",
+        "text": "Recovery nights, exfoliant or retinoid rhythm, incompatible layers, and barrier support."
+      }
+    ],
+    "priorities": [
+      "Three to five clear priorities instead of a wall of advice.",
+      "Immediate actions and a realistic plan over the next weeks.",
+      "Product suggestions based on what your routine is missing."
+    ]
+  },
+  "goodHabits": {
+    "eyebrow": "Good habits",
+    "title": "Start with skin logic, then personalize.",
+    "subtitle": "Haru does not pretend everyone needs the same routine. The base is simple: cleanse, treat carefully, moisturize, protect. Then the details change by skin type.",
+    "guide": "Guide",
+    "amLabel": "AM",
+    "pmLabel": "PM",
+    "bothLabel": "Both",
+    "watchOutLabel": "Watch out",
+    "rulesTitle": "Rules Haru uses when checking a routine",
+    "ingredientsTitle": "Ingredient base Haru watches",
+    "trackedFallback": "Tracked by Haru's compatibility rules.",
+    "disclaimer": "Based on dermatologist-style routine basics: gentle cleansing, moisturizing, broad-spectrum SPF 30+, cautious active use, and sunscreen reapplication outdoors. Haru is guidance, not a medical diagnosis.",
+    "daily": [
+      {
+        "title": "Morning is protection",
+        "text": "Cleanse only if you wake up oily or sweaty, hydrate, then finish with broad-spectrum SPF 30 or higher every day."
+      },
+      {
+        "title": "Evening is removal and repair",
+        "text": "Remove sunscreen and makeup, cleanse gently, then use treatment only if your skin tolerates it. Finish with moisturizer."
+      },
+      {
+        "title": "SPF is the non-negotiable step",
+        "text": "Reapply about every 2 hours when outdoors, and after sweating or swimming. Actives work better when UV is controlled."
+      },
+      {
+        "title": "Do less when skin is irritated",
+        "text": "Pause retinoids, acids, scrubs and fragrance-heavy extras when skin stings, flakes, burns, or stays red."
+      }
+    ],
+    "routines": [
+      {
+        "type": "Dry or tight skin",
+        "am": "Gentle rinse or creamy cleanser -> hydrating toner/serum -> ceramide moisturizer -> SPF.",
+        "pm": "Cleanser -> hydrating serum on damp skin -> richer moisturizer or sleeping mask.",
+        "avoid": "Avoid foaming cleansers that leave skin squeaky, daily acids, and layering too many actives."
+      },
+      {
+        "type": "Oily or breakout-prone skin",
+        "am": "Light cleanser -> niacinamide or calming serum -> gel moisturizer -> lightweight SPF.",
+        "pm": "Cleanser -> BHA 2-4 nights/week or acne treatment -> non-comedogenic moisturizer.",
+        "avoid": "Do not skip moisturizer; over-stripping often makes oiliness worse."
+      },
+      {
+        "type": "Sensitive or redness-prone skin",
+        "am": "Minimal cleanse -> centella/panthenol serum -> barrier cream -> mineral or gentle SPF.",
+        "pm": "Cleanser -> soothing serum -> ceramide moisturizer. Add actives one at a time only.",
+        "avoid": "Avoid starting retinol, vitamin C and exfoliating acids in the same week."
+      },
+      {
+        "type": "Combination skin",
+        "am": "Gentle cleanser where needed -> light hydration -> moisturizer only where dry -> SPF.",
+        "pm": "Cleanser -> treatment by zone: BHA on oily areas, barrier care on dry areas -> moisturizer.",
+        "avoid": "Do not force one heavy routine on the whole face if your T-zone and cheeks behave differently."
+      },
+      {
+        "type": "Dullness or uneven tone",
+        "am": "Cleanser -> vitamin C or niacinamide -> moisturizer -> SPF.",
+        "pm": "Cleanser -> gentle AHA 1-3 nights/week or retinoid on alternate nights -> moisturizer.",
+        "avoid": "Do not exfoliate daily for glow. Irritation creates more uneven tone."
+      },
+      {
+        "type": "First simple routine",
+        "am": "Cleanser if needed -> moisturizer -> SPF.",
+        "pm": "Cleanser -> moisturizer.",
+        "avoid": "Add only one new product at a time, then wait 1-2 weeks before adding another active."
+      }
+    ],
+    "rules": [
+      "Apply thinnest textures before thicker creams.",
+      "Keep retinoids mostly at night and pair them with morning SPF.",
+      "Use exfoliating acids gradually; more tingle is not more result.",
+      "Patch test new actives, especially if your skin is reactive.",
+      "A routine that you can repeat beats a 12-step routine you abandon."
+    ],
+    "ingredients": {
+      "retinol": {
+        "name": "Retinoids",
+        "summary": "Texture, visible aging, breakouts; mostly night use."
+      },
+      "vitamin_c": {
+        "name": "Vitamin C",
+        "summary": "Morning antioxidant and tone support."
+      },
+      "niacinamide": {
+        "name": "Niacinamide",
+        "summary": "Barrier, oil balance, redness and tone support."
+      },
+      "aha": {
+        "name": "AHA",
+        "summary": "Surface exfoliation for texture and glow."
+      },
+      "bha": {
+        "name": "BHA",
+        "summary": "Oil-soluble pore and blackhead support."
+      },
+      "benzoyl_peroxide": {
+        "name": "Benzoyl peroxide",
+        "summary": "Acne active; can be drying and bleaching."
+      },
+      "vitamin_e": {
+        "name": "Vitamin E",
+        "summary": "Antioxidant often paired with vitamin C."
+      },
+      "peptides": {
+        "name": "Peptides",
+        "summary": "Firmness and barrier-supporting signal ingredients."
+      },
+      "hyaluronic_acid": {
+        "name": "Hyaluronic acid",
+        "summary": "Hydration support, best sealed with moisturizer."
+      },
+      "centella": {
+        "name": "Centella / cica",
+        "summary": "Soothing support for visible redness."
+      },
+      "spf": {
+        "name": "SPF",
+        "summary": "Daily UV protection; the final morning step."
+      },
+      "ceramides": {
+        "name": "Ceramides",
+        "summary": "Barrier lipids for dryness and sensitivity."
+      }
+    }
   }
 }

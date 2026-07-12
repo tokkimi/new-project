@@ -1,11 +1,14 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
-import { rateLimit, clientKey } from "@/lib/rate-limit";
-import { PRODUCTS } from "@/lib/seed-data/products";
 import { cleanCatalogProduct, shouldExcludeProduct } from "@/lib/catalog-cleanup";
+import { fetchOfficialProducts, OFFICIAL_PRODUCT_SOURCES } from "@/lib/official-product-import";
+import { clientKey, rateLimit } from "@/lib/rate-limit";
 
 export async function GET(request: Request) {
-  const { ok } = rateLimit(clientKey(request, "setup-seed-products"), { limit: 20, windowMs: 60 * 1000 });
+  const { ok } = rateLimit(clientKey(request, "setup-import-official-products"), {
+    limit: 120,
+    windowMs: 60 * 1000,
+  });
   if (!ok) {
     return NextResponse.json({ error: "rate_limited" }, { status: 429 });
   }
@@ -21,21 +24,26 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const offset = Math.max(0, Number(url.searchParams.get("offset") ?? 0));
-  const limit = Math.min(500, Math.max(1, Number(url.searchParams.get("limit") ?? 250)));
-  const slice = PRODUCTS.slice(offset, offset + limit);
+  const sourceIndex = Math.max(0, Number(url.searchParams.get("source") ?? 0));
+  const page = Math.max(1, Number(url.searchParams.get("page") ?? 1));
+  const limit = Math.min(250, Math.max(25, Number(url.searchParams.get("limit") ?? 100)));
+  const source = OFFICIAL_PRODUCT_SOURCES[sourceIndex];
+  if (!source) {
+    return NextResponse.json({ ok: true, done: true, sources: OFFICIAL_PRODUCT_SOURCES.length });
+  }
+
   const validIngredients = new Set(
     (await db.ingredient.findMany({ select: { id: true } })).map((ingredient) => ingredient.id)
   );
+  const { products: rawProducts, rawCount } = await fetchOfficialProducts(source, page, limit);
 
   let products = 0;
   let skipped = 0;
   let sources = 0;
   let ingredientLinks = 0;
 
-  for (const rawProduct of slice) {
+  for (const rawProduct of rawProducts) {
     if (shouldExcludeProduct(rawProduct)) {
-      await db.product.deleteMany({ where: { slug: rawProduct.slug } });
       skipped++;
       continue;
     }
@@ -78,13 +86,19 @@ export async function GET(request: Request) {
 
   return NextResponse.json({
     ok: true,
-    offset,
-    limit,
+    sourceIndex,
+    source: source.brand,
+    page,
+    fetched: rawProducts.length,
+    rawFetched: rawCount,
     processed: products,
     skipped,
     sources,
     ingredientLinks,
-    total: PRODUCTS.length,
-    nextOffset: offset + products < PRODUCTS.length ? offset + products : null,
+    next:
+      rawCount === limit
+        ? { source: sourceIndex, page: page + 1 }
+        : { source: sourceIndex + 1, page: 1 },
+    sourceCount: OFFICIAL_PRODUCT_SOURCES.length,
   });
 }

@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/marketing/hero";
 import { HowItWorks } from "@/components/marketing/how-it-works";
+import { AuditShowcase } from "@/components/marketing/audit-showcase";
 import { ProductShowcase } from "@/components/marketing/product-showcase";
 import { BeautyNews } from "@/components/marketing/beauty-news";
 import { GoodHabits } from "@/components/marketing/good-habits";
@@ -83,6 +84,7 @@ export default async function Home({
       <main className="flex-1">
         <Hero />
         <HowItWorks />
+        <AuditShowcase />
         <ProductShowcase latest={products.latest} madeInKorea={products.madeInKorea} />
         <GoodHabits />
         <BeautyNews items={newsItems} />

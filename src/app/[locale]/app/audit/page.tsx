@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { AlertTriangle, Sparkles, ArrowRight, Wand2 } from "lucide-react";
+import { AlertTriangle, ArrowRight, Wand2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { hasPremiumAccess } from "@/lib/entitlements";
 import { auditRoutine } from "@/lib/audit-engine";
 
 export default async function AuditPage() {
@@ -27,42 +26,7 @@ export default async function AuditPage() {
     );
   }
 
-  const user = await db.user.findUnique({
-    where: { id: session.user.id },
-    select: { role: true, subscriptionStatus: true },
-  });
-
-  if (!hasPremiumAccess(user)) {
-    return (
-      <Card className="mx-auto max-w-md items-center gap-4 py-14 text-center">
-        <span className="flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-          <Sparkles className="size-6" />
-        </span>
-        <h1 className="font-serif text-2xl">{t("upgradeTitle")}</h1>
-        <p className="text-muted-foreground">{t("upgradeText")}</p>
-        <Button asChild size="lg">
-          <Link href="/app/upgrade">{t("upgradeCta")}</Link>
-        </Button>
-      </Card>
-    );
-  }
-
   const profile = await db.skinProfile.findUnique({ where: { userId: session.user.id } });
-
-  if (!profile) {
-    return (
-      <Card className="mx-auto max-w-md items-center gap-4 py-14 text-center">
-        <span className="flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-          <Wand2 className="size-6" />
-        </span>
-        <h1 className="font-serif text-2xl">{t("needsProfileTitle")}</h1>
-        <p className="text-muted-foreground">{t("needsProfileText")}</p>
-        <Button asChild size="lg">
-          <Link href="/app/quiz">{t("needsProfileCta")}</Link>
-        </Button>
-      </Card>
-    );
-  }
 
   const [shelfItems, catalog] = await Promise.all([
     db.shelfItem.findMany({ where: { userId: session.user.id }, include: { product: true } }),
@@ -71,9 +35,9 @@ export default async function AuditPage() {
   const shelf = shelfItems.map((i) => i.product);
 
   const result = auditRoutine(shelf, catalog, {
-    skinType: profile.skinType,
-    concerns: profile.concerns,
-    sensitivities: profile.sensitivities,
+    skinType: profile?.skinType ?? "normal",
+    concerns: profile?.concerns ?? [],
+    sensitivities: profile?.sensitivities ?? [],
   });
 
   const missingSteps = result.issues.filter((i) => i.type === "missing_step");
@@ -85,6 +49,23 @@ export default async function AuditPage() {
         <h1 className="font-serif text-3xl">{t("title")}</h1>
         <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
       </div>
+
+      {!profile && (
+        <Card className="gap-3 border-primary/20 bg-primary/5">
+          <div className="flex items-start gap-3">
+            <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <Wand2 className="size-5" />
+            </span>
+            <div className="space-y-2">
+              <p className="font-medium">{t("needsProfileTitle")}</p>
+              <p className="text-sm text-muted-foreground">{t("needsProfileText")}</p>
+              <Button asChild size="sm" variant="outline">
+                <Link href="/app/quiz">{t("needsProfileCta")}</Link>
+              </Button>
+            </div>
+          </div>
+        </Card>
+      )}
 
       <Card className="gap-3">
         <div className="flex items-center justify-between">

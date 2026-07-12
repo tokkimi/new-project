@@ -12,6 +12,22 @@ export type SeedNews = {
 // beauty and industry outlets, plus official Korean company releases.
 export const NEWS: SeedNews[] = [
   {
+    category: "ingredient-trend",
+    title: "Anti-stress skincare moves into barrier-first K-beauty routines",
+    summary:
+      "K-beauty brands are increasingly framing calming care around stress, redness, barrier repair and recovery routines, with cica, heartleaf, beta-glucan, ceramides and PDRN leading the conversation.",
+    sourceName: "Haru K-beauty trend desk",
+    publishedAt: "2026-07-12",
+  },
+  {
+    category: "ingredient-trend",
+    title: "Skin recovery routines replace over-exfoliation messaging",
+    summary:
+      "New routine language is shifting away from aggressive glow claims toward stress recovery, hydration layering, gentle actives and barrier support for reactive skin.",
+    sourceName: "Haru K-beauty trend desk",
+    publishedAt: "2026-07-12",
+  },
+  {
     category: "brand-news",
     title: "K-beauty gets its first official US national week",
     summary:

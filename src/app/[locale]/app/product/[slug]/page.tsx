@@ -9,6 +9,11 @@ import { ProductActions } from "@/components/product-actions";
 import { ProductImage } from "@/components/product-image";
 import { findProductBySlug } from "@/lib/products";
 import { findIngredient } from "@/data/ingredients";
+import {
+  localizedFullIngredients,
+  localizedProductDescription,
+  localizedUsageSteps,
+} from "@/lib/product-localization";
 
 export default async function ProductDetailPage({
   params,
@@ -30,6 +35,9 @@ export default async function ProductDetailPage({
   ]);
 
   const trackedActives = product.ingredientIds.filter((id) => findIngredient(id));
+  const description = localizedProductDescription(product, locale);
+  const usageSteps = localizedUsageSteps(product, locale);
+  const fullIngredients = localizedFullIngredients(product, locale);
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-6">
@@ -82,8 +90,8 @@ export default async function ProductDetailPage({
         )}
       </div>
 
-      {product.description && (
-        <p className="leading-relaxed text-muted-foreground">{product.description}</p>
+      {description && (
+        <p className="leading-relaxed text-muted-foreground">{description}</p>
       )}
 
       <ProductActions product={product} />
@@ -99,11 +107,11 @@ export default async function ProductDetailPage({
         </Card>
       )}
 
-      {product.usageSteps.length > 0 && (
+      {usageSteps.length > 0 && (
         <Card className="gap-3">
           <h2 className="font-serif text-lg">{t("howToUse")}</h2>
           <ol className="flex flex-col gap-2">
-            {product.usageSteps.map((step, i) => (
+            {usageSteps.map((step, i) => (
               <li key={i} className="flex gap-3 text-sm text-muted-foreground">
                 <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-medium text-foreground">
                   {i + 1}
@@ -144,11 +152,11 @@ export default async function ProductDetailPage({
         </Card>
       )}
 
-      {product.fullIngredients && (
+      {fullIngredients && (
         <Card className="gap-2">
           <h2 className="font-serif text-lg">{t("fullIngredients")}</h2>
           <p className="text-xs leading-relaxed text-muted-foreground">
-            {product.fullIngredients}
+            {fullIngredients}
           </p>
         </Card>
       )}

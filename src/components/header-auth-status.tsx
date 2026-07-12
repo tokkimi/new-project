@@ -31,7 +31,7 @@ export function HeaderAuthStatus() {
     <Button asChild size="sm" variant="ghost">
       <Link href="/sign-in">
         <User className="size-4" />
-        {t("signIn")}
+        <span className="hidden sm:inline">{t("signIn")}</span>
       </Link>
     </Button>
   );

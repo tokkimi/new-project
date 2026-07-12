@@ -9,9 +9,9 @@ export function AppNav({ className }: { className?: string }) {
   const pathname = usePathname();
 
   const TABS = [
+    { href: "/app/today", label: t("today") },
     { href: "/app/shelf", label: t("shelf") },
-    { href: "/app/products", label: t("products") },
-    { href: "/app/scan", label: t("scan") },
+    { href: "/app/face-scan", label: t("scan") },
     { href: "/app/audit", label: t("audit") },
     { href: "/app/profile", label: t("profile") },
   ];
