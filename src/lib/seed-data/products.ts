@@ -1,3 +1,5 @@
+import { GENERATED_PRODUCTS } from "./generated-products";
+
 export type SeedProduct = {
   slug: string;
   name: string;
@@ -20,7 +22,7 @@ export type SeedProduct = {
 // Researched product data - real products, real actives, real brand HQ.
 // imageUrl is included only when it comes from a verified official product page.
 // Unknown/unverified images stay null so the UI can fall back to a clean product visual.
-export const PRODUCTS: SeedProduct[] = [
+const CORE_PRODUCTS: SeedProduct[] = [
   {
     slug: "cosrx-low-ph-good-morning-gel-cleanser",
     name: "Low pH Good Morning Gel Cleanser",
@@ -15922,3 +15924,5 @@ export const PRODUCTS: SeedProduct[] = [
       ]
   },
 ];
+
+export const PRODUCTS: SeedProduct[] = [...CORE_PRODUCTS, ...GENERATED_PRODUCTS];

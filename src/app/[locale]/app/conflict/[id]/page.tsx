@@ -31,7 +31,7 @@ export default function ConflictDetailPage() {
       <div className="mx-auto max-w-lg text-center">
         <p className="text-muted-foreground">{t("notFound")}</p>
         <Button asChild variant="link">
-          <Link href="/app/routine">{tRoutine("backToRoutine")}</Link>
+          <Link href="/app/profile">{tRoutine("backToRoutine")}</Link>
         </Button>
       </div>
     );
@@ -40,7 +40,7 @@ export default function ConflictDetailPage() {
   return (
     <div className="mx-auto flex max-w-2xl flex-col gap-6">
       <Button asChild variant="ghost" size="sm" className="w-fit -ml-2">
-        <Link href="/app/routine">
+        <Link href="/app/profile">
           <ArrowLeft className="size-4" />
           {tRoutine("backToRoutine")}
         </Link>

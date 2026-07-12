@@ -1,7 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useSession } from "next-auth/react";
 import { Plus, Check, AlertTriangle } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useShelf } from "@/lib/shelf-store";
@@ -12,6 +14,23 @@ export function ProductActions({ product }: { product: Product }) {
   const t = useTranslations("productDetail");
   const tConflicts = useTranslations("conflictRules");
   const { shelf, addProduct } = useShelf();
+  const { status } = useSession();
+
+  if (status !== "authenticated") {
+    return (
+      <div className="flex flex-col gap-2">
+        <Button asChild size="lg">
+          <Link href="/sign-in">
+            <Plus className="size-4" />
+            {t("signInToAdd")}
+          </Link>
+        </Button>
+        <Button asChild variant="outline">
+          <Link href="/sign-up">{t("createAccountToSave")}</Link>
+        </Button>
+      </div>
+    );
+  }
 
   const onShelf = shelf.some((p) => p.id === product.id);
   const previewWarnings = onShelf ? [] : previewAddConflicts(product, shelf);

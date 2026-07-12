@@ -128,7 +128,10 @@
     "readyTitle": "Ready to see your routine?",
     "readyText": "Haru orders your products and flags any conflicts.",
     "viewRoutine": "View my routine",
-    "remove": "Remove {name}"
+    "remove": "Remove {name}",
+    "signInRequired": "Sign in to save and manage your personal shelf. Product suggestions stay in the catalog; your shelf is only for your account.",
+    "signInCta": "Sign in",
+    "signUpCta": "Create account"
   },
   "addProductDialog": {
     "title": "Add to your shelf",
@@ -427,7 +430,9 @@
     "addToShelf": "Add to shelf",
     "alreadyOnShelf": "Already on your shelf",
     "conflictWarning": "Adding this would create {count, plural, one {# conflict} other {# conflicts}} with your current shelf",
-    "noConflict": "No conflict with your current shelf"
+    "noConflict": "No conflict with your current shelf",
+    "signInToAdd": "Sign in to add to my shelf",
+    "createAccountToSave": "Create an account to save products"
   },
   "routinePage": {
     "title": "My routine",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useSession } from "next-auth/react";
 import { ArrowRight, Trash2, Camera } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
@@ -16,6 +17,24 @@ export default function ShelfPage() {
   const tCategories = useTranslations("categories");
   const tIngredients = useTranslations("ingredients");
   const { shelf, removeProduct } = useShelf();
+  const { status } = useSession();
+
+  if (status !== "authenticated") {
+    return (
+      <Card className="mx-auto max-w-md items-center gap-4 py-14 text-center">
+        <h1 className="font-serif text-2xl">{t("title")}</h1>
+        <p className="max-w-sm text-muted-foreground">{t("signInRequired")}</p>
+        <div className="flex flex-wrap justify-center gap-2">
+          <Button asChild>
+            <Link href="/sign-in">{t("signInCta")}</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/sign-up">{t("signUpCta")}</Link>
+          </Button>
+        </div>
+      </Card>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-8">
@@ -80,14 +99,14 @@ export default function ShelfPage() {
         </div>
       )}
 
-      {shelf.length > 0 && (
+      {status === "authenticated" && shelf.length > 0 && (
         <Card className="flex-row flex-wrap items-center justify-between gap-4 bg-primary/5">
           <div>
             <p className="font-medium">{t("readyTitle")}</p>
             <p className="text-sm text-muted-foreground">{t("readyText")}</p>
           </div>
           <Button asChild>
-            <Link href="/app/routine">
+            <Link href="/app/profile">
               {t("viewRoutine")}
               <ArrowRight className="size-4" />
             </Link>

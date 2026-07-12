@@ -12,8 +12,8 @@ export function AppNav({ className }: { className?: string }) {
     { href: "/app/shelf", label: t("shelf") },
     { href: "/app/products", label: t("products") },
     { href: "/app/scan", label: t("scan") },
-    { href: "/app/routine", label: t("routine") },
     { href: "/app/audit", label: t("audit") },
+    { href: "/app/profile", label: t("profile") },
   ];
 
   return (

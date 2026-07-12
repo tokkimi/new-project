@@ -23,8 +23,6 @@ async function loadCatalog(): Promise<Product[]> {
   return catalogPromise;
 }
 
-// --- Guest mode: a set of product IDs persisted in localStorage. ---
-
 function loadGuestIds(): string[] {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
@@ -36,60 +34,6 @@ function loadGuestIds(): string[] {
 
 function persistGuestIds(ids: string[]) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
-}
-
-function useGuestShelf() {
-  const [catalog, setCatalog] = React.useState<Product[]>([]);
-  const [ids, setIds] = React.useState<string[]>([]);
-  const [hydrated, setHydrated] = React.useState(false);
-
-  React.useEffect(() => {
-    let cancelled = false;
-    loadCatalog().then((products) => {
-      if (cancelled) return;
-      setCatalog(products);
-
-      const raw = window.localStorage.getItem(STORAGE_KEY);
-      if (raw === null) {
-        // First visit ever: seed with the curated starter set so the app
-        // demonstrates value immediately instead of showing an empty shelf.
-        const starter = products.filter((p) => p.featured).map((p) => p.id);
-        setIds(starter);
-        persistGuestIds(starter);
-      } else {
-        setIds(loadGuestIds());
-      }
-      setHydrated(true);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const shelf = React.useMemo(
-    () => ids.map((id) => catalog.find((p) => p.id === id)).filter((p): p is Product => !!p),
-    [ids, catalog]
-  );
-
-  const addProduct = React.useCallback((product: Product) => {
-    setIds((prev) => {
-      if (prev.includes(product.id)) return prev;
-      const next = [...prev, product.id];
-      persistGuestIds(next);
-      return next;
-    });
-    setCatalog((prev) => (prev.some((p) => p.id === product.id) ? prev : [...prev, product]));
-  }, []);
-
-  const removeProduct = React.useCallback((id: string) => {
-    setIds((prev) => {
-      const next = prev.filter((pid) => pid !== id);
-      persistGuestIds(next);
-      return next;
-    });
-  }, []);
-
-  return { shelf, loaded: hydrated, addProduct, removeProduct };
 }
 
 /**
@@ -153,10 +97,18 @@ function useDbShelf(enabled: boolean) {
 
 export function useShelf() {
   const { status } = useSession();
-  const guest = useGuestShelf();
   const db = useDbShelf(status === "authenticated");
 
-  return status === "authenticated" ? db : guest;
+  if (status !== "authenticated") {
+    return {
+      shelf: [],
+      loaded: status !== "loading",
+      addProduct: () => {},
+      removeProduct: () => {},
+    };
+  }
+
+  return db;
 }
 
 /** Full product catalog (for pickers, scan mock, etc.) — cached across calls. */

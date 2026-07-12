@@ -128,7 +128,10 @@
     "readyTitle": "루틴을 확인할 준비가 되셨나요?",
     "readyText": "Haru가 제품 순서를 정하고 충돌을 표시해드려요.",
     "viewRoutine": "내 루틴 보기",
-    "remove": "{name} 삭제"
+    "remove": "{name} 삭제",
+    "signInRequired": "Sign in to save and manage your personal shelf. Product suggestions stay in the catalog; your shelf is only for your account.",
+    "signInCta": "Sign in",
+    "signUpCta": "Create account"
   },
   "addProductDialog": {
     "title": "화장대에 추가",
@@ -427,7 +430,9 @@
     "addToShelf": "화장대에 추가",
     "alreadyOnShelf": "이미 화장대에 있어요",
     "conflictWarning": "추가하면 현재 화장대와 {count}건의 충돌이 생겨요",
-    "noConflict": "현재 화장대와 충돌 없음"
+    "noConflict": "현재 화장대와 충돌 없음",
+    "signInToAdd": "Sign in to add to my shelf",
+    "createAccountToSave": "Create an account to save products"
   },
   "routinePage": {
     "title": "내 루틴",

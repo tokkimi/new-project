@@ -166,7 +166,7 @@ export default async function AuditPage() {
       )}
 
       <Button asChild variant="outline">
-        <Link href="/app/routine">
+        <Link href="/app/profile">
           {t("title")}
           <ArrowRight className="size-4" />
         </Link>
