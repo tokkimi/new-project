@@ -2,10 +2,12 @@
 
 import * as React from "react";
 import { Save } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 export function AccountSettingsForm({ name, email }: { name: string | null; email: string }) {
+  const t = useTranslations("accountSettings");
   const [form, setForm] = React.useState({
     name: name ?? "",
     email,
@@ -26,36 +28,38 @@ export function AccountSettingsForm({ name, email }: { name: string | null; emai
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
-    setMessage(res.ok ? "Paramètres enregistrés." : "Impossible d'enregistrer ces changements.");
+    setMessage(res.ok ? t("saved") : t("error"));
     if (res.ok) setForm((prev) => ({ ...prev, currentPassword: "", newPassword: "" }));
   };
 
   return (
     <Card className="gap-4">
       <div>
-        <h2 className="font-serif text-xl">Informations du compte</h2>
-        <p className="text-sm text-muted-foreground">Nom, email de connexion et mot de passe.</p>
+        <h2 className="font-serif text-xl">{t("title")}</h2>
+        <p className="text-sm text-muted-foreground">{t("subtitle")}</p>
       </div>
       <label className="grid gap-1 text-sm">
-        Nom
+        {t("name")}
         <input className="h-10 rounded-md border border-input bg-background px-3" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
       </label>
       <label className="grid gap-1 text-sm">
-        Email
+        {t("email")}
         <input className="h-10 rounded-md border border-input bg-background px-3" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
       </label>
       <div className="grid gap-3 sm:grid-cols-2">
         <label className="grid gap-1 text-sm">
-          Mot de passe actuel
+          {t("currentPassword")}
           <input type="password" className="h-10 rounded-md border border-input bg-background px-3" value={form.currentPassword} onChange={(e) => setForm({ ...form, currentPassword: e.target.value })} />
         </label>
         <label className="grid gap-1 text-sm">
-          Nouveau mot de passe
+          {t("newPassword")}
           <input type="password" className="h-10 rounded-md border border-input bg-background px-3" value={form.newPassword} onChange={(e) => setForm({ ...form, newPassword: e.target.value })} />
         </label>
       </div>
       <div className="flex items-center gap-3">
-        <Button onClick={save}><Save className="size-4" /> Enregistrer</Button>
+        <Button onClick={save}>
+          <Save className="size-4" /> {t("save")}
+        </Button>
         {message && <p className="text-sm text-muted-foreground">{message}</p>}
       </div>
     </Card>

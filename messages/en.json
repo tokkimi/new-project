@@ -131,13 +131,16 @@
     "remove": "Remove {name}",
     "signInRequired": "Sign in to save and manage your personal shelf. Product suggestions stay in the catalog; your shelf is only for your account.",
     "signInCta": "Sign in",
-    "signUpCta": "Create account"
+    "signUpCta": "Create account",
+    "workspaceTitle": "My routine space",
+    "workspaceSignInText": "Sign in to manage your products, favorites, notes, videos and personal routines."
   },
   "addProductDialog": {
     "title": "Add to your shelf",
     "description": "Search our product database, or scan the packaging instead for an instant match.",
     "searchPlaceholder": "Search a brand or product...",
-    "noResults": "No product matches."
+    "noResults": "No product matches.",
+    "confirm": "Add to my routine"
   },
   "faceScanPage": {
     "title": "Face scan",
@@ -777,12 +780,79 @@
     "theme": "Appearance",
     "themeLight": "Light",
     "themeDark": "Dark",
-    "themeSystem": "System"
+    "themeSystem": "System",
+    "settingsTitle": "Settings",
+    "settingsSubtitle": "Account, preferences, security and access."
   },
   "common": {
     "back": "Back",
     "cancel": "Cancel",
     "save": "Save",
     "loading": "Loading..."
+  },
+  "routineWorkspace": {
+    "title": "My routine space",
+    "subtitle": "Your morning and evening routine, saved products, notes and beauty videos in one place.",
+    "scan": "Scan",
+    "favorite": "Favorite",
+    "remove": "Remove",
+    "categoryPlaceholder": "Custom category: acne, glow, makeup...",
+    "productNotePlaceholder": "Note about this product, reaction, frequency, order...",
+    "emptyProductsTitle": "No saved products",
+    "emptyProductsText": "Add products from the catalog or scan.",
+    "emptyFavorites": "No favorites yet.",
+    "newNote": "New note",
+    "noteTitlePlaceholder": "Title",
+    "noteBodyPlaceholder": "Routine, reaction, makeup idea...",
+    "add": "Add",
+    "saveVideo": "Save a video",
+    "linkTitlePlaceholder": "Title",
+    "linkUrlPlaceholder": "YouTube, Instagram, TikTok link...",
+    "linkNotePlaceholder": "Why do you want to keep this routine?",
+    "save": "Save",
+    "link": "Link",
+    "tabs": {
+      "routine": "Routine & products",
+      "favorites": "Favorites",
+      "notes": "Notes",
+      "links": "Videos"
+    },
+    "routineSlot": {
+      "both": "Morning and evening",
+      "morning": "Morning",
+      "evening": "Evening",
+      "pause": "Paused"
+    },
+    "routineProductsTitle": "Products in this routine",
+    "routineProductsText": "Click a product to edit its moment, category, notes, favorite status or remove it.",
+    "viewSheet": "View sheet"
+  },
+  "accountSettings": {
+    "title": "Account information",
+    "subtitle": "Name, sign-in email and password.",
+    "name": "Name",
+    "email": "Email",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "save": "Save",
+    "saved": "Settings saved.",
+    "error": "Could not save these changes."
+  },
+  "cookieBanner": {
+    "text": "Haru uses cookies required for the site to work. Measurement or improvement cookies are only enabled with your consent.",
+    "reject": "Reject",
+    "accept": "Accept"
+  },
+  "legal": {
+    "title": "Legal information",
+    "subtitle": "Haru is operated by a digital company based in Switzerland.",
+    "privacyTitle": "Data protection",
+    "privacyText": "Account data, saved products, notes, links and preferences are used to provide the requested service. Processing follows Swiss data protection law and, when necessary for visitors located in the European Union, GDPR principles.",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "Strictly necessary cookies support sign-in, security and essential preferences. Other cookies require the user choice, and refusing must remain as simple as accepting.",
+    "responsibilityTitle": "Beauty information",
+    "responsibilityText": "Product sheets, routine guidance and beauty content are informational and do not replace advice from a dermatologist or healthcare professional.",
+    "contactTitle": "Contact",
+    "contactText": "For privacy, product or account requests, contact the operator through the support channel provided on Haru."
   }
 }

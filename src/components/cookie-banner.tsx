@@ -1,9 +1,11 @@
 "use client";
 
 import * as React from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 
 export function CookieBanner() {
+  const t = useTranslations("cookieBanner");
   const [choice, setChoice] = React.useState<string | null | undefined>(undefined);
 
   React.useEffect(() => {
@@ -22,12 +24,10 @@ export function CookieBanner() {
   return (
     <div className="fixed inset-x-4 bottom-24 z-50 mx-auto max-w-3xl rounded-lg border border-border bg-background p-4 shadow-lg">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-muted-foreground">
-          Haru utilise les cookies nécessaires au fonctionnement du site. Les cookies de mesure ou d&apos;amélioration ne sont activés qu&apos;avec ton accord.
-        </p>
+        <p className="text-sm text-muted-foreground">{t("text")}</p>
         <div className="flex shrink-0 gap-2">
-          <Button variant="outline" onClick={() => save("necessary")}>Refuser</Button>
-          <Button onClick={() => save("all")}>Accepter</Button>
+          <Button variant="outline" onClick={() => save("necessary")}>{t("reject")}</Button>
+          <Button onClick={() => save("all")}>{t("accept")}</Button>
         </div>
       </div>
     </div>

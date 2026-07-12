@@ -38,8 +38,8 @@ export default async function ProfilePage() {
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-8">
       <div>
-        <h1 className="font-serif text-3xl">Paramètres</h1>
-        <p className="mt-1 text-muted-foreground">Compte, préférences, sécurité et accès.</p>
+        <h1 className="font-serif text-3xl">{t("settingsTitle")}</h1>
+        <p className="mt-1 text-muted-foreground">{t("settingsSubtitle")}</p>
       </div>
 
       <Card className="gap-4">
