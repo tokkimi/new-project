@@ -7,7 +7,9 @@ export async function getSeoMetadata(
   locale: string,
   fallback: { title: string; description: string }
 ): Promise<Metadata> {
-  const override = await db.seoMeta.findUnique({ where: { path_locale: { path, locale } } });
+  const override = await db.seoMeta
+    .findUnique({ where: { path_locale: { path, locale } } })
+    .catch(() => null);
 
   return {
     title: override?.title || fallback.title,
