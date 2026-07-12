@@ -1,9 +1,10 @@
 import type { SeedProduct } from "./products";
 
+// Promotional prefixes/suffixes (flash-deal tags, free-gift callouts, GWP placeholders) were stripped from names and brands on 2026-07-12.
 export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-special-price-2ea-medicube-pdrn-pink-collagen-volume-multi-balm-10g-double-pack-2ea-bloomin",
-    "name": "*Special Price* 2EA [Medicube] PDRN Pink Collagen Volume Multi Balm 10g Double Pack (2ea)",
+    "name": "2EA [Medicube] PDRN Pink Collagen Volume Multi Balm 10g Double Pack (2ea)",
     "brand": "MEDICUBE",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -37,7 +38,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "centellian24-special-price-2ea-centellian24-madeca-cream-time-reverse-50ml-double-pack-2ea-bloomingk",
-    "name": "*Special Price* 2EA [Centellian24] Madeca Cream Time Reverse 50ml Double Pack (2ea)",
+    "name": "2EA [Centellian24] Madeca Cream Time Reverse 50ml Double Pack (2ea)",
     "brand": "Centellian24",
     "category": "cleanser",
     "ingredientIds": [
@@ -72,7 +73,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-2ea-skin1004-madagascar-centella-hyalu-cica-water-fit-sun-serum-uv-50ml-doubl",
-    "name": "*Special Price* 2EA [SKIN1004] Madagascar Centella Hyalu-Cica Water-Fit Sun Serum UV 50ml Double Pack (2ea)",
+    "name": "2EA [SKIN1004] Madagascar Centella Hyalu-Cica Water-Fit Sun Serum UV 50ml Double Pack (2ea)",
     "brand": "SKIN1004",
     "category": "serum",
     "ingredientIds": [
@@ -107,7 +108,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-deep-vita-a-retinol-serum-30ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Medicube] Deep Vita A Retinol Serum 30ml Double Pack (2ea)",
+    "name": "2EA [Medicube] Deep Vita A Retinol Serum 30ml Double Pack (2ea)",
     "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
@@ -140,7 +141,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-zero-pore-pad-2-0-70ea-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Medicube] Zero Pore Pad 2.0 (70ea) Double Pack (2ea)",
+    "name": "2EA [Medicube] Zero Pore Pad 2.0 (70ea) Double Pack (2ea)",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -177,7 +178,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "lilyeve-special-price-2ea-lilyeve-grow-turn-ampoule-100ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [lilyeve] Grow:Turn Ampoule 100ml Double Pack (2ea)",
+    "name": "2EA [lilyeve] Grow:Turn Ampoule 100ml Double Pack (2ea)",
     "brand": "lilyeve",
     "category": "essence",
     "ingredientIds": [],
@@ -205,7 +206,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-vitamin-c-boosting-serum-30ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Dr. Althea] Vitamin C Boosting Serum 30ml Double Pack (2ea)",
+    "name": "2EA [Dr. Althea] Vitamin C Boosting Serum 30ml Double Pack (2ea)",
     "brand": "Dr.Althea",
     "category": "peeling",
     "ingredientIds": [
@@ -241,7 +242,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-retinol-flat-iron-eye-roller-25ml-double-pack-2ea-bloomingkoco",
-    "name": "*Special Price* 2EA [Dr.Althea] Retinol Flat Iron Eye Roller 25ml Double Pack (2ea)",
+    "name": "2EA [Dr.Althea] Retinol Flat Iron Eye Roller 25ml Double Pack (2ea)",
     "brand": "Dr.Althea",
     "category": "serum",
     "ingredientIds": [
@@ -275,7 +276,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-renewal-345-relief-cream-50ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Dr. Althea] *renewal* 345 Relief Cream 50ml Double Pack (2ea)",
+    "name": "2EA [Dr. Althea] 345 Relief Cream 50ml Double Pack (2ea)",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -313,7 +314,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-147-barrier-cream-50ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Dr. Althea] 147 Barrier Cream 50ml Double Pack (2ea)",
+    "name": "2EA [Dr. Althea] 147 Barrier Cream 50ml Double Pack (2ea)",
     "brand": "Dr.Althea",
     "category": "peeling",
     "ingredientIds": [
@@ -350,7 +351,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-2ea-celimax-the-vita-a-retinal-shot-tightening-booster-15ml-double-pack-2ea-bl",
-    "name": "*Special Price* 2EA [celimax] THE Vita-A Retinal Shot Tightening Booster 15ml Double Pack (2ea)",
+    "name": "2EA [celimax] THE Vita-A Retinal Shot Tightening Booster 15ml Double Pack (2ea)",
     "brand": "celimax",
     "category": "serum",
     "ingredientIds": [
@@ -383,7 +384,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-2ea-celimax-noni-acne-bubble-cleanser-155ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [celimax] Noni Acne Bubble Cleanser 155ml Double Pack (2ea)",
+    "name": "2EA [celimax] Noni Acne Bubble Cleanser 155ml Double Pack (2ea)",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -419,7 +420,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-2ea-anua-niacinamide-10-txa-4-serum-30ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Anua] Niacinamide 10% + TXA 4% Serum 30ml Double Pack (2ea)",
+    "name": "2EA [Anua] Niacinamide 10% + TXA 4% Serum 30ml Double Pack (2ea)",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -521,7 +522,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-2ea-anua-azelaic-acid-10-hyaluron-redness-soothing-serum-30ml-double-pack-2ea-blo",
-    "name": "*Special Price* 2EA [Anua] Azelaic Acid 10 Hyaluron Redness Soothing Serum 30ml Double Pack (2ea)",
+    "name": "2EA [Anua] Azelaic Acid 10 Hyaluron Redness Soothing Serum 30ml Double Pack (2ea)",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -555,7 +556,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-2ea-arencia-retinal-booster-shot-30ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Arencia] Retinal Booster Shot 30ml Double Pack (2ea)",
+    "name": "2EA [Arencia] Retinal Booster Shot 30ml Double Pack (2ea)",
     "brand": "ARENCIA",
     "category": "serum",
     "ingredientIds": [
@@ -595,7 +596,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-2ea-arencia-vitamin-c-booster-shot-30ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Arencia] Vitamin C Booster Shot 30ml Double Pack (2ea)",
+    "name": "2EA [Arencia] Vitamin C Booster Shot 30ml Double Pack (2ea)",
     "brand": "ARENCIA",
     "category": "peeling",
     "ingredientIds": [
@@ -699,7 +700,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "kaine-clearance-kaine-rosemary-aha-night-serum-30ml-bloomingkoco-com",
-    "name": "*CLEARANCE*[KAINE] Rosemary AHA Night Serum 30ml",
+    "name": "[KAINE] Rosemary AHA Night Serum 30ml",
     "brand": "KAINE",
     "category": "peeling",
     "ingredientIds": [
@@ -803,7 +804,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-jumiso-niacinamide-20-serum-sample-1ml-2ea-bloomingkoco-com",
-    "name": "FREE GIFT [Jumiso] Niacinamide 20 Serum Sample 1ml (2ea)",
+    "name": "[Jumiso] Niacinamide 20 Serum Sample 1ml (2ea)",
     "brand": "free",
     "category": "serum",
     "ingredientIds": [
@@ -929,7 +930,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renew-soonjung-2x-barrier-intensive-cream-60ml-bloomingkoco-com",
-    "name": "*renew* SoonJung 2x Barrier Intensive Cream 60ml",
+    "name": "SoonJung 2x Barrier Intensive Cream 60ml",
     "brand": "ETUDE",
     "category": "peeling",
     "ingredientIds": [
@@ -995,7 +996,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-skin1004-madagascar-centella-light-cleansing-oil-30ml-bloomingkoco-com",
-    "name": "FREE GIFT [SKIN1004] Madagascar Centella Light Cleansing Oil 30ml",
+    "name": "[SKIN1004] Madagascar Centella Light Cleansing Oil 30ml",
     "brand": "free",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -1024,7 +1025,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-etude-0-2mm-therapy-air-sheet-mask-green-tea-bloomingkoco-com",
-    "name": "FREE GIFT [ETUDE] 0.2mm Therapy Air Sheet Mask #Green Tea",
+    "name": "[ETUDE] 0.2mm Therapy Air Sheet Mask #Green Tea",
     "brand": "free",
     "category": "mask",
     "ingredientIds": [],
@@ -1050,7 +1051,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "axis-y-clearance-axis-y-spot-the-difference-blemish-treatment-15ml-bloomingkoco-com",
-    "name": "*CLEARANCE* [AXIS-Y] Spot the Difference Blemish Treatment 15ml",
+    "name": "[AXIS-Y] Spot the Difference Blemish Treatment 15ml",
     "brand": "AXIS-Y",
     "category": "peeling",
     "ingredientIds": [
@@ -1116,7 +1117,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-heimish-all-clean-balm-blister-5ml-bloomingkoco-com",
-    "name": "FREE GIFT [Heimish] All Clean Balm Blister 5ml",
+    "name": "[Heimish] All Clean Balm Blister 5ml",
     "brand": "free",
     "category": "cleansing-balm",
     "ingredientIds": [],
@@ -1142,7 +1143,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "aromatica-special-price-aromatica-rosemary-scalp-intensive-care-set-shampoo-180ml-root-enhancer-bloo",
-    "name": "*Special Price* [Aromatica] Rosemary Scalp Intensive Care Set (Shampoo 180ml + Root Enhancer)",
+    "name": "[Aromatica] Rosemary Scalp Intensive Care Set (Shampoo 180ml + Root Enhancer)",
     "brand": "AROMATICA",
     "category": "serum",
     "ingredientIds": [],
@@ -1173,7 +1174,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "seapuri-special-price-2ea-seapuri-scalpy-hair-serum-20ml-double-pack-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Seapuri] Scalpy Hair Serum 20ml Double Pack (2ea)",
+    "name": "2EA [Seapuri] Scalpy Hair Serum 20ml Double Pack (2ea)",
     "brand": "Seapuri",
     "category": "peeling",
     "ingredientIds": [
@@ -1204,7 +1205,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-anua-8-hyaluronic-acid-moisturizing-cleanser-duo-foam-gel-cleanser-bloomingkoco-c",
-    "name": "*Special Price* [Anua] 8 Hyaluronic Acid Moisturizing Cleanser Duo (Foam + Gel Cleanser)",
+    "name": "[Anua] 8 Hyaluronic Acid Moisturizing Cleanser Duo (Foam + Gel Cleanser)",
     "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
@@ -1239,7 +1240,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-arencia-pore-tightening-skin-reset-set-green-rice-mochi-cleanser-retinal-boost",
-    "name": "*Special Price* [Arencia] Pore-Tightening Skin Reset Set (Green Rice Mochi Cleanser + Retinal Booster Shot)",
+    "name": "[Arencia] Pore-Tightening Skin Reset Set (Green Rice Mochi Cleanser + Retinal Booster Shot)",
     "brand": "ARENCIA",
     "category": "cleanser",
     "ingredientIds": [
@@ -1277,7 +1278,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-special-price-round-lab-1025-dokdo-pore-reset-cleanser-set-cleansing-tissue-cleansing-foam",
-    "name": "*Special Price* [ROUND LAB] 1025 Dokdo Pore-Reset Cleanser Set (Cleansing Tissue + Cleansing foam)",
+    "name": "[ROUND LAB] 1025 Dokdo Pore-Reset Cleanser Set (Cleansing Tissue + Cleansing foam)",
     "brand": "ROUND LAB",
     "category": "cleanser",
     "ingredientIds": [
@@ -1312,7 +1313,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-celimax-noni-pore-glow-skincare-set-noni-bubble-cleanser-noni-energy-ampoule-b",
-    "name": "*Special Price* [celimax] Noni Pore & Glow Skincare Set (Noni Bubble Cleanser + Noni Energy Ampoule)",
+    "name": "[celimax] Noni Pore & Glow Skincare Set (Noni Bubble Cleanser + Noni Energy Ampoule)",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -1487,7 +1488,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "cosrx-special-price-2ea-cosrx-advanced-snail-96-mucin-power-essence-100ml-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [COSRX] Advanced Snail 96 Mucin Power Essence 100ml (2ea)",
+    "name": "2EA [COSRX] Advanced Snail 96 Mucin Power Essence 100ml (2ea)",
     "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
@@ -1521,7 +1522,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "axis-y-special-price-moida-set-axis-y-dark-spot-blemish-trio-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [Axis-y] Dark Spot & Blemish Trio",
+    "name": "MOIDA SET [Axis-y] Dark Spot & Blemish Trio",
     "brand": "AXIS-Y",
     "category": "peeling",
     "ingredientIds": [
@@ -1773,7 +1774,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-fig-gelato-pack-cleanser-120g-bloomingkoco-com",
-    "name": "*renewal* Fig Gelato Pack Cleanser 120g",
+    "name": "Fig Gelato Pack Cleanser 120g",
     "brand": "I'm From",
     "category": "cleanser",
     "ingredientIds": [
@@ -1804,7 +1805,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-apricot-sherbet-pack-cleanser-120g-bloomingkoco-com",
-    "name": "*renewal* Apricot Sherbet Pack Cleanser 120g",
+    "name": "Apricot Sherbet Pack Cleanser 120g",
     "brand": "I'm From",
     "category": "cleanser",
     "ingredientIds": [
@@ -2419,7 +2420,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-skin1004-mini-madagascar-centella-soothing-cream-30ml-bloomingkoco-com",
-    "name": "*mini* Madagascar Centella Soothing Cream 30ml",
+    "name": "Madagascar Centella Soothing Cream 30ml",
     "brand": "SKIN1004",
     "category": "moisturizer",
     "ingredientIds": [
@@ -2453,7 +2454,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "cosrx-cosrx-mini-pure-fit-cica-cleanser-50ml-bloomingkoco-com",
-    "name": "*mini* Pure Fit Cica Cleanser 50ml",
+    "name": "Pure Fit Cica Cleanser 50ml",
     "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
@@ -2586,7 +2587,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renew-soonjung-ph-5-5-relief-toner-350ml-bloomingkoco-com",
-    "name": "*renew* SoonJung pH 5.5 Relief Toner 350ml",
+    "name": "SoonJung pH 5.5 Relief Toner 350ml",
     "brand": "ETUDE",
     "category": "toner",
     "ingredientIds": [
@@ -2619,7 +2620,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "innisfree-clearance-innisfree-green-tea-amino-cleansing-water-320ml-bloomingkoco-com",
-    "name": "*CLEARANCE*[Innisfree] Green Tea Amino Cleansing Water 320ml",
+    "name": "[Innisfree] Green Tea Amino Cleansing Water 320ml",
     "brand": "Innisfree",
     "category": "cleanser",
     "ingredientIds": [],
@@ -2650,7 +2651,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "elizavecca-clearance-elizavecca-milky-piggy-bb-cream-50ml-bloomingkoco-com",
-    "name": "*CLEARANCE*[Elizavecca] Milky Piggy BB Cream 50ml",
+    "name": "[Elizavecca] Milky Piggy BB Cream 50ml",
     "brand": "Elizavecca",
     "category": "sunscreen",
     "ingredientIds": [
@@ -2948,7 +2949,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "derma-b-derma-b-renewal-ceramd-repair-cream-430ml-bloomingkoco-com",
-    "name": "*renewal* CeraMD Repair Cream 430ml",
+    "name": "CeraMD Repair Cream 430ml",
     "brand": "Derma-B",
     "category": "lip-care",
     "ingredientIds": [
@@ -3046,7 +3047,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-fermentation-essence-100ml-bloomingkoco-com",
-    "name": "*renew* Fermentation Essence 100ml",
+    "name": "Fermentation Essence 100ml",
     "brand": "Benton",
     "category": "essence",
     "ingredientIds": [],
@@ -3073,7 +3074,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-blemish-patch-dream-daisy-bloomingkoco-com",
     "name": "Cinnamoroll Blemish Patch #Dream Daisy",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -3195,7 +3196,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-5ea-dr-althea-345-relief-cream-5ea-bundle-50ml-5-bloomingkoco-com",
-    "name": "*Special Price* 5EA [Dr.Althea] 345 Relief Cream 5EA Bundle (50ml*5)",
+    "name": "5EA [Dr.Althea] 345 Relief Cream 5EA Bundle (50ml*5)",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -3235,7 +3236,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "jumiso-special-price-2ea-jumiso-niacinamide-20-serum-40ml-2ea-bloomingkoco-com",
-    "name": "*Special Price* 2EA [Jumiso] Niacinamide 20 Serum 40ml (2ea)",
+    "name": "2EA [Jumiso] Niacinamide 20 Serum 40ml (2ea)",
     "brand": "Jumiso",
     "category": "cleanser",
     "ingredientIds": [
@@ -3271,7 +3272,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "biodance-special-price-2packs-biodance-bio-collagen-real-deep-mask-4ea-2-bloomingkoco-com",
-    "name": "*Special Price* 2PACKS [Biodance] Bio-Collagen Real Deep Mask (4ea*2)",
+    "name": "2PACKS [Biodance] Bio-Collagen Real Deep Mask (4ea*2)",
     "brand": "Biodance",
     "category": "mask",
     "ingredientIds": [
@@ -3308,7 +3309,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "biodance-special-price-2pack-biodance-rejuvenating-caviar-pdrn-real-deep-mask-4ea-2-bloomingkoco-com",
-    "name": "*Special Price* 2PACK [Biodance] Rejuvenating Caviar PDRN Real Deep Mask (4ea*2)",
+    "name": "2PACK [Biodance] Rejuvenating Caviar PDRN Real Deep Mask (4ea*2)",
     "brand": "Biodance",
     "category": "mask",
     "ingredientIds": [
@@ -3378,7 +3379,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-cica-calm-acne-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Cica Calm Acne Set",
+    "name": "MOIDA SET [MOIDA] Cica Calm Acne Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -3413,7 +3414,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-barrier-acne-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Barrier Acne Set",
+    "name": "MOIDA SET [MOIDA] Barrier Acne Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -3449,7 +3450,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-bha-clear-start-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] BHA Clear Start Set",
+    "name": "MOIDA SET [MOIDA] BHA Clear Start Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -3483,7 +3484,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-mens-age-defense-trio-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Mens Age Defense Trio",
+    "name": "MOIDA SET [MOIDA] Mens Age Defense Trio",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -3523,7 +3524,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-men-s-dry-relief-duo-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Dry Relief Duo",
+    "name": "MOIDA SET [MOIDA] Men's Dry Relief Duo",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -3556,7 +3557,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-men-s-daily-essential-trio-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Daily Essential Trio",
+    "name": "MOIDA SET [MOIDA] Men's Daily Essential Trio",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -3628,7 +3629,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "baren-baren-renewal-shea-butter-sleeping-heel-patch-10ea-bloomingkoco-com",
-    "name": "*renewal* Shea Butter Sleeping Heel Patch (10ea)",
+    "name": "Shea Butter Sleeping Heel Patch (10ea)",
     "brand": "baren",
     "category": "peeling",
     "ingredientIds": [],
@@ -3731,7 +3732,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-special-price-moida-set-numbuzin-no-9-nad-lifting-routine-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [Numbuzin] No.9 NAD Lifting Routine Set",
+    "name": "MOIDA SET [Numbuzin] No.9 NAD Lifting Routine Set",
     "brand": "Numbuzin",
     "category": "toner",
     "ingredientIds": [
@@ -3834,7 +3835,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-white-truffle-body-glow-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] White Truffle Body Glow Set",
+    "name": "MOIDA SET [MOIDA] White Truffle Body Glow Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -3865,7 +3866,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-floral-body-duo-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Floral Body Duo",
+    "name": "MOIDA SET [MOIDA] Floral Body Duo",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -3895,7 +3896,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-plump-smooth-duo-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Plump & Smooth Duo",
+    "name": "MOIDA SET [MOIDA] Plump & Smooth Duo",
     "brand": "MOIDA",
     "category": "peeling",
     "ingredientIds": [
@@ -3930,7 +3931,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-tocobo-renew-bio-watery-sun-cream-spf50-40ml-bloomingkoco-com",
-    "name": "FREE GIFT [TOCOBO] *renew* Bio Watery Sun Cream SPF50 40ml",
+    "name": "[TOCOBO] *renew* Bio Watery Sun Cream SPF50 40ml",
     "brand": "free",
     "category": "sunscreen",
     "ingredientIds": [
@@ -4143,7 +4144,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-1-deal-tocobo-bio-watery-sun-cream-spf50-40ml-first-purchase-only-bloomingkoco-com",
-    "name": "*$1 Deal* [TOCOBO] Bio Watery Sun Cream SPF50 40ml (First Purchase Only)",
+    "name": "[TOCOBO] Bio Watery Sun Cream SPF50 40ml (First Purchase Only)",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -4310,7 +4311,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-medicube-pdrn-pink-skincare-duo-set-pink-peptide-serum-pink-collagen-capsule-",
-    "name": "*Special Price* [Medicube] PDRN Pink Skincare Duo Set (Pink Peptide Serum + Pink Collagen Capsule Cream)",
+    "name": "[Medicube] PDRN Pink Skincare Duo Set (Pink Peptide Serum + Pink Collagen Capsule Cream)",
     "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
@@ -4417,7 +4418,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-moida-set-tocobo-travel-ready-calming-set-skincare-kit-sun-stick-lip-mask-bloom",
-    "name": "*Special Price* MOIDA SET [TOCOBO] Travel-Ready Calming Set (Skincare Kit + Sun Stick + Lip Mask)",
+    "name": "MOIDA SET [TOCOBO] Travel-Ready Calming Set (Skincare Kit + Sun Stick + Lip Mask)",
     "brand": "TOCOBO",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -4510,7 +4511,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renewal-noni-moisture-balancing-toner-150ml-bloomingkoco-com",
-    "name": "*renewal* Noni Moisture Balancing Toner 150ml",
+    "name": "Noni Moisture Balancing Toner 150ml",
     "brand": "celimax",
     "category": "toner",
     "ingredientIds": [],
@@ -4571,7 +4572,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-value-hair-revitalizing-routine-set-shampoo-treatment-oil-bloomi",
-    "name": "*Special Price* MOIDA SET [MOIDA] Value Hair Revitalizing Routine Set (Shampoo + Treatment + Oil)",
+    "name": "MOIDA SET [MOIDA] Value Hair Revitalizing Routine Set (Shampoo + Treatment + Oil)",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -4603,7 +4604,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-moida-set-purito-seoul-all-in-one-travel-set-skincare-kit-cleanser-sunscr",
-    "name": "*Special Price* MOIDA SET [Purito Seoul] All-in-One Travel Set (Skincare Kit + Cleanser + Sunscreen)",
+    "name": "MOIDA SET [Purito Seoul] All-in-One Travel Set (Skincare Kit + Cleanser + Sunscreen)",
     "brand": "Purito Seoul",
     "category": "cleanser",
     "ingredientIds": [
@@ -4641,7 +4642,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-noni-travel-essentials-set-kit-bubble-cleanser-sheet-mask-5e",
-    "name": "*Special Price* MOIDA SET [celimax] Noni Travel Essentials Set (Kit + Bubble Cleanser + Sheet Mask 5ea)",
+    "name": "MOIDA SET [celimax] Noni Travel Essentials Set (Kit + Bubble Cleanser + Sheet Mask 5ea)",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -4680,7 +4681,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-moida-set-skin1004-madagascar-centella-travel-essentials-set-skincare-kit-she",
-    "name": "*Special Price* MOIDA SET [SKIN1004] Madagascar Centella Travel Essentials Set (Skincare Kit + Sheet Mask 5ea)",
+    "name": "MOIDA SET [SKIN1004] Madagascar Centella Travel Essentials Set (Skincare Kit + Sheet Mask 5ea)",
     "brand": "SKIN1004",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -4713,7 +4714,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-3-texture-sun-care-set-sun-cream-sun-stick-sun-gel-bloomingkoco-",
-    "name": "*Special Price* MOIDA SET [MOIDA] 3-Texture Sun Care Set (Sun Cream + Sun Stick + Sun Gel)",
+    "name": "MOIDA SET [MOIDA] 3-Texture Sun Care Set (Sun Cream + Sun Stick + Sun Gel)",
     "brand": "MOIDA",
     "category": "sunscreen",
     "ingredientIds": [
@@ -4753,7 +4754,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-best-of-k-beauty-sunscreen-trio-medicube-numbuzin-tocobo-bloomin",
-    "name": "*Special Price* MOIDA SET [MOIDA] Best of K-Beauty Sunscreen Trio (Medicube + Numbuzin + TOCOBO)",
+    "name": "MOIDA SET [MOIDA] Best of K-Beauty Sunscreen Trio (Medicube + Numbuzin + TOCOBO)",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -4792,7 +4793,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-daily-hydrating-sunscreen-trio-skin1004-somebymi-melixir-bloomin",
-    "name": "*Special Price* MOIDA SET [MOIDA] Daily Hydrating Sunscreen Trio (Skin1004 + Somebymi + Melixir)",
+    "name": "MOIDA SET [MOIDA] Daily Hydrating Sunscreen Trio (Skin1004 + Somebymi + Melixir)",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -4830,7 +4831,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-aloe-bha-skin-toner-200ml-bloomingkoco-com",
-    "name": "*renew* Aloe Bha Skin Toner 200ml",
+    "name": "Aloe Bha Skin Toner 200ml",
     "brand": "Benton",
     "category": "toner",
     "ingredientIds": [
@@ -5845,7 +5846,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-acne-reset-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Acne Reset Set",
+    "name": "MOIDA SET [MOIDA] Acne Reset Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -5944,7 +5945,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "foodology-foodology-renewal-coleology-cut-pro-600mg-x-60tab-36g-bloomingkoco-com",
-    "name": "*renewal* Coleology Cut Pro 600mg x 60Tab (36g)",
+    "name": "Coleology Cut Pro 600mg x 60Tab (36g)",
     "brand": "Foodology",
     "category": "body",
     "ingredientIds": [
@@ -5974,7 +5975,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-body-dark-spot-repair-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Body Dark Spot Repair Set",
+    "name": "MOIDA SET [MOIDA] Body Dark Spot Repair Set",
     "brand": "MOIDA",
     "category": "toner-pad",
     "ingredientIds": [
@@ -6269,7 +6270,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-sun-care-anywhere-trio-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Sun Care Anywhere Trio Set",
+    "name": "MOIDA SET [MOIDA] Sun Care Anywhere Trio Set",
     "brand": "MOIDA",
     "category": "sunscreen",
     "ingredientIds": [
@@ -6302,7 +6303,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-viral-pore-minimizing-duo-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Viral Pore Minimizing Duo Set",
+    "name": "MOIDA SET [MOIDA] Viral Pore Minimizing Duo Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -6334,7 +6335,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-hyperpigmentation-fix-duo-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Hyperpigmentation Fix Duo Set",
+    "name": "MOIDA SET [MOIDA] Hyperpigmentation Fix Duo Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -6368,7 +6369,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-pdrn-skin-repair-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] PDRN Skin Repair Set",
+    "name": "MOIDA SET [MOIDA] PDRN Skin Repair Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -6405,7 +6406,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-anti-aging-routine-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Anti-Aging Routine Set",
+    "name": "MOIDA SET [MOIDA] Anti-Aging Routine Set",
     "brand": "MOIDA",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -6444,7 +6445,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-turmeric-dark-spot-eraser-trio-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Turmeric Dark Spot Eraser Trio Set",
+    "name": "MOIDA SET [MOIDA] Turmeric Dark Spot Eraser Trio Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -6477,7 +6478,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-korean-beauty-for-advanced-results-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Korean Beauty for Advanced Results Set",
+    "name": "MOIDA SET [MOIDA] Korean Beauty for Advanced Results Set",
     "brand": "MOIDA",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -6549,7 +6550,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-40-day-glass-skin-sheet-mask-ritual-medicube-sungboon-editor-seo",
-    "name": "*Special Price* MOIDA SET [MOIDA] 40-Day Glass Skin Sheet Mask Ritual (Medicube, Sungboon Editor, Seohaesol, Dr.Althea, ",
+    "name": "MOIDA SET [MOIDA] 40-Day Glass Skin Sheet Mask Ritual (Medicube, Sungboon Editor, Seohaesol, Dr.Althea",
     "brand": "MOIDA",
     "category": "mask",
     "ingredientIds": [
@@ -7010,7 +7011,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "vt-cosmetics-vt-cosmetics-renewal-red-booster-reedle-shot-300-bloomingkoco-com",
-    "name": "*renewal* Red Booster Reedle Shot 300",
+    "name": "Red Booster Reedle Shot 300",
     "brand": "VT Cosmetics",
     "category": "essence",
     "ingredientIds": [
@@ -7077,7 +7078,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "nineless-nineless-renewal-molecule-clear-salicylic-acid-serum-30ml-bloomingkoco-com",
-    "name": "*renewal* Molecule-Clear Salicylic Acid Serum 30ml",
+    "name": "Molecule-Clear Salicylic Acid Serum 30ml",
     "brand": "NINELESS",
     "category": "peeling",
     "ingredientIds": [
@@ -7295,7 +7296,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-anti-hair-loss-care-duo-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Anti-Hair Loss Care Duo Set",
+    "name": "MOIDA SET [MOIDA] Anti-Hair Loss Care Duo Set",
     "brand": "MOIDA",
     "category": "ampoule",
     "ingredientIds": [],
@@ -7773,7 +7774,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "ongredients-ongredients-renewal-skin-barrier-calming-lotion-ex-150ml-bloomingkoco-com",
-    "name": "*renewal* Skin Barrier Calming Lotion EX 150ml",
+    "name": "Skin Barrier Calming Lotion EX 150ml",
     "brand": "Ongredients",
     "category": "moisturizer",
     "ingredientIds": [
@@ -8316,7 +8317,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "frudia-frudia-renew-citrus-brightening-serum-50ml-bloomingkoco-com",
-    "name": "*renew* Citrus Brightening Serum 50ml",
+    "name": "Citrus Brightening Serum 50ml",
     "brand": "Frudia",
     "category": "peeling",
     "ingredientIds": [
@@ -8801,7 +8802,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-the-vita-a-retinal-booster-retinol-serum-set-bloomingkoco-co",
-    "name": "*Special Price* MOIDA SET [celimax] THE Vita-A Retinal Booster & Retinol Serum Set",
+    "name": "MOIDA SET [celimax] THE Vita-A Retinal Booster & Retinol Serum Set",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -8839,7 +8840,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "studio17-studio17-renew-pang-pang-triangle-puff-bloomingkoco-com",
-    "name": "*renew* Pang Pang Triangle Puff",
+    "name": "Pang Pang Triangle Puff",
     "brand": "Studio17",
     "category": "eye-cream",
     "ingredientIds": [],
@@ -11100,7 +11101,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "nesh-nesh-sachet-set-pomegranate-biome-shampoo-10ml-soy-biome-treatment-8ml-bloomingkoco-com",
-    "name": "*Sachet Set* Pomegranate Biome Shampoo 10ml + Soy Biome Treatment 8ml",
+    "name": "Pomegranate Biome Shampoo 10ml + Soy Biome Treatment 8ml",
     "brand": "nesh",
     "category": "hair",
     "ingredientIds": [],
@@ -11127,7 +11128,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-twinkle-hydrogel-under-eye-patches-bloomingkoco-com",
     "name": "Hello Kitty Twinkle Hydrogel Under Eye Patches",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "retinol",
@@ -11160,7 +11161,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-hydrogel-lip-patch-bloomingkoco-com",
     "name": "Hello Kitty Hydrogel Lip Patch",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c",
@@ -11193,7 +11194,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-hydrogel-under-eye-patches-apple-of-my-eye-bloomingkoco-co",
     "name": "Hello Kitty Hydrogel Under Eye & Patches #Apple of My Eye",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "essence",
     "ingredientIds": [
       "vitamin_c",
@@ -11228,7 +11229,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-pochacco-hydrogel-under-eye-patches-1ea-bloomingkoco-com",
     "name": "Pochacco Hydrogel Under Eye Patches (1ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "retinol",
@@ -11261,7 +11262,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-pompompurin-under-eye-patches-1ea-bloomingkoco-com",
     "name": "Pompompurin Under Eye Patches (1ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "vitamin_c",
@@ -11296,7 +11297,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-hydrogel-under-eye-patches-1ea-bloomingkoco-com",
     "name": "Cinnamoroll Hydrogel Under Eye Patches (1ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -11324,7 +11325,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-my-melody-kuromi-hydrocolloid-blemish-patches-cheers-to-clear-blooming",
     "name": "My Melody & Kuromi Hydrocolloid Blemish Patches #Cheers to Clear!",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -11352,7 +11353,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-my-melody-kuromi-brightening-hydrogel-under-eye-patches-bestie-bless-b",
     "name": "My Melody & Kuromi Brightening Hydrogel Under Eye Patches #Bestie Bless",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "niacinamide",
@@ -11385,7 +11386,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-miffy-hydrocolloid-patches-clear-as-day-bloomingkoco-com",
     "name": "Miffy Hydrocolloid Patches #Clear As Day!",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -11413,7 +11414,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-miffy-calming-cloud-hydrogel-under-eye-patches-bloomingkoco-com",
     "name": "Miffy Calming Cloud Hydrogel Under Eye Patches",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -11444,7 +11445,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-hydrogel-eye-patches-catch-some-zzz-s-3ea-bloomingkoco-com",
     "name": "Peanuts Hydrogel Eye Patches #Catch Some ZZZ's (3ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "vitamin_c",
@@ -11477,7 +11478,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-smoothing-foot-mask-set-fresh-new-5ea-bloomingkoco-com",
     "name": "Peanuts Smoothing Foot Mask Set #Fresh & New (5ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "ceramides"
@@ -11508,7 +11509,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-soothing-foot-mask-lavender-3ea-bloomingkoco-com",
     "name": "Soothing Foot Mask #Lavender (3ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c"
@@ -11538,7 +11539,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-moisture-foot-mask-almond-oil-3ea-bloomingkoco-com",
     "name": "Moisture Foot Mask #Almond Oil (3ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -11566,7 +11567,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-pre-cut-lash-clusters-glue-bloomingkoco-com",
     "name": "Hello Kitty Pre-cut Lash Clusters + Glue",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -11592,7 +11593,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-kuromi-blemish-patches-trendy-treats-1ea-bloomingkoco-com",
     "name": "Kuromi Blemish Patches #Trendy Treats (1ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -11620,7 +11621,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-my-melody-blemish-patches-sugar-sprinkles-1ea-bloomingkoco-com",
     "name": "My Melody Blemish Patches #Sugar Sprinkles (1ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -11648,7 +11649,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-over-makeup-hydrocolloid-blemish-patches-supercute-skin-bl",
     "name": "Hello Kitty Over Makeup Hydrocolloid Blemish Patches #Supercute Skin!",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [
       "bha"
@@ -11677,7 +11678,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-macaron-lip-balm-watermelon-bloomingkoco-com",
     "name": "Hello Kitty Macaron Lip Balm #Watermelon",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c"
@@ -11708,7 +11709,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-macaron-lip-balm-strawberry-rose-bloomingkoco-com",
     "name": "Hello Kitty Macaron Lip Balm #Strawberry Rose",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c"
@@ -11739,7 +11740,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-macaron-lip-balm-moisture-remedy-bloomingkoco-com",
     "name": "Cinnamoroll Macaron Lip Balm #Moisture Remedy",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c"
@@ -11943,7 +11944,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-clearance-tocobo-glass-tinted-lip-balm-013-tangerine-red-bloomingkoco-com",
-    "name": "*CLEARANCE*[TOCOBO] Glass Tinted Lip Balm #013 Tangerine Red",
+    "name": "[TOCOBO] Glass Tinted Lip Balm #013 Tangerine Red",
     "brand": "TOCOBO",
     "category": "cleansing-balm",
     "ingredientIds": [],
@@ -11972,7 +11973,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-moisturizing-hand-creme-3-types-bloomingkoco-com",
     "name": "Peanuts Moisturizing Hand Creme (3 types)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "body",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -12000,7 +12001,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-deep-hand-mask-strawberry-coconut-3ea-bloomingkoco-com",
     "name": "Hello Kitty Deep Hand Mask #Strawberry Coconut (3ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -12029,7 +12030,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-little-twin-stars-cloud-walk-foot-masks-3ea-bloomingkoco-com",
     "name": "Little Twin Stars Cloud Walk Foot Masks (3ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "peeling",
     "ingredientIds": [
       "aha"
@@ -12059,7 +12060,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-keroppi-hand-cream-green-tea-bloomingkoco-com",
     "name": "Keroppi Hand Cream #Green Tea",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "body",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -12087,7 +12088,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-hand-mask-sweet-tangerine-bloomingkoco-com",
     "name": "Hello Kitty Hand Mask #Sweet Tangerine",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c",
@@ -12118,7 +12119,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-macaron-lip-balm-mixed-berry-bloomingkoco-com",
     "name": "Hello Kitty Macaron Lip Balm #Mixed Berry",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c"
@@ -12149,7 +12150,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-gudetama-hand-cream-peach-bloomingkoco-com",
     "name": "Gudetama Hand Cream #Peach",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "body",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -12175,7 +12176,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "etude-clearance-etude-dear-darling-oil-tint-03-neon-pink-bloomingkoco-com",
-    "name": "*CLEARANCE*[ETUDE] Dear Darling Oil Tint #03 Neon Pink",
+    "name": "[ETUDE] Dear Darling Oil Tint #03 Neon Pink",
     "brand": "ETUDE",
     "category": "lip-care",
     "ingredientIds": [],
@@ -12203,7 +12204,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "etude-clearance-etude-fixing-tint-bar-2-colors-bloomingkoco-com",
-    "name": "*CLEARANCE*[Etude] Fixing Tint Bar (2 colors)",
+    "name": "[Etude] Fixing Tint Bar (2 colors)",
     "brand": "ETUDE",
     "category": "mask",
     "ingredientIds": [],
@@ -12231,7 +12232,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tfit-clearance-tfit-idol-cover-concealer-p01-petal-beige-bloomingkoco-com",
-    "name": "*CLEARANCE*[TFIT] Idol Cover Concealer #P01 Petal Beige",
+    "name": "[TFIT] Idol Cover Concealer #P01 Petal Beige",
     "brand": "TFIT",
     "category": "spot",
     "ingredientIds": [
@@ -12263,7 +12264,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "holika-holika-clearance-holika-holika-skin-rescuer-sheet-mask-2-types-bloomingkoco-com",
-    "name": "*CLEARANCE*[Holika Holika] Skin Rescuer Sheet Mask (2 types)",
+    "name": "[Holika Holika] Skin Rescuer Sheet Mask (2 types)",
     "brand": "Holika Holika",
     "category": "toner-pad",
     "ingredientIds": [
@@ -12295,7 +12296,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-silky-sleep-mask-chill-out-bloomingkoco-com",
     "name": "Peanuts Silky Sleep Mask #Chill Out",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -12321,7 +12322,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-sleek-razor-set-3ea-bloomingkoco-com",
     "name": "Hello Kitty Sleek Razor Set (3ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "peeling",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -12347,7 +12348,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-plush-spa-headband-with-bow-orange-bloomingkoco-com",
     "name": "Hello Kitty Plush Spa Headband with Bow #Orange",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -12373,7 +12374,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-xl-plush-headband-chill-out-bloomingkoco-com",
     "name": "Peanuts XL Plush Headband #Chill Out",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -12398,7 +12399,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-my-first-beauty-device-set-age-r-booster-pro-mini-plus-gel",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] My First Beauty Device Set (AGE-R Booster Pro Mini Plus + Gel Cream)",
+    "name": "MOIDA SET [MEDICUBE] My First Beauty Device Set (AGE-R Booster Pro Mini Plus + Gel Cream)",
     "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
@@ -12428,7 +12429,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-flash-deal-numbuzin-glow-core-starter-set-102-value-for-only-35-bloomingkoco-com",
-    "name": "*Flash Deal* [Numbuzin] Glow Core Starter Set ($102 Value for ONLY $35)",
+    "name": "[Numbuzin] Glow Core Starter Set ()",
     "brand": "Numbuzin",
     "category": "toner-pad",
     "ingredientIds": [
@@ -12465,7 +12466,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-flash-deal-numbuzin-x-skinfood-brightening-vitamin-set-72-value-for-only-25-bloomingkoco-co",
-    "name": "*Flash Deal* [Numbuzin]x[Skinfood] Brightening Vitamin Set ($72 Value for ONLY $25)",
+    "name": "[Numbuzin]x[Skinfood] Brightening Vitamin Set ()",
     "brand": "Numbuzin",
     "category": "toner",
     "ingredientIds": [
@@ -12502,7 +12503,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-glass-skin-care-set-pink-age-r-booster-pro-mini-plus-age-r",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Glass Skin Care Set #Pink (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + C",
+    "name": "MOIDA SET [MEDICUBE] Glass Skin Care Set #Pink (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + C",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -12541,7 +12542,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-lifting-set-beige-age-r-booster-pro-mini-plus-age-r-v-roll",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Lifting Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R V Roller + PDRN Booster Gel",
+    "name": "MOIDA SET [MEDICUBE] Lifting Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R V Roller + PDRN Booster Gel",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -12577,7 +12578,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-poreless-care-set-beige-age-r-booster-pro-mini-plus-age-r-",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Poreless Care Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + Ze",
+    "name": "MOIDA SET [MEDICUBE] Poreless Care Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + Ze",
     "brand": "MEDICUBE",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -12612,7 +12613,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-total-care-set-beige-age-r-booster-pro-mini-plus-age-r-boo",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Total Care Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + V Rol",
+    "name": "MOIDA SET [MEDICUBE] Total Care Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + V Rol",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [],
@@ -12705,7 +12706,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "elizavecca-elizavecca-renew-cer-100-collagen-coating-hair-a-muscle-tornado-shampoo-500ml-bloomingkoc",
-    "name": "*renew* CER-100 Collagen Coating Hair A+ Muscle Tornado Shampoo 500ml",
+    "name": "CER-100 Collagen Coating Hair A+ Muscle Tornado Shampoo 500ml",
     "brand": "Elizavecca",
     "category": "hair",
     "ingredientIds": [
@@ -12927,7 +12928,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skinfood-flash-deal-skinfood-pore-deep-clean-routine-set-62value-for-only-16-bloomingkoco-com",
-    "name": "*Flash Deal* [Skinfood] Pore Deep Clean Routine Set ($62Value for ONLY $16)",
+    "name": "[Skinfood] Pore Deep Clean Routine Set ()",
     "brand": "Skinfood",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -12962,7 +12963,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skinfood-flash-deal-skinfood-rice-brightening-3-step-glow-set-76-value-for-only-15-bloomingkoco-com",
-    "name": "*Flash Deal* [Skinfood] Rice Brightening 3-Step Glow Set ($76 Value for ONLY $15!)",
+    "name": "[Skinfood] Rice Brightening 3-Step Glow Set ()",
     "brand": "Skinfood",
     "category": "toner-pad",
     "ingredientIds": [
@@ -12997,7 +12998,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skinfood-flash-deal-skinfood-carrot-brightening-set-87-value-for-only-18-bloomingkoco-com",
-    "name": "*Flash Deal* [Skinfood] Carrot Brightening Set ($87 Value for ONLY $18!)",
+    "name": "[Skinfood] Carrot Brightening Set ()",
     "brand": "Skinfood",
     "category": "cleanser",
     "ingredientIds": [
@@ -13199,7 +13200,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "vt-cosmetics-vt-cosmetics-renewal-reedle-shot-synergy-sparkling-toner-pad-200ml-bloomingkoco-com",
-    "name": "*renewal* Reedle Shot Synergy Sparkling Toner Pad 200ml",
+    "name": "Reedle Shot Synergy Sparkling Toner Pad 200ml",
     "brand": "VT Cosmetics",
     "category": "toner-pad",
     "ingredientIds": [
@@ -14004,7 +14005,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-exclusive-set-skin1004-madagascar-centella-radiance-booster-trio-ampoule-mask",
-    "name": "*Special Price* Exclusive Set [SKIN1004] Madagascar Centella Radiance Booster Trio (Ampoule + Mask + Cream)",
+    "name": "Exclusive Set [SKIN1004] Madagascar Centella Radiance Booster Trio (Ampoule + Mask + Cream)",
     "brand": "SKIN1004",
     "category": "ampoule",
     "ingredientIds": [
@@ -14159,7 +14160,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-black-rice-toner-150ml-bloomingkoco-com",
-    "name": "*renewal* Black Rice Toner 150ml",
+    "name": "Black Rice Toner 150ml",
     "brand": "I'm From",
     "category": "toner",
     "ingredientIds": [
@@ -14899,7 +14900,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-special-price-moida-set-numbuzin-no-9-nad-daily-set-toner-essence-mask-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [Numbuzin] No.9 NAD Daily Set (Toner + Essence + Mask)",
+    "name": "MOIDA SET [Numbuzin] No.9 NAD Daily Set (Toner + Essence + Mask)",
     "brand": "Numbuzin",
     "category": "toner",
     "ingredientIds": [
@@ -14931,7 +14932,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "ksecret-special-price-moida-set-ksecret-seoul-1988-anti-aging-care-duo-eye-cream-serum-bloomingkoco-",
-    "name": "*Special Price* MOIDA SET [KSECRET] SEOUL 1988 Anti-Aging Care Duo (Eye Cream & Serum)",
+    "name": "MOIDA SET [KSECRET] SEOUL 1988 Anti-Aging Care Duo (Eye Cream & Serum)",
     "brand": "KSECRET",
     "category": "serum",
     "ingredientIds": [
@@ -15176,7 +15177,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-purito-seoul-mini-mighty-bamboo-cream-15ml-bloomingkoco-com",
-    "name": "*mini* Mighty Bamboo Cream 15ml",
+    "name": "Mighty Bamboo Cream 15ml",
     "brand": "Purito Seoul",
     "category": "moisturizer",
     "ingredientIds": [],
@@ -15203,7 +15204,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-red-acne-body-care-set-body-wash-peeling-shot-bloomingkoco",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Red Acne Body Care Set (Body Wash + Peeling Shot)",
+    "name": "MOIDA SET [MEDICUBE] Red Acne Body Care Set (Body Wash + Peeling Shot)",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -15477,7 +15478,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-moida-set-dr-althea-beginner-routine-for-dry-skin-147-cream-serum-cleansing-",
-    "name": "*Special Price* MOIDA SET [Dr. Althea] Beginner Routine for Dry Skin (147 Cream + Serum + Cleansing Balm)",
+    "name": "MOIDA SET [Dr. Althea] Beginner Routine for Dry Skin (147 Cream + Serum + Cleansing Balm)",
     "brand": "Dr.Althea",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -15552,7 +15553,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-moida-men-s-oil-control-duo-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Oil Control Duo",
+    "name": "MOIDA SET [MOIDA] Men's Oil Control Duo",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -15653,7 +15654,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-moida-box-dr-althea-beginner-routine-box-for-oily-skin-345-cream-serum-clean",
-    "name": "*Special Price* MOIDA BOX [Dr. Althea] Beginner Routine Box for Oily Skin (345 Cream + Serum + Cleansing Balm)",
+    "name": "MOIDA BOX [Dr. Althea] Beginner Routine Box for Oily Skin (345 Cream + Serum + Cleansing Balm)",
     "brand": "Dr.Althea",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -15727,7 +15728,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "mixsoon-special-price-moida-set-mixsoon-double-cleansing-duo-oil-foam-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [MIXSOON] Double Cleansing Duo (Oil & Foam)",
+    "name": "MOIDA SET [MIXSOON] Double Cleansing Duo (Oil & Foam)",
     "brand": "MIXSOON",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -15762,7 +15763,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "cosrx-cosrx-mini-low-ph-good-morning-gel-cleanser-50ml-bloomingkoco-com",
-    "name": "*mini* Low Ph Good Morning Gel Cleanser 50ml",
+    "name": "Low Ph Good Morning Gel Cleanser 50ml",
     "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
@@ -16138,7 +16139,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-moida-set-dr-althea-345-all-in-one-calming-care-set-345-cream-mist-mask-bloo",
-    "name": "*Special Price* MOIDA SET [Dr. Althea] 345 All- in-one Calming Care Set (345 Cream + Mist + Mask)",
+    "name": "MOIDA SET [Dr. Althea] 345 All- in-one Calming Care Set (345 Cream + Mist + Mask)",
     "brand": "Dr.Althea",
     "category": "mask",
     "ingredientIds": [
@@ -16172,7 +16173,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-2ea-skin1004-madagascar-centella-tone-brightening-capsule-ampoule-100ml-2ea-f",
-    "name": "*Special Price* 2EA [SKIN1004] Madagascar Centella Tone Brightening Capsule Ampoule 100ml (2ea) + Free Gift",
+    "name": "2EA [SKIN1004] Madagascar Centella Tone Brightening Capsule Ampoule 100ml (2ea) + Free Gift",
     "brand": "SKIN1004",
     "category": "essence",
     "ingredientIds": [
@@ -16208,7 +16209,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-moida-box-purito-seoul-day-night-cream-box-bamboo-cream-oat-in-cream-bloo",
-    "name": "*Special Price* MOIDA BOX [Purito Seoul] Day & Night Cream Box (Bamboo Cream + Oat-in Cream)",
+    "name": "MOIDA BOX [Purito Seoul] Day & Night Cream Box (Bamboo Cream + Oat-in Cream)",
     "brand": "Purito Seoul",
     "category": "moisturizer",
     "ingredientIds": [
@@ -16244,7 +16245,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-moida-box-purito-seoul-panthenol-centella-repair-box-cream-serum-cleansin",
-    "name": "*Special Price* MOIDA BOX [Purito Seoul] Panthenol & Centella Repair Box (Cream + Serum + Cleansing Foam)",
+    "name": "MOIDA BOX [Purito Seoul] Panthenol & Centella Repair Box (Cream + Serum + Cleansing Foam)",
     "brand": "Purito Seoul",
     "category": "cleanser",
     "ingredientIds": [
@@ -16282,7 +16283,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "jumiso-special-price-moida-set-jumiso-brightening-routine-set-niacinamide20-serum-toner-night-cream-",
-    "name": "*Special Price* MOIDA SET [Jumiso] Brightening Routine Set: Niacinamide20 Serum + Toner + Night Cream",
+    "name": "MOIDA SET [Jumiso] Brightening Routine Set: Niacinamide20 Serum + Toner + Night Cream",
     "brand": "Jumiso",
     "category": "toner",
     "ingredientIds": [
@@ -16315,7 +16316,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-red-acne-care-set-cleansing-foam-peeling-pad-cream-bloomin",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Red Acne Care Set (Cleansing Foam + Peeling Pad + Cream)",
+    "name": "MOIDA SET [MEDICUBE] Red Acne Care Set (Cleansing Foam + Peeling Pad + Cream)",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -16354,7 +16355,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-1025-dokdo-sleeping-pack-100ml-bloomingkoco-com",
-    "name": "*renewal* 1025 Dokdo Sleeping Pack 100ml",
+    "name": "1025 Dokdo Sleeping Pack 100ml",
     "brand": "ROUND LAB",
     "category": "peeling",
     "ingredientIds": [
@@ -16390,7 +16391,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "somebymi-special-price-moida-set-somebymi-aha-bha-pha-30-days-miracle-clean-body-set-cleansing-bar-b",
-    "name": "*Special Price* MOIDA SET [SOMEBYMI] AHA BHA PHA 30 Days Miracle Clean Body Set (Cleansing Bar + Body Wash)",
+    "name": "MOIDA SET [SOMEBYMI] AHA BHA PHA 30 Days Miracle Clean Body Set (Cleansing Bar + Body Wash)",
     "brand": "SOMEBYMI",
     "category": "cleanser",
     "ingredientIds": [
@@ -16429,7 +16430,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-skincare-for-men-with-dry-skin-cleanser-cream-bloomingkoco-c",
-    "name": "*Special Price* MOIDA SET [celimax] Skincare for men with dry skin (Cleanser + Cream)",
+    "name": "MOIDA SET [celimax] Skincare for men with dry skin (Cleanser + Cream)",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -16523,7 +16524,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-pdrn-pink-routine-set-cleansing-foam-serum-cream-bloomingk",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] PDRN Pink Routine Set (Cleansing Foam + Serum + Cream)",
+    "name": "MOIDA SET [MEDICUBE] PDRN Pink Routine Set (Cleansing Foam + Serum + Cream)",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -16651,7 +16652,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "sungboon-editor-sungboon-editor-renewal-silk-peptide-intensive-lifting-ampoule-40ml-bloomingkoco-com",
-    "name": "*renewal* Silk Peptide Intensive Lifting Ampoule 40ml",
+    "name": "Silk Peptide Intensive Lifting Ampoule 40ml",
     "brand": "SUNGBOON EDITOR",
     "category": "ampoule",
     "ingredientIds": [
@@ -16717,7 +16718,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-moida-set-arencia-retinal-vitamin-c-booster-shot-duo-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [Arencia] Retinal & Vitamin C Booster Shot Duo Set",
+    "name": "MOIDA SET [Arencia] Retinal & Vitamin C Booster Shot Duo Set",
     "brand": "ARENCIA",
     "category": "serum",
     "ingredientIds": [
@@ -17281,7 +17282,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-k-beauty-set-for-skincare-starters-cleansing-balm-foam-serum-cre",
-    "name": "*Special Price* MOIDA SET [MOIDA] K-Beauty Set for Skincare Starters (Cleansing Balm + Foam + Serum + Cream)",
+    "name": "MOIDA SET [MOIDA] K-Beauty Set for Skincare Starters (Cleansing Balm + Foam + Serum + Cream)",
     "brand": "MOIDA",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -17422,7 +17423,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-dr-althea-renewal-345-relief-cream-50ml-bloomingkoco-com",
-    "name": "*renewal* 345 Relief Cream 50ml",
+    "name": "345 Relief Cream 50ml",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -17622,7 +17623,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renew-maternity-care-relaxing-leg-cream-150ml-bloomingkoco-com",
-    "name": "*renew* Maternity Care Relaxing Leg Cream 150ml",
+    "name": "Maternity Care Relaxing Leg Cream 150ml",
     "brand": "ATOPALM",
     "category": "peeling",
     "ingredientIds": [
@@ -18095,7 +18096,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-1025-dokdo-ampoule-45ml-bloomingkoco-com",
-    "name": "*renewal* 1025 Dokdo Ampoule 45ml",
+    "name": "1025 Dokdo Ampoule 45ml",
     "brand": "ROUND LAB",
     "category": "ampoule",
     "ingredientIds": [],
@@ -18446,7 +18447,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renewal-dear-darling-water-gel-tint-4-colors-bloomingkoco-com",
-    "name": "*renewal* Dear Darling Water Gel Tint (4 colors)",
+    "name": "Dear Darling Water Gel Tint (4 colors)",
     "brand": "ETUDE",
     "category": "lip-care",
     "ingredientIds": [],
@@ -19053,7 +19054,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dinto-dinto-peter-wendy-lip-glace-2-colors-bloomingkoco-com",
-    "name": "*Peter&Wendy* Lip Glace (2 colors)",
+    "name": "Lip Glace (2 colors)",
     "brand": "Dinto",
     "category": "lip-care",
     "ingredientIds": [
@@ -19298,7 +19299,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "goodal-goodal-renewal-green-tangerine-vita-c-dark-spot-care-serum-sheet-mask-set-5-sheets-bloomingko",
-    "name": "*renewal* Green Tangerine Vita C Dark Spot Care Serum Sheet Mask Set (5 sheets)",
+    "name": "Green Tangerine Vita C Dark Spot Care Serum Sheet Mask Set (5 sheets)",
     "brand": "Goodal",
     "category": "serum",
     "ingredientIds": [
@@ -19808,7 +19809,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "rovectin-rovectin-renewal-calming-lotus-cream-60ml-bloomingkoco-com",
-    "name": "*renewal* Calming Lotus Cream 60ml",
+    "name": "Calming Lotus Cream 60ml",
     "brand": "Rovectin",
     "category": "moisturizer",
     "ingredientIds": [
@@ -19909,7 +19910,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skinfood-skinfood-renewal-carrot-carotene-moist-effector-52ml-bloomingkoco-com",
-    "name": "*renewal* Carrot Carotene Moist Effector 52ml",
+    "name": "Carrot Carotene Moist Effector 52ml",
     "brand": "Skinfood",
     "category": "ampoule",
     "ingredientIds": [],
@@ -20248,7 +20249,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "aplb-special-price-moida-set-aplb-glutathione-niacinamide-body-wash-lotion-set-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [APLB] Glutathione Niacinamide Body Wash & Lotion Set",
+    "name": "MOIDA SET [APLB] Glutathione Niacinamide Body Wash & Lotion Set",
     "brand": "APLB",
     "category": "cleanser",
     "ingredientIds": [
@@ -20284,7 +20285,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-moida-set-tocobo-cotton-airy-sunstick-duo-original-mini-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [TOCOBO] Cotton Airy Sunstick Duo (Original + mini)",
+    "name": "MOIDA SET [TOCOBO] Cotton Airy Sunstick Duo (Original + mini)",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -20320,7 +20321,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "jumiso-special-price-moida-set-jumiso-d-panthenol-barrier-soothing-set-serum-cream-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [Jumiso] D-Panthenol Barrier Soothing Set (Serum + Cream)",
+    "name": "MOIDA SET [Jumiso] D-Panthenol Barrier Soothing Set (Serum + Cream)",
     "brand": "Jumiso",
     "category": "peeling",
     "ingredientIds": [
@@ -20358,7 +20359,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-10ea-tocobo-bio-watery-sun-cream-spf50-40ml-10ea-free-gift-bloomingkoco-com",
-    "name": "*Special Price* 10EA [TOCOBO] Bio Watery Sun Cream SPF50 40ml (10ea) + FREE GIFT",
+    "name": "10EA [TOCOBO] Bio Watery Sun Cream SPF50 40ml (10ea) + FREE GIFT",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -20399,7 +20400,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-moida-set-skin1004-madagascar-tone-brightening-set-cleansing-foam-ampoule-cre",
-    "name": "*Special Price* MOIDA SET [SKIN1004] Madagascar Tone Brightening Set (Cleansing Foam + Ampoule + Cream)",
+    "name": "MOIDA SET [SKIN1004] Madagascar Tone Brightening Set (Cleansing Foam + Ampoule + Cream)",
     "brand": "SKIN1004",
     "category": "cleanser",
     "ingredientIds": [
@@ -20436,7 +20437,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-zero-pore-set-blackhead-mud-mask-zero-pore-pad-bloomingkoc",
-    "name": "*Special Price* MOIDA SET [Medicube] Zero Pore Set (Blackhead Mud Mask + Zero Pore Pad)",
+    "name": "MOIDA SET [Medicube] Zero Pore Set (Blackhead Mud Mask + Zero Pore Pad)",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -20470,7 +20471,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-special-price-moida-set-beauty-of-joseon-revitalizing-set-revive-eye-cream-glow-ser",
-    "name": "*Special Price* MOIDA SET [Beauty of Joseon] Revitalizing Set (Revive Eye Cream + Glow Serum)",
+    "name": "MOIDA SET [Beauty of Joseon] Revitalizing Set (Revive Eye Cream + Glow Serum)",
     "brand": "Beauty of Joseon",
     "category": "peeling",
     "ingredientIds": [
@@ -20509,7 +20510,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-10ea-tocobo-cotton-airy-sun-stick-spf50-19ml-10ea-free-gift-bloomingkoco-com",
-    "name": "*Special Price* 10EA [TOCOBO] Cotton Airy Sun Stick SPF50 19ml (10ea) + FREE GIFT",
+    "name": "10EA [TOCOBO] Cotton Airy Sun Stick SPF50 19ml (10ea) + FREE GIFT",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -21207,7 +21208,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-face-shop-the-face-shop-rice-water-bright-cleansing-wipes-50ea-bloomingkoco-com",
     "name": "Rice Water Bright Cleansing Wipes (50ea)",
-    "brand": "THE FACE SHOP",
+    "brand": "THE FACE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -21238,7 +21239,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "vt-cosmetics-clearance-vt-cosmetics-vt-cica-cream-50ml-bloomingkoco-com",
-    "name": "*CLEARANCE*[VT Cosmetics] VT Cica Cream 50ml",
+    "name": "[VT Cosmetics] VT Cica Cream 50ml",
     "brand": "VT Cosmetics",
     "category": "moisturizer",
     "ingredientIds": [
@@ -21464,7 +21465,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "cosrx-special-price-moida-set-cosrx-the-peptide-eye-care-set-eye-patch-eye-cream-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [COSRX] The Peptide Eye Care Set (Eye Patch + Eye Cream)",
+    "name": "MOIDA SET [COSRX] The Peptide Eye Care Set (Eye Patch + Eye Cream)",
     "brand": "COSRX",
     "category": "eye-cream",
     "ingredientIds": [
@@ -21497,7 +21498,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "heimish-special-price-moida-set-heimish-all-clean-cleansing-duo-set-balm-foam-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [Heimish] All Clean Cleansing Duo Set (Balm & Foam)",
+    "name": "MOIDA SET [Heimish] All Clean Cleansing Duo Set (Balm & Foam)",
     "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -21532,7 +21533,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "ksecret-special-price-exclusive-set-ksecret-retinal-black-ginseng-serum-double-set-free-gift-boostin",
-    "name": "*Special Price* Exclusive Set [KSECRET] Retinal Black Ginseng Serum Double Set (Free Gift : Boosting Ball)",
+    "name": "Exclusive Set [KSECRET] Retinal Black Ginseng Serum Double Set",
     "brand": "KSECRET",
     "category": "serum",
     "ingredientIds": [
@@ -21569,7 +21570,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-exclusive-set-anua-heartleaf-pore-cleansing-foam-double-set-free-gift-mini-cleans",
-    "name": "*Special Price* Exclusive Set [Anua] Heartleaf Pore Cleansing Foam Double Set (Free Gift : Mini Cleansing Foam)",
+    "name": "Exclusive Set [Anua] Heartleaf Pore Cleansing Foam Double Set",
     "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
@@ -22235,7 +22236,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-snail-bee-ultimate-eye-cream-30ml-bloomingkoco-com",
-    "name": "*renew* Snail Bee Ultimate Eye Cream 30ml",
+    "name": "Snail Bee Ultimate Eye Cream 30ml",
     "brand": "Benton",
     "category": "eye-cream",
     "ingredientIds": [
@@ -22498,7 +22499,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-box-medicube-beginner-routine-skincare-box-pad-serum-cream-bloomingkoco",
-    "name": "*Special Price* MOIDA BOX [MEDICUBE] Beginner Routine Skincare Box (Pad + Serum + Cream)",
+    "name": "MOIDA BOX [MEDICUBE] Beginner Routine Skincare Box (Pad + Serum + Cream)",
     "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
@@ -22639,7 +22640,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "cosrx-cosrx-renew-the-6-peptide-skin-booster-serum-150ml-bloomingkoco-com",
-    "name": "*renew* The 6 Peptide Skin Booster Serum 150ml",
+    "name": "The 6 Peptide Skin Booster Serum 150ml",
     "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
@@ -22880,7 +22881,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renew-low-ph-mild-body-wash-500ml-bloomingkoco-com",
-    "name": "*renew* Low pH Mild Body Wash 500ml",
+    "name": "Low pH Mild Body Wash 500ml",
     "brand": "Pyunkang Yul",
     "category": "cleanser",
     "ingredientIds": [
@@ -22945,7 +22946,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "ksecret-special-price-moida-set-ksecret-seoul-1988-niacinamide-yuja-set-serum-cream-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [KSECRET] SEOUL 1988 Niacinamide + Yuja Set (Serum + Cream)",
+    "name": "MOIDA SET [KSECRET] SEOUL 1988 Niacinamide + Yuja Set (Serum + Cream)",
     "brand": "KSECRET",
     "category": "serum",
     "ingredientIds": [
@@ -22984,7 +22985,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-tocobo-renew-bio-watery-sun-cream-spf50-40ml-bloomingkoco-com",
-    "name": "*renew* Bio Watery Sun Cream SPF50 40ml",
+    "name": "Bio Watery Sun Cream SPF50 40ml",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -23118,7 +23119,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-real-barrier-cicarelief-rx-fade-in-serum-50ml-bloomingkoco-com",
-    "name": "*renewal* Real Barrier Cicarelief RX Fade In Serum 50ml",
+    "name": "Real Barrier Cicarelief RX Fade In Serum 50ml",
     "brand": "Real Barrier",
     "category": "serum",
     "ingredientIds": [
@@ -23152,7 +23153,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-deep-nourishing-multi-balm-bloomingkoco-com",
-    "name": "*renewal* Deep Nourishing Multi Balm",
+    "name": "Deep Nourishing Multi Balm",
     "brand": "Pyunkang Yul",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -24129,7 +24130,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "heimish-heimish-renewal-all-clean-white-clay-foam-150g-bloomingkoco-com",
-    "name": "*renewal* All Clean White Clay Foam 150g",
+    "name": "All Clean White Clay Foam 150g",
     "brand": "heimish",
     "category": "cleanser",
     "ingredientIds": [
@@ -24413,7 +24414,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renew-one-step-mild-cleansing-pad-60ea-bloomingkoco-com",
-    "name": "*renew* One Step Mild Cleansing Pad (60ea)",
+    "name": "One Step Mild Cleansing Pad (60ea)",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -26107,7 +26108,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-nutrition-cream-100ml-bloomingkoco-com",
-    "name": "*renewal* Nutrition Cream 100ml",
+    "name": "Nutrition Cream 100ml",
     "brand": "Pyunkang Yul",
     "category": "moisturizer",
     "ingredientIds": [],
@@ -26135,7 +26136,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-moisture-cream-100ml-bloomingkoco-com",
-    "name": "*renewal* Moisture Cream 100ml",
+    "name": "Moisture Cream 100ml",
     "brand": "Pyunkang Yul",
     "category": "moisturizer",
     "ingredientIds": [
@@ -26170,7 +26171,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-moisture-serum-100ml-bloomingkoco-com",
-    "name": "*renewal* Moisture Serum 100ml",
+    "name": "Moisture Serum 100ml",
     "brand": "Pyunkang Yul",
     "category": "serum",
     "ingredientIds": [],
@@ -26332,7 +26333,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-extreme-essence-toner-200ml-bloomingkoco-com",
-    "name": "*renewal* Extreme Essence Toner 200ml",
+    "name": "Extreme Essence Toner 200ml",
     "brand": "Real Barrier",
     "category": "cleanser",
     "ingredientIds": [
@@ -26658,7 +26659,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "make-p-rem-make-p-rem-renewal-safe-me-relief-moisture-cleansing-foam-100ml-bloomingkoco-com",
-    "name": "*renewal* Safe Me Relief Moisture Cleansing Foam 100ml",
+    "name": "Safe Me Relief Moisture Cleansing Foam 100ml",
     "brand": "make p:rem",
     "category": "cleanser",
     "ingredientIds": [
@@ -26694,7 +26695,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "make-p-rem-make-p-rem-renewal-safe-me-relief-moisture-cleansing-milk-200ml-bloomingkoco-com",
-    "name": "*renewal* Safe Me Relief Moisture Cleansing Milk 200ml",
+    "name": "Safe Me Relief Moisture Cleansing Milk 200ml",
     "brand": "make p:rem",
     "category": "cleansing-oil",
     "ingredientIds": [],
@@ -26725,7 +26726,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "make-p-rem-make-p-rem-renewal-safe-me-relief-moisture-cleansing-oil-210ml-bloomingkoco-com",
-    "name": "*renewal* Safe Me Relief Moisture Cleansing Oil 210ml",
+    "name": "Safe Me Relief Moisture Cleansing Oil 210ml",
     "brand": "make p:rem",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -27086,7 +27087,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "jumiso-jumiso-renewal-all-day-vitamin-brightening-balancing-facial-serum-30ml-bloomingkoco-com",
-    "name": "*renewal* All Day Vitamin Brightening & Balancing Facial Serum 30ml",
+    "name": "All Day Vitamin Brightening & Balancing Facial Serum 30ml",
     "brand": "Jumiso",
     "category": "serum",
     "ingredientIds": [
@@ -27570,7 +27571,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "haruharu-wonder-haruharu-wonder-renewal-wonder-black-rice-hyaluronic-cream-50ml-unscented-bloomingko",
-    "name": "*renewal* Wonder Black Rice Hyaluronic Cream 50ml (Unscented)",
+    "name": "Wonder Black Rice Hyaluronic Cream 50ml (Unscented)",
     "brand": "haruharu wonder",
     "category": "moisturizer",
     "ingredientIds": [
@@ -28144,7 +28145,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "baren-baren-renewal-dual-effect-nail-and-cuticle-care-essence-oil-pen-2ml-bloomingkoco-com",
-    "name": "*renewal* Dual Effect Nail and Cuticle Care Essence Oil Pen 2ml",
+    "name": "Dual Effect Nail and Cuticle Care Essence Oil Pen 2ml",
     "brand": "baren",
     "category": "essence",
     "ingredientIds": [
@@ -28210,7 +28211,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-anua-renewal-heartleaf-succinic-moisture-cleansing-foam-150ml-bloomingkoco-com",
-    "name": "*renewal* Heartleaf Succinic Moisture Cleansing Foam 150ml",
+    "name": "Heartleaf Succinic Moisture Cleansing Foam 150ml",
     "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
@@ -28875,7 +28876,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-exclusive-set-purito-seoul-set-panthenol-bamboo-cream-releaf-serum-bloomi",
-    "name": "*Special Price* Exclusive Set [Purito Seoul] Set: Panthenol Bamboo Cream + Releaf Serum",
+    "name": "Exclusive Set [Purito Seoul] Set: Panthenol Bamboo Cream + Releaf Serum",
     "brand": "Purito Seoul",
     "category": "serum",
     "ingredientIds": [
@@ -29295,7 +29296,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tiam-tiam-renew-vita-b5-toner-180ml-bloomingkoco-com",
-    "name": "*renew* Vita B5 Toner 180ml",
+    "name": "Vita B5 Toner 180ml",
     "brand": "Tiam",
     "category": "cleanser",
     "ingredientIds": [
@@ -29549,7 +29550,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skinfood-skinfood-renew-rice-daily-brightening-scrub-foam-150ml-bloomingkoco-com",
-    "name": "*renew* Rice Daily Brightening Scrub Foam 150ml",
+    "name": "Rice Daily Brightening Scrub Foam 150ml",
     "brand": "Skinfood",
     "category": "cleanser",
     "ingredientIds": [
@@ -29886,7 +29887,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-5ea-tocobo-cotton-airy-sun-stick-spf50-19ml-5ea-bloomingkoco-com",
-    "name": "*Special Price* 5EA [TOCOBO] Cotton Airy Sun Stick SPF50 19ml (5ea)",
+    "name": "5EA [TOCOBO] Cotton Airy Sun Stick SPF50 19ml (5ea)",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -29922,7 +29923,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "cosrx-special-price-moida-set-cosrx-snail-96-mucin-power-set-essence-cream-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [COSRX] Snail 96 Mucin Power Set (Essence & Cream)",
+    "name": "MOIDA SET [COSRX] Snail 96 Mucin Power Set (Essence & Cream)",
     "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
@@ -30415,7 +30416,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-anua-renewal-heartleaf-70-intense-calming-cream-50ml-bloomingkoco-com",
-    "name": "*renewal* Heartleaf 70% Intense Calming Cream 50ml",
+    "name": "Heartleaf 70% Intense Calming Cream 50ml",
     "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
@@ -30535,7 +30536,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-vita-niacinamide-dark-spot-serum-mask-20ml-10ea-bloomingkoco-com",
-    "name": "*renewal* Vita Niacinamide Dark Spot Serum Mask 20ml (10ea)",
+    "name": "Vita Niacinamide Dark Spot Serum Mask 20ml (10ea)",
     "brand": "ROUND LAB",
     "category": "peeling",
     "ingredientIds": [
@@ -30602,7 +30603,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-pine-calming-cica-body-wash-400ml-bloomingkoco-com",
-    "name": "*renewal* Pine Calming Cica Body Wash 400ml",
+    "name": "Pine Calming Cica Body Wash 400ml",
     "brand": "ROUND LAB",
     "category": "cleanser",
     "ingredientIds": [
@@ -30767,7 +30768,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renewal-the-real-cica-calming-serum-mask-10ea-bloomingkoco-com",
-    "name": "*renewal* The Real Cica Calming Serum Mask (10ea)",
+    "name": "The Real Cica Calming Serum Mask (10ea)",
     "brand": "celimax",
     "category": "serum",
     "ingredientIds": [
@@ -31237,7 +31238,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "aromatica-aromatica-renewal-quinoa-protein-shampoo-400ml-bloomingkoco-com",
-    "name": "*renewal* Quinoa Protein Shampoo 400ml",
+    "name": "Quinoa Protein Shampoo 400ml",
     "brand": "AROMATICA",
     "category": "sunscreen",
     "ingredientIds": [
@@ -31385,7 +31386,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "aromatica-aromatica-renewal-tea-tree-purifying-tonic-100ml-bloomingkoco-com",
-    "name": "*renewal* Tea Tree Purifying Tonic 100ml",
+    "name": "Tea Tree Purifying Tonic 100ml",
     "brand": "AROMATICA",
     "category": "essence",
     "ingredientIds": [],
@@ -32242,7 +32243,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "parnell-parnell-renewal-cicamanu-92-serum-30ml-bloomingkoco-com",
-    "name": "*renewal* Cicamanu 92 Serum 30ml",
+    "name": "Cicamanu 92 Serum 30ml",
     "brand": "PARNELL",
     "category": "serum",
     "ingredientIds": [
@@ -32424,7 +32425,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-pore-bium-cleansing-foam-150ml-bloomingkoco-com",
-    "name": "*renewal* Pore Bium Cleansing Foam 150ml",
+    "name": "Pore Bium Cleansing Foam 150ml",
     "brand": "Real Barrier",
     "category": "cleanser",
     "ingredientIds": [
@@ -32458,7 +32459,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-control-t-cleansing-foam-200ml-bloomingkoco-com",
-    "name": "*renewal* Control-T Cleansing Foam 200ml",
+    "name": "Control-T Cleansing Foam 200ml",
     "brand": "Real Barrier",
     "category": "cleanser",
     "ingredientIds": [
@@ -32525,7 +32526,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-aqua-soothing-ampoule-30ml-bloomingkoco-com",
-    "name": "*renewal* Aqua Soothing Ampoule 30ml",
+    "name": "Aqua Soothing Ampoule 30ml",
     "brand": "Real Barrier",
     "category": "ampoule",
     "ingredientIds": [
@@ -32797,7 +32798,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-kids-baby-shampoo-590ml-bloomingkoco-com",
-    "name": "*renewal* Kids & Baby Shampoo 590ml",
+    "name": "Kids & Baby Shampoo 590ml",
     "brand": "Pyunkang Yul",
     "category": "cleanser",
     "ingredientIds": [
@@ -32915,7 +32916,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renewal-soothing-gel-lotion-120ml-bloomingkoco-com",
-    "name": "*renewal* Soothing Gel Lotion 120ml",
+    "name": "Soothing Gel Lotion 120ml",
     "brand": "ATOPALM",
     "category": "essence",
     "ingredientIds": [],
@@ -32944,7 +32945,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renewal-deep-green-tea-toner-150ml-bloomingkoco-com",
-    "name": "*renewal* Deep Green Tea Toner 150ML",
+    "name": "Deep Green Tea Toner 150ML",
     "brand": "Benton",
     "category": "toner",
     "ingredientIds": [],
@@ -33079,7 +33080,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "b-lab-b-lab-renewal-cica-barrier-gentle-morning-cleanser-120ml-bloomingkoco-com",
-    "name": "*renewal* CICA Barrier Gentle Morning Cleanser 120ml",
+    "name": "CICA Barrier Gentle Morning Cleanser 120ml",
     "brand": "B_LAB",
     "category": "cleanser",
     "ingredientIds": [
@@ -33152,7 +33153,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renewal-top-to-toe-wash-300ml-bloomingkoco-com",
-    "name": "*renewal* Top to Toe Wash 300ml",
+    "name": "Top to Toe Wash 300ml",
     "brand": "ATOPALM",
     "category": "cleanser",
     "ingredientIds": [
@@ -33184,7 +33185,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-anua-renewal-birch-moisture-boosting-cream-50ml-bloomingkoco-com",
-    "name": "*renewal* Birch Moisture Boosting Cream 50ml",
+    "name": "Birch Moisture Boosting Cream 50ml",
     "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
@@ -33217,7 +33218,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-anua-renewal-vitamin-c-blemish-serum-mask-1ea-bloomingkoco-com",
-    "name": "*renewal* Vitamin C Blemish Serum Mask (1ea)",
+    "name": "Vitamin C Blemish Serum Mask (1ea)",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -33583,7 +33584,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "biodance-biodance-renewal-hydro-ceramide-cleansing-powder-1g-30ea-bloomingkoco-com",
-    "name": "*renewal* Hydro Ceramide Cleansing Powder (1g*30ea)",
+    "name": "Hydro Ceramide Cleansing Powder (1g*30ea)",
     "brand": "Biodance",
     "category": "cleanser",
     "ingredientIds": [
@@ -33651,7 +33652,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-birch-juice-hand-cream-30ml-bloomingkoco-com",
-    "name": "*renewal* Birch Juice Hand Cream 30ml",
+    "name": "Birch Juice Hand Cream 30ml",
     "brand": "ROUND LAB",
     "category": "hair",
     "ingredientIds": [
@@ -33683,7 +33684,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "sungboon-editor-sungboon-editor-renewal-deep-collagen-retinol-power-boosting-capsule-cream-50ml-bloo",
-    "name": "*renewal* Deep Collagen Retinol Power Boosting Capsule Cream 50ml",
+    "name": "Deep Collagen Retinol Power Boosting Capsule Cream 50ml",
     "brand": "SUNGBOON EDITOR",
     "category": "sunscreen",
     "ingredientIds": [
@@ -34614,7 +34615,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "nineless-special-price-exclusive-set-nineless-azelaic-acid-serum-duo-set-free-gift-azelaic-acid-crea",
-    "name": "*Special Price* Exclusive Set [NINELESS] Azelaic Acid Serum Duo Set (Free Gift : Azelaic Acid Cream 15ml * 2ea)",
+    "name": "Exclusive Set [NINELESS] Azelaic Acid Serum Duo Set",
     "brand": "NINELESS",
     "category": "serum",
     "ingredientIds": [
@@ -34842,7 +34843,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "mixsoon-clearance-mixsoon-h-c-t-bubble-toner-150ml-bloomingkoco-com",
-    "name": "*CLEARANCE* [MIXSOON] H.C.T Bubble Toner 150ml",
+    "name": "[MIXSOON] H.C.T Bubble Toner 150ml",
     "brand": "MIXSOON",
     "category": "toner",
     "ingredientIds": [
@@ -36173,7 +36174,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-heimish-mini-all-clean-gentle-gel-cleanser-20ml-bloomingkoco-com",
-    "name": "*mini* All Clean Gentle Gel Cleanser 20ml",
+    "name": "All Clean Gentle Gel Cleanser 20ml",
     "brand": "free",
     "category": "cleanser",
     "ingredientIds": [],
@@ -36532,7 +36533,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "acwell-acwell-renewal-licorice-ph-balancing-advance-serum-30ml-bloomingkoco-com",
-    "name": "*renewal* Licorice pH Balancing Advance Serum 30ml",
+    "name": "Licorice pH Balancing Advance Serum 30ml",
     "brand": "ACWELL",
     "category": "serum",
     "ingredientIds": [
@@ -37368,7 +37369,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renew-noni-energy-ampoule-30ml-bloomingkoco-com",
-    "name": "*renew* Noni Energy Ampoule 30ml",
+    "name": "Noni Energy Ampoule 30ml",
     "brand": "celimax",
     "category": "ampoule",
     "ingredientIds": [
@@ -38267,7 +38268,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-moida-set-anua-heartleaf-pore-purifying-duo-oil-foam-bloomingkoco-com",
-    "name": "*Special Price* MOIDA SET [Anua] Heartleaf Pore Purifying Duo (Oil & Foam)",
+    "name": "MOIDA SET [Anua] Heartleaf Pore Purifying Duo (Oil & Foam)",
     "brand": "Anua",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -38856,7 +38857,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renew-mle-lotion-200ml-bloomingkoco-com",
-    "name": "*renew* MLE Lotion 200ml",
+    "name": "MLE Lotion 200ml",
     "brand": "ATOPALM",
     "category": "body",
     "ingredientIds": [
@@ -38887,7 +38888,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renew-facial-foam-wash-150ml-bloomingkoco-com",
-    "name": "*renew* Facial Foam Wash 150ml",
+    "name": "Facial Foam Wash 150ml",
     "brand": "ATOPALM",
     "category": "cleanser",
     "ingredientIds": [
@@ -101060,7 +101061,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "idebenone-blackberry-complex-intense-cream-freebie-listing-idebenone-blackberry-complex-intense-crea",
-    "name": "Idebenone Blackberry Complex Intense Cream (Freebie listing - Mary&May)",
+    "name": "Idebenone Blackberry Complex Intense Cream",
     "brand": "Idebenone Blackberry Complex Intense Cream (Freebie listing",
     "category": "moisturizer",
     "ingredientIds": [],
@@ -102101,7 +102102,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "korean-skincare-midnight-blue-clearing-water-cream-freebie-www-koreanskincare-nl",
-    "name": "Midnight Blue Clearing Water Cream (Freebie)",
+    "name": "Midnight Blue Clearing Water Cream",
     "brand": "Korean Skincare",
     "category": "moisturizer",
     "ingredientIds": [],
@@ -111824,7 +111825,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "korean-skincare-heartleaf-pore-control-cleansing-oil-mini-freebie-www-koreanskincare-nl",
-    "name": "Heartleaf Pore Control Cleansing Oil Mini (Freebie)",
+    "name": "Heartleaf Pore Control Cleansing Oil Mini",
     "brand": "Korean Skincare",
     "category": "cleansing-oil",
     "ingredientIds": [],
@@ -118519,7 +118520,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "korean-skincare-retinol-intense-advanced-triple-action-eye-cream-mini-freebie-www-koreanskincare-nl",
-    "name": "Retinol Intense Advanced Triple Action Eye Cream Mini (Freebie)",
+    "name": "Retinol Intense Advanced Triple Action Eye Cream Mini",
     "brand": "Korean Skincare",
     "category": "eye-cream",
     "ingredientIds": [
@@ -130804,7 +130805,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "korean-skincare-moist-ampoule-blusher-mini-freebie-www-koreanskincare-nl",
-    "name": "Moist Ampoule Blusher Mini (Freebie)",
+    "name": "Moist Ampoule Blusher Mini",
     "brand": "Korean Skincare",
     "category": "ampoule",
     "ingredientIds": [],

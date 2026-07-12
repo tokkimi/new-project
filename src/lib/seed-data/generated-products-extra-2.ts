@@ -1,5 +1,6 @@
 import type { SeedProduct } from "./products";
 
+// Promotional prefixes/suffixes (flash-deal tags, free-gift callouts, GWP placeholders) were stripped from names and brands on 2026-07-12.
 export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-low-ph-good-morning-gel-cleanser-haru-expanded-1",
@@ -12731,7 +12732,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-132-hair-home-care-kit-haru-expanded-433",
     "name": "Peptide-132 Hair Home Care Kit Refill Pack",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "scalp",
     "ingredientIds": [
       "peptides"
@@ -12760,7 +12761,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-132-hair-home-care-duo-haru-expanded-434",
     "name": "Peptide-132 Hair Home Care Duo Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "scalp",
     "ingredientIds": [
       "peptides"
@@ -12789,7 +12790,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-premium-routine-kit-haru-expanded-435",
     "name": "PDRN Premium Routine Kit Glow Edition",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -12823,7 +12824,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-full-routine-kit-haru-expanded-436",
     "name": "PDRN Full Routine Kit Barrier Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -12855,7 +12856,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-daily-routine-kit-haru-expanded-437",
     "name": "PDRN Daily Routine Kit Sensitive Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -12887,7 +12888,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-glass-skin-duo-haru-expanded-438",
     "name": "PDRN Glass Skin Duo Hydration Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -12916,7 +12917,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-blue-peptide-bakuchiol-plump-duo-haru-expanded-439",
     "name": "The Blue Peptide Bakuchiol Plump Duo Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -12948,7 +12949,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-skin-barrier-glow-routine-duo-haru-expanded-440",
     "name": "Skin Barrier & Glow Routine Duo Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
       "retinol",
@@ -12983,7 +12984,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-double-peptide-firming-duo-haru-expanded-441",
     "name": "Double Peptide Firming Duo Routine Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "retinol",
@@ -13013,7 +13014,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-azelaic-acid-20-b5-redness-soothing-cream-haru-expanded-442",
     "name": "COSRX Azelaic Acid 20 B5 Redness Soothing Cream Travel Size",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "AzelaicAcid 20% Size: 30mL / 1.01 fl. oz.",
@@ -13044,7 +13045,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-azelaic-acid-10-b5-redness-soothing-cream-haru-expanded-443",
     "name": "COSRX Azelaic Acid 10 B5 Redness Soothing Cream Refill Pack",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Azelaic Acid 10% Size: 30mL / 1.01 fl. oz. *Use \" soothing10 \" coupon code at the checkout!",
@@ -13076,7 +13077,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-moisture-up-pad-haru-expanded-444",
     "name": "One Step Moisture Up Pad Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "bha",
@@ -13108,7 +13109,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-the-blue-peptide-bakuchiol-plump-bounce-cream-haru-expanded-445",
     "name": "COSRX The Blue Peptide Bakuchiol Plump Bounce Cream Glow Edition",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "retinol",
@@ -13145,7 +13146,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-the-blue-peptide-bakuchiol-plump-glow-serum-haru-expanded-446",
     "name": "COSRX The Blue Peptide Bakuchiol Plump Glow Serum Barrier Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -13179,7 +13180,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-pdrn-eye-patch-duo-haru-expanded-447",
     "name": "Peptide & PDRN Eye Patch Duo Sensitive Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -13207,7 +13208,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-all-day-sun-protection-duo-haru-expanded-448",
     "name": "All-Day Sun Protection Duo Hydration Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "vitamin_c",
@@ -13239,7 +13240,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-red-rice-inositol-pore-clarifying-deep-cleanser-haru-expanded-449",
     "name": "COSRX RED RICE INOSITOL Pore Clarifying Deep Cleanser Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -13267,7 +13268,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-red-rice-inositol-exfoliating-care-pore-wash-off-peel-serum-haru-expanded-450",
     "name": "COSRX RED RICE INOSITOL Exfoliating Care Pore Wash-Off Peel Serum Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "bha",
@@ -13299,7 +13300,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-special-care-duo-haru-expanded-451",
     "name": "PDRN Special Care Duo Routine Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -13330,7 +13331,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-favorites-best-sellers-set-haru-expanded-452",
     "name": "COSRX Favorites Best sellers Set Travel Size",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-gel",
     "ingredientIds": [
       "aha",
@@ -13368,7 +13369,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-clear-skin-calming-pad-haru-expanded-453",
     "name": "One Step Original Clear Skin Calming Pad Refill Pack",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "centella",
@@ -13405,7 +13406,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-tone-clarifying-moisture-pad-haru-expanded-454",
     "name": "One Step Original Tone Clarifying Moisture Pad Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "niacinamide",
@@ -13437,7 +13438,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-peptide-collagen-lifting-glow-pad-haru-expanded-455",
     "name": "One Step Original Peptide Collagen Lifting Glow Pad Glow Edition",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "peptides"
@@ -13466,7 +13467,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-blemish-pore-clear-pad-haru-expanded-456",
     "name": "One Step Original Blemish Pore Clear Pad Barrier Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "aha",
@@ -13498,7 +13499,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-5-pdrn-collagen-vitalizing-hydrogel-eye-patch-haru-expanded-457",
     "name": "COSRX 5 PDRN Collagen Vitalizing Hydrogel Eye Patch Sensitive Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -13529,7 +13530,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-peptide-132-hair-bonding-mini-kit-haru-expanded-458",
     "name": "COSRX PEPTIDE-132 Hair Bonding Mini Kit Hydration Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -13557,7 +13558,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-96-mucin-power-essence-haru-expanded-459",
     "name": "Advanced Snail 96 Mucin Power Essence Daily Care",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
       "ceramides",
@@ -13593,7 +13594,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-plump-hydrate-kit-haru-expanded-460",
     "name": "Plump & Hydrate Kit Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "ceramides",
@@ -13628,7 +13629,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-deep-wrinkle-care-boost-haru-expanded-461",
     "name": "Deep Wrinkle Care Boost Routine Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -13656,7 +13657,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-brightening-boost-haru-expanded-462",
     "name": "Brightening Boost Travel Size",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -13687,7 +13688,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-tone-lift-glow-mask-duo-haru-expanded-463",
     "name": "Tone & Lift Glow Mask Duo Refill Pack",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -13718,7 +13719,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-plumping-eye-care-duo-haru-expanded-464",
     "name": "Peptide Plumping Eye Care Duo Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "eye-cream",
     "ingredientIds": [
       "ceramides",
@@ -13750,7 +13751,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-special-care-duo-haru-expanded-465",
     "name": "Peptide Special Care Duo Glow Edition",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -13779,7 +13780,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-92-all-in-one-cream-haru-expanded-466",
     "name": "Advanced Snail 92 All in One Cream Barrier Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "ceramides",
@@ -13815,7 +13816,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-ceramide-skin-barrier-moisturizer-haru-expanded-467",
     "name": "The Ceramide Skin Barrier Moisturizer Sensitive Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -13848,7 +13849,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-peptide-collagen-hydrogel-eye-patch-haru-expanded-468",
     "name": "The Peptide Collagen Hydrogel Eye Patch Hydration Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "eye-patch",
     "ingredientIds": [
       "niacinamide",
@@ -13880,7 +13881,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-6-peptide-skin-booster-serum-haru-expanded-469",
     "name": "The 6 Peptide Skin Booster Serum Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "peptides"
@@ -13912,7 +13913,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-the-vitamin-c-23-serum-haru-expanded-470",
     "name": "Advanced The Vitamin C 23 Serum Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -13944,7 +13945,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-vitamin-e-vitalizing-sunscreen-spf-50-haru-expanded-471",
     "name": "Vitamin E Vitalizing Sunscreen SPF 50+ Routine Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "vitamin_c",
@@ -13977,7 +13978,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-niacinamide-15-serum-haru-expanded-472",
     "name": "The Niacinamide 15 Serum Travel Size",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "niacinamide"
@@ -14007,7 +14008,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-ceramide-skin-barrier-moisturizing-mist-haru-expanded-473",
     "name": "The Ceramide Skin Barrier Moisturizing Mist Refill Pack",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -14041,7 +14042,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-retinol-0-5-oil-haru-expanded-474",
     "name": "The Retinol 0.5 Oil Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "oil",
     "ingredientIds": [
       "retinol",
@@ -14071,7 +14072,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-mucin-gel-cleanser-haru-expanded-475",
     "name": "Advanced Snail Mucin Gel Cleanser Glow Edition",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-gel",
     "ingredientIds": [
       "snail_mucin"
@@ -14101,7 +14102,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-acne-pimple-master-patch-original-fit-4set-96-patches-haru-expanded-476",
     "name": "Acne Pimple Master Patch Original Fit 4SET (96 Patches) Barrier Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -14128,7 +14129,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-skin-barrier-moisturizing-body-cream-haru-expanded-477",
     "name": "COSRX Skin Barrier Moisturizing Body Cream Sensitive Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "body",
     "ingredientIds": [
       "ceramides"
@@ -14160,7 +14161,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-5-pdrn-hyaluronic-acid-vital-hydrating-hydrogel-mask-haru-expanded-478",
     "name": "COSRX 5 PDRN Hyaluronic Acid Vital Hydrating Hydrogel Mask Hydration Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c",
@@ -14193,7 +14194,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-5-pdrn-collagen-intense-vitalizing-serum-haru-expanded-479",
     "name": "COSRX 5 PDRN Collagen Intense Vitalizing Serum Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -14224,7 +14225,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-5-pdrn-b5-vital-soothing-toner-haru-expanded-480",
     "name": "COSRX 5 PDRN B5 Vital Soothing Toner Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -14258,7 +14259,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-slow-aging-kit-haru-expanded-481",
     "name": "Slow-Aging Kit Routine Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "eye-cream",
     "ingredientIds": [
       "vitamin_c",
@@ -14290,7 +14291,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-pdrn-exosome-skinplaning-glaze-mask-haru-expanded-482",
     "name": "COSRX PDRN EXOSOME Skinplaning Glaze Mask Travel Size",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "peptides"
@@ -14321,7 +14322,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-snail-mucin-eye-care-duo-haru-expanded-483",
     "name": "Snail Mucin Eye Care Duo Refill Pack",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "eye-patch",
     "ingredientIds": [
       "snail_mucin"
@@ -14350,7 +14351,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-deep-wrinkle-care-trio-haru-expanded-484",
     "name": "Deep Wrinkle Care Trio Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -14380,7 +14381,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-radiant-glow-kit-haru-expanded-485",
     "name": "Radiant Glow Kit Glow Edition",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "vitamin_c",
@@ -14414,7 +14415,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-snail-mucin-trio-haru-expanded-486",
     "name": "Snail Mucin Trio Barrier Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "snail_mucin"
@@ -14442,7 +14443,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-airy-light-invisible-sun-stick-haru-expanded-487",
     "name": "Airy-Light Invisible Sun Stick Sensitive Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sun-stick",
     "ingredientIds": [
       "spf"
@@ -14471,7 +14472,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-airy-light-oil-control-clear-sunscreen-stick-spf-50-haru-expanded-488",
     "name": "COSRX AIRY-LIGHT OIL CONTROL CLEAR SUNSCREEN STICK SPF 50 Hydration Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -14500,7 +14501,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-peptide-132-ultra-perfect-hair-bonding-oil-serum-haru-expanded-489",
     "name": "COSRX PEPTIDE-132 Ultra Perfect Hair Bonding Oil Serum Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -14528,7 +14529,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-peptide-132-ultra-perfect-hair-bonding-treatment-haru-expanded-490",
     "name": "COSRX PEPTIDE-132 Ultra Perfect Hair Bonding Treatment Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "scalp",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -14560,7 +14561,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-peptide-132-ultra-perfect-hair-bonding-shampoo-haru-expanded-491",
     "name": "COSRX PEPTIDE-132 Ultra Perfect Hair Bonding Shampoo Routine Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "peptides"
@@ -14591,7 +14592,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-the-alpha-arbutin-discoloration-care-hydrogel-mask-haru-expanded-492",
     "name": "COSRX The Alpha-Arbutin Discoloration Care Hydrogel Mask Travel Size",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -14624,7 +14625,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-the-peptide-collagen-lifting-glow-hydrogel-mask-haru-expanded-493",
     "name": "COSRX The Peptide Collagen Lifting Glow Hydrogel Mask Refill Pack",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c",
@@ -14654,7 +14655,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-mucin-glass-glow-hydrogel-mask-3ea-haru-expanded-494",
     "name": "Advanced Snail Mucin Glass Glow Hydrogel Mask_3ea Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "mask",
     "ingredientIds": [
       "peptides",
@@ -14686,7 +14687,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-alpha-arbutin-2-discoloration-care-serum-haru-expanded-495",
     "name": "The Alpha-Arbutin 2 Discoloration Care Serum Glow Edition",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "pha"
@@ -14715,7 +14716,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ultra-light-invisible-sunscreen-spf50-pa-haru-expanded-496",
     "name": "Ultra-Light Invisible Sunscreen SPF50 PA++++ Barrier Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -14746,7 +14747,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-balancium-comfort-ceramide-soft-cream-sheet-mask-haru-expanded-497",
     "name": "Balancium Comfort Ceramide Soft Cream Sheet Mask Sensitive Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
       "ceramides"
@@ -14776,7 +14777,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-92-all-in-one-cream-cosrx-com-haru-expanded-498",
     "name": "Advanced Snail 92 All in one Cream Hydration Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "snail_mucin"
@@ -14807,7 +14808,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-retinol-0-3-cream-haru-expanded-499",
     "name": "The Retinol 0.3 Cream Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "retinol"
@@ -14839,7 +14840,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-aha-bha-pha-lha-35-peel-haru-expanded-500",
     "name": "The AHA BHA PHA LHA 35 Peel Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "aha",
@@ -14870,7 +14871,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-one-step-green-calming-pad-haru-expanded-501",
     "name": "COSRX One Step Green Calming Pad Routine Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -14905,7 +14906,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-aha-2-bha-2-blemish-treatment-serum-haru-expanded-502",
     "name": "The AHA 2 BHA 2 Blemish Treatment Serum Travel Size",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "aha",
@@ -14936,7 +14937,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-low-ph-niacinamide-micellar-cleansing-water-haru-expanded-503",
     "name": "Low pH Niacinamide Micellar Cleansing Water Refill Pack",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleansing-water",
     "ingredientIds": [
       "niacinamide"
@@ -14969,7 +14970,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-24-hr-synergy-duo-haru-expanded-504",
     "name": "24-HR Synergy Duo Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -15004,7 +15005,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-aloe-54-2-aqua-tone-up-sunscreen-spf-50-pa-haru-expanded-505",
     "name": "Aloe 54.2 Aqua Tone-up Sunscreen SPF 50+ PA++++ Glow Edition",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -15035,7 +15036,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-calming-liquid-intensive-haru-expanded-506",
     "name": "AC Collection Calming Liquid Intensive Barrier Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -15065,7 +15066,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-calming-liquid-mild-haru-expanded-507",
     "name": "AC Collection Calming Liquid Mild Sensitive Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "to quickly relieve mild acne for daily use.",
@@ -15095,7 +15096,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-vitamin-c-13-serum-haru-expanded-508",
     "name": "The Vitamin C 13 Serum Hydration Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -15128,7 +15129,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-lip-plump-refresh-aha-bha-vitamin-c-lip-plumper-haru-expanded-509",
     "name": "Lip Plump - Refresh AHA BHA Vitamin C Lip Plumper Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -15160,7 +15161,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-watery-toner-haru-expanded-510",
     "name": "Hydrium Watery Toner Night Care",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -15191,7 +15192,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-balancium-comfort-ceramide-cream-haru-expanded-511",
     "name": "Balancium Comfort Ceramide Cream Routine Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -15228,7 +15229,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-two-in-one-poreless-power-liquid-haru-expanded-512",
     "name": "Two in One Poreless Power Liquid Travel Size",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "aha",
@@ -15259,7 +15260,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-aha-7-whitehead-power-liquid-haru-expanded-513",
     "name": "AHA 7 Whitehead Power Liquid Refill Pack",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "aha",
@@ -15290,7 +15291,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-aha-bha-clarifying-treatment-toner-haru-expanded-514",
     "name": "AHA/BHA Clarifying Treatment Toner Duo Set",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -15323,7 +15324,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-centella-water-alcohol-free-toner-haru-expanded-515",
     "name": "Centella Water Alcohol-Free Toner Glow Edition",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -15356,7 +15357,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-bha-blackhead-power-liquid-haru-expanded-516",
     "name": "BHA Blackhead Power Liquid Barrier Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "niacinamide",
@@ -15388,7 +15389,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-refresh-abc-daily-toner-aha-bha-vitamin-c-haru-expanded-517",
     "name": "Refresh ABC Daily Toner (AHA BHA Vitamin C) Sensitive Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -15420,7 +15421,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-synergy-toner-haru-expanded-518",
     "name": "Full Fit Propolis Synergy Toner Hydration Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -15446,7 +15447,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-retinol-0-1-cream-haru-expanded-519",
     "name": "The Retinol 0.1 Cream Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "retinol"
@@ -15478,7 +15479,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-lip-sleep-balancium-ceramide-lip-butter-sleeping-mask-haru-expanded-520",
     "name": "Lip Sleep - Balancium Ceramide Lip Butter Sleeping Mask Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sleeping-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -15509,7 +15510,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-calming-foam-cleanser-haru-expanded-521",
     "name": "AC Collection Calming Foam Cleanser Routine Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -15542,7 +15543,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-oil-free-ultra-moisturizing-lotion-with-birch-sap-haru-expanded-522",
     "name": "Oil-Free Ultra-Moisturizing Lotion with Birch Sap Travel Size",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "lotion",
     "ingredientIds": [
       "vitamin_c",
@@ -15575,7 +15576,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-clear-pad-haru-expanded-523",
     "name": "One Step Original Clear Pad Refill Pack",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "aha",
@@ -15606,7 +15607,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-hyaluronic-acid-3-serum-haru-expanded-524",
     "name": "The Hyaluronic Acid 3 Serum Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -15634,7 +15635,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-aloe-soothing-sun-cream-spf50-pa-haru-expanded-525",
     "name": "Aloe Soothing Sun Cream SPF50+/ PA+++ Glow Edition",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -15666,7 +15667,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-triple-hyaluronic-moisturizing-cleanser-haru-expanded-526",
     "name": "Hydrium Triple Hyaluronic Moisturizing Cleanser Barrier Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -15696,7 +15697,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-intensive-90ea-haru-expanded-527",
     "name": "Master Patch Intensive [90ea] Sensitive Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -15724,7 +15725,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-basic-90ea-haru-expanded-528",
     "name": "Master Patch Basic [90ea] Hydration Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -15751,7 +15752,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-x-large-haru-expanded-529",
     "name": "Master Patch X-Large Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide"
@@ -15782,7 +15783,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-intensive-36ea-haru-expanded-530",
     "name": "Master Patch Intensive [36ea] Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -15810,7 +15811,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-basic-36ea-haru-expanded-531",
     "name": "Master Patch Basic [36ea] Routine Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Cellulose Gum, Hydrogenated Poly(C6-20 Olefin), Polyisobutene, Styrene/Isoprene Copolymer",
@@ -15838,7 +15839,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-blemish-spot-clearing-serum-haru-expanded-532",
     "name": "AC Collection Blemish Spot Clearing Serum Travel Size",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -15868,7 +15869,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-radiance-dual-essence-haru-expanded-533",
     "name": "Advanced Snail Radiance Dual Essence Refill Pack",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
       "niacinamide",
@@ -15898,7 +15899,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-refresh-aha-bha-vitamin-c-daily-cream-haru-expanded-534",
     "name": "Refresh AHA/BHA Vitamin C Daily Cream Duo Set",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -15935,7 +15936,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-refresh-aha-bha-vitamin-c-booster-serum-haru-expanded-535",
     "name": "Refresh AHA/BHA Vitamin C Booster Serum Glow Edition",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -15973,7 +15974,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-poreless-clarifying-charcoal-mask-pink-haru-expanded-536",
     "name": "Poreless Clarifying Charcoal Mask Pink Barrier Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "bha",
@@ -16009,7 +16010,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-lip-scrub-full-fit-honey-sugar-lip-scrub-haru-expanded-537",
     "name": "Lip Scrub - Full Fit Honey Sugar Lip Scrub Sensitive Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "lip-care",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16035,7 +16036,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-creamy-foam-cleanser-haru-expanded-538",
     "name": "Pure Fit Cica Creamy Foam Cleanser Hydration Edit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [
       "centella"
@@ -16066,7 +16067,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-clear-cleansing-oil-haru-expanded-539",
     "name": "Pure Fit Cica Clear Cleansing Oil Daily Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -16102,7 +16103,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-low-ph-goodnight-soft-peeling-gel-haru-expanded-540",
     "name": "Low pH Goodnight Soft Peeling Gel Night Care",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "ceramides"
@@ -16135,7 +16136,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-blemish-care-sheet-mask-haru-expanded-541",
     "name": "AC Collection Blemish Care Sheet Mask Routine Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [
       "green_tea"
@@ -16164,7 +16165,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-hydrogel-eye-patch-haru-expanded-542",
     "name": "Advanced Snail Hydrogel Eye Patch Travel Size",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "eye-patch",
     "ingredientIds": [
       "niacinamide",
@@ -16195,7 +16196,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-cream-intense-haru-expanded-543",
     "name": "Pure Fit Cica Cream Intense Refill Pack",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "oil",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16230,7 +16231,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ultimate-nourishing-rice-overnight-spa-mask-haru-expanded-544",
     "name": "Ultimate Nourishing Rice Overnight Spa Mask Duo Set",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "mask",
     "ingredientIds": [
       "niacinamide"
@@ -16260,7 +16261,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-triple-hyaluronic-water-wave-sheet-mask-haru-expanded-545",
     "name": "Hydrium Triple Hyaluronic Water Wave Sheet Mask Glow Edition",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -16289,7 +16290,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-nourishing-magnet-sheet-mask-haru-expanded-546",
     "name": "Full Fit Propolis Nourishing Magnet Sheet Mask Barrier Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16315,7 +16316,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-perfect-sebum-centella-powder-puff-opp-haru-expanded-547",
     "name": "Perfect Sebum Centella Powder Puff OPP Sensitive Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "centella"
@@ -16346,7 +16347,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-honey-overnight-mask-haru-expanded-548",
     "name": "Full Fit Propolis Honey Overnight Mask Hydration Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -16375,7 +16376,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-mucin-power-sheet-mask-10-sheets-haru-expanded-549",
     "name": "Advanced Snail Mucin Power Sheet Mask 10 Sheets Daily Care",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [
       "snail_mucin"
@@ -16403,7 +16404,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-calming-true-sheet-mask-haru-expanded-550",
     "name": "Pure Fit Cica Calming True Sheet Mask Night Care",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [
       "centella"
@@ -16432,7 +16433,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-all-about-snail-kit-4-step-haru-expanded-551",
     "name": "ALL ABOUT SNAIL KIT 4-step Routine Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-gel",
     "ingredientIds": [
       "peptides",
@@ -16466,7 +16467,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-lightweight-soothing-moisturizer-haru-expanded-552",
     "name": "AC Collection Lightweight Soothing Moisturizer Travel Size",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -16505,7 +16506,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-acne-patch-haru-expanded-553",
     "name": "AC Collection Acne Patch Refill Pack",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16533,7 +16534,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-ultimate-spot-cream-haru-expanded-554",
     "name": "AC Collection Ultimate Spot Cream Duo Set",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "vitamin_c",
@@ -16569,7 +16570,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-acne-pimple-master-patch-haru-expanded-555",
     "name": "Acne Pimple Master Patch Glow Edition",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16596,7 +16597,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-peptide-eye-cream-haru-expanded-556",
     "name": "Advanced Snail Peptide Eye Cream Barrier Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "eye-cream",
     "ingredientIds": [
       "niacinamide",
@@ -16630,7 +16631,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-clear-fit-master-patch-haru-expanded-557",
     "name": "Clear Fit Master Patch Sensitive Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "ceramides"
@@ -16661,7 +16662,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-light-ampoule-haru-expanded-558",
     "name": "Full fit Propolis Light Ampoule Hydration Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "ampoule",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16687,7 +16688,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-light-cream-haru-expanded-559",
     "name": "Full Fit Propolis Light Cream Daily Care",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16715,7 +16716,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-galactomyces-95-tone-balancing-essence-haru-expanded-560",
     "name": "Galactomyces 95 Tone Balancing Essence Night Care",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16742,7 +16743,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-hyaluronic-acid-hydra-power-essence-haru-expanded-561",
     "name": "Hyaluronic Acid Hydra Power Essence Routine Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "pha",
@@ -16774,7 +16775,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-hyaluronic-acid-intensive-cream-haru-expanded-562",
     "name": "Hyaluronic Acid Intensive Cream Travel Size",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "oil",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -16804,7 +16805,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-triple-hyaluronic-moisture-ampoule-haru-expanded-563",
     "name": "Hydrium Triple Hyaluronic Moisture Ampoule Refill Pack",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -16833,7 +16834,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-green-tea-aqua-soothing-gel-cream-haru-expanded-564",
     "name": "Hydrium Green Tea Aqua Soothing Gel Cream Duo Set",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "oil",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16866,7 +16867,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-centella-aqua-soothing-ampoule-haru-expanded-565",
     "name": "Hydrium Centella Aqua Soothing Ampoule Glow Edition",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16901,7 +16902,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-low-ph-good-morning-gel-cleanser-haru-expanded-566",
     "name": "Low pH Good Morning Gel Cleanser Barrier Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-gel",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16929,7 +16930,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-cream-haru-expanded-567",
     "name": "Pure Fit Cica Cream Sensitive Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "centella"
@@ -16960,7 +16961,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-serum-haru-expanded-568",
     "name": "Pure Fit Cica Serum Hydration Edit",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16994,7 +16995,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-moisture-power-enriched-cream-haru-expanded-569",
     "name": "Hydrium Moisture Power Enriched Cream Daily Care",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -17025,7 +17026,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "cosrx-official-centella-blemish-cream-haru-expanded-570",
     "name": "Centella Blemish Cream Night Care",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "centella"
@@ -18003,7 +18004,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-ground-rice-and-honey-glow-mask-100-off-haru-expanded-602",
-    "name": "🎁 Ground Rice and Honey Glow Mask (100% off) Travel Size",
+    "name": "Ground Rice and Honey Glow Mask (100% off) Travel Size",
     "brand": "Beauty of Joseon",
     "category": "mask",
     "ingredientIds": [],
@@ -18029,7 +18030,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-calming-serum-green-tea-panthenol-100-off-haru-expanded-603",
-    "name": "🎁 Calming Serum : Green tea + Panthenol (100% off) Refill Pack",
+    "name": "Calming Serum : Green tea + Panthenol (100% off) Refill Pack",
     "brand": "Beauty of Joseon",
     "category": "serum",
     "ingredientIds": [
@@ -18059,7 +18060,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-ground-rice-and-honey-glow-mask-100-off-www-beautyofjoseon-com-haru-expanded-604",
-    "name": "🎁 Ground Rice and Honey Glow Mask (100% off) Duo Set",
+    "name": "Ground Rice and Honey Glow Mask (100% off) Duo Set",
     "brand": "Beauty of Joseon",
     "category": "mask",
     "ingredientIds": [],
@@ -18085,7 +18086,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-glow-deep-serum-rice-alpha-arbutin-100-off-haru-expanded-605",
-    "name": "🎁 Glow Deep Serum : Rice + Alpha-Arbutin (100% off) Glow Edition",
+    "name": "Glow Deep Serum : Rice + Alpha-Arbutin (100% off) Glow Edition",
     "brand": "Beauty of Joseon",
     "category": "peeling",
     "ingredientIds": [
@@ -18969,7 +18970,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-uk-relief-sun-mini-10ml-free-gift-haru-expanded-634",
-    "name": "Relief Sun Mini 10ml (Free Gift) Duo Set",
+    "name": "Relief Sun Mini 10ml Duo Set",
     "brand": "Beauty of Joseon UK",
     "category": "sunscreen",
     "ingredientIds": [
@@ -19027,7 +19028,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-day-dew-sunscreen-10ml-free-gift-haru-expanded-636",
-    "name": "Day Dew Sunscreen 10ml (Free Gift) Barrier Edit",
+    "name": "Day Dew Sunscreen 10ml Barrier Edit",
     "brand": "Beauty of Joseon",
     "category": "sunscreen",
     "ingredientIds": [
@@ -19190,126 +19191,6 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
       "acne",
       "redness",
       "uv-protection"
-    ]
-  },
-  {
-    "slug": "free-gift-ghost-free-gift-revive-eye-serum-mini-haru-expanded-641",
-    "name": "(Free Gift) Revive Eye Serum Mini Routine Edit",
-    "brand": "Free Gift Ghost",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide",
-      "spf"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support, UV filter/SPF family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Keep your eyes looking youthful and refreshed, even while on the move, with Beauty of Joseon's Revive Eye Serum in a compact 10ml size. Specially formulated to target fine lines and signs of fatigue, this serum is your ideal travel partner, ensuring your eye area remains bright and rejuvenated. Its travel-size packaging makes it a hassle-free addition to your skincare routine, offering a quick and effective eye care solution wherever you are. This expanded catalog entry keeps the official product image/source attac",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/Revive-Eye-Serum-Mini-10ml_Beauty-of-Joseon_12882370-27948310757541.png?v=1762679566",
-    "officialUrl": "https://www.beautyofjoseon.com/products/free-gift-revive-eye-serum-mini",
-    "price": 3.75,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
-      "uv-protection"
-    ]
-  },
-  {
-    "slug": "free-gift-ghost-free-gift-light-on-serum-mini-haru-expanded-642",
-    "name": "(Free Gift) Light On Serum Mini Travel Size",
-    "brand": "Free Gift Ghost",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Maintain a radiant, hydrated complexion on all your journeys with the Light On Serum, now in a travel-ready 10ml format. This serum provides deep hydration and a brightening effect with its lightweight formula, designed for quick absorption and easy application. Perfect for keeping your skin refreshed and glowing, this travel-size serum ensures you can bring your skincare essentials along, no matter the destination. This expanded catalog entry keeps the official product image/source attached for routine matching an",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/Light-On-Serum-Mini-10ml_Beauty-of-Joseon_67784178-27948311543973.png?v=1762679566",
-    "officialUrl": "https://www.beautyofjoseon.com/products/free-gift-light-on-serum-mini",
-    "price": 3.75,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness"
-    ]
-  },
-  {
-    "slug": "free-gift-ghost-revive-eye-serum-mini-free-gift-haru-expanded-643",
-    "name": "Revive Eye Serum Mini (Free Gift) Refill Pack",
-    "brand": "Free Gift Ghost",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide",
-      "spf"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support, UV filter/SPF family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Keep your eyes looking youthful and refreshed, even while on the move, with Beauty of Joseon's Revive Eye Serum in a compact 10ml size. Specially formulated to target fine lines and signs of fatigue, this serum is your ideal travel partner, ensuring your eye area remains bright and rejuvenated. Its travel-size packaging makes it a hassle-free addition to your skincare routine, offering a quick and effective eye care solution wherever you are. This expanded catalog entry keeps the official product image/source attac",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/Revive-Eye-Serum-Mini-10ml_Beauty-of-Joseon_12882370-27948310757541.png?v=1762679566",
-    "officialUrl": "https://www.beautyofjoseon.com/products/revive-eye-serum-mini-free-gift",
-    "price": 3.75,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
-      "uv-protection"
-    ]
-  },
-  {
-    "slug": "free-gift-ghost-light-on-serum-mini-free-gift-haru-expanded-644",
-    "name": "Light On Serum Mini (Free Gift) Duo Set",
-    "brand": "Free Gift Ghost",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Maintain a radiant, hydrated complexion on all your journeys with the Light On Serum, now in a travel-ready 10ml format. This serum provides deep hydration and a brightening effect with its lightweight formula, designed for quick absorption and easy application. Perfect for keeping your skin refreshed and glowing, this travel-size serum ensures you can bring your skincare essentials along, no matter the destination. This expanded catalog entry keeps the official product image/source attached for routine matching an",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/Light-On-Serum-Mini-10ml_Beauty-of-Joseon_67784178-27948311543973.png?v=1762679566",
-    "officialUrl": "https://www.beautyofjoseon.com/products/light-on-serum-mini-free-gift",
-    "price": 3.75,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness"
     ]
   },
   {
@@ -27652,7 +27533,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-summer-glow-set-haru-expanded-885",
     "name": "PDRN Summer Glow Set Glow Edition",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -27685,7 +27566,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-sun-proof-your-summer-set-haru-expanded-886",
     "name": "Sun-Proof Your Summer Set Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -27717,7 +27598,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-recharge-your-summer-skin-set-haru-expanded-887",
     "name": "Recharge Your Summer Skin Set Sensitive Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "ceramides",
@@ -27846,7 +27727,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-rice-ceramide-7-hydrating-barrier-serum-haru-expanded-891",
     "name": "Rice Ceramide 7 Hydrating Barrier Serum Routine Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -27918,7 +27799,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-age-defying-routine-set-haru-expanded-893",
     "name": "Age-defying Routine Set Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -27948,7 +27829,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-glow-facial-serum-spray-mini-haru-expanded-894",
     "name": "PDRN Collagen Glow Facial Serum Spray Mini Duo Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -27980,7 +27861,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-daily-pdrn-essential-duo-haru-expanded-895",
     "name": "Daily PDRN Essential Duo Glow Edition",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "peptides"
@@ -28009,7 +27890,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-mineral-weightless-finish-sunscreen-haru-expanded-896",
     "name": "Mineral Weightless Finish Sunscreen Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -28037,7 +27918,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-invisible-matte-finish-sunscreen-haru-expanded-897",
     "name": "Invisible Matte Finish Sunscreen Sensitive Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -28066,7 +27947,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-invisible-glow-finish-sunstick-haru-expanded-898",
     "name": "Invisible Glow Finish Sunstick Hydration Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -28194,7 +28075,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-collagen-retinol-refining-gua-sha-cream-haru-expanded-902",
     "name": "Collagen Retinol Refining Gua Sha Cream Travel Size",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "neck",
     "ingredientIds": [
       "retinol",
@@ -28225,7 +28106,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-rumi-ultra-thin-spot-cover-patch-with-case-28ea-haru-expanded-903",
     "name": "Rumi Ultra-thin Spot Cover Patch with Case (28ea) Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -28370,7 +28251,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-glow-boost-full-routine-set-haru-expanded-908",
     "name": "PDRN Glow Boost Full Routine Set Hydration Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -28434,7 +28315,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-niacinamide-tranexamic-acid-brightening-booster-toner-haru-expanded-910",
     "name": "Niacinamide Tranexamic Acid Brightening Booster Toner Night Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "niacinamide"
@@ -28493,7 +28374,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-peach-77-niacin-conditioning-milk-haru-expanded-912",
     "name": "Peach 77 Niacin Conditioning Milk Travel Size",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "lotion",
     "ingredientIds": [
       "niacinamide"
@@ -28523,7 +28404,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-peach-77-niacin-essence-toner-haru-expanded-913",
     "name": "Peach 77 Niacin Essence Toner Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "niacinamide",
@@ -28554,7 +28435,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-azelaic-acid-cica-skin-soothing-moisturizer-haru-expanded-914",
     "name": "Azelaic Acid CICA Skin Soothing Moisturizer Duo Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "centella"
@@ -28586,7 +28467,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-golden-honmoon-barrier-collagen-mask-4ea-haru-expanded-915",
     "name": "Golden Honmoon Barrier Collagen Mask 4ea Glow Edition",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sheet-mask",
     "ingredientIds": [
       "ceramides",
@@ -28617,7 +28498,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-rumi-ultra-thin-spot-cover-patch-55ea-haru-expanded-916",
     "name": "Rumi Ultra-thin Spot Cover Patch (55ea) Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -28644,7 +28525,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-lip-serum-haru-expanded-917",
     "name": "PDRN Lip Serum Sensitive Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -28671,40 +28552,9 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
     ]
   },
   {
-    "slug": "gwp-100-free-pdrn-serum-minis-haru-expanded-918",
-    "name": "$100 Free PDRN Serum Minis Hydration Edit",
-    "brand": "GWP",
-    "category": "serum",
-    "ingredientIds": [
-      "hyaluronic_acid",
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: hyaluronic/hydration family, peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Infused with PDRN, Hyaluronic Acid, and Collagen , this skincare essential delivers deep hydration and helps your skin feel supple and smooth. The packaging, inspired by eye-drops, features individually sealed capsules for optimal hygiene and convenience— Perfect for on-the-go use. Suitable for all seasons and versatile in application, it leaves your skin refreshed with a healthy, radiant glow anytime, anywhere. This expanded catalog entry keeps the official product image/source attached for routine matching and pr",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0753/1429/9158/files/anua-us-ampoule-serum-pdrn-hyaluronic-acid-capsule-100-one-day-serum-1239658484.jpg?v=1779339612",
-    "officialUrl": "https://anua.us/products/110-free-pdrn-serum-minis",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness",
-      "anti-aging"
-    ]
-  },
-  {
     "slug": "anua-us-pdrn-hyaluronic-acid-moisturizing-cleansing-foam-haru-expanded-919",
     "name": "PDRN Hyaluronic Acid Moisturizing Cleansing Foam Daily Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -28738,7 +28588,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-4-step-glowy-skin-set-haru-expanded-920",
     "name": "PDRN 4-Step Glowy Skin Set Night Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -28771,7 +28621,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-100-hyaluronic-acid-booster-toner-haru-expanded-921",
     "name": "PDRN 100 Hyaluronic Acid Booster Toner Routine Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -28805,7 +28655,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-wrinkle-smoothing-set-haru-expanded-922",
     "name": "PDRN Collagen Wrinkle Smoothing Set Travel Size",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "neck",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -28836,7 +28686,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-bha-2-gentle-exfoliating-toner-haru-expanded-923",
     "name": "BHA 2% Gentle Exfoliating Toner Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "bha"
@@ -28926,7 +28776,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-melting-patch-for-neck-4ea-haru-expanded-926",
     "name": "PDRN Collagen Melting Patch For Neck 4ea Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -28956,7 +28806,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-melting-patch-for-glass-skin-4ea-haru-expanded-927",
     "name": "PDRN Collagen Melting Patch For Glass Skin 4ea Sensitive Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -28986,7 +28836,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-7-day-ultimate-glass-glow-set-haru-expanded-928",
     "name": "7 day Ultimate Glass Glow Set Hydration Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "bha"
@@ -29015,7 +28865,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-glow-facial-serum-spray-haru-expanded-929",
     "name": "PDRN Collagen Glow Facial Serum Spray Daily Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -29085,7 +28935,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-double-cleansing-duo-set-of-2-haru-expanded-931",
     "name": "Double Cleansing Duo Set of 2 Routine Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "green_tea"
@@ -29114,7 +28964,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-rice-70-glow-collagen-mask-haru-expanded-932",
     "name": "Rice 70 Glow Collagen Mask Travel Size",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sheet-mask",
     "ingredientIds": [
       "peptides"
@@ -29145,7 +28995,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-70-soothing-collagen-mask-haru-expanded-933",
     "name": "Heartleaf 70 Soothing Collagen Mask Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sheet-mask",
     "ingredientIds": [
       "peptides",
@@ -29177,7 +29027,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-peach-70-niacin-brightening-collagen-mask-haru-expanded-934",
     "name": "Peach 70 Niacin Brightening Collagen Mask Duo Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sheet-mask",
     "ingredientIds": [
       "niacinamide",
@@ -29208,7 +29058,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-5-step-korean-skincare-set-haru-expanded-935",
     "name": "5-step Korean Skincare Set Glow Edition",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "bha"
@@ -29236,7 +29086,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-youthful-glow-set-for-over-30-haru-expanded-936",
     "name": "Youthful Glow Set for over 30+ Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -29263,7 +29113,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-glass-skin-essential-set-haru-expanded-937",
     "name": "Glass Skin Essential Set Sensitive Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "bha"
@@ -29291,7 +29141,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-7-day-pore-refine-routine-set-haru-expanded-938",
     "name": "7-Day Pore-refine Routine Set Hydration Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "bha"
@@ -29320,7 +29170,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-7-day-breakout-care-routine-set-haru-expanded-939",
     "name": "7-Day Breakout Care Routine Set Daily Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -29349,7 +29199,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-redness-soothing-duo-haru-expanded-940",
     "name": "Redness Soothing Duo Night Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -29383,7 +29233,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-hyaluronic-acid-capsule-100-serum-mask-haru-expanded-941",
     "name": "PDRN Hyaluronic Acid Capsule 100 Serum Mask Routine Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -29450,7 +29300,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-hyaluronic-acid-capsule-100-one-day-serum-haru-expanded-943",
     "name": "PDRN Hyaluronic Acid Capsule 100 One Day Serum Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "vitamin_c",
@@ -29484,7 +29334,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-azelaic-3-cica-skin-clarifying-toner-haru-expanded-944",
     "name": "Azelaic 3 Cica Skin Clarifying Toner Duo Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "centella"
@@ -29517,7 +29367,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-7-day-dark-spot-routine-set-haru-expanded-945",
     "name": "7-Day Dark Spot Routine Set Glow Edition",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -29543,7 +29393,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-deep-hydrating-prep-boost-duo-haru-expanded-946",
     "name": "PDRN Deep Hydrating Prep & Boost Duo Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -29575,7 +29425,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-retinol-anti-aging-duo-haru-expanded-947",
     "name": "Retinol Anti-Aging Duo Sensitive Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "retinol"
@@ -29603,7 +29453,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-even-tone-pore-refining-duo-haru-expanded-948",
     "name": "Even tone & Pore Refining Duo Hydration Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -29631,7 +29481,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-peach-brightening-set-haru-expanded-949",
     "name": "Peach Brightening Set Daily Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "niacinamide"
@@ -29659,7 +29509,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-redness-soothing-prep-boost-duo-haru-expanded-950",
     "name": "Redness Soothing Prep & Boost Duo Night Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -29689,7 +29539,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-dark-spot-prep-boost-duo-haru-expanded-951",
     "name": "Dark Spot Prep & Boost Duo Routine Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "niacinamide"
@@ -29717,7 +29567,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-even-tone-barrier-set-haru-expanded-952",
     "name": "Even Tone & Barrier Set Travel Size",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "niacinamide",
@@ -29779,7 +29629,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-hyaluronic-acid-100-moisturizing-cream-haru-expanded-954",
     "name": "PDRN Hyaluronic Acid 100 Moisturizing Cream Duo Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -29845,7 +29695,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-8-hyaluronic-acid-catechin-calming-pad-haru-expanded-956",
     "name": "8 Hyaluronic Acid Catechin Calming Pad Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -29881,7 +29731,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-azelaic-10-hyaluron-redness-soothing-pad-haru-expanded-957",
     "name": "Azelaic 10 Hyaluron Redness Soothing Pad Sensitive Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -29917,7 +29767,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-niacinamide-5-txa-brightening-pad-haru-expanded-958",
     "name": "Niacinamide 5 TXA Brightening Pad Hydration Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "niacinamide"
@@ -29946,7 +29796,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-100-hyaluronic-acid-glow-pad-haru-expanded-959",
     "name": "PDRN 100 Hyaluronic Acid Glow Pad Daily Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -29982,7 +29832,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-zero-cast-moisturizing-finish-sunscreen-haru-expanded-960",
     "name": "Zero-cast Moisturizing Finish Sunscreen Night Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -30013,7 +29863,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-breakout-care-duo-haru-expanded-961",
     "name": "Breakout Care Duo Routine Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -30048,7 +29898,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-centella-red-spot-cream-haru-expanded-962",
     "name": "Heartleaf Centella Red Spot Cream Travel Size",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -30083,7 +29933,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-nano-retinol-0-3-niacin-renewing-serum-haru-expanded-963",
     "name": "Nano Retinol™ 0.3% + Niacin Renewing Serum Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "retinol",
@@ -30118,7 +29968,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-retinol-0-1-caffeine-revitalizing-eye-cream-haru-expanded-964",
     "name": "Retinol 0.1 Caffeine Revitalizing Eye Cream Duo Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "eye-cream",
     "ingredientIds": [
       "retinol",
@@ -30151,7 +30001,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-rice-70-intensive-moisturizing-milk-haru-expanded-965",
     "name": "Rice 70 Intensive Moisturizing Milk Glow Edition",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "lotion",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -30181,7 +30031,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-spotless-skin-duo-haru-expanded-966",
     "name": "Spotless Skin Duo Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -30209,7 +30059,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-3-ceramide-panthenol-moisture-barrier-cream-haru-expanded-967",
     "name": "3 Ceramide Panthenol Moisture Barrier Cream Sensitive Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -30242,7 +30092,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-triple-acid-spot-care-microdart-patch-haru-expanded-968",
     "name": "Triple Acid Spot Care Microdart Patch Hydration Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -30269,7 +30119,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-ultra-thin-spot-cover-patch-haru-expanded-969",
     "name": "Ultra-Thin Spot Cover Patch Daily Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "peeling",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -30328,7 +30178,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-hyaluronic-acid-capsule-100-serum-haru-expanded-971",
     "name": "PDRN Hyaluronic Acid Capsule 100 Serum Routine Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "vitamin_c",
@@ -30362,7 +30212,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-double-cleansing-duo-set-haru-expanded-972",
     "name": "Double Cleansing Duo Set Travel Size",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "bha",
@@ -30393,7 +30243,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-azelaic-acid-10-hyaluron-redness-soothing-serum-haru-expanded-973",
     "name": "Azelaic Acid 10 Hyaluron Redness Soothing Serum Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -30427,7 +30277,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-peach-77-niacin-enriched-cream-haru-expanded-974",
     "name": "Peach 77 Niacin Enriched Cream Duo Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "niacinamide",
@@ -30489,7 +30339,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-70-daily-lotion-haru-expanded-976",
     "name": "Heartleaf 70 Daily Lotion Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "lotion",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -30585,7 +30435,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-pore-cleansing-oil-mild-haru-expanded-979",
     "name": "Heartleaf Pore Cleansing Oil Mild Daily Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -30618,7 +30468,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-rice-enzyme-brightening-cleansing-powder-haru-expanded-980",
     "name": "Rice Enzyme Brightening Cleansing Powder Night Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -30650,7 +30500,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-8-hyaluronic-acid-moisturizing-gentle-gel-cleanser-haru-expanded-981",
     "name": "8 Hyaluronic Acid Moisturizing Gentle Gel Cleanser Routine Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-gel",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -30681,7 +30531,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-low-ph-deep-cleansing-water-haru-expanded-982",
     "name": "Heartleaf Low pH Deep Cleansing Water Travel Size",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-water",
     "ingredientIds": [
       "green_tea"
@@ -30711,7 +30561,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-rice-70-glow-milky-toner-haru-expanded-983",
     "name": "Rice 70 Glow Milky Toner Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -30738,7 +30588,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-8-hyaluronic-acid-hydrating-gentle-foaming-cleanser-haru-expanded-984",
     "name": "8 Hyaluronic Acid Hydrating Gentle Foaming Cleanser Duo Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -30769,7 +30619,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-niacinamide-10-txa-4-serum-for-brightening-and-dark-spots-haru-expanded-985",
     "name": "Niacinamide 10 TXA 4 Serum for Brightening and Dark Spots Glow Edition",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "niacinamide",
@@ -30802,7 +30652,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-lha-moisture-peeling-gel-haru-expanded-986",
     "name": "Heartleaf LHA Moisture Peeling Gel Barrier Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-gel",
     "ingredientIds": [
       "bha",
@@ -30837,7 +30687,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-quercetinol-pore-deep-cleansing-foam-haru-expanded-987",
     "name": "Heartleaf Quercetinol Pore Deep Cleansing Foam Sensitive Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha",
@@ -30869,7 +30719,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-pore-control-cleansing-oil-haru-expanded-988",
     "name": "Heartleaf Pore Control Cleansing Oil Hydration Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -30901,7 +30751,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-peach-70-niacinamide-serum-haru-expanded-989",
     "name": "Peach 70% Niacinamide Serum Daily Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "niacinamide"
@@ -30930,7 +30780,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-70-intense-calming-cream-haru-expanded-990",
     "name": "Heartleaf 70% Intense Calming Cream Night Care",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -30964,7 +30814,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-77-clear-pad-haru-expanded-991",
     "name": "Heartleaf 77 Clear Pad Routine Edit",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "bha",
@@ -30997,7 +30847,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-80-moisture-soothing-ampoule-haru-expanded-992",
     "name": "Heartleaf 80% Moisture Soothing Ampoule Travel Size",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -31029,7 +30879,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-77-soothing-toner-haru-expanded-993",
     "name": "Heartleaf 77 Soothing Toner Refill Pack",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "green_tea"
@@ -31060,7 +30910,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-egf-nad-firming-serum-haru-expanded-994",
     "name": "EGF NAD+ Firming Serum Duo Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -31093,7 +30943,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-caffeine-collagen-eye-patch-haru-expanded-995",
     "name": "PDRN Caffeine Collagen Eye Patch Glow Edition",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "essence",
     "ingredientIds": [
       "retinol",
@@ -31127,7 +30977,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-peptide-ampoule-mask-haru-expanded-996",
     "name": "PDRN Pink Peptide Ampoule Mask Barrier Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -31160,7 +31010,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-zero-pore-peeling-pads-8ea-haru-expanded-997",
     "name": "Zero Pore Peeling Pads (8ea) Sensitive Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "aha"
@@ -31193,7 +31043,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-3h-overnight-drying-lotion-haru-expanded-998",
     "name": "3H Overnight Drying Lotion Hydration Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "lotion",
     "ingredientIds": [
       "centella",
@@ -31228,7 +31078,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-booster-gel-haru-expanded-999",
     "name": "PDRN Booster Gel Daily Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -31266,7 +31116,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-ultra-light-pdrn-pink-peptide-serum-haru-expanded-1000",
     "name": "Ultra Light PDRN Pink Peptide Serum Night Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -31305,7 +31155,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-3h-daily-relief-cream-haru-expanded-1001",
     "name": "3H Daily Relief Cream Routine Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -31341,8 +31191,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-one-day-exosome-shot-pore-serum-2000-5ml-100-off-haru-expanded-1002",
-    "name": "🎁 [GIFT] One Day Exosome Shot Pore Serum 2000 5ml (100% off) Travel Size",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] One Day Exosome Shot Pore Serum 2000 5ml (100% off) Travel Size",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -31368,8 +31218,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-pdrn-pink-hyaluronic-moisturizing-cream-10ml-100-off-haru-expanded-1003",
-    "name": "🎁 [GIFT] PDRN Pink Hyaluronic Moisturizing Cream 10ml (100% off) Refill Pack",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] PDRN Pink Hyaluronic Moisturizing Cream 10ml (100% off) Refill Pack",
+    "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -31399,7 +31249,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-collagen-exosome-shot-100-off-haru-expanded-1004",
-    "name": "🎁 PDRN Pink Collagen Exosome Shot (100% off) Duo Set",
+    "name": "PDRN Pink Collagen Exosome Shot (100% off) Duo Set",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -31427,8 +31277,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-exosome-cica-calming-pad-2ea-100-off-haru-expanded-1005",
-    "name": "🎁 [GIFT] Exosome Cica Calming Pad 2EA (100% off) Glow Edition",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Exosome Cica Calming Pad 2EA (100% off) Glow Edition",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "centella"
@@ -31456,8 +31306,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-triple-collagen-cream-5ml-100-off-haru-expanded-1006",
-    "name": "🎁 [GIFT] Triple Collagen Cream 5ml (100% off) Barrier Edit",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Triple Collagen Cream 5ml (100% off) Barrier Edit",
+    "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
       "peptides"
@@ -31486,7 +31336,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-collagen-niacinamide-jelly-cream-mini-100-off-haru-expanded-1007",
-    "name": "🎁 [GIFT] Collagen Niacinamide Jelly Cream Mini (100% off) Sensitive Edit",
+    "name": "[GIFT] Collagen Niacinamide Jelly Cream Mini (100% off) Sensitive Edit",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -31518,8 +31368,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-pdrn-pink-cica-soothing-toner-50ml-100-off-haru-expanded-1008",
-    "name": "🎁 [GIFT] PDRN Pink Cica Soothing Toner 50ml (100% off) Hydration Edit",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] PDRN Pink Cica Soothing Toner 50ml (100% off) Hydration Edit",
+    "brand": "MEDICUBE",
     "category": "toner",
     "ingredientIds": [
       "centella",
@@ -31550,8 +31400,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-zero-pore-one-day-serum-10ml-100-off-haru-expanded-1009",
-    "name": "🎁 [GIFT] Zero Pore One Day Serum 10ml (100% off) Daily Care",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Zero Pore One Day Serum 10ml (100% off) Daily Care",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -31578,7 +31428,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-triple-collagen-cream-5ml-haru-expanded-1010",
     "name": "Triple Collagen Cream 5ml Night Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
       "peptides"
@@ -31608,7 +31458,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-exosome-cica-calming-pad-2ea-haru-expanded-1011",
     "name": "Exosome Cica Calming Pad 2EA Routine Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "centella"
@@ -31637,7 +31487,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-cica-soothing-toner-50ml-haru-expanded-1012",
     "name": "PDRN Pink Cica Soothing Toner 50ml Travel Size",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner",
     "ingredientIds": [
       "centella",
@@ -31669,7 +31519,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-zero-pore-one-day-serum-10ml-haru-expanded-1013",
     "name": "Zero Pore One Day Serum 10ml Refill Pack",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -31696,7 +31546,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-one-day-exosome-shot-pore-serum-2000-5ml-haru-expanded-1014",
     "name": "One Day Exosome Shot Pore Serum 2000 5ml Duo Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -31723,7 +31573,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-hyaluronic-moisturizing-cream-10ml-haru-expanded-1015",
     "name": "PDRN Pink Hyaluronic Moisturizing Cream 10ml Glow Edition",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -31753,8 +31603,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-pdrn-pink-niacinamide-whip-cleanser-15g-100-off-haru-expanded-1016",
-    "name": "🎁 [GIFT] PDRN Pink Niacinamide Whip Cleanser 15g (100% off) Barrier Edit",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] PDRN Pink Niacinamide Whip Cleanser 15g (100% off) Barrier Edit",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -31784,7 +31634,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-niacinamide-whip-cleanser-15g-haru-expanded-1017",
     "name": "PDRN Pink Niacinamide Whip Cleanser 15g Sensitive Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -31814,7 +31664,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-azelaic-acid-exosome-shot-haru-expanded-1018",
     "name": "Azelaic Acid Exosome Shot Hydration Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -31849,7 +31699,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-azelaic-acid-niacinamide-clarifying-toner-haru-expanded-1019",
     "name": "Azelaic Acid Niacinamide Clarifying Toner Daily Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -31886,7 +31736,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-tension-up-mask-haru-expanded-1020",
     "name": "PDRN Pink Tension Up Mask Night Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "essence",
     "ingredientIds": [
       "niacinamide",
@@ -31919,7 +31769,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-hypochlorous-acid-peel-mask-haru-expanded-1021",
     "name": "Hypochlorous Acid Peel Mask Routine Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "peeling",
     "ingredientIds": [
       "bha",
@@ -31953,7 +31803,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-azelaic-acid-capsule-foam-cleanser-haru-expanded-1022",
     "name": "Azelaic Acid Capsule Foam Cleanser Travel Size",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -31992,7 +31842,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-glutathione-capsule-foam-cleanser-haru-expanded-1023",
     "name": "PDRN Pink Glutathione Capsule Foam Cleanser Refill Pack",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -32029,7 +31879,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-turmeric-vita-capsule-foam-cleanser-haru-expanded-1024",
     "name": "Kojic Acid Turmeric Vita Capsule Foam Cleanser Duo Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -32059,7 +31909,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-mini-booster-pro-plus-haru-expanded-1025",
     "name": "Mini Booster Pro Plus Glow Edition",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-oil",
     "ingredientIds": [
       "retinol",
@@ -32095,7 +31945,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-super-cica-exfoliating-cleansing-balm-100-off-haru-expanded-1026",
-    "name": "🎁 Super Cica Exfoliating Cleansing Balm (100% off) Barrier Edit",
+    "name": "Super Cica Exfoliating Cleansing Balm (100% off) Barrier Edit",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -32124,7 +31974,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-red-body-wash-100-off-haru-expanded-1027",
-    "name": "🎁 Red Body Wash (100% off) Sensitive Edit",
+    "name": "Red Body Wash (100% off) Sensitive Edit",
     "brand": "SHOPIFY_ME",
     "category": "cleanser",
     "ingredientIds": [],
@@ -32150,8 +32000,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-pdrn-pink-gel-cleanser-100-off-haru-expanded-1028",
-    "name": "🎁 PDRN Pink Gel Cleanser (100% off) Hydration Edit",
-    "brand": "MEDICUBE US",
+    "name": "PDRN Pink Gel Cleanser (100% off) Hydration Edit",
+    "brand": "MEDICUBE",
     "category": "cleansing-gel",
     "ingredientIds": [
       "peptides"
@@ -32178,7 +32028,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-blackhead-deep-cleansing-oil-100-off-haru-expanded-1029",
-    "name": "🎁 Zero Pore Blackhead Deep Cleansing Oil (100% off) Daily Care",
+    "name": "Zero Pore Blackhead Deep Cleansing Oil (100% off) Daily Care",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -32207,7 +32057,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-foam-cleanser-100-off-haru-expanded-1030",
-    "name": "🎁 Zero Foam Cleanser (100% off) Night Care",
+    "name": "Zero Foam Cleanser (100% off) Night Care",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-foam",
     "ingredientIds": [],
@@ -32233,7 +32083,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-red-foam-cleanser-100-off-haru-expanded-1031",
-    "name": "🎁 Red Foam Cleanser (100% off) Routine Edit",
+    "name": "Red Foam Cleanser (100% off) Routine Edit",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-foam",
     "ingredientIds": [],
@@ -32259,7 +32109,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-capsule-cleansing-foam-100-off-haru-expanded-1032",
-    "name": "🎁 Zero Pore Capsule Cleansing Foam (100% off) Travel Size",
+    "name": "Zero Pore Capsule Cleansing Foam (100% off) Travel Size",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-foam",
     "ingredientIds": [],
@@ -32286,7 +32136,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-21-red-succinic-acid-cleansing-booster-serum-100-off-haru-expanded-1033",
-    "name": "🎁 21% Red Succinic Acid Cleansing Booster Serum (100% off) Refill Pack",
+    "name": "21% Red Succinic Acid Cleansing Booster Serum (100% off) Refill Pack",
     "brand": "SHOPIFY_ME",
     "category": "cleanser",
     "ingredientIds": [],
@@ -32312,8 +32162,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-exosome-cica-calming-pads-10ea-100-off-haru-expanded-1034",
-    "name": "🎁 [GIFT] Exosome Cica Calming Pads 10ea (100% off) Duo Set",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Exosome Cica Calming Pads 10ea (100% off) Duo Set",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "centella"
@@ -32342,7 +32192,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-exosome-cica-calming-pads-10ea-haru-expanded-1035",
     "name": "Exosome Cica Calming Pads 10ea Glow Edition",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "centella"
@@ -32371,7 +32221,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-rosemary-pdrn-scalp-serum-haru-expanded-1036",
     "name": "Rosemary PDRN Scalp Serum Barrier Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -32404,7 +32254,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-rosemary-pdrn-hair-scalp-conditioner-haru-expanded-1037",
     "name": "Rosemary PDRN Hair & Scalp Conditioner Sensitive Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "ceramides",
@@ -32438,7 +32288,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-rosemary-pdrn-cooling-thickening-shampoo-haru-expanded-1038",
     "name": "Rosemary PDRN Cooling Thickening Shampoo Hydration Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "ceramides",
@@ -32473,7 +32323,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-turmeric-body-peel-shot-haru-expanded-1039",
     "name": "Kojic Acid Turmeric Body Peel Shot Daily Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -32512,7 +32362,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-turmeric-peel-shot-haru-expanded-1040",
     "name": "Kojic Acid Turmeric Peel Shot Night Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -32551,7 +32401,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-deep-vitamin-c-capsule-serum-haru-expanded-1041",
     "name": "Deep Vitamin C Capsule Serum Routine Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -32587,7 +32437,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-tumeric-eye-gel-serum-haru-expanded-1042",
     "name": "Kojic Acid Tumeric Eye Gel Serum Travel Size",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -32625,7 +32475,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-collagen-glow-jelly-serum-haru-expanded-1043",
     "name": "PDRN Pink Collagen Glow Jelly Serum Refill Pack",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -32662,7 +32512,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-turmeric-vita-capsule-cream-haru-expanded-1044",
     "name": "Kojic Acid Turmeric Vita Capsule Cream Duo Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "spot",
     "ingredientIds": [
       "vitamin_c",
@@ -32833,7 +32683,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-gel-cleanser-haru-expanded-1049",
     "name": "PDRN Pink Gel Cleanser Daily Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-gel",
     "ingredientIds": [
       "peptides"
@@ -32968,7 +32818,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-pdrn-pink-collagen-exosome-shot-2000-5ml-100-off-haru-expanded-1054",
-    "name": "🎁 [GIFT] PDRN Pink Collagen Exosome Shot 2000 5ml (100% off) Duo Set",
+    "name": "[GIFT] PDRN Pink Collagen Exosome Shot 2000 5ml (100% off) Duo Set",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -33178,7 +33028,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-cleansing-wipes-100-off-haru-expanded-1060",
-    "name": "🎁 Cleansing Wipes (100% off) Night Care",
+    "name": "Cleansing Wipes (100% off) Night Care",
     "brand": "SHOPIFY_ME",
     "category": "cleanser",
     "ingredientIds": [],
@@ -33243,7 +33093,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-deep-peptide-radiance-mask-1ea-100-off-haru-expanded-1062",
-    "name": "🎁 [GIFT] Deep Peptide Radiance Mask (1ea) (100% off) Travel Size",
+    "name": "[GIFT] Deep Peptide Radiance Mask (1ea) (100% off) Travel Size",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -33341,7 +33191,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-hyaluronic-multi-peptide-pdrn-serum-haru-expanded-1065",
     "name": "Hyaluronic Multi Peptide PDRN Serum Glow Edition",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -33437,7 +33287,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-retinol-nmn-boosting-serum-haru-expanded-1068",
     "name": "Retinol NMN Boosting Serum Hydration Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -33476,7 +33326,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-azelaic-acid-16-calming-serum-haru-expanded-1069",
     "name": "Azelaic Acid 16 Calming Serum Daily Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -33907,7 +33757,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-pdrn-pink-vita-coating-sheet-mask-haru-expanded-1082",
     "name": "PDRN Pink Vita Coating Sheet Mask Travel Size",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "sheet-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -33936,7 +33786,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-pdrn-pink-gel-cleanser-haru-expanded-1083",
     "name": "PDRN Pink Gel Cleanser Refill Pack",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-gel",
     "ingredientIds": [
       "peptides"
@@ -34342,7 +34192,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-pdrn-pink-caffeine-overnight-wrapping-mask-haru-expanded-1096",
     "name": "PDRN Pink Caffeine Overnight Wrapping Mask Barrier Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -34540,8 +34390,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-pdrn-pink-vita-coating-sheet-mask-100-off-haru-expanded-1102",
-    "name": "🎁 PDRN Pink Vita Coating Sheet Mask (100% off) Travel Size",
-    "brand": "MEDICUBE US",
+    "name": "PDRN Pink Vita Coating Sheet Mask (100% off) Travel Size",
+    "brand": "MEDICUBE",
     "category": "sheet-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -34624,7 +34474,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-pdrn-pink-pepdide-serum-10ml-100-off-haru-expanded-1105",
-    "name": "🎁 [GIFT] PDRN Pink Pepdide Serum 10ml (100% off) Glow Edition",
+    "name": "[GIFT] PDRN Pink Pepdide Serum 10ml (100% off) Glow Edition",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -34652,7 +34502,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-pdrn-pink-collagen-capsule-cream-4-5g-100-off-haru-expanded-1106",
-    "name": "🎁 [GIFT] PDRN Pink Collagen Capsule Cream 4.5g (100% off) Barrier Edit",
+    "name": "[GIFT] PDRN Pink Collagen Capsule Cream 4.5g (100% off) Barrier Edit",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -34682,7 +34532,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-deep-vita-c-capsule-cream-4-5g-100-off-haru-expanded-1107",
-    "name": "🎁 [GIFT] Deep Vita C Capsule Cream 4.5g (100% off) Sensitive Edit",
+    "name": "[GIFT] Deep Vita C Capsule Cream 4.5g (100% off) Sensitive Edit",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -34903,7 +34753,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-azelaic-acid-16-calming-serum-haru-expanded-1114",
     "name": "Azelaic Acid 16 Calming Serum Duo Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -34930,7 +34780,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-caffeine-overnight-wrapping-mask-haru-expanded-1115",
     "name": "PDRN Pink Caffeine Overnight Wrapping Mask Glow Edition",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -35129,7 +34979,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-gel-cleanser-haru-expanded-1122",
     "name": "PDRN Pink Gel Cleanser Travel Size",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha",
@@ -35201,7 +35051,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-caffeine-overnight-wrapping-mask-haru-expanded-1124",
     "name": "PDRN Pink Caffeine Overnight Wrapping Mask Duo Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -35228,7 +35078,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-zero-pore-cooling-stick-100-off-haru-expanded-1125",
-    "name": "🎁 [GIFT] Zero Pore Cooling Stick (100% off) Glow Edition",
+    "name": "[GIFT] Zero Pore Cooling Stick (100% off) Glow Edition",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [],
@@ -35255,8 +35105,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-collagen-wrapping-mask-5ml-100-off-haru-expanded-1126",
-    "name": "🎁 [GIFT] Collagen Wrapping Mask 5ml (100% off) Barrier Edit",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Collagen Wrapping Mask 5ml (100% off) Barrier Edit",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -35283,8 +35133,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-zero-pore-deep-cleansing-oil-20ml-100-off-haru-expanded-1127",
-    "name": "🎁 [GIFT Zero Pore Deep Cleansing Oil 20ml (100% off) Sensitive Edit",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT Zero Pore Deep Cleansing Oil 20ml (100% off) Sensitive Edit",
+    "brand": "MEDICUBE",
     "category": "cleansing-oil",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -35311,7 +35161,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-zero-pore-deep-cleansing-oil-20ml-haru-expanded-1128",
     "name": "Zero Pore Deep Cleansing Oil 20ml Hydration Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-oil",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -35338,7 +35188,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-collagen-wrapping-mask-5ml-haru-expanded-1129",
     "name": "Collagen Wrapping Mask 5ml Daily Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -35366,7 +35216,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-retinol-nmn-boosting-serum-haru-expanded-1130",
     "name": "Retinol NMN Boosting Serum Night Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -35405,7 +35255,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-hyaluronic-multi-peptide-pdrn-serum-haru-expanded-1131",
     "name": "Hyaluronic Multi Peptide PDRN Serum Routine Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -35440,7 +35290,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-deep-peptide-radiance-mask-2ea-100-off-haru-expanded-1132",
-    "name": "🎁 [GIFT] Deep Peptide Radiance Mask 2ea (100% off) Travel Size",
+    "name": "[GIFT] Deep Peptide Radiance Mask 2ea (100% off) Travel Size",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -35618,7 +35468,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-kojic-acid-turmeric-gold-jelly-gel-mask-1ea-100-off-haru-expanded-1137",
-    "name": "🎁 [GIFT] Kojic Acid Turmeric Gold Jelly Gel Mask 1EA (100% off) Sensitive Edit",
+    "name": "[GIFT] Kojic Acid Turmeric Gold Jelly Gel Mask 1EA (100% off) Sensitive Edit",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [],
@@ -35644,7 +35494,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-salmon-pdrn-pink-collagen-jelly-gel-mask-100-off-haru-expanded-1138",
-    "name": "🎁 Salmon PDRN Pink Collagen Jelly Gel Mask (100% off) Hydration Edit",
+    "name": "Salmon PDRN Pink Collagen Jelly Gel Mask (100% off) Hydration Edit",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -35672,7 +35522,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-kojic-acid-turmeric-gold-jelly-gel-mask-100-off-haru-expanded-1139",
-    "name": "🎁 Kojic Acid Turmeric Gold Jelly Gel Mask (100% off) Daily Care",
+    "name": "Kojic Acid Turmeric Gold Jelly Gel Mask (100% off) Daily Care",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [],
@@ -35699,7 +35549,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-glow-home-aesthetic-full-set-haru-expanded-1140",
     "name": "PDRN Pink Glow Home Aesthetic Full Set Night Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -35738,7 +35588,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pink-gold-ultimate-care-set-haru-expanded-1141",
     "name": "Pink & Gold Ultimate Care Set Routine Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner",
     "ingredientIds": [
       "retinol",
@@ -35777,7 +35627,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-vita-coating-sheet-mask-haru-expanded-1142",
     "name": "PDRN Pink Vita Coating Sheet Mask Travel Size",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "sheet-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -35808,7 +35658,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-azelaic-acid-16-calming-serum-haru-expanded-1143",
     "name": "Azelaic Acid 16 Calming Serum Refill Pack",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -35862,7 +35712,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-peptide-toner-100-off-haru-expanded-1145",
-    "name": "🎁 PDRN Pink Peptide Toner (100% off) Glow Edition",
+    "name": "PDRN Pink Peptide Toner (100% off) Glow Edition",
     "brand": "SHOPIFY_ME",
     "category": "toner",
     "ingredientIds": [
@@ -35891,7 +35741,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-peptide-cream-100-off-haru-expanded-1146",
-    "name": "🎁 PDRN Pink Peptide Cream (100% off) Barrier Edit",
+    "name": "PDRN Pink Peptide Cream (100% off) Barrier Edit",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -35921,7 +35771,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-collagen-gel-toner-pad-100-off-haru-expanded-1147",
-    "name": "🎁 PDRN Pink Collagen Gel Toner Pad (100% off) Sensitive Edit",
+    "name": "PDRN Pink Collagen Gel Toner Pad (100% off) Sensitive Edit",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -35950,7 +35800,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-cotton-pads-100-off-haru-expanded-1148",
-    "name": "🎁 [GIFT] Cotton Pads (100% off) Hydration Edit",
+    "name": "[GIFT] Cotton Pads (100% off) Hydration Edit",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [],
@@ -36075,7 +35925,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-hyaluronic-multi-peptide-pdrn-serum-haru-expanded-1152",
     "name": "Hyaluronic Multi Peptide PDRN Serum Travel Size",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -36111,7 +35961,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-retinol-nmn-boosting-serum-haru-expanded-1153",
     "name": "Retinol NMN Boosting Serum Refill Pack",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -36801,7 +36651,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-collagen-niacinamide-jelly-cream-50ml-100-off-haru-expanded-1173",
-    "name": "🎁 [GIFT] Collagen Niacinamide Jelly Cream 50ml (100% off) Refill Pack",
+    "name": "[GIFT] Collagen Niacinamide Jelly Cream 50ml (100% off) Refill Pack",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -36834,7 +36684,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-zero-foam-cleanser-haru-expanded-1174",
     "name": "Zero Foam Cleanser Duo Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha",
@@ -36870,7 +36720,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-collagen-radiance-mask-100-off-haru-expanded-1175",
-    "name": "🎁 Collagen Radiance Mask (100% off) Glow Edition",
+    "name": "Collagen Radiance Mask (100% off) Glow Edition",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -36964,7 +36814,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-peptide-serum-100-off-haru-expanded-1178",
-    "name": "🎁 PDRN Pink Peptide Serum (100% off) Hydration Edit",
+    "name": "PDRN Pink Peptide Serum (100% off) Hydration Edit",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -36992,7 +36842,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-cooling-mask-100-off-haru-expanded-1179",
-    "name": "🎁 Zero Pore Cooling Mask (100% off) Daily Care",
+    "name": "Zero Pore Cooling Mask (100% off) Daily Care",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [],
@@ -37019,7 +36869,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-super-cica-calming-mask-100-off-haru-expanded-1180",
-    "name": "🎁 Super Cica Calming Mask (100% off) Night Care",
+    "name": "Super Cica Calming Mask (100% off) Night Care",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -37048,7 +36898,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-calming-ringer-mask-100-off-haru-expanded-1181",
-    "name": "🎁 Calming Ringer Mask (100% off) Routine Edit",
+    "name": "Calming Ringer Mask (100% off) Routine Edit",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [],
@@ -37075,7 +36925,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-super-cica-daily-quick-masks-100-off-haru-expanded-1182",
-    "name": "🎁 Super Cica Daily Quick Masks (100% off) Travel Size",
+    "name": "Super Cica Daily Quick Masks (100% off) Travel Size",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -37104,7 +36954,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-deep-vita-c-daily-quick-masks-100-off-haru-expanded-1183",
-    "name": "🎁 Deep Vita C Daily Quick Masks (100% off) Refill Pack",
+    "name": "Deep Vita C Daily Quick Masks (100% off) Refill Pack",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -37132,7 +36982,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-deep-peptide-radiance-mask-100-off-haru-expanded-1184",
-    "name": "🎁 Deep Peptide Radiance Mask (100% off) Duo Set",
+    "name": "Deep Peptide Radiance Mask (100% off) Duo Set",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -37295,7 +37145,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-exosome-cica-duo-haru-expanded-1189",
     "name": "Exosome Cica Duo Daily Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "centella"
@@ -37417,8 +37267,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-mask-bundle-pack-10ea-100-off-haru-expanded-1193",
-    "name": "🎁 Mask Bundle Pack (10ea) (100% off) Refill Pack",
-    "brand": "MEDICUBE US",
+    "name": "Mask Bundle Pack (10ea) (100% off) Refill Pack",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -37443,8 +37293,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-mask-bundle-pack-5ea-100-off-haru-expanded-1194",
-    "name": "🎁 Mask Bundle Pack (5ea) (100% off) Duo Set",
-    "brand": "MEDICUBE US",
+    "name": "Mask Bundle Pack (5ea) (100% off) Duo Set",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -37470,7 +37320,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-mask-bundle-pack-10ea-haru-expanded-1195",
     "name": "Mask Bundle Pack (10ea) Glow Edition",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -37496,7 +37346,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-mask-bundle-pack-5ea-haru-expanded-1196",
     "name": "Mask Bundle Pack (5ea) Barrier Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -37659,7 +37509,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-scalp-gua-sha-100-off-haru-expanded-1201",
-    "name": "🎁 Scalp Gua Sha (100% off) Routine Edit",
+    "name": "Scalp Gua Sha (100% off) Routine Edit",
     "brand": "SHOPIFY_ME",
     "category": "scalp",
     "ingredientIds": [],
@@ -37739,7 +37589,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-age-r-vita-k-cream-100-off-haru-expanded-1204",
-    "name": "🎁 AGE-R Vita K Cream (100% off) Duo Set",
+    "name": "AGE-R Vita K Cream (100% off) Duo Set",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -37768,7 +37618,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-age-r-booster-gel-serum-100-off-haru-expanded-1205",
-    "name": "🎁 AGE-R Booster Gel Serum (100% off) Glow Edition",
+    "name": "AGE-R Booster Gel Serum (100% off) Glow Edition",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [],
@@ -37885,7 +37735,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-exosome-cica-calming-toner-pads-100-off-haru-expanded-1209",
-    "name": "🎁 Exosome Cica Calming Toner Pads (100% off) Daily Care",
+    "name": "Exosome Cica Calming Toner Pads (100% off) Daily Care",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -37915,7 +37765,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-pads-100-off-haru-expanded-1210",
-    "name": "🎁 Zero Pore Pads (100% off) Night Care",
+    "name": "Zero Pore Pads (100% off) Night Care",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [],
@@ -37942,7 +37792,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-deep-vita-c-pads-100-off-haru-expanded-1211",
-    "name": "🎁 Deep Vita C Pads (100% off) Routine Edit",
+    "name": "Deep Vita C Pads (100% off) Routine Edit",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -37970,7 +37820,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-red-succinic-acid-panthenol-pads-100-off-haru-expanded-1212",
-    "name": "🎁 Red Succinic Acid Panthenol Pads (100% off) Travel Size",
+    "name": "Red Succinic Acid Panthenol Pads (100% off) Travel Size",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [],
@@ -37996,7 +37846,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-madecassoside-pads-mild-100-off-haru-expanded-1213",
-    "name": "🎁 Zero Pore Madecassoside Pads (Mild) (100% off) Refill Pack",
+    "name": "Zero Pore Madecassoside Pads (Mild) (100% off) Refill Pack",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -38025,7 +37875,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-super-cica-pads-100-off-haru-expanded-1214",
-    "name": "🎁 Super Cica Pads (100% off) Duo Set",
+    "name": "Super Cica Pads (100% off) Duo Set",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -38120,7 +37970,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-age-r-glutathione-glow-serum-100-off-haru-expanded-1217",
-    "name": "🎁 [GIFT] AGE-R Glutathione Glow Serum (100% off) Sensitive Edit",
+    "name": "[GIFT] AGE-R Glutathione Glow Serum (100% off) Sensitive Edit",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -38508,7 +38358,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-red-succinic-acid-peeling-pad-2ea-100-off-haru-expanded-1229",
     "name": "» [GIFT] Red Succinic Acid Peeling Pad 2ea (100% off) Daily Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -38562,7 +38412,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-red-succinic-acid-peeling-pad-2ea-haru-expanded-1231",
     "name": "Red Succinic Acid Peeling Pad 2ea Routine Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -39624,7 +39474,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-skin-renewal-ensemble-set-haru-expanded-1266",
     "name": "Skin Renewal Ensemble Set Barrier Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -40097,7 +39947,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-deep-line-masks-10-100-off-haru-expanded-1281",
     "name": "» [GIFT] Deep Line Masks 10 (100% off) Routine Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -40440,7 +40290,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-deep-line-masks-6-100-off-haru-expanded-1292",
     "name": "» [GIFT] Deep Line Masks 6 (100% off) Travel Size",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -40466,7 +40316,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-deep-line-masks-10-haru-expanded-1293",
     "name": "Deep Line Masks 10 Refill Pack",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -40492,7 +40342,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-deep-line-masks-6-haru-expanded-1294",
     "name": "Deep Line Masks 6 Duo Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -40919,7 +40769,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-super-cica-daily-quick-mask-100-off-haru-expanded-1308",
     "name": "» [GIFT] Super Cica Daily Quick Mask (100% off) Hydration Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "centella"
@@ -40948,7 +40798,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-super-cica-daily-quick-mask-haru-expanded-1309",
     "name": "Super Cica Daily Quick Mask Daily Care",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "centella"
@@ -41015,7 +40865,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-super-cica-ac-calming-trial-kit-haru-expanded-1311",
     "name": "Super Cica AC Calming Trial Kit Routine Edit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "centella"
@@ -47923,7 +47773,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "mixsoon-mixsoon-daily-mask-pack-20ml-x-10-sheets-1set-7-mask-routine-pore-minimizer-tone-u-haru-expanded-1512",
-    "name": "mixsoon Daily Mask Pack 20ml X 10 sheets 1SET- 7-Mask Routine Pore Minimizer, Tone-Up, Glass Skin, Calming, Tightening,  Travel Size",
+    "name": "mixsoon Daily Mask Pack 20ml X 10 sheets 1SET- 7-Mask Routine Pore Minimizer, Tone-Up, Glass Skin, Calming, Tightening, Travel Size",
     "brand": "mixsoon",
     "category": "peeling",
     "ingredientIds": [
@@ -51627,7 +51477,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-pore-care-kit-haru-expanded-1621",
     "name": "PORE CARE KIT Routine Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -51688,7 +51538,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-buy-2-heartleaf-pads-and-get-2-travel-size-pads-haru-expanded-1623",
     "name": "Buy 2 heartleaf pads and get 2 travel size pads Refill Pack",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -51855,8 +51705,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "neogenlab-us-pad-case-100-off-haru-expanded-1628",
-    "name": "🎁 Pad Case (100% off) Hydration Edit",
-    "brand": "NEOGENLAB US",
+    "name": "Pad Case (100% off) Hydration Edit",
+    "brand": "NEOGENLAB",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -51881,7 +51731,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-bio-peel-gauze-peeling-green-tea-2-48-oz-76ml-8-pads-100-off-haru-expanded-1629",
-    "name": "🎁 Bio-Peel Gauze Peeling Green Tea 2.48 oz / 76ml (8 Pads) (100% off) Daily Care",
+    "name": "Bio-Peel Gauze Peeling Green Tea 2.48 oz / 76ml (8 Pads) (100% off) Daily Care",
     "brand": "NEOGEN DERMALOGY",
     "category": "toner-pad",
     "ingredientIds": [
@@ -53010,7 +52860,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-exfoliation-set-haru-expanded-1661",
     "name": "EXFOLIATION SET Routine Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "toner-pad",
     "ingredientIds": [
       "niacinamide",
@@ -53301,7 +53151,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-acne-care-set-haru-expanded-1670",
     "name": "ACNE CARE SET Night Care",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -53393,7 +53243,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-real-niacinamide-15-serum-travel-size-100-off-haru-expanded-1673",
-    "name": "🎁 Real Niacinamide 15% Serum (travel size) (100% off) Refill Pack",
+    "name": "Real Niacinamide 15% Serum (travel size) (100% off) Refill Pack",
     "brand": "NEOGEN DERMALOGY",
     "category": "serum",
     "ingredientIds": [
@@ -53495,7 +53345,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-niacinamide-15-serum-travel-size-100-off-haru-expanded-1676",
-    "name": "🎁 Niacinamide 15% Serum (travel size) (100% off) Barrier Edit",
+    "name": "Niacinamide 15% Serum (travel size) (100% off) Barrier Edit",
     "brand": "NEOGEN DERMALOGY",
     "category": "serum",
     "ingredientIds": [
@@ -53523,7 +53373,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-real-hyal-panthenol-serum-travel-size-100-off-haru-expanded-1677",
-    "name": "🎁 Real Hyal Panthenol Serum (Travel Size) (100% off) Sensitive Edit",
+    "name": "Real Hyal Panthenol Serum (Travel Size) (100% off) Sensitive Edit",
     "brand": "NEOGEN DERMALOGY",
     "category": "serum",
     "ingredientIds": [],
@@ -53620,7 +53470,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-acne-dark-spots-care-haru-expanded-1680",
     "name": "Acne/ Dark Spots Care Night Care",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -53659,7 +53509,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-glass-skin-makeup-prep-oily-skin-haru-expanded-1681",
     "name": "Glass Skin Makeup Prep - Oily Skin Routine Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-water",
     "ingredientIds": [
       "vitamin_c",
@@ -53773,7 +53623,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-berryperi-pore-cleansing-mousse-1-1-1-free-gifts-35-off-haru-expanded-1684",
     "name": "BERRYPERI PORE CLEANSING MOUSSE 1+1+1 (+Free gifts) 35% OFF Duo Set",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -53954,7 +53804,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-berryperi-pore-cleansing-mousse-haru-expanded-1689",
     "name": "BERRYPERI PORE CLEANSING MOUSSE Daily Care",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -54020,7 +53870,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-1box-48ea-berryperi-pore-cleansing-mousse-150-ml-haru-expanded-1691",
     "name": "BERRYPERI PORE CLEANSING MOUSSE (150 ml) Routine Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -54588,7 +54438,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-clear-eye-cream-haru-expanded-1707",
     "name": "Next Clear Eye Cream Sensitive Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "eye-cream",
     "ingredientIds": [
       "vitamin_c",
@@ -54765,7 +54615,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-reforest-protein-treatment-16-90-oz-500ml-haru-expanded-1712",
     "name": "REFOREST PROTEIN TREATMENT 16.90 oz / 500ml Travel Size",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -55114,7 +54964,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-real-niacinamide-15-serum-real-niacinamide-glow-up-daily-mask-haru-expanded-1722",
     "name": "Real Niacinamide 15% Serum + REAL Niacinamide Glow Up Daily Mask Travel Size",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -55146,7 +54996,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-shuya-toya-niacinamide-glow-up-daily-mask-x-best-seller-real-fresh-haru-expanded-1723",
     "name": "Shuya Toya Niacinamide Glow Up Daily Mask x Best seller (Real Fresh Foam Cleanser Green Tea) Refill Pack",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -55543,8 +55393,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "neogenlab-us-real-bakuchiol-serum-travel-size-100-off-haru-expanded-1735",
-    "name": "🎁 REAL BAKUCHIOL SERUM (Travel Size) (100% off) Glow Edition",
-    "brand": "NEOGENLAB US",
+    "name": "REAL BAKUCHIOL SERUM (Travel Size) (100% off) Glow Edition",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "retinol"
@@ -55883,7 +55733,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-a-clear-soothing-spot-patch-24-count-3-pack-haru-expanded-1745",
     "name": "A-CLEAR SOOTHING SPOT PATCH, 24 COUNT (3 PACK) Glow Edition",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -55915,7 +55765,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-clear-spot-solution-32ml-haru-expanded-1746",
     "name": "Next Clear Spot Solution (32ml) Barrier Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -55941,7 +55791,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-clear-essence-toner-210ml-haru-expanded-1747",
     "name": "Next Clear Essence Toner (210ml) Sensitive Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -55974,7 +55824,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-glow-watery-cream-50ml-haru-expanded-1748",
     "name": "Next Glow Watery Cream (50ml) Hydration Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "niacinamide",
@@ -56007,7 +55857,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-glow-prep-serum-32ml-haru-expanded-1749",
     "name": "Next Glow Prep Serum (32ml) Daily Care",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "niacinamide",
@@ -56040,7 +55890,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-glow-pore-refining-toner-210-ml-haru-expanded-1750",
     "name": "Next Glow Pore Refining Toner (210 ml) Night Care",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -56108,8 +55958,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "neogenlab-us-real-peptide-serum-10ml-100-off-haru-expanded-1752",
-    "name": "🎁 REAL PEPTIDE SERUM (10ml) (100% off) Travel Size",
-    "brand": "NEOGENLAB US",
+    "name": "REAL PEPTIDE SERUM (10ml) (100% off) Travel Size",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -56380,7 +56230,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-real-ferment-micro-toner-real-ferment-micro-essence-real-ferment-mi-haru-expanded-1760",
     "name": "Real Ferment Micro Toner, Real Ferment Micro Essence, Real Ferment Micro Serum Night Care",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -56416,7 +56266,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-a-clear-aid-soothing-overnight-mask-haru-expanded-1761",
     "name": "A-CLEAR AID SOOTHING OVERNIGHT MASK Routine Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "peeling",
     "ingredientIds": [
       "bha"
@@ -56700,7 +56550,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-berryperi-pore-cleansing-mousse-hyal-glow-rose-essence-pad-haru-expanded-1769",
     "name": "Berryperi Pore Cleansing Mousse + Hyal Glow Rose Essence Pad Daily Care",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -56733,7 +56583,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-sur-medic-azulene-soothing-peptide-ampoule-neogen-dermalogy-real-fr-haru-expanded-1770",
     "name": "Sur.medic Azulene Soothing Peptide Ampoule + Neogen Dermalogy Real Fresh Foam Heartleaf Night Care",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "ceramides",
@@ -56842,7 +56692,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-slim-metal-set-extra-slim-metal-maxicara-black-pink-metal-eyelash-c-haru-expanded-1773",
     "name": "Slim Metal Set (Extra Slim Metal Maxicara Black + Pink Metal Eyelash Curler) Refill Pack",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "and testing – safe for even the most sensitive eyes. (*Korea vegan certification) New revolution of MASCARA! Up to 99.9% hygienically clean Metal Brush! Designed with a gold-coated metal brush tip that is easy to clean, It can be easily washed off with water or wiped off with a tissue, so it can be used hygienically. NEOGEN DERMALOGY EXTRA SLIM METAL MAXICARA BLACK - 6ml Creates intense curls by curling all the lashes, including the inner and outer corners Perfectly designed to hug the shape of",
@@ -56932,7 +56782,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-neogen-dermalogy-real-niacinamide-15-serum-travel-size-100-off-haru-expanded-1776",
-    "name": "🎁 NEOGEN DERMALOGY Real Niacinamide 15% Serum (Travel Size) (100% off) Barrier Edit",
+    "name": "NEOGEN DERMALOGY Real Niacinamide 15% Serum (Travel Size) (100% off) Barrier Edit",
     "brand": "NEOGEN DERMALOGY",
     "category": "serum",
     "ingredientIds": [
@@ -57143,7 +56993,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-sur-medic-azulene-soothing-trial-kit-haru-expanded-1782",
     "name": "SUR.MEDIC AZULENE SOOTHING TRIAL KIT Travel Size",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "peptides"
@@ -57214,7 +57064,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-neogen-reforest-protein-shampoo-16-90-oz-500ml-haru-expanded-1784",
     "name": "NEOGEN REFOREST PROTEIN SHAMPOO 16.90 oz / 500ml Duo Set",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "scalp",
     "ingredientIds": [
       "niacinamide",
@@ -57363,7 +57213,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-sur-medic-azulene-soothing-peptide-ampoule-haru-expanded-1788",
     "name": "SUR.MEDIC AZULENE SOOTHING PEPTIDE AMPOULE Hydration Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -57474,7 +57324,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "neogenlab-us-canadian-clay-pore-stick-mask-haru-expanded-1791",
     "name": "CANADIAN CLAY PORE STICK MASK Routine Edit",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -58529,7 +58379,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-120ml-for-tiktok-haru-expanded-1820",
     "name": "All Clean Balm 120ml for TIKTOK! Night Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -58564,7 +58414,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-perfect-cleansing-oil-150ml-haru-expanded-1821",
     "name": "Matcha Biome Perfect Cleansing Oil 150ml Routine Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -58596,7 +58446,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-dailism-peptide-enhancing-lash-serum-haru-expanded-1822",
     "name": "Dailism Peptide Enhancing Lash Serum Travel Size",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -58629,7 +58479,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-ever-glow-gloss-lip-tint-6-colors-haru-expanded-1823",
     "name": "Ever Glow Gloss Lip Tint (6 Colors) Refill Pack",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -58664,7 +58514,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-ever-glow-all-night-lip-mask-haru-expanded-1824",
     "name": "Ever Glow All Night Lip Mask Duo Set",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "peeling",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -58697,7 +58547,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-ever-glow-glaze-color-balm-6-colors-haru-expanded-1825",
     "name": "Ever Glow Glaze Color Balm (6 Colors) Glow Edition",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "sunscreen",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -58729,7 +58579,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-ever-glow-starry-gloss-haru-expanded-1826",
     "name": "Ever Glow Starry Gloss Barrier Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "lip-care",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -58762,7 +58612,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-50ml-cleansing-balm-haru-expanded-1827",
     "name": "All Clean balm 50ml (cleansing balm) Sensitive Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -58796,7 +58646,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-free-gift-all-clean-balm-50ml-haru-expanded-1828",
     "name": "All Clean Balm 50ml Hydration Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -58823,7 +58673,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-matcha-biome-cleansing-oil-haru-expanded-1829",
     "name": "All Clean balm & Matcha Biome Cleansing Oil Daily Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -58857,7 +58707,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-oil-foam-haru-expanded-1830",
     "name": "Matcha Biome Oil & Foam Night Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -58894,7 +58744,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-dailism-smudge-stop-mascara-haru-expanded-1831",
     "name": "All Clean Balm + Dailism Smudge Stop Mascara Routine Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -58926,7 +58776,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-trio-haru-expanded-1832",
     "name": "All Clean Balm Trio Travel Size",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -58960,7 +58810,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-marine-care-eye-cream-haru-expanded-1833",
     "name": "All Clean Balm & Marine Care Eye Cream Refill Pack",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "niacinamide"
@@ -58992,7 +58842,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-120ml-2-pack-haru-expanded-1834",
     "name": "All Clean Balm 120ml - 2 Pack Duo Set",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -59026,7 +58876,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-new-dailism-smudge-stop-mascara-9g-0-32oz-brown-haru-expanded-1835",
     "name": "Dailism Smudge Stop Mascara 9g/0.32oz (Brown) Glow Edition",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -59052,7 +58902,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-white-clay-foam-150g-5-29oz-haru-expanded-1836",
     "name": "All Clean White Clay Foam 150g/5.29oz Barrier Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -59084,7 +58934,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-watermelon-moisture-soothing-gel-cream-110ml-haru-expanded-1837",
     "name": "Watermelon Moisture Soothing Gel Cream 110ml Sensitive Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "lotion",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -59115,7 +58965,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-rx-hyaluronic-acid-hydrating-sunscreen-spf50-haru-expanded-1838",
     "name": "All Clean Balm & RX Hyaluronic Acid Hydrating Sunscreen SPF50+ Hydration Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -59149,7 +58999,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-hyaluronic-acid-hydrating-sunscreen-spf50-pa-50ml-haru-expanded-1839",
     "name": "RX Hyaluronic Acid Hydrating Sunscreen SPF50+ PA++++ 50ml Daily Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "sunscreen",
     "ingredientIds": [
       "vitamin_c",
@@ -59186,7 +59036,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-foam-duo-haru-expanded-1840",
     "name": "ALL CLEAN BALM & FOAM DUO Night Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -59222,7 +59072,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-eye-patch-duo-set-haru-expanded-1841",
     "name": "Eye Patch Duo Set Routine Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-patch",
     "ingredientIds": [
       "vitamin_c",
@@ -59259,7 +59109,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-duo-signature-mandarin-haru-expanded-1842",
     "name": "All Clean Balm Duo (Signature + Mandarin) Travel Size",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -59291,7 +59141,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-retinol-bakuchiol-hydrogel-eye-patch-6oea-haru-expanded-1843",
     "name": "RX RETINOL BAKUCHIOL HYDROGEL EYE PATCH 6Oea Refill Pack",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -59322,7 +59172,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-retinol-bakuchiol-booster-oil-35ml-haru-expanded-1844",
     "name": "RX RETINOL BAKUCHIOL BOOSTER OIL 35ml Duo Set",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -59352,7 +59202,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-multi-vitamin-glow-serum-35ml-haru-expanded-1845",
     "name": "RX MULTI VITAMIN GLOW SERUM 35ml Glow Edition",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -59388,7 +59238,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-hyaluronic-acid-rich-whipped-cream-50ml-haru-expanded-1846",
     "name": "RX HYALURONIC ACID RICH WHIPPED CREAM 50ml Barrier Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -59422,7 +59272,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-hyaluronic-acid-2-hydrating-serum-35ml-haru-expanded-1847",
     "name": "RX HYALURONIC ACID 2% HYDRATING SERUM 35ml Sensitive Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -59454,7 +59304,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-amino-keratin-heat-protecting-leave-in-treatment-150ml-haru-expanded-1848",
     "name": "RX AMINO KERATIN HEAT PROTECTING LEAVE IN TREATMENT 150ml Hydration Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -59481,7 +59331,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-amino-biotin-revitalizing-shampoo-400ml-haru-expanded-1849",
     "name": "RX AMINO BIOTIN REVITALIZING SHAMPOO 400ml Daily Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -59511,7 +59361,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-aha-bha-peeling-serum-35ml-haru-expanded-1850",
     "name": "RX AHA BHA PEELING SERUM 35ml Night Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -59545,7 +59395,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-aha-bha-enzyme-scrub-130ml-haru-expanded-1851",
     "name": "RX AHA BHA ENZYME SCRUB 130ml Routine Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -59580,7 +59430,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-heimish-rx-retinol-bakuchiol-eye-cream-haru-expanded-1852",
     "name": "HEIMISH RX RETINOL BAKUCHIOL EYE CREAM Travel Size",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-cream",
     "ingredientIds": [
       "retinol",
@@ -59613,7 +59463,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-heimish-rx-multi-vitamin-dark-spot-cream-50ml-haru-expanded-1853",
     "name": "HEIMISH RX MULTI VITAMIN DARK SPOT CREAM 50ml Refill Pack",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -59645,7 +59495,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-green-foam-150ml-5-07fl-oz-haru-expanded-1854",
     "name": "All Clean Green Foam 150ml/5.07fl.oz Duo Set",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -59680,7 +59530,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-120ml-4-05-fl-oz-top-rated-vegan-makeup-remover-for-sensitive-sk-haru-expanded-1855",
     "name": "All Clean Balm 120ml / 4.05 fl.oz – Top-Rated Vegan Makeup Remover for Sensitive Skin Glow Edition",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -59715,7 +59565,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-mini-kit-haru-expanded-1856",
     "name": "All Clean Mini Kit Barrier Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "vitamin_c",
@@ -59748,7 +59598,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-repair-cream-50ml-1-69fl-oz-haru-expanded-1857",
     "name": "Matcha Biome Repair Cream 50ml/1.69fl.oz Sensitive Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "oil",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -59781,7 +59631,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-oil-free-calming-gel-moisturizer-100ml-3-38fl-oz-haru-expanded-1858",
     "name": "Matcha Biome Oil-Free Calming Gel Moisturizer 100ml/3.38fl.oz Hydration Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "lotion",
     "ingredientIds": [
       "vitamin_c",
@@ -59818,7 +59668,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-amino-acne-cleansing-foam-150ml-5-07fl-oz-haru-expanded-1859",
     "name": "Matcha Biome Amino Acne Cleansing Foam 150ml/5.07fl.oz Daily Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha",
@@ -59850,7 +59700,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-redness-relief-hydrating-toner-150ml-5-07fl-oz-haru-expanded-1860",
     "name": "Matcha Biome Redness Relief Hydrating Toner 150ml/5.07fl.oz Night Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -59884,7 +59734,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-marine-care-retinol-eye-serum-30ml-haru-expanded-1861",
     "name": "Marine Care Retinol Eye Serum 30ml Routine Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "essence",
     "ingredientIds": [
       "retinol",
@@ -59917,7 +59767,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-bulgarian-rose-water-hydrogel-eye-patch-1-4g-0-05oz-60pcs-haru-expanded-1862",
     "name": "Bulgarian Rose Water Hydrogel Eye Patch 1.4g/0.05oz *60pcs Travel Size",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-patch",
     "ingredientIds": [
       "niacinamide",
@@ -59949,7 +59799,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-renewal-marine-care-eye-cream-30ml-1-01fl-oz-haru-expanded-1863",
     "name": "Marine Care Eye Cream 30ml/1.01fl.oz Refill Pack",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-cream",
     "ingredientIds": [
       "niacinamide",
@@ -59981,7 +59831,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-renewal-marine-care-deep-moisture-nourishing-melting-cream-55ml-1-85fl-oz-haru-expanded-1864",
     "name": "Marine Care Deep Moisture Nourishing Melting Cream 55ml/1.85fl.oz Duo Set",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "sunscreen",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -60016,7 +59866,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-renewal-bulgarian-rose-satin-cream-50ml-1-69fl-oz-haru-expanded-1865",
     "name": "Bulgarian Rose Satin Cream 50ml/1.69fl.oz Glow Edition",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -60051,7 +59901,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-hydrogel-eye-patch-1-4g-0-05oz-60pcs-haru-expanded-1866",
     "name": "Matcha Biome Hydrogel Eye Patch 1.4g/0.05oz *60pcs Barrier Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "essence",
     "ingredientIds": [
       "niacinamide",
@@ -60086,7 +59936,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-moringa-ceramide-pressed-setting-powder-5g-0-17oz-haru-expanded-1867",
     "name": "Moringa Ceramide Pressed Setting Powder 5g/0.17oz Sensitive Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "sunscreen",
     "ingredientIds": [
       "ceramides",
@@ -60119,7 +59969,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-moringa-ceramide-hylauronic-hydrating-cream-50ml-1-7fl-oz-haru-expanded-1868",
     "name": "Moringa Ceramide Hylauronic Hydrating Cream 50ml/1.7fl.oz Hydration Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "lotion",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -60150,7 +60000,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-marine-care-retinol-for-face-serum-50ml-haru-expanded-1869",
     "name": "Marine Care Retinol For Face Serum 50ml Daily Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "essence",
     "ingredientIds": [
       "retinol",
@@ -60185,7 +60035,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-gentle-exfoliating-gel-cleanser-130ml-4-3fl-oz-haru-expanded-1870",
     "name": "All Clean Gentle Exfoliating Gel Cleanser 130ml/4.3fl.oz Night Care",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -60223,7 +60073,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-dailism-smudge-stop-mascara-9g-0-32oz-haru-expanded-1871",
     "name": "Dailism Smudge Stop Mascara 9g/0.32oz Routine Edit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -60249,7 +60099,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-moringa-ceramide-bb-cream-30g-1-05oz-haru-expanded-1872",
     "name": "Moringa Ceramide BB Cream 30g/1.05oz Travel Size",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -60285,7 +60135,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-artless-rubycell-puff-5pcs-haru-expanded-1873",
     "name": "Artless Rubycell Puff 5pcs Refill Pack",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -60311,7 +60161,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-mandarin-120ml-4-05fl-oz-haru-expanded-1874",
     "name": "All Clean Balm Mandarin 120ml/4.05fl.oz Duo Set",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -60343,7 +60193,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "heimish-us-black-tea-wash-off-mask-110ml-3-71fl-oz-haru-expanded-1875",
     "name": "Black Tea Wash-Off Mask 110ml/3.71fl.oz Glow Edition",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -62203,7 +62053,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dear-klairs-gentle-black-fresh-cleansing-oil-100-off-haru-expanded-1931",
-    "name": "🎁 Gentle Black Fresh Cleansing Oil (100% off) Routine Edit",
+    "name": "Gentle Black Fresh Cleansing Oil (100% off) Routine Edit",
     "brand": "Dear, Klairs",
     "category": "cleansing-oil",
     "ingredientIds": [],
@@ -62372,7 +62222,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dear-klairs-free-gift-my-blue-diy-mist-kit-haru-expanded-1936",
-    "name": "🎁 (Free Gift) My Blue DIY Mist Kit Barrier Edit",
+    "name": "My Blue DIY Mist Kit Barrier Edit",
     "brand": "Dear, Klairs",
     "category": "mist",
     "ingredientIds": [],
@@ -62617,7 +62467,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dear-klairs-free-gift-midnight-blue-calming-cream-haru-expanded-1944",
-    "name": "🎁 (Free Gift) Midnight Blue Calming Cream Duo Set",
+    "name": "Midnight Blue Calming Cream Duo Set",
     "brand": "Dear, Klairs",
     "category": "moisturizer",
     "ingredientIds": [],
@@ -63614,7 +63464,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-5-calendula-deep-essence-masks-100-off-haru-expanded-1972",
     "name": "» 5 Calendula Deep Essence Masks (100% off) Travel Size",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "essence",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -63640,7 +63490,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-mucin-serum-100-off-haru-expanded-1973",
     "name": "» Pink Aloe Mucin Serum (100% off) Refill Pack",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "serum",
     "ingredientIds": [
       "snail_mucin"
@@ -63668,7 +63518,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-facial-polish-cleanser-100-off-haru-expanded-1974",
     "name": "» Pink Aloe Facial Polish Cleanser (100% off) Duo Set",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -63694,7 +63544,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-pink-capsule-overnight-gel-mask-100-off-haru-expanded-1975",
     "name": "» TXA Pink Capsule Overnight Gel Mask (100% off) Glow Edition",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -63720,7 +63570,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-facial-cotton-pads-100-off-haru-expanded-1976",
     "name": "» [GIFT] Facial Cotton Pads (100% off) Barrier Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -63746,7 +63596,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-facial-cotton-pads-haru-expanded-1977",
     "name": "Facial Cotton Pads Sensitive Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -63772,7 +63622,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-a-c-e-vita-kojic-brightening-serum-haru-expanded-1978",
     "name": "A.C.E Vita Kojic Brightening Serum Hydration Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "essence",
     "ingredientIds": [
       "vitamin_c",
@@ -63808,7 +63658,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-a-c-e-mugwort-centella-calming-serum-haru-expanded-1979",
     "name": "A.C.E Mugwort Centella Calming Serum Daily Care",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "essence",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -63845,7 +63695,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-quick-dry-pore-tightening-clay-mask-100-off-haru-expanded-1980",
     "name": "» Carrotene IPMP™ Quick Dry Pore Tightening Clay Mask (100% off) Night Care",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -63873,7 +63723,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-carrotene-ipmp-calming-hydrating-sheet-mask-1ea-100-off-haru-expanded-1981",
     "name": "» [GIFT] Carrotene IPMP™ Calming & Hydrating Sheet Mask 1EA (100% off) Routine Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "sheet-mask",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -63930,7 +63780,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-carrotene-ipmp-exfoliating-body-wash-100-off-haru-expanded-1983",
     "name": "» [GIFT] Carrotene IPMP™ Exfoliating Body Wash (100% off) Refill Pack",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -63956,7 +63806,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-pink-glow-skincare-full-set-haru-expanded-1984",
     "name": "TXA Pink Glow Skincare Full Set Duo Set",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -63994,7 +63844,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-vitamin-c-soothing-brightening-toner-100-off-haru-expanded-1985",
     "name": "» Pink Aloe Vitamin C Soothing & Brightening Toner (100% off) Glow Edition",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -64025,7 +63875,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-calming-hydrating-sheet-mask-100-off-haru-expanded-1986",
     "name": "» Carrotene IPMP™ Calming & Hydrating Sheet Mask (100% off) Barrier Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "sheet-mask",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -64056,7 +63906,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-viral-heart-cleansing-puff-100-off-haru-expanded-1987",
     "name": "» [GIFT] Viral Heart Cleansing Puff (100% off) Sensitive Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -64082,7 +63932,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-niacinamide-toning-shot-99-spicule-serum-haru-expanded-1988",
     "name": "TXA Niacinamide Toning Shot 99 Spicule Serum Hydration Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide"
@@ -64117,7 +63967,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-niacinamide-99-pink-milky-toner-haru-expanded-1989",
     "name": "TXA+Niacinamide 99 Pink Milky Toner Daily Care",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -64153,7 +64003,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-niacinamide-99-overnight-wrapping-mask-haru-expanded-1990",
     "name": "TXA Niacinamide 99 Overnight Wrapping Mask Night Care",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -64190,7 +64040,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-pink-capsule-overnight-gel-mask-haru-expanded-1991",
     "name": "TXA Pink Capsule Overnight Gel Mask Routine Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -64227,7 +64077,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-niacinamide-99-pore-care-pink-bubble-gum-deep-cleanser-haru-expanded-1992",
     "name": "TXA Niacinamide 99 Pore Care Pink Bubble Gum Deep Cleanser Travel Size",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -64266,7 +64116,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-shower-loofah-haru-expanded-1993",
     "name": "Shower Loofah Refill Pack",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -64293,7 +64143,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-heart-shaped-facial-cleansing-sponge-haru-expanded-1994",
     "name": "Heart-Shaped Facial Cleansing Sponge Duo Set",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha"
@@ -64324,7 +64174,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-viral-heart-cleansing-puff-haru-expanded-1995",
     "name": "Viral Heart Cleansing Puff Glow Edition",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -64350,7 +64200,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-mucin-serum-haru-expanded-1996",
     "name": "Pink Aloe Mucin Serum Barrier Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -64388,7 +64238,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-carrotene-ipmp-calming-hydrating-sheet-mask-1ea-haru-expanded-1997",
     "name": "Carrotene IPMP™ Calming & Hydrating Sheet Mask 1EA Sensitive Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -64426,7 +64276,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-carrotene-ipmp-calming-hydrating-sheet-mask-haru-expanded-1998",
     "name": "Carrotene IPMP™ Calming & Hydrating Sheet Mask Hydration Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -64542,7 +64392,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-instant-trouble-soothing-duo-haru-expanded-2001",
     "name": "Pink Aloe Instant Trouble Soothing Duo Routine Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -64581,7 +64431,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-vitamin-c-soothing-brightening-toner-haru-expanded-2002",
     "name": "Pink Aloe Vitamin C Soothing & Brightening Toner Travel Size",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [
       "retinol",
@@ -64620,7 +64470,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-facial-polish-cleanser-haru-expanded-2003",
     "name": "Pink Aloe Facial Polish Cleanser Refill Pack",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -64659,7 +64509,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-80-artemisia-hydrating-duo-haru-expanded-2004",
     "name": "80% Artemisia Hydrating Duo Duo Set",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -64724,7 +64574,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-glow-booster-mask-duo-haru-expanded-2006",
     "name": "Glow Booster Mask Duo Barrier Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -64762,7 +64612,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-calendula-dew-glow-set-haru-expanded-2007",
     "name": "Calendula Dew Glow Set Sensitive Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -64801,7 +64651,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-trouble-double-cleansing-duo-haru-expanded-2008",
     "name": "Trouble Double Cleansing Duo Hydration Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -64839,7 +64689,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-deep-cleansing-microfiber-facial-puff-haru-expanded-2009",
     "name": "Deep Cleansing Microfiber Facial Puff Daily Care",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -64872,7 +64722,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-quick-dry-pore-tightening-clay-mask-haru-expanded-2010",
     "name": "Carrotene IPMP™ Quick Dry Pore Tightening Clay Mask Night Care",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -64907,7 +64757,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-kny-free-gift-20-vitamin-serum-expires-april-haru-expanded-2011",
     "name": "20% Vitamin Serum(expires April) Routine Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -64985,7 +64835,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-korean-glass-skin-set-haru-expanded-2013",
     "name": "Korean Glass Skin SET Refill Pack",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c",
@@ -65024,7 +64874,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pore-fect-set-haru-expanded-2014",
     "name": "Pore-fect SET Duo Set",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -65083,7 +64933,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-mini-carrotene-ipmp-hydromelt-cleansing-balm-10ml-haru-expanded-2016",
     "name": "MINI Carrotene IPMP™ Hydromelt Cleansing Balm _ 10ml Barrier Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -65118,7 +64968,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-free-carrotene-ipmp-hydromelt-cleansing-balm-haru-expanded-2017",
     "name": "Carrotene IPMP™ Hydromelt Cleansing Balm Sensitive Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -65153,7 +65003,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-we-carrot-bout-you-shower-loofah-haru-expanded-2018",
     "name": "We Carrot 'bout You Shower Loofah Hydration Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -65180,7 +65030,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-exfoliating-body-wash-haru-expanded-2019",
     "name": "Carrotene IPMP™ Exfoliating Body Wash Daily Care",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -65218,7 +65068,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrot-ddicted-full-set-haru-expanded-2020",
     "name": "Carrot-ddicted Full Set Night Care",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c",
@@ -65257,7 +65107,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-hydromelt-cleansing-balm-haru-expanded-2021",
     "name": "Carrotene IPMP™ Hydromelt Cleansing Balm Routine Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -65290,7 +65140,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-instant-calming-serum-pads-haru-expanded-2022",
     "name": "Carrotene IPMP™ Instant Calming Serum Pads Travel Size",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [
       "vitamin_c",
@@ -65328,7 +65178,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-pimple-stopper-haru-expanded-2023",
     "name": "Carrotene Pimple Stopper Refill Pack",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -65366,8 +65216,8 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "aprilskin-us-free-calendula-peel-off-mask-mini-15ml-haru-expanded-2024",
-    "name": "(FREE) Calendula Peel Off Mask Mini (15ml) Duo Set",
-    "brand": "APRILSKIN US",
+    "name": "Calendula Peel Off Mask Mini (15ml) Duo Set",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -65404,7 +65254,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-calming-hydrating-sheet-mask-haru-expanded-2025",
     "name": "Carrotene IPMP™ Calming & Hydrating Sheet Mask Glow Edition",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -65442,7 +65292,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-clearing-solution-haru-expanded-2026",
     "name": "Carrotene IPMP™ Clearing Solution Barrier Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -65559,7 +65409,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-40-collagen-peptide-plumping-serum-haru-expanded-2029",
     "name": "40% Collagen Peptide Plumping Serum Daily Care",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -65754,7 +65604,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-calendula-10-pha-aha-resurfacing-serum-haru-expanded-2034",
     "name": "Calendula 10% PHA+AHA Resurfacing Serum Duo Set",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-gel",
     "ingredientIds": [
       "vitamin_c",
@@ -65793,7 +65643,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-artemisia-squalane-hydra-gel-cream-haru-expanded-2035",
     "name": "Artemisia Squalane Hydra Gel Cream Glow Edition",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "sleeping-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -65871,7 +65721,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-artemisia-rice-toner-haru-expanded-2037",
     "name": "Artemisia Rice Toner Sensitive Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [
       "vitamin_c",
@@ -65909,7 +65759,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "aprilskin-us-3-layer-cotton-pads-haru-expanded-2038",
     "name": "3-Layer Cotton Pads Hydration Edit",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -70762,7 +70612,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-pdrn-pink-collagen-volume-multi-balm-10g-double-pack-2-haru-expanded-2181",
-    "name": "*Special Price* 2EA [Medicube] PDRN Pink Collagen Volume Multi Balm 10g Double Pack (2ea) Routine Edit",
+    "name": "2EA [Medicube] PDRN Pink Collagen Volume Multi Balm 10g Double Pack (2ea) Routine Edit",
     "brand": "MEDICUBE",
     "category": "eye-cream",
     "ingredientIds": [
@@ -70796,7 +70646,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "centellian24-special-price-2ea-centellian24-madeca-cream-time-reverse-50ml-double-pack-2ea-haru-expanded-2182",
-    "name": "*Special Price* 2EA [Centellian24] Madeca Cream Time Reverse 50ml Double Pack (2ea) Travel Size",
+    "name": "2EA [Centellian24] Madeca Cream Time Reverse 50ml Double Pack (2ea) Travel Size",
     "brand": "Centellian24",
     "category": "cleanser",
     "ingredientIds": [
@@ -70832,7 +70682,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-2ea-skin1004-madagascar-centella-hyalu-cica-water-fit-sun-serum-uv-haru-expanded-2183",
-    "name": "*Special Price* 2EA [SKIN1004] Madagascar Centella Hyalu-Cica Water-Fit Sun Serum UV 50ml Double Pack (2ea) Refill Pack",
+    "name": "2EA [SKIN1004] Madagascar Centella Hyalu-Cica Water-Fit Sun Serum UV 50ml Double Pack (2ea) Refill Pack",
     "brand": "SKIN1004",
     "category": "serum",
     "ingredientIds": [
@@ -70868,7 +70718,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-deep-vita-a-retinol-serum-30ml-double-pack-2ea-haru-expanded-2184",
-    "name": "*Special Price* 2EA [Medicube] Deep Vita A Retinol Serum 30ml Double Pack (2ea) Duo Set",
+    "name": "2EA [Medicube] Deep Vita A Retinol Serum 30ml Double Pack (2ea) Duo Set",
     "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
@@ -70900,7 +70750,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-zero-pore-pad-2-0-70ea-double-pack-2ea-haru-expanded-2185",
-    "name": "*Special Price* 2EA [Medicube] Zero Pore Pad 2.0 (70ea) Double Pack (2ea) Glow Edition",
+    "name": "2EA [Medicube] Zero Pore Pad 2.0 (70ea) Double Pack (2ea) Glow Edition",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -70939,7 +70789,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "lilyeve-special-price-2ea-lilyeve-grow-turn-ampoule-100ml-double-pack-2ea-haru-expanded-2186",
-    "name": "*Special Price* 2EA [lilyeve] Grow:Turn Ampoule 100ml Double Pack (2ea) Barrier Edit",
+    "name": "2EA [lilyeve] Grow:Turn Ampoule 100ml Double Pack (2ea) Barrier Edit",
     "brand": "lilyeve",
     "category": "essence",
     "ingredientIds": [
@@ -70969,7 +70819,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-vitamin-c-boosting-serum-30ml-double-pack-2ea-haru-expanded-2187",
-    "name": "*Special Price* 2EA [Dr. Althea] Vitamin C Boosting Serum 30ml Double Pack (2ea) Sensitive Edit",
+    "name": "2EA [Dr. Althea] Vitamin C Boosting Serum 30ml Double Pack (2ea) Sensitive Edit",
     "brand": "Dr.Althea",
     "category": "peeling",
     "ingredientIds": [
@@ -71006,7 +70856,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-retinol-flat-iron-eye-roller-25ml-double-pack-2ea-haru-expanded-2188",
-    "name": "*Special Price* 2EA [Dr.Althea] Retinol Flat Iron Eye Roller 25ml Double Pack (2ea) Hydration Edit",
+    "name": "2EA [Dr.Althea] Retinol Flat Iron Eye Roller 25ml Double Pack (2ea) Hydration Edit",
     "brand": "Dr.Althea",
     "category": "serum",
     "ingredientIds": [
@@ -71040,7 +70890,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-renewal-345-relief-cream-50ml-double-pack-2ea-haru-expanded-2189",
-    "name": "*Special Price* 2EA [Dr. Althea] *renewal* 345 Relief Cream 50ml Double Pack (2ea) Daily Care",
+    "name": "2EA [Dr. Althea] 345 Relief Cream 50ml Double Pack (2ea) Daily Care",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -71077,7 +70927,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-147-barrier-cream-50ml-double-pack-2ea-haru-expanded-2190",
-    "name": "*Special Price* 2EA [Dr. Althea] 147 Barrier Cream 50ml Double Pack (2ea) Night Care",
+    "name": "2EA [Dr. Althea] 147 Barrier Cream 50ml Double Pack (2ea) Night Care",
     "brand": "Dr.Althea",
     "category": "peeling",
     "ingredientIds": [
@@ -71116,7 +70966,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-2ea-celimax-the-vita-a-retinal-shot-tightening-booster-15ml-double-p-haru-expanded-2191",
-    "name": "*Special Price* 2EA [celimax] THE Vita-A Retinal Shot Tightening Booster 15ml Double Pack (2ea) Routine Edit",
+    "name": "2EA [celimax] THE Vita-A Retinal Shot Tightening Booster 15ml Double Pack (2ea) Routine Edit",
     "brand": "celimax",
     "category": "serum",
     "ingredientIds": [
@@ -71149,7 +70999,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-2ea-celimax-noni-acne-bubble-cleanser-155ml-double-pack-2ea-haru-expanded-2192",
-    "name": "*Special Price* 2EA [celimax] Noni Acne Bubble Cleanser 155ml Double Pack (2ea) Travel Size",
+    "name": "2EA [celimax] Noni Acne Bubble Cleanser 155ml Double Pack (2ea) Travel Size",
     "brand": "celimax",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -71187,7 +71037,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-2ea-anua-niacinamide-10-txa-4-serum-30ml-double-pack-2ea-haru-expanded-2193",
-    "name": "*Special Price* 2EA [Anua] Niacinamide 10% + TXA 4% Serum 30ml Double Pack (2ea) Refill Pack",
+    "name": "2EA [Anua] Niacinamide 10% + TXA 4% Serum 30ml Double Pack (2ea) Refill Pack",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -71289,7 +71139,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-2ea-anua-azelaic-acid-10-hyaluron-redness-soothing-serum-30ml-double-pa-haru-expanded-2196",
-    "name": "*Special Price* 2EA [Anua] Azelaic Acid 10 Hyaluron Redness Soothing Serum 30ml Double Pack (2ea) Barrier Edit",
+    "name": "2EA [Anua] Azelaic Acid 10 Hyaluron Redness Soothing Serum 30ml Double Pack (2ea) Barrier Edit",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -71324,7 +71174,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-2ea-arencia-retinal-booster-shot-30ml-double-pack-2ea-haru-expanded-2197",
-    "name": "*Special Price* 2EA [Arencia] Retinal Booster Shot 30ml Double Pack (2ea) Sensitive Edit",
+    "name": "2EA [Arencia] Retinal Booster Shot 30ml Double Pack (2ea) Sensitive Edit",
     "brand": "ARENCIA",
     "category": "serum",
     "ingredientIds": [
@@ -71362,7 +71212,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-2ea-arencia-vitamin-c-booster-shot-30ml-double-pack-2ea-haru-expanded-2198",
-    "name": "*Special Price* 2EA [Arencia] Vitamin C Booster Shot 30ml Double Pack (2ea) Hydration Edit",
+    "name": "2EA [Arencia] Vitamin C Booster Shot 30ml Double Pack (2ea) Hydration Edit",
     "brand": "ARENCIA",
     "category": "peeling",
     "ingredientIds": [
@@ -71468,7 +71318,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "kaine-clearance-kaine-rosemary-aha-night-serum-30ml-haru-expanded-2201",
-    "name": "*CLEARANCE*[KAINE] Rosemary AHA Night Serum 30ml Routine Edit",
+    "name": "[KAINE] Rosemary AHA Night Serum 30ml Routine Edit",
     "brand": "KAINE",
     "category": "peeling",
     "ingredientIds": [
@@ -71573,7 +71423,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-jumiso-niacinamide-20-serum-sample-1ml-2ea-haru-expanded-2204",
-    "name": "FREE GIFT [Jumiso] Niacinamide 20 Serum Sample 1ml (2ea) Duo Set",
+    "name": "[Jumiso] Niacinamide 20 Serum Sample 1ml (2ea) Duo Set",
     "brand": "free",
     "category": "serum",
     "ingredientIds": [
@@ -71726,7 +71576,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renew-soonjung-2x-barrier-intensive-cream-60ml-haru-expanded-2209",
-    "name": "*renew* SoonJung 2x Barrier Intensive Cream 60ml Daily Care",
+    "name": "SoonJung 2x Barrier Intensive Cream 60ml Daily Care",
     "brand": "ETUDE",
     "category": "peeling",
     "ingredientIds": [
@@ -71792,7 +71642,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-skin1004-madagascar-centella-light-cleansing-oil-30ml-haru-expanded-2211",
-    "name": "FREE GIFT [SKIN1004] Madagascar Centella Light Cleansing Oil 30ml Routine Edit",
+    "name": "[SKIN1004] Madagascar Centella Light Cleansing Oil 30ml Routine Edit",
     "brand": "free",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -71821,7 +71671,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-etude-0-2mm-therapy-air-sheet-mask-green-tea-haru-expanded-2212",
-    "name": "FREE GIFT [ETUDE] 0.2mm Therapy Air Sheet Mask #Green Tea Travel Size",
+    "name": "[ETUDE] 0.2mm Therapy Air Sheet Mask #Green Tea Travel Size",
     "brand": "free",
     "category": "sheet-mask",
     "ingredientIds": [
@@ -71849,7 +71699,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "axis-y-clearance-axis-y-spot-the-difference-blemish-treatment-15ml-haru-expanded-2213",
-    "name": "*CLEARANCE* [AXIS-Y] Spot the Difference Blemish Treatment 15ml Refill Pack",
+    "name": "[AXIS-Y] Spot the Difference Blemish Treatment 15ml Refill Pack",
     "brand": "AXIS-Y",
     "category": "peeling",
     "ingredientIds": [
@@ -71914,7 +71764,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-heimish-all-clean-balm-blister-5ml-haru-expanded-2215",
-    "name": "FREE GIFT [Heimish] All Clean Balm Blister 5ml Glow Edition",
+    "name": "[Heimish] All Clean Balm Blister 5ml Glow Edition",
     "brand": "free",
     "category": "cleansing-balm",
     "ingredientIds": [],
@@ -71940,7 +71790,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "aromatica-special-price-aromatica-rosemary-scalp-intensive-care-set-shampoo-180ml-root-enh-haru-expanded-2216",
-    "name": "*Special Price* [Aromatica] Rosemary Scalp Intensive Care Set (Shampoo 180ml + Root Enhancer) Barrier Edit",
+    "name": "[Aromatica] Rosemary Scalp Intensive Care Set (Shampoo 180ml + Root Enhancer) Barrier Edit",
     "brand": "AROMATICA",
     "category": "serum",
     "ingredientIds": [],
@@ -71972,7 +71822,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "seapuri-special-price-2ea-seapuri-scalpy-hair-serum-20ml-double-pack-2ea-haru-expanded-2217",
-    "name": "*Special Price* 2EA [Seapuri] Scalpy Hair Serum 20ml Double Pack (2ea) Sensitive Edit",
+    "name": "2EA [Seapuri] Scalpy Hair Serum 20ml Double Pack (2ea) Sensitive Edit",
     "brand": "Seapuri",
     "category": "peeling",
     "ingredientIds": [
@@ -72006,7 +71856,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-anua-8-hyaluronic-acid-moisturizing-cleanser-duo-foam-gel-cleanser-haru-expanded-2218",
-    "name": "*Special Price* [Anua] 8 Hyaluronic Acid Moisturizing Cleanser Duo (Foam + Gel Cleanser) Hydration Edit",
+    "name": "[Anua] 8 Hyaluronic Acid Moisturizing Cleanser Duo (Foam + Gel Cleanser) Hydration Edit",
     "brand": "Anua",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -72041,7 +71891,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-arencia-pore-tightening-skin-reset-set-green-rice-mochi-cleanser-ret-haru-expanded-2219",
-    "name": "*Special Price* [Arencia] Pore-Tightening Skin Reset Set (Green Rice Mochi Cleanser + Retinal Booster Shot) Daily Care",
+    "name": "[Arencia] Pore-Tightening Skin Reset Set (Green Rice Mochi Cleanser + Retinal Booster Shot) Daily Care",
     "brand": "ARENCIA",
     "category": "cleanser",
     "ingredientIds": [
@@ -72080,7 +71930,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "round-lab-special-price-round-lab-1025-dokdo-pore-reset-cleanser-set-cleansing-tissue-clea-haru-expanded-2220",
-    "name": "*Special Price* [ROUND LAB] 1025 Dokdo Pore-Reset Cleanser Set (Cleansing Tissue + Cleansing foam) Night Care",
+    "name": "[ROUND LAB] 1025 Dokdo Pore-Reset Cleanser Set (Cleansing Tissue + Cleansing foam) Night Care",
     "brand": "ROUND LAB",
     "category": "cleansing-water",
     "ingredientIds": [
@@ -72115,7 +71965,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-celimax-noni-pore-glow-skincare-set-noni-bubble-cleanser-noni-energy-haru-expanded-2221",
-    "name": "*Special Price* [celimax] Noni Pore & Glow Skincare Set (Noni Bubble Cleanser + Noni Energy Ampoule) Routine Edit",
+    "name": "[celimax] Noni Pore & Glow Skincare Set (Noni Bubble Cleanser + Noni Energy Ampoule) Routine Edit",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -72297,7 +72147,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "cosrx-special-price-2ea-cosrx-advanced-snail-96-mucin-power-essence-100ml-2ea-haru-expanded-2226",
-    "name": "*Special Price* 2EA [COSRX] Advanced Snail 96 Mucin Power Essence 100ml (2ea) Barrier Edit",
+    "name": "2EA [COSRX] Advanced Snail 96 Mucin Power Essence 100ml (2ea) Barrier Edit",
     "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
@@ -72332,7 +72182,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "axis-y-special-price-moida-set-axis-y-dark-spot-blemish-trio-haru-expanded-2227",
-    "name": "*Special Price* MOIDA SET [Axis-y] Dark Spot & Blemish Trio Sensitive Edit",
+    "name": "MOIDA SET [Axis-y] Dark Spot & Blemish Trio Sensitive Edit",
     "brand": "AXIS-Y",
     "category": "peeling",
     "ingredientIds": [
@@ -72591,7 +72441,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-fig-gelato-pack-cleanser-120g-haru-expanded-2235",
-    "name": "*renewal* Fig Gelato Pack Cleanser 120g Glow Edition",
+    "name": "Fig Gelato Pack Cleanser 120g Glow Edition",
     "brand": "I'm From",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -72623,7 +72473,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-apricot-sherbet-pack-cleanser-120g-haru-expanded-2236",
-    "name": "*renewal* Apricot Sherbet Pack Cleanser 120g Barrier Edit",
+    "name": "Apricot Sherbet Pack Cleanser 120g Barrier Edit",
     "brand": "I'm From",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -73240,7 +73090,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skin1004-skin1004-mini-madagascar-centella-soothing-cream-30ml-haru-expanded-2256",
-    "name": "*mini* Madagascar Centella Soothing Cream 30ml Barrier Edit",
+    "name": "Madagascar Centella Soothing Cream 30ml Barrier Edit",
     "brand": "SKIN1004",
     "category": "moisturizer",
     "ingredientIds": [
@@ -73274,7 +73124,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "cosrx-cosrx-mini-pure-fit-cica-cleanser-50ml-haru-expanded-2257",
-    "name": "*mini* Pure Fit Cica Cleanser 50ml Sensitive Edit",
+    "name": "Pure Fit Cica Cleanser 50ml Sensitive Edit",
     "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -73409,7 +73259,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renew-soonjung-ph-5-5-relief-toner-350ml-haru-expanded-2261",
-    "name": "*renew* SoonJung pH 5.5 Relief Toner 350ml Routine Edit",
+    "name": "SoonJung pH 5.5 Relief Toner 350ml Routine Edit",
     "brand": "ETUDE",
     "category": "toner",
     "ingredientIds": [
@@ -73444,7 +73294,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "innisfree-clearance-innisfree-green-tea-amino-cleansing-water-320ml-haru-expanded-2262",
-    "name": "*CLEARANCE*[Innisfree] Green Tea Amino Cleansing Water 320ml Travel Size",
+    "name": "[Innisfree] Green Tea Amino Cleansing Water 320ml Travel Size",
     "brand": "Innisfree",
     "category": "cleansing-water",
     "ingredientIds": [
@@ -73478,7 +73328,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "elizavecca-clearance-elizavecca-milky-piggy-bb-cream-50ml-haru-expanded-2263",
-    "name": "*CLEARANCE*[Elizavecca] Milky Piggy BB Cream 50ml Refill Pack",
+    "name": "[Elizavecca] Milky Piggy BB Cream 50ml Refill Pack",
     "brand": "Elizavecca",
     "category": "sunscreen",
     "ingredientIds": [
@@ -73775,7 +73625,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "derma-b-derma-b-renewal-ceramd-repair-cream-430ml-haru-expanded-2272",
-    "name": "*renewal* CeraMD Repair Cream 430ml Travel Size",
+    "name": "CeraMD Repair Cream 430ml Travel Size",
     "brand": "Derma-B",
     "category": "lip-care",
     "ingredientIds": [
@@ -73877,7 +73727,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-fermentation-essence-100ml-haru-expanded-2275",
-    "name": "*renew* Fermentation Essence 100ml Glow Edition",
+    "name": "Fermentation Essence 100ml Glow Edition",
     "brand": "Benton",
     "category": "essence",
     "ingredientIds": [],
@@ -73904,7 +73754,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-blemish-patch-dream-daisy-haru-expanded-2276",
     "name": "Cinnamoroll Blemish Patch #Dream Daisy Barrier Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [
       "green_tea"
@@ -74028,7 +73878,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-5ea-dr-althea-345-relief-cream-5ea-bundle-50ml-5-haru-expanded-2280",
-    "name": "*Special Price* 5EA [Dr.Althea] 345 Relief Cream 5EA Bundle (50ml*5) Night Care",
+    "name": "5EA [Dr.Althea] 345 Relief Cream 5EA Bundle (50ml*5) Night Care",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -74067,7 +73917,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "jumiso-special-price-2ea-jumiso-niacinamide-20-serum-40ml-2ea-haru-expanded-2281",
-    "name": "*Special Price* 2EA [Jumiso] Niacinamide 20 Serum 40ml (2ea) Routine Edit",
+    "name": "2EA [Jumiso] Niacinamide 20 Serum 40ml (2ea) Routine Edit",
     "brand": "Jumiso",
     "category": "cleanser",
     "ingredientIds": [
@@ -74104,7 +73954,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "biodance-special-price-2packs-biodance-bio-collagen-real-deep-mask-4ea-2-haru-expanded-2282",
-    "name": "*Special Price* 2PACKS [Biodance] Bio-Collagen Real Deep Mask (4ea*2) Travel Size",
+    "name": "2PACKS [Biodance] Bio-Collagen Real Deep Mask (4ea*2) Travel Size",
     "brand": "Biodance",
     "category": "mask",
     "ingredientIds": [
@@ -74141,7 +73991,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "biodance-special-price-2pack-biodance-rejuvenating-caviar-pdrn-real-deep-mask-4ea-2-haru-expanded-2283",
-    "name": "*Special Price* 2PACK [Biodance] Rejuvenating Caviar PDRN Real Deep Mask (4ea*2) Refill Pack",
+    "name": "2PACK [Biodance] Rejuvenating Caviar PDRN Real Deep Mask (4ea*2) Refill Pack",
     "brand": "Biodance",
     "category": "mask",
     "ingredientIds": [
@@ -74212,7 +74062,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-cica-calm-acne-set-haru-expanded-2285",
-    "name": "*Special Price* MOIDA SET [MOIDA] Cica Calm Acne Set Glow Edition",
+    "name": "MOIDA SET [MOIDA] Cica Calm Acne Set Glow Edition",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -74249,7 +74099,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-barrier-acne-set-haru-expanded-2286",
-    "name": "*Special Price* MOIDA SET [MOIDA] Barrier Acne Set Barrier Edit",
+    "name": "MOIDA SET [MOIDA] Barrier Acne Set Barrier Edit",
     "brand": "MOIDA",
     "category": "cleansing-gel",
     "ingredientIds": [
@@ -74287,7 +74137,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-bha-clear-start-set-haru-expanded-2287",
-    "name": "*Special Price* MOIDA SET [MOIDA] BHA Clear Start Set Sensitive Edit",
+    "name": "MOIDA SET [MOIDA] BHA Clear Start Set Sensitive Edit",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -74323,7 +74173,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-mens-age-defense-trio-haru-expanded-2288",
-    "name": "*Special Price* MOIDA SET [MOIDA] Mens Age Defense Trio Hydration Edit",
+    "name": "MOIDA SET [MOIDA] Mens Age Defense Trio Hydration Edit",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -74362,7 +74212,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-men-s-dry-relief-duo-haru-expanded-2289",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Dry Relief Duo Daily Care",
+    "name": "MOIDA SET [MOIDA] Men's Dry Relief Duo Daily Care",
     "brand": "MOIDA",
     "category": "cleansing-gel",
     "ingredientIds": [
@@ -74397,7 +74247,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-men-s-daily-essential-trio-haru-expanded-2290",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Daily Essential Trio Night Care",
+    "name": "MOIDA SET [MOIDA] Men's Daily Essential Trio Night Care",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -74469,7 +74319,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "baren-baren-renewal-shea-butter-sleeping-heel-patch-10ea-haru-expanded-2292",
-    "name": "*renewal* Shea Butter Sleeping Heel Patch (10ea) Travel Size",
+    "name": "Shea Butter Sleeping Heel Patch (10ea) Travel Size",
     "brand": "baren",
     "category": "peeling",
     "ingredientIds": [],
@@ -74607,7 +74457,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-special-price-moida-set-numbuzin-no-9-nad-lifting-routine-set-haru-expanded-2296",
-    "name": "*Special Price* MOIDA SET [Numbuzin] No.9 NAD Lifting Routine Set Barrier Edit",
+    "name": "MOIDA SET [Numbuzin] No.9 NAD Lifting Routine Set Barrier Edit",
     "brand": "Numbuzin",
     "category": "toner",
     "ingredientIds": [
@@ -74710,7 +74560,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-white-truffle-body-glow-set-haru-expanded-2299",
-    "name": "*Special Price* MOIDA SET [MOIDA] White Truffle Body Glow Set Daily Care",
+    "name": "MOIDA SET [MOIDA] White Truffle Body Glow Set Daily Care",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -74741,7 +74591,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-floral-body-duo-haru-expanded-2300",
-    "name": "*Special Price* MOIDA SET [MOIDA] Floral Body Duo Night Care",
+    "name": "MOIDA SET [MOIDA] Floral Body Duo Night Care",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -74770,7 +74620,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-plump-smooth-duo-haru-expanded-2301",
-    "name": "*Special Price* MOIDA SET [MOIDA] Plump & Smooth Duo Routine Edit",
+    "name": "MOIDA SET [MOIDA] Plump & Smooth Duo Routine Edit",
     "brand": "MOIDA",
     "category": "peeling",
     "ingredientIds": [
@@ -74806,7 +74656,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-tocobo-renew-bio-watery-sun-cream-spf50-40ml-haru-expanded-2302",
-    "name": "FREE GIFT [TOCOBO] *renew* Bio Watery Sun Cream SPF50 40ml Travel Size",
+    "name": "[TOCOBO] *renew* Bio Watery Sun Cream SPF50 40ml Travel Size",
     "brand": "free",
     "category": "sunscreen",
     "ingredientIds": [
@@ -75017,7 +74867,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-1-deal-tocobo-bio-watery-sun-cream-spf50-40ml-first-purchase-only-haru-expanded-2309",
-    "name": "*$1 Deal* [TOCOBO] Bio Watery Sun Cream SPF50 40ml (First Purchase Only) Daily Care",
+    "name": "[TOCOBO] Bio Watery Sun Cream SPF50 40ml (First Purchase Only) Daily Care",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -75183,7 +75033,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-medicube-pdrn-pink-skincare-duo-set-pink-peptide-serum-pink-collage-haru-expanded-2314",
-    "name": "*Special Price* [Medicube] PDRN Pink Skincare Duo Set (Pink Peptide Serum + Pink Collagen Capsule Cream) Duo Set",
+    "name": "[Medicube] PDRN Pink Skincare Duo Set (Pink Peptide Serum + Pink Collagen Capsule Cream) Duo Set",
     "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
@@ -75291,7 +75141,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-moida-set-tocobo-travel-ready-calming-set-skincare-kit-sun-stick-lip-haru-expanded-2317",
-    "name": "*Special Price* MOIDA SET [TOCOBO] Travel-Ready Calming Set (Skincare Kit + Sun Stick + Lip Mask) Sensitive Edit",
+    "name": "MOIDA SET [TOCOBO] Travel-Ready Calming Set (Skincare Kit + Sun Stick + Lip Mask) Sensitive Edit",
     "brand": "TOCOBO",
     "category": "cleanser",
     "ingredientIds": [
@@ -75383,7 +75233,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renewal-noni-moisture-balancing-toner-150ml-haru-expanded-2320",
-    "name": "*renewal* Noni Moisture Balancing Toner 150ml Night Care",
+    "name": "Noni Moisture Balancing Toner 150ml Night Care",
     "brand": "celimax",
     "category": "toner",
     "ingredientIds": [
@@ -75449,7 +75299,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-value-hair-revitalizing-routine-set-shampoo-treatment-haru-expanded-2322",
-    "name": "*Special Price* MOIDA SET [MOIDA] Value Hair Revitalizing Routine Set (Shampoo + Treatment + Oil) Travel Size",
+    "name": "MOIDA SET [MOIDA] Value Hair Revitalizing Routine Set (Shampoo + Treatment + Oil) Travel Size",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -75480,7 +75330,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-moida-set-purito-seoul-all-in-one-travel-set-skincare-kit-clean-haru-expanded-2323",
-    "name": "*Special Price* MOIDA SET [Purito Seoul] All-in-One Travel Set (Skincare Kit + Cleanser + Sunscreen) Refill Pack",
+    "name": "MOIDA SET [Purito Seoul] All-in-One Travel Set (Skincare Kit + Cleanser + Sunscreen) Refill Pack",
     "brand": "Purito Seoul",
     "category": "cleanser",
     "ingredientIds": [
@@ -75519,7 +75369,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-noni-travel-essentials-set-kit-bubble-cleanser-she-haru-expanded-2324",
-    "name": "*Special Price* MOIDA SET [celimax] Noni Travel Essentials Set (Kit + Bubble Cleanser + Sheet Mask 5ea) Duo Set",
+    "name": "MOIDA SET [celimax] Noni Travel Essentials Set (Kit + Bubble Cleanser + Sheet Mask 5ea) Duo Set",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -75557,7 +75407,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-moida-set-skin1004-madagascar-centella-travel-essentials-set-skinca-haru-expanded-2325",
-    "name": "*Special Price* MOIDA SET [SKIN1004] Madagascar Centella Travel Essentials Set (Skincare Kit + Sheet Mask 5ea) Glow Edition",
+    "name": "MOIDA SET [SKIN1004] Madagascar Centella Travel Essentials Set (Skincare Kit + Sheet Mask 5ea) Glow Edition",
     "brand": "SKIN1004",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -75591,7 +75441,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-3-texture-sun-care-set-sun-cream-sun-stick-sun-gel-haru-expanded-2326",
-    "name": "*Special Price* MOIDA SET [MOIDA] 3-Texture Sun Care Set (Sun Cream + Sun Stick + Sun Gel) Barrier Edit",
+    "name": "MOIDA SET [MOIDA] 3-Texture Sun Care Set (Sun Cream + Sun Stick + Sun Gel) Barrier Edit",
     "brand": "MOIDA",
     "category": "sun-stick",
     "ingredientIds": [
@@ -75630,7 +75480,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-best-of-k-beauty-sunscreen-trio-medicube-numbuzin-toco-haru-expanded-2327",
-    "name": "*Special Price* MOIDA SET [MOIDA] Best of K-Beauty Sunscreen Trio (Medicube + Numbuzin + TOCOBO) Sensitive Edit",
+    "name": "MOIDA SET [MOIDA] Best of K-Beauty Sunscreen Trio (Medicube + Numbuzin + TOCOBO) Sensitive Edit",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -75668,7 +75518,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-daily-hydrating-sunscreen-trio-skin1004-somebymi-melix-haru-expanded-2328",
-    "name": "*Special Price* MOIDA SET [MOIDA] Daily Hydrating Sunscreen Trio (Skin1004 + Somebymi + Melixir) Hydration Edit",
+    "name": "MOIDA SET [MOIDA] Daily Hydrating Sunscreen Trio (Skin1004 + Somebymi + Melixir) Hydration Edit",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -75706,7 +75556,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-aloe-bha-skin-toner-200ml-haru-expanded-2329",
-    "name": "*renew* Aloe Bha Skin Toner 200ml Daily Care",
+    "name": "Aloe Bha Skin Toner 200ml Daily Care",
     "brand": "Benton",
     "category": "toner",
     "ingredientIds": [
@@ -76779,7 +76629,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-acne-reset-set-haru-expanded-2362",
-    "name": "*Special Price* MOIDA SET [MOIDA] Acne Reset Set Travel Size",
+    "name": "MOIDA SET [MOIDA] Acne Reset Set Travel Size",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -76881,7 +76731,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "foodology-foodology-renewal-coleology-cut-pro-600mg-x-60tab-36g-haru-expanded-2365",
-    "name": "*renewal* Coleology Cut Pro 600mg x 60Tab (36g) Glow Edition",
+    "name": "Coleology Cut Pro 600mg x 60Tab (36g) Glow Edition",
     "brand": "Foodology",
     "category": "body",
     "ingredientIds": [
@@ -76911,7 +76761,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-body-dark-spot-repair-set-haru-expanded-2366",
-    "name": "*Special Price* MOIDA SET [MOIDA] Body Dark Spot Repair Set Barrier Edit",
+    "name": "MOIDA SET [MOIDA] Body Dark Spot Repair Set Barrier Edit",
     "brand": "MOIDA",
     "category": "toner-pad",
     "ingredientIds": [
@@ -77210,7 +77060,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-sun-care-anywhere-trio-set-haru-expanded-2375",
-    "name": "*Special Price* MOIDA SET [MOIDA] Sun Care Anywhere Trio Set Glow Edition",
+    "name": "MOIDA SET [MOIDA] Sun Care Anywhere Trio Set Glow Edition",
     "brand": "MOIDA",
     "category": "sunscreen",
     "ingredientIds": [
@@ -77243,7 +77093,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-viral-pore-minimizing-duo-set-haru-expanded-2376",
-    "name": "*Special Price* MOIDA SET [MOIDA] Viral Pore Minimizing Duo Set Barrier Edit",
+    "name": "MOIDA SET [MOIDA] Viral Pore Minimizing Duo Set Barrier Edit",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -77275,7 +77125,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-hyperpigmentation-fix-duo-set-haru-expanded-2377",
-    "name": "*Special Price* MOIDA SET [MOIDA] Hyperpigmentation Fix Duo Set Sensitive Edit",
+    "name": "MOIDA SET [MOIDA] Hyperpigmentation Fix Duo Set Sensitive Edit",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -77309,7 +77159,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-pdrn-skin-repair-set-haru-expanded-2378",
-    "name": "*Special Price* MOIDA SET [MOIDA] PDRN Skin Repair Set Hydration Edit",
+    "name": "MOIDA SET [MOIDA] PDRN Skin Repair Set Hydration Edit",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -77347,7 +77197,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-anti-aging-routine-set-haru-expanded-2379",
-    "name": "*Special Price* MOIDA SET [MOIDA] Anti-Aging Routine Set Daily Care",
+    "name": "MOIDA SET [MOIDA] Anti-Aging Routine Set Daily Care",
     "brand": "MOIDA",
     "category": "peeling",
     "ingredientIds": [
@@ -77385,7 +77235,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-turmeric-dark-spot-eraser-trio-set-haru-expanded-2380",
-    "name": "*Special Price* MOIDA SET [MOIDA] Turmeric Dark Spot Eraser Trio Set Night Care",
+    "name": "MOIDA SET [MOIDA] Turmeric Dark Spot Eraser Trio Set Night Care",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -77418,7 +77268,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-korean-beauty-for-advanced-results-set-haru-expanded-2381",
-    "name": "*Special Price* MOIDA SET [MOIDA] Korean Beauty for Advanced Results Set Routine Edit",
+    "name": "MOIDA SET [MOIDA] Korean Beauty for Advanced Results Set Routine Edit",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -77494,7 +77344,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-40-day-glass-skin-sheet-mask-ritual-medicube-sungboon-haru-expanded-2383",
-    "name": "*Special Price* MOIDA SET [MOIDA] 40-Day Glass Skin Sheet Mask Ritual (Medicube, Sungboon Editor, Seohaesol, Dr.Althea,  Refill Pack",
+    "name": "MOIDA SET [MOIDA] 40-Day Glass Skin Sheet Mask Ritual (Medicube, Sungboon Editor, Seohaesol, Dr.Althea, Refill Pack",
     "brand": "MOIDA",
     "category": "sheet-mask",
     "ingredientIds": [
@@ -77962,7 +77812,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "vt-cosmetics-vt-cosmetics-renewal-red-booster-reedle-shot-300-haru-expanded-2397",
-    "name": "*renewal* Red Booster Reedle Shot 300 Sensitive Edit",
+    "name": "Red Booster Reedle Shot 300 Sensitive Edit",
     "brand": "VT Cosmetics",
     "category": "essence",
     "ingredientIds": [
@@ -78029,7 +77879,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "nineless-nineless-renewal-molecule-clear-salicylic-acid-serum-30ml-haru-expanded-2399",
-    "name": "*renewal* Molecule-Clear Salicylic Acid Serum 30ml Daily Care",
+    "name": "Molecule-Clear Salicylic Acid Serum 30ml Daily Care",
     "brand": "NINELESS",
     "category": "peeling",
     "ingredientIds": [
@@ -78251,7 +78101,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-anti-hair-loss-care-duo-set-haru-expanded-2406",
-    "name": "*Special Price* MOIDA SET [MOIDA] Anti-Hair Loss Care Duo Set Barrier Edit",
+    "name": "MOIDA SET [MOIDA] Anti-Hair Loss Care Duo Set Barrier Edit",
     "brand": "MOIDA",
     "category": "ampoule",
     "ingredientIds": [
@@ -78733,7 +78583,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "ongredients-ongredients-renewal-skin-barrier-calming-lotion-ex-150ml-haru-expanded-2420",
-    "name": "*renewal* Skin Barrier Calming Lotion EX 150ml Night Care",
+    "name": "Skin Barrier Calming Lotion EX 150ml Night Care",
     "brand": "Ongredients",
     "category": "lotion",
     "ingredientIds": [
@@ -79287,7 +79137,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "frudia-frudia-renew-citrus-brightening-serum-50ml-haru-expanded-2437",
-    "name": "*renew* Citrus Brightening Serum 50ml Sensitive Edit",
+    "name": "Citrus Brightening Serum 50ml Sensitive Edit",
     "brand": "Frudia",
     "category": "peeling",
     "ingredientIds": [
@@ -79779,7 +79629,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-the-vita-a-retinal-booster-retinol-serum-set-haru-expanded-2451",
-    "name": "*Special Price* MOIDA SET [celimax] THE Vita-A Retinal Booster & Retinol Serum Set Routine Edit",
+    "name": "MOIDA SET [celimax] THE Vita-A Retinal Booster & Retinol Serum Set Routine Edit",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -79817,7 +79667,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "studio17-studio17-renew-pang-pang-triangle-puff-haru-expanded-2452",
-    "name": "*renew* Pang Pang Triangle Puff Travel Size",
+    "name": "Pang Pang Triangle Puff Travel Size",
     "brand": "Studio17",
     "category": "eye-cream",
     "ingredientIds": [],
@@ -82143,7 +81993,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "nesh-nesh-sachet-set-pomegranate-biome-shampoo-10ml-soy-biome-treatment-8ml-haru-expanded-2523",
-    "name": "*Sachet Set* Pomegranate Biome Shampoo 10ml + Soy Biome Treatment 8ml Refill Pack",
+    "name": "Pomegranate Biome Shampoo 10ml + Soy Biome Treatment 8ml Refill Pack",
     "brand": "nesh",
     "category": "hair",
     "ingredientIds": [],
@@ -82170,7 +82020,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-pochacco-hydrogel-under-eye-patches-1ea-haru-expanded-2524",
     "name": "Pochacco Hydrogel Under Eye Patches (1ea) Duo Set",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [
       "retinol",
@@ -82203,7 +82053,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-pompompurin-under-eye-patches-1ea-haru-expanded-2525",
     "name": "Pompompurin Under Eye Patches (1ea) Glow Edition",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [
       "vitamin_c",
@@ -82239,7 +82089,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-hydrogel-under-eye-patches-1ea-haru-expanded-2526",
     "name": "Cinnamoroll Hydrogel Under Eye Patches (1ea) Barrier Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -82266,7 +82116,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-miffy-hydrocolloid-patches-clear-as-day-haru-expanded-2527",
     "name": "Miffy Hydrocolloid Patches #Clear As Day! Sensitive Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [
       "green_tea"
@@ -82296,7 +82146,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-miffy-calming-cloud-hydrogel-under-eye-patches-haru-expanded-2528",
     "name": "Miffy Calming Cloud Hydrogel Under Eye Patches Hydration Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -82327,7 +82177,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-hydrogel-eye-patches-catch-some-zzz-s-3ea-haru-expanded-2529",
     "name": "Peanuts Hydrogel Eye Patches #Catch Some ZZZ's (3ea) Daily Care",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [
       "vitamin_c",
@@ -82361,7 +82211,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-smoothing-foot-mask-set-fresh-new-5ea-haru-expanded-2530",
     "name": "Peanuts Smoothing Foot Mask Set #Fresh & New (5ea) Night Care",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "ceramides"
@@ -82390,7 +82240,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-soothing-foot-mask-lavender-3ea-haru-expanded-2531",
     "name": "Soothing Foot Mask #Lavender (3ea) Routine Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c"
@@ -82420,7 +82270,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-moisture-foot-mask-almond-oil-3ea-haru-expanded-2532",
     "name": "Moisture Foot Mask #Almond Oil (3ea) Travel Size",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -82448,7 +82298,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-pdrn-pink-collagen-volume-multi-balm-10g-double-pack-2ea-bloomin-haru-expanded-2533",
-    "name": "*Special Price* 2EA [Medicube] PDRN Pink Collagen Volume Multi Balm 10g Double Pack (2ea) Refill Pack",
+    "name": "2EA [Medicube] PDRN Pink Collagen Volume Multi Balm 10g Double Pack (2ea) Refill Pack",
     "brand": "MEDICUBE",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -82482,7 +82332,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "centellian24-special-price-2ea-centellian24-madeca-cream-time-reverse-50ml-double-pack-2ea-bloomingk-haru-expanded-2534",
-    "name": "*Special Price* 2EA [Centellian24] Madeca Cream Time Reverse 50ml Double Pack (2ea) Duo Set",
+    "name": "2EA [Centellian24] Madeca Cream Time Reverse 50ml Double Pack (2ea) Duo Set",
     "brand": "Centellian24",
     "category": "cleanser",
     "ingredientIds": [
@@ -82517,7 +82367,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-2ea-skin1004-madagascar-centella-hyalu-cica-water-fit-sun-serum-uv-50ml-doubl-haru-expanded-2535",
-    "name": "*Special Price* 2EA [SKIN1004] Madagascar Centella Hyalu-Cica Water-Fit Sun Serum UV 50ml Double Pack (2ea) Glow Edition",
+    "name": "2EA [SKIN1004] Madagascar Centella Hyalu-Cica Water-Fit Sun Serum UV 50ml Double Pack (2ea) Glow Edition",
     "brand": "SKIN1004",
     "category": "serum",
     "ingredientIds": [
@@ -82552,7 +82402,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-deep-vita-a-retinol-serum-30ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2536",
-    "name": "*Special Price* 2EA [Medicube] Deep Vita A Retinol Serum 30ml Double Pack (2ea) Barrier Edit",
+    "name": "2EA [Medicube] Deep Vita A Retinol Serum 30ml Double Pack (2ea) Barrier Edit",
     "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
@@ -82585,7 +82435,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-zero-pore-pad-2-0-70ea-double-pack-2ea-bloomingkoco-com-haru-expanded-2537",
-    "name": "*Special Price* 2EA [Medicube] Zero Pore Pad 2.0 (70ea) Double Pack (2ea) Sensitive Edit",
+    "name": "2EA [Medicube] Zero Pore Pad 2.0 (70ea) Double Pack (2ea) Sensitive Edit",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -82622,7 +82472,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "lilyeve-special-price-2ea-lilyeve-grow-turn-ampoule-100ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2538",
-    "name": "*Special Price* 2EA [lilyeve] Grow:Turn Ampoule 100ml Double Pack (2ea) Hydration Edit",
+    "name": "2EA [lilyeve] Grow:Turn Ampoule 100ml Double Pack (2ea) Hydration Edit",
     "brand": "lilyeve",
     "category": "essence",
     "ingredientIds": [],
@@ -82650,7 +82500,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-vitamin-c-boosting-serum-30ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2539",
-    "name": "*Special Price* 2EA [Dr. Althea] Vitamin C Boosting Serum 30ml Double Pack (2ea) Daily Care",
+    "name": "2EA [Dr. Althea] Vitamin C Boosting Serum 30ml Double Pack (2ea) Daily Care",
     "brand": "Dr.Althea",
     "category": "peeling",
     "ingredientIds": [
@@ -82686,7 +82536,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-retinol-flat-iron-eye-roller-25ml-double-pack-2ea-bloomingkoco-haru-expanded-2540",
-    "name": "*Special Price* 2EA [Dr.Althea] Retinol Flat Iron Eye Roller 25ml Double Pack (2ea) Night Care",
+    "name": "2EA [Dr.Althea] Retinol Flat Iron Eye Roller 25ml Double Pack (2ea) Night Care",
     "brand": "Dr.Althea",
     "category": "serum",
     "ingredientIds": [
@@ -82720,7 +82570,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-renewal-345-relief-cream-50ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2541",
-    "name": "*Special Price* 2EA [Dr. Althea] *renewal* 345 Relief Cream 50ml Double Pack (2ea) Routine Edit",
+    "name": "2EA [Dr. Althea] 345 Relief Cream 50ml Double Pack (2ea) Routine Edit",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -82758,7 +82608,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-147-barrier-cream-50ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2542",
-    "name": "*Special Price* 2EA [Dr. Althea] 147 Barrier Cream 50ml Double Pack (2ea) Travel Size",
+    "name": "2EA [Dr. Althea] 147 Barrier Cream 50ml Double Pack (2ea) Travel Size",
     "brand": "Dr.Althea",
     "category": "peeling",
     "ingredientIds": [
@@ -82795,7 +82645,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-2ea-celimax-the-vita-a-retinal-shot-tightening-booster-15ml-double-pack-2ea-bl-haru-expanded-2543",
-    "name": "*Special Price* 2EA [celimax] THE Vita-A Retinal Shot Tightening Booster 15ml Double Pack (2ea) Refill Pack",
+    "name": "2EA [celimax] THE Vita-A Retinal Shot Tightening Booster 15ml Double Pack (2ea) Refill Pack",
     "brand": "celimax",
     "category": "serum",
     "ingredientIds": [
@@ -82828,7 +82678,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-2ea-celimax-noni-acne-bubble-cleanser-155ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2544",
-    "name": "*Special Price* 2EA [celimax] Noni Acne Bubble Cleanser 155ml Double Pack (2ea) Duo Set",
+    "name": "2EA [celimax] Noni Acne Bubble Cleanser 155ml Double Pack (2ea) Duo Set",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -82864,7 +82714,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-2ea-anua-niacinamide-10-txa-4-serum-30ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2545",
-    "name": "*Special Price* 2EA [Anua] Niacinamide 10% + TXA 4% Serum 30ml Double Pack (2ea) Glow Edition",
+    "name": "2EA [Anua] Niacinamide 10% + TXA 4% Serum 30ml Double Pack (2ea) Glow Edition",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -82966,7 +82816,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-2ea-anua-azelaic-acid-10-hyaluron-redness-soothing-serum-30ml-double-pack-2ea-blo-haru-expanded-2548",
-    "name": "*Special Price* 2EA [Anua] Azelaic Acid 10 Hyaluron Redness Soothing Serum 30ml Double Pack (2ea) Hydration Edit",
+    "name": "2EA [Anua] Azelaic Acid 10 Hyaluron Redness Soothing Serum 30ml Double Pack (2ea) Hydration Edit",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -83000,7 +82850,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-2ea-arencia-retinal-booster-shot-30ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2549",
-    "name": "*Special Price* 2EA [Arencia] Retinal Booster Shot 30ml Double Pack (2ea) Daily Care",
+    "name": "2EA [Arencia] Retinal Booster Shot 30ml Double Pack (2ea) Daily Care",
     "brand": "ARENCIA",
     "category": "serum",
     "ingredientIds": [
@@ -83040,7 +82890,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-2ea-arencia-vitamin-c-booster-shot-30ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2550",
-    "name": "*Special Price* 2EA [Arencia] Vitamin C Booster Shot 30ml Double Pack (2ea) Night Care",
+    "name": "2EA [Arencia] Vitamin C Booster Shot 30ml Double Pack (2ea) Night Care",
     "brand": "ARENCIA",
     "category": "peeling",
     "ingredientIds": [
@@ -83144,7 +82994,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "kaine-clearance-kaine-rosemary-aha-night-serum-30ml-bloomingkoco-com-haru-expanded-2553",
-    "name": "*CLEARANCE*[KAINE] Rosemary AHA Night Serum 30ml Refill Pack",
+    "name": "[KAINE] Rosemary AHA Night Serum 30ml Refill Pack",
     "brand": "KAINE",
     "category": "peeling",
     "ingredientIds": [
@@ -83248,7 +83098,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-jumiso-niacinamide-20-serum-sample-1ml-2ea-bloomingkoco-com-haru-expanded-2556",
-    "name": "FREE GIFT [Jumiso] Niacinamide 20 Serum Sample 1ml (2ea) Barrier Edit",
+    "name": "[Jumiso] Niacinamide 20 Serum Sample 1ml (2ea) Barrier Edit",
     "brand": "free",
     "category": "serum",
     "ingredientIds": [
@@ -83374,7 +83224,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renew-soonjung-2x-barrier-intensive-cream-60ml-bloomingkoco-com-haru-expanded-2560",
-    "name": "*renew* SoonJung 2x Barrier Intensive Cream 60ml Night Care",
+    "name": "SoonJung 2x Barrier Intensive Cream 60ml Night Care",
     "brand": "ETUDE",
     "category": "peeling",
     "ingredientIds": [
@@ -83440,7 +83290,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-skin1004-madagascar-centella-light-cleansing-oil-30ml-bloomingkoco-com-haru-expanded-2562",
-    "name": "FREE GIFT [SKIN1004] Madagascar Centella Light Cleansing Oil 30ml Travel Size",
+    "name": "[SKIN1004] Madagascar Centella Light Cleansing Oil 30ml Travel Size",
     "brand": "free",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -83469,7 +83319,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-etude-0-2mm-therapy-air-sheet-mask-green-tea-bloomingkoco-com-haru-expanded-2563",
-    "name": "FREE GIFT [ETUDE] 0.2mm Therapy Air Sheet Mask #Green Tea Refill Pack",
+    "name": "[ETUDE] 0.2mm Therapy Air Sheet Mask #Green Tea Refill Pack",
     "brand": "free",
     "category": "mask",
     "ingredientIds": [],
@@ -83495,7 +83345,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "axis-y-clearance-axis-y-spot-the-difference-blemish-treatment-15ml-bloomingkoco-com-haru-expanded-2564",
-    "name": "*CLEARANCE* [AXIS-Y] Spot the Difference Blemish Treatment 15ml Duo Set",
+    "name": "[AXIS-Y] Spot the Difference Blemish Treatment 15ml Duo Set",
     "brand": "AXIS-Y",
     "category": "peeling",
     "ingredientIds": [
@@ -83561,7 +83411,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-heimish-all-clean-balm-blister-5ml-bloomingkoco-com-haru-expanded-2566",
-    "name": "FREE GIFT [Heimish] All Clean Balm Blister 5ml Barrier Edit",
+    "name": "[Heimish] All Clean Balm Blister 5ml Barrier Edit",
     "brand": "free",
     "category": "cleansing-balm",
     "ingredientIds": [],
@@ -83587,7 +83437,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "aromatica-special-price-aromatica-rosemary-scalp-intensive-care-set-shampoo-180ml-root-enhancer-bloo-haru-expanded-2567",
-    "name": "*Special Price* [Aromatica] Rosemary Scalp Intensive Care Set (Shampoo 180ml + Root Enhancer) Sensitive Edit",
+    "name": "[Aromatica] Rosemary Scalp Intensive Care Set (Shampoo 180ml + Root Enhancer) Sensitive Edit",
     "brand": "AROMATICA",
     "category": "serum",
     "ingredientIds": [],
@@ -83618,7 +83468,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "seapuri-special-price-2ea-seapuri-scalpy-hair-serum-20ml-double-pack-2ea-bloomingkoco-com-haru-expanded-2568",
-    "name": "*Special Price* 2EA [Seapuri] Scalpy Hair Serum 20ml Double Pack (2ea) Hydration Edit",
+    "name": "2EA [Seapuri] Scalpy Hair Serum 20ml Double Pack (2ea) Hydration Edit",
     "brand": "Seapuri",
     "category": "peeling",
     "ingredientIds": [
@@ -83649,7 +83499,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-anua-8-hyaluronic-acid-moisturizing-cleanser-duo-foam-gel-cleanser-bloomingkoco-c-haru-expanded-2569",
-    "name": "*Special Price* [Anua] 8 Hyaluronic Acid Moisturizing Cleanser Duo (Foam + Gel Cleanser) Daily Care",
+    "name": "[Anua] 8 Hyaluronic Acid Moisturizing Cleanser Duo (Foam + Gel Cleanser) Daily Care",
     "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
@@ -83684,7 +83534,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-arencia-pore-tightening-skin-reset-set-green-rice-mochi-cleanser-retinal-boost-haru-expanded-2570",
-    "name": "*Special Price* [Arencia] Pore-Tightening Skin Reset Set (Green Rice Mochi Cleanser + Retinal Booster Shot) Night Care",
+    "name": "[Arencia] Pore-Tightening Skin Reset Set (Green Rice Mochi Cleanser + Retinal Booster Shot) Night Care",
     "brand": "ARENCIA",
     "category": "cleanser",
     "ingredientIds": [
@@ -83722,7 +83572,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "round-lab-special-price-round-lab-1025-dokdo-pore-reset-cleanser-set-cleansing-tissue-cleansing-foam-haru-expanded-2571",
-    "name": "*Special Price* [ROUND LAB] 1025 Dokdo Pore-Reset Cleanser Set (Cleansing Tissue + Cleansing foam) Routine Edit",
+    "name": "[ROUND LAB] 1025 Dokdo Pore-Reset Cleanser Set (Cleansing Tissue + Cleansing foam) Routine Edit",
     "brand": "ROUND LAB",
     "category": "cleanser",
     "ingredientIds": [
@@ -83757,7 +83607,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-celimax-noni-pore-glow-skincare-set-noni-bubble-cleanser-noni-energy-ampoule-b-haru-expanded-2572",
-    "name": "*Special Price* [celimax] Noni Pore & Glow Skincare Set (Noni Bubble Cleanser + Noni Energy Ampoule) Travel Size",
+    "name": "[celimax] Noni Pore & Glow Skincare Set (Noni Bubble Cleanser + Noni Energy Ampoule) Travel Size",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -83932,7 +83782,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "cosrx-special-price-2ea-cosrx-advanced-snail-96-mucin-power-essence-100ml-2ea-bloomingkoco-com-haru-expanded-2577",
-    "name": "*Special Price* 2EA [COSRX] Advanced Snail 96 Mucin Power Essence 100ml (2ea) Sensitive Edit",
+    "name": "2EA [COSRX] Advanced Snail 96 Mucin Power Essence 100ml (2ea) Sensitive Edit",
     "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
@@ -83966,7 +83816,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "axis-y-special-price-moida-set-axis-y-dark-spot-blemish-trio-bloomingkoco-com-haru-expanded-2578",
-    "name": "*Special Price* MOIDA SET [Axis-y] Dark Spot & Blemish Trio Hydration Edit",
+    "name": "MOIDA SET [Axis-y] Dark Spot & Blemish Trio Hydration Edit",
     "brand": "AXIS-Y",
     "category": "peeling",
     "ingredientIds": [
@@ -84218,7 +84068,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-fig-gelato-pack-cleanser-120g-bloomingkoco-com-haru-expanded-2586",
-    "name": "*renewal* Fig Gelato Pack Cleanser 120g Barrier Edit",
+    "name": "Fig Gelato Pack Cleanser 120g Barrier Edit",
     "brand": "I'm From",
     "category": "cleanser",
     "ingredientIds": [
@@ -84249,7 +84099,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-apricot-sherbet-pack-cleanser-120g-bloomingkoco-com-haru-expanded-2587",
-    "name": "*renewal* Apricot Sherbet Pack Cleanser 120g Sensitive Edit",
+    "name": "Apricot Sherbet Pack Cleanser 120g Sensitive Edit",
     "brand": "I'm From",
     "category": "cleanser",
     "ingredientIds": [
@@ -84864,7 +84714,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skin1004-skin1004-mini-madagascar-centella-soothing-cream-30ml-bloomingkoco-com-haru-expanded-2607",
-    "name": "*mini* Madagascar Centella Soothing Cream 30ml Sensitive Edit",
+    "name": "Madagascar Centella Soothing Cream 30ml Sensitive Edit",
     "brand": "SKIN1004",
     "category": "moisturizer",
     "ingredientIds": [
@@ -84898,7 +84748,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "cosrx-cosrx-mini-pure-fit-cica-cleanser-50ml-bloomingkoco-com-haru-expanded-2608",
-    "name": "*mini* Pure Fit Cica Cleanser 50ml Hydration Edit",
+    "name": "Pure Fit Cica Cleanser 50ml Hydration Edit",
     "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
@@ -85031,7 +84881,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renew-soonjung-ph-5-5-relief-toner-350ml-bloomingkoco-com-haru-expanded-2612",
-    "name": "*renew* SoonJung pH 5.5 Relief Toner 350ml Travel Size",
+    "name": "SoonJung pH 5.5 Relief Toner 350ml Travel Size",
     "brand": "ETUDE",
     "category": "toner",
     "ingredientIds": [
@@ -85064,7 +84914,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "innisfree-clearance-innisfree-green-tea-amino-cleansing-water-320ml-bloomingkoco-com-haru-expanded-2613",
-    "name": "*CLEARANCE*[Innisfree] Green Tea Amino Cleansing Water 320ml Refill Pack",
+    "name": "[Innisfree] Green Tea Amino Cleansing Water 320ml Refill Pack",
     "brand": "Innisfree",
     "category": "cleanser",
     "ingredientIds": [],
@@ -85095,7 +84945,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "elizavecca-clearance-elizavecca-milky-piggy-bb-cream-50ml-bloomingkoco-com-haru-expanded-2614",
-    "name": "*CLEARANCE*[Elizavecca] Milky Piggy BB Cream 50ml Duo Set",
+    "name": "[Elizavecca] Milky Piggy BB Cream 50ml Duo Set",
     "brand": "Elizavecca",
     "category": "sunscreen",
     "ingredientIds": [
@@ -85393,7 +85243,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "derma-b-derma-b-renewal-ceramd-repair-cream-430ml-bloomingkoco-com-haru-expanded-2623",
-    "name": "*renewal* CeraMD Repair Cream 430ml Refill Pack",
+    "name": "CeraMD Repair Cream 430ml Refill Pack",
     "brand": "Derma-B",
     "category": "lip-care",
     "ingredientIds": [
@@ -85491,7 +85341,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-fermentation-essence-100ml-bloomingkoco-com-haru-expanded-2626",
-    "name": "*renew* Fermentation Essence 100ml Barrier Edit",
+    "name": "Fermentation Essence 100ml Barrier Edit",
     "brand": "Benton",
     "category": "essence",
     "ingredientIds": [],
@@ -85518,7 +85368,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-blemish-patch-dream-daisy-bloomingkoco-com-haru-expanded-2627",
     "name": "Cinnamoroll Blemish Patch #Dream Daisy Sensitive Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -85640,7 +85490,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-5ea-dr-althea-345-relief-cream-5ea-bundle-50ml-5-bloomingkoco-com-haru-expanded-2631",
-    "name": "*Special Price* 5EA [Dr.Althea] 345 Relief Cream 5EA Bundle (50ml*5) Routine Edit",
+    "name": "5EA [Dr.Althea] 345 Relief Cream 5EA Bundle (50ml*5) Routine Edit",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -85680,7 +85530,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "jumiso-special-price-2ea-jumiso-niacinamide-20-serum-40ml-2ea-bloomingkoco-com-haru-expanded-2632",
-    "name": "*Special Price* 2EA [Jumiso] Niacinamide 20 Serum 40ml (2ea) Travel Size",
+    "name": "2EA [Jumiso] Niacinamide 20 Serum 40ml (2ea) Travel Size",
     "brand": "Jumiso",
     "category": "cleanser",
     "ingredientIds": [
@@ -85716,7 +85566,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "biodance-special-price-2packs-biodance-bio-collagen-real-deep-mask-4ea-2-bloomingkoco-com-haru-expanded-2633",
-    "name": "*Special Price* 2PACKS [Biodance] Bio-Collagen Real Deep Mask (4ea*2) Refill Pack",
+    "name": "2PACKS [Biodance] Bio-Collagen Real Deep Mask (4ea*2) Refill Pack",
     "brand": "Biodance",
     "category": "mask",
     "ingredientIds": [
@@ -85753,7 +85603,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "biodance-special-price-2pack-biodance-rejuvenating-caviar-pdrn-real-deep-mask-4ea-2-bloomingkoco-com-haru-expanded-2634",
-    "name": "*Special Price* 2PACK [Biodance] Rejuvenating Caviar PDRN Real Deep Mask (4ea*2) Duo Set",
+    "name": "2PACK [Biodance] Rejuvenating Caviar PDRN Real Deep Mask (4ea*2) Duo Set",
     "brand": "Biodance",
     "category": "mask",
     "ingredientIds": [
@@ -85823,7 +85673,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-cica-calm-acne-set-bloomingkoco-com-haru-expanded-2636",
-    "name": "*Special Price* MOIDA SET [MOIDA] Cica Calm Acne Set Barrier Edit",
+    "name": "MOIDA SET [MOIDA] Cica Calm Acne Set Barrier Edit",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -85858,7 +85708,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-barrier-acne-set-bloomingkoco-com-haru-expanded-2637",
-    "name": "*Special Price* MOIDA SET [MOIDA] Barrier Acne Set Sensitive Edit",
+    "name": "MOIDA SET [MOIDA] Barrier Acne Set Sensitive Edit",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -85894,7 +85744,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-bha-clear-start-set-bloomingkoco-com-haru-expanded-2638",
-    "name": "*Special Price* MOIDA SET [MOIDA] BHA Clear Start Set Hydration Edit",
+    "name": "MOIDA SET [MOIDA] BHA Clear Start Set Hydration Edit",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -85928,7 +85778,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-mens-age-defense-trio-bloomingkoco-com-haru-expanded-2639",
-    "name": "*Special Price* MOIDA SET [MOIDA] Mens Age Defense Trio Daily Care",
+    "name": "MOIDA SET [MOIDA] Mens Age Defense Trio Daily Care",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -85968,7 +85818,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-men-s-dry-relief-duo-bloomingkoco-com-haru-expanded-2640",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Dry Relief Duo Night Care",
+    "name": "MOIDA SET [MOIDA] Men's Dry Relief Duo Night Care",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -86001,7 +85851,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-men-s-daily-essential-trio-bloomingkoco-com-haru-expanded-2641",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Daily Essential Trio Routine Edit",
+    "name": "MOIDA SET [MOIDA] Men's Daily Essential Trio Routine Edit",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -86073,7 +85923,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "baren-baren-renewal-shea-butter-sleeping-heel-patch-10ea-bloomingkoco-com-haru-expanded-2643",
-    "name": "*renewal* Shea Butter Sleeping Heel Patch (10ea) Refill Pack",
+    "name": "Shea Butter Sleeping Heel Patch (10ea) Refill Pack",
     "brand": "baren",
     "category": "peeling",
     "ingredientIds": [],
@@ -86176,7 +86026,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-special-price-moida-set-numbuzin-no-9-nad-lifting-routine-set-bloomingkoco-com-haru-expanded-2646",
-    "name": "*Special Price* MOIDA SET [Numbuzin] No.9 NAD Lifting Routine Set Barrier Edit",
+    "name": "MOIDA SET [Numbuzin] No.9 NAD Lifting Routine Set Barrier Edit",
     "brand": "Numbuzin",
     "category": "toner",
     "ingredientIds": [
@@ -86279,7 +86129,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-white-truffle-body-glow-set-bloomingkoco-com-haru-expanded-2649",
-    "name": "*Special Price* MOIDA SET [MOIDA] White Truffle Body Glow Set Daily Care",
+    "name": "MOIDA SET [MOIDA] White Truffle Body Glow Set Daily Care",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -86310,7 +86160,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-floral-body-duo-bloomingkoco-com-haru-expanded-2650",
-    "name": "*Special Price* MOIDA SET [MOIDA] Floral Body Duo Night Care",
+    "name": "MOIDA SET [MOIDA] Floral Body Duo Night Care",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -86340,7 +86190,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-plump-smooth-duo-bloomingkoco-com-haru-expanded-2651",
-    "name": "*Special Price* MOIDA SET [MOIDA] Plump & Smooth Duo Routine Edit",
+    "name": "MOIDA SET [MOIDA] Plump & Smooth Duo Routine Edit",
     "brand": "MOIDA",
     "category": "peeling",
     "ingredientIds": [
@@ -86375,7 +86225,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-tocobo-renew-bio-watery-sun-cream-spf50-40ml-bloomingkoco-com-haru-expanded-2652",
-    "name": "FREE GIFT [TOCOBO] *renew* Bio Watery Sun Cream SPF50 40ml Travel Size",
+    "name": "[TOCOBO] *renew* Bio Watery Sun Cream SPF50 40ml Travel Size",
     "brand": "free",
     "category": "sunscreen",
     "ingredientIds": [
@@ -86588,7 +86438,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-1-deal-tocobo-bio-watery-sun-cream-spf50-40ml-first-purchase-only-bloomingkoco-com-haru-expanded-2659",
-    "name": "*$1 Deal* [TOCOBO] Bio Watery Sun Cream SPF50 40ml (First Purchase Only) Daily Care",
+    "name": "[TOCOBO] Bio Watery Sun Cream SPF50 40ml (First Purchase Only) Daily Care",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -86755,7 +86605,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-medicube-pdrn-pink-skincare-duo-set-pink-peptide-serum-pink-collagen-capsule-haru-expanded-2664",
-    "name": "*Special Price* [Medicube] PDRN Pink Skincare Duo Set (Pink Peptide Serum + Pink Collagen Capsule Cream) Duo Set",
+    "name": "[Medicube] PDRN Pink Skincare Duo Set (Pink Peptide Serum + Pink Collagen Capsule Cream) Duo Set",
     "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
@@ -86862,7 +86712,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-moida-set-tocobo-travel-ready-calming-set-skincare-kit-sun-stick-lip-mask-bloom-haru-expanded-2667",
-    "name": "*Special Price* MOIDA SET [TOCOBO] Travel-Ready Calming Set (Skincare Kit + Sun Stick + Lip Mask) Sensitive Edit",
+    "name": "MOIDA SET [TOCOBO] Travel-Ready Calming Set (Skincare Kit + Sun Stick + Lip Mask) Sensitive Edit",
     "brand": "TOCOBO",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -86955,7 +86805,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renewal-noni-moisture-balancing-toner-150ml-bloomingkoco-com-haru-expanded-2670",
-    "name": "*renewal* Noni Moisture Balancing Toner 150ml Night Care",
+    "name": "Noni Moisture Balancing Toner 150ml Night Care",
     "brand": "celimax",
     "category": "toner",
     "ingredientIds": [],
@@ -87016,7 +86866,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-value-hair-revitalizing-routine-set-shampoo-treatment-oil-bloomi-haru-expanded-2672",
-    "name": "*Special Price* MOIDA SET [MOIDA] Value Hair Revitalizing Routine Set (Shampoo + Treatment + Oil) Travel Size",
+    "name": "MOIDA SET [MOIDA] Value Hair Revitalizing Routine Set (Shampoo + Treatment + Oil) Travel Size",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -87048,7 +86898,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-moida-set-purito-seoul-all-in-one-travel-set-skincare-kit-cleanser-sunscr-haru-expanded-2673",
-    "name": "*Special Price* MOIDA SET [Purito Seoul] All-in-One Travel Set (Skincare Kit + Cleanser + Sunscreen) Refill Pack",
+    "name": "MOIDA SET [Purito Seoul] All-in-One Travel Set (Skincare Kit + Cleanser + Sunscreen) Refill Pack",
     "brand": "Purito Seoul",
     "category": "cleanser",
     "ingredientIds": [
@@ -87086,7 +86936,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-noni-travel-essentials-set-kit-bubble-cleanser-sheet-mask-5e-haru-expanded-2674",
-    "name": "*Special Price* MOIDA SET [celimax] Noni Travel Essentials Set (Kit + Bubble Cleanser + Sheet Mask 5ea) Duo Set",
+    "name": "MOIDA SET [celimax] Noni Travel Essentials Set (Kit + Bubble Cleanser + Sheet Mask 5ea) Duo Set",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -87125,7 +86975,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-moida-set-skin1004-madagascar-centella-travel-essentials-set-skincare-kit-she-haru-expanded-2675",
-    "name": "*Special Price* MOIDA SET [SKIN1004] Madagascar Centella Travel Essentials Set (Skincare Kit + Sheet Mask 5ea) Glow Edition",
+    "name": "MOIDA SET [SKIN1004] Madagascar Centella Travel Essentials Set (Skincare Kit + Sheet Mask 5ea) Glow Edition",
     "brand": "SKIN1004",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -87158,7 +87008,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-3-texture-sun-care-set-sun-cream-sun-stick-sun-gel-bloomingkoco-haru-expanded-2676",
-    "name": "*Special Price* MOIDA SET [MOIDA] 3-Texture Sun Care Set (Sun Cream + Sun Stick + Sun Gel) Barrier Edit",
+    "name": "MOIDA SET [MOIDA] 3-Texture Sun Care Set (Sun Cream + Sun Stick + Sun Gel) Barrier Edit",
     "brand": "MOIDA",
     "category": "sunscreen",
     "ingredientIds": [
@@ -87198,7 +87048,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-best-of-k-beauty-sunscreen-trio-medicube-numbuzin-tocobo-bloomin-haru-expanded-2677",
-    "name": "*Special Price* MOIDA SET [MOIDA] Best of K-Beauty Sunscreen Trio (Medicube + Numbuzin + TOCOBO) Sensitive Edit",
+    "name": "MOIDA SET [MOIDA] Best of K-Beauty Sunscreen Trio (Medicube + Numbuzin + TOCOBO) Sensitive Edit",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -87237,7 +87087,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-daily-hydrating-sunscreen-trio-skin1004-somebymi-melixir-bloomin-haru-expanded-2678",
-    "name": "*Special Price* MOIDA SET [MOIDA] Daily Hydrating Sunscreen Trio (Skin1004 + Somebymi + Melixir) Hydration Edit",
+    "name": "MOIDA SET [MOIDA] Daily Hydrating Sunscreen Trio (Skin1004 + Somebymi + Melixir) Hydration Edit",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -87275,7 +87125,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-aloe-bha-skin-toner-200ml-bloomingkoco-com-haru-expanded-2679",
-    "name": "*renew* Aloe Bha Skin Toner 200ml Daily Care",
+    "name": "Aloe Bha Skin Toner 200ml Daily Care",
     "brand": "Benton",
     "category": "toner",
     "ingredientIds": [
@@ -88290,7 +88140,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-acne-reset-set-bloomingkoco-com-haru-expanded-2711",
-    "name": "*Special Price* MOIDA SET [MOIDA] Acne Reset Set Routine Edit",
+    "name": "MOIDA SET [MOIDA] Acne Reset Set Routine Edit",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -88389,7 +88239,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "foodology-foodology-renewal-coleology-cut-pro-600mg-x-60tab-36g-bloomingkoco-com-haru-expanded-2714",
-    "name": "*renewal* Coleology Cut Pro 600mg x 60Tab (36g) Duo Set",
+    "name": "Coleology Cut Pro 600mg x 60Tab (36g) Duo Set",
     "brand": "Foodology",
     "category": "body",
     "ingredientIds": [
@@ -88419,7 +88269,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-body-dark-spot-repair-set-bloomingkoco-com-haru-expanded-2715",
-    "name": "*Special Price* MOIDA SET [MOIDA] Body Dark Spot Repair Set Glow Edition",
+    "name": "MOIDA SET [MOIDA] Body Dark Spot Repair Set Glow Edition",
     "brand": "MOIDA",
     "category": "toner-pad",
     "ingredientIds": [
@@ -88714,7 +88564,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-sun-care-anywhere-trio-set-bloomingkoco-com-haru-expanded-2724",
-    "name": "*Special Price* MOIDA SET [MOIDA] Sun Care Anywhere Trio Set Duo Set",
+    "name": "MOIDA SET [MOIDA] Sun Care Anywhere Trio Set Duo Set",
     "brand": "MOIDA",
     "category": "sunscreen",
     "ingredientIds": [
@@ -88747,7 +88597,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-viral-pore-minimizing-duo-set-bloomingkoco-com-haru-expanded-2725",
-    "name": "*Special Price* MOIDA SET [MOIDA] Viral Pore Minimizing Duo Set Glow Edition",
+    "name": "MOIDA SET [MOIDA] Viral Pore Minimizing Duo Set Glow Edition",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -88779,7 +88629,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-hyperpigmentation-fix-duo-set-bloomingkoco-com-haru-expanded-2726",
-    "name": "*Special Price* MOIDA SET [MOIDA] Hyperpigmentation Fix Duo Set Barrier Edit",
+    "name": "MOIDA SET [MOIDA] Hyperpigmentation Fix Duo Set Barrier Edit",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -88813,7 +88663,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-pdrn-skin-repair-set-bloomingkoco-com-haru-expanded-2727",
-    "name": "*Special Price* MOIDA SET [MOIDA] PDRN Skin Repair Set Sensitive Edit",
+    "name": "MOIDA SET [MOIDA] PDRN Skin Repair Set Sensitive Edit",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -88850,7 +88700,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-anti-aging-routine-set-bloomingkoco-com-haru-expanded-2728",
-    "name": "*Special Price* MOIDA SET [MOIDA] Anti-Aging Routine Set Hydration Edit",
+    "name": "MOIDA SET [MOIDA] Anti-Aging Routine Set Hydration Edit",
     "brand": "MOIDA",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -88889,7 +88739,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-turmeric-dark-spot-eraser-trio-set-bloomingkoco-com-haru-expanded-2729",
-    "name": "*Special Price* MOIDA SET [MOIDA] Turmeric Dark Spot Eraser Trio Set Daily Care",
+    "name": "MOIDA SET [MOIDA] Turmeric Dark Spot Eraser Trio Set Daily Care",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -88922,7 +88772,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-korean-beauty-for-advanced-results-set-bloomingkoco-com-haru-expanded-2730",
-    "name": "*Special Price* MOIDA SET [MOIDA] Korean Beauty for Advanced Results Set Night Care",
+    "name": "MOIDA SET [MOIDA] Korean Beauty for Advanced Results Set Night Care",
     "brand": "MOIDA",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -88994,7 +88844,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-40-day-glass-skin-sheet-mask-ritual-medicube-sungboon-editor-seo-haru-expanded-2732",
-    "name": "*Special Price* MOIDA SET [MOIDA] 40-Day Glass Skin Sheet Mask Ritual (Medicube, Sungboon Editor, Seohaesol, Dr.Althea,  Travel Size",
+    "name": "MOIDA SET [MOIDA] 40-Day Glass Skin Sheet Mask Ritual (Medicube, Sungboon Editor, Seohaesol, Dr.Althea, Travel Size",
     "brand": "MOIDA",
     "category": "mask",
     "ingredientIds": [
@@ -89455,7 +89305,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "vt-cosmetics-vt-cosmetics-renewal-red-booster-reedle-shot-300-bloomingkoco-com-haru-expanded-2746",
-    "name": "*renewal* Red Booster Reedle Shot 300 Barrier Edit",
+    "name": "Red Booster Reedle Shot 300 Barrier Edit",
     "brand": "VT Cosmetics",
     "category": "essence",
     "ingredientIds": [
@@ -89522,7 +89372,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "nineless-nineless-renewal-molecule-clear-salicylic-acid-serum-30ml-bloomingkoco-com-haru-expanded-2748",
-    "name": "*renewal* Molecule-Clear Salicylic Acid Serum 30ml Hydration Edit",
+    "name": "Molecule-Clear Salicylic Acid Serum 30ml Hydration Edit",
     "brand": "NINELESS",
     "category": "peeling",
     "ingredientIds": [
@@ -89740,7 +89590,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-anti-hair-loss-care-duo-set-bloomingkoco-com-haru-expanded-2755",
-    "name": "*Special Price* MOIDA SET [MOIDA] Anti-Hair Loss Care Duo Set Glow Edition",
+    "name": "MOIDA SET [MOIDA] Anti-Hair Loss Care Duo Set Glow Edition",
     "brand": "MOIDA",
     "category": "ampoule",
     "ingredientIds": [],
@@ -90218,7 +90068,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "ongredients-ongredients-renewal-skin-barrier-calming-lotion-ex-150ml-bloomingkoco-com-haru-expanded-2769",
-    "name": "*renewal* Skin Barrier Calming Lotion EX 150ml Daily Care",
+    "name": "Skin Barrier Calming Lotion EX 150ml Daily Care",
     "brand": "Ongredients",
     "category": "moisturizer",
     "ingredientIds": [
@@ -90761,7 +90611,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "frudia-frudia-renew-citrus-brightening-serum-50ml-bloomingkoco-com-haru-expanded-2786",
-    "name": "*renew* Citrus Brightening Serum 50ml Barrier Edit",
+    "name": "Citrus Brightening Serum 50ml Barrier Edit",
     "brand": "Frudia",
     "category": "peeling",
     "ingredientIds": [
@@ -91246,7 +91096,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-the-vita-a-retinal-booster-retinol-serum-set-bloomingkoco-co-haru-expanded-2800",
-    "name": "*Special Price* MOIDA SET [celimax] THE Vita-A Retinal Booster & Retinol Serum Set Night Care",
+    "name": "MOIDA SET [celimax] THE Vita-A Retinal Booster & Retinol Serum Set Night Care",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -91284,7 +91134,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "studio17-studio17-renew-pang-pang-triangle-puff-bloomingkoco-com-haru-expanded-2801",
-    "name": "*renew* Pang Pang Triangle Puff Routine Edit",
+    "name": "Pang Pang Triangle Puff Routine Edit",
     "brand": "Studio17",
     "category": "eye-cream",
     "ingredientIds": [],
@@ -93545,7 +93395,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "nesh-nesh-sachet-set-pomegranate-biome-shampoo-10ml-soy-biome-treatment-8ml-bloomingkoco-com-haru-expanded-2871",
-    "name": "*Sachet Set* Pomegranate Biome Shampoo 10ml + Soy Biome Treatment 8ml Routine Edit",
+    "name": "Pomegranate Biome Shampoo 10ml + Soy Biome Treatment 8ml Routine Edit",
     "brand": "nesh",
     "category": "hair",
     "ingredientIds": [],
@@ -93572,7 +93422,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-twinkle-hydrogel-under-eye-patches-bloomingkoco-com-haru-expanded-2872",
     "name": "Hello Kitty Twinkle Hydrogel Under Eye Patches Travel Size",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "retinol",
@@ -93605,7 +93455,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-hydrogel-lip-patch-bloomingkoco-com-haru-expanded-2873",
     "name": "Hello Kitty Hydrogel Lip Patch Refill Pack",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c",
@@ -93638,7 +93488,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-hydrogel-under-eye-patches-apple-of-my-eye-bloomingkoco-co-haru-expanded-2874",
     "name": "Hello Kitty Hydrogel Under Eye & Patches #Apple of My Eye Duo Set",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "essence",
     "ingredientIds": [
       "vitamin_c",
@@ -93673,7 +93523,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-pochacco-hydrogel-under-eye-patches-1ea-bloomingkoco-com-haru-expanded-2875",
     "name": "Pochacco Hydrogel Under Eye Patches (1ea) Glow Edition",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "retinol",
@@ -93706,7 +93556,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-pompompurin-under-eye-patches-1ea-bloomingkoco-com-haru-expanded-2876",
     "name": "Pompompurin Under Eye Patches (1ea) Barrier Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "vitamin_c",
@@ -93741,7 +93591,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-hydrogel-under-eye-patches-1ea-bloomingkoco-com-haru-expanded-2877",
     "name": "Cinnamoroll Hydrogel Under Eye Patches (1ea) Sensitive Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -93769,7 +93619,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-my-melody-kuromi-hydrocolloid-blemish-patches-cheers-to-clear-blooming-haru-expanded-2878",
     "name": "My Melody & Kuromi Hydrocolloid Blemish Patches #Cheers to Clear! Hydration Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -93797,7 +93647,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-my-melody-kuromi-brightening-hydrogel-under-eye-patches-bestie-bless-b-haru-expanded-2879",
     "name": "My Melody & Kuromi Brightening Hydrogel Under Eye Patches #Bestie Bless Daily Care",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "niacinamide",
@@ -93830,7 +93680,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-miffy-hydrocolloid-patches-clear-as-day-bloomingkoco-com-haru-expanded-2880",
     "name": "Miffy Hydrocolloid Patches #Clear As Day! Night Care",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -93858,7 +93708,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-miffy-calming-cloud-hydrogel-under-eye-patches-bloomingkoco-com-haru-expanded-2881",
     "name": "Miffy Calming Cloud Hydrogel Under Eye Patches Routine Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -93889,7 +93739,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-hydrogel-eye-patches-catch-some-zzz-s-3ea-bloomingkoco-com-haru-expanded-2882",
     "name": "Peanuts Hydrogel Eye Patches #Catch Some ZZZ's (3ea) Travel Size",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [
       "vitamin_c",
@@ -93922,7 +93772,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-smoothing-foot-mask-set-fresh-new-5ea-bloomingkoco-com-haru-expanded-2883",
     "name": "Peanuts Smoothing Foot Mask Set #Fresh & New (5ea) Refill Pack",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "ceramides"
@@ -93953,7 +93803,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-soothing-foot-mask-lavender-3ea-bloomingkoco-com-haru-expanded-2884",
     "name": "Soothing Foot Mask #Lavender (3ea) Duo Set",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c"
@@ -93983,7 +93833,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-moisture-foot-mask-almond-oil-3ea-bloomingkoco-com-haru-expanded-2885",
     "name": "Moisture Foot Mask #Almond Oil (3ea) Glow Edition",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94011,7 +93861,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-pre-cut-lash-clusters-glue-bloomingkoco-com-haru-expanded-2886",
     "name": "Hello Kitty Pre-cut Lash Clusters + Glue Barrier Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94037,7 +93887,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-kuromi-blemish-patches-trendy-treats-1ea-bloomingkoco-com-haru-expanded-2887",
     "name": "Kuromi Blemish Patches #Trendy Treats (1ea) Sensitive Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94065,7 +93915,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-my-melody-blemish-patches-sugar-sprinkles-1ea-bloomingkoco-com-haru-expanded-2888",
     "name": "My Melody Blemish Patches #Sugar Sprinkles (1ea) Hydration Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94093,7 +93943,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-over-makeup-hydrocolloid-blemish-patches-supercute-skin-bl-haru-expanded-2889",
     "name": "Hello Kitty Over Makeup Hydrocolloid Blemish Patches #Supercute Skin! Daily Care",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [
       "bha"
@@ -94122,7 +93972,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-macaron-lip-balm-watermelon-bloomingkoco-com-haru-expanded-2890",
     "name": "Hello Kitty Macaron Lip Balm #Watermelon Night Care",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c"
@@ -94153,7 +94003,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-macaron-lip-balm-strawberry-rose-bloomingkoco-com-haru-expanded-2891",
     "name": "Hello Kitty Macaron Lip Balm #Strawberry Rose Routine Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c"
@@ -94184,7 +94034,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-macaron-lip-balm-moisture-remedy-bloomingkoco-com-haru-expanded-2892",
     "name": "Cinnamoroll Macaron Lip Balm #Moisture Remedy Travel Size",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c"
@@ -94388,7 +94238,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-clearance-tocobo-glass-tinted-lip-balm-013-tangerine-red-bloomingkoco-com-haru-expanded-2898",
-    "name": "*CLEARANCE*[TOCOBO] Glass Tinted Lip Balm #013 Tangerine Red Hydration Edit",
+    "name": "[TOCOBO] Glass Tinted Lip Balm #013 Tangerine Red Hydration Edit",
     "brand": "TOCOBO",
     "category": "cleansing-balm",
     "ingredientIds": [],
@@ -94417,7 +94267,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-moisturizing-hand-creme-3-types-bloomingkoco-com-haru-expanded-2899",
     "name": "Peanuts Moisturizing Hand Creme (3 types) Daily Care",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "body",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94445,7 +94295,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-deep-hand-mask-strawberry-coconut-3ea-bloomingkoco-com-haru-expanded-2900",
     "name": "Hello Kitty Deep Hand Mask #Strawberry Coconut (3ea) Night Care",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94474,7 +94324,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-little-twin-stars-cloud-walk-foot-masks-3ea-bloomingkoco-com-haru-expanded-2901",
     "name": "Little Twin Stars Cloud Walk Foot Masks (3ea) Routine Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "peeling",
     "ingredientIds": [
       "aha"
@@ -94504,7 +94354,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-keroppi-hand-cream-green-tea-bloomingkoco-com-haru-expanded-2902",
     "name": "Keroppi Hand Cream #Green Tea Travel Size",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "body",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94532,7 +94382,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-hand-mask-sweet-tangerine-bloomingkoco-com-haru-expanded-2903",
     "name": "Hello Kitty Hand Mask #Sweet Tangerine Refill Pack",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c",
@@ -94563,7 +94413,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-macaron-lip-balm-mixed-berry-bloomingkoco-com-haru-expanded-2904",
     "name": "Hello Kitty Macaron Lip Balm #Mixed Berry Duo Set",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c"
@@ -94594,7 +94444,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-gudetama-hand-cream-peach-bloomingkoco-com-haru-expanded-2905",
     "name": "Gudetama Hand Cream #Peach Glow Edition",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "body",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94620,7 +94470,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "etude-clearance-etude-dear-darling-oil-tint-03-neon-pink-bloomingkoco-com-haru-expanded-2906",
-    "name": "*CLEARANCE*[ETUDE] Dear Darling Oil Tint #03 Neon Pink Barrier Edit",
+    "name": "[ETUDE] Dear Darling Oil Tint #03 Neon Pink Barrier Edit",
     "brand": "ETUDE",
     "category": "lip-care",
     "ingredientIds": [],
@@ -94648,7 +94498,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "etude-clearance-etude-fixing-tint-bar-2-colors-bloomingkoco-com-haru-expanded-2907",
-    "name": "*CLEARANCE*[Etude] Fixing Tint Bar (2 colors) Sensitive Edit",
+    "name": "[Etude] Fixing Tint Bar (2 colors) Sensitive Edit",
     "brand": "ETUDE",
     "category": "mask",
     "ingredientIds": [],
@@ -94676,7 +94526,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tfit-clearance-tfit-idol-cover-concealer-p01-petal-beige-bloomingkoco-com-haru-expanded-2908",
-    "name": "*CLEARANCE*[TFIT] Idol Cover Concealer #P01 Petal Beige Hydration Edit",
+    "name": "[TFIT] Idol Cover Concealer #P01 Petal Beige Hydration Edit",
     "brand": "TFIT",
     "category": "spot",
     "ingredientIds": [
@@ -94708,7 +94558,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "holika-holika-clearance-holika-holika-skin-rescuer-sheet-mask-2-types-bloomingkoco-com-haru-expanded-2909",
-    "name": "*CLEARANCE*[Holika Holika] Skin Rescuer Sheet Mask (2 types) Daily Care",
+    "name": "[Holika Holika] Skin Rescuer Sheet Mask (2 types) Daily Care",
     "brand": "Holika Holika",
     "category": "toner-pad",
     "ingredientIds": [
@@ -94740,7 +94590,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-silky-sleep-mask-chill-out-bloomingkoco-com-haru-expanded-2910",
     "name": "Peanuts Silky Sleep Mask #Chill Out Night Care",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94766,7 +94616,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-sleek-razor-set-3ea-bloomingkoco-com-haru-expanded-2911",
     "name": "Hello Kitty Sleek Razor Set (3ea) Routine Edit",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "peeling",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94792,7 +94642,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-hello-kitty-plush-spa-headband-with-bow-orange-bloomingkoco-com-haru-expanded-2912",
     "name": "Hello Kitty Plush Spa Headband with Bow #Orange Travel Size",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94818,7 +94668,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-xl-plush-headband-chill-out-bloomingkoco-com-haru-expanded-2913",
     "name": "Peanuts XL Plush Headband #Chill Out Refill Pack",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -94843,7 +94693,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-my-first-beauty-device-set-age-r-booster-pro-mini-plus-gel-haru-expanded-2914",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] My First Beauty Device Set (AGE-R Booster Pro Mini Plus + Gel Cream) Duo Set",
+    "name": "MOIDA SET [MEDICUBE] My First Beauty Device Set (AGE-R Booster Pro Mini Plus + Gel Cream) Duo Set",
     "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
@@ -94873,7 +94723,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-flash-deal-numbuzin-glow-core-starter-set-102-value-for-only-35-bloomingkoco-com-haru-expanded-2915",
-    "name": "*Flash Deal* [Numbuzin] Glow Core Starter Set ($102 Value for ONLY $35) Glow Edition",
+    "name": "[Numbuzin] Glow Core Starter Set () Glow Edition",
     "brand": "Numbuzin",
     "category": "toner-pad",
     "ingredientIds": [
@@ -94910,7 +94760,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-flash-deal-numbuzin-x-skinfood-brightening-vitamin-set-72-value-for-only-25-bloomingkoco-co-haru-expanded-2916",
-    "name": "*Flash Deal* [Numbuzin]x[Skinfood] Brightening Vitamin Set ($72 Value for ONLY $25) Barrier Edit",
+    "name": "[Numbuzin]x[Skinfood] Brightening Vitamin Set () Barrier Edit",
     "brand": "Numbuzin",
     "category": "toner",
     "ingredientIds": [
@@ -94947,7 +94797,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-glass-skin-care-set-pink-age-r-booster-pro-mini-plus-age-r-haru-expanded-2917",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Glass Skin Care Set #Pink (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + C Sensitive Edit",
+    "name": "MOIDA SET [MEDICUBE] Glass Skin Care Set #Pink (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + C Sensitive Edit",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -94986,7 +94836,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-lifting-set-beige-age-r-booster-pro-mini-plus-age-r-v-roll-haru-expanded-2918",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Lifting Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R V Roller + PDRN Booster Gel Hydration Edit",
+    "name": "MOIDA SET [MEDICUBE] Lifting Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R V Roller + PDRN Booster Gel Hydration Edit",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -95022,7 +94872,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-poreless-care-set-beige-age-r-booster-pro-mini-plus-age-r-haru-expanded-2919",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Poreless Care Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + Ze Daily Care",
+    "name": "MOIDA SET [MEDICUBE] Poreless Care Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + Ze Daily Care",
     "brand": "MEDICUBE",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -95057,7 +94907,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-total-care-set-beige-age-r-booster-pro-mini-plus-age-r-boo-haru-expanded-2920",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Total Care Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + V Rol Night Care",
+    "name": "MOIDA SET [MEDICUBE] Total Care Set #Beige (AGE-R Booster Pro Mini Plus + AGE-R Booster Cleanser + V Rol Night Care",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [],
@@ -95150,7 +95000,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "elizavecca-elizavecca-renew-cer-100-collagen-coating-hair-a-muscle-tornado-shampoo-500ml-bloomingkoc-haru-expanded-2923",
-    "name": "*renew* CER-100 Collagen Coating Hair A+ Muscle Tornado Shampoo 500ml Refill Pack",
+    "name": "CER-100 Collagen Coating Hair A+ Muscle Tornado Shampoo 500ml Refill Pack",
     "brand": "Elizavecca",
     "category": "hair",
     "ingredientIds": [
@@ -95372,7 +95222,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skinfood-flash-deal-skinfood-pore-deep-clean-routine-set-62value-for-only-16-bloomingkoco-com-haru-expanded-2930",
-    "name": "*Flash Deal* [Skinfood] Pore Deep Clean Routine Set ($62Value for ONLY $16) Night Care",
+    "name": "[Skinfood] Pore Deep Clean Routine Set () Night Care",
     "brand": "Skinfood",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -95407,7 +95257,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skinfood-flash-deal-skinfood-rice-brightening-3-step-glow-set-76-value-for-only-15-bloomingkoco-com-haru-expanded-2931",
-    "name": "*Flash Deal* [Skinfood] Rice Brightening 3-Step Glow Set ($76 Value for ONLY $15!) Routine Edit",
+    "name": "[Skinfood] Rice Brightening 3-Step Glow Set () Routine Edit",
     "brand": "Skinfood",
     "category": "toner-pad",
     "ingredientIds": [
@@ -95442,7 +95292,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skinfood-flash-deal-skinfood-carrot-brightening-set-87-value-for-only-18-bloomingkoco-com-haru-expanded-2932",
-    "name": "*Flash Deal* [Skinfood] Carrot Brightening Set ($87 Value for ONLY $18!) Travel Size",
+    "name": "[Skinfood] Carrot Brightening Set () Travel Size",
     "brand": "Skinfood",
     "category": "cleanser",
     "ingredientIds": [
@@ -95644,7 +95494,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "vt-cosmetics-vt-cosmetics-renewal-reedle-shot-synergy-sparkling-toner-pad-200ml-bloomingkoco-com-haru-expanded-2938",
-    "name": "*renewal* Reedle Shot Synergy Sparkling Toner Pad 200ml Hydration Edit",
+    "name": "Reedle Shot Synergy Sparkling Toner Pad 200ml Hydration Edit",
     "brand": "VT Cosmetics",
     "category": "toner-pad",
     "ingredientIds": [
@@ -96449,7 +96299,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-exclusive-set-skin1004-madagascar-centella-radiance-booster-trio-ampoule-mask-haru-expanded-2964",
-    "name": "*Special Price* Exclusive Set [SKIN1004] Madagascar Centella Radiance Booster Trio (Ampoule + Mask + Cream) Duo Set",
+    "name": "Exclusive Set [SKIN1004] Madagascar Centella Radiance Booster Trio (Ampoule + Mask + Cream) Duo Set",
     "brand": "SKIN1004",
     "category": "ampoule",
     "ingredientIds": [
@@ -96604,7 +96454,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-black-rice-toner-150ml-bloomingkoco-com-haru-expanded-2969",
-    "name": "*renewal* Black Rice Toner 150ml Daily Care",
+    "name": "Black Rice Toner 150ml Daily Care",
     "brand": "I'm From",
     "category": "toner",
     "ingredientIds": [
@@ -97344,7 +97194,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-special-price-moida-set-numbuzin-no-9-nad-daily-set-toner-essence-mask-bloomingkoco-com-haru-expanded-2993",
-    "name": "*Special Price* MOIDA SET [Numbuzin] No.9 NAD Daily Set (Toner + Essence + Mask) Refill Pack",
+    "name": "MOIDA SET [Numbuzin] No.9 NAD Daily Set (Toner + Essence + Mask) Refill Pack",
     "brand": "Numbuzin",
     "category": "toner",
     "ingredientIds": [
@@ -97376,7 +97226,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "ksecret-special-price-moida-set-ksecret-seoul-1988-anti-aging-care-duo-eye-cream-serum-bloomingkoco-haru-expanded-2994",
-    "name": "*Special Price* MOIDA SET [KSECRET] SEOUL 1988 Anti-Aging Care Duo (Eye Cream & Serum) Duo Set",
+    "name": "MOIDA SET [KSECRET] SEOUL 1988 Anti-Aging Care Duo (Eye Cream & Serum) Duo Set",
     "brand": "KSECRET",
     "category": "serum",
     "ingredientIds": [
@@ -97621,7 +97471,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-purito-seoul-mini-mighty-bamboo-cream-15ml-bloomingkoco-com-haru-expanded-3001",
-    "name": "*mini* Mighty Bamboo Cream 15ml Routine Edit",
+    "name": "Mighty Bamboo Cream 15ml Routine Edit",
     "brand": "Purito Seoul",
     "category": "moisturizer",
     "ingredientIds": [],
@@ -97648,7 +97498,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-red-acne-body-care-set-body-wash-peeling-shot-bloomingkoco-haru-expanded-3002",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Red Acne Body Care Set (Body Wash + Peeling Shot) Travel Size",
+    "name": "MOIDA SET [MEDICUBE] Red Acne Body Care Set (Body Wash + Peeling Shot) Travel Size",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -97922,7 +97772,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-moida-set-dr-althea-beginner-routine-for-dry-skin-147-cream-serum-cleansing-haru-expanded-3010",
-    "name": "*Special Price* MOIDA SET [Dr. Althea] Beginner Routine for Dry Skin (147 Cream + Serum + Cleansing Balm) Night Care",
+    "name": "MOIDA SET [Dr. Althea] Beginner Routine for Dry Skin (147 Cream + Serum + Cleansing Balm) Night Care",
     "brand": "Dr.Althea",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -97997,7 +97847,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-moida-men-s-oil-control-duo-bloomingkoco-com-haru-expanded-3012",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Oil Control Duo Travel Size",
+    "name": "MOIDA SET [MOIDA] Men's Oil Control Duo Travel Size",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -98098,7 +97948,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-moida-box-dr-althea-beginner-routine-box-for-oily-skin-345-cream-serum-clean-haru-expanded-3015",
-    "name": "*Special Price* MOIDA BOX [Dr. Althea] Beginner Routine Box for Oily Skin (345 Cream + Serum + Cleansing Balm) Glow Edition",
+    "name": "MOIDA BOX [Dr. Althea] Beginner Routine Box for Oily Skin (345 Cream + Serum + Cleansing Balm) Glow Edition",
     "brand": "Dr.Althea",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -98172,7 +98022,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "mixsoon-special-price-moida-set-mixsoon-double-cleansing-duo-oil-foam-bloomingkoco-com-haru-expanded-3017",
-    "name": "*Special Price* MOIDA SET [MIXSOON] Double Cleansing Duo (Oil & Foam) Sensitive Edit",
+    "name": "MOIDA SET [MIXSOON] Double Cleansing Duo (Oil & Foam) Sensitive Edit",
     "brand": "MIXSOON",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -98207,7 +98057,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "cosrx-cosrx-mini-low-ph-good-morning-gel-cleanser-50ml-bloomingkoco-com-haru-expanded-3018",
-    "name": "*mini* Low Ph Good Morning Gel Cleanser 50ml Hydration Edit",
+    "name": "Low Ph Good Morning Gel Cleanser 50ml Hydration Edit",
     "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
@@ -98583,7 +98433,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-moida-set-dr-althea-345-all-in-one-calming-care-set-345-cream-mist-mask-bloo-haru-expanded-3029",
-    "name": "*Special Price* MOIDA SET [Dr. Althea] 345 All- in-one Calming Care Set (345 Cream + Mist + Mask) Daily Care",
+    "name": "MOIDA SET [Dr. Althea] 345 All- in-one Calming Care Set (345 Cream + Mist + Mask) Daily Care",
     "brand": "Dr.Althea",
     "category": "mask",
     "ingredientIds": [
@@ -98617,7 +98467,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-2ea-skin1004-madagascar-centella-tone-brightening-capsule-ampoule-100ml-2ea-f-haru-expanded-3030",
-    "name": "*Special Price* 2EA [SKIN1004] Madagascar Centella Tone Brightening Capsule Ampoule 100ml (2ea) + Free Gift Night Care",
+    "name": "2EA [SKIN1004] Madagascar Centella Tone Brightening Capsule Ampoule 100ml (2ea) + Free Gift Night Care",
     "brand": "SKIN1004",
     "category": "essence",
     "ingredientIds": [
@@ -98653,7 +98503,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-moida-box-purito-seoul-day-night-cream-box-bamboo-cream-oat-in-cream-bloo-haru-expanded-3031",
-    "name": "*Special Price* MOIDA BOX [Purito Seoul] Day & Night Cream Box (Bamboo Cream + Oat-in Cream) Routine Edit",
+    "name": "MOIDA BOX [Purito Seoul] Day & Night Cream Box (Bamboo Cream + Oat-in Cream) Routine Edit",
     "brand": "Purito Seoul",
     "category": "moisturizer",
     "ingredientIds": [
@@ -98689,7 +98539,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-moida-box-purito-seoul-panthenol-centella-repair-box-cream-serum-cleansin-haru-expanded-3032",
-    "name": "*Special Price* MOIDA BOX [Purito Seoul] Panthenol & Centella Repair Box (Cream + Serum + Cleansing Foam) Travel Size",
+    "name": "MOIDA BOX [Purito Seoul] Panthenol & Centella Repair Box (Cream + Serum + Cleansing Foam) Travel Size",
     "brand": "Purito Seoul",
     "category": "cleanser",
     "ingredientIds": [
@@ -98727,7 +98577,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "jumiso-special-price-moida-set-jumiso-brightening-routine-set-niacinamide20-serum-toner-night-cream-haru-expanded-3033",
-    "name": "*Special Price* MOIDA SET [Jumiso] Brightening Routine Set: Niacinamide20 Serum + Toner + Night Cream Refill Pack",
+    "name": "MOIDA SET [Jumiso] Brightening Routine Set: Niacinamide20 Serum + Toner + Night Cream Refill Pack",
     "brand": "Jumiso",
     "category": "toner",
     "ingredientIds": [
@@ -98760,7 +98610,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-red-acne-care-set-cleansing-foam-peeling-pad-cream-bloomin-haru-expanded-3034",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] Red Acne Care Set (Cleansing Foam + Peeling Pad + Cream) Duo Set",
+    "name": "MOIDA SET [MEDICUBE] Red Acne Care Set (Cleansing Foam + Peeling Pad + Cream) Duo Set",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -98799,7 +98649,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-1025-dokdo-sleeping-pack-100ml-bloomingkoco-com-haru-expanded-3035",
-    "name": "*renewal* 1025 Dokdo Sleeping Pack 100ml Glow Edition",
+    "name": "1025 Dokdo Sleeping Pack 100ml Glow Edition",
     "brand": "ROUND LAB",
     "category": "peeling",
     "ingredientIds": [
@@ -98835,7 +98685,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "somebymi-special-price-moida-set-somebymi-aha-bha-pha-30-days-miracle-clean-body-set-cleansing-bar-b-haru-expanded-3036",
-    "name": "*Special Price* MOIDA SET [SOMEBYMI] AHA BHA PHA 30 Days Miracle Clean Body Set (Cleansing Bar + Body Wash) Barrier Edit",
+    "name": "MOIDA SET [SOMEBYMI] AHA BHA PHA 30 Days Miracle Clean Body Set (Cleansing Bar + Body Wash) Barrier Edit",
     "brand": "SOMEBYMI",
     "category": "cleanser",
     "ingredientIds": [
@@ -98874,7 +98724,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-skincare-for-men-with-dry-skin-cleanser-cream-bloomingkoco-c-haru-expanded-3037",
-    "name": "*Special Price* MOIDA SET [celimax] Skincare for men with dry skin (Cleanser + Cream) Sensitive Edit",
+    "name": "MOIDA SET [celimax] Skincare for men with dry skin (Cleanser + Cream) Sensitive Edit",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -98968,7 +98818,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-pdrn-pink-routine-set-cleansing-foam-serum-cream-bloomingk-haru-expanded-3040",
-    "name": "*Special Price* MOIDA SET [MEDICUBE] PDRN Pink Routine Set (Cleansing Foam + Serum + Cream) Night Care",
+    "name": "MOIDA SET [MEDICUBE] PDRN Pink Routine Set (Cleansing Foam + Serum + Cream) Night Care",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -99096,7 +98946,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "sungboon-editor-sungboon-editor-renewal-silk-peptide-intensive-lifting-ampoule-40ml-bloomingkoco-com-haru-expanded-3044",
-    "name": "*renewal* Silk Peptide Intensive Lifting Ampoule 40ml Duo Set",
+    "name": "Silk Peptide Intensive Lifting Ampoule 40ml Duo Set",
     "brand": "SUNGBOON EDITOR",
     "category": "ampoule",
     "ingredientIds": [
@@ -99162,7 +99012,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-moida-set-arencia-retinal-vitamin-c-booster-shot-duo-set-bloomingkoco-com-haru-expanded-3046",
-    "name": "*Special Price* MOIDA SET [Arencia] Retinal & Vitamin C Booster Shot Duo Set Barrier Edit",
+    "name": "MOIDA SET [Arencia] Retinal & Vitamin C Booster Shot Duo Set Barrier Edit",
     "brand": "ARENCIA",
     "category": "serum",
     "ingredientIds": [
@@ -99726,7 +99576,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-k-beauty-set-for-skincare-starters-cleansing-balm-foam-serum-cre-haru-expanded-3063",
-    "name": "*Special Price* MOIDA SET [MOIDA] K-Beauty Set for Skincare Starters (Cleansing Balm + Foam + Serum + Cream) Refill Pack",
+    "name": "MOIDA SET [MOIDA] K-Beauty Set for Skincare Starters (Cleansing Balm + Foam + Serum + Cream) Refill Pack",
     "brand": "MOIDA",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -99867,7 +99717,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-dr-althea-renewal-345-relief-cream-50ml-bloomingkoco-com-haru-expanded-3067",
-    "name": "*renewal* 345 Relief Cream 50ml Sensitive Edit",
+    "name": "345 Relief Cream 50ml Sensitive Edit",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -100067,7 +99917,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renew-maternity-care-relaxing-leg-cream-150ml-bloomingkoco-com-haru-expanded-3073",
-    "name": "*renew* Maternity Care Relaxing Leg Cream 150ml Refill Pack",
+    "name": "Maternity Care Relaxing Leg Cream 150ml Refill Pack",
     "brand": "ATOPALM",
     "category": "peeling",
     "ingredientIds": [
@@ -100540,7 +100390,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-1025-dokdo-ampoule-45ml-bloomingkoco-com-haru-expanded-3088",
-    "name": "*renewal* 1025 Dokdo Ampoule 45ml Hydration Edit",
+    "name": "1025 Dokdo Ampoule 45ml Hydration Edit",
     "brand": "ROUND LAB",
     "category": "ampoule",
     "ingredientIds": [],
@@ -100891,7 +100741,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renewal-dear-darling-water-gel-tint-4-colors-bloomingkoco-com-haru-expanded-3100",
-    "name": "*renewal* Dear Darling Water Gel Tint (4 colors) Night Care",
+    "name": "Dear Darling Water Gel Tint (4 colors) Night Care",
     "brand": "ETUDE",
     "category": "lip-care",
     "ingredientIds": [],
@@ -101498,7 +101348,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "dinto-dinto-peter-wendy-lip-glace-2-colors-bloomingkoco-com-haru-expanded-3119",
-    "name": "*Peter&Wendy* Lip Glace (2 colors) Daily Care",
+    "name": "Lip Glace (2 colors) Daily Care",
     "brand": "Dinto",
     "category": "lip-care",
     "ingredientIds": [
@@ -101743,7 +101593,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "goodal-goodal-renewal-green-tangerine-vita-c-dark-spot-care-serum-sheet-mask-set-5-sheets-bloomingko-haru-expanded-3127",
-    "name": "*renewal* Green Tangerine Vita C Dark Spot Care Serum Sheet Mask Set (5 sheets) Sensitive Edit",
+    "name": "Green Tangerine Vita C Dark Spot Care Serum Sheet Mask Set (5 sheets) Sensitive Edit",
     "brand": "Goodal",
     "category": "serum",
     "ingredientIds": [
@@ -102253,7 +102103,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "rovectin-rovectin-renewal-calming-lotus-cream-60ml-bloomingkoco-com-haru-expanded-3142",
-    "name": "*renewal* Calming Lotus Cream 60ml Travel Size",
+    "name": "Calming Lotus Cream 60ml Travel Size",
     "brand": "Rovectin",
     "category": "moisturizer",
     "ingredientIds": [
@@ -102354,7 +102204,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skinfood-skinfood-renewal-carrot-carotene-moist-effector-52ml-bloomingkoco-com-haru-expanded-3145",
-    "name": "*renewal* Carrot Carotene Moist Effector 52ml Glow Edition",
+    "name": "Carrot Carotene Moist Effector 52ml Glow Edition",
     "brand": "Skinfood",
     "category": "ampoule",
     "ingredientIds": [],
@@ -102693,7 +102543,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "aplb-special-price-moida-set-aplb-glutathione-niacinamide-body-wash-lotion-set-bloomingkoco-com-haru-expanded-3156",
-    "name": "*Special Price* MOIDA SET [APLB] Glutathione Niacinamide Body Wash & Lotion Set Barrier Edit",
+    "name": "MOIDA SET [APLB] Glutathione Niacinamide Body Wash & Lotion Set Barrier Edit",
     "brand": "APLB",
     "category": "cleanser",
     "ingredientIds": [
@@ -102729,7 +102579,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-moida-set-tocobo-cotton-airy-sunstick-duo-original-mini-bloomingkoco-com-haru-expanded-3157",
-    "name": "*Special Price* MOIDA SET [TOCOBO] Cotton Airy Sunstick Duo (Original + mini) Sensitive Edit",
+    "name": "MOIDA SET [TOCOBO] Cotton Airy Sunstick Duo (Original + mini) Sensitive Edit",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -102765,7 +102615,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "jumiso-special-price-moida-set-jumiso-d-panthenol-barrier-soothing-set-serum-cream-bloomingkoco-com-haru-expanded-3158",
-    "name": "*Special Price* MOIDA SET [Jumiso] D-Panthenol Barrier Soothing Set (Serum + Cream) Hydration Edit",
+    "name": "MOIDA SET [Jumiso] D-Panthenol Barrier Soothing Set (Serum + Cream) Hydration Edit",
     "brand": "Jumiso",
     "category": "peeling",
     "ingredientIds": [
@@ -102803,7 +102653,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-10ea-tocobo-bio-watery-sun-cream-spf50-40ml-10ea-free-gift-bloomingkoco-com-haru-expanded-3159",
-    "name": "*Special Price* 10EA [TOCOBO] Bio Watery Sun Cream SPF50 40ml (10ea) + FREE GIFT Daily Care",
+    "name": "10EA [TOCOBO] Bio Watery Sun Cream SPF50 40ml (10ea) + FREE GIFT Daily Care",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -102844,7 +102694,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-moida-set-skin1004-madagascar-tone-brightening-set-cleansing-foam-ampoule-cre-haru-expanded-3160",
-    "name": "*Special Price* MOIDA SET [SKIN1004] Madagascar Tone Brightening Set (Cleansing Foam + Ampoule + Cream) Night Care",
+    "name": "MOIDA SET [SKIN1004] Madagascar Tone Brightening Set (Cleansing Foam + Ampoule + Cream) Night Care",
     "brand": "SKIN1004",
     "category": "cleanser",
     "ingredientIds": [
@@ -102881,7 +102731,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-medicube-zero-pore-set-blackhead-mud-mask-zero-pore-pad-bloomingkoc-haru-expanded-3161",
-    "name": "*Special Price* MOIDA SET [Medicube] Zero Pore Set (Blackhead Mud Mask + Zero Pore Pad) Routine Edit",
+    "name": "MOIDA SET [Medicube] Zero Pore Set (Blackhead Mud Mask + Zero Pore Pad) Routine Edit",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -102915,7 +102765,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-special-price-moida-set-beauty-of-joseon-revitalizing-set-revive-eye-cream-glow-ser-haru-expanded-3162",
-    "name": "*Special Price* MOIDA SET [Beauty of Joseon] Revitalizing Set (Revive Eye Cream + Glow Serum) Travel Size",
+    "name": "MOIDA SET [Beauty of Joseon] Revitalizing Set (Revive Eye Cream + Glow Serum) Travel Size",
     "brand": "Beauty of Joseon",
     "category": "peeling",
     "ingredientIds": [
@@ -102954,7 +102804,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-10ea-tocobo-cotton-airy-sun-stick-spf50-19ml-10ea-free-gift-bloomingkoco-com-haru-expanded-3163",
-    "name": "*Special Price* 10EA [TOCOBO] Cotton Airy Sun Stick SPF50 19ml (10ea) + FREE GIFT Refill Pack",
+    "name": "10EA [TOCOBO] Cotton Airy Sun Stick SPF50 19ml (10ea) + FREE GIFT Refill Pack",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -103652,7 +103502,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   {
     "slug": "the-face-shop-the-face-shop-rice-water-bright-cleansing-wipes-50ea-bloomingkoco-com-haru-expanded-3184",
     "name": "Rice Water Bright Cleansing Wipes (50ea) Duo Set",
-    "brand": "THE FACE SHOP",
+    "brand": "THE FACE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -103683,7 +103533,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "vt-cosmetics-clearance-vt-cosmetics-vt-cica-cream-50ml-bloomingkoco-com-haru-expanded-3185",
-    "name": "*CLEARANCE*[VT Cosmetics] VT Cica Cream 50ml Glow Edition",
+    "name": "[VT Cosmetics] VT Cica Cream 50ml Glow Edition",
     "brand": "VT Cosmetics",
     "category": "moisturizer",
     "ingredientIds": [
@@ -103909,7 +103759,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "cosrx-special-price-moida-set-cosrx-the-peptide-eye-care-set-eye-patch-eye-cream-bloomingkoco-com-haru-expanded-3192",
-    "name": "*Special Price* MOIDA SET [COSRX] The Peptide Eye Care Set (Eye Patch + Eye Cream) Travel Size",
+    "name": "MOIDA SET [COSRX] The Peptide Eye Care Set (Eye Patch + Eye Cream) Travel Size",
     "brand": "COSRX",
     "category": "eye-cream",
     "ingredientIds": [
@@ -103942,7 +103792,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "heimish-special-price-moida-set-heimish-all-clean-cleansing-duo-set-balm-foam-bloomingkoco-com-haru-expanded-3193",
-    "name": "*Special Price* MOIDA SET [Heimish] All Clean Cleansing Duo Set (Balm & Foam) Refill Pack",
+    "name": "MOIDA SET [Heimish] All Clean Cleansing Duo Set (Balm & Foam) Refill Pack",
     "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -103977,7 +103827,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "ksecret-special-price-exclusive-set-ksecret-retinal-black-ginseng-serum-double-set-free-gift-boostin-haru-expanded-3194",
-    "name": "*Special Price* Exclusive Set [KSECRET] Retinal Black Ginseng Serum Double Set (Free Gift : Boosting Ball) Duo Set",
+    "name": "Exclusive Set [KSECRET] Retinal Black Ginseng Serum Double Set Duo Set",
     "brand": "KSECRET",
     "category": "serum",
     "ingredientIds": [
@@ -104014,7 +103864,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-exclusive-set-anua-heartleaf-pore-cleansing-foam-double-set-free-gift-mini-cleans-haru-expanded-3195",
-    "name": "*Special Price* Exclusive Set [Anua] Heartleaf Pore Cleansing Foam Double Set (Free Gift : Mini Cleansing Foam) Glow Edition",
+    "name": "Exclusive Set [Anua] Heartleaf Pore Cleansing Foam Double Set Glow Edition",
     "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
@@ -104680,7 +104530,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-snail-bee-ultimate-eye-cream-30ml-bloomingkoco-com-haru-expanded-3215",
-    "name": "*renew* Snail Bee Ultimate Eye Cream 30ml Glow Edition",
+    "name": "Snail Bee Ultimate Eye Cream 30ml Glow Edition",
     "brand": "Benton",
     "category": "eye-cream",
     "ingredientIds": [
@@ -104943,7 +104793,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-box-medicube-beginner-routine-skincare-box-pad-serum-cream-bloomingkoco-haru-expanded-3223",
-    "name": "*Special Price* MOIDA BOX [MEDICUBE] Beginner Routine Skincare Box (Pad + Serum + Cream) Refill Pack",
+    "name": "MOIDA BOX [MEDICUBE] Beginner Routine Skincare Box (Pad + Serum + Cream) Refill Pack",
     "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
@@ -105084,7 +104934,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "cosrx-cosrx-renew-the-6-peptide-skin-booster-serum-150ml-bloomingkoco-com-haru-expanded-3227",
-    "name": "*renew* The 6 Peptide Skin Booster Serum 150ml Sensitive Edit",
+    "name": "The 6 Peptide Skin Booster Serum 150ml Sensitive Edit",
     "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
@@ -105325,7 +105175,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renew-low-ph-mild-body-wash-500ml-bloomingkoco-com-haru-expanded-3234",
-    "name": "*renew* Low pH Mild Body Wash 500ml Duo Set",
+    "name": "Low pH Mild Body Wash 500ml Duo Set",
     "brand": "Pyunkang Yul",
     "category": "cleanser",
     "ingredientIds": [
@@ -105390,7 +105240,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "ksecret-special-price-moida-set-ksecret-seoul-1988-niacinamide-yuja-set-serum-cream-bloomingkoco-com-haru-expanded-3236",
-    "name": "*Special Price* MOIDA SET [KSECRET] SEOUL 1988 Niacinamide + Yuja Set (Serum + Cream) Barrier Edit",
+    "name": "MOIDA SET [KSECRET] SEOUL 1988 Niacinamide + Yuja Set (Serum + Cream) Barrier Edit",
     "brand": "KSECRET",
     "category": "serum",
     "ingredientIds": [
@@ -105429,7 +105279,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-tocobo-renew-bio-watery-sun-cream-spf50-40ml-bloomingkoco-com-haru-expanded-3237",
-    "name": "*renew* Bio Watery Sun Cream SPF50 40ml Sensitive Edit",
+    "name": "Bio Watery Sun Cream SPF50 40ml Sensitive Edit",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -105563,7 +105413,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-real-barrier-cicarelief-rx-fade-in-serum-50ml-bloomingkoco-com-haru-expanded-3241",
-    "name": "*renewal* Real Barrier Cicarelief RX Fade In Serum 50ml Routine Edit",
+    "name": "Real Barrier Cicarelief RX Fade In Serum 50ml Routine Edit",
     "brand": "Real Barrier",
     "category": "serum",
     "ingredientIds": [
@@ -105597,7 +105447,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-deep-nourishing-multi-balm-bloomingkoco-com-haru-expanded-3242",
-    "name": "*renewal* Deep Nourishing Multi Balm Travel Size",
+    "name": "Deep Nourishing Multi Balm Travel Size",
     "brand": "Pyunkang Yul",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -106574,7 +106424,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "heimish-heimish-renewal-all-clean-white-clay-foam-150g-bloomingkoco-com-haru-expanded-3272",
-    "name": "*renewal* All Clean White Clay Foam 150g Travel Size",
+    "name": "All Clean White Clay Foam 150g Travel Size",
     "brand": "heimish",
     "category": "cleanser",
     "ingredientIds": [
@@ -106858,7 +106708,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renew-one-step-mild-cleansing-pad-60ea-bloomingkoco-com-haru-expanded-3281",
-    "name": "*renew* One Step Mild Cleansing Pad (60ea) Routine Edit",
+    "name": "One Step Mild Cleansing Pad (60ea) Routine Edit",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -108552,7 +108402,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-nutrition-cream-100ml-bloomingkoco-com-haru-expanded-3335",
-    "name": "*renewal* Nutrition Cream 100ml Glow Edition",
+    "name": "Nutrition Cream 100ml Glow Edition",
     "brand": "Pyunkang Yul",
     "category": "moisturizer",
     "ingredientIds": [],
@@ -108580,7 +108430,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-moisture-cream-100ml-bloomingkoco-com-haru-expanded-3336",
-    "name": "*renewal* Moisture Cream 100ml Barrier Edit",
+    "name": "Moisture Cream 100ml Barrier Edit",
     "brand": "Pyunkang Yul",
     "category": "moisturizer",
     "ingredientIds": [
@@ -108615,7 +108465,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-moisture-serum-100ml-bloomingkoco-com-haru-expanded-3337",
-    "name": "*renewal* Moisture Serum 100ml Sensitive Edit",
+    "name": "Moisture Serum 100ml Sensitive Edit",
     "brand": "Pyunkang Yul",
     "category": "serum",
     "ingredientIds": [],
@@ -108777,7 +108627,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-extreme-essence-toner-200ml-bloomingkoco-com-haru-expanded-3342",
-    "name": "*renewal* Extreme Essence Toner 200ml Travel Size",
+    "name": "Extreme Essence Toner 200ml Travel Size",
     "brand": "Real Barrier",
     "category": "cleanser",
     "ingredientIds": [
@@ -109103,7 +108953,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "make-p-rem-make-p-rem-renewal-safe-me-relief-moisture-cleansing-foam-100ml-bloomingkoco-com-haru-expanded-3352",
-    "name": "*renewal* Safe Me Relief Moisture Cleansing Foam 100ml Travel Size",
+    "name": "Safe Me Relief Moisture Cleansing Foam 100ml Travel Size",
     "brand": "make p:rem",
     "category": "cleanser",
     "ingredientIds": [
@@ -109139,7 +108989,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "make-p-rem-make-p-rem-renewal-safe-me-relief-moisture-cleansing-milk-200ml-bloomingkoco-com-haru-expanded-3353",
-    "name": "*renewal* Safe Me Relief Moisture Cleansing Milk 200ml Refill Pack",
+    "name": "Safe Me Relief Moisture Cleansing Milk 200ml Refill Pack",
     "brand": "make p:rem",
     "category": "cleansing-oil",
     "ingredientIds": [],
@@ -109170,7 +109020,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "make-p-rem-make-p-rem-renewal-safe-me-relief-moisture-cleansing-oil-210ml-bloomingkoco-com-haru-expanded-3354",
-    "name": "*renewal* Safe Me Relief Moisture Cleansing Oil 210ml Duo Set",
+    "name": "Safe Me Relief Moisture Cleansing Oil 210ml Duo Set",
     "brand": "make p:rem",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -109531,7 +109381,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "jumiso-jumiso-renewal-all-day-vitamin-brightening-balancing-facial-serum-30ml-bloomingkoco-com-haru-expanded-3366",
-    "name": "*renewal* All Day Vitamin Brightening & Balancing Facial Serum 30ml Barrier Edit",
+    "name": "All Day Vitamin Brightening & Balancing Facial Serum 30ml Barrier Edit",
     "brand": "Jumiso",
     "category": "serum",
     "ingredientIds": [
@@ -110015,7 +109865,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "haruharu-wonder-haruharu-wonder-renewal-wonder-black-rice-hyaluronic-cream-50ml-unscented-bloomingko-haru-expanded-3380",
-    "name": "*renewal* Wonder Black Rice Hyaluronic Cream 50ml (Unscented) Night Care",
+    "name": "Wonder Black Rice Hyaluronic Cream 50ml (Unscented) Night Care",
     "brand": "haruharu wonder",
     "category": "moisturizer",
     "ingredientIds": [
@@ -110589,7 +110439,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "baren-baren-renewal-dual-effect-nail-and-cuticle-care-essence-oil-pen-2ml-bloomingkoco-com-haru-expanded-3398",
-    "name": "*renewal* Dual Effect Nail and Cuticle Care Essence Oil Pen 2ml Hydration Edit",
+    "name": "Dual Effect Nail and Cuticle Care Essence Oil Pen 2ml Hydration Edit",
     "brand": "baren",
     "category": "essence",
     "ingredientIds": [
@@ -110655,7 +110505,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-anua-renewal-heartleaf-succinic-moisture-cleansing-foam-150ml-bloomingkoco-com-haru-expanded-3400",
-    "name": "*renewal* Heartleaf Succinic Moisture Cleansing Foam 150ml Night Care",
+    "name": "Heartleaf Succinic Moisture Cleansing Foam 150ml Night Care",
     "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
@@ -111320,7 +111170,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-exclusive-set-purito-seoul-set-panthenol-bamboo-cream-releaf-serum-bloomi-haru-expanded-3420",
-    "name": "*Special Price* Exclusive Set [Purito Seoul] Set: Panthenol Bamboo Cream + Releaf Serum Night Care",
+    "name": "Exclusive Set [Purito Seoul] Set: Panthenol Bamboo Cream + Releaf Serum Night Care",
     "brand": "Purito Seoul",
     "category": "serum",
     "ingredientIds": [
@@ -111740,7 +111590,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tiam-tiam-renew-vita-b5-toner-180ml-bloomingkoco-com-haru-expanded-3433",
-    "name": "*renew* Vita B5 Toner 180ml Refill Pack",
+    "name": "Vita B5 Toner 180ml Refill Pack",
     "brand": "Tiam",
     "category": "cleanser",
     "ingredientIds": [
@@ -111994,7 +111844,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "skinfood-skinfood-renew-rice-daily-brightening-scrub-foam-150ml-bloomingkoco-com-haru-expanded-3441",
-    "name": "*renew* Rice Daily Brightening Scrub Foam 150ml Routine Edit",
+    "name": "Rice Daily Brightening Scrub Foam 150ml Routine Edit",
     "brand": "Skinfood",
     "category": "cleanser",
     "ingredientIds": [
@@ -112331,7 +112181,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-5ea-tocobo-cotton-airy-sun-stick-spf50-19ml-5ea-bloomingkoco-com-haru-expanded-3451",
-    "name": "*Special Price* 5EA [TOCOBO] Cotton Airy Sun Stick SPF50 19ml (5ea) Routine Edit",
+    "name": "5EA [TOCOBO] Cotton Airy Sun Stick SPF50 19ml (5ea) Routine Edit",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -112367,7 +112217,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "cosrx-special-price-moida-set-cosrx-snail-96-mucin-power-set-essence-cream-bloomingkoco-com-haru-expanded-3452",
-    "name": "*Special Price* MOIDA SET [COSRX] Snail 96 Mucin Power Set (Essence & Cream) Travel Size",
+    "name": "MOIDA SET [COSRX] Snail 96 Mucin Power Set (Essence & Cream) Travel Size",
     "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
@@ -112860,7 +112710,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-anua-renewal-heartleaf-70-intense-calming-cream-50ml-bloomingkoco-com-haru-expanded-3467",
-    "name": "*renewal* Heartleaf 70% Intense Calming Cream 50ml Sensitive Edit",
+    "name": "Heartleaf 70% Intense Calming Cream 50ml Sensitive Edit",
     "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
@@ -112980,7 +112830,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-vita-niacinamide-dark-spot-serum-mask-20ml-10ea-bloomingkoco-com-haru-expanded-3471",
-    "name": "*renewal* Vita Niacinamide Dark Spot Serum Mask 20ml (10ea) Routine Edit",
+    "name": "Vita Niacinamide Dark Spot Serum Mask 20ml (10ea) Routine Edit",
     "brand": "ROUND LAB",
     "category": "peeling",
     "ingredientIds": [
@@ -113047,7 +112897,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-pine-calming-cica-body-wash-400ml-bloomingkoco-com-haru-expanded-3473",
-    "name": "*renewal* Pine Calming Cica Body Wash 400ml Refill Pack",
+    "name": "Pine Calming Cica Body Wash 400ml Refill Pack",
     "brand": "ROUND LAB",
     "category": "cleanser",
     "ingredientIds": [
@@ -113212,7 +113062,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renewal-the-real-cica-calming-serum-mask-10ea-bloomingkoco-com-haru-expanded-3478",
-    "name": "*renewal* The Real Cica Calming Serum Mask (10ea) Hydration Edit",
+    "name": "The Real Cica Calming Serum Mask (10ea) Hydration Edit",
     "brand": "celimax",
     "category": "serum",
     "ingredientIds": [
@@ -113682,7 +113532,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "aromatica-aromatica-renewal-quinoa-protein-shampoo-400ml-bloomingkoco-com-haru-expanded-3493",
-    "name": "*renewal* Quinoa Protein Shampoo 400ml Refill Pack",
+    "name": "Quinoa Protein Shampoo 400ml Refill Pack",
     "brand": "AROMATICA",
     "category": "sunscreen",
     "ingredientIds": [
@@ -113830,7 +113680,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "aromatica-aromatica-renewal-tea-tree-purifying-tonic-100ml-bloomingkoco-com-haru-expanded-3498",
-    "name": "*renewal* Tea Tree Purifying Tonic 100ml Hydration Edit",
+    "name": "Tea Tree Purifying Tonic 100ml Hydration Edit",
     "brand": "AROMATICA",
     "category": "essence",
     "ingredientIds": [],
@@ -114687,7 +114537,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "parnell-parnell-renewal-cicamanu-92-serum-30ml-bloomingkoco-com-haru-expanded-3527",
-    "name": "*renewal* Cicamanu 92 Serum 30ml Sensitive Edit",
+    "name": "Cicamanu 92 Serum 30ml Sensitive Edit",
     "brand": "PARNELL",
     "category": "serum",
     "ingredientIds": [
@@ -114869,7 +114719,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-pore-bium-cleansing-foam-150ml-bloomingkoco-com-haru-expanded-3533",
-    "name": "*renewal* Pore Bium Cleansing Foam 150ml Refill Pack",
+    "name": "Pore Bium Cleansing Foam 150ml Refill Pack",
     "brand": "Real Barrier",
     "category": "cleanser",
     "ingredientIds": [
@@ -114903,7 +114753,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-control-t-cleansing-foam-200ml-bloomingkoco-com-haru-expanded-3534",
-    "name": "*renewal* Control-T Cleansing Foam 200ml Duo Set",
+    "name": "Control-T Cleansing Foam 200ml Duo Set",
     "brand": "Real Barrier",
     "category": "cleanser",
     "ingredientIds": [
@@ -114970,7 +114820,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "real-barrier-real-barrier-renewal-aqua-soothing-ampoule-30ml-bloomingkoco-com-haru-expanded-3536",
-    "name": "*renewal* Aqua Soothing Ampoule 30ml Barrier Edit",
+    "name": "Aqua Soothing Ampoule 30ml Barrier Edit",
     "brand": "Real Barrier",
     "category": "ampoule",
     "ingredientIds": [
@@ -115242,7 +115092,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "pyunkang-yul-pyunkang-yul-renewal-kids-baby-shampoo-590ml-bloomingkoco-com-haru-expanded-3544",
-    "name": "*renewal* Kids & Baby Shampoo 590ml Duo Set",
+    "name": "Kids & Baby Shampoo 590ml Duo Set",
     "brand": "Pyunkang Yul",
     "category": "cleanser",
     "ingredientIds": [
@@ -115360,7 +115210,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renewal-soothing-gel-lotion-120ml-bloomingkoco-com-haru-expanded-3548",
-    "name": "*renewal* Soothing Gel Lotion 120ml Hydration Edit",
+    "name": "Soothing Gel Lotion 120ml Hydration Edit",
     "brand": "ATOPALM",
     "category": "essence",
     "ingredientIds": [],
@@ -115389,7 +115239,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renewal-deep-green-tea-toner-150ml-bloomingkoco-com-haru-expanded-3549",
-    "name": "*renewal* Deep Green Tea Toner 150ML Daily Care",
+    "name": "Deep Green Tea Toner 150ML Daily Care",
     "brand": "Benton",
     "category": "toner",
     "ingredientIds": [],
@@ -115524,7 +115374,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "b-lab-b-lab-renewal-cica-barrier-gentle-morning-cleanser-120ml-bloomingkoco-com-haru-expanded-3553",
-    "name": "*renewal* CICA Barrier Gentle Morning Cleanser 120ml Refill Pack",
+    "name": "CICA Barrier Gentle Morning Cleanser 120ml Refill Pack",
     "brand": "B_LAB",
     "category": "cleanser",
     "ingredientIds": [
@@ -115597,7 +115447,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renewal-top-to-toe-wash-300ml-bloomingkoco-com-haru-expanded-3555",
-    "name": "*renewal* Top to Toe Wash 300ml Glow Edition",
+    "name": "Top to Toe Wash 300ml Glow Edition",
     "brand": "ATOPALM",
     "category": "cleanser",
     "ingredientIds": [
@@ -115629,7 +115479,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-anua-renewal-birch-moisture-boosting-cream-50ml-bloomingkoco-com-haru-expanded-3556",
-    "name": "*renewal* Birch Moisture Boosting Cream 50ml Barrier Edit",
+    "name": "Birch Moisture Boosting Cream 50ml Barrier Edit",
     "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
@@ -115662,7 +115512,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-anua-renewal-vitamin-c-blemish-serum-mask-1ea-bloomingkoco-com-haru-expanded-3557",
-    "name": "*renewal* Vitamin C Blemish Serum Mask (1ea) Sensitive Edit",
+    "name": "Vitamin C Blemish Serum Mask (1ea) Sensitive Edit",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -116028,7 +115878,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "biodance-biodance-renewal-hydro-ceramide-cleansing-powder-1g-30ea-bloomingkoco-com-haru-expanded-3568",
-    "name": "*renewal* Hydro Ceramide Cleansing Powder (1g*30ea) Hydration Edit",
+    "name": "Hydro Ceramide Cleansing Powder (1g*30ea) Hydration Edit",
     "brand": "Biodance",
     "category": "cleanser",
     "ingredientIds": [
@@ -116096,7 +115946,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "round-lab-round-lab-renewal-birch-juice-hand-cream-30ml-bloomingkoco-com-haru-expanded-3570",
-    "name": "*renewal* Birch Juice Hand Cream 30ml Night Care",
+    "name": "Birch Juice Hand Cream 30ml Night Care",
     "brand": "ROUND LAB",
     "category": "hair",
     "ingredientIds": [
@@ -116128,7 +115978,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "sungboon-editor-sungboon-editor-renewal-deep-collagen-retinol-power-boosting-capsule-cream-50ml-bloo-haru-expanded-3571",
-    "name": "*renewal* Deep Collagen Retinol Power Boosting Capsule Cream 50ml Routine Edit",
+    "name": "Deep Collagen Retinol Power Boosting Capsule Cream 50ml Routine Edit",
     "brand": "SUNGBOON EDITOR",
     "category": "sunscreen",
     "ingredientIds": [
@@ -117059,7 +116909,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "nineless-special-price-exclusive-set-nineless-azelaic-acid-serum-duo-set-free-gift-azelaic-acid-crea-haru-expanded-3598",
-    "name": "*Special Price* Exclusive Set [NINELESS] Azelaic Acid Serum Duo Set (Free Gift : Azelaic Acid Cream 15ml * 2ea) Hydration Edit",
+    "name": "Exclusive Set [NINELESS] Azelaic Acid Serum Duo Set Hydration Edit",
     "brand": "NINELESS",
     "category": "serum",
     "ingredientIds": [
@@ -117287,7 +117137,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "mixsoon-clearance-mixsoon-h-c-t-bubble-toner-150ml-bloomingkoco-com-haru-expanded-3605",
-    "name": "*CLEARANCE* [MIXSOON] H.C.T Bubble Toner 150ml Glow Edition",
+    "name": "[MIXSOON] H.C.T Bubble Toner 150ml Glow Edition",
     "brand": "MIXSOON",
     "category": "toner",
     "ingredientIds": [
@@ -118618,7 +118468,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "free-heimish-mini-all-clean-gentle-gel-cleanser-20ml-bloomingkoco-com-haru-expanded-3646",
-    "name": "*mini* All Clean Gentle Gel Cleanser 20ml Barrier Edit",
+    "name": "All Clean Gentle Gel Cleanser 20ml Barrier Edit",
     "brand": "free",
     "category": "cleanser",
     "ingredientIds": [],
@@ -118977,7 +118827,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "acwell-acwell-renewal-licorice-ph-balancing-advance-serum-30ml-bloomingkoco-com-haru-expanded-3658",
-    "name": "*renewal* Licorice pH Balancing Advance Serum 30ml Hydration Edit",
+    "name": "Licorice pH Balancing Advance Serum 30ml Hydration Edit",
     "brand": "ACWELL",
     "category": "serum",
     "ingredientIds": [
@@ -119813,7 +119663,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renew-noni-energy-ampoule-30ml-bloomingkoco-com-haru-expanded-3684",
-    "name": "*renew* Noni Energy Ampoule 30ml Duo Set",
+    "name": "Noni Energy Ampoule 30ml Duo Set",
     "brand": "celimax",
     "category": "ampoule",
     "ingredientIds": [
@@ -120712,7 +120562,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-moida-set-anua-heartleaf-pore-purifying-duo-oil-foam-bloomingkoco-com-haru-expanded-3711",
-    "name": "*Special Price* MOIDA SET [Anua] Heartleaf Pore Purifying Duo (Oil & Foam) Routine Edit",
+    "name": "MOIDA SET [Anua] Heartleaf Pore Purifying Duo (Oil & Foam) Routine Edit",
     "brand": "Anua",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -121301,7 +121151,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renew-mle-lotion-200ml-bloomingkoco-com-haru-expanded-3730",
-    "name": "*renew* MLE Lotion 200ml Night Care",
+    "name": "MLE Lotion 200ml Night Care",
     "brand": "ATOPALM",
     "category": "body",
     "ingredientIds": [
@@ -121332,7 +121182,7 @@ export const EXTRA_GENERATED_PRODUCTS_2: SeedProduct[] = [
   },
   {
     "slug": "atopalm-atopalm-renew-facial-foam-wash-150ml-bloomingkoco-com-haru-expanded-3731",
-    "name": "*renew* Facial Foam Wash 150ml Routine Edit",
+    "name": "Facial Foam Wash 150ml Routine Edit",
     "brand": "ATOPALM",
     "category": "cleanser",
     "ingredientIds": [

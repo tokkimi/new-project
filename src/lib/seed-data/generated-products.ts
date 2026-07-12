@@ -2,11 +2,12 @@ import type { SeedProduct } from "./products";
 
 // Auto-generated from official brand/storefront product feeds on 2026-07-12.
 // Full INCI is preserved when exposed by the source; otherwise the field records verified key families and asks admins to confirm packaging-level INCI.
+// Promotional prefixes/suffixes (flash-deal tags, free-gift callouts, GWP placeholders) were stripped from names and brands on 2026-07-12.
 export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-132-hair-home-care-kit",
     "name": "Peptide-132 Hair Home Care Kit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "scalp",
     "ingredientIds": [
       "peptides"
@@ -35,7 +36,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-132-hair-home-care-duo",
     "name": "Peptide-132 Hair Home Care Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "scalp",
     "ingredientIds": [
       "peptides"
@@ -64,7 +65,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-premium-routine-kit",
     "name": "PDRN Premium Routine Kit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -98,7 +99,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-full-routine-kit",
     "name": "PDRN Full Routine Kit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -130,7 +131,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-daily-routine-kit",
     "name": "PDRN Daily Routine Kit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -162,7 +163,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-glass-skin-duo",
     "name": "PDRN Glass Skin Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -191,7 +192,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-blue-peptide-bakuchiol-plump-duo",
     "name": "The Blue Peptide Bakuchiol Plump Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -223,7 +224,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-skin-barrier-glow-routine-duo",
     "name": "Skin Barrier & Glow Routine Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
       "retinol",
@@ -258,7 +259,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-double-peptide-firming-duo",
     "name": "Double Peptide Firming Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "retinol",
@@ -288,7 +289,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-azelaic-acid-20-b5-redness-soothing-cream",
     "name": "COSRX Azelaic Acid 20 B5 Redness Soothing Cream",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "AzelaicAcid 20% Size: 30mL / 1.01 fl. oz.",
@@ -319,7 +320,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-azelaic-acid-10-b5-redness-soothing-cream",
     "name": "COSRX Azelaic Acid 10 B5 Redness Soothing Cream",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Azelaic Acid 10% Size: 30mL / 1.01 fl. oz. *Use \" soothing10 \" coupon code at the checkout!",
@@ -351,7 +352,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-moisture-up-pad",
     "name": "One Step Moisture Up Pad",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "bha",
@@ -383,7 +384,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-the-blue-peptide-bakuchiol-plump-bounce-cream",
     "name": "COSRX The Blue Peptide Bakuchiol Plump Bounce Cream",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "retinol",
@@ -420,7 +421,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-the-blue-peptide-bakuchiol-plump-glow-serum",
     "name": "COSRX The Blue Peptide Bakuchiol Plump Glow Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -454,7 +455,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-pdrn-eye-patch-duo",
     "name": "Peptide & PDRN Eye Patch Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -482,7 +483,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-all-day-sun-protection-duo",
     "name": "All-Day Sun Protection Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "vitamin_c",
@@ -514,7 +515,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-red-rice-inositol-pore-clarifying-deep-cleanser",
     "name": "COSRX RED RICE INOSITOL Pore Clarifying Deep Cleanser",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -542,7 +543,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-red-rice-inositol-exfoliating-care-pore-wash-off-peel-serum",
     "name": "COSRX RED RICE INOSITOL Exfoliating Care Pore Wash-Off Peel Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "bha",
@@ -574,7 +575,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pdrn-special-care-duo",
     "name": "PDRN Special Care Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -605,7 +606,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-favorites-best-sellers-set",
     "name": "COSRX Favorites Best sellers Set",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-gel",
     "ingredientIds": [
       "aha",
@@ -643,7 +644,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-clear-skin-calming-pad",
     "name": "One Step Original Clear Skin Calming Pad",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "centella",
@@ -680,7 +681,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-tone-clarifying-moisture-pad",
     "name": "One Step Original Tone Clarifying Moisture Pad",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "niacinamide",
@@ -712,7 +713,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-peptide-collagen-lifting-glow-pad",
     "name": "One Step Original Peptide Collagen Lifting Glow Pad",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "peptides"
@@ -741,7 +742,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-blemish-pore-clear-pad",
     "name": "One Step Original Blemish Pore Clear Pad",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner-pad",
     "ingredientIds": [
       "aha",
@@ -773,7 +774,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-5-pdrn-collagen-vitalizing-hydrogel-eye-patch",
     "name": "COSRX 5 PDRN Collagen Vitalizing Hydrogel Eye Patch",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -804,7 +805,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-peptide-132-hair-bonding-mini-kit",
     "name": "COSRX PEPTIDE-132 Hair Bonding Mini Kit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -832,7 +833,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-96-mucin-power-essence",
     "name": "Advanced Snail 96 Mucin Power Essence",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
       "ceramides",
@@ -868,7 +869,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-plump-hydrate-kit",
     "name": "Plump & Hydrate Kit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "ceramides",
@@ -903,7 +904,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-deep-wrinkle-care-boost",
     "name": "Deep Wrinkle Care Boost",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -931,7 +932,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-brightening-boost",
     "name": "Brightening Boost",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -962,7 +963,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-tone-lift-glow-mask-duo",
     "name": "Tone & Lift Glow Mask Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -993,7 +994,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-plumping-eye-care-duo",
     "name": "Peptide Plumping Eye Care Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "eye-cream",
     "ingredientIds": [
       "ceramides",
@@ -1025,7 +1026,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-peptide-special-care-duo",
     "name": "Peptide Special Care Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -1054,7 +1055,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-92-all-in-one-cream",
     "name": "Advanced Snail 92 All in One Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "ceramides",
@@ -1090,7 +1091,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-ceramide-skin-barrier-moisturizer",
     "name": "The Ceramide Skin Barrier Moisturizer",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -1123,7 +1124,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-peptide-collagen-hydrogel-eye-patch",
     "name": "The Peptide Collagen Hydrogel Eye Patch",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "eye-patch",
     "ingredientIds": [
       "niacinamide",
@@ -1155,7 +1156,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-6-peptide-skin-booster-serum",
     "name": "The 6 Peptide Skin Booster Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "peptides"
@@ -1187,7 +1188,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-the-vitamin-c-23-serum",
     "name": "Advanced The Vitamin C 23 Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -1219,7 +1220,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-vitamin-e-vitalizing-sunscreen-spf-50",
     "name": "Vitamin E Vitalizing Sunscreen SPF 50+",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "vitamin_c",
@@ -1252,7 +1253,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-niacinamide-15-serum",
     "name": "The Niacinamide 15 Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "niacinamide"
@@ -1282,7 +1283,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-ceramide-skin-barrier-moisturizing-mist",
     "name": "The Ceramide Skin Barrier Moisturizing Mist",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -1316,7 +1317,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-retinol-0-5-oil",
     "name": "The Retinol 0.5 Oil",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "oil",
     "ingredientIds": [
       "retinol",
@@ -1346,7 +1347,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-mucin-gel-cleanser",
     "name": "Advanced Snail Mucin Gel Cleanser",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-gel",
     "ingredientIds": [
       "snail_mucin"
@@ -1376,7 +1377,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-acne-pimple-master-patch-original-fit-4set-96-patches",
     "name": "Acne Pimple Master Patch Original Fit 4SET (96 Patches)",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -1403,7 +1404,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-skin-barrier-moisturizing-body-cream",
     "name": "COSRX Skin Barrier Moisturizing Body Cream",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "body",
     "ingredientIds": [
       "ceramides"
@@ -1435,7 +1436,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-5-pdrn-hyaluronic-acid-vital-hydrating-hydrogel-mask",
     "name": "COSRX 5 PDRN Hyaluronic Acid Vital Hydrating Hydrogel Mask",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c",
@@ -1468,7 +1469,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-5-pdrn-collagen-intense-vitalizing-serum",
     "name": "COSRX 5 PDRN Collagen Intense Vitalizing Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -1499,7 +1500,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-5-pdrn-b5-vital-soothing-toner",
     "name": "COSRX 5 PDRN B5 Vital Soothing Toner",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -1533,7 +1534,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-slow-aging-kit",
     "name": "Slow-Aging Kit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "eye-cream",
     "ingredientIds": [
       "vitamin_c",
@@ -1565,7 +1566,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-pdrn-exosome-skinplaning-glaze-mask",
     "name": "COSRX PDRN EXOSOME Skinplaning Glaze Mask",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "peptides"
@@ -1596,7 +1597,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-snail-mucin-eye-care-duo",
     "name": "Snail Mucin Eye Care Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "eye-patch",
     "ingredientIds": [
       "snail_mucin"
@@ -1625,7 +1626,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-deep-wrinkle-care-trio",
     "name": "Deep Wrinkle Care Trio",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -1655,7 +1656,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-radiant-glow-kit",
     "name": "Radiant Glow Kit",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "vitamin_c",
@@ -1689,7 +1690,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-snail-mucin-trio",
     "name": "Snail Mucin Trio",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "snail_mucin"
@@ -1717,7 +1718,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-airy-light-invisible-sun-stick",
     "name": "Airy-Light Invisible Sun Stick",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sun-stick",
     "ingredientIds": [
       "spf"
@@ -1746,7 +1747,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-airy-light-oil-control-clear-sunscreen-stick-spf-50",
     "name": "COSRX AIRY-LIGHT OIL CONTROL CLEAR SUNSCREEN STICK SPF 50",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -1775,7 +1776,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-peptide-132-ultra-perfect-hair-bonding-oil-serum",
     "name": "COSRX PEPTIDE-132 Ultra Perfect Hair Bonding Oil Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -1803,7 +1804,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-peptide-132-ultra-perfect-hair-bonding-treatment",
     "name": "COSRX PEPTIDE-132 Ultra Perfect Hair Bonding Treatment",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "scalp",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -1835,7 +1836,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-peptide-132-ultra-perfect-hair-bonding-shampoo",
     "name": "COSRX PEPTIDE-132 Ultra Perfect Hair Bonding Shampoo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "peptides"
@@ -1866,7 +1867,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-the-alpha-arbutin-discoloration-care-hydrogel-mask",
     "name": "COSRX The Alpha-Arbutin Discoloration Care Hydrogel Mask",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -1899,7 +1900,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-the-peptide-collagen-lifting-glow-hydrogel-mask",
     "name": "COSRX The Peptide Collagen Lifting Glow Hydrogel Mask",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c",
@@ -1929,7 +1930,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-mucin-glass-glow-hydrogel-mask-3ea",
     "name": "Advanced Snail Mucin Glass Glow Hydrogel Mask_3ea",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "mask",
     "ingredientIds": [
       "peptides",
@@ -1961,7 +1962,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-alpha-arbutin-2-discoloration-care-serum",
     "name": "The Alpha-Arbutin 2 Discoloration Care Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "pha"
@@ -1990,7 +1991,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ultra-light-invisible-sunscreen-spf50-pa",
     "name": "Ultra-Light Invisible Sunscreen SPF50 PA++++",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -2021,7 +2022,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-balancium-comfort-ceramide-soft-cream-sheet-mask",
     "name": "Balancium Comfort Ceramide Soft Cream Sheet Mask",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
       "ceramides"
@@ -2051,7 +2052,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-92-all-in-one-cream-cosrx-com",
     "name": "Advanced Snail 92 All in one Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "snail_mucin"
@@ -2082,7 +2083,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-retinol-0-3-cream",
     "name": "The Retinol 0.3 Cream",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "retinol"
@@ -2114,7 +2115,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-aha-bha-pha-lha-35-peel",
     "name": "The AHA BHA PHA LHA 35 Peel",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "aha",
@@ -2145,7 +2146,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-cosrx-one-step-green-calming-pad",
     "name": "COSRX One Step Green Calming Pad",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -2180,7 +2181,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-aha-2-bha-2-blemish-treatment-serum",
     "name": "The AHA 2 BHA 2 Blemish Treatment Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "aha",
@@ -2211,7 +2212,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-low-ph-niacinamide-micellar-cleansing-water",
     "name": "Low pH Niacinamide Micellar Cleansing Water",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleansing-water",
     "ingredientIds": [
       "niacinamide"
@@ -2244,7 +2245,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-24-hr-synergy-duo",
     "name": "24-HR Synergy Duo",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -2279,7 +2280,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-aloe-54-2-aqua-tone-up-sunscreen-spf-50-pa",
     "name": "Aloe 54.2 Aqua Tone-up Sunscreen SPF 50+ PA++++",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -2310,7 +2311,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-calming-liquid-intensive",
     "name": "AC Collection Calming Liquid Intensive",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -2340,7 +2341,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-calming-liquid-mild",
     "name": "AC Collection Calming Liquid Mild",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "to quickly relieve mild acne for daily use.",
@@ -2370,7 +2371,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-vitamin-c-13-serum",
     "name": "The Vitamin C 13 Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -2403,7 +2404,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-lip-plump-refresh-aha-bha-vitamin-c-lip-plumper",
     "name": "Lip Plump - Refresh AHA BHA Vitamin C Lip Plumper",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -2435,7 +2436,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-watery-toner",
     "name": "Hydrium Watery Toner",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -2466,7 +2467,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-balancium-comfort-ceramide-cream",
     "name": "Balancium Comfort Ceramide Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -2503,7 +2504,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-two-in-one-poreless-power-liquid",
     "name": "Two in One Poreless Power Liquid",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "aha",
@@ -2534,7 +2535,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-aha-7-whitehead-power-liquid",
     "name": "AHA 7 Whitehead Power Liquid",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "aha",
@@ -2565,7 +2566,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-aha-bha-clarifying-treatment-toner",
     "name": "AHA/BHA Clarifying Treatment Toner",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -2598,7 +2599,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-centella-water-alcohol-free-toner",
     "name": "Centella Water Alcohol-Free Toner",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -2631,7 +2632,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-bha-blackhead-power-liquid",
     "name": "BHA Blackhead Power Liquid",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "niacinamide",
@@ -2663,7 +2664,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-refresh-abc-daily-toner-aha-bha-vitamin-c",
     "name": "Refresh ABC Daily Toner (AHA BHA Vitamin C)",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -2695,7 +2696,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-synergy-toner",
     "name": "Full Fit Propolis Synergy Toner",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -2721,7 +2722,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-retinol-0-1-cream",
     "name": "The Retinol 0.1 Cream",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "retinol"
@@ -2753,7 +2754,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-lip-sleep-balancium-ceramide-lip-butter-sleeping-mask",
     "name": "Lip Sleep - Balancium Ceramide Lip Butter Sleeping Mask",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "sleeping-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -2784,7 +2785,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-calming-foam-cleanser",
     "name": "AC Collection Calming Foam Cleanser",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -2817,7 +2818,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-oil-free-ultra-moisturizing-lotion-with-birch-sap",
     "name": "Oil-Free Ultra-Moisturizing Lotion with Birch Sap",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "lotion",
     "ingredientIds": [
       "vitamin_c",
@@ -2850,7 +2851,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-one-step-original-clear-pad",
     "name": "One Step Original Clear Pad",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "aha",
@@ -2881,7 +2882,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-the-hyaluronic-acid-3-serum",
     "name": "The Hyaluronic Acid 3 Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -2909,7 +2910,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-aloe-soothing-sun-cream-spf50-pa",
     "name": "Aloe Soothing Sun Cream SPF50+/ PA+++",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -2941,7 +2942,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-triple-hyaluronic-moisturizing-cleanser",
     "name": "Hydrium Triple Hyaluronic Moisturizing Cleanser",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -2971,7 +2972,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-intensive-90ea",
     "name": "Master Patch Intensive [90ea]",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -2999,7 +3000,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-basic-90ea",
     "name": "Master Patch Basic [90ea]",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -3026,7 +3027,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-x-large",
     "name": "Master Patch X-Large",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide"
@@ -3057,7 +3058,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-intensive-36ea",
     "name": "Master Patch Intensive [36ea]",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -3085,7 +3086,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-master-patch-basic-36ea",
     "name": "Master Patch Basic [36ea]",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Cellulose Gum, Hydrogenated Poly(C6-20 Olefin), Polyisobutene, Styrene/Isoprene Copolymer",
@@ -3113,7 +3114,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-blemish-spot-clearing-serum",
     "name": "AC Collection Blemish Spot Clearing Serum",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -3143,7 +3144,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-radiance-dual-essence",
     "name": "Advanced Snail Radiance Dual Essence",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
       "niacinamide",
@@ -3173,7 +3174,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-refresh-aha-bha-vitamin-c-daily-cream",
     "name": "Refresh AHA/BHA Vitamin C Daily Cream",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -3210,7 +3211,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-refresh-aha-bha-vitamin-c-booster-serum",
     "name": "Refresh AHA/BHA Vitamin C Booster Serum",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -3248,7 +3249,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-poreless-clarifying-charcoal-mask-pink",
     "name": "Poreless Clarifying Charcoal Mask Pink",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "bha",
@@ -3284,7 +3285,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-lip-scrub-full-fit-honey-sugar-lip-scrub",
     "name": "Lip Scrub - Full Fit Honey Sugar Lip Scrub",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "lip-care",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -3310,7 +3311,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-creamy-foam-cleanser",
     "name": "Pure Fit Cica Creamy Foam Cleanser",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [
       "centella"
@@ -3341,7 +3342,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-clear-cleansing-oil",
     "name": "Pure Fit Cica Clear Cleansing Oil",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -3377,7 +3378,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-low-ph-goodnight-soft-peeling-gel",
     "name": "Low pH Goodnight Soft Peeling Gel",
-    "brand": "COSRX Official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "ceramides"
@@ -3410,7 +3411,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-blemish-care-sheet-mask",
     "name": "AC Collection Blemish Care Sheet Mask",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [
       "green_tea"
@@ -3439,7 +3440,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-hydrogel-eye-patch",
     "name": "Advanced Snail Hydrogel Eye Patch",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "eye-patch",
     "ingredientIds": [
       "niacinamide",
@@ -3470,7 +3471,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-cream-intense",
     "name": "Pure Fit Cica Cream Intense",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "oil",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -3505,7 +3506,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ultimate-nourishing-rice-overnight-spa-mask",
     "name": "Ultimate Nourishing Rice Overnight Spa Mask",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "mask",
     "ingredientIds": [
       "niacinamide"
@@ -3535,7 +3536,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-triple-hyaluronic-water-wave-sheet-mask",
     "name": "Hydrium Triple Hyaluronic Water Wave Sheet Mask",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -3564,7 +3565,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-nourishing-magnet-sheet-mask",
     "name": "Full Fit Propolis Nourishing Magnet Sheet Mask",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -3590,7 +3591,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-perfect-sebum-centella-powder-puff-opp",
     "name": "Perfect Sebum Centella Powder Puff OPP",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "centella"
@@ -3621,7 +3622,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-honey-overnight-mask",
     "name": "Full Fit Propolis Honey Overnight Mask",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -3650,7 +3651,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-mucin-power-sheet-mask-10-sheets",
     "name": "Advanced Snail Mucin Power Sheet Mask 10 Sheets",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [
       "snail_mucin"
@@ -3678,7 +3679,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-calming-true-sheet-mask",
     "name": "Pure Fit Cica Calming True Sheet Mask",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "sheet-mask",
     "ingredientIds": [
       "centella"
@@ -3707,7 +3708,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-all-about-snail-kit-4-step",
     "name": "ALL ABOUT SNAIL KIT 4-step",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-gel",
     "ingredientIds": [
       "peptides",
@@ -3741,7 +3742,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-lightweight-soothing-moisturizer",
     "name": "AC Collection Lightweight Soothing Moisturizer",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -3780,7 +3781,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-acne-patch",
     "name": "AC Collection Acne Patch",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -3808,7 +3809,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-ac-collection-ultimate-spot-cream",
     "name": "AC Collection Ultimate Spot Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "vitamin_c",
@@ -3844,7 +3845,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-acne-pimple-master-patch",
     "name": "Acne Pimple Master Patch",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -3871,7 +3872,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-advanced-snail-peptide-eye-cream",
     "name": "Advanced Snail Peptide Eye Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "eye-cream",
     "ingredientIds": [
       "niacinamide",
@@ -3905,7 +3906,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-clear-fit-master-patch",
     "name": "Clear Fit Master Patch",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "ceramides"
@@ -3936,7 +3937,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-light-ampoule",
     "name": "Full fit Propolis Light Ampoule",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "ampoule",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -3962,7 +3963,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-full-fit-propolis-light-cream",
     "name": "Full Fit Propolis Light Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -3990,7 +3991,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-galactomyces-95-tone-balancing-essence",
     "name": "Galactomyces 95 Tone Balancing Essence",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -4017,7 +4018,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-hyaluronic-acid-hydra-power-essence",
     "name": "Hyaluronic Acid Hydra Power Essence",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleanser",
     "ingredientIds": [
       "pha",
@@ -4049,7 +4050,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-hyaluronic-acid-intensive-cream",
     "name": "Hyaluronic Acid Intensive Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "oil",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -4079,7 +4080,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-triple-hyaluronic-moisture-ampoule",
     "name": "Hydrium Triple Hyaluronic Moisture Ampoule",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -4108,7 +4109,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-green-tea-aqua-soothing-gel-cream",
     "name": "Hydrium Green Tea Aqua Soothing Gel Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "oil",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -4141,7 +4142,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-centella-aqua-soothing-ampoule",
     "name": "Hydrium Centella Aqua Soothing Ampoule",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -4176,7 +4177,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-low-ph-good-morning-gel-cleanser",
     "name": "Low pH Good Morning Gel Cleanser",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "cleansing-gel",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -4204,7 +4205,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-cream",
     "name": "Pure Fit Cica Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "centella"
@@ -4235,7 +4236,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-pure-fit-cica-serum",
     "name": "Pure Fit Cica Serum",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -4269,7 +4270,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-hydrium-moisture-power-enriched-cream",
     "name": "Hydrium Moisture Power Enriched Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -4300,7 +4301,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "cosrx-official-centella-blemish-cream",
     "name": "Centella Blemish Cream",
-    "brand": "COSRX official",
+    "brand": "COSRX",
     "category": "spot",
     "ingredientIds": [
       "centella"
@@ -5278,7 +5279,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-ground-rice-and-honey-glow-mask-100-off",
-    "name": "🎁 Ground Rice and Honey Glow Mask (100% off)",
+    "name": "Ground Rice and Honey Glow Mask (100% off)",
     "brand": "Beauty of Joseon",
     "category": "mask",
     "ingredientIds": [],
@@ -5304,7 +5305,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-calming-serum-green-tea-panthenol-100-off",
-    "name": "🎁 Calming Serum : Green tea + Panthenol (100% off)",
+    "name": "Calming Serum : Green tea + Panthenol (100% off)",
     "brand": "Beauty of Joseon",
     "category": "serum",
     "ingredientIds": [
@@ -5334,7 +5335,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-ground-rice-and-honey-glow-mask-100-off-www-beautyofjoseon-com",
-    "name": "🎁 Ground Rice and Honey Glow Mask (100% off)",
+    "name": "Ground Rice and Honey Glow Mask (100% off)",
     "brand": "Beauty of Joseon",
     "category": "mask",
     "ingredientIds": [],
@@ -5360,7 +5361,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-glow-deep-serum-rice-alpha-arbutin-100-off",
-    "name": "🎁 Glow Deep Serum : Rice + Alpha-Arbutin (100% off)",
+    "name": "Glow Deep Serum : Rice + Alpha-Arbutin (100% off)",
     "brand": "Beauty of Joseon",
     "category": "peeling",
     "ingredientIds": [
@@ -6244,7 +6245,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-uk-relief-sun-mini-10ml-free-gift",
-    "name": "Relief Sun Mini 10ml (Free Gift)",
+    "name": "Relief Sun Mini 10ml",
     "brand": "Beauty of Joseon UK",
     "category": "sunscreen",
     "ingredientIds": [
@@ -6302,7 +6303,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "beauty-of-joseon-day-dew-sunscreen-10ml-free-gift",
-    "name": "Day Dew Sunscreen 10ml (Free Gift)",
+    "name": "Day Dew Sunscreen 10ml",
     "brand": "Beauty of Joseon",
     "category": "sunscreen",
     "ingredientIds": [
@@ -6465,126 +6466,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "acne",
       "redness",
       "uv-protection"
-    ]
-  },
-  {
-    "slug": "free-gift-ghost-free-gift-revive-eye-serum-mini",
-    "name": "(Free Gift) Revive Eye Serum Mini",
-    "brand": "Free Gift Ghost",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide",
-      "spf"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support, UV filter/SPF family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Keep your eyes looking youthful and refreshed, even while on the move, with Beauty of Joseon's Revive Eye Serum in a compact 10ml size. Specially formulated to target fine lines and signs of fatigue, this serum is your ideal travel partner, ensuring your eye area remains bright and rejuvenated. Its travel-size packaging makes it a hassle-free addition to your skincare routine, offering a quick and effective eye care solution wherever you are.",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/Revive-Eye-Serum-Mini-10ml_Beauty-of-Joseon_12882370-27948310757541.png?v=1762679566",
-    "officialUrl": "https://www.beautyofjoseon.com/products/free-gift-revive-eye-serum-mini",
-    "price": 3.75,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
-      "uv-protection"
-    ]
-  },
-  {
-    "slug": "free-gift-ghost-free-gift-light-on-serum-mini",
-    "name": "(Free Gift) Light On Serum Mini",
-    "brand": "Free Gift Ghost",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Maintain a radiant, hydrated complexion on all your journeys with the Light On Serum, now in a travel-ready 10ml format. This serum provides deep hydration and a brightening effect with its lightweight formula, designed for quick absorption and easy application. Perfect for keeping your skin refreshed and glowing, this travel-size serum ensures you can bring your skincare essentials along, no matter the destination.",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/Light-On-Serum-Mini-10ml_Beauty-of-Joseon_67784178-27948311543973.png?v=1762679566",
-    "officialUrl": "https://www.beautyofjoseon.com/products/free-gift-light-on-serum-mini",
-    "price": 3.75,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness"
-    ]
-  },
-  {
-    "slug": "free-gift-ghost-revive-eye-serum-mini-free-gift",
-    "name": "Revive Eye Serum Mini (Free Gift)",
-    "brand": "Free Gift Ghost",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide",
-      "spf"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support, UV filter/SPF family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Keep your eyes looking youthful and refreshed, even while on the move, with Beauty of Joseon's Revive Eye Serum in a compact 10ml size. Specially formulated to target fine lines and signs of fatigue, this serum is your ideal travel partner, ensuring your eye area remains bright and rejuvenated. Its travel-size packaging makes it a hassle-free addition to your skincare routine, offering a quick and effective eye care solution wherever you are.",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/Revive-Eye-Serum-Mini-10ml_Beauty-of-Joseon_12882370-27948310757541.png?v=1762679566",
-    "officialUrl": "https://www.beautyofjoseon.com/products/revive-eye-serum-mini-free-gift",
-    "price": 3.75,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
-      "uv-protection"
-    ]
-  },
-  {
-    "slug": "free-gift-ghost-light-on-serum-mini-free-gift",
-    "name": "Light On Serum Mini (Free Gift)",
-    "brand": "Free Gift Ghost",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Maintain a radiant, hydrated complexion on all your journeys with the Light On Serum, now in a travel-ready 10ml format. This serum provides deep hydration and a brightening effect with its lightweight formula, designed for quick absorption and easy application. Perfect for keeping your skin refreshed and glowing, this travel-size serum ensures you can bring your skincare essentials along, no matter the destination.",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/Light-On-Serum-Mini-10ml_Beauty-of-Joseon_67784178-27948311543973.png?v=1762679566",
-    "officialUrl": "https://www.beautyofjoseon.com/products/light-on-serum-mini-free-gift",
-    "price": 3.75,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness"
     ]
   },
   {
@@ -14927,7 +14808,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-summer-glow-set",
     "name": "PDRN Summer Glow Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -14960,7 +14841,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-sun-proof-your-summer-set",
     "name": "Sun-Proof Your Summer Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -14992,7 +14873,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-recharge-your-summer-skin-set",
     "name": "Recharge Your Summer Skin Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "ceramides",
@@ -15121,7 +15002,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-rice-ceramide-7-hydrating-barrier-serum",
     "name": "Rice Ceramide 7 Hydrating Barrier Serum",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -15193,7 +15074,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-age-defying-routine-set",
     "name": "Age-defying Routine Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -15223,7 +15104,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-glow-facial-serum-spray-mini",
     "name": "PDRN Collagen Glow Facial Serum Spray Mini",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -15255,7 +15136,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-daily-pdrn-essential-duo",
     "name": "Daily PDRN Essential Duo",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "peptides"
@@ -15284,7 +15165,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-mineral-weightless-finish-sunscreen",
     "name": "Mineral Weightless Finish Sunscreen",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -15312,7 +15193,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-invisible-matte-finish-sunscreen",
     "name": "Invisible Matte Finish Sunscreen",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -15341,7 +15222,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-invisible-glow-finish-sunstick",
     "name": "Invisible Glow Finish Sunstick",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -15469,7 +15350,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-collagen-retinol-refining-gua-sha-cream",
     "name": "Collagen Retinol Refining Gua Sha Cream",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "neck",
     "ingredientIds": [
       "retinol",
@@ -15500,7 +15381,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-rumi-ultra-thin-spot-cover-patch-with-case-28ea",
     "name": "Rumi Ultra-thin Spot Cover Patch with Case (28ea)",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -15645,7 +15526,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-glow-boost-full-routine-set",
     "name": "PDRN Glow Boost Full Routine Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -15709,7 +15590,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-niacinamide-tranexamic-acid-brightening-booster-toner",
     "name": "Niacinamide Tranexamic Acid Brightening Booster Toner",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "niacinamide"
@@ -15768,7 +15649,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-peach-77-niacin-conditioning-milk",
     "name": "Peach 77 Niacin Conditioning Milk",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "lotion",
     "ingredientIds": [
       "niacinamide"
@@ -15798,7 +15679,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-peach-77-niacin-essence-toner",
     "name": "Peach 77 Niacin Essence Toner",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "niacinamide",
@@ -15829,7 +15710,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-azelaic-acid-cica-skin-soothing-moisturizer",
     "name": "Azelaic Acid CICA Skin Soothing Moisturizer",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "centella"
@@ -15861,7 +15742,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-golden-honmoon-barrier-collagen-mask-4ea",
     "name": "Golden Honmoon Barrier Collagen Mask 4ea",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sheet-mask",
     "ingredientIds": [
       "ceramides",
@@ -15892,7 +15773,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-rumi-ultra-thin-spot-cover-patch-55ea",
     "name": "Rumi Ultra-thin Spot Cover Patch (55ea)",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -15919,7 +15800,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-lip-serum",
     "name": "PDRN Lip Serum",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -15946,40 +15827,9 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "gwp-100-free-pdrn-serum-minis",
-    "name": "$100 Free PDRN Serum Minis",
-    "brand": "GWP",
-    "category": "serum",
-    "ingredientIds": [
-      "hyaluronic_acid",
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: hyaluronic/hydration family, peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "Infused with PDRN, Hyaluronic Acid, and Collagen , this skincare essential delivers deep hydration and helps your skin feel supple and smooth. The packaging, inspired by eye-drops, features individually sealed capsules for optimal hygiene and convenience— Perfect for on-the-go use. Suitable for all seasons and versatile in application, it leaves your skin refreshed with a healthy, radiant glow anytime, anywhere.",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0753/1429/9158/files/anua-us-ampoule-serum-pdrn-hyaluronic-acid-capsule-100-one-day-serum-1239658484.jpg?v=1779339612",
-    "officialUrl": "https://anua.us/products/110-free-pdrn-serum-minis",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness",
-      "anti-aging"
-    ]
-  },
-  {
     "slug": "anua-us-pdrn-hyaluronic-acid-moisturizing-cleansing-foam",
     "name": "PDRN Hyaluronic Acid Moisturizing Cleansing Foam",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16013,7 +15863,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-4-step-glowy-skin-set",
     "name": "PDRN 4-Step Glowy Skin Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -16046,7 +15896,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-100-hyaluronic-acid-booster-toner",
     "name": "PDRN 100 Hyaluronic Acid Booster Toner",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16080,7 +15930,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-wrinkle-smoothing-set",
     "name": "PDRN Collagen Wrinkle Smoothing Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "neck",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16111,7 +15961,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-bha-2-gentle-exfoliating-toner",
     "name": "BHA 2% Gentle Exfoliating Toner",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "bha"
@@ -16201,7 +16051,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-melting-patch-for-neck-4ea",
     "name": "PDRN Collagen Melting Patch For Neck 4ea",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16231,7 +16081,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-melting-patch-for-glass-skin-4ea",
     "name": "PDRN Collagen Melting Patch For Glass Skin 4ea",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16261,7 +16111,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-7-day-ultimate-glass-glow-set",
     "name": "7 day Ultimate Glass Glow Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "bha"
@@ -16290,7 +16140,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-collagen-glow-facial-serum-spray",
     "name": "PDRN Collagen Glow Facial Serum Spray",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16360,7 +16210,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-double-cleansing-duo-set-of-2",
     "name": "Double Cleansing Duo Set of 2",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "green_tea"
@@ -16389,7 +16239,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-rice-70-glow-collagen-mask",
     "name": "Rice 70 Glow Collagen Mask",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sheet-mask",
     "ingredientIds": [
       "peptides"
@@ -16420,7 +16270,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-70-soothing-collagen-mask",
     "name": "Heartleaf 70 Soothing Collagen Mask",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sheet-mask",
     "ingredientIds": [
       "peptides",
@@ -16452,7 +16302,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-peach-70-niacin-brightening-collagen-mask",
     "name": "Peach 70 Niacin Brightening Collagen Mask",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sheet-mask",
     "ingredientIds": [
       "niacinamide",
@@ -16483,7 +16333,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-5-step-korean-skincare-set",
     "name": "5-step Korean Skincare Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "bha"
@@ -16511,7 +16361,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-youthful-glow-set-for-over-30",
     "name": "Youthful Glow Set for over 30+",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16538,7 +16388,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-glass-skin-essential-set",
     "name": "Glass Skin Essential Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "bha"
@@ -16566,7 +16416,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-7-day-pore-refine-routine-set",
     "name": "7-Day Pore-refine Routine Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "bha"
@@ -16595,7 +16445,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-7-day-breakout-care-routine-set",
     "name": "7-Day Breakout Care Routine Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16624,7 +16474,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-redness-soothing-duo",
     "name": "Redness Soothing Duo",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -16658,7 +16508,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-hyaluronic-acid-capsule-100-serum-mask",
     "name": "PDRN Hyaluronic Acid Capsule 100 Serum Mask",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16725,7 +16575,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-hyaluronic-acid-capsule-100-one-day-serum",
     "name": "PDRN Hyaluronic Acid Capsule 100 One Day Serum",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "vitamin_c",
@@ -16759,7 +16609,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-azelaic-3-cica-skin-clarifying-toner",
     "name": "Azelaic 3 Cica Skin Clarifying Toner",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "centella"
@@ -16792,7 +16642,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-7-day-dark-spot-routine-set",
     "name": "7-Day Dark Spot Routine Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16818,7 +16668,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-deep-hydrating-prep-boost-duo",
     "name": "PDRN Deep Hydrating Prep & Boost Duo",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -16850,7 +16700,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-retinol-anti-aging-duo",
     "name": "Retinol Anti-Aging Duo",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
       "retinol"
@@ -16878,7 +16728,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-even-tone-pore-refining-duo",
     "name": "Even tone & Pore Refining Duo",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16906,7 +16756,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-peach-brightening-set",
     "name": "Peach Brightening Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "niacinamide"
@@ -16934,7 +16784,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-redness-soothing-prep-boost-duo",
     "name": "Redness Soothing Prep & Boost Duo",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -16964,7 +16814,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-dark-spot-prep-boost-duo",
     "name": "Dark Spot Prep & Boost Duo",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "niacinamide"
@@ -16992,7 +16842,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-even-tone-barrier-set",
     "name": "Even Tone & Barrier Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "niacinamide",
@@ -17054,7 +16904,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-hyaluronic-acid-100-moisturizing-cream",
     "name": "PDRN Hyaluronic Acid 100 Moisturizing Cream",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -17120,7 +16970,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-8-hyaluronic-acid-catechin-calming-pad",
     "name": "8 Hyaluronic Acid Catechin Calming Pad",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -17156,7 +17006,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-azelaic-10-hyaluron-redness-soothing-pad",
     "name": "Azelaic 10 Hyaluron Redness Soothing Pad",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -17192,7 +17042,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-niacinamide-5-txa-brightening-pad",
     "name": "Niacinamide 5 TXA Brightening Pad",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "niacinamide"
@@ -17221,7 +17071,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-100-hyaluronic-acid-glow-pad",
     "name": "PDRN 100 Hyaluronic Acid Glow Pad",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -17257,7 +17107,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-zero-cast-moisturizing-finish-sunscreen",
     "name": "Zero-cast Moisturizing Finish Sunscreen",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "sunscreen",
     "ingredientIds": [
       "spf"
@@ -17288,7 +17138,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-breakout-care-duo",
     "name": "Breakout Care Duo",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -17323,7 +17173,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-centella-red-spot-cream",
     "name": "Heartleaf Centella Red Spot Cream",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -17358,7 +17208,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-nano-retinol-0-3-niacin-renewing-serum",
     "name": "Nano Retinol™ 0.3% + Niacin Renewing Serum",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "retinol",
@@ -17393,7 +17243,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-retinol-0-1-caffeine-revitalizing-eye-cream",
     "name": "Retinol 0.1 Caffeine Revitalizing Eye Cream",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "eye-cream",
     "ingredientIds": [
       "retinol",
@@ -17426,7 +17276,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-rice-70-intensive-moisturizing-milk",
     "name": "Rice 70 Intensive Moisturizing Milk",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "lotion",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -17456,7 +17306,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-spotless-skin-duo",
     "name": "Spotless Skin Duo",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -17484,7 +17334,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-3-ceramide-panthenol-moisture-barrier-cream",
     "name": "3 Ceramide Panthenol Moisture Barrier Cream",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -17517,7 +17367,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-triple-acid-spot-care-microdart-patch",
     "name": "Triple Acid Spot Care Microdart Patch",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -17544,7 +17394,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-ultra-thin-spot-cover-patch",
     "name": "Ultra-Thin Spot Cover Patch",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "peeling",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -17603,7 +17453,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-pdrn-hyaluronic-acid-capsule-100-serum",
     "name": "PDRN Hyaluronic Acid Capsule 100 Serum",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "vitamin_c",
@@ -17637,7 +17487,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-double-cleansing-duo-set",
     "name": "Double Cleansing Duo Set",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "bha",
@@ -17668,7 +17518,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-azelaic-acid-10-hyaluron-redness-soothing-serum",
     "name": "Azelaic Acid 10 Hyaluron Redness Soothing Serum",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -17702,7 +17552,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-peach-77-niacin-enriched-cream",
     "name": "Peach 77 Niacin Enriched Cream",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "niacinamide",
@@ -17764,7 +17614,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-70-daily-lotion",
     "name": "Heartleaf 70 Daily Lotion",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "lotion",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -17860,7 +17710,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-pore-cleansing-oil-mild",
     "name": "Heartleaf Pore Cleansing Oil Mild",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -17893,7 +17743,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-rice-enzyme-brightening-cleansing-powder",
     "name": "Rice Enzyme Brightening Cleansing Powder",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -17925,7 +17775,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-8-hyaluronic-acid-moisturizing-gentle-gel-cleanser",
     "name": "8 Hyaluronic Acid Moisturizing Gentle Gel Cleanser",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-gel",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -17956,7 +17806,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-low-ph-deep-cleansing-water",
     "name": "Heartleaf Low pH Deep Cleansing Water",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-water",
     "ingredientIds": [
       "green_tea"
@@ -17986,7 +17836,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-rice-70-glow-milky-toner",
     "name": "Rice 70 Glow Milky Toner",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -18013,7 +17863,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-8-hyaluronic-acid-hydrating-gentle-foaming-cleanser",
     "name": "8 Hyaluronic Acid Hydrating Gentle Foaming Cleanser",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -18044,7 +17894,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-niacinamide-10-txa-4-serum-for-brightening-and-dark-spots",
     "name": "Niacinamide 10 TXA 4 Serum for Brightening and Dark Spots",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "niacinamide",
@@ -18077,7 +17927,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-lha-moisture-peeling-gel",
     "name": "Heartleaf LHA Moisture Peeling Gel",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-gel",
     "ingredientIds": [
       "bha",
@@ -18112,7 +17962,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-quercetinol-pore-deep-cleansing-foam",
     "name": "Heartleaf Quercetinol Pore Deep Cleansing Foam",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha",
@@ -18144,7 +17994,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-pore-control-cleansing-oil",
     "name": "Heartleaf Pore Control Cleansing Oil",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -18176,7 +18026,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-peach-70-niacinamide-serum",
     "name": "Peach 70% Niacinamide Serum",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "niacinamide"
@@ -18205,7 +18055,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-70-intense-calming-cream",
     "name": "Heartleaf 70% Intense Calming Cream",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -18239,7 +18089,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-77-clear-pad",
     "name": "Heartleaf 77 Clear Pad",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner-pad",
     "ingredientIds": [
       "bha",
@@ -18272,7 +18122,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-80-moisture-soothing-ampoule",
     "name": "Heartleaf 80% Moisture Soothing Ampoule",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -18304,7 +18154,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "anua-us-heartleaf-77-soothing-toner",
     "name": "Heartleaf 77 Soothing Toner",
-    "brand": "Anua US",
+    "brand": "Anua",
     "category": "toner",
     "ingredientIds": [
       "green_tea"
@@ -18335,7 +18185,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-egf-nad-firming-serum",
     "name": "EGF NAD+ Firming Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -18368,7 +18218,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-caffeine-collagen-eye-patch",
     "name": "PDRN Caffeine Collagen Eye Patch",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "essence",
     "ingredientIds": [
       "retinol",
@@ -18402,7 +18252,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-peptide-ampoule-mask",
     "name": "PDRN Pink Peptide Ampoule Mask",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -18435,7 +18285,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-zero-pore-peeling-pads-8ea",
     "name": "Zero Pore Peeling Pads (8ea)",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "aha"
@@ -18468,7 +18318,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-3h-overnight-drying-lotion",
     "name": "3H Overnight Drying Lotion",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "lotion",
     "ingredientIds": [
       "centella",
@@ -18503,7 +18353,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-booster-gel",
     "name": "PDRN Booster Gel",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -18541,7 +18391,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-ultra-light-pdrn-pink-peptide-serum",
     "name": "Ultra Light PDRN Pink Peptide Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -18580,7 +18430,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-3h-daily-relief-cream",
     "name": "3H Daily Relief Cream",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -18616,8 +18466,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-one-day-exosome-shot-pore-serum-2000-5ml-100-off",
-    "name": "🎁 [GIFT] One Day Exosome Shot Pore Serum 2000 5ml (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] One Day Exosome Shot Pore Serum 2000 5ml (100% off)",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -18643,8 +18493,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-pdrn-pink-hyaluronic-moisturizing-cream-10ml-100-off",
-    "name": "🎁 [GIFT] PDRN Pink Hyaluronic Moisturizing Cream 10ml (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] PDRN Pink Hyaluronic Moisturizing Cream 10ml (100% off)",
+    "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -18674,7 +18524,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-collagen-exosome-shot-100-off",
-    "name": "🎁 PDRN Pink Collagen Exosome Shot (100% off)",
+    "name": "PDRN Pink Collagen Exosome Shot (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -18702,8 +18552,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-exosome-cica-calming-pad-2ea-100-off",
-    "name": "🎁 [GIFT] Exosome Cica Calming Pad 2EA (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Exosome Cica Calming Pad 2EA (100% off)",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "centella"
@@ -18731,8 +18581,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-triple-collagen-cream-5ml-100-off",
-    "name": "🎁 [GIFT] Triple Collagen Cream 5ml (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Triple Collagen Cream 5ml (100% off)",
+    "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
       "peptides"
@@ -18761,7 +18611,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-collagen-niacinamide-jelly-cream-mini-100-off",
-    "name": "🎁 [GIFT] Collagen Niacinamide Jelly Cream Mini (100% off)",
+    "name": "[GIFT] Collagen Niacinamide Jelly Cream Mini (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -18793,8 +18643,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-pdrn-pink-cica-soothing-toner-50ml-100-off",
-    "name": "🎁 [GIFT] PDRN Pink Cica Soothing Toner 50ml (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] PDRN Pink Cica Soothing Toner 50ml (100% off)",
+    "brand": "MEDICUBE",
     "category": "toner",
     "ingredientIds": [
       "centella",
@@ -18825,8 +18675,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-zero-pore-one-day-serum-10ml-100-off",
-    "name": "🎁 [GIFT] Zero Pore One Day Serum 10ml (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Zero Pore One Day Serum 10ml (100% off)",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -18853,7 +18703,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-triple-collagen-cream-5ml",
     "name": "Triple Collagen Cream 5ml",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
       "peptides"
@@ -18883,7 +18733,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-exosome-cica-calming-pad-2ea",
     "name": "Exosome Cica Calming Pad 2EA",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "centella"
@@ -18912,7 +18762,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-cica-soothing-toner-50ml",
     "name": "PDRN Pink Cica Soothing Toner 50ml",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner",
     "ingredientIds": [
       "centella",
@@ -18944,7 +18794,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-zero-pore-one-day-serum-10ml",
     "name": "Zero Pore One Day Serum 10ml",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -18971,7 +18821,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-one-day-exosome-shot-pore-serum-2000-5ml",
     "name": "One Day Exosome Shot Pore Serum 2000 5ml",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -18998,7 +18848,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-hyaluronic-moisturizing-cream-10ml",
     "name": "PDRN Pink Hyaluronic Moisturizing Cream 10ml",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -19028,8 +18878,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-pdrn-pink-niacinamide-whip-cleanser-15g-100-off",
-    "name": "🎁 [GIFT] PDRN Pink Niacinamide Whip Cleanser 15g (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] PDRN Pink Niacinamide Whip Cleanser 15g (100% off)",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -19059,7 +18909,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-niacinamide-whip-cleanser-15g",
     "name": "PDRN Pink Niacinamide Whip Cleanser 15g",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -19089,7 +18939,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-azelaic-acid-exosome-shot",
     "name": "Azelaic Acid Exosome Shot",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -19124,7 +18974,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-azelaic-acid-niacinamide-clarifying-toner",
     "name": "Azelaic Acid Niacinamide Clarifying Toner",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -19161,7 +19011,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-tension-up-mask",
     "name": "PDRN Pink Tension Up Mask",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "essence",
     "ingredientIds": [
       "niacinamide",
@@ -19194,7 +19044,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-hypochlorous-acid-peel-mask",
     "name": "Hypochlorous Acid Peel Mask",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "peeling",
     "ingredientIds": [
       "bha",
@@ -19228,7 +19078,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-azelaic-acid-capsule-foam-cleanser",
     "name": "Azelaic Acid Capsule Foam Cleanser",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -19267,7 +19117,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-glutathione-capsule-foam-cleanser",
     "name": "PDRN Pink Glutathione Capsule Foam Cleanser",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -19304,7 +19154,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-turmeric-vita-capsule-foam-cleanser",
     "name": "Kojic Acid Turmeric Vita Capsule Foam Cleanser",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -19334,7 +19184,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-mini-booster-pro-plus",
     "name": "Mini Booster Pro Plus",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-oil",
     "ingredientIds": [
       "retinol",
@@ -19370,7 +19220,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-super-cica-exfoliating-cleansing-balm-100-off",
-    "name": "🎁 Super Cica Exfoliating Cleansing Balm (100% off)",
+    "name": "Super Cica Exfoliating Cleansing Balm (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -19399,7 +19249,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-red-body-wash-100-off",
-    "name": "🎁 Red Body Wash (100% off)",
+    "name": "Red Body Wash (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "cleanser",
     "ingredientIds": [],
@@ -19425,8 +19275,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-pdrn-pink-gel-cleanser-100-off",
-    "name": "🎁 PDRN Pink Gel Cleanser (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "PDRN Pink Gel Cleanser (100% off)",
+    "brand": "MEDICUBE",
     "category": "cleansing-gel",
     "ingredientIds": [
       "peptides"
@@ -19453,7 +19303,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-blackhead-deep-cleansing-oil-100-off",
-    "name": "🎁 Zero Pore Blackhead Deep Cleansing Oil (100% off)",
+    "name": "Zero Pore Blackhead Deep Cleansing Oil (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -19482,7 +19332,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-foam-cleanser-100-off",
-    "name": "🎁 Zero Foam Cleanser (100% off)",
+    "name": "Zero Foam Cleanser (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-foam",
     "ingredientIds": [],
@@ -19508,7 +19358,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-red-foam-cleanser-100-off",
-    "name": "🎁 Red Foam Cleanser (100% off)",
+    "name": "Red Foam Cleanser (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-foam",
     "ingredientIds": [],
@@ -19534,7 +19384,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-capsule-cleansing-foam-100-off",
-    "name": "🎁 Zero Pore Capsule Cleansing Foam (100% off)",
+    "name": "Zero Pore Capsule Cleansing Foam (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "cleansing-foam",
     "ingredientIds": [],
@@ -19561,7 +19411,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-21-red-succinic-acid-cleansing-booster-serum-100-off",
-    "name": "🎁 21% Red Succinic Acid Cleansing Booster Serum (100% off)",
+    "name": "21% Red Succinic Acid Cleansing Booster Serum (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "cleanser",
     "ingredientIds": [],
@@ -19587,8 +19437,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-exosome-cica-calming-pads-10ea-100-off",
-    "name": "🎁 [GIFT] Exosome Cica Calming Pads 10ea (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Exosome Cica Calming Pads 10ea (100% off)",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "centella"
@@ -19617,7 +19467,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-exosome-cica-calming-pads-10ea",
     "name": "Exosome Cica Calming Pads 10ea",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [
       "centella"
@@ -19646,7 +19496,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-rosemary-pdrn-scalp-serum",
     "name": "Rosemary PDRN Scalp Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -19679,7 +19529,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-rosemary-pdrn-hair-scalp-conditioner",
     "name": "Rosemary PDRN Hair & Scalp Conditioner",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "ceramides",
@@ -19713,7 +19563,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-rosemary-pdrn-cooling-thickening-shampoo",
     "name": "Rosemary PDRN Cooling Thickening Shampoo",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "ceramides",
@@ -19748,7 +19598,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-turmeric-body-peel-shot",
     "name": "Kojic Acid Turmeric Body Peel Shot",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -19787,7 +19637,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-turmeric-peel-shot",
     "name": "Kojic Acid Turmeric Peel Shot",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -19826,7 +19676,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-deep-vitamin-c-capsule-serum",
     "name": "Deep Vitamin C Capsule Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -19862,7 +19712,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-tumeric-eye-gel-serum",
     "name": "Kojic Acid Tumeric Eye Gel Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -19900,7 +19750,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-collagen-glow-jelly-serum",
     "name": "PDRN Pink Collagen Glow Jelly Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -19937,7 +19787,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-kojic-acid-turmeric-vita-capsule-cream",
     "name": "Kojic Acid Turmeric Vita Capsule Cream",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "spot",
     "ingredientIds": [
       "vitamin_c",
@@ -20108,7 +19958,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-gel-cleanser",
     "name": "PDRN Pink Gel Cleanser",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-gel",
     "ingredientIds": [
       "peptides"
@@ -20243,7 +20093,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-pdrn-pink-collagen-exosome-shot-2000-5ml-100-off",
-    "name": "🎁 [GIFT] PDRN Pink Collagen Exosome Shot 2000 5ml (100% off)",
+    "name": "[GIFT] PDRN Pink Collagen Exosome Shot 2000 5ml (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -20453,7 +20303,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-cleansing-wipes-100-off",
-    "name": "🎁 Cleansing Wipes (100% off)",
+    "name": "Cleansing Wipes (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "cleanser",
     "ingredientIds": [],
@@ -20518,7 +20368,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-deep-peptide-radiance-mask-1ea-100-off",
-    "name": "🎁 [GIFT] Deep Peptide Radiance Mask (1ea) (100% off)",
+    "name": "[GIFT] Deep Peptide Radiance Mask (1ea) (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -20616,7 +20466,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-hyaluronic-multi-peptide-pdrn-serum",
     "name": "Hyaluronic Multi Peptide PDRN Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -20712,7 +20562,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-retinol-nmn-boosting-serum",
     "name": "Retinol NMN Boosting Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -20751,7 +20601,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-azelaic-acid-16-calming-serum",
     "name": "Azelaic Acid 16 Calming Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -21182,7 +21032,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-pdrn-pink-vita-coating-sheet-mask",
     "name": "PDRN Pink Vita Coating Sheet Mask",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "sheet-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -21211,7 +21061,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-pdrn-pink-gel-cleanser",
     "name": "PDRN Pink Gel Cleanser",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-gel",
     "ingredientIds": [
       "peptides"
@@ -21617,7 +21467,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-subscr-pdrn-pink-caffeine-overnight-wrapping-mask",
     "name": "PDRN Pink Caffeine Overnight Wrapping Mask",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -21815,8 +21665,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-pdrn-pink-vita-coating-sheet-mask-100-off",
-    "name": "🎁 PDRN Pink Vita Coating Sheet Mask (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "PDRN Pink Vita Coating Sheet Mask (100% off)",
+    "brand": "MEDICUBE",
     "category": "sheet-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -21899,7 +21749,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-pdrn-pink-pepdide-serum-10ml-100-off",
-    "name": "🎁 [GIFT] PDRN Pink Pepdide Serum 10ml (100% off)",
+    "name": "[GIFT] PDRN Pink Pepdide Serum 10ml (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -21927,7 +21777,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-pdrn-pink-collagen-capsule-cream-4-5g-100-off",
-    "name": "🎁 [GIFT] PDRN Pink Collagen Capsule Cream 4.5g (100% off)",
+    "name": "[GIFT] PDRN Pink Collagen Capsule Cream 4.5g (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -21957,7 +21807,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-deep-vita-c-capsule-cream-4-5g-100-off",
-    "name": "🎁 [GIFT] Deep Vita C Capsule Cream 4.5g (100% off)",
+    "name": "[GIFT] Deep Vita C Capsule Cream 4.5g (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -22178,7 +22028,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-azelaic-acid-16-calming-serum",
     "name": "Azelaic Acid 16 Calming Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -22205,7 +22055,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-pdrn-pink-caffeine-overnight-wrapping-mask",
     "name": "PDRN Pink Caffeine Overnight Wrapping Mask",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -22404,7 +22254,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-gel-cleanser",
     "name": "PDRN Pink Gel Cleanser",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha",
@@ -22476,7 +22326,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-caffeine-overnight-wrapping-mask",
     "name": "PDRN Pink Caffeine Overnight Wrapping Mask",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -22503,7 +22353,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-zero-pore-cooling-stick-100-off",
-    "name": "🎁 [GIFT] Zero Pore Cooling Stick (100% off)",
+    "name": "[GIFT] Zero Pore Cooling Stick (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [],
@@ -22530,8 +22380,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-collagen-wrapping-mask-5ml-100-off",
-    "name": "🎁 [GIFT] Collagen Wrapping Mask 5ml (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT] Collagen Wrapping Mask 5ml (100% off)",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -22558,8 +22408,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-gift-zero-pore-deep-cleansing-oil-20ml-100-off",
-    "name": "🎁 [GIFT Zero Pore Deep Cleansing Oil 20ml (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "[GIFT Zero Pore Deep Cleansing Oil 20ml (100% off)",
+    "brand": "MEDICUBE",
     "category": "cleansing-oil",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -22586,7 +22436,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-zero-pore-deep-cleansing-oil-20ml",
     "name": "Zero Pore Deep Cleansing Oil 20ml",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-oil",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -22613,7 +22463,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-collagen-wrapping-mask-5ml",
     "name": "Collagen Wrapping Mask 5ml",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "peptides"
@@ -22641,7 +22491,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-retinol-nmn-boosting-serum",
     "name": "Retinol NMN Boosting Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -22680,7 +22530,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-hyaluronic-multi-peptide-pdrn-serum",
     "name": "Hyaluronic Multi Peptide PDRN Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -22715,7 +22565,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-deep-peptide-radiance-mask-2ea-100-off",
-    "name": "🎁 [GIFT] Deep Peptide Radiance Mask 2ea (100% off)",
+    "name": "[GIFT] Deep Peptide Radiance Mask 2ea (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -22893,7 +22743,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-kojic-acid-turmeric-gold-jelly-gel-mask-1ea-100-off",
-    "name": "🎁 [GIFT] Kojic Acid Turmeric Gold Jelly Gel Mask 1EA (100% off)",
+    "name": "[GIFT] Kojic Acid Turmeric Gold Jelly Gel Mask 1EA (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [],
@@ -22919,7 +22769,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-salmon-pdrn-pink-collagen-jelly-gel-mask-100-off",
-    "name": "🎁 Salmon PDRN Pink Collagen Jelly Gel Mask (100% off)",
+    "name": "Salmon PDRN Pink Collagen Jelly Gel Mask (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -22947,7 +22797,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-kojic-acid-turmeric-gold-jelly-gel-mask-100-off",
-    "name": "🎁 Kojic Acid Turmeric Gold Jelly Gel Mask (100% off)",
+    "name": "Kojic Acid Turmeric Gold Jelly Gel Mask (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [],
@@ -22974,7 +22824,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-glow-home-aesthetic-full-set",
     "name": "PDRN Pink Glow Home Aesthetic Full Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -23013,7 +22863,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pink-gold-ultimate-care-set",
     "name": "Pink & Gold Ultimate Care Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner",
     "ingredientIds": [
       "retinol",
@@ -23052,7 +22902,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-pdrn-pink-vita-coating-sheet-mask",
     "name": "PDRN Pink Vita Coating Sheet Mask",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "sheet-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -23083,7 +22933,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-azelaic-acid-16-calming-serum",
     "name": "Azelaic Acid 16 Calming Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -23137,7 +22987,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-peptide-toner-100-off",
-    "name": "🎁 PDRN Pink Peptide Toner (100% off)",
+    "name": "PDRN Pink Peptide Toner (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "toner",
     "ingredientIds": [
@@ -23166,7 +23016,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-peptide-cream-100-off",
-    "name": "🎁 PDRN Pink Peptide Cream (100% off)",
+    "name": "PDRN Pink Peptide Cream (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -23196,7 +23046,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-collagen-gel-toner-pad-100-off",
-    "name": "🎁 PDRN Pink Collagen Gel Toner Pad (100% off)",
+    "name": "PDRN Pink Collagen Gel Toner Pad (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -23225,7 +23075,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-cotton-pads-100-off",
-    "name": "🎁 [GIFT] Cotton Pads (100% off)",
+    "name": "[GIFT] Cotton Pads (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [],
@@ -23350,7 +23200,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-hyaluronic-multi-peptide-pdrn-serum",
     "name": "Hyaluronic Multi Peptide PDRN Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -23386,7 +23236,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-retinol-nmn-boosting-serum",
     "name": "Retinol NMN Boosting Serum",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -24076,7 +23926,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-collagen-niacinamide-jelly-cream-50ml-100-off",
-    "name": "🎁 [GIFT] Collagen Niacinamide Jelly Cream 50ml (100% off)",
+    "name": "[GIFT] Collagen Niacinamide Jelly Cream 50ml (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -24109,7 +23959,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-zero-foam-cleanser",
     "name": "Zero Foam Cleanser",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha",
@@ -24145,7 +23995,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-collagen-radiance-mask-100-off",
-    "name": "🎁 Collagen Radiance Mask (100% off)",
+    "name": "Collagen Radiance Mask (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -24239,7 +24089,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-pdrn-pink-peptide-serum-100-off",
-    "name": "🎁 PDRN Pink Peptide Serum (100% off)",
+    "name": "PDRN Pink Peptide Serum (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -24267,7 +24117,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-cooling-mask-100-off",
-    "name": "🎁 Zero Pore Cooling Mask (100% off)",
+    "name": "Zero Pore Cooling Mask (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [],
@@ -24294,7 +24144,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-super-cica-calming-mask-100-off",
-    "name": "🎁 Super Cica Calming Mask (100% off)",
+    "name": "Super Cica Calming Mask (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -24323,7 +24173,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-calming-ringer-mask-100-off",
-    "name": "🎁 Calming Ringer Mask (100% off)",
+    "name": "Calming Ringer Mask (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [],
@@ -24350,7 +24200,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-super-cica-daily-quick-masks-100-off",
-    "name": "🎁 Super Cica Daily Quick Masks (100% off)",
+    "name": "Super Cica Daily Quick Masks (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -24379,7 +24229,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-deep-vita-c-daily-quick-masks-100-off",
-    "name": "🎁 Deep Vita C Daily Quick Masks (100% off)",
+    "name": "Deep Vita C Daily Quick Masks (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -24407,7 +24257,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-deep-peptide-radiance-mask-100-off",
-    "name": "🎁 Deep Peptide Radiance Mask (100% off)",
+    "name": "Deep Peptide Radiance Mask (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "mask",
     "ingredientIds": [
@@ -24570,7 +24420,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-exosome-cica-duo",
     "name": "Exosome Cica Duo",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "centella"
@@ -24692,8 +24542,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-mask-bundle-pack-10ea-100-off",
-    "name": "🎁 Mask Bundle Pack (10ea) (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "Mask Bundle Pack (10ea) (100% off)",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -24718,8 +24568,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-us-mask-bundle-pack-5ea-100-off",
-    "name": "🎁 Mask Bundle Pack (5ea) (100% off)",
-    "brand": "MEDICUBE US",
+    "name": "Mask Bundle Pack (5ea) (100% off)",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -24745,7 +24595,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-mask-bundle-pack-10ea",
     "name": "Mask Bundle Pack (10ea)",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -24771,7 +24621,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-mask-bundle-pack-5ea",
     "name": "Mask Bundle Pack (5ea)",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -24934,7 +24784,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-scalp-gua-sha-100-off",
-    "name": "🎁 Scalp Gua Sha (100% off)",
+    "name": "Scalp Gua Sha (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "scalp",
     "ingredientIds": [],
@@ -25014,7 +24864,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-age-r-vita-k-cream-100-off",
-    "name": "🎁 AGE-R Vita K Cream (100% off)",
+    "name": "AGE-R Vita K Cream (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "moisturizer",
     "ingredientIds": [
@@ -25043,7 +24893,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-age-r-booster-gel-serum-100-off",
-    "name": "🎁 AGE-R Booster Gel Serum (100% off)",
+    "name": "AGE-R Booster Gel Serum (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [],
@@ -25160,7 +25010,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-exosome-cica-calming-toner-pads-100-off",
-    "name": "🎁 Exosome Cica Calming Toner Pads (100% off)",
+    "name": "Exosome Cica Calming Toner Pads (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -25190,7 +25040,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-pads-100-off",
-    "name": "🎁 Zero Pore Pads (100% off)",
+    "name": "Zero Pore Pads (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [],
@@ -25217,7 +25067,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-deep-vita-c-pads-100-off",
-    "name": "🎁 Deep Vita C Pads (100% off)",
+    "name": "Deep Vita C Pads (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -25245,7 +25095,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-red-succinic-acid-panthenol-pads-100-off",
-    "name": "🎁 Red Succinic Acid Panthenol Pads (100% off)",
+    "name": "Red Succinic Acid Panthenol Pads (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [],
@@ -25271,7 +25121,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-zero-pore-madecassoside-pads-mild-100-off",
-    "name": "🎁 Zero Pore Madecassoside Pads (Mild) (100% off)",
+    "name": "Zero Pore Madecassoside Pads (Mild) (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -25300,7 +25150,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-super-cica-pads-100-off",
-    "name": "🎁 Super Cica Pads (100% off)",
+    "name": "Super Cica Pads (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "toner-pad",
     "ingredientIds": [
@@ -25395,7 +25245,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "shopify-me-gift-age-r-glutathione-glow-serum-100-off",
-    "name": "🎁 [GIFT] AGE-R Glutathione Glow Serum (100% off)",
+    "name": "[GIFT] AGE-R Glutathione Glow Serum (100% off)",
     "brand": "SHOPIFY_ME",
     "category": "serum",
     "ingredientIds": [
@@ -25783,7 +25633,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-red-succinic-acid-peeling-pad-2ea-100-off",
     "name": "» [GIFT] Red Succinic Acid Peeling Pad 2ea (100% off)",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -25837,7 +25687,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-red-succinic-acid-peeling-pad-2ea",
     "name": "Red Succinic Acid Peeling Pad 2ea",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -26899,7 +26749,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-skin-renewal-ensemble-set",
     "name": "Skin Renewal Ensemble Set",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -27372,7 +27222,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-deep-line-masks-10-100-off",
     "name": "» [GIFT] Deep Line Masks 10 (100% off)",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -27715,7 +27565,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-deep-line-masks-6-100-off",
     "name": "» [GIFT] Deep Line Masks 6 (100% off)",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -27741,7 +27591,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-deep-line-masks-10",
     "name": "Deep Line Masks 10",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -27767,7 +27617,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-deep-line-masks-6",
     "name": "Deep Line Masks 6",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -28194,7 +28044,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-super-cica-daily-quick-mask-100-off",
     "name": "» [GIFT] Super Cica Daily Quick Mask (100% off)",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "centella"
@@ -28223,7 +28073,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-super-cica-daily-quick-mask",
     "name": "Super Cica Daily Quick Mask",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "mask",
     "ingredientIds": [
       "centella"
@@ -28290,7 +28140,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "medicube-us-gift-super-cica-ac-calming-trial-kit",
     "name": "Super Cica AC Calming Trial Kit",
-    "brand": "MEDICUBE US",
+    "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
       "centella"
@@ -35198,7 +35048,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "mixsoon-mixsoon-daily-mask-pack-20ml-x-10-sheets-1set-7-mask-routine-pore-minimizer-tone-u",
-    "name": "mixsoon Daily Mask Pack 20ml X 10 sheets 1SET- 7-Mask Routine Pore Minimizer, Tone-Up, Glass Skin, Calming, Tightening, ",
+    "name": "mixsoon Daily Mask Pack 20ml X 10 sheets 1SET- 7-Mask Routine Pore Minimizer, Tone-Up, Glass Skin, Calming, Tightening",
     "brand": "mixsoon",
     "category": "peeling",
     "ingredientIds": [
@@ -38902,7 +38752,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-pore-care-kit",
     "name": "PORE CARE KIT",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -38963,7 +38813,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-buy-2-heartleaf-pads-and-get-2-travel-size-pads",
     "name": "Buy 2 heartleaf pads and get 2 travel size pads",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "toner-pad",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -39130,8 +38980,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "neogenlab-us-pad-case-100-off",
-    "name": "🎁 Pad Case (100% off)",
-    "brand": "NEOGENLAB US",
+    "name": "Pad Case (100% off)",
+    "brand": "NEOGENLAB",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -39156,7 +39006,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-bio-peel-gauze-peeling-green-tea-2-48-oz-76ml-8-pads-100-off",
-    "name": "🎁 Bio-Peel Gauze Peeling Green Tea 2.48 oz / 76ml (8 Pads) (100% off)",
+    "name": "Bio-Peel Gauze Peeling Green Tea 2.48 oz / 76ml (8 Pads) (100% off)",
     "brand": "NEOGEN DERMALOGY",
     "category": "toner-pad",
     "ingredientIds": [
@@ -40285,7 +40135,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-exfoliation-set",
     "name": "EXFOLIATION SET",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "toner-pad",
     "ingredientIds": [
       "niacinamide",
@@ -40576,7 +40426,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-acne-care-set",
     "name": "ACNE CARE SET",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -40668,7 +40518,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-real-niacinamide-15-serum-travel-size-100-off",
-    "name": "🎁 Real Niacinamide 15% Serum (travel size) (100% off)",
+    "name": "Real Niacinamide 15% Serum (travel size) (100% off)",
     "brand": "NEOGEN DERMALOGY",
     "category": "serum",
     "ingredientIds": [
@@ -40770,7 +40620,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-niacinamide-15-serum-travel-size-100-off",
-    "name": "🎁 Niacinamide 15% Serum (travel size) (100% off)",
+    "name": "Niacinamide 15% Serum (travel size) (100% off)",
     "brand": "NEOGEN DERMALOGY",
     "category": "serum",
     "ingredientIds": [
@@ -40798,7 +40648,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-real-hyal-panthenol-serum-travel-size-100-off",
-    "name": "🎁 Real Hyal Panthenol Serum (Travel Size) (100% off)",
+    "name": "Real Hyal Panthenol Serum (Travel Size) (100% off)",
     "brand": "NEOGEN DERMALOGY",
     "category": "serum",
     "ingredientIds": [],
@@ -40895,7 +40745,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-acne-dark-spots-care",
     "name": "Acne/ Dark Spots Care",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -40934,7 +40784,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-glass-skin-makeup-prep-oily-skin",
     "name": "Glass Skin Makeup Prep - Oily Skin",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-water",
     "ingredientIds": [
       "vitamin_c",
@@ -41048,7 +40898,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-berryperi-pore-cleansing-mousse-1-1-1-free-gifts-35-off",
     "name": "BERRYPERI PORE CLEANSING MOUSSE 1+1+1 (+Free gifts) 35% OFF",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -41229,7 +41079,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-berryperi-pore-cleansing-mousse",
     "name": "BERRYPERI PORE CLEANSING MOUSSE",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -41295,7 +41145,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-1box-48ea-berryperi-pore-cleansing-mousse-150-ml",
     "name": "BERRYPERI PORE CLEANSING MOUSSE (150 ml)",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -41863,7 +41713,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-clear-eye-cream",
     "name": "Next Clear Eye Cream",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "eye-cream",
     "ingredientIds": [
       "vitamin_c",
@@ -42040,7 +41890,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-reforest-protein-treatment-16-90-oz-500ml",
     "name": "REFOREST PROTEIN TREATMENT 16.90 oz / 500ml",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -42389,7 +42239,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-real-niacinamide-15-serum-real-niacinamide-glow-up-daily-mask",
     "name": "Real Niacinamide 15% Serum + REAL Niacinamide Glow Up Daily Mask",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -42421,7 +42271,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-shuya-toya-niacinamide-glow-up-daily-mask-x-best-seller-real-fresh-",
     "name": "Shuya Toya Niacinamide Glow Up Daily Mask x Best seller (Real Fresh Foam Cleanser Green Tea)",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -42818,8 +42668,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "neogenlab-us-real-bakuchiol-serum-travel-size-100-off",
-    "name": "🎁 REAL BAKUCHIOL SERUM (Travel Size) (100% off)",
-    "brand": "NEOGENLAB US",
+    "name": "REAL BAKUCHIOL SERUM (Travel Size) (100% off)",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "retinol"
@@ -43158,7 +43008,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-a-clear-soothing-spot-patch-24-count-3-pack",
     "name": "A-CLEAR SOOTHING SPOT PATCH, 24 COUNT (3 PACK)",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -43190,7 +43040,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-clear-spot-solution-32ml",
     "name": "Next Clear Spot Solution (32ml)",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -43216,7 +43066,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-clear-essence-toner-210ml",
     "name": "Next Clear Essence Toner (210ml)",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -43249,7 +43099,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-glow-watery-cream-50ml",
     "name": "Next Glow Watery Cream (50ml)",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "niacinamide",
@@ -43282,7 +43132,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-glow-prep-serum-32ml",
     "name": "Next Glow Prep Serum (32ml)",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "niacinamide",
@@ -43315,7 +43165,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-next-glow-pore-refining-toner-210-ml",
     "name": "Next Glow Pore Refining Toner (210 ml)",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "toner",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -43383,8 +43233,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "neogenlab-us-real-peptide-serum-10ml-100-off",
-    "name": "🎁 REAL PEPTIDE SERUM (10ml) (100% off)",
-    "brand": "NEOGENLAB US",
+    "name": "REAL PEPTIDE SERUM (10ml) (100% off)",
+    "brand": "NEOGENLAB",
     "category": "serum",
     "ingredientIds": [
       "peptides"
@@ -43655,7 +43505,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-real-ferment-micro-toner-real-ferment-micro-essence-real-ferment-mi",
     "name": "Real Ferment Micro Toner, Real Ferment Micro Essence, Real Ferment Micro Serum",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -43691,7 +43541,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-a-clear-aid-soothing-overnight-mask",
     "name": "A-CLEAR AID SOOTHING OVERNIGHT MASK",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "peeling",
     "ingredientIds": [
       "bha"
@@ -43975,7 +43825,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-berryperi-pore-cleansing-mousse-hyal-glow-rose-essence-pad",
     "name": "Berryperi Pore Cleansing Mousse + Hyal Glow Rose Essence Pad",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -44008,7 +43858,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-sur-medic-azulene-soothing-peptide-ampoule-neogen-dermalogy-real-fr",
     "name": "Sur.medic Azulene Soothing Peptide Ampoule + Neogen Dermalogy Real Fresh Foam Heartleaf",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleansing-foam",
     "ingredientIds": [
       "ceramides",
@@ -44117,7 +43967,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-value-set-slim-metal-set-extra-slim-metal-maxicara-black-pink-metal-eyelash-c",
     "name": "Slim Metal Set (Extra Slim Metal Maxicara Black + Pink Metal Eyelash Curler)",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "and testing – safe for even the most sensitive eyes. (*Korea vegan certification) New revolution of MASCARA! Up to 99.9% hygienically clean Metal Brush! Designed with a gold-coated metal brush tip that is easy to clean, It can be easily washed off with water or wiped off with a tissue, so it can be used hygienically. NEOGEN DERMALOGY EXTRA SLIM METAL MAXICARA BLACK - 6ml Creates intense curls by curling all the lashes, including the inner and outer corners Perfectly designed to hug the shape of",
@@ -44207,7 +44057,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "neogen-dermalogy-neogen-dermalogy-real-niacinamide-15-serum-travel-size-100-off",
-    "name": "🎁 NEOGEN DERMALOGY Real Niacinamide 15% Serum (Travel Size) (100% off)",
+    "name": "NEOGEN DERMALOGY Real Niacinamide 15% Serum (Travel Size) (100% off)",
     "brand": "NEOGEN DERMALOGY",
     "category": "serum",
     "ingredientIds": [
@@ -44418,7 +44268,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-sur-medic-azulene-soothing-trial-kit",
     "name": "SUR.MEDIC AZULENE SOOTHING TRIAL KIT",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "cleanser",
     "ingredientIds": [
       "peptides"
@@ -44489,7 +44339,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-neogen-reforest-protein-shampoo-16-90-oz-500ml",
     "name": "NEOGEN REFOREST PROTEIN SHAMPOO 16.90 oz / 500ml",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "scalp",
     "ingredientIds": [
       "niacinamide",
@@ -44638,7 +44488,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-sur-medic-azulene-soothing-peptide-ampoule",
     "name": "SUR.MEDIC AZULENE SOOTHING PEPTIDE AMPOULE",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "ampoule",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -44749,7 +44599,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "neogenlab-us-canadian-clay-pore-stick-mask",
     "name": "CANADIAN CLAY PORE STICK MASK",
-    "brand": "NEOGENLAB US",
+    "brand": "NEOGENLAB",
     "category": "peeling",
     "ingredientIds": [
       "vitamin_c",
@@ -45804,7 +45654,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-120ml-for-tiktok",
     "name": "All Clean Balm 120ml for TIKTOK!",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -45839,7 +45689,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-perfect-cleansing-oil-150ml",
     "name": "Matcha Biome Perfect Cleansing Oil 150ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -45871,7 +45721,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-dailism-peptide-enhancing-lash-serum",
     "name": "Dailism Peptide Enhancing Lash Serum",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -45904,7 +45754,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-ever-glow-gloss-lip-tint-6-colors",
     "name": "Ever Glow Gloss Lip Tint (6 Colors)",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -45939,7 +45789,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-ever-glow-all-night-lip-mask",
     "name": "Ever Glow All Night Lip Mask",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "peeling",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -45972,7 +45822,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-ever-glow-glaze-color-balm-6-colors",
     "name": "Ever Glow Glaze Color Balm (6 Colors)",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "sunscreen",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -46004,7 +45854,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-ever-glow-starry-gloss",
     "name": "Ever Glow Starry Gloss",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "lip-care",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -46037,7 +45887,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-50ml-cleansing-balm",
     "name": "All Clean balm 50ml (cleansing balm)",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -46071,7 +45921,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-free-gift-all-clean-balm-50ml",
     "name": "All Clean Balm 50ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -46098,7 +45948,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-matcha-biome-cleansing-oil",
     "name": "All Clean balm & Matcha Biome Cleansing Oil",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -46132,7 +45982,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-oil-foam",
     "name": "Matcha Biome Oil & Foam",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -46169,7 +46019,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-dailism-smudge-stop-mascara",
     "name": "All Clean Balm + Dailism Smudge Stop Mascara",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -46201,7 +46051,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-trio",
     "name": "All Clean Balm Trio",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -46235,7 +46085,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-marine-care-eye-cream",
     "name": "All Clean Balm & Marine Care Eye Cream",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "niacinamide"
@@ -46267,7 +46117,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-120ml-2-pack",
     "name": "All Clean Balm 120ml - 2 Pack",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -46301,7 +46151,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-new-dailism-smudge-stop-mascara-9g-0-32oz-brown",
     "name": "Dailism Smudge Stop Mascara 9g/0.32oz (Brown)",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -46327,7 +46177,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-white-clay-foam-150g-5-29oz",
     "name": "All Clean White Clay Foam 150g/5.29oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -46359,7 +46209,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-watermelon-moisture-soothing-gel-cream-110ml",
     "name": "Watermelon Moisture Soothing Gel Cream 110ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "lotion",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -46390,7 +46240,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-rx-hyaluronic-acid-hydrating-sunscreen-spf50",
     "name": "All Clean Balm & RX Hyaluronic Acid Hydrating Sunscreen SPF50+",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -46424,7 +46274,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-hyaluronic-acid-hydrating-sunscreen-spf50-pa-50ml",
     "name": "RX Hyaluronic Acid Hydrating Sunscreen SPF50+ PA++++ 50ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "sunscreen",
     "ingredientIds": [
       "vitamin_c",
@@ -46461,7 +46311,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-foam-duo",
     "name": "ALL CLEAN BALM & FOAM DUO",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -46497,7 +46347,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-eye-patch-duo-set",
     "name": "Eye Patch Duo Set",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-patch",
     "ingredientIds": [
       "vitamin_c",
@@ -46534,7 +46384,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-duo-signature-mandarin",
     "name": "All Clean Balm Duo (Signature + Mandarin)",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -46566,7 +46416,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-retinol-bakuchiol-hydrogel-eye-patch-6oea",
     "name": "RX RETINOL BAKUCHIOL HYDROGEL EYE PATCH 6Oea",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -46597,7 +46447,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-retinol-bakuchiol-booster-oil-35ml",
     "name": "RX RETINOL BAKUCHIOL BOOSTER OIL 35ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "retinol",
@@ -46627,7 +46477,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-multi-vitamin-glow-serum-35ml",
     "name": "RX MULTI VITAMIN GLOW SERUM 35ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -46663,7 +46513,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-hyaluronic-acid-rich-whipped-cream-50ml",
     "name": "RX HYALURONIC ACID RICH WHIPPED CREAM 50ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "moisturizer",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -46697,7 +46547,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-hyaluronic-acid-2-hydrating-serum-35ml",
     "name": "RX HYALURONIC ACID 2% HYDRATING SERUM 35ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -46729,7 +46579,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-amino-keratin-heat-protecting-leave-in-treatment-150ml",
     "name": "RX AMINO KERATIN HEAT PROTECTING LEAVE IN TREATMENT 150ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -46756,7 +46606,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-amino-biotin-revitalizing-shampoo-400ml",
     "name": "RX AMINO BIOTIN REVITALIZING SHAMPOO 400ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -46786,7 +46636,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-aha-bha-peeling-serum-35ml",
     "name": "RX AHA BHA PEELING SERUM 35ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -46820,7 +46670,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-rx-aha-bha-enzyme-scrub-130ml",
     "name": "RX AHA BHA ENZYME SCRUB 130ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -46855,7 +46705,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-heimish-rx-retinol-bakuchiol-eye-cream",
     "name": "HEIMISH RX RETINOL BAKUCHIOL EYE CREAM",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-cream",
     "ingredientIds": [
       "retinol",
@@ -46888,7 +46738,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-heimish-rx-multi-vitamin-dark-spot-cream-50ml",
     "name": "HEIMISH RX MULTI VITAMIN DARK SPOT CREAM 50ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "serum",
     "ingredientIds": [
       "vitamin_c",
@@ -46920,7 +46770,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-green-foam-150ml-5-07fl-oz",
     "name": "All Clean Green Foam 150ml/5.07fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-foam",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -46955,7 +46805,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-120ml-4-05-fl-oz-top-rated-vegan-makeup-remover-for-sensitive-sk",
     "name": "All Clean Balm 120ml / 4.05 fl.oz – Top-Rated Vegan Makeup Remover for Sensitive Skin",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "bha",
@@ -46990,7 +46840,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-mini-kit",
     "name": "All Clean Mini Kit",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-oil",
     "ingredientIds": [
       "vitamin_c",
@@ -47023,7 +46873,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-repair-cream-50ml-1-69fl-oz",
     "name": "Matcha Biome Repair Cream 50ml/1.69fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "oil",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -47056,7 +46906,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-oil-free-calming-gel-moisturizer-100ml-3-38fl-oz",
     "name": "Matcha Biome Oil-Free Calming Gel Moisturizer 100ml/3.38fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "lotion",
     "ingredientIds": [
       "vitamin_c",
@@ -47093,7 +46943,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-amino-acne-cleansing-foam-150ml-5-07fl-oz",
     "name": "Matcha Biome Amino Acne Cleansing Foam 150ml/5.07fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha",
@@ -47125,7 +46975,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-redness-relief-hydrating-toner-150ml-5-07fl-oz",
     "name": "Matcha Biome Redness Relief Hydrating Toner 150ml/5.07fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -47159,7 +47009,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-marine-care-retinol-eye-serum-30ml",
     "name": "Marine Care Retinol Eye Serum 30ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "essence",
     "ingredientIds": [
       "retinol",
@@ -47192,7 +47042,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-bulgarian-rose-water-hydrogel-eye-patch-1-4g-0-05oz-60pcs",
     "name": "Bulgarian Rose Water Hydrogel Eye Patch 1.4g/0.05oz *60pcs",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-patch",
     "ingredientIds": [
       "niacinamide",
@@ -47224,7 +47074,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-renewal-marine-care-eye-cream-30ml-1-01fl-oz",
     "name": "Marine Care Eye Cream 30ml/1.01fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-cream",
     "ingredientIds": [
       "niacinamide",
@@ -47256,7 +47106,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-renewal-marine-care-deep-moisture-nourishing-melting-cream-55ml-1-85fl-oz",
     "name": "Marine Care Deep Moisture Nourishing Melting Cream 55ml/1.85fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "sunscreen",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -47291,7 +47141,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-renewal-bulgarian-rose-satin-cream-50ml-1-69fl-oz",
     "name": "Bulgarian Rose Satin Cream 50ml/1.69fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -47326,7 +47176,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-matcha-biome-hydrogel-eye-patch-1-4g-0-05oz-60pcs",
     "name": "Matcha Biome Hydrogel Eye Patch 1.4g/0.05oz *60pcs",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "essence",
     "ingredientIds": [
       "niacinamide",
@@ -47361,7 +47211,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-moringa-ceramide-pressed-setting-powder-5g-0-17oz",
     "name": "Moringa Ceramide Pressed Setting Powder 5g/0.17oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "sunscreen",
     "ingredientIds": [
       "ceramides",
@@ -47394,7 +47244,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-moringa-ceramide-hylauronic-hydrating-cream-50ml-1-7fl-oz",
     "name": "Moringa Ceramide Hylauronic Hydrating Cream 50ml/1.7fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "lotion",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -47425,7 +47275,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-marine-care-retinol-for-face-serum-50ml",
     "name": "Marine Care Retinol For Face Serum 50ml",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "essence",
     "ingredientIds": [
       "retinol",
@@ -47460,7 +47310,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-gentle-exfoliating-gel-cleanser-130ml-4-3fl-oz",
     "name": "All Clean Gentle Exfoliating Gel Cleanser 130ml/4.3fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -47498,7 +47348,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-dailism-smudge-stop-mascara-9g-0-32oz",
     "name": "Dailism Smudge Stop Mascara 9g/0.32oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "eye-cream",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -47524,7 +47374,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-moringa-ceramide-bb-cream-30g-1-05oz",
     "name": "Moringa Ceramide BB Cream 30g/1.05oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "spot",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -47560,7 +47410,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-artless-rubycell-puff-5pcs",
     "name": "Artless Rubycell Puff 5pcs",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "spot",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -47586,7 +47436,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-all-clean-balm-mandarin-120ml-4-05fl-oz",
     "name": "All Clean Balm Mandarin 120ml/4.05fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -47618,7 +47468,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "heimish-us-black-tea-wash-off-mask-110ml-3-71fl-oz",
     "name": "Black Tea Wash-Off Mask 110ml/3.71fl.oz",
-    "brand": "heimish US",
+    "brand": "heimish",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -49478,7 +49328,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dear-klairs-gentle-black-fresh-cleansing-oil-100-off",
-    "name": "🎁 Gentle Black Fresh Cleansing Oil (100% off)",
+    "name": "Gentle Black Fresh Cleansing Oil (100% off)",
     "brand": "Dear, Klairs",
     "category": "cleansing-oil",
     "ingredientIds": [],
@@ -49647,7 +49497,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dear-klairs-free-gift-my-blue-diy-mist-kit",
-    "name": "🎁 (Free Gift) My Blue DIY Mist Kit",
+    "name": "My Blue DIY Mist Kit",
     "brand": "Dear, Klairs",
     "category": "mist",
     "ingredientIds": [],
@@ -49892,7 +49742,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dear-klairs-free-gift-midnight-blue-calming-cream",
-    "name": "🎁 (Free Gift) Midnight Blue Calming Cream",
+    "name": "Midnight Blue Calming Cream",
     "brand": "Dear, Klairs",
     "category": "moisturizer",
     "ingredientIds": [],
@@ -50889,7 +50739,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-5-calendula-deep-essence-masks-100-off",
     "name": "» 5 Calendula Deep Essence Masks (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "essence",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -50915,7 +50765,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-mucin-serum-100-off",
     "name": "» Pink Aloe Mucin Serum (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "serum",
     "ingredientIds": [
       "snail_mucin"
@@ -50943,7 +50793,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-facial-polish-cleanser-100-off",
     "name": "» Pink Aloe Facial Polish Cleanser (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -50969,7 +50819,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-pink-capsule-overnight-gel-mask-100-off",
     "name": "» TXA Pink Capsule Overnight Gel Mask (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -50995,7 +50845,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-facial-cotton-pads-100-off",
     "name": "» [GIFT] Facial Cotton Pads (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -51021,7 +50871,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-facial-cotton-pads",
     "name": "Facial Cotton Pads",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -51047,7 +50897,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-a-c-e-vita-kojic-brightening-serum",
     "name": "A.C.E Vita Kojic Brightening Serum",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "essence",
     "ingredientIds": [
       "vitamin_c",
@@ -51083,7 +50933,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-a-c-e-mugwort-centella-calming-serum",
     "name": "A.C.E Mugwort Centella Calming Serum",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "essence",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -51120,7 +50970,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-quick-dry-pore-tightening-clay-mask-100-off",
     "name": "» Carrotene IPMP™ Quick Dry Pore Tightening Clay Mask (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "mask",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -51148,7 +50998,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-carrotene-ipmp-calming-hydrating-sheet-mask-1ea-100-off",
     "name": "» [GIFT] Carrotene IPMP™ Calming & Hydrating Sheet Mask 1EA (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "sheet-mask",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -51205,7 +51055,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-carrotene-ipmp-exfoliating-body-wash-100-off",
     "name": "» [GIFT] Carrotene IPMP™ Exfoliating Body Wash (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -51231,7 +51081,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-pink-glow-skincare-full-set",
     "name": "TXA Pink Glow Skincare Full Set",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -51269,7 +51119,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-vitamin-c-soothing-brightening-toner-100-off",
     "name": "» Pink Aloe Vitamin C Soothing & Brightening Toner (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner",
     "ingredientIds": [
       "vitamin_c",
@@ -51300,7 +51150,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-calming-hydrating-sheet-mask-100-off",
     "name": "» Carrotene IPMP™ Calming & Hydrating Sheet Mask (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "sheet-mask",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -51331,7 +51181,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-viral-heart-cleansing-puff-100-off",
     "name": "» [GIFT] Viral Heart Cleansing Puff (100% off)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -51357,7 +51207,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-niacinamide-toning-shot-99-spicule-serum",
     "name": "TXA Niacinamide Toning Shot 99 Spicule Serum",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide"
@@ -51392,7 +51242,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-niacinamide-99-pink-milky-toner",
     "name": "TXA+Niacinamide 99 Pink Milky Toner",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -51428,7 +51278,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-niacinamide-99-overnight-wrapping-mask",
     "name": "TXA Niacinamide 99 Overnight Wrapping Mask",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -51465,7 +51315,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-pink-capsule-overnight-gel-mask",
     "name": "TXA Pink Capsule Overnight Gel Mask",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -51502,7 +51352,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-txa-niacinamide-99-pore-care-pink-bubble-gum-deep-cleanser",
     "name": "TXA Niacinamide 99 Pore Care Pink Bubble Gum Deep Cleanser",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -51541,7 +51391,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-shower-loofah",
     "name": "Shower Loofah",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -51568,7 +51418,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-heart-shaped-facial-cleansing-sponge",
     "name": "Heart-Shaped Facial Cleansing Sponge",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "bha"
@@ -51599,7 +51449,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-viral-heart-cleansing-puff",
     "name": "Viral Heart Cleansing Puff",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -51625,7 +51475,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-mucin-serum",
     "name": "Pink Aloe Mucin Serum",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -51663,7 +51513,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-carrotene-ipmp-calming-hydrating-sheet-mask-1ea",
     "name": "Carrotene IPMP™ Calming & Hydrating Sheet Mask 1EA",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -51701,7 +51551,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-gift-carrotene-ipmp-calming-hydrating-sheet-mask",
     "name": "Carrotene IPMP™ Calming & Hydrating Sheet Mask",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -51817,7 +51667,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-instant-trouble-soothing-duo",
     "name": "Pink Aloe Instant Trouble Soothing Duo",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -51856,7 +51706,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-vitamin-c-soothing-brightening-toner",
     "name": "Pink Aloe Vitamin C Soothing & Brightening Toner",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [
       "retinol",
@@ -51895,7 +51745,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pink-aloe-facial-polish-cleanser",
     "name": "Pink Aloe Facial Polish Cleanser",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -51934,7 +51784,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-80-artemisia-hydrating-duo",
     "name": "80% Artemisia Hydrating Duo",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -51999,7 +51849,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-glow-booster-mask-duo",
     "name": "Glow Booster Mask Duo",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "niacinamide",
@@ -52037,7 +51887,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-calendula-dew-glow-set",
     "name": "Calendula Dew Glow Set",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -52076,7 +51926,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-trouble-double-cleansing-duo",
     "name": "Trouble Double Cleansing Duo",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -52114,7 +51964,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-deep-cleansing-microfiber-facial-puff",
     "name": "Deep Cleansing Microfiber Facial Puff",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -52147,7 +51997,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-quick-dry-pore-tightening-clay-mask",
     "name": "Carrotene IPMP™ Quick Dry Pore Tightening Clay Mask",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -52182,7 +52032,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-kny-free-gift-20-vitamin-serum-expires-april",
     "name": "20% Vitamin Serum(expires April)",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "retinol",
@@ -52260,7 +52110,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-korean-glass-skin-set",
     "name": "Korean Glass Skin SET",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c",
@@ -52299,7 +52149,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-pore-fect-set",
     "name": "Pore-fect SET",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha"
@@ -52358,7 +52208,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-mini-carrotene-ipmp-hydromelt-cleansing-balm-10ml",
     "name": "MINI Carrotene IPMP™ Hydromelt Cleansing Balm _ 10ml",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -52393,7 +52243,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-free-carrotene-ipmp-hydromelt-cleansing-balm",
     "name": "Carrotene IPMP™ Hydromelt Cleansing Balm",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -52428,7 +52278,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-we-carrot-bout-you-shower-loofah",
     "name": "We Carrot 'bout You Shower Loofah",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -52455,7 +52305,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-exfoliating-body-wash",
     "name": "Carrotene IPMP™ Exfoliating Body Wash",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -52493,7 +52343,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrot-ddicted-full-set",
     "name": "Carrot-ddicted Full Set",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "vitamin_c",
@@ -52532,7 +52382,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-hydromelt-cleansing-balm",
     "name": "Carrotene IPMP™ Hydromelt Cleansing Balm",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-balm",
     "ingredientIds": [
       "bha",
@@ -52565,7 +52415,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-instant-calming-serum-pads",
     "name": "Carrotene IPMP™ Instant Calming Serum Pads",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [
       "vitamin_c",
@@ -52603,7 +52453,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-pimple-stopper",
     "name": "Carrotene Pimple Stopper",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -52641,8 +52491,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "aprilskin-us-free-calendula-peel-off-mask-mini-15ml",
-    "name": "(FREE) Calendula Peel Off Mask Mini (15ml)",
-    "brand": "APRILSKIN US",
+    "name": "Calendula Peel Off Mask Mini (15ml)",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "niacinamide",
@@ -52679,7 +52529,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-calming-hydrating-sheet-mask",
     "name": "Carrotene IPMP™ Calming & Hydrating Sheet Mask",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -52717,7 +52567,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-carrotene-ipmp-clearing-solution",
     "name": "Carrotene IPMP™ Clearing Solution",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-foam",
     "ingredientIds": [
       "vitamin_c",
@@ -52834,7 +52684,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-40-collagen-peptide-plumping-serum",
     "name": "40% Collagen Peptide Plumping Serum",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -53029,7 +52879,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-calendula-10-pha-aha-resurfacing-serum",
     "name": "Calendula 10% PHA+AHA Resurfacing Serum",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "cleansing-gel",
     "ingredientIds": [
       "vitamin_c",
@@ -53068,7 +52918,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-artemisia-squalane-hydra-gel-cream",
     "name": "Artemisia Squalane Hydra Gel Cream",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "sleeping-mask",
     "ingredientIds": [
       "vitamin_c",
@@ -53146,7 +52996,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-artemisia-rice-toner",
     "name": "Artemisia Rice Toner",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [
       "vitamin_c",
@@ -53184,7 +53034,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "aprilskin-us-3-layer-cotton-pads",
     "name": "3-Layer Cotton Pads",
-    "brand": "APRILSKIN US",
+    "brand": "APRILSKIN",
     "category": "toner-pad",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -58037,7 +57887,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-pdrn-pink-collagen-volume-multi-balm-10g-double-pack-2",
-    "name": "*Special Price* 2EA [Medicube] PDRN Pink Collagen Volume Multi Balm 10g Double Pack (2ea)",
+    "name": "2EA [Medicube] PDRN Pink Collagen Volume Multi Balm 10g Double Pack (2ea)",
     "brand": "MEDICUBE",
     "category": "eye-cream",
     "ingredientIds": [
@@ -58071,7 +57921,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "centellian24-special-price-2ea-centellian24-madeca-cream-time-reverse-50ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Centellian24] Madeca Cream Time Reverse 50ml Double Pack (2ea)",
+    "name": "2EA [Centellian24] Madeca Cream Time Reverse 50ml Double Pack (2ea)",
     "brand": "Centellian24",
     "category": "cleanser",
     "ingredientIds": [
@@ -58107,7 +57957,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-2ea-skin1004-madagascar-centella-hyalu-cica-water-fit-sun-serum-uv-",
-    "name": "*Special Price* 2EA [SKIN1004] Madagascar Centella Hyalu-Cica Water-Fit Sun Serum UV 50ml Double Pack (2ea)",
+    "name": "2EA [SKIN1004] Madagascar Centella Hyalu-Cica Water-Fit Sun Serum UV 50ml Double Pack (2ea)",
     "brand": "SKIN1004",
     "category": "serum",
     "ingredientIds": [
@@ -58143,7 +57993,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-deep-vita-a-retinol-serum-30ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Medicube] Deep Vita A Retinol Serum 30ml Double Pack (2ea)",
+    "name": "2EA [Medicube] Deep Vita A Retinol Serum 30ml Double Pack (2ea)",
     "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
@@ -58175,7 +58025,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-2ea-medicube-zero-pore-pad-2-0-70ea-double-pack-2ea",
-    "name": "*Special Price* 2EA [Medicube] Zero Pore Pad 2.0 (70ea) Double Pack (2ea)",
+    "name": "2EA [Medicube] Zero Pore Pad 2.0 (70ea) Double Pack (2ea)",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -58214,7 +58064,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "lilyeve-special-price-2ea-lilyeve-grow-turn-ampoule-100ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [lilyeve] Grow:Turn Ampoule 100ml Double Pack (2ea)",
+    "name": "2EA [lilyeve] Grow:Turn Ampoule 100ml Double Pack (2ea)",
     "brand": "lilyeve",
     "category": "essence",
     "ingredientIds": [
@@ -58244,7 +58094,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-vitamin-c-boosting-serum-30ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Dr. Althea] Vitamin C Boosting Serum 30ml Double Pack (2ea)",
+    "name": "2EA [Dr. Althea] Vitamin C Boosting Serum 30ml Double Pack (2ea)",
     "brand": "Dr.Althea",
     "category": "peeling",
     "ingredientIds": [
@@ -58281,7 +58131,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-retinol-flat-iron-eye-roller-25ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Dr.Althea] Retinol Flat Iron Eye Roller 25ml Double Pack (2ea)",
+    "name": "2EA [Dr.Althea] Retinol Flat Iron Eye Roller 25ml Double Pack (2ea)",
     "brand": "Dr.Althea",
     "category": "serum",
     "ingredientIds": [
@@ -58315,7 +58165,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-renewal-345-relief-cream-50ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Dr. Althea] *renewal* 345 Relief Cream 50ml Double Pack (2ea)",
+    "name": "2EA [Dr. Althea] 345 Relief Cream 50ml Double Pack (2ea)",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -58352,7 +58202,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-2ea-dr-althea-147-barrier-cream-50ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Dr. Althea] 147 Barrier Cream 50ml Double Pack (2ea)",
+    "name": "2EA [Dr. Althea] 147 Barrier Cream 50ml Double Pack (2ea)",
     "brand": "Dr.Althea",
     "category": "peeling",
     "ingredientIds": [
@@ -58391,7 +58241,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-2ea-celimax-the-vita-a-retinal-shot-tightening-booster-15ml-double-p",
-    "name": "*Special Price* 2EA [celimax] THE Vita-A Retinal Shot Tightening Booster 15ml Double Pack (2ea)",
+    "name": "2EA [celimax] THE Vita-A Retinal Shot Tightening Booster 15ml Double Pack (2ea)",
     "brand": "celimax",
     "category": "serum",
     "ingredientIds": [
@@ -58424,7 +58274,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-2ea-celimax-noni-acne-bubble-cleanser-155ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [celimax] Noni Acne Bubble Cleanser 155ml Double Pack (2ea)",
+    "name": "2EA [celimax] Noni Acne Bubble Cleanser 155ml Double Pack (2ea)",
     "brand": "celimax",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -58462,7 +58312,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-2ea-anua-niacinamide-10-txa-4-serum-30ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Anua] Niacinamide 10% + TXA 4% Serum 30ml Double Pack (2ea)",
+    "name": "2EA [Anua] Niacinamide 10% + TXA 4% Serum 30ml Double Pack (2ea)",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -58564,7 +58414,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-2ea-anua-azelaic-acid-10-hyaluron-redness-soothing-serum-30ml-double-pa",
-    "name": "*Special Price* 2EA [Anua] Azelaic Acid 10 Hyaluron Redness Soothing Serum 30ml Double Pack (2ea)",
+    "name": "2EA [Anua] Azelaic Acid 10 Hyaluron Redness Soothing Serum 30ml Double Pack (2ea)",
     "brand": "Anua",
     "category": "serum",
     "ingredientIds": [
@@ -58599,7 +58449,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-2ea-arencia-retinal-booster-shot-30ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Arencia] Retinal Booster Shot 30ml Double Pack (2ea)",
+    "name": "2EA [Arencia] Retinal Booster Shot 30ml Double Pack (2ea)",
     "brand": "ARENCIA",
     "category": "serum",
     "ingredientIds": [
@@ -58637,7 +58487,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-2ea-arencia-vitamin-c-booster-shot-30ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Arencia] Vitamin C Booster Shot 30ml Double Pack (2ea)",
+    "name": "2EA [Arencia] Vitamin C Booster Shot 30ml Double Pack (2ea)",
     "brand": "ARENCIA",
     "category": "peeling",
     "ingredientIds": [
@@ -58743,7 +58593,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "kaine-clearance-kaine-rosemary-aha-night-serum-30ml",
-    "name": "*CLEARANCE*[KAINE] Rosemary AHA Night Serum 30ml",
+    "name": "[KAINE] Rosemary AHA Night Serum 30ml",
     "brand": "KAINE",
     "category": "peeling",
     "ingredientIds": [
@@ -58848,7 +58698,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-jumiso-niacinamide-20-serum-sample-1ml-2ea",
-    "name": "FREE GIFT [Jumiso] Niacinamide 20 Serum Sample 1ml (2ea)",
+    "name": "[Jumiso] Niacinamide 20 Serum Sample 1ml (2ea)",
     "brand": "free",
     "category": "serum",
     "ingredientIds": [
@@ -59001,7 +58851,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renew-soonjung-2x-barrier-intensive-cream-60ml",
-    "name": "*renew* SoonJung 2x Barrier Intensive Cream 60ml",
+    "name": "SoonJung 2x Barrier Intensive Cream 60ml",
     "brand": "ETUDE",
     "category": "peeling",
     "ingredientIds": [
@@ -59067,7 +58917,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-skin1004-madagascar-centella-light-cleansing-oil-30ml",
-    "name": "FREE GIFT [SKIN1004] Madagascar Centella Light Cleansing Oil 30ml",
+    "name": "[SKIN1004] Madagascar Centella Light Cleansing Oil 30ml",
     "brand": "free",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -59096,7 +58946,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-etude-0-2mm-therapy-air-sheet-mask-green-tea",
-    "name": "FREE GIFT [ETUDE] 0.2mm Therapy Air Sheet Mask #Green Tea",
+    "name": "[ETUDE] 0.2mm Therapy Air Sheet Mask #Green Tea",
     "brand": "free",
     "category": "sheet-mask",
     "ingredientIds": [
@@ -59124,7 +58974,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "axis-y-clearance-axis-y-spot-the-difference-blemish-treatment-15ml",
-    "name": "*CLEARANCE* [AXIS-Y] Spot the Difference Blemish Treatment 15ml",
+    "name": "[AXIS-Y] Spot the Difference Blemish Treatment 15ml",
     "brand": "AXIS-Y",
     "category": "peeling",
     "ingredientIds": [
@@ -59189,7 +59039,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-heimish-all-clean-balm-blister-5ml",
-    "name": "FREE GIFT [Heimish] All Clean Balm Blister 5ml",
+    "name": "[Heimish] All Clean Balm Blister 5ml",
     "brand": "free",
     "category": "cleansing-balm",
     "ingredientIds": [],
@@ -59215,7 +59065,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "aromatica-special-price-aromatica-rosemary-scalp-intensive-care-set-shampoo-180ml-root-enh",
-    "name": "*Special Price* [Aromatica] Rosemary Scalp Intensive Care Set (Shampoo 180ml + Root Enhancer)",
+    "name": "[Aromatica] Rosemary Scalp Intensive Care Set (Shampoo 180ml + Root Enhancer)",
     "brand": "AROMATICA",
     "category": "serum",
     "ingredientIds": [],
@@ -59247,7 +59097,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "seapuri-special-price-2ea-seapuri-scalpy-hair-serum-20ml-double-pack-2ea",
-    "name": "*Special Price* 2EA [Seapuri] Scalpy Hair Serum 20ml Double Pack (2ea)",
+    "name": "2EA [Seapuri] Scalpy Hair Serum 20ml Double Pack (2ea)",
     "brand": "Seapuri",
     "category": "peeling",
     "ingredientIds": [
@@ -59281,7 +59131,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "anua-special-price-anua-8-hyaluronic-acid-moisturizing-cleanser-duo-foam-gel-cleanser",
-    "name": "*Special Price* [Anua] 8 Hyaluronic Acid Moisturizing Cleanser Duo (Foam + Gel Cleanser)",
+    "name": "[Anua] 8 Hyaluronic Acid Moisturizing Cleanser Duo (Foam + Gel Cleanser)",
     "brand": "Anua",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -59316,7 +59166,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "arencia-special-price-arencia-pore-tightening-skin-reset-set-green-rice-mochi-cleanser-ret",
-    "name": "*Special Price* [Arencia] Pore-Tightening Skin Reset Set (Green Rice Mochi Cleanser + Retinal Booster Shot)",
+    "name": "[Arencia] Pore-Tightening Skin Reset Set (Green Rice Mochi Cleanser + Retinal Booster Shot)",
     "brand": "ARENCIA",
     "category": "cleanser",
     "ingredientIds": [
@@ -59355,7 +59205,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-special-price-round-lab-1025-dokdo-pore-reset-cleanser-set-cleansing-tissue-clea",
-    "name": "*Special Price* [ROUND LAB] 1025 Dokdo Pore-Reset Cleanser Set (Cleansing Tissue + Cleansing foam)",
+    "name": "[ROUND LAB] 1025 Dokdo Pore-Reset Cleanser Set (Cleansing Tissue + Cleansing foam)",
     "brand": "ROUND LAB",
     "category": "cleansing-water",
     "ingredientIds": [
@@ -59390,7 +59240,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-celimax-noni-pore-glow-skincare-set-noni-bubble-cleanser-noni-energy",
-    "name": "*Special Price* [celimax] Noni Pore & Glow Skincare Set (Noni Bubble Cleanser + Noni Energy Ampoule)",
+    "name": "[celimax] Noni Pore & Glow Skincare Set (Noni Bubble Cleanser + Noni Energy Ampoule)",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -59572,7 +59422,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "cosrx-special-price-2ea-cosrx-advanced-snail-96-mucin-power-essence-100ml-2ea",
-    "name": "*Special Price* 2EA [COSRX] Advanced Snail 96 Mucin Power Essence 100ml (2ea)",
+    "name": "2EA [COSRX] Advanced Snail 96 Mucin Power Essence 100ml (2ea)",
     "brand": "COSRX",
     "category": "essence",
     "ingredientIds": [
@@ -59607,7 +59457,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "axis-y-special-price-moida-set-axis-y-dark-spot-blemish-trio",
-    "name": "*Special Price* MOIDA SET [Axis-y] Dark Spot & Blemish Trio",
+    "name": "MOIDA SET [Axis-y] Dark Spot & Blemish Trio",
     "brand": "AXIS-Y",
     "category": "peeling",
     "ingredientIds": [
@@ -59866,7 +59716,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-fig-gelato-pack-cleanser-120g",
-    "name": "*renewal* Fig Gelato Pack Cleanser 120g",
+    "name": "Fig Gelato Pack Cleanser 120g",
     "brand": "I'm From",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -59898,7 +59748,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "i-m-from-i-m-from-renewal-apricot-sherbet-pack-cleanser-120g",
-    "name": "*renewal* Apricot Sherbet Pack Cleanser 120g",
+    "name": "Apricot Sherbet Pack Cleanser 120g",
     "brand": "I'm From",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -60515,7 +60365,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-skin1004-mini-madagascar-centella-soothing-cream-30ml",
-    "name": "*mini* Madagascar Centella Soothing Cream 30ml",
+    "name": "Madagascar Centella Soothing Cream 30ml",
     "brand": "SKIN1004",
     "category": "moisturizer",
     "ingredientIds": [
@@ -60549,7 +60399,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "cosrx-cosrx-mini-pure-fit-cica-cleanser-50ml",
-    "name": "*mini* Pure Fit Cica Cleanser 50ml",
+    "name": "Pure Fit Cica Cleanser 50ml",
     "brand": "COSRX",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -60684,7 +60534,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "etude-etude-renew-soonjung-ph-5-5-relief-toner-350ml",
-    "name": "*renew* SoonJung pH 5.5 Relief Toner 350ml",
+    "name": "SoonJung pH 5.5 Relief Toner 350ml",
     "brand": "ETUDE",
     "category": "toner",
     "ingredientIds": [
@@ -60719,7 +60569,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "innisfree-clearance-innisfree-green-tea-amino-cleansing-water-320ml",
-    "name": "*CLEARANCE*[Innisfree] Green Tea Amino Cleansing Water 320ml",
+    "name": "[Innisfree] Green Tea Amino Cleansing Water 320ml",
     "brand": "Innisfree",
     "category": "cleansing-water",
     "ingredientIds": [
@@ -60753,7 +60603,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "elizavecca-clearance-elizavecca-milky-piggy-bb-cream-50ml",
-    "name": "*CLEARANCE*[Elizavecca] Milky Piggy BB Cream 50ml",
+    "name": "[Elizavecca] Milky Piggy BB Cream 50ml",
     "brand": "Elizavecca",
     "category": "sunscreen",
     "ingredientIds": [
@@ -61050,7 +60900,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "derma-b-derma-b-renewal-ceramd-repair-cream-430ml",
-    "name": "*renewal* CeraMD Repair Cream 430ml",
+    "name": "CeraMD Repair Cream 430ml",
     "brand": "Derma-B",
     "category": "lip-care",
     "ingredientIds": [
@@ -61152,7 +61002,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-fermentation-essence-100ml",
-    "name": "*renew* Fermentation Essence 100ml",
+    "name": "Fermentation Essence 100ml",
     "brand": "Benton",
     "category": "essence",
     "ingredientIds": [],
@@ -61179,7 +61029,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-blemish-patch-dream-daisy",
     "name": "Cinnamoroll Blemish Patch #Dream Daisy",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [
       "green_tea"
@@ -61303,7 +61153,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-5ea-dr-althea-345-relief-cream-5ea-bundle-50ml-5",
-    "name": "*Special Price* 5EA [Dr.Althea] 345 Relief Cream 5EA Bundle (50ml*5)",
+    "name": "5EA [Dr.Althea] 345 Relief Cream 5EA Bundle (50ml*5)",
     "brand": "Dr.Althea",
     "category": "spot",
     "ingredientIds": [
@@ -61342,7 +61192,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "jumiso-special-price-2ea-jumiso-niacinamide-20-serum-40ml-2ea",
-    "name": "*Special Price* 2EA [Jumiso] Niacinamide 20 Serum 40ml (2ea)",
+    "name": "2EA [Jumiso] Niacinamide 20 Serum 40ml (2ea)",
     "brand": "Jumiso",
     "category": "cleanser",
     "ingredientIds": [
@@ -61379,7 +61229,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "biodance-special-price-2packs-biodance-bio-collagen-real-deep-mask-4ea-2",
-    "name": "*Special Price* 2PACKS [Biodance] Bio-Collagen Real Deep Mask (4ea*2)",
+    "name": "2PACKS [Biodance] Bio-Collagen Real Deep Mask (4ea*2)",
     "brand": "Biodance",
     "category": "mask",
     "ingredientIds": [
@@ -61416,7 +61266,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "biodance-special-price-2pack-biodance-rejuvenating-caviar-pdrn-real-deep-mask-4ea-2",
-    "name": "*Special Price* 2PACK [Biodance] Rejuvenating Caviar PDRN Real Deep Mask (4ea*2)",
+    "name": "2PACK [Biodance] Rejuvenating Caviar PDRN Real Deep Mask (4ea*2)",
     "brand": "Biodance",
     "category": "mask",
     "ingredientIds": [
@@ -61487,7 +61337,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-cica-calm-acne-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Cica Calm Acne Set",
+    "name": "MOIDA SET [MOIDA] Cica Calm Acne Set",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -61524,7 +61374,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-barrier-acne-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Barrier Acne Set",
+    "name": "MOIDA SET [MOIDA] Barrier Acne Set",
     "brand": "MOIDA",
     "category": "cleansing-gel",
     "ingredientIds": [
@@ -61562,7 +61412,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-bha-clear-start-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] BHA Clear Start Set",
+    "name": "MOIDA SET [MOIDA] BHA Clear Start Set",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -61598,7 +61448,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-mens-age-defense-trio",
-    "name": "*Special Price* MOIDA SET [MOIDA] Mens Age Defense Trio",
+    "name": "MOIDA SET [MOIDA] Mens Age Defense Trio",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -61637,7 +61487,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-men-s-dry-relief-duo",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Dry Relief Duo",
+    "name": "MOIDA SET [MOIDA] Men's Dry Relief Duo",
     "brand": "MOIDA",
     "category": "cleansing-gel",
     "ingredientIds": [
@@ -61672,7 +61522,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-men-s-daily-essential-trio",
-    "name": "*Special Price* MOIDA SET [MOIDA] Men's Daily Essential Trio",
+    "name": "MOIDA SET [MOIDA] Men's Daily Essential Trio",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -61744,7 +61594,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "baren-baren-renewal-shea-butter-sleeping-heel-patch-10ea",
-    "name": "*renewal* Shea Butter Sleeping Heel Patch (10ea)",
+    "name": "Shea Butter Sleeping Heel Patch (10ea)",
     "brand": "baren",
     "category": "peeling",
     "ingredientIds": [],
@@ -61882,7 +61732,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-special-price-moida-set-numbuzin-no-9-nad-lifting-routine-set",
-    "name": "*Special Price* MOIDA SET [Numbuzin] No.9 NAD Lifting Routine Set",
+    "name": "MOIDA SET [Numbuzin] No.9 NAD Lifting Routine Set",
     "brand": "Numbuzin",
     "category": "toner",
     "ingredientIds": [
@@ -61985,7 +61835,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-white-truffle-body-glow-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] White Truffle Body Glow Set",
+    "name": "MOIDA SET [MOIDA] White Truffle Body Glow Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -62016,7 +61866,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-floral-body-duo",
-    "name": "*Special Price* MOIDA SET [MOIDA] Floral Body Duo",
+    "name": "MOIDA SET [MOIDA] Floral Body Duo",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -62045,7 +61895,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-plump-smooth-duo",
-    "name": "*Special Price* MOIDA SET [MOIDA] Plump & Smooth Duo",
+    "name": "MOIDA SET [MOIDA] Plump & Smooth Duo",
     "brand": "MOIDA",
     "category": "peeling",
     "ingredientIds": [
@@ -62081,7 +61931,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "free-free-gift-tocobo-renew-bio-watery-sun-cream-spf50-40ml",
-    "name": "FREE GIFT [TOCOBO] *renew* Bio Watery Sun Cream SPF50 40ml",
+    "name": "[TOCOBO] *renew* Bio Watery Sun Cream SPF50 40ml",
     "brand": "free",
     "category": "sunscreen",
     "ingredientIds": [
@@ -62292,7 +62142,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-1-deal-tocobo-bio-watery-sun-cream-spf50-40ml-first-purchase-only",
-    "name": "*$1 Deal* [TOCOBO] Bio Watery Sun Cream SPF50 40ml (First Purchase Only)",
+    "name": "[TOCOBO] Bio Watery Sun Cream SPF50 40ml (First Purchase Only)",
     "brand": "TOCOBO",
     "category": "sunscreen",
     "ingredientIds": [
@@ -62458,7 +62308,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-medicube-pdrn-pink-skincare-duo-set-pink-peptide-serum-pink-collage",
-    "name": "*Special Price* [Medicube] PDRN Pink Skincare Duo Set (Pink Peptide Serum + Pink Collagen Capsule Cream)",
+    "name": "[Medicube] PDRN Pink Skincare Duo Set (Pink Peptide Serum + Pink Collagen Capsule Cream)",
     "brand": "MEDICUBE",
     "category": "serum",
     "ingredientIds": [
@@ -62566,7 +62416,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "tocobo-special-price-moida-set-tocobo-travel-ready-calming-set-skincare-kit-sun-stick-lip-",
-    "name": "*Special Price* MOIDA SET [TOCOBO] Travel-Ready Calming Set (Skincare Kit + Sun Stick + Lip Mask)",
+    "name": "MOIDA SET [TOCOBO] Travel-Ready Calming Set (Skincare Kit + Sun Stick + Lip Mask)",
     "brand": "TOCOBO",
     "category": "cleanser",
     "ingredientIds": [
@@ -62658,7 +62508,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-celimax-renewal-noni-moisture-balancing-toner-150ml",
-    "name": "*renewal* Noni Moisture Balancing Toner 150ml",
+    "name": "Noni Moisture Balancing Toner 150ml",
     "brand": "celimax",
     "category": "toner",
     "ingredientIds": [
@@ -62724,7 +62574,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-value-hair-revitalizing-routine-set-shampoo-treatment-",
-    "name": "*Special Price* MOIDA SET [MOIDA] Value Hair Revitalizing Routine Set (Shampoo + Treatment + Oil)",
+    "name": "MOIDA SET [MOIDA] Value Hair Revitalizing Routine Set (Shampoo + Treatment + Oil)",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -62755,7 +62605,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "purito-seoul-special-price-moida-set-purito-seoul-all-in-one-travel-set-skincare-kit-clean",
-    "name": "*Special Price* MOIDA SET [Purito Seoul] All-in-One Travel Set (Skincare Kit + Cleanser + Sunscreen)",
+    "name": "MOIDA SET [Purito Seoul] All-in-One Travel Set (Skincare Kit + Cleanser + Sunscreen)",
     "brand": "Purito Seoul",
     "category": "cleanser",
     "ingredientIds": [
@@ -62794,7 +62644,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-noni-travel-essentials-set-kit-bubble-cleanser-she",
-    "name": "*Special Price* MOIDA SET [celimax] Noni Travel Essentials Set (Kit + Bubble Cleanser + Sheet Mask 5ea)",
+    "name": "MOIDA SET [celimax] Noni Travel Essentials Set (Kit + Bubble Cleanser + Sheet Mask 5ea)",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -62832,7 +62682,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-special-price-moida-set-skin1004-madagascar-centella-travel-essentials-set-skinca",
-    "name": "*Special Price* MOIDA SET [SKIN1004] Madagascar Centella Travel Essentials Set (Skincare Kit + Sheet Mask 5ea)",
+    "name": "MOIDA SET [SKIN1004] Madagascar Centella Travel Essentials Set (Skincare Kit + Sheet Mask 5ea)",
     "brand": "SKIN1004",
     "category": "cleansing-oil",
     "ingredientIds": [
@@ -62866,7 +62716,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-3-texture-sun-care-set-sun-cream-sun-stick-sun-gel",
-    "name": "*Special Price* MOIDA SET [MOIDA] 3-Texture Sun Care Set (Sun Cream + Sun Stick + Sun Gel)",
+    "name": "MOIDA SET [MOIDA] 3-Texture Sun Care Set (Sun Cream + Sun Stick + Sun Gel)",
     "brand": "MOIDA",
     "category": "sun-stick",
     "ingredientIds": [
@@ -62905,7 +62755,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-best-of-k-beauty-sunscreen-trio-medicube-numbuzin-toco",
-    "name": "*Special Price* MOIDA SET [MOIDA] Best of K-Beauty Sunscreen Trio (Medicube + Numbuzin + TOCOBO)",
+    "name": "MOIDA SET [MOIDA] Best of K-Beauty Sunscreen Trio (Medicube + Numbuzin + TOCOBO)",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -62943,7 +62793,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-daily-hydrating-sunscreen-trio-skin1004-somebymi-melix",
-    "name": "*Special Price* MOIDA SET [MOIDA] Daily Hydrating Sunscreen Trio (Skin1004 + Somebymi + Melixir)",
+    "name": "MOIDA SET [MOIDA] Daily Hydrating Sunscreen Trio (Skin1004 + Somebymi + Melixir)",
     "brand": "MOIDA",
     "category": "serum",
     "ingredientIds": [
@@ -62981,7 +62831,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "benton-benton-renew-aloe-bha-skin-toner-200ml",
-    "name": "*renew* Aloe Bha Skin Toner 200ml",
+    "name": "Aloe Bha Skin Toner 200ml",
     "brand": "Benton",
     "category": "toner",
     "ingredientIds": [
@@ -64054,7 +63904,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-acne-reset-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Acne Reset Set",
+    "name": "MOIDA SET [MOIDA] Acne Reset Set",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -64156,7 +64006,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "foodology-foodology-renewal-coleology-cut-pro-600mg-x-60tab-36g",
-    "name": "*renewal* Coleology Cut Pro 600mg x 60Tab (36g)",
+    "name": "Coleology Cut Pro 600mg x 60Tab (36g)",
     "brand": "Foodology",
     "category": "body",
     "ingredientIds": [
@@ -64186,7 +64036,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-body-dark-spot-repair-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Body Dark Spot Repair Set",
+    "name": "MOIDA SET [MOIDA] Body Dark Spot Repair Set",
     "brand": "MOIDA",
     "category": "toner-pad",
     "ingredientIds": [
@@ -64485,7 +64335,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-sun-care-anywhere-trio-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Sun Care Anywhere Trio Set",
+    "name": "MOIDA SET [MOIDA] Sun Care Anywhere Trio Set",
     "brand": "MOIDA",
     "category": "sunscreen",
     "ingredientIds": [
@@ -64518,7 +64368,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-viral-pore-minimizing-duo-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Viral Pore Minimizing Duo Set",
+    "name": "MOIDA SET [MOIDA] Viral Pore Minimizing Duo Set",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -64550,7 +64400,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-hyperpigmentation-fix-duo-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Hyperpigmentation Fix Duo Set",
+    "name": "MOIDA SET [MOIDA] Hyperpigmentation Fix Duo Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -64584,7 +64434,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-pdrn-skin-repair-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] PDRN Skin Repair Set",
+    "name": "MOIDA SET [MOIDA] PDRN Skin Repair Set",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -64622,7 +64472,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-anti-aging-routine-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Anti-Aging Routine Set",
+    "name": "MOIDA SET [MOIDA] Anti-Aging Routine Set",
     "brand": "MOIDA",
     "category": "peeling",
     "ingredientIds": [
@@ -64660,7 +64510,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-turmeric-dark-spot-eraser-trio-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Turmeric Dark Spot Eraser Trio Set",
+    "name": "MOIDA SET [MOIDA] Turmeric Dark Spot Eraser Trio Set",
     "brand": "MOIDA",
     "category": "cleanser",
     "ingredientIds": [
@@ -64693,7 +64543,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-korean-beauty-for-advanced-results-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Korean Beauty for Advanced Results Set",
+    "name": "MOIDA SET [MOIDA] Korean Beauty for Advanced Results Set",
     "brand": "MOIDA",
     "category": "cleansing-foam",
     "ingredientIds": [
@@ -64769,7 +64619,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-40-day-glass-skin-sheet-mask-ritual-medicube-sungboon-",
-    "name": "*Special Price* MOIDA SET [MOIDA] 40-Day Glass Skin Sheet Mask Ritual (Medicube, Sungboon Editor, Seohaesol, Dr.Althea, ",
+    "name": "MOIDA SET [MOIDA] 40-Day Glass Skin Sheet Mask Ritual (Medicube, Sungboon Editor, Seohaesol, Dr.Althea",
     "brand": "MOIDA",
     "category": "sheet-mask",
     "ingredientIds": [
@@ -65237,7 +65087,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "vt-cosmetics-vt-cosmetics-renewal-red-booster-reedle-shot-300",
-    "name": "*renewal* Red Booster Reedle Shot 300",
+    "name": "Red Booster Reedle Shot 300",
     "brand": "VT Cosmetics",
     "category": "essence",
     "ingredientIds": [
@@ -65304,7 +65154,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "nineless-nineless-renewal-molecule-clear-salicylic-acid-serum-30ml",
-    "name": "*renewal* Molecule-Clear Salicylic Acid Serum 30ml",
+    "name": "Molecule-Clear Salicylic Acid Serum 30ml",
     "brand": "NINELESS",
     "category": "peeling",
     "ingredientIds": [
@@ -65526,7 +65376,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "moida-special-price-moida-set-moida-anti-hair-loss-care-duo-set",
-    "name": "*Special Price* MOIDA SET [MOIDA] Anti-Hair Loss Care Duo Set",
+    "name": "MOIDA SET [MOIDA] Anti-Hair Loss Care Duo Set",
     "brand": "MOIDA",
     "category": "ampoule",
     "ingredientIds": [
@@ -66008,7 +65858,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "ongredients-ongredients-renewal-skin-barrier-calming-lotion-ex-150ml",
-    "name": "*renewal* Skin Barrier Calming Lotion EX 150ml",
+    "name": "Skin Barrier Calming Lotion EX 150ml",
     "brand": "Ongredients",
     "category": "lotion",
     "ingredientIds": [
@@ -66562,7 +66412,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "frudia-frudia-renew-citrus-brightening-serum-50ml",
-    "name": "*renew* Citrus Brightening Serum 50ml",
+    "name": "Citrus Brightening Serum 50ml",
     "brand": "Frudia",
     "category": "peeling",
     "ingredientIds": [
@@ -67054,7 +66904,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "celimax-special-price-moida-set-celimax-the-vita-a-retinal-booster-retinol-serum-set",
-    "name": "*Special Price* MOIDA SET [celimax] THE Vita-A Retinal Booster & Retinol Serum Set",
+    "name": "MOIDA SET [celimax] THE Vita-A Retinal Booster & Retinol Serum Set",
     "brand": "celimax",
     "category": "cleanser",
     "ingredientIds": [
@@ -67092,7 +66942,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "studio17-studio17-renew-pang-pang-triangle-puff",
-    "name": "*renew* Pang Pang Triangle Puff",
+    "name": "Pang Pang Triangle Puff",
     "brand": "Studio17",
     "category": "eye-cream",
     "ingredientIds": [],
@@ -69418,7 +69268,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "nesh-nesh-sachet-set-pomegranate-biome-shampoo-10ml-soy-biome-treatment-8ml",
-    "name": "*Sachet Set* Pomegranate Biome Shampoo 10ml + Soy Biome Treatment 8ml",
+    "name": "Pomegranate Biome Shampoo 10ml + Soy Biome Treatment 8ml",
     "brand": "nesh",
     "category": "hair",
     "ingredientIds": [],
@@ -69445,7 +69295,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-pochacco-hydrogel-under-eye-patches-1ea",
     "name": "Pochacco Hydrogel Under Eye Patches (1ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [
       "retinol",
@@ -69478,7 +69328,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-pompompurin-under-eye-patches-1ea",
     "name": "Pompompurin Under Eye Patches (1ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [
       "vitamin_c",
@@ -69514,7 +69364,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-cinnamoroll-hydrogel-under-eye-patches-1ea",
     "name": "Cinnamoroll Hydrogel Under Eye Patches (1ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [],
     "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
@@ -69541,7 +69391,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-miffy-hydrocolloid-patches-clear-as-day",
     "name": "Miffy Hydrocolloid Patches #Clear As Day!",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "spot",
     "ingredientIds": [
       "green_tea"
@@ -69571,7 +69421,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-miffy-calming-cloud-hydrogel-under-eye-patches",
     "name": "Miffy Calming Cloud Hydrogel Under Eye Patches",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -69602,7 +69452,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-hydrogel-eye-patches-catch-some-zzz-s-3ea",
     "name": "Peanuts Hydrogel Eye Patches #Catch Some ZZZ's (3ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "eye-patch",
     "ingredientIds": [
       "vitamin_c",
@@ -69636,7 +69486,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-peanuts-smoothing-foot-mask-set-fresh-new-5ea",
     "name": "Peanuts Smoothing Foot Mask Set #Fresh & New (5ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "ceramides"
@@ -69665,7 +69515,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-soothing-foot-mask-lavender-3ea",
     "name": "Soothing Foot Mask #Lavender (3ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "vitamin_c"
@@ -69695,7 +69545,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "the-creme-shop-the-creme-shop-moisture-foot-mask-almond-oil-3ea",
     "name": "Moisture Foot Mask #Almond Oil (3ea)",
-    "brand": "The Crème Shop",
+    "brand": "The Crème",
     "category": "mask",
     "ingredientIds": [
       "hyaluronic_acid"

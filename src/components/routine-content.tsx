@@ -40,19 +40,22 @@ function RoutineColumn({
       ) : (
         <ol className="flex flex-col gap-2.5">
           {steps.map((step, i) => (
-            <li
-              key={step.product.id}
-              className="flex items-center gap-3 rounded-xl border border-border bg-background px-3 py-2.5"
-            >
-              <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-medium text-muted-foreground">
-                {i + 1}
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium">{step.product.name}</p>
-                <p className="text-xs text-muted-foreground">
-                  {step.product.brand} · {categoryLabel(step.product.category)}
-                </p>
-              </div>
+            <li key={step.product.id}>
+              <Link
+                href={`/app/product/${step.product.slug}`}
+                className="flex items-center gap-3 rounded-xl border border-border bg-background px-3 py-2.5 transition-colors hover:border-primary/40"
+              >
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-medium text-muted-foreground">
+                  {i + 1}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm font-medium">{step.product.name}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {step.product.brand} · {categoryLabel(step.product.category)}
+                  </p>
+                </div>
+                <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
+              </Link>
             </li>
           ))}
         </ol>

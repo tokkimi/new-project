@@ -26,13 +26,14 @@ export function LocaleSwitcher({
         type="button"
         disabled={pending}
         onClick={() => startTransition(() => router.replace(pathname, { locale: other }))}
-        aria-label={other === "ko" ? "한국어" : t("en")}
+        aria-label={locale === "ko" ? "한국어" : t("en")}
+        title={other === "ko" ? "한국어로 전환" : "Switch to English"}
         className={cn(
           "flex h-7 items-center justify-center rounded-full border border-border bg-muted px-2.5 text-[11px] font-medium text-muted-foreground transition-colors hover:text-foreground",
           className
         )}
       >
-        {other === "ko" ? "KO" : "EN"}
+        {locale === "ko" ? "KO" : "EN"}
       </button>
     );
   }
