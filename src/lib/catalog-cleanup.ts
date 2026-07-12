@@ -36,6 +36,7 @@ const SLUG_BRANDS: Record<string, string> = {
   "im-from": "I'm From",
   "rom-nd": "rom&nd",
   "purito-seoul": "PURITO SEOUL",
+  coreelle: "Coreelle",
 };
 
 const BAD_BRANDS = new Set(["gwp", "free gift ghost", "free", "clearance"]);
@@ -125,8 +126,10 @@ export function inferBrand(product: CatalogLike): string {
     .trim()
     .replace(/\s+official$/i, "")
     .replace(/\s+us$/i, "")
-    .replace(/^corã©elle$/i, "Coreelle")
     .replace(/^cosrx$/i, "COSRX");
+  if (product.slug.includes("coreelle") || current.toLowerCase().includes("corã") || current.toLowerCase().includes("coré")) {
+    return "Coreelle";
+  }
   if (current && !BAD_BRANDS.has(current.toLowerCase()) && !current.toLowerCase().includes("free gift")) {
     return current;
   }
@@ -134,9 +137,13 @@ export function inferBrand(product: CatalogLike): string {
 }
 
 export function cleanCatalogProduct<T extends CatalogLike>(product: T): T {
+  const cleanedName = cleanProductName(product.name).replace(
+    product.slug.includes("haru-expanded") ? /\s+Duo$/i : /$a/,
+    ""
+  );
   return {
     ...product,
-    name: cleanProductName(product.name) || product.name,
+    name: cleanedName || product.name,
     brand: inferBrand(product),
   };
 }
