@@ -6,7 +6,6 @@ import { ArrowRight, Brain, CloudRain, Sparkles, Wind } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { FaceDiagram } from "@/components/face-diagram";
 
 const CHECK_ICONS = [Brain, Wind, CloudRain, Sparkles];
 
@@ -49,15 +48,11 @@ export function WellnessShowcase() {
           transition={{ duration: 0.45, delay: 0.08 }}
           className="order-1 overflow-hidden rounded-[1.75rem] border border-border bg-background/70 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.2)] lg:order-2"
         >
-          <div className="relative flex aspect-[16/9] w-full items-end overflow-hidden bg-gradient-to-br from-pm/20 via-primary/10 to-am/20 p-5">
-            <div className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-pm/30 blur-3xl" />
-            <div className="pointer-events-none absolute -right-6 -bottom-6 h-40 w-40 rounded-full bg-am/30 blur-3xl" />
-            <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center gap-6 pt-4 opacity-90">
-              <FaceDiagram variant="temple-circular" className="size-24" />
-              <FaceDiagram variant="jaw-press-hold" className="size-24" />
-              <FaceDiagram variant="cheek-sweep-up" className="size-24" />
-            </div>
-            <p className="relative text-xs font-medium uppercase tracking-[0.18em] text-foreground/80">
+          <div className="relative flex aspect-[16/9] w-full items-end overflow-hidden p-5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/wellness-skin.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
+            <p className="relative text-xs font-medium uppercase tracking-[0.18em] text-white drop-shadow">
               {t("panelEyebrow")}
             </p>
           </div>

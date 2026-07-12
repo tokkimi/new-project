@@ -1,18 +1,26 @@
 "use client";
 
+import * as React from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, Camera, Droplets, ListChecks, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ScanIllustration } from "@/components/marketing/scan-illustration";
 
 const CHECK_ICONS = [Camera, ListChecks, Droplets, Sparkles];
 
 export function ScanShowcase() {
   const t = useTranslations("scanShowcase");
   const checks = t.raw("checks") as { title: string; text: string }[];
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.play().catch(() => {});
+  }, []);
 
   return (
     <section className="border-y border-border bg-secondary/25 py-24">
@@ -53,9 +61,23 @@ export function ScanShowcase() {
           className="overflow-hidden rounded-[1.75rem] border border-border bg-background/70 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.2)]"
         >
           <div className="relative aspect-[16/9] w-full overflow-hidden">
-            <ScanIllustration />
+            <video
+              ref={videoRef}
+              className="h-full w-full object-cover"
+              poster="/scan-mirror-poster.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              controls={false}
+              aria-hidden="true"
+            >
+              <source src="/scan-mirror.webm" type="video/webm" />
+              <source src="/scan-mirror.mp4" type="video/mp4" />
+            </video>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-            <p className="absolute bottom-3 left-5 text-xs font-medium uppercase tracking-[0.18em] text-foreground/80">
+            <p className="absolute bottom-3 left-5 text-xs font-medium uppercase tracking-[0.18em] text-white drop-shadow">
               {t("panelEyebrow")}
             </p>
           </div>

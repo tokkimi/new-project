@@ -94,10 +94,10 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mt-4 lg:mt-0"
         >
-          <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[1.75rem] border border-white/40 bg-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.25)] backdrop-blur-md dark:border-white/10 dark:bg-white/5">
+          <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[1.75rem] border border-white/40 bg-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.25)] backdrop-blur-md dark:border-white/10 dark:bg-white/5">
             <video
               ref={videoRef}
-              className="aspect-[4/5] w-full object-cover opacity-85"
+              className="aspect-video w-full object-cover opacity-85"
               poster="/hero-banner-poster.jpg"
               autoPlay
               loop

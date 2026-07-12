@@ -12,6 +12,9 @@ export function FinalCta() {
   return (
     <section className="relative overflow-hidden py-24">
       <div className="pointer-events-none absolute inset-0 -z-10">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/texture-gel.jpg" alt="" className="h-full w-full object-cover opacity-25 dark:opacity-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         <div className="absolute left-1/2 top-1/2 h-96 w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
       </div>
       <motion.div
