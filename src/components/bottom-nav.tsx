@@ -9,6 +9,8 @@ export function BottomNav() {
   const t = useTranslations("nav");
   const pathname = usePathname();
 
+  if (!pathname?.startsWith("/app")) return null;
+
   const TABS = [
     { href: "/app/shelf", label: t("shelf"), icon: ShoppingBag },
     { href: "/app/products", label: t("products"), icon: Grid2x2 },

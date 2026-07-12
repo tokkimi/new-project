@@ -3,6 +3,7 @@
 import * as React from "react";
 import { useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Dialog,
   DialogContent,
@@ -20,7 +21,21 @@ type Props = {
   subscriptionStatus: "NONE" | "TRIALING" | "ACTIVE" | "PAST_DUE" | "CANCELED";
 };
 
-const SUBSCRIPTION_STATUSES = ["NONE", "TRIALING", "ACTIVE", "PAST_DUE", "CANCELED"] as const;
+const PLAN_LABEL: Record<Props["subscriptionStatus"], string> = {
+  NONE: "Free",
+  TRIALING: "Trial",
+  ACTIVE: "Premium",
+  PAST_DUE: "Payment issue",
+  CANCELED: "Canceled",
+};
+
+const PLAN_BADGE: Record<Props["subscriptionStatus"], "success" | "secondary" | "warning" | "destructive"> = {
+  NONE: "secondary",
+  TRIALING: "warning",
+  ACTIVE: "success",
+  PAST_DUE: "warning",
+  CANCELED: "destructive",
+};
 
 export function UserRowActions({ userId, role, subscriptionStatus }: Props) {
   const router = useRouter();
@@ -46,8 +61,10 @@ export function UserRowActions({ userId, role, subscriptionStatus }: Props) {
     router.refresh();
   };
 
+  const isPremium = subscriptionStatus === "ACTIVE";
+
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       <select
         className="rounded-lg border border-border bg-card px-2 py-1 text-xs"
         value={role}
@@ -57,18 +74,18 @@ export function UserRowActions({ userId, role, subscriptionStatus }: Props) {
         <option value="USER">User</option>
         <option value="ADMIN">Admin</option>
       </select>
-      <select
-        className="rounded-lg border border-border bg-card px-2 py-1 text-xs"
-        value={subscriptionStatus}
+
+      <Badge variant={PLAN_BADGE[subscriptionStatus]}>{PLAN_LABEL[subscriptionStatus]}</Badge>
+
+      <Button
+        type="button"
+        size="sm"
+        variant={isPremium ? "outline" : "default"}
         disabled={busy}
-        onChange={(e) => patch({ subscriptionStatus: e.target.value })}
+        onClick={() => patch({ subscriptionStatus: isPremium ? "NONE" : "ACTIVE" })}
       >
-        {SUBSCRIPTION_STATUSES.map((s) => (
-          <option key={s} value={s}>
-            {s}
-          </option>
-        ))}
-      </select>
+        {isPremium ? "Remove premium" : "Make premium"}
+      </Button>
 
       <Dialog open={confirmOpen} onOpenChange={setConfirmOpen}>
         <DialogTrigger asChild>

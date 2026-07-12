@@ -16,7 +16,13 @@ type Props = {
   newsletterSubscribed: boolean;
 };
 
-const SUBSCRIPTION_STATUSES = ["NONE", "TRIALING", "ACTIVE", "PAST_DUE", "CANCELED"] as const;
+const SUBSCRIPTION_STATUSES = [
+  { value: "NONE", label: "Free" },
+  { value: "TRIALING", label: "Trial" },
+  { value: "ACTIVE", label: "Premium (active)" },
+  { value: "PAST_DUE", label: "Premium (payment issue)" },
+  { value: "CANCELED", label: "Premium canceled" },
+] as const;
 
 export function UserDetailForm({
   userId,
@@ -82,15 +88,15 @@ export function UserDetailForm({
             <option value="ADMIN">Admin</option>
           </select>
         </Field>
-        <Field label="Subscription (ACTIVE = premium)">
+        <Field label="Plan">
           <select
             name="subscriptionStatus"
             defaultValue={subscriptionStatus}
             className="h-11 w-full rounded-xl border border-input bg-card px-4 text-sm"
           >
             {SUBSCRIPTION_STATUSES.map((s) => (
-              <option key={s} value={s}>
-                {s}
+              <option key={s.value} value={s.value}>
+                {s.label}
               </option>
             ))}
           </select>
