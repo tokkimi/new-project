@@ -6,6 +6,7 @@ import { ArrowRight, Brain, CloudRain, Sparkles, Wind } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { FaceDiagram } from "@/components/face-diagram";
 
 const CHECK_ICONS = [Brain, Wind, CloudRain, Sparkles];
 
@@ -51,6 +52,11 @@ export function WellnessShowcase() {
           <div className="relative flex aspect-[16/9] w-full items-end overflow-hidden bg-gradient-to-br from-pm/20 via-primary/10 to-am/20 p-5">
             <div className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-pm/30 blur-3xl" />
             <div className="pointer-events-none absolute -right-6 -bottom-6 h-40 w-40 rounded-full bg-am/30 blur-3xl" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center gap-6 pt-4 opacity-90">
+              <FaceDiagram variant="temple-circular" className="size-24" />
+              <FaceDiagram variant="jaw-press-hold" className="size-24" />
+              <FaceDiagram variant="cheek-sweep-up" className="size-24" />
+            </div>
             <p className="relative text-xs font-medium uppercase tracking-[0.18em] text-foreground/80">
               {t("panelEyebrow")}
             </p>

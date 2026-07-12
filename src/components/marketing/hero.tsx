@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
@@ -9,6 +10,18 @@ import { Badge } from "@/components/ui/badge";
 
 export function Hero() {
   const t = useTranslations("hero");
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    // Some browsers only honor autoplay when `muted` is set as a DOM
+    // property (not just the SSR-rendered attribute) before play() runs.
+    video.muted = true;
+    video.play().catch(() => {
+      // Autoplay can still be blocked by the platform — the poster stays visible, which is fine.
+    });
+  }, []);
 
   return (
     <section className="relative overflow-hidden bg-grain">
@@ -83,12 +96,14 @@ export function Hero() {
         >
           <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[1.75rem] border border-white/40 bg-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.25)] backdrop-blur-md dark:border-white/10 dark:bg-white/5">
             <video
+              ref={videoRef}
               className="aspect-[4/5] w-full object-cover opacity-85"
               poster="/hero-banner-poster.jpg"
               autoPlay
               loop
               muted
               playsInline
+              preload="auto"
               controls={false}
               aria-hidden="true"
             >

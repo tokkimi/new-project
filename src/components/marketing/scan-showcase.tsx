@@ -6,6 +6,7 @@ import { ArrowRight, Camera, Droplets, ListChecks, Sparkles } from "lucide-react
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ScanIllustration } from "@/components/marketing/scan-illustration";
 
 const CHECK_ICONS = [Camera, ListChecks, Droplets, Sparkles];
 
@@ -52,9 +53,8 @@ export function ScanShowcase() {
           className="overflow-hidden rounded-[1.75rem] border border-border bg-background/70 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.2)]"
         >
           <div className="relative aspect-[16/9] w-full overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/hero-banner-poster.jpg" alt="" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+            <ScanIllustration />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
             <p className="absolute bottom-3 left-5 text-xs font-medium uppercase tracking-[0.18em] text-foreground/80">
               {t("panelEyebrow")}
             </p>
