@@ -8,6 +8,12 @@ export type SkinProfileInput = {
   sensitivities: string[];
 };
 
+/** Alternatives only need enough fields to display and link to a product — never the full row. */
+export type CatalogProduct = Pick<
+  Product,
+  "id" | "slug" | "name" | "brand" | "category" | "skinTypes" | "concerns"
+>;
+
 export type MissingStepIssue = {
   type: "missing_step";
   step: "cleanser" | "moisturizer" | "sunscreen";
@@ -16,7 +22,7 @@ export type MissingStepIssue = {
 export type ProfileMismatchIssue = {
   type: "profile_mismatch";
   product: Product;
-  alternatives: Product[];
+  alternatives: CatalogProduct[];
 };
 
 export type AuditIssue = MissingStepIssue | ProfileMismatchIssue;
@@ -36,7 +42,7 @@ function hasCategory(steps: RoutineResult["am"], category: string) {
 
 export function auditRoutine(
   shelf: Product[],
-  catalog: Product[],
+  catalog: CatalogProduct[],
   profile: SkinProfileInput | null
 ): AuditResult {
   const routine = buildRoutine(shelf);

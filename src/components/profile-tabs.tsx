@@ -75,7 +75,11 @@ export function ProfileTabs({
           ) : (
             <div className="flex flex-col gap-2">
               {scans.map((scan) => (
-                <div key={scan.id} className="flex items-center justify-between gap-3 rounded-2xl bg-secondary/50 px-4 py-3">
+                <Link
+                  key={scan.id}
+                  href={`/app/face-scan/history/${scan.id}`}
+                  className="flex items-center justify-between gap-3 rounded-2xl bg-secondary/50 px-4 py-3 transition-colors hover:bg-secondary"
+                >
                   <div className="min-w-0">
                     <p className="text-sm font-medium">{formatDate(scan.createdAt)}</p>
                     {scan.summary && <p className="mt-0.5 truncate text-xs text-muted-foreground">{scan.summary}</p>}
@@ -83,7 +87,7 @@ export function ProfileTabs({
                   <Badge variant={scoreTone(scan.overallScore)} className="shrink-0">
                     {t("scoreLabel")} {scan.overallScore}
                   </Badge>
-                </div>
+                </Link>
               ))}
             </div>
           )}
@@ -104,14 +108,18 @@ export function ProfileTabs({
           ) : (
             <div className="flex flex-col gap-2">
               {auditRuns.map((run) => (
-                <div key={run.id} className="flex items-center justify-between gap-3 rounded-2xl bg-secondary/50 px-4 py-3">
+                <Link
+                  key={run.id}
+                  href={`/app/audit/history/${run.id}`}
+                  className="flex items-center justify-between gap-3 rounded-2xl bg-secondary/50 px-4 py-3 transition-colors hover:bg-secondary"
+                >
                   <p className="text-sm font-medium">{formatDate(run.createdAt)}</p>
                   {typeof run.score === "number" && (
                     <Badge variant={scoreTone(run.score)} className="shrink-0">
                       {t("scoreLabel")} {run.score}
                     </Badge>
                   )}
-                </div>
+                </Link>
               ))}
             </div>
           )}

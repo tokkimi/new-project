@@ -693,7 +693,10 @@
     "needsProfileTitle": "Complete your skin profile first",
     "needsProfileText": "A few quick questions and Haru can check your routine against your actual skin, not a generic one.",
     "needsProfileCta": "Take the skin quiz",
-    "signInPrompt": "Sign in to run a routine audit."
+    "signInPrompt": "Sign in to run a routine audit.",
+    "saveCta": "Save to my audits",
+    "saveCtaDone": "Saved",
+    "viewHistory": "View my profile"
   },
   "upgradePage": {
     "title": "Haru Premium",

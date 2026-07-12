@@ -693,7 +693,10 @@
     "needsProfileTitle": "먼저 피부 프로필을 완성해주세요",
     "needsProfileText": "몇 가지 질문만 답하면 일반적인 루틴이 아니라 실제 당신의 피부를 기준으로 진단해드려요.",
     "needsProfileCta": "피부 퀴즈 시작하기",
-    "signInPrompt": "루틴 진단을 실행하려면 로그인하세요."
+    "signInPrompt": "루틴 진단을 실행하려면 로그인하세요.",
+    "saveCta": "내 점검에 저장",
+    "saveCtaDone": "저장됨",
+    "viewHistory": "내 프로필 보기"
   },
   "upgradePage": {
     "title": "Haru 프리미엄",
