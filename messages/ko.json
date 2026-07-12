@@ -30,28 +30,9 @@
     "titleLine2": "드디어 완벽 해독.",
     "subtitle": "Keep your skincare products, routines, notes and beauty inspiration in one place. Haru helps you understand what to use, when to use it, and what to keep simple.",
     "ctaPrimary": "내 루틴 만들기",
-    "ctaSecondary": "이용 방법 보기",
     "disclaimer": "화장대 제품 12개까지 무료 · 신용카드 불필요",
     "matchBadgeTitle": "완벽한 매칭",
     "matchBadgeSubtitle": "내 피부 프로필 기준"
-  },
-  "howItWorks": {
-    "eyebrow": "How it works",
-    "title": "From product to routine, without the confusion",
-    "steps": [
-      {
-        "title": "Find or scan a product",
-        "text": "Search by name, brand, barcode, or take a photo of the packaging."
-      },
-      {
-        "title": "Save what you actually use",
-        "text": "Keep your products, favorites, notes and videos in your personal routine space."
-      },
-      {
-        "title": "Follow morning and evening steps",
-        "text": "See a clear routine and adjust products by morning, evening, category or pause."
-      }
-    ]
   },
   "productShowcase": {
     "eyebrow": "Haru의 핵심",
@@ -118,7 +99,6 @@
     "tagline": "Haru는 스킨케어 루틴의 성분을 해독해서 나쁜 조합과 불필요한 지출을 막아드려요.",
     "app": "앱 사용하기",
     "ingredients": "성분",
-    "howItWorks": "이용 방법",
     "rights": "Haru. 마케팅 문구 없이, 정성껏 만들었습니다."
   },
   "shelf": {

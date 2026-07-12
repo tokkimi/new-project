@@ -63,9 +63,6 @@ export function Hero() {
                 <ArrowRight className="size-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="#how-it-works">{t("ctaSecondary")}</a>
-            </Button>
           </motion.div>
 
           <motion.p

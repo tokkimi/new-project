@@ -30,28 +30,9 @@
     "titleLine2": "finally decoded.",
     "subtitle": "Keep your skincare products, routines, notes and beauty inspiration in one place. Haru helps you understand what to use, when to use it, and what to keep simple.",
     "ctaPrimary": "Build my routine",
-    "ctaSecondary": "See how it works",
     "disclaimer": "Free for up to 12 products on your shelf · no credit card",
     "matchBadgeTitle": "Perfect match",
     "matchBadgeSubtitle": "for your skin profile"
-  },
-  "howItWorks": {
-    "eyebrow": "How it works",
-    "title": "From product to routine, without the confusion",
-    "steps": [
-      {
-        "title": "Find or scan a product",
-        "text": "Search by name, brand, barcode, or take a photo of the packaging."
-      },
-      {
-        "title": "Save what you actually use",
-        "text": "Keep your products, favorites, notes and videos in your personal routine space."
-      },
-      {
-        "title": "Follow morning and evening steps",
-        "text": "See a clear routine and adjust products by morning, evening, category or pause."
-      }
-    ]
   },
   "productShowcase": {
     "eyebrow": "The core of Haru",
@@ -118,7 +99,6 @@
     "tagline": "Haru decodes your skincare routine's ingredients so you can avoid bad combinations — and wasted money.",
     "app": "The app",
     "ingredients": "Ingredients",
-    "howItWorks": "How it works",
     "rights": "Haru. Made with care, no marketing fluff."
   },
   "shelf": {

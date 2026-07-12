@@ -21,9 +21,6 @@ export function SiteFooter() {
           <a href="#ingredients" className="hover:text-foreground">
             {t("ingredients")}
           </a>
-          <a href="#how-it-works" className="hover:text-foreground">
-            {t("howItWorks")}
-          </a>
         </div>
       </div>
       <div className="border-t border-border/60 px-6 py-8">
