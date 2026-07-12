@@ -20,6 +20,105 @@ const HOST_BRANDS: Record<string, string> = {
   "d-alba.us": "d'Alba",
 };
 
+const OFFICIAL_HOSTS_BY_BRAND: Record<string, string[]> = {
+  "111skin": ["111skin.com"],
+  "abib": ["en.abib.com", "abib.com"],
+  "acure": ["acure.com"],
+  "allies of skin": ["us.allies.shop", "allies.shop"],
+  "alpha-h": ["us.alpha-h.com", "alpha-h.com"],
+  "anua": ["anua.us", "anua.com"],
+  "aprilskin": ["aprilskin.us"],
+  "axis-y": ["axis-y.com", "www.axis-y.com"],
+  "banila co": ["banilausa.com"],
+  "banila co.": ["banilausa.com"],
+  "beauty of joseon": ["beautyofjoseon.com", "ie.beautyofjoseon.com"],
+  "biossance": ["biossance.com", "www.biossance.com"],
+  "bubble": ["hellobubble.com"],
+  "byoma": ["byoma.com"],
+  "cerave": ["cerave.com", "www.cerave.com"],
+  "cocokind": ["cocokind.com", "www.cocokind.com"],
+  "colorescience": ["colorescience.com", "www.colorescience.com"],
+  "coola": ["coola.com"],
+  "cosrx": ["cosrx.com", "www.cosrx.com"],
+  "dear, klairs": ["klairs.com"],
+  "derma e": ["dermae.com"],
+  "dermalogica": ["dermalogica.com", "www.dermalogica.com"],
+  "dieux": ["dieuxskin.com", "www.dieuxskin.com"],
+  "dr. jart+": ["drjart.com"],
+  "eadem": ["eadem.co"],
+  "eltamd": ["eltamd.com"],
+  "emma lewisham": ["emmalewisham.com"],
+  "etude": ["etudehouse.com", "www.etudehouse.com"],
+  "experiment": ["experimentbeauty.com"],
+  "farmacy": ["farmacybeauty.com", "www.farmacybeauty.com"],
+  "fenty skin": ["fentybeauty.com"],
+  "first aid beauty": ["firstaidbeauty.com", "www.firstaidbeauty.com"],
+  "furtuna skin": ["furtunaskin.com", "www.furtunaskin.com"],
+  "glossier": ["glossier.com", "www.glossier.com"],
+  "glow recipe": ["glowrecipe.com", "www.glowrecipe.com"],
+  "good molecules": ["goodmolecules.com", "www.goodmolecules.com"],
+  "haruharu wonder": ["haruharuusa.com"],
+  "herbivore": ["herbivorebotanicals.com", "www.herbivorebotanicals.com"],
+  "hydrinity": ["hydrinity.com"],
+  "image skincare": ["imageskincare.com"],
+  "indie lee": ["indielee.com"],
+  "innbeauty project": ["innbeautyproject.com", "www.innbeautyproject.com"],
+  "innisfree": ["us.innisfree.com"],
+  "jan marini": ["janmarini.com", "www.janmarini.com"],
+  "kahi": ["kahi.co.kr"],
+  "kate somerville": ["katesomerville.com", "www.katesomerville.com"],
+  "kinship": ["lovekinship.com"],
+  "kopari": ["koparibeauty.com"],
+  "kravebeauty": ["kravebeauty.com"],
+  "la roche-posay": ["laroche-posay.us", "www.laroche-posay.us"],
+  "mad hippie": ["madhippie.com"],
+  "manucurist": ["us.manucurist.com", "manucurist.com"],
+  "mara": ["themarabeauty.com"],
+  "mario badescu": ["mariobadescu.com", "www.mariobadescu.com"],
+  "medicube": ["medicube.us"],
+  "missha": ["misshaus.com"],
+  "mixsoon": ["mixsoon.us"],
+  "naturium": ["naturium.com"],
+  "neogen": ["neogenlab.us"],
+  "numbuzin": ["numbuzinus.com", "us.numbuzin.com"],
+  "osea": ["oseamalibu.com"],
+  "pacifica": ["pacificabeauty.com", "www.pacificabeauty.com"],
+  "pai skincare": ["paiskincare.us", "www.paiskincare.us"],
+  "pca skin": ["pcaskin.com", "www.pcaskin.com"],
+  "peace out": ["peaceoutskincare.com"],
+  "peach & lily": ["peachandlily.com", "www.peachandlily.com"],
+  "prequel": ["prequelskin.com"],
+  "purito seoul": ["purito.com"],
+  "pyunkang yul": ["pyunkangyul.us"],
+  "ranavat": ["ranavat.com", "www.ranavat.com"],
+  "ren clean skincare": ["usa.renskincare.com", "renskincare.com"],
+  "revision skincare": ["revisionskincare.com"],
+  "rhode": ["rhodeskin.com", "www.rhodeskin.com"],
+  "round lab": ["roundlab.com"],
+  "saie": ["saiehello.com"],
+  "senté": ["sentelabs.com"],
+  "sk-ii": ["sk-ii.com", "www.sk-ii.com"],
+  "skin1004": ["skin1004.com", "www.skin1004.com"],
+  "some by mi": ["somebymi.com", "somebymi.us"],
+  "stratia": ["stratiaskin.com", "www.stratiaskin.com"],
+  "summer fridays": ["summerfridays.com"],
+  "sulwhasoo": ["us.sulwhasoo.com", "sulwhasoo.com"],
+  "supergoop!": ["supergoop.com"],
+  "tatcha": ["tatcha.com", "www.tatcha.com"],
+  "the inkey list": ["theinkeylist.com", "www.theinkeylist.com"],
+  "the ordinary": ["theordinary.com"],
+  "then i met you": ["thenimetyou.com"],
+  "three ships": ["threeshipsbeauty.com", "www.threeshipsbeauty.com"],
+  "tocobo": ["tocobo.us"],
+  "topicals": ["mytopicals.com"],
+  "tower 28": ["tower28beauty.com", "www.tower28beauty.com"],
+  "tula": ["tula.com", "www.tula.com"],
+  "typology": ["us.typology.com", "typology.com"],
+  "versed": ["versedskin.com"],
+  "wishful": ["wishfulskin.com"],
+  "youth to the people": ["youthtothepeople.com", "www.youthtothepeople.com"],
+};
+
 const SLUG_BRANDS: Record<string, string> = {
   "dr-althea": "Dr. Althea",
   "dr-ceuracle": "Dr. Ceuracle",
@@ -62,6 +161,33 @@ function brandFromUrl(officialUrl?: string | null): string | null {
   } catch {
     return null;
   }
+}
+
+function normalizeBrandName(brand: string): string {
+  return brand
+    .trim()
+    .replace(/\s+official$/i, "")
+    .replace(/\s+us$/i, "")
+    .replace(/^cosrx$/i, "COSRX")
+    .toLowerCase();
+}
+
+export function isOfficialBrandUrl(brand: string, officialUrl?: string | null): boolean {
+  if (!officialUrl) return false;
+  try {
+    const host = new URL(officialUrl).hostname.replace(/^www\./, "").toLowerCase();
+    const allowedHosts = OFFICIAL_HOSTS_BY_BRAND[normalizeBrandName(brand)] ?? [];
+    return allowedHosts.some((allowedHost) => {
+      const cleanAllowed = allowedHost.replace(/^www\./, "").toLowerCase();
+      return host === cleanAllowed || host.endsWith(`.${cleanAllowed}`);
+    });
+  } catch {
+    return false;
+  }
+}
+
+export function cleanOfficialUrl(brand: string, officialUrl?: string | null): string | null {
+  return isOfficialBrandUrl(brand, officialUrl) ? officialUrl ?? null : null;
 }
 
 function brandFromSlug(slug: string): string | null {
@@ -196,5 +322,6 @@ export function cleanCatalogProduct<T extends CatalogLike>(product: T): T {
     ...product,
     name: cleanedName || product.name,
     brand: inferBrand(product),
+    officialUrl: cleanOfficialUrl(inferBrand(product), product.officialUrl),
   };
 }

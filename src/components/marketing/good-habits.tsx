@@ -25,7 +25,7 @@ export function GoodHabits() {
           <p className="mt-3 text-muted-foreground">{t("subtitle")}</p>
         </div>
 
-        <div className="grid border-y border-border md:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-4">
           {daily.map((item, i) => (
             <motion.div
               key={item.title}
@@ -33,7 +33,7 @@ export function GoodHabits() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.35, delay: i * 0.05 }}
-              className="border-b border-border py-6 md:border-b-0 md:border-r md:px-5 md:last:border-r-0"
+              className="rounded-3xl border border-white/50 bg-white/45 p-5 shadow-[0_18px_50px_-34px_rgba(64,45,31,0.45)] backdrop-blur-xl"
             >
               <p className="mb-3 font-serif text-lg">{item.title}</p>
               <p className="text-sm leading-relaxed text-muted-foreground">{item.text}</p>
@@ -49,7 +49,7 @@ export function GoodHabits() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.35, delay: (i % 3) * 0.05 }}
-              className="border-t border-border pt-5"
+              className="rounded-3xl border border-white/50 bg-white/45 p-5 shadow-[0_18px_50px_-34px_rgba(64,45,31,0.45)] backdrop-blur-xl"
             >
               <div className="mb-4 flex items-center justify-between gap-3">
                 <h3 className="font-serif text-lg">{routine.type}</h3>
@@ -64,7 +64,7 @@ export function GoodHabits() {
                   <span className="font-medium text-foreground">{t("pmLabel")}: </span>
                   <span className="text-muted-foreground">{routine.pm}</span>
                 </p>
-                <p className="border-l border-warning/60 pl-3 text-muted-foreground">
+                <p className="rounded-2xl border border-warning/25 bg-warning/10 px-3 py-2 text-muted-foreground">
                   <span className="font-medium text-foreground">{t("watchOutLabel")}: </span>
                   {routine.avoid}
                 </p>
@@ -73,23 +73,23 @@ export function GoodHabits() {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-10 border-t border-border pt-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
+        <div className="mt-12 grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="rounded-3xl border border-white/50 bg-white/45 p-6 shadow-[0_18px_50px_-34px_rgba(64,45,31,0.45)] backdrop-blur-xl">
             <h3 className="font-serif text-xl">{t("rulesTitle")}</h3>
             <ul className="grid gap-2.5">
               {rules.map((rule) => (
-                <li key={rule} className="border-b border-border py-2 text-sm text-muted-foreground last:border-b-0">
+                <li key={rule} className="rounded-2xl bg-background/55 px-4 py-3 text-sm text-muted-foreground">
                   {rule}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
+          <div className="rounded-3xl border border-white/50 bg-white/45 p-6 shadow-[0_18px_50px_-34px_rgba(64,45,31,0.45)] backdrop-blur-xl">
             <h3 className="font-serif text-xl">{t("ingredientsTitle")}</h3>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {INGREDIENTS.map((ing) => (
-                <div key={ing.id} className="border-t border-border pt-3">
+                <div key={ing.id} className="rounded-2xl bg-background/55 p-3">
                   <div className="mb-1 flex items-center justify-between gap-2">
                     <p className="text-sm font-medium">{ingredientCopy[ing.id]?.name ?? ing.id}</p>
                     <Badge variant={ing.timePref === "am" ? "am" : ing.timePref === "pm" ? "pm" : "secondary"}>
