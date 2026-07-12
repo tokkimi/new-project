@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductActions } from "@/components/product-actions";
-import { ProductVisual } from "@/components/product-visual";
+import { ProductImage } from "@/components/product-image";
 import { findProductBySlug } from "@/lib/products";
 import { findIngredient } from "@/data/ingredients";
 
@@ -48,16 +48,12 @@ export default async function ProductDetailPage({
           <h1 className="text-balance font-serif text-3xl">{product.name}</h1>
           <p className="mt-1 text-muted-foreground">{product.brand}</p>
         </div>
-        {product.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={product.imageUrl}
-            alt=""
-            className="size-24 shrink-0 rounded-2xl object-cover"
-          />
-        ) : (
-          <ProductVisual category={product.category} size="md" className="shrink-0" />
-        )}
+        <ProductImage
+          imageUrl={product.imageUrl}
+          category={product.category}
+          name={product.name}
+          size="md"
+        />
       </div>
 
       <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">

@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AddProductDialog } from "@/components/add-product-dialog";
-import { ProductVisual } from "@/components/product-visual";
+import { ProductImage } from "@/components/product-image";
 import { useShelf } from "@/lib/shelf-store";
 import { findIngredient } from "@/data/ingredients";
 
@@ -47,8 +47,8 @@ export default function ShelfPage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {shelf.map((p) => (
             <Card key={p.id} className="gap-0 overflow-hidden p-0">
-              <div className="relative">
-                <ProductVisual category={p.category} size="lg" className="rounded-none" />
+              <div className="relative bg-white">
+                <ProductImage imageUrl={p.imageUrl} category={p.category} name={p.name} size="lg" />
                 <button
                   onClick={() => removeProduct(p.id)}
                   className="absolute right-2 top-2 rounded-full bg-background/90 p-1.5 text-muted-foreground shadow-sm backdrop-blur transition-colors hover:bg-destructive/10 hover:text-destructive"

@@ -107,6 +107,7 @@ model Product {
 
   shelfItems ShelfItem[]
   sources    ProductSource[]
+  ingredients ProductIngredient[]
 
   @@index([category])
   @@index([brandId])
@@ -115,6 +116,68 @@ model Product {
   @@index([skinTypes], type: Gin)
   @@index([concerns], type: Gin)
   @@map("products")
+}
+
+model Ingredient {
+  id                         String   @id
+  name                       String
+  nameKo                     String?
+  inciName                   String?
+  aliases                    String[]
+  description                String?
+  origin                     String?
+  function                   String?
+  benefits                   String[]
+  sideEffects                String[]
+  recommendedConcentration   String?
+  pregnancySafety            String?
+  photosensitivity           Boolean?
+  precautions                String[]
+  timePreference             String   @default("both") // am | pm | both
+  layerWeight                Int      @default(50)
+  sourceNotes                String?
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+
+  products ProductIngredient[]
+  compatibilityRulesA CompatibilityRule[] @relation("CompatibilityA")
+  compatibilityRulesB CompatibilityRule[] @relation("CompatibilityB")
+
+  @@index([aliases], type: Gin)
+  @@map("ingredients")
+}
+
+model ProductIngredient {
+  productId    String
+  ingredientId String
+  product      Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
+  ingredient   Ingredient @relation(fields: [ingredientId], references: [id], onDelete: Cascade)
+  role         String?
+  concentration String?
+  sourceNote   String?
+  createdAt    DateTime @default(now())
+
+  @@id([productId, ingredientId])
+  @@index([ingredientId])
+  @@map("product_ingredients")
+}
+
+model CompatibilityRule {
+  id            String     @id
+  ingredientAId String
+  ingredientBId String
+  ingredientA   Ingredient @relation("CompatibilityA", fields: [ingredientAId], references: [id], onDelete: Cascade)
+  ingredientB   Ingredient @relation("CompatibilityB", fields: [ingredientBId], references: [id], onDelete: Cascade)
+  severity      String // avoid | space_out | sequence | note
+  guidance      String?
+  evidenceLevel String?
+  sourceNotes   String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([ingredientAId])
+  @@index([ingredientBId])
+  @@map("compatibility_rules")
 }
 
 model Brand {

@@ -8,6 +8,9 @@ import {
   seedCategories,
   seedBrands,
   seedProductSources,
+  seedIngredients,
+  seedCompatibilityRules,
+  seedProductIngredients,
 } from "@/lib/seed-runner";
 
 /**
@@ -35,10 +38,24 @@ export async function GET(request: Request) {
 
   const categories = await seedCategories(db);
   const products = await seedProducts(db);
+  const ingredients = await seedIngredients(db);
+  const compatibilityRules = await seedCompatibilityRules(db);
+  const productIngredients = await seedProductIngredients(db);
   const brands = await seedBrands(db);
   const sources = await seedProductSources(db);
   const news = await seedNews(db);
   const accounts = await seedTestAccounts(db);
 
-  return NextResponse.json({ ok: true, categories, products, brands, sources, news, accounts });
+  return NextResponse.json({
+    ok: true,
+    categories,
+    products,
+    ingredients,
+    compatibilityRules,
+    productIngredients,
+    brands,
+    sources,
+    news,
+    accounts,
+  });
 }

@@ -11,7 +11,7 @@
     "howItWorks": "How it works",
     "features": "Features",
     "ingredients": "Ingredient base",
-    "tryApp": "Try the app",
+    "tryApp": "Open app",
     "shelf": "My shelf",
     "scan": "Scan",
     "products": "Products",
@@ -405,7 +405,13 @@
     "allConcerns": "All concerns",
     "resultsCount": "{count, plural, one {# product} other {# products}}",
     "noResultsTitle": "No products match",
-    "noResultsText": "Try a different search term or category."
+    "noResultsText": "Try a different search term or category.",
+    "country": "Origin",
+    "skinTypesLabel": "Skin",
+    "frequency": "Frequency",
+    "keyActives": "Key actives",
+    "composition": "Composition",
+    "noTrackedActives": "None tracked yet"
   },
   "productDetail": {
     "notFound": "This product doesn't exist (or was removed).",

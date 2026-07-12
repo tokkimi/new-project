@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { findIngredient } from "@/data/ingredients";
 import { useShelf, useCatalog } from "@/lib/shelf-store";
-import { ProductVisual } from "@/components/product-visual";
+import { ProductImage } from "@/components/product-image";
 
 export function AddProductDialog() {
   const t = useTranslations("addProductDialog");
@@ -73,7 +73,7 @@ export function AddProductDialog() {
               }}
               className="flex items-center gap-3 rounded-xl bg-card px-3 py-2.5 text-left shadow-sm transition-colors hover:bg-primary/5"
             >
-              <ProductVisual category={p.category} size="sm" />
+              <ProductImage imageUrl={p.imageUrl} category={p.category} name={p.name} size="sm" />
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium">{p.name}</p>
                 <p className="text-xs text-muted-foreground">

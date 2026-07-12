@@ -8,6 +8,7 @@ export type SeedProduct = {
   origin: string;
   description: string;
   usageSteps: string[];
+  imageUrl?: string;
   officialUrl?: string;
   price: number;
   currency: string;
@@ -17,10 +18,8 @@ export type SeedProduct = {
 };
 
 // Researched product data — real products, real actives, real brand HQ.
-// imageUrl intentionally omitted: no verified official image URLs were
-// confirmed during research, and hotlinking a guessed CDN path is not
-// acceptable. Add real photos via the admin once you have licensed/
-// official assets.
+// imageUrl is included only when it comes from a verified official product page.
+// Unknown/unverified images stay null so the UI can fall back to a clean product visual.
 export const PRODUCTS: SeedProduct[] = [
   {
     slug: "cosrx-low-ph-good-morning-gel-cleanser",
@@ -38,6 +37,8 @@ export const PRODUCTS: SeedProduct[] = [
       "Work into a light lather",
       "Rinse off with lukewarm water",
     ],
+    imageUrl:
+      "https://www.cosrx.com/cdn/shop/files/low-ph-good-morning-gel-cleanser-cosrx-official-1_1200x1200.jpg?v=1768785801",
     officialUrl: "https://cosrx.com",
     price: 13,
     currency: "USD",
@@ -196,6 +197,8 @@ export const PRODUCTS: SeedProduct[] = [
       "Use about two finger-lengths, generously",
       "Reapply every 2 hours during sun exposure",
     ],
+    imageUrl:
+      "https://ie.beautyofjoseon.com/cdn/shop/files/02_0330___v2.jpg?v=1774857974",
     officialUrl: "https://beautyofjoseon.com",
     price: 18,
     currency: "USD",
@@ -2100,6 +2103,8 @@ export const PRODUCTS: SeedProduct[] = [
       "Apply a few drops to face, avoiding eye area",
       "Follow with moisturizer/SPF",
     ],
+    imageUrl:
+      "https://www.cosrx.com/cdn/shop/files/Advanced_VitaminC23_00_1200x1200.webp?v=1760935746",
     officialUrl: "https://www.cosrx.com",
     price: 18,
     currency: "USD",

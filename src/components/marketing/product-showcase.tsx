@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ProductVisual } from "@/components/product-visual";
+import { ProductImage } from "@/components/product-image";
 import type { Product } from "@/generated/prisma/client";
 
 function ProductStrip({ products }: { products: Product[] }) {
@@ -24,7 +24,7 @@ function ProductStrip({ products }: { products: Product[] }) {
         >
           <Link href={`/app/product/${p.slug}`}>
             <Card className="h-full gap-0 overflow-hidden p-0 transition-transform hover:-translate-y-0.5">
-              <ProductVisual category={p.category} size="lg" className="rounded-none" />
+              <ProductImage imageUrl={p.imageUrl} category={p.category} name={p.name} size="lg" />
               <div className="flex flex-col gap-0.5 p-3">
                 <p className="truncate text-sm font-medium leading-snug">{p.name}</p>
                 <p className="truncate text-xs text-muted-foreground">

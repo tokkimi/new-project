@@ -23,7 +23,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </header>
-      <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10 pb-24 sm:pb-10">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10 pb-28 sm:pb-32">
         {children}
       </main>
       <BottomNav />

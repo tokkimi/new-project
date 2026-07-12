@@ -3,6 +3,7 @@ import type { PrismaClient } from "@/generated/prisma/client";
 import { PRODUCTS } from "@/lib/seed-data/products";
 import { NEWS } from "@/lib/seed-data/news";
 import { CATEGORY_TREE } from "@/lib/seed-data/categories";
+import { SEED_COMPATIBILITY_RULES, SEED_INGREDIENTS } from "@/lib/seed-data/ingredients";
 
 export async function seedProducts(db: PrismaClient): Promise<number> {
   for (const p of PRODUCTS) {
@@ -88,6 +89,51 @@ export async function seedProductSources(db: PrismaClient): Promise<number> {
       data: { productId: p.id, sourceName: `${p.brand} (official site)`, sourceUrl: p.officialUrl },
     });
     count++;
+  }
+  return count;
+}
+
+export async function seedIngredients(db: PrismaClient): Promise<number> {
+  for (const ingredient of SEED_INGREDIENTS) {
+    await db.ingredient.upsert({
+      where: { id: ingredient.id },
+      create: ingredient,
+      update: ingredient,
+    });
+  }
+  return SEED_INGREDIENTS.length;
+}
+
+export async function seedCompatibilityRules(db: PrismaClient): Promise<number> {
+  let count = 0;
+  for (const rule of SEED_COMPATIBILITY_RULES) {
+    await db.compatibilityRule.upsert({
+      where: { id: rule.id },
+      create: rule,
+      update: rule,
+    });
+    count++;
+  }
+  return count;
+}
+
+export async function seedProductIngredients(db: PrismaClient): Promise<number> {
+  const products = await db.product.findMany({ select: { id: true, ingredientIds: true } });
+  const validIngredients = new Set(
+    (await db.ingredient.findMany({ select: { id: true } })).map((ingredient) => ingredient.id)
+  );
+
+  let count = 0;
+  for (const product of products) {
+    for (const ingredientId of product.ingredientIds) {
+      if (!validIngredients.has(ingredientId)) continue;
+      await db.productIngredient.upsert({
+        where: { productId_ingredientId: { productId: product.id, ingredientId } },
+        create: { productId: product.id, ingredientId },
+        update: {},
+      });
+      count++;
+    }
   }
   return count;
 }

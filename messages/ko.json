@@ -11,7 +11,7 @@
     "howItWorks": "이용 방법",
     "features": "주요 기능",
     "ingredients": "성분 데이터베이스",
-    "tryApp": "앱 사용해보기",
+    "tryApp": "앱 열기",
     "shelf": "내 화장대",
     "scan": "스캔",
     "products": "제품",
@@ -353,7 +353,13 @@
     "allConcerns": "모든 고민",
     "resultsCount": "제품 {count}개",
     "noResultsTitle": "일치하는 제품이 없어요",
-    "noResultsText": "다른 검색어나 카테고리로 시도해보세요."
+    "noResultsText": "다른 검색어나 카테고리로 시도해보세요.",
+    "country": "원산지",
+    "skinTypesLabel": "피부",
+    "frequency": "빈도",
+    "keyActives": "핵심 성분",
+    "composition": "구성",
+    "noTrackedActives": "추적 성분 없음"
   },
   "productDetail": {
     "notFound": "존재하지 않거나 삭제된 제품이에요.",

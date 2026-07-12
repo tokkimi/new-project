@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useShelf } from "@/lib/shelf-store";
 import { findIngredient } from "@/data/ingredients";
-import { ProductVisual } from "@/components/product-visual";
+import { ProductImage } from "@/components/product-image";
 import type { Product } from "@/generated/prisma/client";
 
 type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error";
@@ -241,16 +241,12 @@ export default function ScanPage() {
           >
             <Card className="w-full items-center gap-4 py-10">
               <div className="relative">
-                {result.product.imageUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={result.product.imageUrl}
-                    alt=""
-                    className="h-20 w-20 rounded-2xl object-cover"
-                  />
-                ) : (
-                  <ProductVisual category={result.product.category} size="md" />
-                )}
+                <ProductImage
+                  imageUrl={result.product.imageUrl}
+                  category={result.product.category}
+                  name={result.product.name}
+                  size="md"
+                />
                 <span className="absolute -bottom-1.5 -right-1.5 flex size-6 items-center justify-center rounded-full border-2 border-card bg-success text-success-foreground">
                   <Check className="size-3.5" />
                 </span>
