@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
 import { PRODUCTS } from "@/lib/seed-data/products";
+import { cleanCatalogProduct, shouldExcludeProduct } from "@/lib/catalog-cleanup";
 
 export async function GET(request: Request) {
   const { ok } = rateLimit(clientKey(request, "setup-seed-products"), { limit: 20, windowMs: 60 * 1000 });
@@ -28,10 +29,18 @@ export async function GET(request: Request) {
   );
 
   let products = 0;
+  let skipped = 0;
   let sources = 0;
   let ingredientLinks = 0;
 
-  for (const product of slice) {
+  for (const rawProduct of slice) {
+    if (shouldExcludeProduct(rawProduct)) {
+      await db.product.deleteMany({ where: { slug: rawProduct.slug } });
+      skipped++;
+      continue;
+    }
+
+    const product = cleanCatalogProduct(rawProduct);
     const saved = await db.product.upsert({
       where: { slug: product.slug },
       create: { ...product },
@@ -72,6 +81,7 @@ export async function GET(request: Request) {
     offset,
     limit,
     processed: products,
+    skipped,
     sources,
     ingredientLinks,
     total: PRODUCTS.length,

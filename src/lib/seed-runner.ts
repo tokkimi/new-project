@@ -4,16 +4,32 @@ import { PRODUCTS } from "@/lib/seed-data/products";
 import { NEWS } from "@/lib/seed-data/news";
 import { CATEGORY_TREE } from "@/lib/seed-data/categories";
 import { SEED_COMPATIBILITY_RULES, SEED_INGREDIENTS } from "@/lib/seed-data/ingredients";
+import { cleanCatalogProduct, shouldExcludeProduct } from "@/lib/catalog-cleanup";
 
 export async function seedProducts(db: PrismaClient): Promise<number> {
+  await db.product.deleteMany({
+    where: {
+      OR: [
+        { slug: { contains: "sca_clone_freegift" } },
+        { brand: { in: ["GWP", "Free Gift Ghost"] } },
+        { name: { startsWith: "(Free Gift)" } },
+        { name: { startsWith: "(FREE)" } },
+      ],
+    },
+  });
+
+  let count = 0;
   for (const p of PRODUCTS) {
+    if (shouldExcludeProduct(p)) continue;
+    const product = cleanCatalogProduct(p);
     await db.product.upsert({
-      where: { slug: p.slug },
-      create: { ...p },
-      update: { ...p },
+      where: { slug: product.slug },
+      create: { ...product },
+      update: { ...product },
     });
+    count++;
   }
-  return PRODUCTS.length;
+  return count;
 }
 
 // Entries that were in the generated catalog with a non-brand "brand" field

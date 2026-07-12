@@ -2,6 +2,7 @@ import { db } from "@/lib/db";
 import type { Product, Prisma } from "@/generated/prisma/client";
 import { PRODUCTS } from "@/lib/seed-data/products";
 import { categoryDescendants } from "@/lib/categories";
+import { cleanCatalogProduct, shouldExcludeProduct } from "@/lib/catalog-cleanup";
 
 export type { Product };
 
@@ -32,16 +33,23 @@ function toFallbackProduct(product: (typeof PRODUCTS)[number]): Product {
   };
 }
 
-const FALLBACK_PRODUCTS = PRODUCTS.map(toFallbackProduct).sort((a, b) =>
-  a.name.localeCompare(b.name)
-);
+const FALLBACK_PRODUCTS = PRODUCTS.filter((product) => !shouldExcludeProduct(product))
+  .map((product) => toFallbackProduct(cleanCatalogProduct(product)))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+function cleanDbProduct(product: Product): Product {
+  return cleanCatalogProduct(product);
+}
 
 export function getFallbackProducts() {
   return FALLBACK_PRODUCTS;
 }
 
 export function listProducts() {
-  return db.product.findMany({ orderBy: { name: "asc" } }).catch(() => FALLBACK_PRODUCTS);
+  return db.product
+    .findMany({ orderBy: { name: "asc" } })
+    .then((products) => products.filter((product) => !shouldExcludeProduct(product)).map(cleanDbProduct))
+    .catch(() => FALLBACK_PRODUCTS);
 }
 
 export const PRODUCTS_BATCH_SIZE = 20;
@@ -110,17 +118,20 @@ export function listBrandNames() {
 export function findProductById(id: string) {
   return db.product
     .findUnique({ where: { id } })
+    .then((product) => (product && !shouldExcludeProduct(product) ? cleanDbProduct(product) : null))
     .catch(() => FALLBACK_PRODUCTS.find((product) => product.id === id) ?? null);
 }
 
 export function findProductBySlug(slug: string) {
   return db.product
     .findUnique({ where: { slug } })
+    .then((product) => (product && !shouldExcludeProduct(product) ? cleanDbProduct(product) : null))
     .catch(() => FALLBACK_PRODUCTS.find((product) => product.slug === slug) ?? null);
 }
 
 export function findProductsByIds(ids: string[]) {
   return db.product
     .findMany({ where: { id: { in: ids } } })
+    .then((products) => products.filter((product) => !shouldExcludeProduct(product)).map(cleanDbProduct))
     .catch(() => FALLBACK_PRODUCTS.filter((product) => ids.includes(product.id)));
 }
