@@ -35,7 +35,7 @@ export async function GET(request: Request) {
   const validIngredients = new Set(
     (await db.ingredient.findMany({ select: { id: true } })).map((ingredient) => ingredient.id)
   );
-  const rawProducts = await fetchOfficialProducts(source, page, limit);
+  const { products: rawProducts, rawCount } = await fetchOfficialProducts(source, page, limit);
 
   let products = 0;
   let skipped = 0;
@@ -90,12 +90,13 @@ export async function GET(request: Request) {
     source: source.brand,
     page,
     fetched: rawProducts.length,
+    rawFetched: rawCount,
     processed: products,
     skipped,
     sources,
     ingredientLinks,
     next:
-      rawProducts.length === limit
+      rawCount === limit
         ? { source: sourceIndex, page: page + 1 }
         : { source: sourceIndex + 1, page: 1 },
     sourceCount: OFFICIAL_PRODUCT_SOURCES.length,

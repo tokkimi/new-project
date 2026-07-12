@@ -538,7 +538,8 @@
     "hand": "Hand",
     "foot": "Foot",
     "neck": "Neck",
-    "hair": "Hair"
+    "hair": "Hair",
+    "treatment": "Treatment"
   },
   "skinTypes": {
     "oily": "Oily",
@@ -858,5 +859,39 @@
     "responsibilityText": "Product sheets, routine guidance and beauty content are informational and do not replace advice from a dermatologist or healthcare professional.",
     "contactTitle": "Contact",
     "contactText": "For privacy, product or account requests, contact the operator through the support channel provided on Haru."
+  },
+  "auditShowcase": {
+    "eyebrow": "Skin audit",
+    "title": "Know what your routine is doing for your skin.",
+    "subtitle": "Haru audits your saved products, morning and evening steps, active ingredients, and skin profile to show what fits, what overlaps, and what may be missing.",
+    "ctaPrimary": "Run my audit",
+    "ctaSecondary": "Start with a face scan",
+    "note": "The audit gives beauty guidance from your routine and visible skin context. It does not diagnose or replace a dermatologist.",
+    "panelEyebrow": "Personal routine check",
+    "panelTitle": "What Haru reviews",
+    "priorityTitle": "The result stays simple",
+    "checks": [
+      {
+        "title": "Product audit",
+        "text": "Purpose, key actives, skin type fit, irritation risk, frequency, and how each product should be used."
+      },
+      {
+        "title": "Shelf audit",
+        "text": "Missing steps, redundant products, repeated actives, and products that do not match your goals."
+      },
+      {
+        "title": "Morning routine",
+        "text": "Order, hydration, sunscreen, and whether strong actives are placed safely for daytime use."
+      },
+      {
+        "title": "Evening routine",
+        "text": "Recovery nights, exfoliant or retinoid rhythm, incompatible layers, and barrier support."
+      }
+    ],
+    "priorities": [
+      "Three to five clear priorities instead of a wall of advice.",
+      "Immediate actions and a realistic plan over the next weeks.",
+      "Product suggestions based on what your routine is missing."
+    ]
   }
 }

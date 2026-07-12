@@ -209,17 +209,17 @@ function isSkincareProduct(product: ShopifyProduct): boolean {
   return /\b(cleanser|cleansing|toner|essence|serum|ampoule|cream|moisturizer|moisturiser|sunscreen|spf|mask|balm|oil|peel|pad|exfoliant|lotion|mist|eye|skin|face|acne|pore|barrier|hydrating|bright)\b/.test(text);
 }
 
-export async function fetchOfficialProducts(source: OfficialProductSource, page: number, limit: number): Promise<SeedProduct[]> {
+export async function fetchOfficialProducts(source: OfficialProductSource, page: number, limit: number): Promise<{ products: SeedProduct[]; rawCount: number }> {
   const base = source.baseUrl.replace(/\/$/, "");
   const response = await fetch(`${base}/products.json?limit=${limit}&page=${page}`, {
     headers: { "user-agent": "Haru Skin official catalog importer" },
     next: { revalidate: 0 },
   });
-  if (!response.ok) return [];
+  if (!response.ok) return { products: [], rawCount: 0 };
   const data = (await response.json()) as { products?: ShopifyProduct[] };
   const products = data.products ?? [];
 
-  return products
+  const cleanProducts = products
     .filter((product) => product.title && product.handle && product.images?.[0]?.src && isSkincareProduct(product))
     .map((product) => {
       const plain = stripHtml(product.body_html);
@@ -250,4 +250,6 @@ export async function fetchOfficialProducts(source: OfficialProductSource, page:
       return cleanCatalogProduct(seedProduct);
     })
     .filter((product) => !shouldExcludeProduct(product));
+
+  return { products: cleanProducts, rawCount: products.length };
 }
