@@ -6,7 +6,6 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { HeroIllustration } from "@/components/marketing/hero-illustration";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -79,9 +78,28 @@ export function Hero() {
           </motion.p>
         </div>
 
-        <div className="mt-4 lg:mt-0">
-          <HeroIllustration />
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="mt-4 lg:mt-0"
+        >
+          <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[1.75rem] shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.25)]">
+            <video
+              className="aspect-[4/5] w-full object-cover"
+              poster="/hero-banner-poster.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls={false}
+              aria-hidden="true"
+            >
+              <source src="/hero-banner.webm" type="video/webm" />
+              <source src="/hero-banner.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
