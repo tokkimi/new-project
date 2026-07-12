@@ -464,6 +464,9 @@ export async function seedProductIngredients(db: PrismaClient): Promise<number> 
 }
 
 export async function seedNews(db: PrismaClient): Promise<number> {
+  const titles = NEWS.map((item) => item.title);
+  await db.newsItem.deleteMany({ where: { title: { notIn: titles } } });
+
   for (const item of NEWS) {
     const existing = await db.newsItem.findFirst({ where: { title: item.title } });
     if (existing) {
