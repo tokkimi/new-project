@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { WellnessPlayer, type SoundMode } from "@/components/wellness-player";
+import { BreathingGuide } from "@/components/breathing-guide";
 
 const copy = {
   en: {
@@ -12,6 +13,11 @@ const copy = {
     scienceText: "Stress can influence sleep, picking, itching, oiliness and inflammation signals. Haru treats this as lifestyle support, not diagnosis or treatment.",
     breathing: "Two-minute breathing",
     breathingText: "Inhale for 4, hold for 2, exhale for 6. Repeat five times before a night routine or when the jaw feels tense.",
+    inhale: "Inhale",
+    hold: "Hold",
+    exhale: "Exhale",
+    start: "Start",
+    pause: "Pause",
     sleep: "Sleep cue",
     sleepText: "Keep the last skincare step simple at night: cleanse, moisturize, pause the phone brightness, and let actives wait if the skin feels hot.",
     sounds: "Integrated calming sounds",
@@ -27,6 +33,11 @@ const copy = {
     scienceText: "스트레스는 수면, 만지기 습관, 가려움, 유분감, 염증 신호에 영향을 줄 수 있어요. Haru는 이를 진단이 아닌 생활 지원으로 다룹니다.",
     breathing: "2분 호흡",
     breathingText: "4초 들이마시고, 2초 멈추고, 6초 내쉬세요. 밤 루틴 전이나 턱이 긴장될 때 다섯 번 반복하세요.",
+    inhale: "들이마시기",
+    hold: "멈추기",
+    exhale: "내쉬기",
+    start: "시작",
+    pause: "일시정지",
     sleep: "수면 힌트",
     sleepText: "밤 마지막 단계는 단순하게 유지하세요. 세안, 보습, 화면 밝기 줄이기, 피부가 뜨거우면 활성 성분은 쉬어 주세요.",
     sounds: "내장 릴랙싱 사운드",
@@ -69,7 +80,14 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
 
       <div className="grid gap-4 md:grid-cols-3">
         <WellnessCard icon={Brain} title={t.science} text={t.scienceText} />
-        <WellnessCard icon={Wind} title={t.breathing} text={t.breathingText} />
+        <Card className="rounded-[1.5rem]">
+          <Wind className="size-5 text-primary" />
+          <h2 className="font-serif text-xl">{t.breathing}</h2>
+          <p className="text-sm leading-6 text-muted-foreground">{t.breathingText}</p>
+          <BreathingGuide
+            labels={{ inhale: t.inhale, hold: t.hold, exhale: t.exhale, start: t.start, pause: t.pause }}
+          />
+        </Card>
         <WellnessCard icon={Moon} title={t.sleep} text={t.sleepText} />
       </div>
 

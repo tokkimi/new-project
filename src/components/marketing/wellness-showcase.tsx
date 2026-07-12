@@ -2,27 +2,26 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ArrowRight, Layers, Moon, Sparkles, Sun } from "lucide-react";
+import { ArrowRight, Brain, CloudRain, Sparkles, Wind } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-const CHECK_ICONS = [Sparkles, Layers, Sun, Moon];
+const CHECK_ICONS = [Brain, Wind, CloudRain, Sparkles];
 
-export function AuditShowcase() {
-  const t = useTranslations("auditShowcase");
+export function WellnessShowcase() {
+  const t = useTranslations("wellnessShowcase");
   const checks = t.raw("checks") as { title: string; text: string }[];
-  const priorities = t.raw("priorities") as string[];
 
   return (
-    <section id="audit" className="border-y border-border bg-secondary/25 py-24">
+    <section className="border-y border-border bg-secondary/25 py-24">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.45 }}
-          className="max-w-xl"
+          className="order-2 max-w-xl lg:order-1"
         >
           <Badge variant="secondary" className="mb-4">
             {t("eyebrow")}
@@ -32,13 +31,10 @@ export function AuditShowcase() {
 
           <div className="mt-7 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <Link href="/app/audit">
+              <Link href="/app/wellness">
                 {t("ctaPrimary")}
                 <ArrowRight className="size-4" />
               </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/app/scan">{t("ctaSecondary")}</Link>
             </Button>
           </div>
 
@@ -50,17 +46,12 @@ export function AuditShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.45, delay: 0.08 }}
-          className="overflow-hidden rounded-[1.75rem] border border-border bg-background/70 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.2)]"
+          className="order-1 overflow-hidden rounded-[1.75rem] border border-border bg-background/70 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.2)] lg:order-2"
         >
-          <div className="relative aspect-[16/9] w-full overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/hero-banner-poster.jpg"
-              alt=""
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
-            <p className="absolute bottom-3 left-5 text-xs font-medium uppercase tracking-[0.18em] text-foreground/80">
+          <div className="relative flex aspect-[16/9] w-full items-end overflow-hidden bg-gradient-to-br from-pm/20 via-primary/10 to-am/20 p-5">
+            <div className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-pm/30 blur-3xl" />
+            <div className="pointer-events-none absolute -right-6 -bottom-6 h-40 w-40 rounded-full bg-am/30 blur-3xl" />
+            <p className="relative text-xs font-medium uppercase tracking-[0.18em] text-foreground/80">
               {t("panelEyebrow")}
             </p>
           </div>
@@ -81,17 +72,6 @@ export function AuditShowcase() {
                   </div>
                 );
               })}
-            </div>
-
-            <div className="mt-7 border-t border-border pt-6">
-              <p className="mb-3 text-sm font-medium">{t("priorityTitle")}</p>
-              <div className="grid gap-2 border-l border-primary/40 pl-4">
-                {priorities.map((priority) => (
-                  <p key={priority} className="text-sm leading-relaxed text-muted-foreground">
-                    {priority}
-                  </p>
-                ))}
-              </div>
             </div>
           </div>
         </motion.div>

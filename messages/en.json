@@ -932,7 +932,6 @@
     "ctaSecondary": "Start with a face scan",
     "note": "The audit gives beauty guidance from your routine and visible skin context. It does not diagnose or replace a dermatologist.",
     "panelEyebrow": "Personal routine check",
-    "panelTitle": "What Haru reviews",
     "priorityTitle": "The result stays simple",
     "checks": [
       {
@@ -956,6 +955,32 @@
       "Three to five clear priorities instead of a wall of advice.",
       "Immediate actions and a realistic plan over the next weeks.",
       "Product suggestions based on what your routine is missing."
+    ]
+  },
+  "wellnessShowcase": {
+    "eyebrow": "Wellness",
+    "title": "Skincare isn't just what you apply.",
+    "subtitle": "Stress, sleep and facial tension change how skin looks and feels. Haru's wellness space keeps that support practical, calm and non-medical — breathing, sleep cues, calming sounds and a face care library.",
+    "ctaPrimary": "Open wellness",
+    "note": "Wellness tools are relaxation and lifestyle support, not medical treatment or a substitute for professional care.",
+    "panelEyebrow": "Calm, practical support",
+    "checks": [
+      {
+        "title": "Stress and skin",
+        "text": "How stress can show up as oiliness, picking or inflammation — and what to do about it."
+      },
+      {
+        "title": "Guided breathing",
+        "text": "A paced two-minute breathing exercise for before a night routine or a tense jaw."
+      },
+      {
+        "title": "Calming sounds",
+        "text": "White noise, rain, ocean texture and simple relaxation tones, generated live."
+      },
+      {
+        "title": "Face care library",
+        "text": "Gentle massage, gua sha basics, jaw release and face yoga routines."
+      }
     ]
   },
   "goodHabits": {
