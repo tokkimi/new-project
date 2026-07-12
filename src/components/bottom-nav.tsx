@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { CalendarCheck, ShoppingBag, Grid2x2, Camera, Sparkles, User } from "lucide-react";
+import { ShoppingBag, Grid2x2, Camera, Sparkles, User } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
@@ -10,7 +10,6 @@ export function BottomNav() {
   const pathname = usePathname();
 
   const TABS = [
-    { href: "/app/today", label: t("today"), icon: CalendarCheck },
     { href: "/app/shelf", label: t("shelf"), icon: ShoppingBag },
     { href: "/app/products", label: t("products"), icon: Grid2x2 },
     { href: "/app/scan", label: t("scan"), icon: Camera },
