@@ -118,7 +118,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "COSRX",
     category: "toner",
     ingredientIds: ["bha", "niacinamide"],
-    fullIngredients: "Betaine salicylate 4% (BHA), niacinamide, willow bark water, panthenol",
+    fullIngredients:
+      "Betaine salicylate 4% (BHA), niacinamide, willow bark water, panthenol",
     origin: "South Korea",
     description:
       "A cult-favorite BHA toner that unclogs pores and smooths texture — start every other day to build tolerance.",
@@ -163,7 +164,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Beauty of Joseon",
     category: "moisturizer",
     ingredientIds: ["niacinamide"],
-    fullIngredients: "Rice bran water, ginseng root water, squalane, niacinamide, glycerin",
+    fullIngredients:
+      "Rice bran water, ginseng root water, squalane, niacinamide, glycerin",
     origin: "South Korea",
     description:
       "A rich, ginseng-forward moisturizer for barrier repair and a dewy glow — the final leave-on layer of the routine.",
@@ -207,7 +209,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "La Roche-Posay",
     category: "spot",
     ingredientIds: ["benzoyl_peroxide", "niacinamide"],
-    fullIngredients: "Micronized benzoyl peroxide 5.5%, lipo-hydroxy acid (LHA), niacinamide",
+    fullIngredients:
+      "Micronized benzoyl peroxide 5.5%, lipo-hydroxy acid (LHA), niacinamide",
     origin: "France",
     description:
       "A dermatologist staple: micronized, lower-irritation benzoyl peroxide for acne spot treatment, from one of the largest pharmacy skincare brands.",
@@ -357,11 +360,16 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "ISNTREE",
     category: "sunscreen",
     ingredientIds: ["hyaluronic_acid", "niacinamide", "centella", "spf"],
-    fullIngredients: "Niacinamide, multiple hyaluronic acid types, centella asiatica extract",
+    fullIngredients:
+      "Niacinamide, multiple hyaluronic acid types, centella asiatica extract",
     origin: "South Korea",
     description:
       "A watery, hydrating sunscreen with hyaluronic acid and centella baked in — a favorite for dehydrated or combination skin.",
-    usageSteps: ["Last AM step", "Apply generously as the final layer", "Reapply every 2 hours in the sun"],
+    usageSteps: [
+      "Last AM step",
+      "Apply generously as the final layer",
+      "Reapply every 2 hours in the sun",
+    ],
     price: 19,
     currency: "USD",
     skinTypes: ["oily", "dry", "combination", "normal"],
@@ -373,7 +381,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Medicube",
     category: "toner",
     ingredientIds: ["bha", "aha"],
-    fullIngredients: "Salicylic acid (BHA), lactic acid (AHA), panthenol, allantoin",
+    fullIngredients:
+      "Salicylic acid (BHA), lactic acid (AHA), panthenol, allantoin",
     origin: "South Korea",
     description:
       "Textured exfoliating toner pads for pore care — one side textured for gentle physical buffing, the other smooth for product application.",
@@ -394,7 +403,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Medicube",
     category: "serum",
     ingredientIds: ["retinol"],
-    fullIngredients: "Hydroxypinacolone retinoate (HPR, 4th-gen retinoid ester), soothing complex",
+    fullIngredients:
+      "Hydroxypinacolone retinoate (HPR, 4th-gen retinoid ester), soothing complex",
     origin: "South Korea",
     description:
       "Uses HPR, a gentler retinoid ester, instead of classic retinol — aims for similar results with less irritation.",
@@ -415,7 +425,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Anua",
     category: "toner",
     ingredientIds: ["centella"],
-    fullIngredients: "Houttuynia cordata (heartleaf) extract 77%, panthenol, centella asiatica extract",
+    fullIngredients:
+      "Houttuynia cordata (heartleaf) extract 77%, panthenol, centella asiatica extract",
     origin: "South Korea",
     description:
       "Anua's breakout product — a heartleaf-forward calming toner that can be layered 2-3x for redness-prone or oily, irritated skin.",
@@ -436,11 +447,16 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Aestura",
     category: "moisturizer",
     ingredientIds: ["ceramides", "niacinamide"],
-    fullIngredients: "High-density ceramide capsules, niacinamide, phytosphingosine, squalane",
+    fullIngredients:
+      "High-density ceramide capsules, niacinamide, phytosphingosine, squalane",
     origin: "South Korea",
     description:
       "A dermocosmetic barrier-repair cream built around ceramide capsules — developed with a compromised-barrier/atopic-skin focus.",
-    usageSteps: ["Last leave-on layer, AM/PM", "Apply generously over face and neck", "Massage in"],
+    usageSteps: [
+      "Last leave-on layer, AM/PM",
+      "Apply generously over face and neck",
+      "Massage in",
+    ],
     price: 24,
     currency: "USD",
     skinTypes: ["dry", "sensitive"],
@@ -457,7 +473,11 @@ export const PRODUCTS: SeedProduct[] = [
     origin: "South Korea",
     description:
       "A high-concentration centella serum in a fragrance-free formula, aimed squarely at redness and barrier repair for reactive skin.",
-    usageSteps: ["Apply after toner", "Apply a few drops, pat in", "Follow with moisturizer"],
+    usageSteps: [
+      "Apply after toner",
+      "Apply a few drops, pat in",
+      "Follow with moisturizer",
+    ],
     officialUrl: "https://purito.com",
     price: 21,
     currency: "USD",
@@ -491,9 +511,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "CeraVe",
     category: "cleanser",
     ingredientIds: ["ceramides", "hyaluronic_acid"],
-    fullIngredients: "Ceramides (NP, AP, EOP), hyaluronic acid, glycerin, MVE delivery technology",
+    fullIngredients:
+      "Ceramides (NP, AP, EOP), hyaluronic acid, glycerin, MVE delivery technology",
     origin: "USA",
-    description: "A non-foaming, dermatologist-developed cleanser that pairs three essential ceramides with hyaluronic acid to remove dirt and makeup without disrupting the skin barrier — a dermatology staple for normal-to-dry and sensitive skin.",
+    description:
+      "A non-foaming, dermatologist-developed cleanser that pairs three essential ceramides with hyaluronic acid to remove dirt and makeup without disrupting the skin barrier — a dermatology staple for normal-to-dry and sensitive skin.",
     usageSteps: [
       "Wet face with lukewarm water",
       "Massage gently over face, avoiding harsh rubbing",
@@ -511,9 +533,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Banila Co",
     category: "cleanser",
     ingredientIds: ["vitamin_e"],
-    fullIngredients: "Hot springs water, tocopheryl acetate (vitamin E), acerola fruit extract, botanical ester oil blend",
+    fullIngredients:
+      "Hot springs water, tocopheryl acetate (vitamin E), acerola fruit extract, botanical ester oil blend",
     origin: "South Korea",
-    description: "The original balm-to-oil cleanser that popularized double cleansing in K-beauty — melts away makeup and sunscreen without stripping skin, then emulsifies into a milky texture on contact with water.",
+    description:
+      "The original balm-to-oil cleanser that popularized double cleansing in K-beauty — melts away makeup and sunscreen without stripping skin, then emulsifies into a milky texture on contact with water.",
     usageSteps: [
       "Scoop a small amount with dry hands onto dry skin",
       "Massage over face to dissolve makeup/sunscreen",
@@ -531,9 +555,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "COSRX",
     category: "eye",
     ingredientIds: ["hyaluronic_acid", "niacinamide", "peptides"],
-    fullIngredients: "Snail secretion filtrate 73.7%, niacinamide 2%, 5-peptide complex, adenosine, sodium hyaluronate",
+    fullIngredients:
+      "Snail secretion filtrate 73.7%, niacinamide 2%, 5-peptide complex, adenosine, sodium hyaluronate",
     origin: "South Korea",
-    description: "Combines COSRX's signature snail mucin with a five-peptide complex and niacinamide to target dark circles, puffiness, and fine lines around the eye area.",
+    description:
+      "Combines COSRX's signature snail mucin with a five-peptide complex and niacinamide to target dark circles, puffiness, and fine lines around the eye area.",
     usageSteps: [
       "Last step, AM & PM",
       "Dot a small amount around the orbital bone",
@@ -551,9 +577,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "CeraVe",
     category: "eye",
     ingredientIds: ["ceramides", "hyaluronic_acid", "niacinamide"],
-    fullIngredients: "Three essential ceramides, hyaluronic acid, niacinamide, marine & botanical complex",
+    fullIngredients:
+      "Three essential ceramides, hyaluronic acid, niacinamide, marine & botanical complex",
     origin: "USA",
-    description: "An oil-free, fragrance-free eye cream developed with dermatologists to reduce the look of dark circles and puffiness while reinforcing the skin barrier around the delicate eye area.",
+    description:
+      "An oil-free, fragrance-free eye cream developed with dermatologists to reduce the look of dark circles and puffiness while reinforcing the skin barrier around the delicate eye area.",
     usageSteps: [
       "Apply AM and/or PM",
       "Dot gently around the orbital bone",
@@ -571,9 +599,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "The Ordinary",
     category: "oil",
     ingredientIds: [],
-    fullIngredients: "100% organic, cold-pressed rosehip seed oil (Rosa canina), naturally rich in linoleic and linolenic essential fatty acids",
+    fullIngredients:
+      "100% organic, cold-pressed rosehip seed oil (Rosa canina), naturally rich in linoleic and linolenic essential fatty acids",
     origin: "Canada",
-    description: "A single-ingredient, unrefined rosehip seed oil marketed to help address signs of aging and uneven skin tone through its naturally high essential fatty acid content.",
+    description:
+      "A single-ingredient, unrefined rosehip seed oil marketed to help address signs of aging and uneven skin tone through its naturally high essential fatty acid content.",
     usageSteps: [
       "Apply as the final step, AM or PM",
       "Press 2-3 drops between palms and press onto face",
@@ -591,9 +621,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Sulwhasoo",
     category: "oil",
     ingredientIds: [],
-    fullIngredients: "Panax ginseng seed oil, camellia japonica seed oil, sesame seed oil",
+    fullIngredients:
+      "Panax ginseng seed oil, camellia japonica seed oil, sesame seed oil",
     origin: "South Korea",
-    description: "A luxury facial oil cold-pressed from ginseng seeds and blended with camellia and sesame oils, from the heritage Korean beauty house Sulwhasoo, aimed at nourishing and revitalizing dull, tired-looking skin.",
+    description:
+      "A luxury facial oil cold-pressed from ginseng seeds and blended with camellia and sesame oils, from the heritage Korean beauty house Sulwhasoo, aimed at nourishing and revitalizing dull, tired-looking skin.",
     usageSteps: [
       "Final PM step after moisturizer",
       "Warm 2-3 drops between palms",
@@ -611,9 +643,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "COSRX",
     category: "spot",
     ingredientIds: [],
-    fullIngredients: "Hydrocolloid patch (polyurethane film with absorbent hydrocolloid layer) — no topical actives",
+    fullIngredients:
+      "Hydrocolloid patch (polyurethane film with absorbent hydrocolloid layer) — no topical actives",
     origin: "South Korea",
-    description: "A best-selling hydrocolloid patch that absorbs fluid from popped or oozing blemishes and shields them from picking and bacteria — one of the most recognizable spot products in K-beauty.",
+    description:
+      "A best-selling hydrocolloid patch that absorbs fluid from popped or oozing blemishes and shields them from picking and bacteria — one of the most recognizable spot products in K-beauty.",
     usageSteps: [
       "Apply to clean, dry skin over a blemish",
       "Choose the dot size that fully covers the spot",
@@ -633,7 +667,8 @@ export const PRODUCTS: SeedProduct[] = [
     ingredientIds: ["bha"],
     fullIngredients: "Salicylic acid, calamine, sulfur, camphor, zinc oxide",
     origin: "USA",
-    description: "A cult-favorite overnight spot treatment: a settled layer of calamine and salicylic acid — you dab only the pink sediment from the bottom of the bottle directly onto blemishes to dry them out overnight.",
+    description:
+      "A cult-favorite overnight spot treatment: a settled layer of calamine and salicylic acid — you dab only the pink sediment from the bottom of the bottle directly onto blemishes to dry them out overnight.",
     usageSteps: [
       "Let the bottle settle, then dip a cotton swab into the pink sediment at the bottom",
       "Dab directly onto blemishes before bed",
@@ -651,9 +686,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "MISSHA",
     category: "essence",
     ingredientIds: ["niacinamide", "ceramides"],
-    fullIngredients: "97% Desert Cica (yeast) ferment filtrate, niacinamide, ceramide NP, adenosine, bifida ferment lysate",
+    fullIngredients:
+      "97% Desert Cica (yeast) ferment filtrate, niacinamide, ceramide NP, adenosine, bifida ferment lysate",
     origin: "South Korea",
-    description: "MISSHA's iconic fermented 'first essence,' built around a high concentration of yeast ferment filtrate to prep skin, even tone, and support the moisture barrier before the rest of the routine.",
+    description:
+      "MISSHA's iconic fermented 'first essence,' built around a high concentration of yeast ferment filtrate to prep skin, even tone, and support the moisture barrier before the rest of the routine.",
     usageSteps: [
       "Apply after toner, AM & PM",
       "Pat 2-3 drops onto face and neck",
@@ -673,7 +710,8 @@ export const PRODUCTS: SeedProduct[] = [
     ingredientIds: [],
     fullIngredients: "90%+ PITERA (Galactomyces ferment filtrate)",
     origin: "Japan",
-    description: "SK-II's iconic essence built on PITERA, a proprietary fermentation ingredient first identified from sake brewers' hands — used to improve the look of skin texture, tone, and resilience.",
+    description:
+      "SK-II's iconic essence built on PITERA, a proprietary fermentation ingredient first identified from sake brewers' hands — used to improve the look of skin texture, tone, and resilience.",
     usageSteps: [
       "Apply after cleansing, AM & PM",
       "Sweep onto a cotton pad or pat directly into skin",
@@ -691,9 +729,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "ILLIYOON",
     category: "moisturizer",
     ingredientIds: ["ceramides"],
-    fullIngredients: "Ceramide Ato Complex (3 ceramide types), panax ginseng root water, cholesterol, phytosphingosine",
+    fullIngredients:
+      "Ceramide Ato Complex (3 ceramide types), panax ginseng root water, cholesterol, phytosphingosine",
     origin: "South Korea",
-    description: "A fragrance-free, barrier-repair cream built around Illiyoon's 3-ceramide 'Ato Complex' — popular for very dry, sensitive, and eczema-prone skin on both face and body.",
+    description:
+      "A fragrance-free, barrier-repair cream built around Illiyoon's 3-ceramide 'Ato Complex' — popular for very dry, sensitive, and eczema-prone skin on both face and body.",
     usageSteps: [
       "Apply to face and/or body after cleansing",
       "Massage in until absorbed",
@@ -711,9 +751,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Pyunkang Yul",
     category: "toner",
     ingredientIds: [],
-    fullIngredients: "91% astragalus membranaceus root extract, minimal-ingredient alcohol-free base",
+    fullIngredients:
+      "91% astragalus membranaceus root extract, minimal-ingredient alcohol-free base",
     origin: "South Korea",
-    description: "A minimalist, astragalus-root-based toner from Pyunkang Yul, a brand developed with a Korean oriental medicine clinic focused on sensitive and atopic-prone skin — designed to hydrate and rebuild the barrier with as few ingredients as possible.",
+    description:
+      "A minimalist, astragalus-root-based toner from Pyunkang Yul, a brand developed with a Korean oriental medicine clinic focused on sensitive and atopic-prone skin — designed to hydrate and rebuild the barrier with as few ingredients as possible.",
     usageSteps: [
       "Apply after cleansing",
       "Pat or sweep onto face with hands or a cotton pad",
@@ -731,9 +773,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Etude House",
     category: "cleanser",
     ingredientIds: ["centella"],
-    fullIngredients: "Panthenol, madecassoside (a centella asiatica derivative), camellia sinensis leaf extract, low-pH (6.5) surfactant base",
+    fullIngredients:
+      "Panthenol, madecassoside (a centella asiatica derivative), camellia sinensis leaf extract, low-pH (6.5) surfactant base",
     origin: "South Korea",
-    description: "A low-pH, fragrance-free whip cleanser built around madecassoside and panthenol to clean sensitive, redness-prone skin without disrupting the barrier.",
+    description:
+      "A low-pH, fragrance-free whip cleanser built around madecassoside and panthenol to clean sensitive, redness-prone skin without disrupting the barrier.",
     usageSteps: [
       "Pump onto damp hands or a cleansing puff",
       "Work into a soft foam and massage over face",
@@ -751,9 +795,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Abib",
     category: "cleanser",
     ingredientIds: ["bha", "centella"],
-    fullIngredients: "Salicylic acid, Houttuynia cordata (heartleaf) extract, centella asiatica extract, panthenol",
+    fullIngredients:
+      "Salicylic acid, Houttuynia cordata (heartleaf) extract, centella asiatica extract, panthenol",
     origin: "South Korea",
-    description: "A mildly acidic foaming cleanser with salicylic acid and heartleaf extract that clears pores and calms redness for acne-prone, sensitive skin.",
+    description:
+      "A mildly acidic foaming cleanser with salicylic acid and heartleaf extract that clears pores and calms redness for acne-prone, sensitive skin.",
     usageSteps: [
       "Lather with water",
       "Massage gently over face",
@@ -771,9 +817,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Youth To The People",
     category: "cleanser",
     ingredientIds: ["vitamin_c", "vitamin_e"],
-    fullIngredients: "Kale, spinach, green tea, and alfalfa antioxidant blend, tetrahexyldecyl ascorbate (vitamin C), tocopheryl acetate (vitamin E), panthenol",
+    fullIngredients:
+      "Kale, spinach, green tea, and alfalfa antioxidant blend, tetrahexyldecyl ascorbate (vitamin C), tocopheryl acetate (vitamin E), panthenol",
     origin: "USA",
-    description: "A sulfate-free gel cleanser packed with kale, spinach, and green tea antioxidants that removes makeup and daily grime without stripping the skin barrier.",
+    description:
+      "A sulfate-free gel cleanser packed with kale, spinach, and green tea antioxidants that removes makeup and daily grime without stripping the skin barrier.",
     usageSteps: [
       "Massage onto damp skin",
       "Work into a gentle lather",
@@ -791,9 +839,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "SKIN1004",
     category: "toner",
     ingredientIds: ["centella", "niacinamide", "hyaluronic_acid"],
-    fullIngredients: "84% centella asiatica extract, niacinamide, gluconolactone (PHA), hyaluronic acid, adenosine",
+    fullIngredients:
+      "84% centella asiatica extract, niacinamide, gluconolactone (PHA), hyaluronic acid, adenosine",
     origin: "South Korea",
-    description: "A daily gentle-exfoliating toner combining a high concentration of centella asiatica with PHA and niacinamide to hydrate, soothe, and smooth texture.",
+    description:
+      "A daily gentle-exfoliating toner combining a high concentration of centella asiatica with PHA and niacinamide to hydrate, soothe, and smooth texture.",
     usageSteps: [
       "Apply after cleansing with a cotton pad or hands",
       "Pat or sweep over face",
@@ -811,9 +861,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "By Wishtrend",
     category: "toner",
     ingredientIds: ["aha", "hyaluronic_acid", "centella"],
-    fullIngredients: "Mandelic acid 5%, beta-glucan, panthenol, centella asiatica extract, sodium hyaluronate",
+    fullIngredients:
+      "Mandelic acid 5%, beta-glucan, panthenol, centella asiatica extract, sodium hyaluronate",
     origin: "South Korea",
-    description: "A gentle exfoliating toner using mandelic acid, a larger-molecule AHA that's less irritating than glycolic acid, to smooth texture and fade dark spots while beta-glucan and centella soothe.",
+    description:
+      "A gentle exfoliating toner using mandelic acid, a larger-molecule AHA that's less irritating than glycolic acid, to smooth texture and fade dark spots while beta-glucan and centella soothe.",
     usageSteps: [
       "Apply after cleansing with a cotton pad",
       "Sweep over face, avoiding the eye area",
@@ -831,9 +883,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Haruharu Wonder",
     category: "toner",
     ingredientIds: ["hyaluronic_acid"],
-    fullIngredients: "Korean black rice extract 2,000ppm, hyaluronic acid 600ppm, beta-glucan, panthenol",
+    fullIngredients:
+      "Korean black rice extract 2,000ppm, hyaluronic acid 600ppm, beta-glucan, panthenol",
     origin: "South Korea",
-    description: "A 95%-naturally-derived toner built around Korean black rice extract and hyaluronic acid for deep, plumping hydration — a favorite base step for a 'glass skin' routine.",
+    description:
+      "A 95%-naturally-derived toner built around Korean black rice extract and hyaluronic acid for deep, plumping hydration — a favorite base step for a 'glass skin' routine.",
     usageSteps: [
       "Apply after cleansing",
       "Pat into skin with hands or a cotton pad",
@@ -851,9 +905,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "SKIN1004",
     category: "essence",
     ingredientIds: ["centella"],
-    fullIngredients: "Centella asiatica extract (Madagascar-grown, high madecassoside/TECA content), glycerin, butylene glycol",
+    fullIngredients:
+      "Centella asiatica extract (Madagascar-grown, high madecassoside/TECA content), glycerin, butylene glycol",
     origin: "South Korea",
-    description: "SKIN1004's hero product — a minimalist, fragrance-free centella ampoule formulated to soothe redness and reinforce the skin barrier for sensitive and irritated skin.",
+    description:
+      "SKIN1004's hero product — a minimalist, fragrance-free centella ampoule formulated to soothe redness and reinforce the skin barrier for sensitive and irritated skin.",
     usageSteps: [
       "Apply after toner",
       "Pat 2-3 drops onto face and neck",
@@ -871,9 +927,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Ma:nyo",
     category: "essence",
     ingredientIds: ["niacinamide", "hyaluronic_acid", "peptides", "centella"],
-    fullIngredients: "Bifida ferment lysate, 5-strain probiotic 'Bifida Biome' complex, 10 types of hyaluronic acid, niacinamide, acetyl hexapeptide-8, copper tripeptide-1, madecassic acid",
+    fullIngredients:
+      "Bifida ferment lysate, 5-strain probiotic 'Bifida Biome' complex, 10 types of hyaluronic acid, niacinamide, acetyl hexapeptide-8, copper tripeptide-1, madecassic acid",
     origin: "South Korea",
-    description: "A probiotic-fermented ampoule that pairs Ma:nyo's Bifida Biome complex with ten molecular weights of hyaluronic acid and peptides to rebuild a microbiome-friendly skin barrier.",
+    description:
+      "A probiotic-fermented ampoule that pairs Ma:nyo's Bifida Biome complex with ten molecular weights of hyaluronic acid and peptides to rebuild a microbiome-friendly skin barrier.",
     usageSteps: [
       "Apply after toner, AM & PM",
       "Pat a few drops into skin",
@@ -890,9 +948,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Neogen",
     category: "essence",
     ingredientIds: ["niacinamide", "hyaluronic_acid"],
-    fullIngredients: "93%+ fermented ingredients incl. bifida ferment lysate, saccharomyces (sake) ferment filtrate, birch juice, rice ferment filtrate, niacinamide, sodium hyaluronate",
+    fullIngredients:
+      "93%+ fermented ingredients incl. bifida ferment lysate, saccharomyces (sake) ferment filtrate, birch juice, rice ferment filtrate, niacinamide, sodium hyaluronate",
     origin: "South Korea",
-    description: "A fermentation-forward first essence inspired by sake brewing, combining bifida and saccharomyces ferment filtrates with birch juice to instantly plump and prep skin.",
+    description:
+      "A fermentation-forward first essence inspired by sake brewing, combining bifida and saccharomyces ferment filtrates with birch juice to instantly plump and prep skin.",
     usageSteps: [
       "Apply after cleansing, AM & PM",
       "Pat or sweep onto face and neck",
@@ -910,9 +970,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "innisfree",
     category: "serum",
     ingredientIds: ["niacinamide", "hyaluronic_acid"],
-    fullIngredients: "Jeju green tea leaf water, camellia sinensis seed oil, niacinamide, sodium hyaluronate, panthenol",
+    fullIngredients:
+      "Jeju green tea leaf water, camellia sinensis seed oil, niacinamide, sodium hyaluronate, panthenol",
     origin: "South Korea",
-    description: "Innisfree's best-selling serum, built on Jeju green tea and green tea seed oil, formulated with a 'Green Tea Tri-biotics' complex to hydrate and support the skin microbiome.",
+    description:
+      "Innisfree's best-selling serum, built on Jeju green tea and green tea seed oil, formulated with a 'Green Tea Tri-biotics' complex to hydrate and support the skin microbiome.",
     usageSteps: [
       "Apply after toner",
       "Press a few drops onto face and neck",
@@ -930,9 +992,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "numbuzin",
     category: "serum",
     ingredientIds: ["niacinamide", "hyaluronic_acid"],
-    fullIngredients: "Bifida ferment lysate 42%, galactomyces ferment filtrate 21%, niacinamide, sodium hyaluronate, adenosine, panthenol",
+    fullIngredients:
+      "Bifida ferment lysate 42%, galactomyces ferment filtrate 21%, niacinamide, sodium hyaluronate, adenosine, panthenol",
     origin: "South Korea",
-    description: "A fermented, texture-smoothing serum blending bifida and galactomyces ferments with niacinamide to visibly refine pores and soften rough skin texture.",
+    description:
+      "A fermented, texture-smoothing serum blending bifida and galactomyces ferments with niacinamide to visibly refine pores and soften rough skin texture.",
     usageSteps: [
       "Apply after toner, AM & PM",
       "Pat a few drops into skin",
@@ -950,9 +1014,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "KraveBeauty",
     category: "serum",
     ingredientIds: ["niacinamide", "ceramides"],
-    fullIngredients: "Ceramide NP, niacinamide, tamanu oil, beta-glucan, madecassoside",
+    fullIngredients:
+      "Ceramide NP, niacinamide, tamanu oil, beta-glucan, madecassoside",
     origin: "USA",
-    description: "A reparative, fragrance-free serum built around ceramide NP and niacinamide to restore a compromised moisture barrier — developed by esthetician Liah Yoo for dry and sensitized skin.",
+    description:
+      "A reparative, fragrance-free serum built around ceramide NP and niacinamide to restore a compromised moisture barrier — developed by esthetician Liah Yoo for dry and sensitized skin.",
     usageSteps: [
       "Apply after toner/essence",
       "Massage a few drops into face and neck",
@@ -970,9 +1036,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Naturium",
     category: "serum",
     ingredientIds: ["niacinamide", "hyaluronic_acid", "vitamin_e"],
-    fullIngredients: "Niacinamide 12%, zinc PCA 2%, sodium hyaluronate, tocopheryl acetate (vitamin E)",
+    fullIngredients:
+      "Niacinamide 12%, zinc PCA 2%, sodium hyaluronate, tocopheryl acetate (vitamin E)",
     origin: "USA",
-    description: "A high-strength niacinamide and zinc PCA serum aimed at oil control, visibly refined pores, and fading dark spots — one of Naturium's flagship, best-selling formulas.",
+    description:
+      "A high-strength niacinamide and zinc PCA serum aimed at oil control, visibly refined pores, and fading dark spots — one of Naturium's flagship, best-selling formulas.",
     usageSteps: [
       "Apply after cleansing/toning, AM or PM",
       "Apply a few drops to face",
@@ -990,9 +1058,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Peace Out Skincare",
     category: "spot",
     ingredientIds: ["bha", "retinol"],
-    fullIngredients: "Salicylic acid 0.5%, retinyl acetate (vitamin A), aloe barbadensis leaf extract, hydrocolloid patch",
+    fullIngredients:
+      "Salicylic acid 0.5%, retinyl acetate (vitamin A), aloe barbadensis leaf extract, hydrocolloid patch",
     origin: "USA",
-    description: "A hydrocolloid pimple patch infused with salicylic acid and a retinoid derivative, clinically tested to visibly reduce blemishes in hours while shielding them from picking.",
+    description:
+      "A hydrocolloid pimple patch infused with salicylic acid and a retinoid derivative, clinically tested to visibly reduce blemishes in hours while shielding them from picking.",
     usageSteps: [
       "Apply to a clean, dry blemish",
       "Choose the dot size that fully covers the spot",
@@ -1012,7 +1082,8 @@ export const PRODUCTS: SeedProduct[] = [
     ingredientIds: [],
     fullIngredients: "Medical-grade hydrocolloid (no active drug ingredients)",
     origin: "USA",
-    description: "The viral, best-selling hydrocolloid acne patch — absorbs fluid from whiteheads overnight and shields blemishes from picking, with no active drug ingredients.",
+    description:
+      "The viral, best-selling hydrocolloid acne patch — absorbs fluid from whiteheads overnight and shields blemishes from picking, with no active drug ingredients.",
     usageSteps: [
       "Apply to a clean, dry blemish that has come to a head",
       "Leave on for at least 6 hours or overnight",
@@ -1030,9 +1101,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Glow Recipe",
     category: "eye",
     ingredientIds: ["retinol", "niacinamide", "hyaluronic_acid"],
-    fullIngredients: "Encapsulated retinol, avocado oil and fruit extract, niacinamide, sodium hyaluronate, coffeeberry (coffea arabica fruit) extract",
+    fullIngredients:
+      "Encapsulated retinol, avocado oil and fruit extract, niacinamide, sodium hyaluronate, coffeeberry (coffea arabica fruit) extract",
     origin: "USA",
-    description: "An overnight eye treatment that pairs encapsulated, slow-release retinol with avocado oil and niacinamide to smooth fine lines and depuff while you sleep.",
+    description:
+      "An overnight eye treatment that pairs encapsulated, slow-release retinol with avocado oil and niacinamide to smooth fine lines and depuff while you sleep.",
     usageSteps: [
       "PM only, as the last step",
       "Dot a small amount around the orbital bone",
@@ -1050,9 +1123,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "First Aid Beauty",
     category: "eye",
     ingredientIds: ["peptides", "hyaluronic_acid", "vitamin_e"],
-    fullIngredients: "Palmitoyl hexapeptide-12, palmitoyl tetrapeptide-7, sodium hyaluronate, adenosine, tocopheryl acetate",
+    fullIngredients:
+      "Palmitoyl hexapeptide-12, palmitoyl tetrapeptide-7, sodium hyaluronate, adenosine, tocopheryl acetate",
     origin: "USA",
-    description: "A fast-absorbing peptide gel-cream for the eye area that targets puffiness and fine lines with a lightweight, makeup-friendly finish for daytime wear.",
+    description:
+      "A fast-absorbing peptide gel-cream for the eye area that targets puffiness and fine lines with a lightweight, makeup-friendly finish for daytime wear.",
     usageSteps: [
       "Apply AM as the last step before SPF",
       "Dot gently around the orbital bone",
@@ -1070,9 +1145,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Then I Met You",
     category: "eye",
     ingredientIds: ["niacinamide", "peptides", "hyaluronic_acid"],
-    fullIngredients: "Snail secretion filtrate, niacinamide, acetyl tetrapeptide-5, hyaluronic acid, caffeine, Volufiline",
+    fullIngredients:
+      "Snail secretion filtrate, niacinamide, acetyl tetrapeptide-5, hyaluronic acid, caffeine, Volufiline",
     origin: "South Korea",
-    description: "A firming, brightening eye cream from Charlotte Cho's Then I Met You, combining snail mucin with Volufiline and a de-puffing peptide to target dark circles, puffiness, and fine lines.",
+    description:
+      "A firming, brightening eye cream from Charlotte Cho's Then I Met You, combining snail mucin with Volufiline and a de-puffing peptide to target dark circles, puffiness, and fine lines.",
     usageSteps: [
       "Apply AM and/or PM as the last step",
       "Dot around the orbital bone with ring finger",
@@ -1090,9 +1167,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Etude House",
     category: "moisturizer",
     ingredientIds: ["centella"],
-    fullIngredients: "Panthenol, madecassoside, sunflower seed oil, shea butter, camellia sinensis (green tea) leaf extract",
+    fullIngredients:
+      "Panthenol, madecassoside, sunflower seed oil, shea butter, camellia sinensis (green tea) leaf extract",
     origin: "South Korea",
-    description: "A 92%-natural-origin barrier cream built around panthenol and madecassoside to repair and calm compromised, redness-prone skin.",
+    description:
+      "A 92%-natural-origin barrier cream built around panthenol and madecassoside to repair and calm compromised, redness-prone skin.",
     usageSteps: [
       "Scoop a pea-sized amount",
       "Massage in as the final leave-on layer",
@@ -1110,9 +1189,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Dr.G",
     category: "moisturizer",
     ingredientIds: ["niacinamide", "centella"],
-    fullIngredients: "Niacinamide, centella asiatica extract, madecassoside, panthenol, beta-glucan, epigallocatechin gallate",
+    fullIngredients:
+      "Niacinamide, centella asiatica extract, madecassoside, panthenol, beta-glucan, epigallocatechin gallate",
     origin: "South Korea",
-    description: "A dermatologist-developed calming cream that soothes visible redness before and after breakouts while niacinamide helps even tone — a favorite for sensitive, blemish-prone skin.",
+    description:
+      "A dermatologist-developed calming cream that soothes visible redness before and after breakouts while niacinamide helps even tone — a favorite for sensitive, blemish-prone skin.",
     usageSteps: [
       "Apply as the final leave-on step, AM/PM",
       "Take an appropriate amount and spread evenly",
@@ -1129,9 +1210,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Vanicream",
     category: "moisturizer",
     ingredientIds: ["ceramides", "hyaluronic_acid"],
-    fullIngredients: "Squalane, hyaluronic acid, a 5-ceramide complex (ceramide NP, EOP, NG, AS, AP), phytosterols",
+    fullIngredients:
+      "Squalane, hyaluronic acid, a 5-ceramide complex (ceramide NP, EOP, NG, AS, AP), phytosterols",
     origin: "USA",
-    description: "A fragrance-free, dye-free moisturizer formulated without common irritants, combining a five-ceramide complex with hyaluronic acid to support the skin barrier for very sensitive skin.",
+    description:
+      "A fragrance-free, dye-free moisturizer formulated without common irritants, combining a five-ceramide complex with hyaluronic acid to support the skin barrier for very sensitive skin.",
     usageSteps: [
       "Apply to clean skin, AM and/or PM",
       "Massage in until absorbed",
@@ -1148,9 +1231,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Kiehl's",
     category: "oil",
     ingredientIds: ["vitamin_e"],
-    fullIngredients: "Squalane, evening primrose oil, lavender oil, rosehip seed oil (rosa canina fruit oil), tocopherol (vitamin E)",
+    fullIngredients:
+      "Squalane, evening primrose oil, lavender oil, rosehip seed oil (rosa canina fruit oil), tocopherol (vitamin E)",
     origin: "USA",
-    description: "Kiehl's iconic overnight facial oil blend of botanical and essential oils, including evening primrose and lavender, formulated to restore radiance and support the skin barrier overnight.",
+    description:
+      "Kiehl's iconic overnight facial oil blend of botanical and essential oils, including evening primrose and lavender, formulated to restore radiance and support the skin barrier overnight.",
     usageSteps: [
       "Final PM step",
       "Warm 2-3 drops between palms",
@@ -1168,9 +1253,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "SKIN1004",
     category: "sunscreen",
     ingredientIds: ["spf", "niacinamide", "centella"],
-    fullIngredients: "Titanium dioxide, centella asiatica extract 29,400ppm, niacinamide, tranexamic acid, chemical + mineral UV filter blend",
+    fullIngredients:
+      "Titanium dioxide, centella asiatica extract 29,400ppm, niacinamide, tranexamic acid, chemical + mineral UV filter blend",
     origin: "South Korea",
-    description: "A hybrid mineral-chemical sunscreen with a soft tone-up finish, combining a high concentration of centella with niacinamide and tranexamic acid to brighten while protecting.",
+    description:
+      "A hybrid mineral-chemical sunscreen with a soft tone-up finish, combining a high concentration of centella with niacinamide and tranexamic acid to brighten while protecting.",
     usageSteps: [
       "Apply as the last AM step",
       "Use generously, about two finger-lengths",
@@ -1188,9 +1275,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Tatcha",
     category: "sunscreen",
     ingredientIds: ["spf"],
-    fullIngredients: "Zinc oxide 15%, octisalate 5%, Japanese wild rose (rosa multiflora) extract, loquat leaf extract, silk extract",
+    fullIngredients:
+      "Zinc oxide 15%, octisalate 5%, Japanese wild rose (rosa multiflora) extract, loquat leaf extract, silk extract",
     origin: "USA",
-    description: "A lightweight, silicone-based mineral-chemical hybrid sunscreen that leaves a matte, pore-blurring finish — a favorite for oily and combination skin wanting SPF without shine.",
+    description:
+      "A lightweight, silicone-based mineral-chemical hybrid sunscreen that leaves a matte, pore-blurring finish — a favorite for oily and combination skin wanting SPF without shine.",
     usageSteps: [
       "Apply as the last AM step",
       "Smooth evenly over face and neck",
@@ -1361,7 +1450,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "La Roche-Posay",
     category: "cleanser",
     ingredientIds: ["ceramides", "niacinamide"],
-    fullIngredients: "Prebiotic thermal spring water, ceramide-3, niacinamide, glycerin, panthenol",
+    fullIngredients:
+      "Prebiotic thermal spring water, ceramide-3, niacinamide, glycerin, panthenol",
     origin: "France",
     description:
       "A non-foaming, dermatologist-recommended cream cleanser with ceramide-3 and niacinamide that removes makeup and impurities while maintaining the skin's natural moisture barrier and pH.",
@@ -1426,7 +1516,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Vanicream",
     category: "cleanser",
     ingredientIds: [],
-    fullIngredients: "Water, glycerin, coco-glucoside, sodium cocoyl glycinate, caprylyl glycol",
+    fullIngredients:
+      "Water, glycerin, coco-glucoside, sodium cocoyl glycinate, caprylyl glycol",
     origin: "USA",
     description:
       "A soap-free, fragrance-free cleanser formulated without common irritants that removes makeup and excess oil without drying skin — a dermatology staple for very sensitive skin.",
@@ -1537,7 +1628,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Dear, Klairs",
     category: "toner",
     ingredientIds: ["centella", "hyaluronic_acid"],
-    fullIngredients: "Licorice root extract, centella asiatica extract, beta-glucan, panthenol, sodium hyaluronate",
+    fullIngredients:
+      "Licorice root extract, centella asiatica extract, beta-glucan, panthenol, sodium hyaluronate",
     origin: "South Korea",
     description:
       "A hydrating, first-step toner formulated with licorice and centella extracts to prep and calm sensitive or dry skin before the rest of the routine.",
@@ -1558,7 +1650,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Torriden",
     category: "toner",
     ingredientIds: ["hyaluronic_acid"],
-    fullIngredients: "5 types of hyaluronic acid, panthenol, allantoin, portulaca oleracea extract, trehalose",
+    fullIngredients:
+      "5 types of hyaluronic acid, panthenol, allantoin, portulaca oleracea extract, trehalose",
     origin: "South Korea",
     description:
       "The toner companion to Torriden's Dive-In serum, using five molecular weights of hyaluronic acid to hydrate at multiple skin depths in a lightweight, non-sticky formula.",
@@ -1579,7 +1672,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "mixsoon",
     category: "toner",
     ingredientIds: [],
-    fullIngredients: "Galactomyces ferment filtrate, 1,2-hexanediol, minimal-ingredient base",
+    fullIngredients:
+      "Galactomyces ferment filtrate, 1,2-hexanediol, minimal-ingredient base",
     origin: "South Korea",
     description:
       "A minimalist toner led by galactomyces ferment filtrate, aimed at brightening and hydrating in a short, low-irritation ingredient list.",
@@ -1600,7 +1694,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "numbuzin",
     category: "toner",
     ingredientIds: ["niacinamide", "vitamin_c"],
-    fullIngredients: "Niacinamide, 3-O-ethyl ascorbic acid, ascorbic acid, glutathione, madecassoside, adenosine",
+    fullIngredients:
+      "Niacinamide, 3-O-ethyl ascorbic acid, ascorbic acid, glutathione, madecassoside, adenosine",
     origin: "South Korea",
     description:
       "A brightening first-step toner combining glutathione, vitamin C, and niacinamide to gently fade hyperpigmentation and even out dull, uneven skin tone.",
@@ -1665,7 +1760,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Thayers",
     category: "toner",
     ingredientIds: [],
-    fullIngredients: "Witch hazel (Hamamelis virginiana) extract, aloe vera leaf extract, glycerin, citric acid",
+    fullIngredients:
+      "Witch hazel (Hamamelis virginiana) extract, aloe vera leaf extract, glycerin, citric acid",
     origin: "USA",
     description:
       "A long-running, alcohol-free witch hazel toner that removes residual impurities and preps skin, built on a proprietary blend of witch hazel, aloe, and glycerin.",
@@ -1686,7 +1782,8 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "innisfree",
     category: "toner",
     ingredientIds: ["niacinamide", "hyaluronic_acid"],
-    fullIngredients: "Jeju green tea extract, niacinamide, hyaluronic acid, zinc PCA, gluconolactone",
+    fullIngredients:
+      "Jeju green tea extract, niacinamide, hyaluronic acid, zinc PCA, gluconolactone",
     origin: "South Korea",
     description:
       "A Jeju green-tea toner from innisfree formulated with niacinamide and hyaluronic acid to balance oil, refine pores, and hydrate combination and oily skin.",
@@ -1729,9 +1826,11 @@ export const PRODUCTS: SeedProduct[] = [
     brand: "Eucerin",
     category: "sunscreen",
     ingredientIds: ["spf"],
-    fullIngredients: "Homosalate, octocrylene, butyl methoxydibenzoylmethane, ethylhexyl salicylate, licorice root (glycyrrhiza inflata) extract, glycyrrhetinic acid",
+    fullIngredients:
+      "Homosalate, octocrylene, butyl methoxydibenzoylmethane, ethylhexyl salicylate, licorice root (glycyrrhiza inflata) extract, glycyrrhetinic acid",
     origin: "Germany",
-    description: "A dermocosmetic, oil-free chemical sunscreen with a matte, dry-touch finish designed specifically for oily and blemish-prone skin, from the German dermatology brand Eucerin.",
+    description:
+      "A dermocosmetic, oil-free chemical sunscreen with a matte, dry-touch finish designed specifically for oily and blemish-prone skin, from the German dermatology brand Eucerin.",
     usageSteps: [
       "Apply as the last AM step",
       "Smooth evenly over face",
@@ -1741,5 +1840,1813 @@ export const PRODUCTS: SeedProduct[] = [
     currency: "USD",
     skinTypes: ["oily", "combination"],
     concerns: ["acne", "pores"],
+  },
+  {
+    slug: "im-from-mugwort-essence",
+    name: "Mugwort Essence",
+    brand: "I'm From",
+    category: "essence",
+    ingredientIds: [],
+    fullIngredients:
+      "Artemisia Princeps (mugwort) extract, butylene glycol, glycerin, 1,2-hexanediol, sodium hyaluronate, ethylhexylglycerin",
+    origin: "South Korea",
+    description:
+      "A minimalist essence built on South Korean-grown mugwort extract, formulated without fragrance, essential oils, or alcohol to soothe and calm sensitive, redness-prone skin.",
+    usageSteps: [
+      "Apply after cleansing/toner",
+      "Pat 2-3 drops onto face and neck",
+      "Follow with serum/moisturizer",
+    ],
+    price: 23,
+    currency: "USD",
+    skinTypes: ["sensitive", "oily", "combination", "normal"],
+    concerns: ["redness", "barrier"],
+    featured: true,
+  },
+  {
+    slug: "mixsoon-bean-essence",
+    name: "Bean Essence",
+    brand: "mixsoon",
+    category: "essence",
+    ingredientIds: [],
+    fullIngredients:
+      "Water, propanediol, glycerin, Lactobacillus/soybean ferment extract, Lactobacillus/pomegranate fruit ferment extract, Saccharomyces/barley seed ferment filtrate, Lactobacillus/pear juice ferment filtrate",
+    origin: "South Korea",
+    description:
+      "A vegan, fragrance-free essence built on fermented soybean extract and barley beta-glucan, designed to hydrate and prep skin for a smooth, glass-skin finish.",
+    usageSteps: [
+      "Apply after cleansing/toner",
+      "Pat a few drops into face and neck",
+      "Follow with serum/moisturizer",
+    ],
+    officialUrl: "https://mixsoon.us",
+    price: 35,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination", "sensitive"],
+    concerns: ["hydration", "dullness"],
+  },
+  {
+    slug: "then-i-met-you-the-giving-essence",
+    name: "The Giving Essence",
+    brand: "Then I Met You",
+    category: "essence",
+    ingredientIds: ["niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Galactomyces ferment filtrate, Aspergillus ferment extract filtrate, Saccharomyces ferment filtrate, niacinamide 5%, ellagic acid, aronia melanocarpa fruit extract, sodium hyaluronate",
+    origin: "South Korea",
+    description:
+      "A fermentation-forward essence from Charlotte Cho's Then I Met You, combining 78% naturally fermented ingredients with 5% niacinamide to brighten and hydrate.",
+    usageSteps: [
+      "Apply after cleansing/toner, AM & PM",
+      "Pat 2-3 drops onto face and neck",
+      "Follow with serum/moisturizer",
+    ],
+    officialUrl: "https://thenimetyou.com",
+    price: 50,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination", "oily"],
+    concerns: ["dullness", "hydration"],
+  },
+  {
+    slug: "manyo-galac-niacin-3-0-essence",
+    name: "Galac Niacin 3.0 Essence",
+    brand: "Ma:nyo",
+    category: "essence",
+    ingredientIds: ["niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Galactomyces ferment filtrate, niacinamide 4%, panthenol, sodium hyaluronate, 1,2-hexanediol, witch hazel water",
+    origin: "South Korea",
+    description:
+      "Manyo Factory's long-running fermented essence, pairing a high concentration of galactomyces ferment filtrate with niacinamide to brighten tone and prep the skin barrier.",
+    usageSteps: [
+      "Apply after toner",
+      "Pat 2-3 drops onto face and neck",
+      "Follow with serum/moisturizer",
+    ],
+    officialUrl: "https://manyo.us",
+    price: 24,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination", "oily"],
+    concerns: ["dullness", "hydration", "pigmentation"],
+  },
+  {
+    slug: "skin1004-madagascar-centella-poremizing-fresh-ampoule",
+    name: "Madagascar Centella Poremizing Fresh Ampoule",
+    brand: "SKIN1004",
+    category: "essence",
+    ingredientIds: ["centella", "peptides", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, centella asiatica extract, pink mineral salt, tripeptide-3, acetyl hexapeptide-8, acetyl octapeptide-3, copper tripeptide-1, palmitoyl pentapeptide-4, sodium hyaluronate, panthenol",
+    origin: "South Korea",
+    description:
+      "A pore-focused ampoule combining centella asiatica with a nine-peptide complex and pink mineral salt to cleanse and refine the look of pores while hydrating.",
+    usageSteps: [
+      "Apply after toner",
+      "Pat 2-3 drops onto face and neck",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://www.skin1004.com",
+    price: 23,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal"],
+    concerns: ["pores", "hydration", "dullness"],
+  },
+  {
+    slug: "isntree-onion-newpair-b5-ampoule",
+    name: "Onion Newpair B5 Ampoule",
+    brand: "ISNTREE",
+    category: "essence",
+    ingredientIds: ["niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Allium Cepa (onion) bulb extract 85%, panthenol 5%, niacinamide, ferulic acid, caffeine, tranexamic acid, sodium hyaluronate, hydrolyzed hyaluronic acid",
+    origin: "South Korea",
+    description:
+      "A high-concentration red onion extract ampoule that pairs niacinamide and tranexamic acid to target post-acne marks, dullness, and a weakened skin barrier.",
+    usageSteps: [
+      "Apply after toner",
+      "Pat a few drops into skin",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://theisntree.com",
+    price: 27,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal"],
+    concerns: ["acne", "pigmentation", "barrier"],
+  },
+  {
+    slug: "cosrx-full-fit-propolis-light-ampoule",
+    name: "Full Fit Propolis Light Ampoule",
+    brand: "COSRX",
+    category: "essence",
+    ingredientIds: ["hyaluronic_acid"],
+    fullIngredients:
+      "Propolis extract 83%, butylene glycol, glycerin, betaine, 1,2-hexanediol, sodium hyaluronate, panthenol, arginine",
+    origin: "South Korea",
+    description:
+      "A lightweight, propolis-forward ampoule that hydrates and calms while imparting a subtle glow — a gentler follow-up to COSRX's heavier snail mucin essence.",
+    usageSteps: [
+      "Apply after toner/essence",
+      "Pat 2-3 drops onto face",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://www.cosrx.com",
+    price: 24,
+    currency: "USD",
+    skinTypes: ["sensitive", "normal", "dry", "combination"],
+    concerns: ["redness", "hydration", "dullness"],
+  },
+  {
+    slug: "missha-time-revolution-night-repair-borabit-ampoule",
+    name: "Time Revolution Night Repair Borabit Ampoule",
+    brand: "MISSHA",
+    category: "essence",
+    ingredientIds: ["retinol", "niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, bifida ferment lysate, niacinamide, retinol, sorbus commixta extract, Lactobacillus/rice ferment filtrate, sodium hyaluronate, adenosine",
+    origin: "South Korea",
+    description:
+      "A cult-favorite overnight repair ampoule often compared to prestige 'advanced night repair' serums, combining retinol and fermented extracts to target fine lines and uneven tone.",
+    usageSteps: [
+      "PM step, after toner/essence",
+      "Pat a few drops into skin",
+      "Follow with moisturizer; use SPF the next morning",
+    ],
+    officialUrl: "https://misshaus.com",
+    price: 50,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination"],
+    concerns: ["aging", "dullness"],
+  },
+  {
+    slug: "anua-peach-70-niacinamide-serum",
+    name: "Peach 70% Niacinamide Serum",
+    brand: "Anua",
+    category: "serum",
+    ingredientIds: ["niacinamide", "vitamin_c", "hyaluronic_acid", "centella"],
+    fullIngredients:
+      "Prunus Persica (peach) fruit water 70%, niacinamide, 3-O-ethyl ascorbic acid, sodium hyaluronate, centella asiatica extract, alpha-arbutin, panthenol",
+    origin: "South Korea",
+    description:
+      "Anua's breakout brightening serum, blending niacinamide with a stabilized vitamin C derivative and peach fruit water to fade dullness and even tone.",
+    usageSteps: [
+      "Apply after toner",
+      "Pat a few drops onto face",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://anua.com",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["normal", "combination", "oily", "dry"],
+    concerns: ["dullness", "pigmentation", "hydration"],
+  },
+  {
+    slug: "beauty-of-joseon-glow-serum-propolis-niacinamide",
+    name: "Glow Serum: Propolis + Niacinamide",
+    brand: "Beauty of Joseon",
+    category: "serum",
+    ingredientIds: ["niacinamide", "bha", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, dipropylene glycol, glycerin, propolis extract 60%, niacinamide 2%, betaine salicylate, sodium hyaluronate, centella asiatica extract, tocopherol",
+    origin: "South Korea",
+    description:
+      "A cushiony, glow-boosting serum pairing propolis extract with niacinamide to refine pores, hydrate, and calm reactive skin — one of Beauty of Joseon's best-known products.",
+    usageSteps: [
+      "Apply after toner",
+      "Pat a few drops onto face",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://beautyofjoseon.com",
+    price: 18,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal", "sensitive"],
+    concerns: ["pores", "dullness", "hydration"],
+    featured: true,
+  },
+  {
+    slug: "goodal-green-tangerine-vita-c-dark-spot-serum",
+    name: "Green Tangerine Vita C Dark Spot Serum",
+    brand: "Goodal",
+    category: "serum",
+    ingredientIds: ["niacinamide", "vitamin_c"],
+    fullIngredients:
+      "Citrus Tangerina (green tangerine) extract 70%, niacinamide 4%, ascorbyl glucoside, arbutin, madecassoside, centella asiatica extract",
+    origin: "South Korea",
+    description:
+      "A brightening serum built on fresh green tangerine extract with niacinamide and a vitamin C derivative to fade dark spots and even tone, formulated to be gentle enough for sensitive skin.",
+    usageSteps: [
+      "Apply after toner, AM or PM",
+      "Pat a few drops onto face",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://thegoodal.com",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["normal", "combination", "sensitive", "dry"],
+    concerns: ["pigmentation", "dullness"],
+  },
+  {
+    slug: "cosrx-the-vitamin-c-23-serum",
+    name: "The Vitamin C 23 Serum",
+    brand: "COSRX",
+    category: "serum",
+    ingredientIds: ["vitamin_c", "niacinamide", "vitamin_e", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, ascorbic acid 23%, butylene glycol, dimethicone, panthenol, 3-O-ethyl ascorbic acid, squalane, caffeine, sodium hyaluronate, niacinamide, tocotrienols, tocopherol",
+    origin: "South Korea",
+    description:
+      "A high-strength, 23% pure vitamin C serum reinforced with vitamin E and niacinamide to target dullness, uneven tone, and early signs of aging — a potent, advanced-user formula.",
+    usageSteps: [
+      "AM step, after toner",
+      "Apply a few drops to face, avoiding eye area",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://www.cosrx.com",
+    price: 18,
+    currency: "USD",
+    skinTypes: ["normal", "combination", "oily"],
+    concerns: ["dullness", "pigmentation", "aging"],
+  },
+  {
+    slug: "skinceuticals-c-e-ferulic",
+    name: "C E Ferulic",
+    brand: "SkinCeuticals",
+    category: "serum",
+    ingredientIds: ["vitamin_c", "vitamin_e", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, ethoxydiglycol, ascorbic acid 15%, glycerin, propylene glycol, laureth-23, tocopherol 1%, ferulic acid 0.5%, panthenol, sodium hyaluronate",
+    origin: "USA",
+    description:
+      "A dermatologist-favorite antioxidant serum combining 15% pure vitamin C, vitamin E, and ferulic acid to protect against environmental damage and improve the look of fine lines and photodamage.",
+    usageSteps: [
+      "AM step, after cleansing",
+      "Apply 4-5 drops to face, neck, and chest",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://www.skinceuticals.com",
+    price: 182,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination"],
+    concerns: ["aging", "pigmentation", "dullness"],
+    featured: true,
+  },
+  {
+    slug: "paulas-choice-10-niacinamide-booster",
+    name: "10% Niacinamide Booster",
+    brand: "Paula's Choice",
+    category: "serum",
+    ingredientIds: ["niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, niacinamide 10%, acetyl glucosamine, ascorbyl glucoside, sodium hyaluronate, licorice root extract, allantoin, panthenol",
+    origin: "USA",
+    description:
+      "A concentrated niacinamide booster designed to be mixed into moisturizer or used alone to visibly minimize enlarged pores and brighten uneven tone.",
+    usageSteps: [
+      "Apply after cleansing/toning, AM or PM",
+      "Apply a few drops alone or mixed into moisturizer",
+      "Follow with SPF in the AM",
+    ],
+    officialUrl: "https://www.paulaschoice.com",
+    price: 44,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal"],
+    concerns: ["pores", "dullness", "pigmentation"],
+  },
+  {
+    slug: "la-roche-posay-pure-vitamin-c10-serum",
+    name: "Pure Vitamin C10 Serum",
+    brand: "La Roche-Posay",
+    category: "serum",
+    ingredientIds: ["vitamin_c", "bha", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, ascorbic acid 10%, glycerin, sodium hyaluronate, adenosine, salicylic acid, La Roche-Posay thermal spring water",
+    origin: "France",
+    description:
+      "A pure vitamin C serum from the dermocosmetic brand La Roche-Posay, formulated with salicylic acid and hyaluronic acid to brighten tone and smooth texture for sensitive skin.",
+    usageSteps: [
+      "AM step, after cleansing",
+      "Apply a few drops to face",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://www.laroche-posay.us",
+    price: 40,
+    currency: "USD",
+    skinTypes: ["normal", "combination", "sensitive"],
+    concerns: ["dullness", "pigmentation", "aging"],
+  },
+  {
+    slug: "dear-klairs-midnight-blue-youth-activating-drop",
+    name: "Midnight Blue Youth Activating Drop",
+    brand: "Dear, Klairs",
+    category: "serum",
+    ingredientIds: ["peptides"],
+    fullIngredients:
+      "Water, butylene glycol, sh-oligopeptide-1, sh-polypeptide-1, blueberry (Vaccinium angustifolium) fruit extract, guaiazulene, adenosine",
+    origin: "South Korea",
+    description:
+      "A calming night serum combining EGF/FGF-mimicking peptides with guaiazulene (derived from German chamomile) to soothe irritation and support skin renewal overnight.",
+    usageSteps: [
+      "PM step, after toner",
+      "Apply a few drops, pat in",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://klairs.com",
+    price: 26,
+    currency: "USD",
+    skinTypes: ["sensitive", "normal", "dry", "combination"],
+    concerns: ["redness", "barrier", "aging"],
+  },
+  {
+    slug: "some-by-mi-aha-bha-pha-30-days-miracle-serum",
+    name: "AHA·BHA·PHA 30 Days Miracle Serum",
+    brand: "Some By Mi",
+    category: "serum",
+    ingredientIds: ["aha", "niacinamide", "centella"],
+    fullIngredients:
+      "Centella asiatica extract 14.51%, tea tree leaf water 10,000ppm, niacinamide, glycolic acid, lactic acid, malic acid, lactobionic acid, tea tree oil",
+    origin: "South Korea",
+    description:
+      "A blemish-focused serum blending AHA and PHA acids with a high concentration of centella and tea tree to exfoliate, unclog pores, and calm acne-prone, oily skin.",
+    usageSteps: [
+      "Apply after toner, AM or PM",
+      "Apply a few drops to face",
+      "Start every other day; follow with moisturizer",
+    ],
+    price: 20,
+    currency: "USD",
+    skinTypes: ["oily", "combination"],
+    concerns: ["acne", "pores", "dullness"],
+  },
+  {
+    slug: "purito-seoul-centella-green-level-buffet-serum",
+    name: "Centella Green Level Buffet Serum",
+    brand: "PURITO SEOUL",
+    category: "serum",
+    ingredientIds: [
+      "centella",
+      "niacinamide",
+      "peptides",
+      "hyaluronic_acid",
+      "ceramides",
+    ],
+    fullIngredients:
+      "Centella asiatica extract 49%, water, niacinamide, sodium hyaluronate, asiaticoside, asiatic acid, madecassic acid, palmitoyl peptides, ceramide NP, panthenol",
+    origin: "South Korea",
+    description:
+      "A high-concentration centella serum with niacinamide, peptides, and ceramide layered in to calm redness, hydrate, and support the moisture barrier.",
+    usageSteps: [
+      "Apply after toner",
+      "Apply a few drops, pat in",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://purito.com",
+    price: 21,
+    currency: "USD",
+    skinTypes: ["sensitive", "oily", "dry", "combination", "normal"],
+    concerns: ["redness", "barrier", "hydration"],
+  },
+  {
+    slug: "medicube-triple-collagen-serum",
+    name: "Triple Collagen Serum",
+    brand: "Medicube",
+    category: "serum",
+    ingredientIds: ["niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, glycerin, butylene glycol, niacinamide, hydrolyzed collagen, soluble collagen, collagen extract, atelocollagen, sodium hyaluronate, adenosine",
+    origin: "South Korea",
+    description:
+      "A lightweight serum built around a triple-collagen complex and niacinamide to plump, firm, and hydrate dull, tired-looking skin.",
+    usageSteps: [
+      "Apply after toner, AM or PM",
+      "Apply a few drops, pat in",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://medicube.us",
+    price: 23,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination"],
+    concerns: ["aging", "dullness", "hydration"],
+  },
+  {
+    slug: "dr-jart-cicapair-intensive-soothing-repair-serum",
+    name: "Cicapair Intensive Soothing Repair Serum",
+    brand: "Dr. Jart+",
+    category: "serum",
+    ingredientIds: ["centella", "peptides"],
+    fullIngredients:
+      "Water, glycerin, butylene glycol, propanediol, allantoin, asiaticoside, madecassic acid, asiatic acid, centella asiatica leaf extract, palmitoyl tripeptide-8",
+    origin: "South Korea",
+    description:
+      "A cica-complex serum from Dr. Jart+'s Cicapair line, formulated to reinforce the skin barrier and calm visible redness for sensitive, reactive skin.",
+    usageSteps: [
+      "Apply after toner",
+      "Apply a few drops, pat in",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://www.drjart.com",
+    price: 54,
+    currency: "USD",
+    skinTypes: ["sensitive", "normal", "combination"],
+    concerns: ["redness", "barrier"],
+  },
+  {
+    slug: "the-ordinary-alpha-arbutin-2-ha",
+    name: "Alpha Arbutin 2% + HA",
+    brand: "The Ordinary",
+    category: "serum",
+    ingredientIds: ["hyaluronic_acid"],
+    fullIngredients:
+      "Water, alpha-arbutin 2%, propanediol, hydrolyzed sodium hyaluronate, ergothioneine, citric acid",
+    origin: "Canada",
+    description:
+      "A high-strength, purified alpha arbutin serum paired with hyaluronic acid to visibly even skin tone and fade dark spots.",
+    usageSteps: [
+      "Apply after cleansing/toning, AM and/or PM",
+      "Apply a few drops to face",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://theordinary.com",
+    price: 10,
+    currency: "USD",
+    skinTypes: ["normal", "combination", "oily", "dry"],
+    concerns: ["pigmentation", "dullness"],
+  },
+  {
+    slug: "numbuzin-no5-glutathione-vitamin-concentrated-serum",
+    name: "No.5+ Glutathione Vitamin Concentrated Serum",
+    brand: "numbuzin",
+    category: "serum",
+    ingredientIds: ["niacinamide", "vitamin_c", "hyaluronic_acid"],
+    fullIngredients:
+      "Vaccinium vitis-idaea fruit extract, niacinamide, tranexamic acid 4%, glutathione, 3-O-ethyl ascorbic acid, ascorbic acid, ascorbyl glucoside, sodium hyaluronate",
+    origin: "South Korea",
+    description:
+      "A brightening serum combining glutathione, two forms of vitamin C, niacinamide, and tranexamic acid to target dark spots and dullness for a radiant tone.",
+    usageSteps: [
+      "Apply after toner, AM or PM",
+      "Pat a few drops into skin",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://us.numbuzin.com",
+    price: 26,
+    currency: "USD",
+    skinTypes: ["normal", "combination", "dry"],
+    concerns: ["pigmentation", "dullness"],
+  },
+  {
+    slug: "dr-ceuracle-pdrn-retinol-shot-ampoule",
+    name: "PDRN & Retinol Shot Ampoule",
+    brand: "Dr.Ceuracle",
+    category: "serum",
+    ingredientIds: ["retinol", "centella", "hyaluronic_acid", "ceramides"],
+    fullIngredients:
+      "Water, glycerin, dipropylene glycol, squalane, coptis japonica root extract, hydrolyzed sodium hyaluronate, centella asiatica extract, ceramide NP, retinol, sodium DNA",
+    origin: "South Korea",
+    description:
+      "A skin-booster ampoule pairing retinol with PDRN (a salmon DNA-derived polynucleotide) and micro spicules to support cell turnover and a smoother, 'glass skin' texture.",
+    usageSteps: [
+      "PM step, after toner",
+      "Apply a few drops, pat in gently",
+      "Follow with moisturizer; always use SPF the next morning",
+    ],
+    price: 22,
+    currency: "USD",
+    skinTypes: ["normal", "combination", "dry"],
+    concerns: ["aging", "dullness"],
+  },
+  {
+    slug: "torriden-balanceful-cica-serum",
+    name: "Balanceful Cica Serum",
+    brand: "Torriden",
+    category: "serum",
+    ingredientIds: ["centella", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, dipropylene glycol, butylene glycol, gluconolactone, panthenol, allantoin, sodium hyaluronate, centella asiatica extract, madecassoside, asiatic acid, madecassic acid, asiaticoside",
+    origin: "South Korea",
+    description:
+      "A hypoallergenic, sub-acidic serum built on Torriden's five-type centella complex (T-TECA) to soothe irritation and gently exfoliate with gluconolactone (PHA).",
+    usageSteps: [
+      "Apply after toner, AM & PM",
+      "Pat a few drops into skin",
+      "Follow with moisturizer",
+    ],
+    price: 19,
+    currency: "USD",
+    skinTypes: ["sensitive", "oily", "dry", "combination", "normal"],
+    concerns: ["redness", "hydration", "barrier"],
+  },
+  {
+    slug: "aestura-atobarrier365-hydro-cera-ha-serum",
+    name: "ATOBARRIER365 Hydro Cera-HA Serum",
+    brand: "Aestura",
+    category: "serum",
+    ingredientIds: ["niacinamide", "hyaluronic_acid", "vitamin_c", "ceramides"],
+    fullIngredients:
+      "Water, butylene glycol, glycerin, niacinamide, sodium hyaluronate, 3-O-ethyl ascorbic acid, ceramide NP, cholesterol, panthenol, adenosine",
+    origin: "South Korea",
+    description:
+      "A barrier-focused serum from the dermocosmetic brand Aestura, built on the patented Cera-HA complex to deliver long-lasting hydration alongside niacinamide and ceramide.",
+    usageSteps: [
+      "Apply after toner, AM & PM",
+      "Apply a few drops, pat in",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://int.aestura.com",
+    price: 26,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal", "combination"],
+    concerns: ["barrier", "hydration", "dullness"],
+  },
+  {
+    slug: "sulwhasoo-first-care-activating-serum-vi",
+    name: "First Care Activating Serum VI",
+    brand: "Sulwhasoo",
+    category: "serum",
+    ingredientIds: [],
+    fullIngredients:
+      "Water, butylene glycol, glycerin, betaine, ophiopogon japonicus root extract, licorice root extract, honey, walnut seed extract, camellia sinensis leaf extract, JAUM Balancing Complex botanical blend",
+    origin: "South Korea",
+    description:
+      "Sulwhasoo's iconic first-step serum, built around Korean herbal extracts in its JAUM Balancing Complex to prep and harmonize skin before the rest of the routine.",
+    usageSteps: [
+      "Apply after cleansing, AM & PM",
+      "Sweep onto a cotton pad or pat directly into skin",
+      "Follow with serum/moisturizer",
+    ],
+    officialUrl: "https://us.sulwhasoo.com",
+    price: 68,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination"],
+    concerns: ["hydration", "dullness", "aging"],
+  },
+  {
+    slug: "numbuzin-no5-goodbye-blemish-serum",
+    name: "No.5 Goodbye Blemish Serum",
+    brand: "numbuzin",
+    category: "serum",
+    ingredientIds: ["niacinamide", "vitamin_c", "centella", "hyaluronic_acid"],
+    fullIngredients:
+      "Hippophae rhamnoides extract, niacinamide, ascorbyl glucoside, ascorbic acid, 3-O-ethyl ascorbic acid, centella asiatica extract, sodium hyaluronate, panthenol",
+    origin: "South Korea",
+    description:
+      "A vitamin-tree-extract serum from numbuzin's No.5 line, combining three vitamin C forms with niacinamide and centella to fade post-acne marks and even tone.",
+    usageSteps: [
+      "Apply after toner, AM or PM",
+      "Apply a few drops to face",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://us.numbuzin.com",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal"],
+    concerns: ["acne", "pigmentation", "dullness"],
+  },
+  {
+    slug: "the-ordinary-multi-peptide-ha-serum",
+    name: "Multi-Peptide + HA Serum",
+    brand: "The Ordinary",
+    category: "serum",
+    ingredientIds: ["peptides", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, glycerin, Lactococcus ferment lysate, acetyl hexapeptide-8, pentapeptide-18, palmitoyl tripeptide-1, palmitoyl tetrapeptide-7, sodium hyaluronate",
+    origin: "Canada",
+    description:
+      "Formerly known as 'Buffet,' a multi-technology peptide serum combining Matrixyl 3000 and other peptide complexes with hyaluronic acid to visibly smooth texture and address multiple signs of aging.",
+    usageSteps: [
+      "Apply after cleansing/toning, AM and/or PM",
+      "Apply a few drops to face",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://theordinary.com",
+    price: 19,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination"],
+    concerns: ["aging", "hydration"],
+  },
+  {
+    slug: "haruharu-wonder-black-rice-hyaluronic-anti-wrinkle-serum",
+    name: "Black Rice Hyaluronic Anti-Wrinkle Serum",
+    brand: "Haruharu Wonder",
+    category: "serum",
+    ingredientIds: ["hyaluronic_acid"],
+    fullIngredients:
+      "Water, glycerin, camellia japonica seed oil, oryza sativa (rice) extract 10,000ppm, hyaluronic acid 2,000ppm, panax ginseng root extract",
+    origin: "South Korea",
+    description:
+      "A 95%-naturally-derived milky serum built on fermented black rice and hyaluronic acid to firm, soothe, and hydrate for a plump, radiant look.",
+    usageSteps: [
+      "Apply after toner",
+      "Pat a few drops into skin",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://haruharuusa.com",
+    price: 27,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination", "sensitive"],
+    concerns: ["aging", "hydration"],
+  },
+  {
+    slug: "abib-heartleaf-teca-capsule-serum-calming-drop",
+    name: "Heartleaf TECA Capsule Serum Calming Drop",
+    brand: "Abib",
+    category: "serum",
+    ingredientIds: ["centella", "niacinamide", "hyaluronic_acid", "ceramides"],
+    fullIngredients:
+      "Centella asiatica extract (TECA), houttuynia cordata (heartleaf) extract, niacinamide, panthenol, hyaluronic acid, ceramide, allantoin, madecassoside",
+    origin: "South Korea",
+    description:
+      "A calming serum built on TECA (a purified centella complex) and Abib's heartleaf elixir, clinically tested to reduce inflammatory blemishes over four weeks.",
+    usageSteps: [
+      "Apply after toner, AM & PM",
+      "Apply a few drops, pat in",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://en.abib.com",
+    price: 32,
+    currency: "USD",
+    skinTypes: ["sensitive", "oily", "combination", "normal"],
+    concerns: ["redness", "acne", "barrier"],
+  },
+  {
+    slug: "skin1004-probio-cica-intensive-ampoule",
+    name: "Probio-Cica Intensive Ampoule",
+    brand: "SKIN1004",
+    category: "serum",
+    ingredientIds: ["centella", "ceramides"],
+    fullIngredients:
+      "Centella asiatica extract, ceramide NP, phytosterol, fatty acid complex (3:1:1 ratio), panthenol, madecassoside",
+    origin: "South Korea",
+    description:
+      "An ampoule pairing centella with a ceramide-phytosterol-fatty acid complex in a dermatologist-informed 3:1:1 ratio to lock in moisture and support a compromised barrier.",
+    usageSteps: [
+      "Apply after toner",
+      "Pat a few drops into skin",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://www.skin1004.com",
+    price: 20,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal", "combination"],
+    concerns: ["barrier", "hydration", "redness"],
+  },
+  {
+    slug: "cerave-skin-renewing-vitamin-c-serum",
+    name: "Skin Renewing Vitamin C Serum",
+    brand: "CeraVe",
+    category: "serum",
+    ingredientIds: ["vitamin_c", "hyaluronic_acid", "ceramides", "vitamin_e"],
+    fullIngredients:
+      "Water, ascorbic acid 10%, glycerin, dimethicone, panthenol, ceramide NP, ceramide AP, ceramide EOP, sodium hyaluronate, tocopheryl acetate",
+    origin: "USA",
+    description:
+      "A dermatologist-developed vitamin C serum pairing 10% L-ascorbic acid with three essential ceramides and hyaluronic acid to brighten tone without compromising the skin barrier.",
+    usageSteps: [
+      "AM step, after cleansing",
+      "Apply a few drops to face",
+      "Follow with moisturizer/SPF",
+    ],
+    officialUrl: "https://www.cerave.com",
+    price: 25,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination"],
+    concerns: ["dullness", "pigmentation", "barrier"],
+  },
+  {
+    slug: "glow-recipe-watermelon-glow-niacinamide-dew-drops",
+    name: "Watermelon Glow Niacinamide Dew Drops",
+    brand: "Glow Recipe",
+    category: "serum",
+    ingredientIds: ["niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Water, propanediol, glycereth-26, glycerin, niacinamide, citrullus lanatus (watermelon) fruit extract, sodium hyaluronate, moringa oleifera seed oil",
+    origin: "USA",
+    description:
+      "A liquid-highlighter-serum hybrid that uses light-reflecting watermelon extract and niacinamide to create a natural dewy glow while hydrating with hyaluronic acid.",
+    usageSteps: [
+      "Apply after serum/moisturizer, AM or PM",
+      "Press 2-3 drops onto high points of the face or all over",
+      "Can be mixed with foundation or worn alone",
+    ],
+    officialUrl: "https://www.glowrecipe.com",
+    price: 34,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination", "oily"],
+    concerns: ["dullness", "hydration"],
+  },
+  {
+    slug: "round-lab-1025-dokdo-cream",
+    name: "1025 Dokdo Cream",
+    brand: "Round Lab",
+    category: "moisturizer",
+    ingredientIds: ["hyaluronic_acid", "ceramides"],
+    fullIngredients:
+      "Deep sea water, triple hyaluronic acid (hyaluronic acid, hydrolyzed hyaluronic acid, sodium hyaluronate), quintuple ceramide complex (NP, AP, AS, EOP, NS), shea butter, beta-glucan",
+    origin: "South Korea",
+    description:
+      "A lightweight, fragrance-free gel-cream built around a five-ceramide complex and triple hyaluronic acid, formulated with Dokdo deep-sea water for sensitive, redness-prone, and acne-prone skin.",
+    usageSteps: [
+      "Apply as the final leave-on layer, AM/PM",
+      "Take an appropriate amount and spread evenly over face",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://roundlab.com",
+    price: 26,
+    currency: "USD",
+    skinTypes: ["oily", "dry", "combination", "normal", "sensitive"],
+    concerns: ["hydration", "barrier", "redness"],
+  },
+  {
+    slug: "cosrx-balancium-comfort-ceramide-cream",
+    name: "Balancium Comfort Ceramide Cream",
+    brand: "COSRX",
+    category: "moisturizer",
+    ingredientIds: ["centella", "ceramides", "hyaluronic_acid"],
+    fullIngredients:
+      "Centella asiatica leaf water, ceramide NP, sodium hyaluronate, asiaticoside, asiatic acid, madecassic acid, panthenol",
+    origin: "South Korea",
+    description:
+      "A barrier-repair moisturizer built around centella asiatica leaf water and ceramide NP, formulated to calm redness and reinforce a compromised skin barrier.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Scoop a pea-sized amount",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://cosrx.com",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal"],
+    concerns: ["barrier", "redness", "hydration"],
+  },
+  {
+    slug: "im-from-rice-cream",
+    name: "Rice Cream",
+    brand: "I'm From",
+    category: "moisturizer",
+    ingredientIds: ["ceramides", "hyaluronic_acid"],
+    fullIngredients:
+      "41% rice bran water, ceramide NP, sodium hyaluronate, hydrolyzed hyaluronic acid, shea butter, rice bran oil, adenosine",
+    origin: "South Korea",
+    description:
+      "A rich, glow-boosting cream built on a high concentration of rice bran water and ceramide NP, formulated to soften rough texture and support the moisture barrier.",
+    usageSteps: [
+      "Apply as the final leave-on layer, AM/PM",
+      "Take an appropriate amount and spread evenly",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://theimfrom.com",
+    price: 34,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination"],
+    concerns: ["hydration", "barrier", "dullness"],
+  },
+  {
+    slug: "skin1004-madagascar-centella-cream",
+    name: "Madagascar Centella Cream",
+    brand: "SKIN1004",
+    category: "moisturizer",
+    ingredientIds: ["centella"],
+    fullIngredients:
+      "Centella asiatica extract, TECA complex (madecassoside, asiaticoside, madecassic acid, asiatic acid), panthenol, shea butter",
+    origin: "South Korea",
+    description:
+      "A soothing daily moisturizer built around centella asiatica extract and its TECA complex, formulated to calm and nourish sensitive, easily irritated skin.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Take an appropriate amount and spread evenly over face",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://www.skin1004.com",
+    price: 18,
+    currency: "USD",
+    skinTypes: ["sensitive", "dry", "normal", "combination", "oily"],
+    concerns: ["redness", "hydration", "barrier"],
+  },
+  {
+    slug: "goodal-green-tangerine-vita-c-dark-spot-care-cream",
+    name: "Green Tangerine Vita C Dark Spot Care Cream",
+    brand: "Goodal",
+    category: "moisturizer",
+    ingredientIds: ["niacinamide", "vitamin_c"],
+    fullIngredients:
+      "68% green tangerine (Citrus Tangerina) extract, niacinamide 4%, sodium ascorbyl phosphate, panthenol, adenosine, meadowfoam seed oil",
+    origin: "South Korea",
+    description:
+      "A brightening moisturizer combining a high concentration of green tangerine extract with niacinamide and a stable vitamin C derivative to fade dark spots and even tone.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Take an appropriate amount and spread evenly",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://thegoodal.com",
+    price: 28,
+    currency: "USD",
+    skinTypes: ["normal", "combination", "dry"],
+    concerns: ["pigmentation", "dullness"],
+  },
+  {
+    slug: "belif-the-true-cream-aqua-bomb",
+    name: "The True Cream Aqua Bomb",
+    brand: "belif",
+    category: "moisturizer",
+    ingredientIds: ["niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Sodium hyaluronate, niacinamide, herbal blend (oat kernel extract, calendula flower extract, raspberry leaf extract, chickweed extract), panthenol",
+    origin: "South Korea",
+    description:
+      "belif's iconic gel-cream, formulated with a proprietary herbal complex plus hyaluronic acid and niacinamide, for an intense burst of hydration with a lightweight, bouncy finish.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Scoop a pea-to-nickel-size amount",
+      "Massage in as the final layer",
+    ],
+    officialUrl: "https://belifbrand.com",
+    price: 38,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal", "dry"],
+    concerns: ["hydration", "dullness"],
+    featured: true,
+  },
+  {
+    slug: "laneige-water-bank-blue-hyaluronic-cream",
+    name: "Water Bank Blue Hyaluronic Cream",
+    brand: "Laneige",
+    category: "moisturizer",
+    ingredientIds: ["hyaluronic_acid", "ceramides"],
+    fullIngredients:
+      "Squalane, hydrolyzed hyaluronic acid, ceramide NP, Undaria pinnatifida (sea algae) extract, glycerin, butylene glycol",
+    origin: "South Korea",
+    description:
+      "A gel-cream moisturizer built on Laneige's signature Blue Hyaluronic Acid complex and ceramide NP, formulated for long-lasting hydration on normal-to-dry, sensitive skin.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Take an appropriate amount and spread evenly over face",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://us.laneige.com",
+    price: 38,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal"],
+    concerns: ["hydration", "barrier"],
+  },
+  {
+    slug: "innisfree-green-tea-seed-hyaluronic-cream",
+    name: "Green Tea Seed Hyaluronic Cream",
+    brand: "innisfree",
+    category: "moisturizer",
+    ingredientIds: ["hyaluronic_acid", "ceramides"],
+    fullIngredients:
+      "Jeju green tea leaf water, camellia sinensis seed oil, squalane, ceramide, sodium hyaluronate, cholesterol, panthenol",
+    origin: "South Korea",
+    description:
+      "Innisfree's best-selling cream, built on a Green Tea Barrier Complex of green tea seed oil, squalane, and ceramide, formulated with five types of hyaluronic acid to lock in moisture.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Take an appropriate amount and spread evenly",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://us.innisfree.com",
+    price: 32,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination"],
+    concerns: ["hydration", "barrier"],
+  },
+  {
+    slug: "klairs-rich-moist-soothing-cream",
+    name: "Rich Moist Soothing Cream",
+    brand: "Dear, Klairs",
+    category: "moisturizer",
+    ingredientIds: ["centella", "ceramides", "hyaluronic_acid", "vitamin_e"],
+    fullIngredients:
+      "Yeast-derived beta-glucan, ceramide NP, shea butter, jojoba seed oil, centella asiatica extract, sodium hyaluronate, tocopheryl acetate",
+    origin: "South Korea",
+    description:
+      "A spreadable, non-sticky cream combining beta-glucan, ceramide NP, and centella asiatica extract, formulated for sensitive, dry skin that needs richer barrier support.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Take an appropriate amount and spread evenly over face",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://klairs.com",
+    price: 25,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal"],
+    concerns: ["barrier", "hydration", "redness"],
+  },
+  {
+    slug: "cerave-moisturizing-cream",
+    name: "Moisturizing Cream",
+    brand: "CeraVe",
+    category: "moisturizer",
+    ingredientIds: ["ceramides", "hyaluronic_acid"],
+    fullIngredients:
+      "Three essential ceramides (NP, AP, EOP), hyaluronic acid, petrolatum, glycerin, MVE delivery technology",
+    origin: "USA",
+    description:
+      "A dermatologist-developed, fragrance-free rich cream combining three essential ceramides with hyaluronic acid and petrolatum, formulated for very dry to normal skin on the face and body.",
+    usageSteps: [
+      "Apply to clean skin, AM and/or PM",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://www.cerave.com",
+    price: 19,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal"],
+    concerns: ["hydration", "barrier"],
+    featured: true,
+  },
+  {
+    slug: "la-roche-posay-toleriane-double-repair-face-moisturizer",
+    name: "Toleriane Double Repair Face Moisturizer",
+    brand: "La Roche-Posay",
+    category: "moisturizer",
+    ingredientIds: ["ceramides", "niacinamide"],
+    fullIngredients:
+      "Ceramide-3, niacinamide, glycerin, squalane, La Roche-Posay Prebiotic Thermal Water, dimethicone",
+    origin: "France",
+    description:
+      "A dermatologist-developed oil-free moisturizer pairing ceramide-3 with niacinamide and prebiotic thermal water, designed to repair the skin barrier within an hour and hydrate for 48 hours.",
+    usageSteps: [
+      "Apply to clean skin, AM and/or PM",
+      "Smooth evenly over face and neck",
+      "Follow with SPF in the morning",
+    ],
+    officialUrl: "https://www.laroche-posay.us",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "sensitive", "combination", "oily"],
+    concerns: ["barrier", "hydration"],
+  },
+  {
+    slug: "first-aid-beauty-ultra-repair-cream",
+    name: "Ultra Repair Cream Intense Hydration",
+    brand: "First Aid Beauty",
+    category: "moisturizer",
+    ingredientIds: ["ceramides"],
+    fullIngredients:
+      "Colloidal oatmeal, shea butter, ceramide NP, squalane, allantoin, licorice root extract, feverfew extract",
+    origin: "USA",
+    description:
+      "A clinically tested, whipped colloidal oatmeal cream formulated to strengthen the skin barrier and relieve very dry, distressed, or eczema-prone skin on face and body.",
+    usageSteps: [
+      "Apply to clean skin, AM and/or PM",
+      "Massage in until absorbed",
+      "Reapply as needed to dry patches",
+    ],
+    officialUrl: "https://www.firstaidbeauty.com",
+    price: 38,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal"],
+    concerns: ["barrier", "hydration", "redness"],
+  },
+  {
+    slug: "torriden-dive-in-low-molecular-hyaluronic-acid-cream",
+    name: "DIVE-IN Low Molecular Hyaluronic Acid Cream",
+    brand: "Torriden",
+    category: "moisturizer",
+    ingredientIds: ["hyaluronic_acid", "ceramides", "centella"],
+    fullIngredients:
+      "Five types of hyaluronic acid, ceramide NP, madecassoside, madecassic acid, jojoba seed oil, macadamia seed oil, beta-glucan",
+    origin: "South Korea",
+    description:
+      "A cream companion to Torriden's hyaluronic acid serum, layering five molecular weights of hyaluronic acid with ceramide NP and centella derivatives to seal in hydration.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM & PM",
+      "Take an appropriate amount and spread evenly over face",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://torriden.us",
+    price: 24,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal", "combination", "oily"],
+    concerns: ["hydration", "barrier"],
+  },
+  {
+    slug: "isntree-hyaluronic-acid-moist-cream",
+    name: "Hyaluronic Acid Moist Cream",
+    brand: "ISNTREE",
+    category: "moisturizer",
+    ingredientIds: ["hyaluronic_acid"],
+    fullIngredients:
+      "10 types of hyaluronic acid, shea butter, argan oil, apricot kernel oil, safflower seed oil, beta-glucan",
+    origin: "South Korea",
+    description:
+      "A lightweight, fragrance-free cream layering ten types of hyaluronic acid with argan and apricot oils, designed to hydrate without a heavy or greasy finish.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Take an appropriate amount and spread evenly",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://theisntree.com",
+    price: 23,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination", "sensitive", "oily"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "aestura-atobarrier365-hydro-soothing-cream",
+    name: "ATOBARRIER365 Hydro Soothing Cream",
+    brand: "Aestura",
+    category: "moisturizer",
+    ingredientIds: [],
+    fullIngredients:
+      "Squalane, cholesterol, phytosphingosine, hydroxypropyl bispalmitamide MEA, carnauba wax extract, allantoin",
+    origin: "South Korea",
+    description:
+      "A lighter, gel-textured version of Aestura's barrier-repair cream line, using squalane and lipid-mimicking ingredients to soothe and hydrate compromised skin.",
+    usageSteps: [
+      "Apply as the final leave-on layer, AM/PM",
+      "Apply generously over face and neck",
+      "Massage in",
+    ],
+    officialUrl: "https://int.aestura.com",
+    price: 28,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal"],
+    concerns: ["barrier", "hydration", "redness"],
+  },
+  {
+    slug: "haruharu-wonder-black-rice-hyaluronic-cream",
+    name: "Black Rice Hyaluronic Cream (Unscented)",
+    brand: "Haruharu Wonder",
+    category: "moisturizer",
+    ingredientIds: ["hyaluronic_acid"],
+    fullIngredients:
+      "Korean black rice extract 10,000ppm, hyaluronic acid 200ppm, evening primrose oil, panax ginseng root extract, safflower seed oil",
+    origin: "South Korea",
+    description:
+      "A 95%-naturally-derived cream built around Korean black rice extract and evening primrose oil, formulated to firm and deeply hydrate without fragrance.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Take an appropriate amount and spread evenly over face",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://haruharuusa.com",
+    price: 24,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination", "sensitive"],
+    concerns: ["hydration", "aging"],
+  },
+  {
+    slug: "vanicream-moisturizing-cream",
+    name: "Moisturizing Cream",
+    brand: "Vanicream",
+    category: "moisturizer",
+    ingredientIds: [],
+    fullIngredients:
+      "Purified water, petrolatum, sorbitol, cetearyl alcohol, propylene glycol, ceteareth-20, simethicone, glyceryl stearate",
+    origin: "USA",
+    description:
+      "An 11-ingredient, dye- and fragrance-free cream developed for red, irritated, cracking, or itchy skin, formulated without common allergens or masking fragrance.",
+    usageSteps: [
+      "Apply to clean skin, AM and/or PM",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://www.vanicream.com",
+    price: 17,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal"],
+    concerns: ["barrier", "hydration", "redness"],
+  },
+  {
+    slug: "pyunkang-yul-nutrition-cream",
+    name: "Nutrition Cream",
+    brand: "Pyunkang Yul",
+    category: "moisturizer",
+    ingredientIds: ["hyaluronic_acid"],
+    fullIngredients:
+      "Astragalus membranaceus root extract, shea butter, macadamia seed oil, beeswax, sodium hyaluronate",
+    origin: "South Korea",
+    description:
+      "A richer, oil-and-beeswax-based moisturizer from Pyunkang Yul's minimalist line, formulated to deeply nourish and seal in moisture for dry and combination skin.",
+    usageSteps: [
+      "Apply as the final leave-on step, AM/PM",
+      "Take an appropriate amount and spread evenly",
+      "Massage in until absorbed",
+    ],
+    officialUrl: "https://pyunkangyul.us",
+    price: 19,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination"],
+    concerns: ["hydration", "barrier"],
+  },
+  {
+    slug: "biossance-100-squalane-oil",
+    name: "100% Squalane Oil",
+    brand: "Biossance",
+    category: "oil",
+    ingredientIds: [],
+    fullIngredients: "100% squalane (sugarcane-derived)",
+    origin: "USA",
+    description:
+      "A single-ingredient, sugarcane-derived squalane oil that is bioidentical to skin's natural lipids, formulated as a fast-absorbing, weightless moisturizer for face and body.",
+    usageSteps: [
+      "Final AM/PM step, or mix into moisturizer",
+      "Press 2-3 drops onto the face",
+      "Can be layered over moisturizer to seal in hydration",
+    ],
+    officialUrl: "https://www.biossance.com",
+    price: 34,
+    currency: "USD",
+    skinTypes: ["oily", "dry", "combination", "normal", "sensitive"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "josie-maran-100-pure-argan-oil",
+    name: "The Original 100% Pure Argan Oil",
+    brand: "Josie Maran",
+    category: "oil",
+    ingredientIds: [],
+    fullIngredients: "100% pure, organic Argania spinosa (argan) kernel oil",
+    origin: "USA",
+    description:
+      "A single-ingredient, certified organic argan oil marketed to nourish and condition dry skin and hair, from the brand credited with popularizing argan oil in the US market.",
+    usageSteps: [
+      "Final PM step, or mix into moisturizer",
+      "Warm 2-3 drops between palms",
+      "Press gently over face and neck",
+    ],
+    officialUrl: "https://www.josiemaran.com",
+    price: 48,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination"],
+    concerns: ["hydration", "dullness"],
+  },
+  {
+    slug: "trilogy-certified-organic-rosehip-oil",
+    name: "Certified Organic Rosehip Oil",
+    brand: "Trilogy",
+    category: "oil",
+    ingredientIds: [],
+    fullIngredients: "100% certified organic Rosa canina (rosehip) seed oil",
+    origin: "New Zealand",
+    description:
+      "An award-winning, single-ingredient certified organic rosehip oil, cold-pressed and unrefined, marketed to help fade the look of scars and even skin tone over time.",
+    usageSteps: [
+      "Apply as the final step, AM or PM",
+      "Press 2-3 drops between palms and press onto face",
+      "Can be mixed into moisturizer",
+    ],
+    officialUrl: "https://www.trilogyproducts.com",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination"],
+    concerns: ["aging", "pigmentation", "dullness"],
+  },
+  {
+    slug: "aromatica-organic-rosehip-oil",
+    name: "Organic Rosehip Oil",
+    brand: "Aromatica",
+    category: "oil",
+    ingredientIds: [],
+    fullIngredients:
+      "100% ECOCERT-certified organic, cold-pressed Rosa canina (rosehip) fruit oil",
+    origin: "South Korea",
+    description:
+      "A single-ingredient, cold-pressed organic rosehip oil from Korean clean-beauty brand Aromatica, left undeodorized to preserve its natural nutrient content.",
+    usageSteps: [
+      "Apply as the final step, AM or PM",
+      "Press 2-3 drops between palms and press onto face",
+      "Can be mixed into moisturizer for extra nourishment",
+    ],
+    officialUrl: "https://global.aromatica.co",
+    price: 24,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination"],
+    concerns: ["aging", "dullness"],
+  },
+  {
+    slug: "the-ordinary-100-plant-derived-squalane",
+    name: "100% Plant-Derived Squalane",
+    brand: "The Ordinary",
+    category: "oil",
+    ingredientIds: [],
+    fullIngredients: "100% plant-derived squalane (sugarcane-derived)",
+    origin: "Canada",
+    description:
+      "A single-ingredient, sugarcane-derived squalane formulated to support surface-level hydration and the skin's moisture barrier, at The Ordinary's characteristic low price point.",
+    usageSteps: [
+      "Apply as the final step, AM or PM, on skin or hair",
+      "Press 2-3 drops between palms and press onto face",
+      "Can be mixed into moisturizer",
+    ],
+    officialUrl: "https://theordinary.com",
+    price: 10,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination", "oily"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "herbivore-botanicals-phoenix-facial-oil",
+    name: "Phoenix Rosehip + Sea Buckthorn Deep Renewal Facial Oil",
+    brand: "Herbivore Botanicals",
+    category: "oil",
+    ingredientIds: ["vitamin_e"],
+    fullIngredients:
+      "Jojoba seed oil, rosehip seed oil, meadowfoam seed oil, chia seed oil, CoQ10, sea buckthorn oil, tocopherol (vitamin E), rose absolute",
+    origin: "USA",
+    description:
+      "A luxury blend of rosehip and sea buckthorn oils with CoQ10 and vitamin E, formulated to rehydrate and rejuvenate dull, aging skin at the surface level.",
+    usageSteps: [
+      "Final PM step after moisturizer",
+      "Warm 2-3 drops between palms",
+      "Press gently over face and neck",
+    ],
+    officialUrl: "https://www.herbivorebotanicals.com",
+    price: 88,
+    currency: "USD",
+    skinTypes: ["dry", "normal"],
+    concerns: ["aging", "dullness", "hydration"],
+  },
+  {
+    slug: "goodal-green-tangerine-vita-c-dark-circle-eye-cream",
+    name: "Green Tangerine Vita C Dark Circle Eye Cream",
+    brand: "Goodal",
+    category: "eye",
+    ingredientIds: ["vitamin_c", "niacinamide"],
+    fullIngredients:
+      "Citrus Tangerina (green tangerine) extract 54%, niacinamide, ethyl ascorbyl ether (vitamin C derivative, 2000ppm), arbutin, adenosine",
+    origin: "South Korea",
+    description:
+      "A brightening eye cream built on a high concentration of green tangerine extract and a stabilized vitamin C derivative, formulated to target dark circles and dullness around the eyes.",
+    usageSteps: [
+      "Apply AM and/or PM as the last step",
+      "Dot gently around the orbital bone",
+      "Pat in with ring finger until absorbed",
+    ],
+    officialUrl: "https://goodalskincare.com",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination"],
+    concerns: ["pigmentation", "dullness"],
+  },
+  {
+    slug: "belif-the-true-cream-moisturizing-eye-bomb",
+    name: "The True Cream Moisturizing Eye Bomb",
+    brand: "belif",
+    category: "eye",
+    ingredientIds: ["peptides", "ceramides"],
+    fullIngredients:
+      "Squalane, ceramide NP, panthenol, bakuchiol, caffeine, centella asiatica leaf extract, peptides",
+    origin: "South Korea",
+    description:
+      "A rich, ceramide-and-bakuchiol eye cream that firms and moisturizes the eye area, formulated with caffeine to help reduce the look of puffiness.",
+    usageSteps: [
+      "Apply AM and/or PM as the last step",
+      "Dot a small amount around the orbital bone",
+      "Gently pat in until absorbed",
+    ],
+    officialUrl: "https://www.belifusa.com",
+    price: 38,
+    currency: "USD",
+    skinTypes: ["dry", "normal", "combination"],
+    concerns: ["aging", "hydration"],
+    featured: true,
+  },
+  {
+    slug: "missha-time-revolution-primestem-100-eye-cream",
+    name: "Time Revolution Primestem 100 Eye Cream",
+    brand: "MISSHA",
+    category: "eye",
+    ingredientIds: ["niacinamide", "ceramides", "vitamin_e"],
+    fullIngredients:
+      "Helichrysum italicum flower water, niacinamide, angelica archangelica callus extract, ceramide, tocopherol (vitamin E), shea butter",
+    origin: "South Korea",
+    description:
+      "A firming eye cream built around plant stem cell-derived angelica callus extract, paired with niacinamide and ceramides to lift, hydrate, and strengthen the eye area's barrier.",
+    usageSteps: [
+      "Apply AM and/or PM as the last step",
+      "Dot around the orbital bone",
+      "Gently pat in until absorbed",
+    ],
+    officialUrl: "https://misshaus.com",
+    price: 38,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination"],
+    concerns: ["aging", "hydration"],
+  },
+  {
+    slug: "mixsoon-bean-eye-cream",
+    name: "Bean Eye Cream",
+    brand: "mixsoon",
+    category: "eye",
+    ingredientIds: ["niacinamide", "peptides"],
+    fullIngredients:
+      "Lactobacillus/soybean ferment extract, lactobacillus/rice ferment extract, hibiscus syriacus callus extract, niacinamide, peptide complex (BIOME5X)",
+    origin: "South Korea",
+    description:
+      "A fermented bean and peptide eye cream that firms, brightens, and hydrates the delicate eye area using mixsoon's proprietary moisture-retention complex.",
+    usageSteps: [
+      "Apply AM and/or PM as the last step",
+      "Dot around the orbital bone",
+      "Gently pat in until absorbed",
+    ],
+    officialUrl: "https://mixsoon.us",
+    price: 20,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination", "sensitive"],
+    concerns: ["aging", "hydration"],
+  },
+  {
+    slug: "numbuzin-no9-nad-retinol-volumetox-eye-cream",
+    name: "No.9 NAD+ Retinol Volumetox Eye Cream",
+    brand: "numbuzin",
+    category: "eye",
+    ingredientIds: ["retinol", "peptides", "niacinamide", "ceramides"],
+    fullIngredients:
+      "NAD+, retinol, 50-peptide complex, niacinamide, ceramide, adenosine",
+    origin: "South Korea",
+    description:
+      "An anti-aging eye cream combining NAD+ and retinol with a 50-peptide complex to firm skin, smooth the look of wrinkles, and restore volume to hollow under-eye areas.",
+    usageSteps: [
+      "Apply as the last step, as directed on packaging",
+      "Dot a small amount around the orbital bone",
+      "Gently pat in until absorbed",
+    ],
+    officialUrl: "https://us.numbuzin.com",
+    price: 21,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination"],
+    concerns: ["aging"],
+  },
+  {
+    slug: "round-lab-birch-juice-moisturizing-eye-balm",
+    name: "Birch Juice Moisturizing Eye Balm",
+    brand: "Round Lab",
+    category: "eye",
+    ingredientIds: ["hyaluronic_acid"],
+    fullIngredients:
+      "Birch (Betula platyphylla japonica) sap 90%, sodium hyaluronate, amino acids",
+    origin: "South Korea",
+    description:
+      "A cooling stick-format eye balm built on a 90% birch sap base to hydrate, de-puff, and calm the eye area and other dry, tired spots.",
+    usageSteps: [
+      "Apply AM and/or PM",
+      "Glide the stick gently around the orbital bone",
+      "Pat in with fingertips if desired",
+    ],
+    officialUrl: "https://roundlab.com",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination", "sensitive"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "anua-retinol-01-caffeine-revitalizing-eye-cream",
+    name: "Retinol 0.1 Caffeine Revitalizing Eye Cream",
+    brand: "Anua",
+    category: "eye",
+    ingredientIds: ["retinol", "niacinamide", "ceramides"],
+    fullIngredients:
+      "Retinol 0.1%, caffeine, niacinamide, ceramides, panthenol",
+    origin: "South Korea",
+    description:
+      "A firming eye cream that combines a low-strength retinol with caffeine to tighten eye contours and reduce puffiness, buffered with niacinamide and ceramides for sensitive skin.",
+    usageSteps: [
+      "PM — start every other night to build tolerance",
+      "Dot a small amount around the orbital bone",
+      "Gently pat in; follow with SPF the next morning",
+    ],
+    officialUrl: "https://anua.com",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["normal", "dry", "combination", "sensitive"],
+    concerns: ["aging", "hydration"],
+  },
+  {
+    slug: "skin1004-madagascar-centella-probio-cica-bakuchiol-eye-cream",
+    name: "Madagascar Centella Probio-Cica Bakuchiol Eye Cream",
+    brand: "SKIN1004",
+    category: "eye",
+    ingredientIds: ["centella", "ceramides", "hyaluronic_acid"],
+    fullIngredients:
+      "Fermented centella asiatica extract, bakuchiol, ceramides, low-molecular collagen, hyaluronic acid",
+    origin: "South Korea",
+    description:
+      "An eye cream pairing fermented centella asiatica with bakuchiol, a plant-based retinol alternative, to smooth the look of fine lines while soothing and hydrating the eye area.",
+    usageSteps: [
+      "Apply AM and/or PM as the last step before moisturizer",
+      "Massage gently from inner to outer eye area",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://www.skin1004.com",
+    price: 20,
+    currency: "USD",
+    skinTypes: ["sensitive", "normal", "dry", "combination"],
+    concerns: ["aging", "hydration"],
+  },
+  {
+    slug: "some-by-mi-aha-bha-pha-30-days-miracle-cream",
+    name: "AHA. BHA. PHA 30 Days Miracle Cream",
+    brand: "Some By Mi",
+    category: "spot",
+    ingredientIds: ["aha", "bha", "niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Centella asiatica extract 70.78%, tea tree leaf water 10,000ppm, niacinamide, adenosine, sodium hyaluronate, AHA/BHA/PHA exfoliant blend",
+    origin: "South Korea",
+    description:
+      "A triple-acid exfoliating cream for acne-prone skin, combining AHA, BHA, and PHA with a high concentration of centella and tea tree water to clear congestion while calming irritation.",
+    usageSteps: [
+      "Apply after toner/serum, AM or PM",
+      "Spread a thin layer over acne-prone areas or the full face",
+      "Start every other day to build tolerance",
+    ],
+    officialUrl: "https://some-by-mi.com",
+    price: 19,
+    currency: "USD",
+    skinTypes: ["oily", "combination"],
+    concerns: ["acne", "redness", "barrier"],
+  },
+  {
+    slug: "cosrx-ac-collection-blemish-spot-clearing-serum",
+    name: "AC Collection Blemish Spot Clearing Serum",
+    brand: "COSRX",
+    category: "spot",
+    ingredientIds: ["niacinamide", "hyaluronic_acid", "centella"],
+    fullIngredients:
+      "Propolis extract, niacinamide 4%, centella asiatica-derived asiaticoside/asiatic acid/madecassic acid, panthenol, tea tree leaf oil, sodium hyaluronate, ceramide NP",
+    origin: "South Korea",
+    description:
+      "A targeted blemish serum that pairs niacinamide with a three-part centella complex and propolis to calm active breakouts and fade the marks they leave behind.",
+    usageSteps: [
+      "Apply after toner",
+      "Spot-apply or spread thinly over blemish-prone areas",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://www.cosrx.com",
+    price: 20,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "sensitive"],
+    concerns: ["acne", "redness", "pigmentation"],
+  },
+  {
+    slug: "starface-hydro-star-salicylic-acid-patches",
+    name: "Hydro-Star + Salicylic Acid Pimple Patches",
+    brand: "Starface",
+    category: "spot",
+    ingredientIds: ["bha"],
+    fullIngredients:
+      "Hydrocolloid (cellulose gum, polyisobutene, polyurethane film), salicylic acid",
+    origin: "USA",
+    description:
+      "The viral star-shaped hydrocolloid patch, in a version boosted with salicylic acid to unclog pores and flatten surface-level pimples and whiteheads.",
+    usageSteps: [
+      "Apply to a clean, dry blemish",
+      "Leave on for at least 6 hours or overnight",
+      "Peel off once it turns white/cloudy",
+    ],
+    officialUrl: "https://starface.world",
+    price: 13,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal", "sensitive"],
+    concerns: ["acne"],
+  },
+  {
+    slug: "rael-miracle-patch-invisible-spot-cover",
+    name: "Miracle Patch Invisible Spot Cover",
+    brand: "Rael",
+    category: "spot",
+    ingredientIds: [],
+    fullIngredients:
+      "Hydrocolloid (cellulose gum, polyisoprene, polyisobutene) — no active drug ingredients",
+    origin: "USA",
+    description:
+      "A clear, ultra-thin hydrocolloid patch that absorbs fluid from surfaced blemishes and blends into skin for barely-there daytime coverage.",
+    usageSteps: [
+      "Apply to a clean, dry blemish that has come to a head",
+      "Leave on for 4-8 hours",
+      "Remove once it turns white/opaque",
+    ],
+    officialUrl: "https://www.getrael.com",
+    price: 8,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal", "sensitive"],
+    concerns: ["acne"],
+  },
+  {
+    slug: "innisfree-bija-salicylic-spot-serum",
+    name: "Bija Salicylic Spot Serum",
+    brand: "innisfree",
+    category: "spot",
+    ingredientIds: ["bha"],
+    fullIngredients:
+      "Torreya nucifera (bija) seed oil, salicylic acid, castor seed oil, cocoa extract, dipotassium glycyrrhizate",
+    origin: "South Korea",
+    description:
+      "A daily, non-stripping spot gel-serum combining salicylic acid with bija seed oil to exfoliate dead skin buildup and calm blemish-prone areas.",
+    usageSteps: [
+      "Apply after cleansing, AM or PM",
+      "Apply a moderate amount to trouble areas",
+      "Follow with moisturizer",
+    ],
+    officialUrl: "https://us.innisfree.com",
+    price: 18,
+    currency: "USD",
+    skinTypes: ["oily", "combination"],
+    concerns: ["acne", "pores"],
+  },
+  {
+    slug: "dr-g-red-blemish-clear-soothing-spot-balm",
+    name: "R.E.D Blemish Clear Soothing Spot Balm",
+    brand: "Dr.G",
+    category: "spot",
+    ingredientIds: ["niacinamide", "centella"],
+    fullIngredients:
+      "Madecassoside, asiaticoside, asiatic acid, centella asiatica leaf extract, tranexamic acid, niacinamide, licorice root extract, panthenol",
+    origin: "South Korea",
+    description:
+      "An intensive spot balm that pairs madecassoside and licorice extract to soothe active blemishes with tranexamic acid and niacinamide to fade the pigmentation they leave behind.",
+    usageSteps: [
+      "Apply after serum/moisturizer, AM/PM",
+      "Dab a small amount directly onto blemishes",
+      "Leave on, no need to rinse",
+    ],
+    officialUrl: "https://dr-g.com",
+    price: 20,
+    currency: "USD",
+    skinTypes: ["sensitive", "oily", "combination"],
+    concerns: ["acne", "redness", "pigmentation"],
+  },
+  {
+    slug: "abib-heartleaf-calming-spot-patch",
+    name: "Heartleaf Calming Spot Patch",
+    brand: "Abib",
+    category: "spot",
+    ingredientIds: [],
+    fullIngredients:
+      "Hydrocolloid patch enriched with houttuynia cordata (heartleaf) extract, centella asiatica extract, and tea tree oil",
+    origin: "South Korea",
+    description:
+      "A dermatologist-tested hydrocolloid spot patch infused with heartleaf and centella extracts to absorb fluid and speed healing on acne-prone skin.",
+    usageSteps: [
+      "Apply to a clean, dry blemish",
+      "Leave on until it turns white/cloudy",
+      "Replace with a new patch as needed",
+    ],
+    officialUrl: "https://en.abib.com",
+    price: 15,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "sensitive"],
+    concerns: ["acne", "redness"],
+  },
+  {
+    slug: "round-lab-birch-juice-moisturizing-sun-cream-spf50",
+    name: "Birch Juice Moisturizing Sun Cream SPF50+ PA++++",
+    brand: "Round Lab",
+    category: "sunscreen",
+    ingredientIds: ["spf", "niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Ethylhexyl triazone, diethylamino hydroxybenzoyl hexyl benzoate, methylene bis-benzotriazolyl tetramethylbutylphenol, niacinamide, birch (Betula platyphylla japonica) sap, sodium hyaluronate, adenosine",
+    origin: "South Korea",
+    description:
+      "A lightweight, lotion-like hybrid sunscreen built on Round Lab's birch sap base, formulated for a no-white-cast finish on sensitive skin.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Use about two finger-lengths, generously",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://roundlab.com",
+    price: 18,
+    currency: "USD",
+    skinTypes: ["oily", "dry", "combination", "normal", "sensitive"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "anua-heartleaf-silky-moisture-sun-cream-spf50",
+    name: "Heartleaf Silky Moisture Sun Cream SPF50+ PA++++",
+    brand: "Anua",
+    category: "sunscreen",
+    ingredientIds: ["spf", "niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Houttuynia cordata (heartleaf) extract 30%, ethylhexyl triazone, terephthalylidene dicamphor sulfonic acid, niacinamide, panthenol, 10 types of hyaluronic acid",
+    origin: "South Korea",
+    description:
+      "A silky, fragrance-free chemical sunscreen built on a high concentration of heartleaf extract, formulated to protect and calm sensitive, redness-prone skin without a white cast.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Use generously over face and neck",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://anua.com",
+    price: 18,
+    currency: "USD",
+    skinTypes: ["oily", "dry", "combination", "normal", "sensitive"],
+    concerns: ["redness", "hydration"],
+  },
+  {
+    slug: "missha-all-around-safe-block-essence-sun-spf45",
+    name: "All-Around Safe Block Essence Sun SPF45 PA+++",
+    brand: "MISSHA",
+    category: "sunscreen",
+    ingredientIds: ["spf"],
+    fullIngredients:
+      "Ethylhexyl methoxycinnamate, ethylhexyl salicylate, phenylbenzimidazole sulfonic acid, diethylamino hydroxybenzoyl hexyl benzoate, lotus/chrysanthemum/camellia flower extracts, thanaka extract",
+    origin: "South Korea",
+    description:
+      "A budget-friendly, oil-free chemical sunscreen with a lightweight essence texture and a blend of botanical extracts for a soothing, non-sticky finish.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Smooth evenly over face and neck",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://misshaus.com",
+    price: 14,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "purito-centella-green-level-unscented-sun-spf50",
+    name: "Centella Green Level Unscented Sun SPF50+ PA++++",
+    brand: "PURITO SEOUL",
+    category: "sunscreen",
+    ingredientIds: ["spf", "niacinamide", "centella", "hyaluronic_acid"],
+    fullIngredients:
+      "Butyloctyl salicylate, diethylamino hydroxybenzoyl hexyl benzoate, ethylhexyl triazone, niacinamide, centella asiatica extract, madecassoside, hyaluronic acid, adenosine, tocopherol",
+    origin: "South Korea",
+    description:
+      "A cult-favorite fragrance-free chemical sunscreen that pairs UV filters with centella asiatica and niacinamide for a soothing, no-white-cast daily wear formula.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Use about two finger-lengths, generously",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://purito.com",
+    price: 18,
+    currency: "USD",
+    skinTypes: ["oily", "dry", "combination", "normal", "sensitive"],
+    concerns: ["redness", "hydration"],
+    featured: true,
+  },
+  {
+    slug: "etude-house-sunprise-mild-airy-finish-spf50",
+    name: "Sunprise Mild Airy Finish SPF50+/PA+++",
+    brand: "Etude House",
+    category: "sunscreen",
+    ingredientIds: ["spf", "hyaluronic_acid", "centella"],
+    fullIngredients:
+      "Zinc oxide (nano), sodium hyaluronate, centella asiatica extract, aloe barbadensis leaf juice, sunflower seed oil, tocopherol",
+    origin: "South Korea",
+    description:
+      "A mineral sunscreen with a weightless, non-sticky finish built around zinc oxide, formulated to control oil while staying gentle enough for sensitive skin.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Spread thinly and evenly over face",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://www.etudehouse.com",
+    price: 16,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "sensitive"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "innisfree-daily-uv-defense-sunscreen-spf50",
+    name: "Daily UV Defense Sunscreen Broad Spectrum SPF50+",
+    brand: "innisfree",
+    category: "sunscreen",
+    ingredientIds: ["spf", "centella"],
+    fullIngredients:
+      "Butyloctyl salicylate, ethylhexyl methoxycrylene, camellia sinensis (green tea) leaf extract, centella asiatica extract, witch hazel flower water",
+    origin: "South Korea",
+    description:
+      "A weightless, invisible-finish daily sunscreen formulated without oxybenzone or octinoxate, earning the Skin Cancer Foundation's Daily Use Seal.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Smooth evenly over face and body",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://us.innisfree.com",
+    price: 22,
+    currency: "USD",
+    skinTypes: ["oily", "dry", "combination", "normal", "sensitive"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "eltamd-uv-clear-broad-spectrum-spf46",
+    name: "UV Clear Broad-Spectrum SPF 46",
+    brand: "EltaMD",
+    category: "sunscreen",
+    ingredientIds: ["spf", "niacinamide", "hyaluronic_acid"],
+    fullIngredients:
+      "Octinoxate 7.5%, zinc oxide 9.0%, niacinamide 5%, sodium hyaluronate, hydroxyethyl acrylate/sodium acryloyldimethyl taurate copolymer",
+    origin: "USA",
+    description:
+      "A dermatologist-recommended hybrid sunscreen formulated with niacinamide for acne-prone and post-procedure skin — one of the most widely recommended facial sunscreens in the US.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Smooth evenly over face and neck",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://eltamd.com",
+    price: 45,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "sensitive", "normal"],
+    concerns: ["acne", "pigmentation"],
+    featured: true,
+  },
+  {
+    slug: "supergoop-unseen-sunscreen-spf40",
+    name: "Unseen Sunscreen SPF 40",
+    brand: "Supergoop",
+    category: "sunscreen",
+    ingredientIds: ["spf"],
+    fullIngredients:
+      "Avobenzone 3%, homosalate 8%, octisalate 5%, octocrylene 4%, meadowfoam seed oil, shea butter, jojoba esters",
+    origin: "USA",
+    description:
+      "A totally invisible, weightless, scentless gel sunscreen that doubles as a makeup primer, leaving no white cast or greasy residue.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Massage a thin layer evenly over face",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://supergoop.com",
+    price: 40,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal", "dry"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "la-roche-posay-anthelios-ultra-light-fluid-spf60",
+    name: "Anthelios Ultra-Light Fluid Facial Sunscreen SPF 60",
+    brand: "La Roche-Posay",
+    category: "sunscreen",
+    ingredientIds: ["spf"],
+    fullIngredients:
+      "Avobenzone 3%, homosalate 10%, octisalate 5%, octocrylene 7%, Cell-Ox Shield antioxidant complex",
+    origin: "France",
+    description:
+      "An oxybenzone-free, fast-absorbing chemical sunscreen fluid with a non-whitening finish designed to sit smoothly under makeup.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Smooth evenly over face and neck",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://www.laroche-posay.us",
+    price: 30,
+    currency: "USD",
+    skinTypes: ["oily", "combination", "normal"],
+    concerns: ["hydration"],
+  },
+  {
+    slug: "cerave-hydrating-mineral-sunscreen-spf30",
+    name: "Hydrating Mineral Sunscreen Face Lotion SPF 30",
+    brand: "CeraVe",
+    category: "sunscreen",
+    ingredientIds: ["spf", "niacinamide", "ceramides", "hyaluronic_acid"],
+    fullIngredients:
+      "Titanium dioxide 6%, zinc oxide 5%, niacinamide, ceramide NP, ceramide AP, ceramide EOP, sodium hyaluronate",
+    origin: "USA",
+    description:
+      "A 100%-mineral facial sunscreen developed with dermatologists, combining zinc oxide and titanium dioxide with CeraVe's three essential ceramides and niacinamide to protect while supporting the skin barrier.",
+    usageSteps: [
+      "Apply as the last AM step",
+      "Smooth evenly over face and neck",
+      "Reapply every 2 hours in the sun",
+    ],
+    officialUrl: "https://www.cerave.com",
+    price: 17,
+    currency: "USD",
+    skinTypes: ["dry", "sensitive", "normal", "combination"],
+    concerns: ["hydration", "barrier"],
   },
 ];
