@@ -12127,7 +12127,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-flash-deal-numbuzin-glow-core-starter-set-102-value-for-only-35-bloomingkoco-com",
-    "name": "Numbuzin Glow Core Starter Set ()",
+    "name": "Numbuzin Glow Core Starter Set",
     "brand": "Numbuzin",
     "category": "toner-pad",
     "ingredientIds": [
@@ -12164,7 +12164,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "numbuzin-flash-deal-numbuzin-x-skinfood-brightening-vitamin-set-72-value-for-only-25-bloomingkoco-co",
-    "name": "Numbuzin x[Skinfood] Brightening Vitamin Set ()",
+    "name": "Numbuzin x Skinfood Brightening Vitamin Set",
     "brand": "Numbuzin",
     "category": "toner",
     "ingredientIds": [
@@ -15176,7 +15176,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-moida-set-dr-althea-beginner-routine-for-dry-skin-147-cream-serum-cleansing-",
-    "name": "Dr.Althea MOIDA SET [Dr. Althea] Beginner Routine for Dry Skin (147 Cream + Serum + Cleansing Balm)",
+    "name": "Dr.Althea MOIDA SET Beginner Routine for Dry Skin (147 Cream + Serum + Cleansing Balm)",
     "brand": "Dr.Althea",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -15251,7 +15251,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "medicube-special-price-moida-set-moida-men-s-oil-control-duo-bloomingkoco-com",
-    "name": "MEDICUBE MOIDA SET [MOIDA] Men's Oil Control Duo",
+    "name": "MEDICUBE MOIDA SET Men's Oil Control Duo",
     "brand": "MEDICUBE",
     "category": "cleanser",
     "ingredientIds": [
@@ -15352,7 +15352,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-moida-box-dr-althea-beginner-routine-box-for-oily-skin-345-cream-serum-clean",
-    "name": "Dr.Althea MOIDA BOX [Dr. Althea] Beginner Routine Box for Oily Skin (345 Cream + Serum + Cleansing Balm)",
+    "name": "Dr.Althea MOIDA BOX Beginner Routine Box for Oily Skin (345 Cream + Serum + Cleansing Balm)",
     "brand": "Dr.Althea",
     "category": "cleansing-balm",
     "ingredientIds": [
@@ -15837,7 +15837,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "dr-althea-special-price-moida-set-dr-althea-345-all-in-one-calming-care-set-345-cream-mist-mask-bloo",
-    "name": "Dr.Althea MOIDA SET [Dr. Althea] 345 All- in-one Calming Care Set (345 Cream + Mist + Mask)",
+    "name": "Dr.Althea MOIDA SET 345 All- in-one Calming Care Set (345 Cream + Mist + Mask)",
     "brand": "Dr.Althea",
     "category": "mask",
     "ingredientIds": [
@@ -38663,7 +38663,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "nacific-x-skz-nacific-fresh-cica-plus-skincare-set-stray-kids-photobooth-picture-8-members-coreelle-",
     "name": "NACIFIC x SKZ Nacific Fresh Cica Plus Skincare Set + Stray Kids Photobooth Picture (8 Members)",
-    "brand": "NACIFIC x SKZ",
+    "brand": "NACIFIC",
     "category": "mask",
     "ingredientIds": [
       "niacinamide",
@@ -40251,7 +40251,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "nacific-x-skz-hyal-booster-triple-set-ot8-skz-photocard-postcard-brochure-set-included-coreelle-com",
     "name": "NACIFIC x SKZ Hyal Booster Triple Set [OT8 SKZ Photocard + Postcard + Brochure Set Included]",
-    "brand": "NACIFIC x SKZ",
+    "brand": "NACIFIC",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -45560,58 +45560,6 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "dream-catcher-dreamcatcher-official-photobook-fallen-angels-coreelle-com",
-    "name": "Dream Catcher OFFICIAL PHOTOBOOK [Fallen Angels]",
-    "brand": "Dream Catcher",
-    "category": "hand",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "A Dreamcatcher photobook set with goodies for you to have the ultimate Dreamcatcher experience this summer.",
-    "usageSteps": [
-      "Use in the appropriate routine step",
-      "Start slowly if skin is sensitive",
-      "Reduce frequency if irritation appears"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0251/2945/1597/files/dream-catcherdreamcatcher-official-photobook-fallen-angels-775874.jpg?v=1762445559",
-    "officialUrl": "https://coreelle.com/products/dreamcatcher-official-photobook-fallen-angels",
-    "price": 45,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "dream-catcher-dreamcatcher-official-merchandise-dreams-of-angels-coreelle-com",
-    "name": "Dream Catcher OFFICIAL MERCHANDISE [Dreams of Angels]",
-    "brand": "Dream Catcher",
-    "category": "hand",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "A bag full of Dreamcatcher goodies, specially made and curated with InSomnias in mind!",
-    "usageSteps": [
-      "Use in the appropriate routine step",
-      "Start slowly if skin is sensitive",
-      "Reduce frequency if irritation appears"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0251/2945/1597/files/dream-catcherdreamcatcher-official-merchandise-dreams-of-angels-445973.jpg?v=1762445558",
-    "officialUrl": "https://coreelle.com/products/dreamcatcher-official-merchandise-dreams-of-angels",
-    "price": 79.99,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "ongredients-perfect-melting-cleansing-balm-coreelle-com",
     "name": "Ongredients Perfect Melting Cleansing Balm",
     "brand": "Ongredients",
@@ -45969,32 +45917,6 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     "concerns": [
       "hydration",
       "acne"
-    ]
-  },
-  {
-    "slug": "seventeen-seventeen-face-the-sun-photo-book-random-ver-coreelle-com",
-    "name": "SEVENTEEN FACE THE SUN (PHOTO BOOK)(Random Ver.)",
-    "brand": "SEVENTEEN",
-    "category": "sunscreen",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "Get the complete SEVENTEEN experience with a photobook, photocard, and postcard.",
-    "usageSteps": [
-      "Use every morning as the final step",
-      "Apply generously to face and neck",
-      "Reapply when outdoors"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0251/2945/1597/files/seventeenseventeen-face-the-sun-photo-bookrandom-ver-963145.png?v=1762445077",
-    "officialUrl": "https://coreelle.com/products/seventeen-face-the-sun-photo-book",
-    "price": 13.2,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "uv-protection"
     ]
   },
   {
@@ -47142,84 +47064,6 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     "concerns": [
       "hydration",
       "redness"
-    ]
-  },
-  {
-    "slug": "dream-catcher-dream-catcher-save-us-coreelle-com",
-    "name": "Dream Catcher SAVE US",
-    "brand": "Dream Catcher",
-    "category": "peeling",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "Dreamcatcher has grown even more by going through phases of changes and this 2nd full-length album, shows their future music and worldview, which is to act as a solid foundation for Dreamcatcher's unique story that will unfold in a vast way in the future.",
-    "usageSteps": [
-      "Use in the appropriate routine step",
-      "Start slowly if skin is sensitive",
-      "Reduce frequency if irritation appears"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0251/2945/1597/files/dream-catcherdream-catcher-save-us-484337.png?v=1762443585",
-    "officialUrl": "https://coreelle.com/products/dream-catcher-save-us",
-    "price": 14.99,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "dream-catcher-dream-catcher-a-follow-us-limited-coreelle-com",
-    "name": "Dream Catcher A:FOLLOW US (Limited)",
-    "brand": "Dream Catcher",
-    "category": "essence",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This album symbolizes the future from now on and captures the essence of Dreamcatcher's beliefs. Dreamcatcher acts as the people who lead the way towards the faint light that appears between the continuing despair and crushing hope.",
-    "usageSteps": [
-      "Apply after toner",
-      "Use a small amount on face and neck",
-      "Follow with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0251/2945/1597/files/dream-catcherdream-catcher-afollow-us-limited-466042.png?v=1762443583",
-    "officialUrl": "https://coreelle.com/products/dream-catcher-a-follow-us-limited",
-    "price": 23.1,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "dream-catcher-dream-catcher-villains-coreelle-com",
-    "name": "Dream Catcher VillainS",
-    "brand": "Dream Catcher",
-    "category": "essence",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This album symbolizes the future from now on and captures the essence of Dreamcatcher's beliefs. Dreamcatcher acts as the people who lead the way towards the faint light that appears between the continuing despair and crushing hope.",
-    "usageSteps": [
-      "Apply after toner",
-      "Use a small amount on face and neck",
-      "Follow with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0251/2945/1597/files/dream-catcherdream-catcher-villains-451257.png?v=1762443582",
-    "officialUrl": "https://coreelle.com/products/dream-catcher-villains",
-    "price": 12.45,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
     ]
   },
   {
@@ -49038,7 +48882,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "nacific-x-skz-calendula-set-skz-green-photocards-included-coreelle-com",
     "name": "NACIFIC x SKZ Calendula Set [SKZ Green Photocards Included]",
-    "brand": "NACIFIC x SKZ",
+    "brand": "NACIFIC",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -49073,7 +48917,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "nacific-x-skz-skz-kingsmen-photocards-8members-nacific-fresh-cica-plus-skincare-set-coreelle-com",
     "name": "NACIFIC x SKZ Nacific Fresh Cica Plus Skincare Set",
-    "brand": "NACIFIC x SKZ",
+    "brand": "NACIFIC",
     "category": "mask",
     "ingredientIds": [
       "niacinamide",
@@ -49106,7 +48950,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "nacific-x-skz-nacific-day-night-set-photo-cards-included-coreelle-com",
     "name": "NACIFIC x SKZ NACIFIC Day&Night Set(Photo cards included)",
-    "brand": "NACIFIC x SKZ",
+    "brand": "NACIFIC",
     "category": "serum",
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
@@ -49135,7 +48979,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "nacific-x-skz-nacific-pink-ahabha-skincare-set-stray-kids-hanok-photo-card-random-coreelle-com",
     "name": "NACIFIC x SKZ Nacific PINK AHABHA Skincare Set[Stray Kids Hanok Photo Card (Random)]",
-    "brand": "NACIFIC x SKZ",
+    "brand": "NACIFIC",
     "category": "peeling",
     "ingredientIds": [
       "niacinamide",
@@ -49170,7 +49014,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "nacific-x-skz-nacific-best-selling-set-exclusive-stray-kids-phone-grip-coreelle-com",
     "name": "NACIFIC x SKZ Nacific Best Selling Set[Exclusive Stray Kids Phone Grip]",
-    "brand": "NACIFIC x SKZ",
+    "brand": "NACIFIC",
     "category": "mask",
     "ingredientIds": [
       "niacinamide"
@@ -49202,7 +49046,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
   {
     "slug": "nacific-x-skz-nacific-fresh-herb-origin-skincare-set-stray-kids-photobooth-picture-8-members-coreell",
     "name": "NACIFIC x SKZ Nacific Fresh Herb Origin Skincare Set[Stray Kids Photobooth Picture (8 Members)]",
-    "brand": "NACIFIC x SKZ",
+    "brand": "NACIFIC",
     "category": "mask",
     "ingredientIds": [
       "niacinamide"
@@ -98175,36 +98019,6 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "korean-skincare-aha-bha-pha-30-days-miracle-acne-clear-body-cleanser-mini-100-off-www-koreanskincare",
-    "name": "Korean Skincare ‍AHA BHA PHA 30 Days Miracle Acne Clear Body Cleanser Mini",
-    "brand": "Korean Skincare",
-    "category": "cleanser",
-    "ingredientIds": [
-      "aha",
-      "bha"
-    ],
-    "fullIngredients": "Source did not expose full INCI. Visible product information indicates: aha, bha. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use as the cleansing step",
-      "Massage gently, then rinse well",
-      "Follow with toner or serum"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0254/3022/9055/files/Screenshot_2026-05-28_164817_cb26d253-6e46-469b-a87e-8e74a9b1d115.png?v=1783609560",
-    "officialUrl": "https://www.koreanskincare.nl/products/some-by-mi-acne-body-cleanser-mini-freebie-sca_clone_freegift",
-    "price": 0,
-    "currency": "EUR",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
     "slug": "medicube-deep-peptide-radiance-mask-www-koreanskincare-nl",
     "name": "Medicube Deep Peptide Radiance Mask",
     "brand": "Medicube",
@@ -99588,34 +99402,6 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "korean-skincare-rice-pepta-collagen-gel-mask-100-off-www-koreanskincare-nl",
-    "name": "Korean Skincare ‍Rice Pepta Collagen Gel Mask",
-    "brand": "Korean Skincare",
-    "category": "mask",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Source did not expose full INCI. Visible product information indicates: peptides. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Leave on as directed by the brand",
-      "Finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0254/3022/9055/files/Product-page-sizes_005f70e8-f46e-42f9-8be6-6fb2fb40c980.jpg?v=1782226437",
-    "officialUrl": "https://www.koreanskincare.nl/products/nacific-rice-pepta-collagen-gel-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "EUR",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "aging"
-    ]
-  },
-  {
     "slug": "illiyoon-ceramide-ato-soothing-gel-www-koreanskincare-nl",
     "name": "Illiyoon Ceramide Ato Soothing Gel",
     "brand": "Illiyoon",
@@ -99707,37 +99493,6 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
       "hydration",
       "redness",
       "barrier"
-    ]
-  },
-  {
-    "slug": "korean-skincare-vitamin-a-mazing-bakuchiol-night-cream-mini-100-off-www-koreanskincare-nl",
-    "name": "Korean Skincare ‍Vitamin A-mazing Bakuchiol Night Cream Mini",
-    "brand": "Korean Skincare",
-    "category": "moisturizer",
-    "ingredientIds": [
-      "retinol",
-      "vitamin_c"
-    ],
-    "fullIngredients": "Source did not expose full INCI. Visible product information indicates: retinol, vitamin_c. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use in the appropriate routine step",
-      "Start slowly if skin is sensitive",
-      "Reduce frequency if irritation appears"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0254/3022/9055/files/Product-page-sizes-Freebie_66934c30-9e6c-496b-8146-8b03489b2247.jpg?v=1781613576",
-    "officialUrl": "https://www.koreanskincare.nl/products/vitamin-a-mazing-bakuchiol-night-cream-freebie-sca_clone_freegift",
-    "price": 0,
-    "currency": "EUR",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness"
     ]
   },
   {
@@ -100341,91 +100096,6 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
       "redness",
       "barrier",
       "aging"
-    ]
-  },
-  {
-    "slug": "korean-skincare-green-tea-cica-collagen-gel-mask-100-off-www-koreanskincare-nl",
-    "name": "Korean Skincare ‍Green Tea Cica Collagen Gel Mask",
-    "brand": "Korean Skincare",
-    "category": "mask",
-    "ingredientIds": [
-      "centella",
-      "peptides"
-    ],
-    "fullIngredients": "Source did not expose full INCI. Visible product information indicates: centella, peptides. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Leave on as directed by the brand",
-      "Finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0254/3022/9055/files/Product-page-sizes_5c1a9bc0-796d-4e0d-ad76-6f514e3d2165.jpg?v=1780901981",
-    "officialUrl": "https://www.koreanskincare.nl/products/nacific-green-tea-cica-collagen-gel-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "EUR",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness",
-      "aging"
-    ]
-  },
-  {
-    "slug": "korean-skincare-ultimate-calming-solution-ampoule-100-off-www-koreanskincare-nl",
-    "name": "Korean Skincare ‍Ultimate Calming Solution Ampoule",
-    "brand": "Korean Skincare",
-    "category": "ampoule",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use a small amount on face and neck",
-      "Follow with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0254/3022/9055/files/Product-page-sizes_33b3d54e-3a33-4af5-9354-25febed09b18.jpg?v=1780660094",
-    "officialUrl": "https://www.koreanskincare.nl/products/pyunkang-yul-ultimate-calming-solution-ampoule-sca_clone_freegift",
-    "price": 0,
-    "currency": "EUR",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness"
-    ]
-  },
-  {
-    "slug": "korean-skincare-idebenone-blackberry-complex-intense-cream-mini-100-off-www-koreanskincare-nl",
-    "name": "Korean Skincare ‍Idebenone Blackberry Complex Intense Cream Mini",
-    "brand": "Korean Skincare",
-    "category": "moisturizer",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use in the appropriate routine step",
-      "Start slowly if skin is sensitive",
-      "Reduce frequency if irritation appears"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0254/3022/9055/files/Mary_May_IdebenoneBlackberryComplexIntenseCream_Packshot_a56a928b-bd49-4462-b07a-f4adf0335691.jpg?v=1780659342",
-    "officialUrl": "https://www.koreanskincare.nl/products/idebenone-blackberry-complex-intense-cream-freebie-listing-mary-may-sca_clone_freegift",
-    "price": 0,
-    "currency": "EUR",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration"
     ]
   },
   {
@@ -101440,33 +101110,6 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
       "redness",
       "barrier",
       "aging"
-    ]
-  },
-  {
-    "slug": "korean-skincare-midnight-blue-clearing-water-cream-100-off-www-koreanskincare-nl",
-    "name": "Korean Skincare ‍Midnight Blue Clearing Water Cream",
-    "brand": "Korean Skincare",
-    "category": "moisturizer",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use in the appropriate routine step",
-      "Start slowly if skin is sensitive",
-      "Reduce frequency if irritation appears"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0254/3022/9055/files/Screenshot_2026-05-28_164817_b94c7ffe-1c1e-47f2-b01f-f3a29fa824de.png?v=1779979856",
-    "officialUrl": "https://www.koreanskincare.nl/products/midnight-blue-clearing-water-cream-20g-sca_clone_freegift",
-    "price": 0,
-    "currency": "EUR",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration"
     ]
   },
   {
@@ -113879,58 +113522,6 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
       "dullness",
       "redness",
       "uv-protection"
-    ]
-  },
-  {
-    "slug": "korean-skincare-protein-bonding-treatment-mini-100-off-www-koreanskincare-nl",
-    "name": "Korean Skincare ‍Protein Bonding Treatment Mini",
-    "brand": "Korean Skincare",
-    "category": "moisturizer",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use in the appropriate routine step",
-      "Start slowly if skin is sensitive",
-      "Reduce frequency if irritation appears"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0254/3022/9055/files/Kundal_ProteinBondingTreatmentMini_Packshot_38ee9073-0ac4-4c28-bd20-fc7ec07e421b.jpg?v=1765877478",
-    "officialUrl": "https://www.koreanskincare.nl/products/protein-bonding-treatment-mini-freebie-sca_clone_freegift",
-    "price": 0,
-    "currency": "EUR",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "korean-skincare-protein-bonding-shampoo-mini-100-off-www-koreanskincare-nl",
-    "name": "Korean Skincare ‍Protein Bonding Shampoo Mini",
-    "brand": "Korean Skincare",
-    "category": "hair",
-    "ingredientIds": [],
-    "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use in the appropriate routine step",
-      "Start slowly if skin is sensitive",
-      "Reduce frequency if irritation appears"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0254/3022/9055/files/Kundal_ProteinBondingShampooMini_Packshot_02467977-65b0-4ea5-89d4-f8466bb5baa1.jpg?v=1765877476",
-    "officialUrl": "https://www.koreanskincare.nl/products/protein-bonding-shampoo-mini-freebie-sca_clone_freegift",
-    "price": 0,
-    "currency": "EUR",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
     ]
   },
   {
@@ -167084,4 +166675,4 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
       "aging"
     ]
   }
-];
+]

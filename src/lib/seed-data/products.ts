@@ -13634,7 +13634,7 @@ const CORE_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-deal-birch-mild-up-sunscreen-uvlock-spf-50-broad-spectrum",
-    "name": "Round Lab [DEAL] Birch Mild-Up Sunscreen UVLock SPF 50+ Broad Spectrum",
+    "name": "Round Lab Birch Mild-Up Sunscreen UVLock SPF 50+ Broad Spectrum",
     "brand": "Round Lab",
     "category": "sunscreen",
     "ingredientIds": [
@@ -13780,7 +13780,7 @@ const CORE_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-deal-birch-moisturizing-sunscreen-uvlock-spf-45-broad-spectrum",
-    "name": "Round Lab [DEAL] Birch Moisturizing Sunscreen UVLock SPF 45+ Broad Spectrum",
+    "name": "Round Lab Birch Moisturizing Sunscreen UVLock SPF 45+ Broad Spectrum",
     "brand": "Round Lab",
     "category": "sunscreen",
     "ingredientIds": [
@@ -13836,7 +13836,7 @@ const CORE_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-deal-dokdo-cleanser-double-2-pack",
-    "name": "Round Lab [DEAL] Dokdo Cleanser Double 2-Pack",
+    "name": "Round Lab Dokdo Cleanser Double 2-Pack",
     "brand": "Round Lab",
     "category": "cleanser",
     "ingredientIds": [],
@@ -14067,7 +14067,7 @@ const CORE_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-birch-moisturizing-sunscreen-uvlock-spf-45-broad-spectrum-subscription",
-    "name": "Round Lab Birch Moisturizing Sunscreen UVLock SPF 45+ Broad Spectrum [Subscription]",
+    "name": "Round Lab Birch Moisturizing Sunscreen UVLock SPF 45+ Broad Spectrum",
     "brand": "Round Lab",
     "category": "sunscreen",
     "ingredientIds": [
@@ -14278,7 +14278,7 @@ const CORE_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-deal-1025-dokdo-cleanser",
-    "name": "Round Lab [DEAL] 1025 Dokdo Cleanser",
+    "name": "Round Lab 1025 Dokdo Cleanser",
     "brand": "Round Lab",
     "category": "cleanser",
     "ingredientIds": [],
@@ -14305,7 +14305,7 @@ const CORE_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-deal-1025-dokdo-toner",
-    "name": "Round Lab [DEAL] 1025 Dokdo Toner",
+    "name": "Round Lab 1025 Dokdo Toner",
     "brand": "Round Lab",
     "category": "toner",
     "ingredientIds": [],
@@ -14332,7 +14332,7 @@ const CORE_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-deal-birch-moisturizing-cleanser",
-    "name": "Round Lab [DEAL] Birch Moisturizing Cleanser",
+    "name": "Round Lab Birch Moisturizing Cleanser",
     "brand": "Round Lab",
     "category": "cleanser",
     "ingredientIds": [],
@@ -15308,7 +15308,7 @@ const CORE_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "skin1004-60-off-centella-ampoule-100ml",
-    "name": "SKIN1004 [60% Off] Centella Ampoule 100ml",
+    "name": "SKIN1004 Centella Ampoule 100ml",
     "brand": "SKIN1004",
     "category": "ampoule",
     "ingredientIds": [
@@ -17297,7 +17297,6 @@ const CORE_PRODUCTS: SeedProduct[] = [
     ]
   }
 ]
-
 export const PRODUCTS: SeedProduct[] = [
   ...CORE_PRODUCTS,
   ...GENERATED_PRODUCTS,

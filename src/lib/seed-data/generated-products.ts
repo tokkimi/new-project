@@ -5278,116 +5278,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "beauty-of-joseon-ground-rice-and-honey-glow-mask-100-off",
-    "name": "Beauty of Joseon Ground Rice and Honey Glow Mask",
-    "brand": "Beauty of Joseon",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/ground-rice-honey-glow-mask-1-front_f956999b-0ccb-4d4a-b208-9137d7c52cba.webp?v=1777584313",
-    "officialUrl": "https://www.beautyofjoseon.com/products/ground-rice-and-honey-glow-mask-sca_clone_freegift_69e74aec96138",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness"
-    ]
-  },
-  {
-    "slug": "beauty-of-joseon-calming-serum-green-tea-panthenol-100-off",
-    "name": "Beauty of Joseon Calming Serum : Green tea + Panthenol",
-    "brand": "Beauty of Joseon",
-    "category": "serum",
-    "ingredientIds": [
-      "green_tea"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: botanical soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/calming-serum-green-tea-panthenol-1-front_ac2933c2-b8c2-4c0d-8f76-d26abb449c20.webp?v=1777584373",
-    "officialUrl": "https://www.beautyofjoseon.com/products/calming-serum-green-tea-panthenol-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness",
-      "barrier"
-    ]
-  },
-  {
-    "slug": "beauty-of-joseon-ground-rice-and-honey-glow-mask-100-off-www-beautyofjoseon-com",
-    "name": "Beauty of Joseon Ground Rice and Honey Glow Mask",
-    "brand": "Beauty of Joseon",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/ground-rice-honey-glow-mask-1-front_57403cb8-0e47-4b3a-9bc2-4649bf5cbb0f.webp?v=1777584340",
-    "officialUrl": "https://www.beautyofjoseon.com/products/ground-rice-and-honey-glow-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness"
-    ]
-  },
-  {
-    "slug": "beauty-of-joseon-glow-deep-serum-rice-alpha-arbutin-100-off",
-    "name": "Beauty of Joseon Glow Deep Serum : Rice + Alpha-Arbutin",
-    "brand": "Beauty of Joseon",
-    "category": "peeling",
-    "ingredientIds": [
-      "pha"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: PHA gentle exfoliant family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing at night",
-      "Start 1-2 times weekly unless the brand says otherwise",
-      "Follow with a barrier moisturizer and use SPF the next morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0558/4135/7989/files/glow-deep-serum-rice-alpha-arbutin-1-front_e4443b10-e63c-4e1d-a36d-81a307df525b.webp?v=1777584222",
-    "officialUrl": "https://www.beautyofjoseon.com/products/glow-deep-serum-rice-alpha-arbutin-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness"
-    ]
-  },
-  {
     "slug": "beauty-of-joseon-hydra-shield-body-sun-lotion-spf-50-www-beautyofjoseon-com",
     "name": "Beauty of Joseon Hydra Shield Body Sun Lotion SPF 50+",
     "brand": "Beauty of Joseon",
@@ -7411,8 +7301,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "fast-bundle-pine-calming-cica-body-and-scalp-care-bundle",
-    "name": "Fast Bundle Pine Calming Cica Body and Scalp Care Bundle",
-    "brand": "Fast Bundle",
+    "name": "Round Lab Pine Calming Cica Body and Scalp Care Bundle",
+    "brand": "Round Lab",
     "category": "cleansing-foam",
     "ingredientIds": [
       "centella"
@@ -7718,8 +7608,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "fast-bundle-camellia-deep-collagen-firming-complete-routine-anti-aging-bundle",
-    "name": "Fast Bundle Camellia Deep Collagen Firming Complete Routine Anti-Aging Bundle",
-    "brand": "Fast Bundle",
+    "name": "Round Lab Camellia Deep Collagen Firming Complete Routine Anti-Aging Bundle",
+    "brand": "Round Lab",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid",
@@ -8209,8 +8099,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "fast-bundle-round-lab-sheet-mask-sampler-9pc",
-    "name": "Fast Bundle Round Lab Sheet Mask Sampler - 9pc",
-    "brand": "Fast Bundle",
+    "name": "Round Lab Sheet Mask Sampler - 9pc",
+    "brand": "Round Lab",
     "category": "toner-pad",
     "ingredientIds": [
       "vitamin_c",
@@ -8356,8 +8246,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "fast-bundle-soybean-panthenol-skin-barrier-repair-routine",
-    "name": "Fast Bundle Soybean Panthenol Skin Barrier Repair Routine",
-    "brand": "Fast Bundle",
+    "name": "Round Lab Soybean Panthenol Skin Barrier Repair Routine",
+    "brand": "Round Lab",
     "category": "cleansing-oil",
     "ingredientIds": [
       "vitamin_c",
@@ -8992,8 +8882,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "fast-bundle-mugwort-calming-routine-bundle",
-    "name": "Fast Bundle Mugwort Calming Routine Bundle",
-    "brand": "Fast Bundle",
+    "name": "Round Lab Mugwort Calming Routine Bundle",
+    "brand": "Round Lab",
     "category": "cleanser",
     "ingredientIds": [
       "vitamin_c",
@@ -9134,8 +9024,8 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "fast-bundle-1025-dokdo-trio",
-    "name": "Fast Bundle 1025 Dokdo Trio",
-    "brand": "Fast Bundle",
+    "name": "Round Lab 1025 Dokdo Trio",
+    "brand": "Round Lab",
     "category": "cleanser",
     "ingredientIds": [
       "hyaluronic_acid"
@@ -9772,7 +9662,7 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
   },
   {
     "slug": "round-lab-birch-moisturizing-sunscreen-uvlock-spf-45-broad-spectrum-subscription-roundlab-",
-    "name": "Round Lab Birch Moisturizing Sunscreen UVLock SPF 45+ Broad Spectrum [Subscription]",
+    "name": "Round Lab Birch Moisturizing Sunscreen UVLock SPF 45+ Broad Spectrum",
     "brand": "Round Lab",
     "category": "sunscreen",
     "ingredientIds": [
@@ -18465,242 +18355,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "medicube-us-gift-one-day-exosome-shot-pore-serum-2000-5ml-100-off",
-    "name": "MEDICUBE One Day Exosome Shot Pore Serum 2000 5ml",
-    "brand": "MEDICUBE",
-    "category": "serum",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/5ml_e40cd7e0-785e-4aaf-8db0-8dbd204afa85.png?v=1781232378",
-    "officialUrl": "https://www.medicube.us/products/one-day-exosome-shot-pore-serum-2000-5ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-pdrn-pink-hyaluronic-moisturizing-cream-10ml-100-off",
-    "name": "MEDICUBE PDRN Pink Hyaluronic Moisturizing Cream 10ml",
-    "brand": "MEDICUBE",
-    "category": "moisturizer",
-    "ingredientIds": [
-      "hyaluronic_acid",
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: hyaluronic/hydration family, peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/20250813_ME_nukki_144499copy_11b192d5-4a80-4eca-8276-233160510631.jpg?v=1781232376",
-    "officialUrl": "https://www.medicube.us/products/gift-pdrn-pink-hyaluronic-moisturizing-cream-10ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-pdrn-pink-collagen-exosome-shot-100-off",
-    "name": "SHOPIFY_ME PDRN Pink Collagen Exosome Shot",
-    "brand": "SHOPIFY_ME",
-    "category": "serum",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PDRN2000_00_b49cf691-8908-461f-b237-61818bb72b83.jpg?v=1781231399",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-collagen-exosome-shot-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-exosome-cica-calming-pad-2ea-100-off",
-    "name": "MEDICUBE Exosome Cica Calming Pad 2EA",
-    "brand": "MEDICUBE",
-    "category": "toner-pad",
-    "ingredientIds": [
-      "centella"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/20250107_nukki85810copy_d109fde8-1b4e-4c12-9750-0121a7f064dd.jpg?v=1781087348",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-cica-soothing-toner-50ml-1-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-triple-collagen-cream-5ml-100-off",
-    "name": "MEDICUBE Triple Collagen Cream 5ml",
-    "brand": "MEDICUBE",
-    "category": "moisturizer",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/20231214_ME_collagenglowset_57298copy_1362b408-638f-426f-964e-d730260a391b.jpg?v=1781087345",
-    "officialUrl": "https://www.medicube.us/products/gift-triple-collagen-cream-5ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-collagen-niacinamide-jelly-cream-mini-100-off",
-    "name": "SHOPIFY_ME Collagen Niacinamide Jelly Cream Mini",
-    "brand": "SHOPIFY_ME",
-    "category": "moisturizer",
-    "ingredientIds": [
-      "niacinamide",
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support, peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/50_e9b6621c-0da7-4bea-82d4-324d78ad9a08.jpg?v=1781087342",
-    "officialUrl": "https://www.medicube.us/products/gift-collagen-niacinamide-jelly-cream-mini-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-pdrn-pink-cica-soothing-toner-50ml-100-off",
-    "name": "MEDICUBE PDRN Pink Cica Soothing Toner 50ml",
-    "brand": "MEDICUBE",
-    "category": "toner",
-    "ingredientIds": [
-      "centella",
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family, peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PDRN__50ml_869f4b06-c234-4fee-9e80-21e1061ece9b.png?v=1781087341",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-cica-soothing-toner-50ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "dullness",
-      "redness",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-zero-pore-one-day-serum-10ml-100-off",
-    "name": "MEDICUBE Zero Pore One Day Serum 10ml",
-    "brand": "MEDICUBE",
-    "category": "serum",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/20211103_all_set18573_7e7cc83e-1a60-48e7-80c5-88717e860b73.png?v=1781087337",
-    "officialUrl": "https://www.medicube.us/products/gift-zero-pore-one-day-serum-10ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
     "slug": "medicube-us-gift-triple-collagen-cream-5ml",
     "name": "MEDICUBE Triple Collagen Cream 5ml",
     "brand": "MEDICUBE",
@@ -18873,36 +18527,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "concerns": [
       "hydration",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-pdrn-pink-niacinamide-whip-cleanser-15g-100-off",
-    "name": "MEDICUBE PDRN Pink Niacinamide Whip Cleanser 15g",
-    "brand": "MEDICUBE",
-    "category": "cleanser",
-    "ingredientIds": [
-      "niacinamide",
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support, peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use as the cleansing step on damp skin",
-      "Massage gently for 30-60 seconds",
-      "Rinse well and follow with toner or serum"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/pdrn_83ee3290-cdb0-4516-be14-3edda6af04be.png?v=1779344787",
-    "officialUrl": "https://www.medicube.us/products/gift-pdrn-pink-niacinamide-whip-cleanser-15g-sca_clone_freegift",
-    "price": 10,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
       "anti-aging"
     ]
   },
@@ -19216,252 +18840,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "acne",
       "redness",
       "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-super-cica-exfoliating-cleansing-balm-100-off",
-    "name": "SHOPIFY_ME Super Cica Exfoliating Cleansing Balm",
-    "brand": "SHOPIFY_ME",
-    "category": "cleansing-balm",
-    "ingredientIds": [
-      "centella"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/SuperCicaExfoliatingCleansingBalm_0b2f9cba-70a5-475d-8573-e98bd0e2e16f.jpg?v=1754894724",
-    "officialUrl": "https://www.medicube.us/products/super-cica-exfoliating-cleansing-balm-vegan-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness"
-    ]
-  },
-  {
-    "slug": "shopify-me-red-body-wash-100-off",
-    "name": "SHOPIFY_ME Red Body Wash",
-    "brand": "SHOPIFY_ME",
-    "category": "cleanser",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use as the cleansing step on damp skin",
-      "Massage gently for 30-60 seconds",
-      "Rinse well and follow with toner or serum"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/00_53f714d7-a576-4f16-ab7a-50654ca6119b.jpg?v=1776155666",
-    "officialUrl": "https://www.medicube.us/products/red-body-wash-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "medicube-us-pdrn-pink-gel-cleanser-100-off",
-    "name": "MEDICUBE PDRN Pink Gel Cleanser",
-    "brand": "MEDICUBE",
-    "category": "cleansing-gel",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PDRN_00_cc6e2324-8b5b-43c6-bc6f-7d0ebfdfdf7a.jpg?v=1776155663",
-    "officialUrl": "https://www.medicube.us/products/pdrn-gel-cleanser-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-zero-pore-blackhead-deep-cleansing-oil-100-off",
-    "name": "SHOPIFY_ME Zero Pore Blackhead Deep Cleansing Oil",
-    "brand": "SHOPIFY_ME",
-    "category": "cleansing-oil",
-    "ingredientIds": [
-      "bha"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: BHA/salicylic family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/00_72db1af1-13ae-40b5-922a-0b781588aacf.jpg?v=1776155660",
-    "officialUrl": "https://www.medicube.us/products/zero-pore-blackhead-deep-cleansing-oil-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
-    "slug": "shopify-me-zero-foam-cleanser-100-off",
-    "name": "SHOPIFY_ME Zero Foam Cleanser",
-    "brand": "SHOPIFY_ME",
-    "category": "cleansing-foam",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/250702_ZeroCleanser1_eca3f9f8-8d6e-4b2d-b9dc-1a64805286ac.jpg?v=1776155656",
-    "officialUrl": "https://www.medicube.us/products/zero-foam-cleanser-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "shopify-me-red-foam-cleanser-100-off",
-    "name": "SHOPIFY_ME Red Foam Cleanser",
-    "brand": "SHOPIFY_ME",
-    "category": "cleansing-foam",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/00_082e16bc-3381-44f9-a7c6-93ec118f9e86.jpg?v=1776155654",
-    "officialUrl": "https://www.medicube.us/products/red-foam-cleanser-120-ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "shopify-me-zero-pore-capsule-cleansing-foam-100-off",
-    "name": "SHOPIFY_ME Zero Pore Capsule Cleansing Foam",
-    "brand": "SHOPIFY_ME",
-    "category": "cleansing-foam",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/00_a5ad2a18-038c-4de0-8926-2601fa753d90.jpg?v=1776155648",
-    "officialUrl": "https://www.medicube.us/products/zero-pore-clear-blue-capsule-facial-deep-cleanser-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
-    "slug": "shopify-me-21-red-succinic-acid-cleansing-booster-serum-100-off",
-    "name": "SHOPIFY_ME 21% Red Succinic Acid Cleansing Booster Serum",
-    "brand": "SHOPIFY_ME",
-    "category": "cleanser",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use as the cleansing step on damp skin",
-      "Massage gently for 30-60 seconds",
-      "Rinse well and follow with toner or serum"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/MicrosoftTeams-image_1046_2521caf3-199f-47ef-8107-9c42d367e8d6.jpg?v=1776155645",
-    "officialUrl": "https://www.medicube.us/products/red-succinic-acid-peel-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-exosome-cica-calming-pads-10ea-100-off",
-    "name": "MEDICUBE Exosome Cica Calming Pads 10ea",
-    "brand": "MEDICUBE",
-    "category": "toner-pad",
-    "ingredientIds": [
-      "centella"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/10ea_1a0a286d-6570-483d-ab59-078840953d56.png?v=1776155650",
-    "officialUrl": "https://www.medicube.us/products/gift-exosome-cica-calming-pads-10ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness"
     ]
   },
   {
@@ -20092,34 +19470,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "shopify-me-gift-pdrn-pink-collagen-exosome-shot-2000-5ml-100-off",
-    "name": "SHOPIFY_ME PDRN Pink Collagen Exosome Shot 2000 5ml",
-    "brand": "SHOPIFY_ME",
-    "category": "serum",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/pdrnexosome2000_927baaf7-ce05-424b-abe4-41fc421b1fc6.png?v=1770279803",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-collagen-exosome-shot-copy-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
-    ]
-  },
-  {
     "slug": "shopify-me-limited-edition-booster-pro-heart-edition",
     "name": "SHOPIFY_ME Booster Pro Heart Edition",
     "brand": "SHOPIFY_ME",
@@ -20302,32 +19652,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "shopify-me-cleansing-wipes-100-off",
-    "name": "SHOPIFY_ME Cleansing Wipes",
-    "brand": "SHOPIFY_ME",
-    "category": "cleanser",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use as the cleansing step on damp skin",
-      "Massage gently for 30-60 seconds",
-      "Rinse well and follow with toner or serum"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/Age-RCleansingWipes_f978bea7-82a4-4712-906c-eebc82b92bad.jpg?v=1768979076",
-    "officialUrl": "https://www.medicube.us/products/age-r-cleansing-wipes-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "shopify-me-gift-pdrn-pink-peptide-eye-cream",
     "name": "SHOPIFY_ME PDRN Pink Peptide Eye Cream",
     "brand": "SHOPIFY_ME",
@@ -20364,35 +19688,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "acne",
       "redness",
       "barrier"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-deep-peptide-radiance-mask-1ea-100-off",
-    "name": "SHOPIFY_ME Deep Peptide Radiance Mask (1ea)",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PEPTIDEMASK_1f39115d-d649-484b-9fcb-fea472eb4e26.png?v=1768554272",
-    "officialUrl": "https://www.medicube.us/products/deep-peptide-radiance-mask-1ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
-      "anti-aging"
     ]
   },
   {
@@ -21664,35 +20959,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "medicube-us-pdrn-pink-vita-coating-sheet-mask-100-off",
-    "name": "MEDICUBE PDRN Pink Vita Coating Sheet Mask",
-    "brand": "MEDICUBE",
-    "category": "sheet-mask",
-    "ingredientIds": [
-      "vitamin_c",
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: vitamin C/brightening family, peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PDRN_00_350b3f64-781a-4efe-addd-5660d2750844.jpg?v=1762409536",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-vita-coating-sheet-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
-    ]
-  },
-  {
     "slug": "shopify-me-hyaluronic-acid-capsule-cream",
     "name": "SHOPIFY_ME Hyaluronic Acid Capsule Cream",
     "brand": "SHOPIFY_ME",
@@ -21742,93 +21008,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     "skinTypes": [
       "normal",
       "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-pdrn-pink-pepdide-serum-10ml-100-off",
-    "name": "SHOPIFY_ME PDRN Pink Pepdide Serum 10ml",
-    "brand": "SHOPIFY_ME",
-    "category": "serum",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/1_904ffd95-e4d2-41b1-832b-d5796400b49b.png?v=1761036350",
-    "officialUrl": "https://www.medicube.us/products/gift-pdrn-pink-pepdide-serum-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-pdrn-pink-collagen-capsule-cream-4-5g-100-off",
-    "name": "SHOPIFY_ME PDRN Pink Collagen Capsule Cream 4.5g",
-    "brand": "SHOPIFY_ME",
-    "category": "moisturizer",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/pdrn_ce878c25-e9bb-457b-9a72-e30d910c060e.png?v=1761036347",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-collagen-capsule-cream-4-5g-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-deep-vita-c-capsule-cream-4-5g-100-off",
-    "name": "SHOPIFY_ME Deep Vita C Capsule Cream 4.5g",
-    "brand": "SHOPIFY_ME",
-    "category": "moisturizer",
-    "ingredientIds": [
-      "vitamin_c"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: vitamin C/brightening family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/20250416_ME_deep98714_copy_b8511ce8-942b-4d59-a477-a28ead8f7f5e.png?v=1761036286",
-    "officialUrl": "https://www.medicube.us/products/gift-deep-vita-c-capsule-cream-4-5g-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
     ],
     "concerns": [
       "hydration"
@@ -22352,88 +21531,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "shopify-me-gift-zero-pore-cooling-stick-100-off",
-    "name": "SHOPIFY_ME Zero Pore Cooling Stick",
-    "brand": "SHOPIFY_ME",
-    "category": "serum",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/Coolingstick_4a9c7414-e5ea-4f3f-a3b1-4860621c8b2c.jpg?v=1752826757",
-    "officialUrl": "https://www.medicube.us/products/gift-zero-pore-cooling-stick-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-collagen-wrapping-mask-5ml-100-off",
-    "name": "MEDICUBE Collagen Wrapping Mask 5ml",
-    "brand": "MEDICUBE",
-    "category": "mask",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/1_122b9f9b-0e14-4312-b97c-8b8184dae742.jpg?v=1752812299",
-    "officialUrl": "https://www.medicube.us/products/gift-collagen-wrapping-mask-5ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-zero-pore-deep-cleansing-oil-20ml-100-off",
-    "name": "MEDICUBE [GIFT Zero Pore Deep Cleansing Oil 20ml",
-    "brand": "MEDICUBE",
-    "category": "cleansing-oil",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/1_23be0e98-b183-4efa-9f26-2aff7c10e781.jpg?v=1752812224",
-    "officialUrl": "https://www.medicube.us/products/gift-zero-deep-cleansing-oil-20ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
     "slug": "medicube-us-gift-zero-pore-deep-cleansing-oil-20ml",
     "name": "MEDICUBE Zero Pore Deep Cleansing Oil 20ml",
     "brand": "MEDICUBE",
@@ -22560,35 +21657,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "dullness",
       "acne",
       "redness",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-deep-peptide-radiance-mask-2ea-100-off",
-    "name": "SHOPIFY_ME Deep Peptide Radiance Mask 2ea",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/2_d9999ba3-c9d3-4569-a832-91af60d27d18.jpg?v=1751874058",
-    "officialUrl": "https://www.medicube.us/products/deep-peptide-radiance-mask-2ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
       "anti-aging"
     ]
   },
@@ -22739,86 +21807,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "acne",
       "redness",
       "barrier"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-kojic-acid-turmeric-gold-jelly-gel-mask-1ea-100-off",
-    "name": "SHOPIFY_ME Kojic Acid Turmeric Gold Jelly Gel Mask 1EA",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/00_4316dacc-140d-430f-b7f3-28403c95a010.jpg?v=1750406121",
-    "officialUrl": "https://www.medicube.us/products/gift-kojic-acid-turmeric-gold-jelly-gel-mask-1ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "shopify-me-salmon-pdrn-pink-collagen-jelly-gel-mask-100-off",
-    "name": "SHOPIFY_ME Salmon PDRN Pink Collagen Jelly Gel Mask",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PDRN_6bdeb98b-d4e5-473d-87c7-8105b979432b.jpg?v=1750405488",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-collagen-gel-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-kojic-acid-turmeric-gold-jelly-gel-mask-100-off",
-    "name": "SHOPIFY_ME Kojic Acid Turmeric Gold Jelly Gel Mask",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/00_36b81bb7-b019-4b81-ab09-79b5e3fe11f6.jpg?v=1750405486",
-    "officialUrl": "https://www.medicube.us/products/kojic-acid-turmeric-gold-jelly-gel-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
     ]
   },
   {
@@ -22983,120 +21971,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     "concerns": [
       "redness",
       "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-pdrn-pink-peptide-toner-100-off",
-    "name": "SHOPIFY_ME PDRN Pink Peptide Toner",
-    "brand": "SHOPIFY_ME",
-    "category": "toner",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PDRN_00_2749889a-961b-476e-bf54-7ffc8898b4f3.jpg?v=1749004325",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-peptide-toner-1-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-pdrn-pink-peptide-cream-100-off",
-    "name": "SHOPIFY_ME PDRN Pink Peptide Cream",
-    "brand": "SHOPIFY_ME",
-    "category": "moisturizer",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PDRN_00_2e1adb2c-6e5c-4cc4-aafb-70d867907a23.jpg?v=1749004115",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-peptide-cream-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-pdrn-pink-collagen-gel-toner-pad-100-off",
-    "name": "SHOPIFY_ME PDRN Pink Collagen Gel Toner Pad",
-    "brand": "SHOPIFY_ME",
-    "category": "toner-pad",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PDRN_00_42699406-cc69-49a8-8667-5b8cafacaaae.jpg?v=1748502072",
-    "officialUrl": "https://www.medicube.us/products/pdrn-pink-collagen-gel-toner-pad-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-cotton-pads-100-off",
-    "name": "SHOPIFY_ME Cotton Pads",
-    "brand": "SHOPIFY_ME",
-    "category": "toner-pad",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/20241126_ME_nukki_99779_copy_e9e8f7f9-f319-41f4-b148-e52868a6ed65.jpg?v=1748501730",
-    "officialUrl": "https://www.medicube.us/products/gift-cotton-pads-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
     ]
   },
   {
@@ -23925,38 +22799,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "shopify-me-gift-collagen-niacinamide-jelly-cream-50ml-100-off",
-    "name": "SHOPIFY_ME Collagen Niacinamide Jelly Cream 50ml",
-    "brand": "SHOPIFY_ME",
-    "category": "moisturizer",
-    "ingredientIds": [
-      "niacinamide",
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support, peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/jelly50ml_th2_1_e55fb854-a666-42a4-8734-d379dede2af8.jpg?v=1740118097",
-    "officialUrl": "https://www.medicube.us/products/gift-collagen-niacinamide-jelly-cream-50ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness",
-      "anti-aging"
-    ]
-  },
-  {
     "slug": "medicube-us-gift-zero-foam-cleanser",
     "name": "MEDICUBE Zero Foam Cleanser",
     "brand": "MEDICUBE",
@@ -23991,35 +22833,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "acne",
       "redness",
       "barrier"
-    ]
-  },
-  {
-    "slug": "shopify-me-collagen-radiance-mask-100-off",
-    "name": "SHOPIFY_ME Collagen Radiance Mask",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/CollagenRadianceMask_606e0d78-e5a5-441d-b196-2526bd2e7e42.jpg?v=1740102571",
-    "officialUrl": "https://www.medicube.us/products/collagen-radiance-mask-2ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
-      "anti-aging"
     ]
   },
   {
@@ -24084,203 +22897,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "concerns": [
       "hydration",
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-pdrn-pink-peptide-serum-100-off",
-    "name": "SHOPIFY_ME PDRN Pink Peptide Serum",
-    "brand": "SHOPIFY_ME",
-    "category": "serum",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/PDRN_01_00bbec9a-0b4b-4b6a-814c-d1531608fdd0.jpg?v=1738563048",
-    "officialUrl": "https://www.medicube.us/products/rose-pdrn-pink-peptide-serum-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-zero-pore-cooling-mask-100-off",
-    "name": "SHOPIFY_ME Zero Pore Cooling Mask",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/ZeroPoreCoolingMask_ae4bdfc0-4dfe-4743-a722-86167d1cd86c.jpg?v=1738561535",
-    "officialUrl": "https://www.medicube.us/products/zero-pore-cooling-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
-    "slug": "shopify-me-super-cica-calming-mask-100-off",
-    "name": "SHOPIFY_ME Super Cica Calming Mask",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [
-      "centella"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/SuperCicaCalmingMask_c74dd390-e1ae-4989-97d3-b21cf29b0309.jpg?v=1738561532",
-    "officialUrl": "https://www.medicube.us/products/super-cica-calming-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness"
-    ]
-  },
-  {
-    "slug": "shopify-me-calming-ringer-mask-100-off",
-    "name": "SHOPIFY_ME Calming Ringer Mask",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/CalmingRingerMask_553a8489-1528-41f4-a1ea-22ca9c9aec5a.jpg?v=1738561520",
-    "officialUrl": "https://www.medicube.us/products/medicube-calming-ringer-masks-2ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness"
-    ]
-  },
-  {
-    "slug": "shopify-me-super-cica-daily-quick-masks-100-off",
-    "name": "SHOPIFY_ME Super Cica Daily Quick Masks",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [
-      "centella"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/SuperCicaDailyQuickMasks_40708df5-97e9-494b-abd7-6c9784ea7413.jpg?v=1738561518",
-    "officialUrl": "https://www.medicube.us/products/super-cica-daily-quick-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness"
-    ]
-  },
-  {
-    "slug": "shopify-me-deep-vita-c-daily-quick-masks-100-off",
-    "name": "SHOPIFY_ME Deep Vita C Daily Quick Masks",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [
-      "vitamin_c"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: vitamin C/brightening family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/01_9e9dafde-7472-4538-94ee-39fcbf19f08c.jpg?v=1738561515",
-    "officialUrl": "https://www.medicube.us/products/deep-vita-c-daily-quick-masks-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "shopify-me-deep-peptide-radiance-mask-100-off",
-    "name": "SHOPIFY_ME Deep Peptide Radiance Mask",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/DeepPeptideRadianceMask_4db4444b-7550-44d3-a1ec-2b8e1d54446a.jpg?v=1738561511",
-    "officialUrl": "https://www.medicube.us/products/medicube-deep-peptide-radiance-mask-2ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness",
       "anti-aging"
     ]
   },
@@ -24541,58 +23157,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "medicube-us-mask-bundle-pack-10ea-100-off",
-    "name": "MEDICUBE Mask Bundle Pack (10ea)",
-    "brand": "MEDICUBE",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/1_b6169337-2d07-4fe9-930b-33ca97ae1dec.jpg?v=1732787914",
-    "officialUrl": "https://www.medicube.us/products/mask-bundle-pack-10ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "medicube-us-mask-bundle-pack-5ea-100-off",
-    "name": "MEDICUBE Mask Bundle Pack (5ea)",
-    "brand": "MEDICUBE",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/1_f6c9a114-edac-4b03-900b-b4474870e4e8.jpg?v=1732787881",
-    "officialUrl": "https://www.medicube.us/products/mask-bundle-pack_1-5ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "medicube-us-mask-bundle-pack-10ea",
     "name": "MEDICUBE Mask Bundle Pack (10ea)",
     "brand": "MEDICUBE",
@@ -24783,32 +23347,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "shopify-me-scalp-gua-sha-100-off",
-    "name": "SHOPIFY_ME Scalp Gua Sha",
-    "brand": "SHOPIFY_ME",
-    "category": "scalp",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use on the targeted area as directed by the brand",
-      "Start with a small amount and increase if needed",
-      "Reduce frequency if irritation appears"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/1_d682f24e-eea6-48f3-8083-c3056c4451c3.jpg?v=1730443947",
-    "officialUrl": "https://www.medicube.us/products/scalp-gua-sha-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "shopify-me-scalp-gua-sha",
     "name": "SHOPIFY_ME Scalp Gua Sha",
     "brand": "SHOPIFY_ME",
@@ -24853,61 +23391,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/1_1808526e-51ce-4ff9-9aa4-29099217c88b.jpg?v=1730443045",
     "officialUrl": "https://www.medicube.us/products/gift-scalp-gua-sha",
     "price": 12,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "shopify-me-age-r-vita-k-cream-100-off",
-    "name": "SHOPIFY_ME AGE-R Vita K Cream",
-    "brand": "SHOPIFY_ME",
-    "category": "moisturizer",
-    "ingredientIds": [
-      "vitamin_c"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: vitamin C/brightening family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/Age-RVitaKCream_835d3659-f6b4-4d24-9803-82406256d47c.jpg?v=1730442502",
-    "officialUrl": "https://www.medicube.us/products/age-r-vita-k-cream-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "shopify-me-age-r-booster-gel-serum-100-off",
-    "name": "SHOPIFY_ME AGE-R Booster Gel Serum",
-    "brand": "SHOPIFY_ME",
-    "category": "serum",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/Age-RBoosterGelSerum_69efc9c0-3eb3-4fd1-907b-97202cf97b00.jpg?v=1730442494",
-    "officialUrl": "https://www.medicube.us/products/age-r-booster-gel-serum-sca_clone_freegift",
-    "price": 0,
     "currency": "USD",
     "skinTypes": [
       "normal",
@@ -25009,175 +23492,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "shopify-me-exosome-cica-calming-toner-pads-100-off",
-    "name": "SHOPIFY_ME Exosome Cica Calming Toner Pads",
-    "brand": "SHOPIFY_ME",
-    "category": "toner-pad",
-    "ingredientIds": [
-      "centella"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/01_99c5a7bb-4b45-45b1-a894-6b28dc4fd3df.jpg?v=1729494439",
-    "officialUrl": "https://www.medicube.us/products/exosome-cica-calming-toner-pads-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "dullness",
-      "redness"
-    ]
-  },
-  {
-    "slug": "shopify-me-zero-pore-pads-100-off",
-    "name": "SHOPIFY_ME Zero Pore Pads",
-    "brand": "SHOPIFY_ME",
-    "category": "toner-pad",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/ZeroPorePads_3_3f08aa40-0395-46d7-85fe-5c4de52709df.jpg?v=1729477913",
-    "officialUrl": "https://www.medicube.us/products/zero-pore-pad-1-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
-    "slug": "shopify-me-deep-vita-c-pads-100-off",
-    "name": "SHOPIFY_ME Deep Vita C Pads",
-    "brand": "SHOPIFY_ME",
-    "category": "toner-pad",
-    "ingredientIds": [
-      "vitamin_c"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: vitamin C/brightening family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/20607435fb2aafb1f5239ff229ed7137.png?v=1739338871",
-    "officialUrl": "https://www.medicube.us/products/deep-vita-c-pad-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "shopify-me-red-succinic-acid-panthenol-pads-100-off",
-    "name": "SHOPIFY_ME Red Succinic Acid Panthenol Pads",
-    "brand": "SHOPIFY_ME",
-    "category": "toner-pad",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/5c877e1a4959f34a87f9b506470b5329_b8d6ab0f-19c9-4a9e-ab2c-406ea935ea95.jpg?v=1729477906",
-    "officialUrl": "https://www.medicube.us/products/red-succinic-acid-panthenol-pads-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "barrier"
-    ]
-  },
-  {
-    "slug": "shopify-me-zero-pore-madecassoside-pads-mild-100-off",
-    "name": "SHOPIFY_ME Zero Pore Madecassoside Pads (Mild)",
-    "brand": "SHOPIFY_ME",
-    "category": "toner-pad",
-    "ingredientIds": [
-      "centella"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/0441fdd16eaf1afd06394a5cfb53a4de_1c918ebe-d65c-47bd-b820-df7562bf3472.jpg?v=1729477903",
-    "officialUrl": "https://www.medicube.us/products/zero-pore-pads-mild-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
-    "slug": "shopify-me-super-cica-pads-100-off",
-    "name": "SHOPIFY_ME Super Cica Pads",
-    "brand": "SHOPIFY_ME",
-    "category": "toner-pad",
-    "ingredientIds": [
-      "centella"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/1_c2560d96-d14a-4752-b85e-e0f2765c846f.jpg?v=1729477899",
-    "officialUrl": "https://www.medicube.us/products/super-cica-pads-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness"
-    ]
-  },
-  {
     "slug": "shopify-me-pdrn-pink-peptide-toner",
     "name": "SHOPIFY_ME PDRN Pink Peptide Toner",
     "brand": "SHOPIFY_ME",
@@ -25241,34 +23555,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     "concerns": [
       "redness",
       "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-age-r-glutathione-glow-serum-100-off",
-    "name": "SHOPIFY_ME AGE-R Glutathione Glow Serum",
-    "brand": "SHOPIFY_ME",
-    "category": "serum",
-    "ingredientIds": [
-      "vitamin_c"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: vitamin C/brightening family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/MicrosoftTeams-image_109_c0bfe885-81d8-40fb-9836-fbbbeb45c83b.jpg?v=1729236159",
-    "officialUrl": "https://www.medicube.us/products/gift-age-r-glutathione-glow-serum-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness"
     ]
   },
   {
@@ -25628,60 +23914,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "concerns": [
       "hydration"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-red-succinic-acid-peeling-pad-2ea-100-off",
-    "name": "MEDICUBE » [GIFT] Red Succinic Acid Peeling Pad 2ea",
-    "brand": "MEDICUBE",
-    "category": "toner-pad",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/succinic_ac7051e7-8c48-4820-a43e-5cee8ef22865.jpg?v=1723786463",
-    "officialUrl": "https://www.medicube.us/products/gift-2-zero-pore-pads-mini-24-pads-copy-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-pdrn-pink-collagen-gel-mask-1ea-100-off",
-    "name": "SHOPIFY_ME » [GIFT] PDRN Pink Collagen Gel Mask 1ea",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/1_90c6ebc7-0041-4373-8d26-081483f5b617.jpg?v=1723786460",
-    "officialUrl": "https://www.medicube.us/products/gift-pdrn-pink-collagen-gel-mask-1ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
     ]
   },
   {
@@ -26785,62 +25017,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "shopify-me-gift-collagen-trial-kit-100-off",
-    "name": "SHOPIFY_ME » [GIFT] Collagen Trial Kit",
-    "brand": "SHOPIFY_ME",
-    "category": "serum",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/Collagen_Trial_Kit.jpg?v=1730794543",
-    "officialUrl": "https://www.medicube.us/products/gift-collagen-trial-kit-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
-    ]
-  },
-  {
-    "slug": "shopify-me-gift-deep-vita-c-pads-2ea-100-off",
-    "name": "SHOPIFY_ME » [GIFT] Deep Vita C Pads 2EA",
-    "brand": "SHOPIFY_ME",
-    "category": "toner-pad",
-    "ingredientIds": [
-      "vitamin_c"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: vitamin C/brightening family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/701_99eecffc-05ea-4cfb-93fe-5697cafa361b.jpg?v=1713168084",
-    "officialUrl": "https://www.medicube.us/products/gift-deep-vita-c-pads-2ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "shopify-me-gift-collagen-trial-kit",
     "name": "SHOPIFY_ME Collagen Trial Kit",
     "brand": "SHOPIFY_ME",
@@ -27129,32 +25305,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "shopify-me-gift-daily-quick-masks-gift-100-off",
-    "name": "SHOPIFY_ME » [GIFT] Daily Quick Masks Gift",
-    "brand": "SHOPIFY_ME",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/ff88ec1ae14591b584b04d8753cb7448_d84aa873-7023-41cb-801f-54ad0362c1af.jpg?v=1712213913",
-    "officialUrl": "https://www.medicube.us/products/gift-daily-quick-masks-gift-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "shopify-me-deep-vita-c-daily-quick-masks",
     "name": "SHOPIFY_ME Deep Vita C Daily Quick Masks",
     "brand": "SHOPIFY_ME",
@@ -27217,32 +25367,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "acne",
       "barrier",
       "anti-aging"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-deep-line-masks-10-100-off",
-    "name": "MEDICUBE » [GIFT] Deep Line Masks 10",
-    "brand": "MEDICUBE",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/giffff_89ca0220-d84a-433e-88e0-40e5cb0136d0.jpg?v=1711007253",
-    "officialUrl": "https://www.medicube.us/products/gift-deep-line-masks-10-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
     ]
   },
   {
@@ -27563,32 +25687,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "medicube-us-gift-deep-line-masks-6-100-off",
-    "name": "MEDICUBE » [GIFT] Deep Line Masks 6",
-    "brand": "MEDICUBE",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/gift1_111_354c925e-2082-40b7-8467-79524987df8c.jpg?v=1709790891",
-    "officialUrl": "https://www.medicube.us/products/gift-deep-line-masks-6-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "medicube-us-gift-deep-line-masks-10",
     "name": "MEDICUBE Deep Line Masks 10",
     "brand": "MEDICUBE",
@@ -27862,32 +25960,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "shopify-me-red-clear-capsule-body-lotion-100-off",
-    "name": "SHOPIFY_ME » Red Clear Capsule Body Lotion",
-    "brand": "SHOPIFY_ME",
-    "category": "lotion",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS: Free gift & Buy X Get Y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/files/01_8134c981-8267-491e-bf2d-82e394a70e55.jpg?v=1705901995",
-    "officialUrl": "https://www.medicube.us/products/red-clear-capsule-body-lotion-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "shopify-me-red-clear-capsule-body-lotion",
     "name": "SHOPIFY_ME Red Clear Capsule Body Lotion",
     "brand": "SHOPIFY_ME",
@@ -28039,35 +26111,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "hydration",
       "redness",
       "anti-aging"
-    ]
-  },
-  {
-    "slug": "medicube-us-gift-super-cica-daily-quick-mask-100-off",
-    "name": "MEDICUBE » [GIFT] Super Cica Daily Quick Mask",
-    "brand": "MEDICUBE",
-    "category": "mask",
-    "ingredientIds": [
-      "centella"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: centella/cica soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app Free Gifts BOGO buy x get y to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0156/3905/2336/products/MicrosoftTeams-image_351_772b88ab-8e11-4c14-acb2-f349a8614cae.jpg?v=1692096141",
-    "officialUrl": "https://www.medicube.us/products/gift-super-cica-daily-quick-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "redness"
     ]
   },
   {
@@ -38979,60 +37022,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "neogenlab-us-pad-case-100-off",
-    "name": "NEOGENLAB Pad Case",
-    "brand": "NEOGENLAB",
-    "category": "toner-pad",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/1324/9403/files/KakaoTalk_20240517_151750337_cc9981ce-e3e5-4536-b79a-74f2ee489dbd.png?v=1783069864",
-    "officialUrl": "https://www.neogenlab.us/products/pad-case-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "neogen-dermalogy-bio-peel-gauze-peeling-green-tea-2-48-oz-76ml-8-pads-100-off",
-    "name": "NEOGEN DERMALOGY Bio-Peel Gauze Peeling Green Tea 2.48 oz / 76ml (8 Pads)",
-    "brand": "NEOGEN DERMALOGY",
-    "category": "toner-pad",
-    "ingredientIds": [
-      "green_tea"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: botanical soothing family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/1324/9403/files/8_60cfabce-e588-4b0b-8f60-f8b8173ec953.png?v=1783069630",
-    "officialUrl": "https://www.neogenlab.us/products/clearance-neogen-dermalogy-bio-peel-gauze-peeling-green-tea-2-48-oz-76ml-8-pads-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "neogen-code9-hyal-glow-rose-essence-pad-70-pads",
     "name": "NEOGEN CODE9 Hyal Glow Rose Essence Pad (70 Pads)",
     "brand": "NEOGEN CODE9",
@@ -40486,34 +38475,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "neogen-dermalogy-real-niacinamide-15-serum-travel-size-100-off",
-    "name": "NEOGEN DERMALOGY Real Niacinamide 15% Serum (travel size)",
-    "brand": "NEOGEN DERMALOGY",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/1324/9403/files/10ml_4a5cd8b3-4db3-45bc-acf6-ccd4624b6582.png?v=1780043046",
-    "officialUrl": "https://www.neogenlab.us/products/real-hyal-panthenol-serum-travel-size-copy-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness"
-    ]
-  },
-  {
     "slug": "neogen-dermalogy-real-niacinamide-15-serum-travel-size",
     "name": "NEOGEN DERMALOGY Real Niacinamide 15% Serum (travel size)",
     "brand": "NEOGEN DERMALOGY",
@@ -40584,60 +38545,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "hydration",
       "dullness",
       "redness",
-      "barrier"
-    ]
-  },
-  {
-    "slug": "neogen-dermalogy-niacinamide-15-serum-travel-size-100-off",
-    "name": "NEOGEN DERMALOGY Niacinamide 15% Serum (travel size)",
-    "brand": "NEOGEN DERMALOGY",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/1324/9403/files/10ml_ef2fc3aa-df23-4432-8a06-4b1bd29eda35.png?v=1780042616",
-    "officialUrl": "https://www.neogenlab.us/products/neogen-dermalogy-real-hyal-panthenol-serum-30ml-copy-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness"
-    ]
-  },
-  {
-    "slug": "neogen-dermalogy-real-hyal-panthenol-serum-travel-size-100-off",
-    "name": "NEOGEN DERMALOGY Real Hyal Panthenol Serum (Travel Size)",
-    "brand": "NEOGEN DERMALOGY",
-    "category": "serum",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/1324/9403/files/20230718_OutinfuturesClear12957.png?v=1780038866",
-    "officialUrl": "https://www.neogenlab.us/products/real-hyal-panthenol-serum-travel-size-100-off",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
       "barrier"
     ]
   },
@@ -42636,34 +40543,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "neogenlab-us-real-bakuchiol-serum-travel-size-100-off",
-    "name": "NEOGENLAB REAL BAKUCHIOL SERUM (Travel Size)",
-    "brand": "NEOGENLAB",
-    "category": "serum",
-    "ingredientIds": [
-      "retinol"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: retinoid/bakuchiol family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/1324/9403/files/Brown_Simple_Beauty_Spa_Instagram_Post_8dc41efd-1621-45c4-9515-09dee8c084e8.png?v=1765946864",
-    "officialUrl": "https://www.neogenlab.us/products/real-bakuchiol-serum-travel-size-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "neogen-dermalogy-real-fresh-foam-cleanser-blueberry",
     "name": "NEOGEN DERMALOGY Real Fresh Foam Cleanser Blueberry",
     "brand": "NEOGEN DERMALOGY",
@@ -43198,34 +41077,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "hydration",
       "dullness",
       "redness"
-    ]
-  },
-  {
-    "slug": "neogenlab-us-real-peptide-serum-10ml-100-off",
-    "name": "NEOGENLAB REAL PEPTIDE SERUM (10ml)",
-    "brand": "NEOGENLAB",
-    "category": "serum",
-    "ingredientIds": [
-      "peptides"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: peptide/collagen/PDRN family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/1324/9403/files/20230718_OutinfuturesClear12953_435a68d0-0736-4263-bec2-3bbe753546d5.png?v=1779181598",
-    "officialUrl": "https://www.neogenlab.us/products/real-peptide-serum-10ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "anti-aging"
     ]
   },
   {
@@ -44022,34 +41873,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "dullness",
       "redness",
       "anti-aging"
-    ]
-  },
-  {
-    "slug": "neogen-dermalogy-neogen-dermalogy-real-niacinamide-15-serum-travel-size-100-off",
-    "name": "NEOGEN DERMALOGY Real Niacinamide 15% Serum (Travel Size)",
-    "brand": "NEOGEN DERMALOGY",
-    "category": "serum",
-    "ingredientIds": [
-      "niacinamide"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: niacinamide/brightening support. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/1324/9403/files/1fce406e241e23d7b38391603a5f720e_30bde222-7401-4844-a7fd-51bb6cdf9df8.png?v=1764655020",
-    "officialUrl": "https://www.neogenlab.us/products/neogen-dermalogy-real-niacinamide-15-serum-10ml-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "dullness"
     ]
   },
   {
@@ -49296,32 +47119,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "dear-klairs-gentle-black-fresh-cleansing-oil-100-off",
-    "name": "Dear, Klairs Gentle Black Fresh Cleansing Oil",
-    "brand": "Dear, Klairs",
-    "category": "cleansing-oil",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0934/1766/8886/files/gentle-black-fresh-cleansing-oil-thumbnail-04-concept3_b922d386-520c-4bce-83d8-7ff2ec0704cc.jpg?v=1776724946",
-    "officialUrl": "https://www.klairs.com/products/gentle-black-fresh-cleansing-oil-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "dear-klairs-christine-s-barrier-boost-kit",
     "name": "Dear, Klairs Christine's Barrier Boost Kit",
     "brand": "Dear, Klairs",
@@ -49462,32 +47259,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "hydration",
       "dullness",
       "acne"
-    ]
-  },
-  {
-    "slug": "dear-klairs-free-gift-my-blue-diy-mist-kit",
-    "name": "Dear, Klairs My Blue DIY Mist Kit",
-    "brand": "Dear, Klairs",
-    "category": "mist",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0934/1766/8886/files/My_Blue_DIY_Mist_Kit.jpg?v=1776809052",
-    "officialUrl": "https://www.klairs.com/products/my-blue-diy-mist-kit-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
     ]
   },
   {
@@ -49707,35 +47478,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "acne",
       "redness",
       "barrier"
-    ]
-  },
-  {
-    "slug": "dear-klairs-free-gift-midnight-blue-calming-cream",
-    "name": "Dear, Klairs Midnight Blue Calming Cream",
-    "brand": "Dear, Klairs",
-    "category": "moisturizer",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0934/1766/8886/files/Midnight-Blue-Calming-Cream-thumbnail-01-product_3f8a006a-4c08-4afc-a59a-e101622aca83.gif?v=1771649529",
-    "officialUrl": "https://www.klairs.com/products/midnight-blue-calming-cream-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry",
-      "sensitive"
-    ],
-    "concerns": [
-      "hydration",
-      "redness"
     ]
   },
   {
@@ -50706,138 +48448,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "aprilskin-us-5-calendula-deep-essence-masks-100-off",
-    "name": "APRILSKIN » 5 Calendula Deep Essence Masks",
-    "brand": "APRILSKIN",
-    "category": "essence",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/sheetmaks.png?v=1781574156",
-    "officialUrl": "https://www.aprilskin.us/products/5-calendula-deep-essence-masks-1-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-pink-aloe-mucin-serum-100-off",
-    "name": "APRILSKIN » Pink Aloe Mucin Serum",
-    "brand": "APRILSKIN",
-    "category": "serum",
-    "ingredientIds": [
-      "snail_mucin"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: snail mucin family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/0_f1b8fc34-77fd-4a84-ac91-5c297b591942.jpg?v=1781077672",
-    "officialUrl": "https://www.aprilskin.us/products/pink-aloe-mucin-serum-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-pink-aloe-facial-polish-cleanser-100-off",
-    "name": "APRILSKIN » Pink Aloe Facial Polish Cleanser",
-    "brand": "APRILSKIN",
-    "category": "cleanser",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use as the cleansing step on damp skin",
-      "Massage gently for 30-60 seconds",
-      "Rinse well and follow with toner or serum"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/pinkaloe_packcleanser_label_009537d4-2145-47a9-87a8-e33dc56811d9.jpg?v=1781077669",
-    "officialUrl": "https://www.aprilskin.us/products/pink-aloe-mask-to-foam-soothing-cleanser-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-txa-pink-capsule-overnight-gel-mask-100-off",
-    "name": "APRILSKIN » TXA Pink Capsule Overnight Gel Mask",
-    "brand": "APRILSKIN",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/AP_Amazon_TXA_Gel-Mask_0_ed642615-cac8-4fec-b392-dd4e18ca8664.jpg?v=1779340666",
-    "officialUrl": "https://www.aprilskin.us/products/txa-pink-capsule-overnight-gel-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-gift-facial-cotton-pads-100-off",
-    "name": "APRILSKIN » [GIFT] Facial Cotton Pads",
-    "brand": "APRILSKIN",
-    "category": "toner-pad",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/20241007_AP_skinpack77516copy_39246dd7-33c0-4032-ac1b-4c16973766f3.jpg?v=1776673942",
-    "officialUrl": "https://www.aprilskin.us/products/gift-facial-cotton-pads-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "aprilskin-us-gift-facial-cotton-pads",
     "name": "APRILSKIN Facial Cotton Pads",
     "brand": "APRILSKIN",
@@ -50937,117 +48547,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     ]
   },
   {
-    "slug": "aprilskin-us-carrotene-ipmp-quick-dry-pore-tightening-clay-mask-100-off",
-    "name": "APRILSKIN » Carrotene IPMP™ Quick Dry Pore Tightening Clay Mask",
-    "brand": "APRILSKIN",
-    "category": "mask",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Live chat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/MicrosoftTeams-image_136_3a7c2693-3c50-49c6-96f7-334be01b0027.jpg?v=1763607223",
-    "officialUrl": "https://www.aprilskin.us/products/carrotene-ipmp™-quick-dry-pore-tightening-clay-mask-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry",
-      "oily"
-    ],
-    "concerns": [
-      "acne"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-gift-carrotene-ipmp-calming-hydrating-sheet-mask-1ea-100-off",
-    "name": "APRILSKIN » [GIFT] Carrotene IPMP™ Calming & Hydrating Sheet Mask 1EA",
-    "brand": "APRILSKIN",
-    "category": "sheet-mask",
-    "ingredientIds": [
-      "hyaluronic_acid"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: hyaluronic/hydration family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: help@bogos.io .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/us_ap_carrotene_mask_268bf1bf-2155-4b4b-aada-b8875a2b0a19.jpg?v=1762416728",
-    "officialUrl": "https://www.aprilskin.us/products/gift-carrotene-ipmp™-calming-hydrating-sheet-mask-1ea-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry",
-      "sensitive"
-    ],
-    "concerns": [
-      "hydration",
-      "redness"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-calendula-deep-essence-mask-100-off",
-    "name": "aprilskin.us » Calendula Deep Essence Mask",
-    "brand": "aprilskin.us",
-    "category": "essence",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Apply after toner",
-      "Use 1-3 drops or one pump on face and neck",
-      "Seal with moisturizer; use SPF in the morning"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/2024_US_AP_thumbnail_mask_da66d13d-d828-436e-aef6-ae270af61df4.jpg?v=1755241313",
-    "officialUrl": "https://www.aprilskin.us/products/calendula-deep-essence-mask-10-sheets-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-gift-carrotene-ipmp-exfoliating-body-wash-100-off",
-    "name": "APRILSKIN » [GIFT] Carrotene IPMP™ Exfoliating Body Wash",
-    "brand": "APRILSKIN",
-    "category": "cleanser",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use as the cleansing step on damp skin",
-      "Massage gently for 30-60 seconds",
-      "Rinse well and follow with toner or serum"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/US_2023__bodywash_thumbnail_992294db-0c49-40d2-8d20-09cdaaae3d60.jpg?v=1754894353",
-    "officialUrl": "https://www.aprilskin.us/products/gift-carrotene-ipmp™-exfoliating-body-wash-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
-    ]
-  },
-  {
     "slug": "aprilskin-us-txa-pink-glow-skincare-full-set",
     "name": "APRILSKIN TXA Pink Glow Skincare Full Set",
     "brand": "APRILSKIN",
@@ -51083,94 +48582,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "acne",
       "redness",
       "anti-aging"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-pink-aloe-vitamin-c-soothing-brightening-toner-100-off",
-    "name": "APRILSKIN » Pink Aloe Vitamin C Soothing & Brightening Toner",
-    "brand": "APRILSKIN",
-    "category": "toner",
-    "ingredientIds": [
-      "vitamin_c",
-      "niacinamide"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: vitamin C/brightening family, niacinamide/brightening support. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing",
-      "Swipe with hands or a cotton pad, avoiding the eye area if exfoliating",
-      "Follow with serum and moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/1_d9f95a17-a17a-4c22-ab9c-921437c3a5ec.jpg?v=1749604549",
-    "officialUrl": "https://www.aprilskin.us/products/pink-aloe-vitamin-c-soothing-brightening-toner-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "sensitive"
-    ],
-    "concerns": [
-      "dullness",
-      "redness"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-carrotene-ipmp-calming-hydrating-sheet-mask-100-off",
-    "name": "APRILSKIN » Carrotene IPMP™ Calming & Hydrating Sheet Mask",
-    "brand": "APRILSKIN",
-    "category": "sheet-mask",
-    "ingredientIds": [
-      "hyaluronic_acid"
-    ],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Title/tags/description indicate: hyaluronic/hydration family. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use after cleansing according to the product format",
-      "Leave on for the time recommended by the brand",
-      "Remove or rinse, then finish with moisturizer"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/us_ap_carrotene_mask.jpg?v=1749604545",
-    "officialUrl": "https://www.aprilskin.us/products/carrotene-ipmp™-calming-hyadrating-sheet-masks-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry",
-      "sensitive"
-    ],
-    "concerns": [
-      "hydration",
-      "redness"
-    ]
-  },
-  {
-    "slug": "aprilskin-us-gift-viral-heart-cleansing-puff-100-off",
-    "name": "APRILSKIN » [GIFT] Viral Heart Cleansing Puff",
-    "brand": "APRILSKIN",
-    "category": "cleanser",
-    "ingredientIds": [],
-    "fullIngredients": "Official product feed did not expose the complete INCI. Verify the full composition on packaging or the official product page before allergy-sensitive use.",
-    "origin": "South Korea",
-    "description": "This product is used for the app BOGOS.io Free Gift BOGO Bundle to work. Please do not delete/edit it while the offers are still running! If you need assistance, please contact us via Livechat in-app or email us at: support@secomapp.com .",
-    "usageSteps": [
-      "Use as the cleansing step on damp skin",
-      "Massage gently for 30-60 seconds",
-      "Rinse well and follow with toner or serum"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/gift_th70_1599752b-dc7d-4ede-8ba3-8175b2c686ef.jpg?v=1749604543",
-    "officialUrl": "https://www.aprilskin.us/products/gift-viral-heart-cleansing-puff-sca_clone_freegift",
-    "price": 0,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination"
-    ],
-    "concerns": [
-      "hydration"
     ]
   },
   {
@@ -52021,45 +49432,6 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
     "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/KoreanNewYearSale_th.jpg__freegift.jpg?v=1706166482",
     "officialUrl": "https://www.aprilskin.us/products/kny-free-gift20-vitamin-a-c-e-brightening-serum",
     "price": 36,
-    "currency": "USD",
-    "skinTypes": [
-      "normal",
-      "combination",
-      "dry",
-      "oily",
-      "sensitive"
-    ],
-    "concerns": [
-      "hydration",
-      "dullness",
-      "acne",
-      "redness",
-      "barrier"
-    ]
-  },
-  {
-    "slug": "test-test",
-    "name": "test",
-    "brand": "test",
-    "category": "cleansing-balm",
-    "ingredientIds": [
-      "vitamin_c",
-      "niacinamide",
-      "bha",
-      "pha",
-      "hyaluronic_acid"
-    ],
-    "fullIngredients": "Korean skincare is known for the use of effective, yet gentle ingredients. We've assembled this collection with a foundation of time-tested natural extracts, traditionally acknowledged in Korea for their efficacy. Each product in this set harnesses the power of these gentle yet potent ingredients, ensuring highly effective results but gentle enough even for those with sensitive skin. Featuring a weightless, quick-absorbing formula suitable for all skin types, this set gently works its magic with",
-    "origin": "South Korea",
-    "description": "Your Ultimate Skincare Routine for Glass Skin Glass skin is a K-beauty trend that represents skin complexion that’s incredibly smooth, clear, and radiant - skin as clear as glass. This trend is popular throughout K-beauty routines and products that emphasize hydration, brightening, and a healthy complexion. Yet, products intended to enhance skin radiance and hydration sometimes result in an overly sticky or greasy sensation, but with this SET, we’ve defied that norm! Meet the perfect collection that not only uplift",
-    "usageSteps": [
-      "Apply after serum as the moisturizing step",
-      "Massage gently until absorbed",
-      "Use morning and/or evening depending on skin comfort"
-    ],
-    "imageUrl": "https://cdn.shopify.com/s/files/1/0077/0487/0948/files/USAP_cleansingBalm_th1_f7c9855d-2451-4f8f-8e27-d6fd521c0970.jpg?v=1700037111",
-    "officialUrl": "https://www.aprilskin.us/products/test",
-    "price": 24,
     "currency": "USD",
     "skinTypes": [
       "normal",
@@ -69236,4 +66608,4 @@ export const GENERATED_PRODUCTS: SeedProduct[] = [
       "hydration"
     ]
   }
-];
+]
