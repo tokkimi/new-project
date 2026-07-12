@@ -10,6 +10,7 @@ import { BeautyNews } from "@/components/marketing/beauty-news";
 import { IngredientBase } from "@/components/marketing/ingredient-base";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { db } from "@/lib/db";
+import { getRecentNews } from "@/lib/news-queries";
 import { getSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -31,7 +32,7 @@ export default async function Home({
   setRequestLocale(locale);
 
   const [newsItems, latestProducts, koreanProducts] = await Promise.all([
-    db.newsItem.findMany({ orderBy: { publishedAt: "desc" }, take: 50 }),
+    getRecentNews(24),
     db.product.findMany({ orderBy: { createdAt: "desc" }, take: 10 }),
     db.product.findMany({ where: { origin: "South Korea" }, take: 10 }),
   ]);

@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -63,10 +62,9 @@ export function ProductShowcase({
             <h3 className="font-serif text-xl">{t("latestTitle")}</h3>
             <Link
               href="/app/products"
-              className="flex shrink-0 items-center gap-1 text-sm font-medium text-primary hover:underline"
+              className="shrink-0 text-sm font-medium text-primary hover:underline"
             >
               {t("seeAll")}
-              <ArrowRight className="size-3.5" />
             </Link>
           </div>
           <ProductStrip products={latest} />
@@ -80,10 +78,9 @@ export function ProductShowcase({
             </div>
             <Link
               href="/app/products"
-              className="flex shrink-0 items-center gap-1 text-sm font-medium text-primary hover:underline"
+              className="shrink-0 text-sm font-medium text-primary hover:underline"
             >
               {t("seeAll")}
-              <ArrowRight className="size-3.5" />
             </Link>
           </div>
           <ProductStrip products={madeInKorea} />
@@ -92,10 +89,7 @@ export function ProductShowcase({
 
       <div className="mt-10 flex justify-center">
         <Button asChild size="lg" variant="outline">
-          <Link href="/app/products">
-            {t("browseAllCta")}
-            <ArrowRight className="size-4" />
-          </Link>
+          <Link href="/app/products">{t("browseAllCta")}</Link>
         </Button>
       </div>
     </section>

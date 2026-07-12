@@ -4,6 +4,8 @@ export type SeedNews = {
   summary: string;
   sourceName: string;
   sourceUrl?: string;
+  /** Real article/press image URL. Left unset until one is verified — never fabricated. */
+  imageUrl?: string;
   publishedAt: string; // ISO date
 };
 
@@ -389,5 +391,38 @@ export const NEWS: SeedNews[] = [
     sourceName: "The Monodist",
     sourceUrl: "https://themonodist.com/hwahae-beauty-awards-2026-mid-year/",
     publishedAt: "2026-05-21",
+  },
+
+  // Last-15-days pass (home carousel) — imageUrl intentionally left unset,
+  // outbound image fetching was down when these were added; fill in once
+  // network access is restored, never with a guessed URL.
+  {
+    category: "brand-news",
+    title: "Olive Young lance son premier festival K-beauty aux États-Unis, à Los Angeles",
+    summary:
+      "OLIVE YOUNG FESTA LA 2026 réunira 55 marques coréennes de beauté et lifestyle du 14 au 16 août, sur environ 4 600 m² inspirés des quartiers de Séoul (Seongsu, Gangnam, Hongdae, Myeongdong).",
+    sourceName: "PR Newswire",
+    sourceUrl:
+      "https://www.prnewswire.com/news-releases/olive-young-brings-signature-k-beauty-festival-to-the-us-with-olive-young-festa-la-2026-302816371.html",
+    publishedAt: "2026-07-01",
+  },
+  {
+    category: "launch",
+    title: "LANEIGE et HEAL Wellness lancent une collaboration açaï-mangue au Canada",
+    summary:
+      "Pour accompagner le lancement de son Açaí Mango Lip Sleeping Mask, LANEIGE s'associe aux 44 bars à smoothies HEAL Wellness du Canada avec un bol édition limitée, du 11 juillet au 6 août.",
+    sourceName: "The Globe and Mail",
+    sourceUrl:
+      "https://www.theglobeandmail.com/investing/markets/markets-news/Newsfile/3221803/heal-wellness-collaborates-with-global-skincare-brand-laneige-to-launch-limited-time-acai-mango-bowl-across-canada/",
+    publishedAt: "2026-07-11",
+  },
+  {
+    category: "innovation",
+    title: "Séoul relance son pop-up K-beauty pour touristes avec diagnostic de peau par IA",
+    summary:
+      "La deuxième édition du pop-up « KBF Beauty House » de l'Office du tourisme coréen, ouverte jusqu'au 19 juillet, propose diagnostics de peau par IA, analyse de couleurs personnelle et recommandations skincare sur mesure.",
+    sourceName: "The Asia Business Daily",
+    sourceUrl: "https://www.asiae.co.kr/en/article/2026070214540190624",
+    publishedAt: "2026-07-02",
   },
 ];
