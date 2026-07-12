@@ -452,7 +452,8 @@
     "noConflictsText": "The actives on your shelf play nicely together.",
     "duplicateActives": "Duplicate actives",
     "duplicateTitle": "You have {count} products with the same strong active",
-    "backToRoutine": "Back to routine"
+    "backToRoutine": "Back to routine",
+    "remove": "Remove from routine"
   },
   "conflictDetail": {
     "notFound": "This conflict doesn't exist (anymore).",
@@ -797,6 +798,8 @@
     "scan": "Scan",
     "favorite": "Favorite",
     "remove": "Remove",
+    "edit": "Edit",
+    "cancel": "Cancel",
     "categoryPlaceholder": "Custom category: acne, glow, makeup...",
     "productNotePlaceholder": "Note about this product, reaction, frequency, order...",
     "emptyProductsTitle": "No saved products",

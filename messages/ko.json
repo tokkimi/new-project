@@ -452,7 +452,8 @@
     "noConflictsText": "화장대의 성분들이 서로 잘 어울려요.",
     "duplicateActives": "중복된 활성 성분",
     "duplicateTitle": "같은 강력 활성 성분이 들어간 제품이 {count}개 있어요",
-    "backToRoutine": "루틴으로 돌아가기"
+    "backToRoutine": "루틴으로 돌아가기",
+    "remove": "루틴에서 삭제"
   },
   "conflictDetail": {
     "notFound": "존재하지 않는(또는 더 이상 존재하지 않는) 충돌이에요.",
@@ -797,6 +798,8 @@
     "scan": "스캔",
     "favorite": "즐겨찾기",
     "remove": "삭제",
+    "edit": "수정",
+    "cancel": "취소",
     "categoryPlaceholder": "나만의 카테고리: 여드름, 광채, 메이크업...",
     "productNotePlaceholder": "이 제품에 대한 메모, 반응, 사용 빈도, 순서 등...",
     "emptyProductsTitle": "저장된 제품이 없어요",

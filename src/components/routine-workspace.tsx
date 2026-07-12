@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Camera, ChevronDown, Heart, LinkIcon, NotebookPen, Plus, Trash2 } from "lucide-react";
+import { Camera, ChevronDown, Heart, LinkIcon, NotebookPen, Pencil, Plus, Trash2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
@@ -110,6 +110,7 @@ export function RoutineWorkspace() {
   const [notes, setNotes] = React.useState<Note[]>([]);
   const [links, setLinks] = React.useState<SavedLink[]>([]);
   const [noteDraft, setNoteDraft] = React.useState({ title: "", body: "" });
+  const [editingNoteId, setEditingNoteId] = React.useState<string | null>(null);
   const [linkDraft, setLinkDraft] = React.useState({ title: "", url: "", note: "" });
 
   React.useEffect(() => {
@@ -147,18 +148,37 @@ export function RoutineWorkspace() {
     setTab("routine");
   };
 
-  const addNote = async () => {
+  const saveNote = async () => {
     if (!noteDraft.title.trim()) return;
     const res = await fetch("/api/workspace/notes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(noteDraft),
+      body: JSON.stringify(editingNoteId ? { ...noteDraft, id: editingNoteId } : noteDraft),
     });
     if (res.ok) {
       const data = await res.json();
-      setNotes((prev) => [data.note, ...prev]);
+      setNotes((prev) =>
+        editingNoteId ? prev.map((n) => (n.id === editingNoteId ? data.note : n)) : [data.note, ...prev]
+      );
       setNoteDraft({ title: "", body: "" });
+      setEditingNoteId(null);
     }
+  };
+
+  const editNote = (note: Note) => {
+    setEditingNoteId(note.id);
+    setNoteDraft({ title: note.title, body: note.body });
+  };
+
+  const cancelNoteEdit = () => {
+    setEditingNoteId(null);
+    setNoteDraft({ title: "", body: "" });
+  };
+
+  const deleteNote = async (id: string) => {
+    setNotes((prev) => prev.filter((n) => n.id !== id));
+    if (editingNoteId === id) cancelNoteEdit();
+    await fetch(`/api/workspace/notes/${id}`, { method: "DELETE" }).catch(() => {});
   };
 
   const addLink = async () => {
@@ -258,14 +278,44 @@ export function RoutineWorkspace() {
         <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
           <Card className="gap-3">
             <div className="flex items-center gap-2 font-medium">
-              <NotebookPen className="size-4" /> {t("newNote")}
+              <NotebookPen className="size-4" /> {editingNoteId ? t("edit") : t("newNote")}
             </div>
             <input className="h-10 rounded-md border border-input bg-background px-3 text-sm" placeholder={t("noteTitlePlaceholder")} value={noteDraft.title} onChange={(e) => setNoteDraft({ ...noteDraft, title: e.target.value })} />
             <textarea className="min-h-32 rounded-md border border-input bg-background px-3 py-2 text-sm" placeholder={t("noteBodyPlaceholder")} value={noteDraft.body} onChange={(e) => setNoteDraft({ ...noteDraft, body: e.target.value })} />
-            <Button onClick={addNote}><Plus className="size-4" /> {t("add")}</Button>
+            <div className="flex gap-2">
+              <Button onClick={saveNote}><Plus className="size-4" /> {editingNoteId ? t("save") : t("add")}</Button>
+              {editingNoteId && (
+                <Button variant="outline" onClick={cancelNoteEdit}>{t("cancel")}</Button>
+              )}
+            </div>
           </Card>
           <div className="grid gap-3">
-            {notes.map((n) => <Card key={n.id} className="gap-1"><p className="font-medium">{n.title}</p><p className="whitespace-pre-wrap text-sm text-muted-foreground">{n.body}</p></Card>)}
+            {notes.map((n) => (
+              <Card key={n.id} className="gap-1">
+                <div className="flex items-start justify-between gap-2">
+                  <p className="font-medium">{n.title}</p>
+                  <div className="flex shrink-0 gap-1">
+                    <button
+                      type="button"
+                      onClick={() => editNote(n)}
+                      aria-label={t("edit")}
+                      className="rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                    >
+                      <Pencil className="size-4" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => deleteNote(n.id)}
+                      aria-label={t("remove")}
+                      className="rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-destructive/10 hover:text-destructive"
+                    >
+                      <Trash2 className="size-4" />
+                    </button>
+                  </div>
+                </div>
+                <p className="whitespace-pre-wrap text-sm text-muted-foreground">{n.body}</p>
+              </Card>
+            ))}
           </div>
         </div>
       )}

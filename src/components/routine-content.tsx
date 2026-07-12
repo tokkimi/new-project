@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Sun, Moon, AlertTriangle, ChevronRight, Layers, Sparkles } from "lucide-react";
+import { Sun, Moon, AlertTriangle, ChevronRight, Layers, Sparkles, Trash2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Badge, type badgeVariants } from "@/components/ui/badge";
@@ -17,6 +17,8 @@ function RoutineColumn({
   stepsLabel,
   emptyLabel,
   categoryLabel,
+  removeLabel,
+  onRemove,
 }: {
   title: string;
   icon: React.ReactNode;
@@ -25,6 +27,8 @@ function RoutineColumn({
   stepsLabel: string;
   emptyLabel: string;
   categoryLabel: (category: RoutineStep["product"]["category"]) => string;
+  removeLabel: string;
+  onRemove: (productId: string) => void;
 }) {
   return (
     <Card className="gap-4">
@@ -40,10 +44,13 @@ function RoutineColumn({
       ) : (
         <ol className="flex flex-col gap-2.5">
           {steps.map((step, i) => (
-            <li key={step.product.id}>
+            <li
+              key={step.product.id}
+              className="flex items-center gap-2 rounded-xl border border-border bg-background px-3 py-2.5 transition-colors hover:border-primary/40"
+            >
               <Link
                 href={`/app/product/${step.product.slug}`}
-                className="flex items-center gap-3 rounded-xl border border-border bg-background px-3 py-2.5 transition-colors hover:border-primary/40"
+                className="flex min-w-0 flex-1 items-center gap-3"
               >
                 <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-medium text-muted-foreground">
                   {i + 1}
@@ -54,8 +61,16 @@ function RoutineColumn({
                     {step.product.brand} · {categoryLabel(step.product.category)}
                   </p>
                 </div>
-                <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
               </Link>
+              <button
+                type="button"
+                onClick={() => onRemove(step.product.id)}
+                aria-label={removeLabel}
+                className="shrink-0 rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-destructive/10 hover:text-destructive"
+              >
+                <Trash2 className="size-4" />
+              </button>
+              <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
             </li>
           ))}
         </ol>
@@ -69,7 +84,7 @@ export function RoutineContent({ compact = false }: { compact?: boolean }) {
   const tCategories = useTranslations("categories");
   const tSeverity = useTranslations("severity");
   const tConflicts = useTranslations("conflictRules");
-  const { shelf } = useShelf();
+  const { shelf, removeProduct } = useShelf();
   const routine = buildRoutine(shelf);
 
   return (
@@ -88,6 +103,8 @@ export function RoutineContent({ compact = false }: { compact?: boolean }) {
           stepsLabel={t("steps", { count: routine.am.length })}
           emptyLabel={t("noProducts")}
           categoryLabel={(c) => tCategories(c)}
+          removeLabel={t("remove")}
+          onRemove={removeProduct}
         />
         <RoutineColumn
           title={t("evening")}
@@ -97,6 +114,8 @@ export function RoutineContent({ compact = false }: { compact?: boolean }) {
           stepsLabel={t("steps", { count: routine.pm.length })}
           emptyLabel={t("noProducts")}
           categoryLabel={(c) => tCategories(c)}
+          removeLabel={t("remove")}
+          onRemove={removeProduct}
         />
       </div>
 
