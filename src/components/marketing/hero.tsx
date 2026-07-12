@@ -84,9 +84,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mt-4 lg:mt-0"
         >
-          <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[1.75rem] shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.25)]">
+          <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[1.75rem] border border-white/40 bg-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.25)] backdrop-blur-md dark:border-white/10 dark:bg-white/5">
             <video
-              className="aspect-[4/5] w-full object-cover"
+              className="aspect-[4/5] w-full object-cover opacity-85"
               poster="/hero-banner-poster.jpg"
               autoPlay
               loop
@@ -98,6 +98,10 @@ export function Hero() {
               <source src="/hero-banner.webm" type="video/webm" />
               <source src="/hero-banner.mp4" type="video/mp4" />
             </video>
+            {/* Glass-pane sheen: diagonal highlight + edge glow, on top of the video */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-tl from-primary/10 via-transparent to-white/25" />
+            <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-white/30" />
           </div>
         </motion.div>
       </div>
