@@ -1,4 +1,5 @@
 import { db } from "@/lib/db";
+import { Link } from "@/i18n/navigation";
 import { UserRowActions } from "@/components/admin/user-row-actions";
 
 export default async function AdminUsersPage({
@@ -61,7 +62,9 @@ export default async function AdminUsersPage({
             {users.map((u) => (
               <tr key={u.id} className="border-b border-border/60 last:border-0">
                 <td className="p-3">
-                  <p className="font-medium">{u.name ?? "—"}</p>
+                  <Link href={`/admin/users/${u.id}`} className="font-medium hover:underline">
+                    {u.name ?? "—"}
+                  </Link>
                   <p className="text-xs text-muted-foreground">{u.email}</p>
                 </td>
                 <td className="p-3 text-xs text-muted-foreground">

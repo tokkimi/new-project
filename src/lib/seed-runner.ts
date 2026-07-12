@@ -497,6 +497,80 @@ export async function seedNews(db: PrismaClient): Promise<number> {
   return NEWS.length;
 }
 
+const DEFAULT_SOUNDS = [
+  {
+    slug: "white-noise",
+    labelEn: "White noise",
+    labelKo: "화이트 노이즈",
+    descriptionEn: "Even sound for focus or winding down",
+    descriptionKo: "집중과 휴식을 위한 균일한 소리",
+    sourceType: "synthesis",
+    synthesisMode: "white",
+    order: 0,
+  },
+  {
+    slug: "pink-noise",
+    labelEn: "Pink noise",
+    labelKo: "핑크 노이즈",
+    descriptionEn: "Softer low-frequency sound",
+    descriptionKo: "더 부드럽고 낮은 톤의 소리",
+    sourceType: "synthesis",
+    synthesisMode: "pink",
+    order: 1,
+  },
+  {
+    slug: "rain-texture",
+    labelEn: "Rain texture",
+    labelKo: "비 소리",
+    descriptionEn: "Short reset before an evening routine",
+    descriptionKo: "짧은 휴식이나 밤 루틴 전",
+    sourceType: "synthesis",
+    synthesisMode: "rain",
+    order: 2,
+  },
+  {
+    slug: "ocean-texture",
+    labelEn: "Ocean texture",
+    labelKo: "파도 소리",
+    descriptionEn: "Use with slow breathing",
+    descriptionKo: "느린 호흡과 함께 사용",
+    sourceType: "synthesis",
+    synthesisMode: "ocean",
+    order: 3,
+  },
+  {
+    slug: "tone-432",
+    labelEn: "432 Hz tone",
+    labelKo: "432 Hz 톤",
+    descriptionEn: "A simple relaxation tone",
+    descriptionKo: "휴식 분위기를 위한 단순한 톤",
+    sourceType: "synthesis",
+    synthesisMode: "calm432",
+    order: 4,
+  },
+  {
+    slug: "tone-528",
+    labelEn: "528 Hz tone",
+    labelKo: "528 Hz 톤",
+    descriptionEn: "For calm listening, not medical effect",
+    descriptionKo: "의학적 효과가 아닌 편안한 청취용",
+    sourceType: "synthesis",
+    synthesisMode: "soft528",
+    order: 5,
+  },
+] as const;
+
+export async function seedSounds(db: PrismaClient): Promise<number> {
+  for (const sound of DEFAULT_SOUNDS) {
+    await db.sound.upsert({
+      where: { slug: sound.slug },
+      update: sound,
+      create: sound,
+    });
+  }
+  return DEFAULT_SOUNDS.length;
+}
+
 const ADMIN_EMAIL = "admin@haru.app";
 const ADMIN_PASSWORD = "HaruAdmin!2026";
 const PREMIUM_EMAIL = "premium-tester@haru.app";

@@ -1,30 +1,35 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin-guard";
 import { db } from "@/lib/db";
-import { userAdminSchema } from "@/lib/validation-admin";
+import { soundAdminSchema } from "@/lib/validation-admin";
 
 export async function PATCH(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   const adminId = await requireAdmin();
-  if (!adminId) {
-    return NextResponse.json({ error: "forbidden" }, { status: 403 });
-  }
+  if (!adminId) return NextResponse.json({ error: "forbidden" }, { status: 403 });
 
   const { id } = await params;
   const body = await request.json().catch(() => null);
-  const parsed = userAdminSchema.safeParse(body);
+  const parsed = soundAdminSchema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json({ error: "invalid_input", issues: parsed.error.issues }, { status: 400 });
   }
 
-  const { name, ...rest } = parsed.data;
-  const user = await db.user.update({
+  const { audioUrl, synthesisMode, order, active, ...rest } = parsed.data;
+  const sound = await db.sound.update({
     where: { id },
-    data: { ...rest, ...(name !== undefined ? { name: name || null } : {}) },
+    data: {
+      ...rest,
+      synthesisMode: synthesisMode || null,
+      audioUrl: audioUrl || null,
+      order: order ?? 0,
+      active: active ?? true,
+    },
   });
-  return NextResponse.json({ user });
+
+  return NextResponse.json({ sound });
 }
 
 export async function DELETE(
@@ -32,15 +37,9 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const adminId = await requireAdmin();
-  if (!adminId) {
-    return NextResponse.json({ error: "forbidden" }, { status: 403 });
-  }
+  if (!adminId) return NextResponse.json({ error: "forbidden" }, { status: 403 });
 
   const { id } = await params;
-  if (id === adminId) {
-    return NextResponse.json({ error: "cannot_delete_self" }, { status: 400 });
-  }
-
-  await db.user.delete({ where: { id } });
+  await db.sound.delete({ where: { id } });
   return NextResponse.json({ ok: true });
 }

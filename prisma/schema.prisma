@@ -99,6 +99,24 @@ model FaceScanResult {
   @@map("face_scan_results")
 }
 
+model Sound {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  labelEn       String
+  labelKo       String
+  descriptionEn String
+  descriptionKo String
+  sourceType    String // "synthesis" | "url"
+  synthesisMode String? // white | pink | rain | ocean | calm432 | soft528, when sourceType = synthesis
+  audioUrl      String? // hosted audio file URL, when sourceType = url
+  order         Int      @default(0)
+  active        Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("sounds")
+}
+
 model Product {
   id              String   @id @default(cuid())
   slug            String   @unique

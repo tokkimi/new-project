@@ -27,15 +27,18 @@ function createNoise(ctx: AudioContext, mode: SoundMode) {
 
 export function WellnessPlayer({
   mode,
+  audioUrl,
   label,
   description,
 }: {
-  mode: SoundMode;
+  mode?: SoundMode;
+  audioUrl?: string;
   label: string;
   description: string;
 }) {
   const [playing, setPlaying] = React.useState(false);
   const cleanupRef = React.useRef<(() => void) | null>(null);
+  const audioRef = React.useRef<HTMLAudioElement | null>(null);
 
   React.useEffect(() => () => cleanupRef.current?.(), []);
 
@@ -46,6 +49,22 @@ export function WellnessPlayer({
       setPlaying(false);
       return;
     }
+
+    if (audioUrl) {
+      const audio = audioRef.current ?? new Audio(audioUrl);
+      audio.loop = true;
+      audio.volume = 0.5;
+      audioRef.current = audio;
+      await audio.play();
+      cleanupRef.current = () => {
+        audio.pause();
+        audio.currentTime = 0;
+      };
+      setPlaying(true);
+      return;
+    }
+
+    if (!mode) return;
 
     const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
     const ctx = new AudioContextCtor();

@@ -42,3 +42,35 @@ export const seoMetaAdminSchema = z.object({
   description: z.string().trim().max(500).optional().or(z.literal("")),
   ogImage: z.string().trim().url().max(500).optional().or(z.literal("")),
 });
+
+export const soundAdminSchema = z
+  .object({
+    slug: z
+      .string()
+      .trim()
+      .min(1)
+      .max(60)
+      .regex(/^[a-z0-9-]+$/, "Lowercase letters, numbers, and hyphens only"),
+    labelEn: z.string().trim().min(1).max(120),
+    labelKo: z.string().trim().min(1).max(120),
+    descriptionEn: z.string().trim().min(1).max(300),
+    descriptionKo: z.string().trim().min(1).max(300),
+    sourceType: z.enum(["synthesis", "url"]),
+    synthesisMode: z.enum(["white", "pink", "rain", "ocean", "calm432", "soft528"]).optional(),
+    audioUrl: z.string().trim().url().max(500).optional().or(z.literal("")),
+    order: z.coerce.number().int().min(0).max(1000).optional(),
+    active: z.boolean().optional(),
+  })
+  .refine((data) => (data.sourceType === "synthesis" ? !!data.synthesisMode : !!data.audioUrl), {
+    message: "synthesisMode is required for synthesis sounds, audioUrl for url sounds",
+    path: ["sourceType"],
+  });
+
+export const userAdminSchema = z.object({
+  name: z.string().trim().max(120).optional().or(z.literal("")),
+  email: z.string().trim().email().max(200).optional(),
+  role: z.enum(["USER", "ADMIN"]).optional(),
+  subscriptionStatus: z.enum(["NONE", "TRIALING", "ACTIVE", "PAST_DUE", "CANCELED"]).optional(),
+  faceScanCredits: z.coerce.number().int().min(0).max(1000).optional(),
+  newsletterSubscribed: z.boolean().optional(),
+});

@@ -12,6 +12,7 @@ import {
   seedCompatibilityRules,
   seedProductIngredients,
   deleteOrphanedJunkProducts,
+  seedSounds,
 } from "@/lib/seed-runner";
 
 /**
@@ -46,6 +47,7 @@ export async function GET(request: Request) {
   const brands = await seedBrands(db);
   const sources = await seedProductSources(db);
   const news = await seedNews(db);
+  const sounds = await seedSounds(db);
   const accounts = await seedTestAccounts(db);
 
   return NextResponse.json({
@@ -59,6 +61,7 @@ export async function GET(request: Request) {
     brands,
     sources,
     news,
+    sounds,
     accounts,
   });
 }

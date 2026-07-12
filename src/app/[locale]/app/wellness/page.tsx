@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { WellnessPlayer, type SoundMode } from "@/components/wellness-player";
 import { BreathingGuide } from "@/components/breathing-guide";
 import { SleepChecklist } from "@/components/sleep-checklist";
+import { db } from "@/lib/db";
 
 const copy = {
   en: {
@@ -65,24 +66,7 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
   const { locale } = await params;
   const t = copy[locale === "ko" ? "ko" : "en"];
 
-  const players: Array<[SoundMode, string, string]> =
-    locale === "ko"
-      ? [
-          ["white", "화이트 노이즈", "집중과 휴식을 위한 균일한 소리"],
-          ["pink", "핑크 노이즈", "더 부드럽고 낮은 톤의 소리"],
-          ["rain", "비 소리", "짧은 휴식이나 밤 루틴 전"],
-          ["ocean", "파도 소리", "느린 호흡과 함께 사용"],
-          ["calm432", "432 Hz 톤", "휴식 분위기를 위한 단순한 톤"],
-          ["soft528", "528 Hz 톤", "의학적 효과가 아닌 편안한 청취용"],
-        ]
-      : [
-          ["white", "White noise", "Even sound for focus or winding down"],
-          ["pink", "Pink noise", "Softer low-frequency sound"],
-          ["rain", "Rain texture", "Short reset before an evening routine"],
-          ["ocean", "Ocean texture", "Use with slow breathing"],
-          ["calm432", "432 Hz tone", "A simple relaxation tone"],
-          ["soft528", "528 Hz tone", "For calm listening, not medical effect"],
-        ];
+  const sounds = await db.sound.findMany({ where: { active: true }, orderBy: { order: "asc" } });
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-6">
@@ -118,8 +102,14 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
           </div>
         </div>
         <div className="grid gap-3 md:grid-cols-2">
-          {players.map(([mode, label, description]) => (
-            <WellnessPlayer key={mode} mode={mode} label={label} description={description} />
+          {sounds.map((sound) => (
+            <WellnessPlayer
+              key={sound.id}
+              mode={(sound.synthesisMode as SoundMode) ?? undefined}
+              audioUrl={sound.audioUrl ?? undefined}
+              label={locale === "ko" ? sound.labelKo : sound.labelEn}
+              description={locale === "ko" ? sound.descriptionKo : sound.descriptionEn}
+            />
           ))}
         </div>
       </section>
