@@ -11,6 +11,7 @@ import {
   seedIngredients,
   seedCompatibilityRules,
   seedProductIngredients,
+  deleteOrphanedJunkProducts,
 } from "@/lib/seed-runner";
 
 /**
@@ -38,6 +39,7 @@ export async function GET(request: Request) {
 
   const categories = await seedCategories(db);
   const products = await seedProducts(db);
+  const removedJunkProducts = await deleteOrphanedJunkProducts(db);
   const ingredients = await seedIngredients(db);
   const compatibilityRules = await seedCompatibilityRules(db);
   const productIngredients = await seedProductIngredients(db);
@@ -50,6 +52,7 @@ export async function GET(request: Request) {
     ok: true,
     categories,
     products,
+    removedJunkProducts,
     ingredients,
     compatibilityRules,
     productIngredients,

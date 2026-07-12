@@ -16,6 +16,29 @@ export async function seedProducts(db: PrismaClient): Promise<number> {
   return PRODUCTS.length;
 }
 
+// Entries that were in the generated catalog with a non-brand "brand" field
+// (order-receipt artifacts like "GWP" / "Free Gift Ghost", not real
+// products) — removed from the seed data on 2026-07-12. Upsert-by-slug never
+// deletes rows on its own, so these stay orphaned in already-seeded
+// databases (and in anyone's shelf) until explicitly removed here.
+const REMOVED_JUNK_SLUGS = [
+  "free-gift-ghost-free-gift-revive-eye-serum-mini",
+  "free-gift-ghost-free-gift-light-on-serum-mini",
+  "free-gift-ghost-revive-eye-serum-mini-free-gift",
+  "free-gift-ghost-light-on-serum-mini-free-gift",
+  "gwp-100-free-pdrn-serum-minis",
+  "free-gift-ghost-free-gift-revive-eye-serum-mini-haru-expanded-641",
+  "free-gift-ghost-free-gift-light-on-serum-mini-haru-expanded-642",
+  "free-gift-ghost-revive-eye-serum-mini-free-gift-haru-expanded-643",
+  "free-gift-ghost-light-on-serum-mini-free-gift-haru-expanded-644",
+  "gwp-100-free-pdrn-serum-minis-haru-expanded-918",
+];
+
+export async function deleteOrphanedJunkProducts(db: PrismaClient): Promise<number> {
+  const result = await db.product.deleteMany({ where: { slug: { in: REMOVED_JUNK_SLUGS } } });
+  return result.count;
+}
+
 export async function seedCategories(db: PrismaClient): Promise<number> {
   for (const c of CATEGORY_TREE) {
     await db.category.upsert({
