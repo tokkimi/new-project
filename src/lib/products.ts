@@ -1,6 +1,7 @@
 import { db } from "@/lib/db";
-import type { Product } from "@/generated/prisma/client";
+import type { Product, Prisma } from "@/generated/prisma/client";
 import { PRODUCTS } from "@/lib/seed-data/products";
+import { categoryDescendants } from "@/lib/categories";
 
 export type { Product };
 
@@ -41,6 +42,68 @@ export function getFallbackProducts() {
 
 export function listProducts() {
   return db.product.findMany({ orderBy: { name: "asc" } }).catch(() => FALLBACK_PRODUCTS);
+}
+
+export const PRODUCTS_PAGE_SIZE = 60;
+
+export type ProductSearchFilters = {
+  q?: string;
+  category?: string;
+  skinType?: string;
+  concern?: string;
+  brand?: string;
+};
+
+/**
+ * Paginated, filtered product search for the /app/products browser — the
+ * catalog is now in the thousands, so that page must never load every row
+ * at once (that's what was crashing/hanging the page).
+ */
+export async function searchProducts(filters: ProductSearchFilters, page: number) {
+  const where: Prisma.ProductWhereInput = {};
+  if (filters.q) {
+    where.OR = [
+      { name: { contains: filters.q, mode: "insensitive" } },
+      { brand: { contains: filters.q, mode: "insensitive" } },
+    ];
+  }
+  if (filters.category) {
+    where.category = { in: categoryDescendants(filters.category) };
+  }
+  if (filters.skinType) {
+    where.skinTypes = { has: filters.skinType };
+  }
+  if (filters.concern) {
+    where.concerns = { has: filters.concern };
+  }
+  if (filters.brand) {
+    where.brand = filters.brand;
+  }
+
+  const safePage = Math.max(1, page);
+
+  try {
+    const [products, total] = await Promise.all([
+      db.product.findMany({
+        where,
+        orderBy: { name: "asc" },
+        take: PRODUCTS_PAGE_SIZE,
+        skip: (safePage - 1) * PRODUCTS_PAGE_SIZE,
+      }),
+      db.product.count({ where }),
+    ]);
+    return { products, total };
+  } catch {
+    return { products: FALLBACK_PRODUCTS.slice(0, PRODUCTS_PAGE_SIZE), total: FALLBACK_PRODUCTS.length };
+  }
+}
+
+/** Distinct brand names for the products browser's brand filter — cheap, doesn't load full rows. */
+export function listBrandNames() {
+  return db.brand
+    .findMany({ select: { name: true }, orderBy: { name: "asc" } })
+    .then((rows) => rows.map((r) => r.name))
+    .catch(() => Array.from(new Set(FALLBACK_PRODUCTS.map((p) => p.brand))).sort());
 }
 
 export function findProductById(id: string) {

@@ -417,8 +417,10 @@ export function FaceScanClient() {
                             {t(`modules.${moduleId}.name`)}
                           </p>
                         </div>
-                        <ModuleScoreBar score={finding.score} />
-                        <span className={severityBadgeClass(finding.severity)}>
+                        <div className="hidden shrink-0 sm:block">
+                          <ModuleScoreBar score={finding.score} />
+                        </div>
+                        <span className={cn(severityBadgeClass(finding.severity), "shrink-0")}>
                           {t(`severity.${finding.severity}`)}
                         </span>
                         <ChevronDown

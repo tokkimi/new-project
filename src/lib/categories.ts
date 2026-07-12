@@ -26,3 +26,8 @@ export function isKnownCategory(category: string): category is ProductCategory {
 export function categoryParent(category: string): string {
   return CATEGORY_TREE.find((c) => c.slug === category)?.parentSlug ?? category;
 }
+
+/** A top-level slug plus every subcategory slug under it — for DB `category IN (...)` filters. */
+export function categoryDescendants(topSlug: string): string[] {
+  return [topSlug, ...CATEGORY_TREE.filter((c) => c.parentSlug === topSlug).map((c) => c.slug)];
+}
