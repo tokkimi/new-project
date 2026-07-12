@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { WellnessPlayer, type SoundMode } from "@/components/wellness-player";
 import { BreathingGuide } from "@/components/breathing-guide";
+import { SleepChecklist } from "@/components/sleep-checklist";
 
 const copy = {
   en: {
@@ -19,7 +20,13 @@ const copy = {
     start: "Start",
     pause: "Pause",
     sleep: "Sleep cue",
-    sleepText: "Keep the last skincare step simple at night: cleanse, moisturize, pause the phone brightness, and let actives wait if the skin feels hot.",
+    sleepText: "A simple nightly checklist. It resets automatically every day.",
+    sleepItems: [
+      "Cleanse fully (SPF and makeup off)",
+      "Moisturize",
+      "Dim phone/screen brightness",
+      "Skip actives tonight if skin feels hot or tight",
+    ],
     sounds: "Integrated calming sounds",
     soundsText: "These sounds are relaxation supports only. Frequencies are not presented as skin treatments, collagen boosters or medical therapy.",
     faceCare: "Face care library",
@@ -39,7 +46,13 @@ const copy = {
     start: "시작",
     pause: "일시정지",
     sleep: "수면 힌트",
-    sleepText: "밤 마지막 단계는 단순하게 유지하세요. 세안, 보습, 화면 밝기 줄이기, 피부가 뜨거우면 활성 성분은 쉬어 주세요.",
+    sleepText: "간단한 밤 체크리스트예요. 매일 자동으로 초기화됩니다.",
+    sleepItems: [
+      "완전히 세안하기 (선크림, 메이크업 제거)",
+      "보습하기",
+      "휴대폰/화면 밝기 줄이기",
+      "피부가 뜨겁거나 당기면 오늘 밤은 활성 성분 쉬기",
+    ],
     sounds: "내장 릴랙싱 사운드",
     soundsText: "이 소리는 휴식 보조용입니다. 주파수를 피부 치료, 콜라겐 증가, 의학적 치료로 설명하지 않습니다.",
     faceCare: "페이스 케어 라이브러리",
@@ -88,7 +101,12 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
             labels={{ inhale: t.inhale, hold: t.hold, exhale: t.exhale, start: t.start, pause: t.pause }}
           />
         </Card>
-        <WellnessCard icon={Moon} title={t.sleep} text={t.sleepText} />
+        <Card className="rounded-[1.5rem]">
+          <Moon className="size-5 text-primary" />
+          <h2 className="font-serif text-xl">{t.sleep}</h2>
+          <p className="text-sm leading-6 text-muted-foreground">{t.sleepText}</p>
+          <SleepChecklist items={t.sleepItems} />
+        </Card>
       </div>
 
       <section className="rounded-[2rem] bg-secondary/60 p-5 sm:p-6">
