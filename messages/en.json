@@ -983,6 +983,33 @@
       }
     ]
   },
+  "scanShowcase": {
+    "eyebrow": "Product scan",
+    "title": "Know exactly what you're putting on your skin.",
+    "subtitle": "Scan a product's packaging or search our database and Haru pulls up the full picture: what it does, how to use it, which skin types it fits, and where it belongs in your morning or evening routine.",
+    "ctaPrimary": "Scan a product",
+    "ctaSecondary": "Browse the catalog",
+    "note": "Matches come from Haru's product database. If a product isn't recognized, you can search or add it manually.",
+    "panelEyebrow": "One scan, the full sheet",
+    "checks": [
+      {
+        "title": "Instant identification",
+        "text": "Photograph the packaging or search by name and brand — no barcode scanner needed."
+      },
+      {
+        "title": "Full composition",
+        "text": "Key actives, full ingredient list, and what each one is actually for."
+      },
+      {
+        "title": "How and when to use it",
+        "text": "Usage steps, frequency, and whether it's an AM, PM, or anytime product."
+      },
+      {
+        "title": "Fit for your skin",
+        "text": "Which skin types and concerns it suits, and where it slots into your routine."
+      }
+    ]
+  },
   "goodHabits": {
     "eyebrow": "Good habits",
     "title": "Start with skin logic, then personalize.",

@@ -203,6 +203,16 @@ export async function POST(request: Request) {
 
     const analysis = buildFaceScanAnalysis(rawModules, { skinType, summary: input.summary });
 
+    await db.faceScanResult.create({
+      data: {
+        userId: user.id,
+        overallScore: analysis.overallScore,
+        skinType: analysis.skinType,
+        summary: analysis.summary,
+        analysis,
+      },
+    });
+
     if (!premium) {
       // Atomic, race-safe decrement: only succeeds if a credit was still there.
       const spent = await db.user.updateMany({

@@ -3,6 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/marketing/hero";
+import { ScanShowcase } from "@/components/marketing/scan-showcase";
 import { AuditShowcase } from "@/components/marketing/audit-showcase";
 import { WellnessShowcase } from "@/components/marketing/wellness-showcase";
 import { ProductShowcase } from "@/components/marketing/product-showcase";
@@ -83,6 +84,7 @@ export default async function Home({
       <SiteHeader />
       <main className="flex-1">
         <Hero />
+        <ScanShowcase />
         <AuditShowcase />
         <WellnessShowcase />
         <ProductShowcase latest={products.latest} madeInKorea={products.madeInKorea} />

@@ -50,6 +50,7 @@ model User {
   shelfItems  ShelfItem[]
   skinProfile SkinProfile?
   auditRuns   AuditRun[]
+  faceScanResults FaceScanResult[]
   productPrefs UserProductPreference[]
   notes      UserNote[]
   savedLinks SavedRoutineLink[]
@@ -82,6 +83,20 @@ model AuditRun {
 
   @@index([userId])
   @@map("audit_runs")
+}
+
+model FaceScanResult {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  overallScore Int
+  skinType     String?
+  summary      String?
+  analysis     Json // full FaceScanAnalysis (modules, flaggedConcerns, suggestedIngredientIds)
+  createdAt    DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@map("face_scan_results")
 }
 
 model Product {
