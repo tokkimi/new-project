@@ -23,9 +23,9 @@ export async function GET(request: Request) {
   const take = Math.min(1000, Math.max(1, Number(url.searchParams.get("limit") ?? 500)));
   const cursor = url.searchParams.get("cursor");
   const products = await db.product.findMany({
+    where: cursor ? { id: { gt: cursor } } : undefined,
     orderBy: { id: "asc" },
     take,
-    ...(cursor ? { cursor: { id: cursor }, skip: 1 } : {}),
   });
 
   let updated = 0;

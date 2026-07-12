@@ -42,6 +42,12 @@ const SLUG_BRANDS: Record<string, string> = {
 const BAD_BRANDS = new Set(["gwp", "free gift ghost", "free", "clearance"]);
 const GENERATED_SUFFIX = /\s*(?:routine edit|travel size|refill pack|duo set|glow edition|barrier edit|sensitive edit|hydration edit)$/i;
 
+const SET_OR_BUNDLE_PATTERN =
+  /\b(?:\d+\s*[- ]?\s*step|full|complete|daily|starter|trial|travel|mini|sample|value|gift|holiday|limited|special|exclusive|moida|routine|skin\s*care|skincare|brightening|hydration|barrier|sensitive|acne|glow)?\s*(?:routine\s*)?(?:set|kit|bundle|box|collection|duo|trio)\b/i;
+
+const MULTI_PRODUCT_PATTERN =
+  /\b(?:cleanser|toner|essence|serum|ampoule|cream|moisturizer|sunscreen|sun\s*cream|mask|pad|oil|balm|shampoo|treatment)\b\s*(?:\+|&|and)\s*\b(?:cleanser|toner|essence|serum|ampoule|cream|moisturizer|sunscreen|sun\s*cream|mask|pad|oil|balm|shampoo|treatment)\b/i;
+
 function brandFromUrl(officialUrl?: string | null): string | null {
   if (!officialUrl) return null;
   try {
@@ -82,24 +88,48 @@ function brandFromSlug(slug: string): string | null {
 }
 
 export function shouldExcludeProduct(product: CatalogLike): boolean {
-  const text = `${product.slug} ${product.name} ${product.brand} ${product.description ?? ""}`.toLowerCase();
+  const name = product.name.trim();
+  const text = `${product.slug} ${name} ${product.brand} ${product.description ?? ""}`.toLowerCase();
   return (
+    product.slug.includes("haru-expanded") ||
+    product.slug.includes("moida-set") ||
+    product.slug.includes("special-price-moida") ||
+    product.slug.includes("1-deal") ||
     text.includes("sca_clone_freegift") ||
     text.includes("bogos.io free gift") ||
     text.includes("used for the app bogos") ||
     text.includes("free gift") ||
     text.includes("free gifts") ||
     text.includes("get free") ||
-    text.includes("% off") ||
     text.includes("special price exclusive set") ||
+    text.includes("routine set") ||
+    text.includes("skin care routine") ||
+    text.includes("skincare routine") ||
+    text.includes("10-step") ||
+    text.includes("10 step") ||
+    text.includes("moida set") ||
+    text.includes("best of k-beauty") ||
+    /\b\d+\s*ea\b/i.test(name) ||
+    SET_OR_BUNDLE_PATTERN.test(name) ||
+    MULTI_PRODUCT_PATTERN.test(name) ||
+    product.brand.toLowerCase() === "moida" ||
     product.brand.toLowerCase() === "free gift ghost" ||
     product.brand.toLowerCase() === "gwp" ||
-    /^\(?free gift\)?/i.test(product.name.trim())
+    /^\(?free gift\)?/i.test(name)
   );
 }
 
 export function cleanProductName(name: string): string {
   return name
+    .replace(/^\s*\*?\s*\$?\d+(?:\.\d+)?\s*(?:deal|first purchase|first order)\*?\s*/i, "")
+    .replace(/^\s*\*?\s*(?:flash|daily|hot)?\s*deal\s*\*?\s*/i, "")
+    .replace(/\s*\(\s*first\s*purchase\s*only\s*\)\s*/gi, " ")
+    .replace(/\s*\(\s*first\s*order\s*only\s*\)\s*/gi, " ")
+    .replace(/\s*\bfirst\s*purchase\s*only\b\s*/gi, " ")
+    .replace(/\s*\bfirst\s*order\s*only\b\s*/gi, " ")
+    .replace(/\s*\b(?:only\s*)?\$?\d+(?:\.\d+)?\s*(?:deal|off|discount|coupon)\b\s*/gi, " ")
+    .replace(/\s*\b\d+\s*%\s*off\b\s*/gi, " ")
+    .replace(/\s*\b(?:sale|clearance|special price|limited deal)\b[:\s-]*/gi, " ")
     .replace(/^\s*\*?\s*special price\s*\*?\s*/i, "")
     .replace(/^\s*moida set\s*/i, "")
     .replace(/^\s*clearance\s*/i, "")
@@ -116,6 +146,7 @@ export function cleanProductName(name: string): string {
     .replace(/\s*\(\s*\d+\s*ea\s*\)\s*/gi, " ")
     .replace(/\s*\+\s*free gifts?.*$/i, "")
     .replace(/\s*\(?\s*free gifts?.*$/i, "")
+    .replace(/\s*\[\s*(?:deal|sale|clearance|coupon)[^\]]*\]\s*/gi, " ")
     .replace(/\s{2,}/g, " ")
     .replace(/^[*()[\]\s-]+|[*()[\]\s-]+$/g, "")
     .trim();
