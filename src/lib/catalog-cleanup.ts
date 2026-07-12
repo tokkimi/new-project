@@ -39,7 +39,7 @@ const SLUG_BRANDS: Record<string, string> = {
 };
 
 const BAD_BRANDS = new Set(["gwp", "free gift ghost", "free", "clearance"]);
-const GENERATED_SUFFIX = /\s+(?:routine edit|travel size|refill pack|duo set|glow edition|barrier edit|sensitive edit|hydration edit|daily care|night care)$/i;
+const GENERATED_SUFFIX = /\s*(?:routine edit|travel size|refill pack|duo set|glow edition|barrier edit|sensitive edit|hydration edit)$/i;
 
 function brandFromUrl(officialUrl?: string | null): string | null {
   if (!officialUrl) return null;
@@ -125,6 +125,7 @@ export function inferBrand(product: CatalogLike): string {
     .trim()
     .replace(/\s+official$/i, "")
     .replace(/\s+us$/i, "")
+    .replace(/^corã©elle$/i, "Coreelle")
     .replace(/^cosrx$/i, "COSRX");
   if (current && !BAD_BRANDS.has(current.toLowerCase()) && !current.toLowerCase().includes("free gift")) {
     return current;
