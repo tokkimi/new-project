@@ -15,7 +15,7 @@ export default async function ProfilePage() {
     return;
   }
 
-  const [user, shelfCount, scans, auditRuns] = await Promise.all([
+  const [user, shelfCount, scans, bilans] = await Promise.all([
     db.user.findUnique({
       where: { id: userId },
       select: { name: true, email: true, createdAt: true },
@@ -27,11 +27,11 @@ export default async function ProfilePage() {
       take: 20,
       select: { id: true, createdAt: true, overallScore: true, summary: true },
     }),
-    db.auditRun.findMany({
+    db.bilan.findMany({
       where: { userId },
       orderBy: { createdAt: "desc" },
       take: 20,
-      select: { id: true, createdAt: true, result: true },
+      select: { id: true, createdAt: true, overallScore: true },
     }),
   ]);
 
@@ -78,13 +78,10 @@ export default async function ProfilePage() {
           overallScore: s.overallScore,
           summary: s.summary,
         }))}
-        auditRuns={auditRuns.map((run) => ({
-          id: run.id,
-          createdAt: run.createdAt.toISOString(),
-          score: (() => {
-            const result = run.result as { score?: number } | null;
-            return typeof result?.score === "number" ? result.score : null;
-          })(),
+        bilans={bilans.map((b) => ({
+          id: b.id,
+          createdAt: b.createdAt.toISOString(),
+          overallScore: b.overallScore,
         }))}
       />
     </div>

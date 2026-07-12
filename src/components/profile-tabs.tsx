@@ -11,7 +11,7 @@ import { AccountSettingsForm } from "@/components/account-settings-form";
 import { ProfileActions } from "@/components/profile-actions";
 
 type ScanRow = { id: string; createdAt: string; overallScore: number; summary: string | null };
-type AuditRow = { id: string; createdAt: string; score: number | null };
+type BilanRow = { id: string; createdAt: string; overallScore: number };
 
 function scoreTone(score: number) {
   if (score >= 70) return "success" as const;
@@ -21,12 +21,12 @@ function scoreTone(score: number) {
 
 export function ProfileTabs({
   scans,
-  auditRuns,
+  bilans,
   name,
   email,
 }: {
   scans: ScanRow[];
-  auditRuns: AuditRow[];
+  bilans: BilanRow[];
   name: string | null;
   email: string;
 }) {
@@ -103,22 +103,20 @@ export function ProfileTabs({
             <ClipboardCheck className="size-5 text-primary" />
             <h2 className="font-serif text-xl">{t("tabs.audits")}</h2>
           </div>
-          {auditRuns.length === 0 ? (
+          {bilans.length === 0 ? (
             <p className="text-sm leading-6 text-muted-foreground">{t("auditsEmpty")}</p>
           ) : (
             <div className="flex flex-col gap-2">
-              {auditRuns.map((run) => (
+              {bilans.map((bilan) => (
                 <Link
-                  key={run.id}
-                  href={`/app/audit/history/${run.id}`}
+                  key={bilan.id}
+                  href={`/app/bilan/history/${bilan.id}`}
                   className="flex items-center justify-between gap-3 rounded-2xl bg-secondary/50 px-4 py-3 transition-colors hover:bg-secondary"
                 >
-                  <p className="text-sm font-medium">{formatDate(run.createdAt)}</p>
-                  {typeof run.score === "number" && (
-                    <Badge variant={scoreTone(run.score)} className="shrink-0">
-                      {t("scoreLabel")} {run.score}
-                    </Badge>
-                  )}
+                  <p className="text-sm font-medium">{formatDate(bilan.createdAt)}</p>
+                  <Badge variant={scoreTone(bilan.overallScore)} className="shrink-0">
+                    {t("scoreLabel")} {bilan.overallScore}
+                  </Badge>
                 </Link>
               ))}
             </div>

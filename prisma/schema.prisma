@@ -51,6 +51,7 @@ model User {
   skinProfile SkinProfile?
   auditRuns   AuditRun[]
   faceScanResults FaceScanResult[]
+  bilans      Bilan[]
   productPrefs UserProductPreference[]
   notes      UserNote[]
   savedLinks SavedRoutineLink[]
@@ -71,7 +72,31 @@ model SkinProfile {
   budget        String? // low | mid | high
   updatedAt     DateTime @updatedAt
 
+  // Lifestyle baseline, captured/updated through the full bilan flow.
+  waterIntake       String? // low | medium | high
+  smokes            String? // no | occasionally | yes
+  sleepHours        String? // under6 | 6to8 | over8
+  stressLevel       String? // low | medium | high
+  sunExposure       String? // low | medium | high
+  exerciseFrequency String? // rarely | weekly | frequent
+
   @@map("skin_profiles")
+}
+
+model Bilan {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  faceScanResultId String?
+  auditRunId     String?
+  lifestyle      Json // snapshot of lifestyle + wellbeing answers at the time of this bilan
+  auditSnapshot  Json // snapshot of the routine audit result at the time of this bilan
+  scanSnapshot   Json? // snapshot of the face scan analysis, if one was used
+  overallScore   Int
+  createdAt      DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@map("bilans")
 }
 
 model AuditRun {

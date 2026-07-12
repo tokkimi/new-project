@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { AlertTriangle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
@@ -5,15 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import type { AuditResult } from "@/lib/audit-engine";
 
-export function AuditResultView({
-  result,
-  t,
-  tCategories,
-}: {
-  result: AuditResult;
-  t: (key: string) => string;
-  tCategories: (key: string) => string;
-}) {
+export function AuditResultView({ result }: { result: AuditResult }) {
+  const t = useTranslations("auditPage");
+  const tCategories = useTranslations("categories");
   const missingSteps = result.issues.filter((i) => i.type === "missing_step");
   const mismatches = result.issues.filter((i) => i.type === "profile_mismatch");
 

@@ -6,12 +6,10 @@ import { Button } from "@/components/ui/button";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { runUserAudit } from "@/lib/run-audit";
-import { AuditResultView } from "@/components/audit-result-view";
-import { AuditSaveButton } from "@/components/audit-save-button";
+import { BilanWizard } from "@/components/bilan-wizard";
 
 export default async function AuditPage() {
   const t = await getTranslations("auditPage");
-  const tCategories = await getTranslations("categories");
   const session = await auth();
 
   if (!session?.user?.id) {
@@ -26,17 +24,31 @@ export default async function AuditPage() {
     );
   }
 
-  const profile = await db.skinProfile.findUnique({ where: { userId: session.user.id } });
-  const result = await runUserAudit(session.user.id);
+  const userId = session.user.id;
+  const [profile, result, latestScan] = await Promise.all([
+    db.skinProfile.findUnique({ where: { userId } }),
+    runUserAudit(userId),
+    db.faceScanResult.findFirst({
+      where: { userId },
+      orderBy: { createdAt: "desc" },
+      select: { id: true, overallScore: true, skinType: true, createdAt: true },
+    }),
+  ]);
+
+  const initialAnswers: Record<string, string> = {};
+  if (profile?.ageRange) initialAnswers.ageRange = profile.ageRange;
+  if (profile?.waterIntake) initialAnswers.waterIntake = profile.waterIntake;
+  if (profile?.smokes) initialAnswers.smokes = profile.smokes;
+  if (profile?.sleepHours) initialAnswers.sleepHours = profile.sleepHours;
+  if (profile?.stressLevel) initialAnswers.stressLevel = profile.stressLevel;
+  if (profile?.sunExposure) initialAnswers.sunExposure = profile.sunExposure;
+  if (profile?.exerciseFrequency) initialAnswers.exerciseFrequency = profile.exerciseFrequency;
 
   return (
     <div className="mx-auto flex max-w-2xl flex-col gap-8">
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h1 className="font-serif text-3xl">{t("title")}</h1>
-          <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
-        </div>
-        <AuditSaveButton label={t("saveCta")} savedLabel={t("saveCtaDone")} />
+      <div>
+        <h1 className="font-serif text-3xl">{t("title")}</h1>
+        <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
       </div>
 
       {!profile && (
@@ -56,11 +68,11 @@ export default async function AuditPage() {
         </Card>
       )}
 
-      <AuditResultView result={result} t={t} tCategories={tCategories} />
-
-      <Button asChild variant="outline">
-        <Link href="/app/profile">{t("viewHistory")}</Link>
-      </Button>
+      <BilanWizard
+        auditResult={result}
+        latestScan={latestScan ? { ...latestScan, createdAt: latestScan.createdAt.toISOString() } : null}
+        initialAnswers={initialAnswers}
+      />
     </div>
   );
 }

@@ -21,8 +21,8 @@ export default async function AdminUserDetailPage({
   });
   if (!user) notFound();
 
-  const [auditRuns, faceScans] = await Promise.all([
-    db.auditRun.findMany({ where: { userId: id }, orderBy: { createdAt: "desc" }, take: 5 }),
+  const [bilans, faceScans] = await Promise.all([
+    db.bilan.findMany({ where: { userId: id }, orderBy: { createdAt: "desc" }, take: 5 }),
     db.faceScanResult.findMany({ where: { userId: id }, orderBy: { createdAt: "desc" }, take: 5 }),
   ]);
 
@@ -90,22 +90,19 @@ export default async function AdminUserDetailPage({
 
       <div className="grid gap-4 md:grid-cols-2">
         <Card className="rounded-[1.5rem]">
-          <h2 className="font-serif text-xl">Recent audits</h2>
-          {auditRuns.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No audit runs yet.</p>
+          <h2 className="font-serif text-xl">Recent check-ins (bilans)</h2>
+          {bilans.length === 0 ? (
+            <p className="text-sm text-muted-foreground">No check-ins yet.</p>
           ) : (
             <div className="flex flex-col gap-2">
-              {auditRuns.map((run) => {
-                const result = run.result as { score?: number } | null;
-                return (
-                  <div key={run.id} className="flex items-center justify-between rounded-xl bg-secondary/50 px-3 py-2 text-sm">
-                    <span className="text-muted-foreground">
-                      {new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(run.createdAt)}
-                    </span>
-                    {typeof result?.score === "number" && <Badge>{result.score}/100</Badge>}
-                  </div>
-                );
-              })}
+              {bilans.map((bilan) => (
+                <div key={bilan.id} className="flex items-center justify-between rounded-xl bg-secondary/50 px-3 py-2 text-sm">
+                  <span className="text-muted-foreground">
+                    {new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(bilan.createdAt)}
+                  </span>
+                  <Badge>{bilan.overallScore}/100</Badge>
+                </div>
+              ))}
             </div>
           )}
         </Card>
