@@ -56,6 +56,28 @@ const MODULE_ICON: Record<ModuleId, React.ComponentType<{ className?: string }>>
   radiance: Sparkles,
 };
 
+/**
+ * General anatomical zone for each module, as a % position on a front-facing
+ * portrait — illustrative (where this kind of concern is typically assessed),
+ * not a per-photo AI detection, since the analysis only returns a severity
+ * score per module, not pixel coordinates.
+ */
+const MODULE_ZONE: Record<ModuleId, { x: number; y: number }> = {
+  oiliness: { x: 50, y: 28 },
+  wrinkles: { x: 76, y: 32 },
+  darkCircles: { x: 34, y: 40 },
+  pores: { x: 50, y: 56 },
+  blackheads: { x: 50, y: 53 },
+  redness: { x: 26, y: 50 },
+  sensitivity: { x: 74, y: 48 },
+  spots: { x: 35, y: 46 },
+  radiance: { x: 50, y: 45 },
+  texture: { x: 30, y: 56 },
+  dryness: { x: 70, y: 56 },
+  acneScars: { x: 65, y: 60 },
+  acne: { x: 50, y: 76 },
+};
+
 type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error" | "noFace" | "noCredits";
 
 function fileToDataUrl(file: File): Promise<string> {
@@ -100,7 +122,10 @@ export function FaceScanClient() {
   const [preview, setPreview] = React.useState<string | null>(null);
   const [analysis, setAnalysis] = React.useState<FaceScanAnalysis | null>(null);
   const [addedProducts, setAddedProducts] = React.useState<Set<string>>(new Set());
+  const [activeModule, setActiveModule] = React.useState(0);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
+  const pagerRef = React.useRef<HTMLDivElement>(null);
+  const pagerScrollFrame = React.useRef<number | null>(null);
 
   const startScan = async (file: File) => {
     const url = URL.createObjectURL(file);
@@ -152,7 +177,27 @@ export function FaceScanClient() {
     setPreview(null);
     setAnalysis(null);
     setAddedProducts(new Set());
+    setActiveModule(0);
     setPhase("idle");
+  };
+
+  const goToModule = (index: number) => {
+    setActiveModule(index);
+    const container = pagerRef.current;
+    const card = container?.children[index] as HTMLElement | undefined;
+    card?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  };
+
+  const handlePagerScroll = () => {
+    if (pagerScrollFrame.current) cancelAnimationFrame(pagerScrollFrame.current);
+    pagerScrollFrame.current = requestAnimationFrame(() => {
+      const container = pagerRef.current;
+      if (!container) return;
+      const cardWidth = container.children[0]?.clientWidth || container.clientWidth;
+      const gap = 16;
+      const index = Math.round(container.scrollLeft / (cardWidth + gap));
+      setActiveModule((prev) => (prev === index ? prev : Math.max(0, index)));
+    });
   };
 
   const orderedModules = React.useMemo(() => {
@@ -178,7 +223,7 @@ export function FaceScanClient() {
     <div
       className={
         phase === "result"
-          ? "mx-auto flex w-full max-w-6xl flex-col gap-6"
+          ? "mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-6"
           : "mx-auto flex max-w-lg flex-col items-center gap-6 text-center"
       }
     >
@@ -333,7 +378,7 @@ export function FaceScanClient() {
             key="result"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex w-full flex-col gap-8"
+            className="flex w-full min-w-0 flex-col gap-8"
           >
             <section className="grid min-h-[calc(100svh-10rem)] items-center gap-6 rounded-[2rem] bg-card p-5 shadow-[0_20px_70px_-48px_rgba(0,0,0,0.35)] sm:grid-cols-[auto_1fr_auto] sm:p-8">
               {preview && (
@@ -374,153 +419,96 @@ export function FaceScanClient() {
               </div>
             </section>
 
-            <div className="space-y-4">
+            <div className="min-w-0 space-y-5">
               <div className="max-w-2xl">
                 <h2 className="font-serif text-3xl">{t("modulesSectionTitle")}</h2>
                 <p className="mt-1 text-muted-foreground">{t("modulesSectionText")}</p>
               </div>
 
-              {orderedModules.map((module, index) => {
-                const Icon = MODULE_ICON[module.id];
-                const products = pickModuleProducts(catalog, module, analysis.skinType);
-                const habits = t.raw(`dailyActions.${module.id}`) as string[];
-                return (
-                  <section
-                    key={module.id}
-                    className="grid min-h-[calc(100svh-9rem)] scroll-mt-24 gap-5 rounded-[2rem] border border-border/50 bg-card/95 p-5 shadow-[0_16px_60px_-44px_rgba(0,0,0,0.42)] sm:p-7 lg:grid-cols-[0.8fr_1.2fr]"
-                  >
-                    <div className="flex flex-col justify-between gap-6">
-                      <div className="space-y-5">
-                        <div className="flex items-start justify-between gap-4">
-                          <span
-                            className={cn(
-                              "flex size-12 items-center justify-center rounded-full",
-                              module.severity === "attention" && "bg-destructive/10 text-destructive",
-                              module.severity === "medium" && "bg-am/25 text-am-foreground",
-                              module.severity === "low" && "bg-success/15 text-success"
-                            )}
-                          >
-                            <Icon className="size-5" />
-                          </span>
-                          <span className="text-sm text-muted-foreground">
-                            {String(index + 1).padStart(2, "0")} / {orderedModules.length}
-                          </span>
-                        </div>
-                        <div>
-                          <span className={cn(severityBadgeClass(module.severity), "mb-3 inline-flex")}>
-                            {t(`severity.${module.severity}`)}
-                          </span>
-                          <h3 className="font-serif text-3xl">{t(`modules.${module.id}.name`)}</h3>
-                          <p className="mt-3 text-muted-foreground">
-                            {module.note || (module.flagged ? t("moduleDefaultNote") : t("noConcern"))}
-                          </p>
-                        </div>
-                        <div className="rounded-3xl bg-secondary/60 p-4">
-                          <div className="mb-2 flex items-center justify-between text-sm">
-                            <span className="font-medium">{t("moduleScoreLabel")}</span>
-                            <span className="text-muted-foreground">{9 - module.score}/9</span>
-                          </div>
-                          <ModuleScoreBar score={module.score} />
-                        </div>
-                        <div>
-                          <p className="mb-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                            {t("dailyActionsLabel")}
-                          </p>
-                          <ul className="space-y-2 text-sm text-muted-foreground">
-                            {habits.map((habit) => (
-                              <li key={habit} className="flex gap-2">
-                                <Check className="mt-0.5 size-4 shrink-0 text-primary" />
-                                <span>{habit}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                      <p className="flex items-start gap-2 rounded-2xl bg-muted/60 p-3 text-xs text-muted-foreground">
-                        <ShieldCheck className="mt-0.5 size-4 shrink-0" />
-                        {t("moduleDisclaimer")}
-                      </p>
-                    </div>
-
-                    <div className="flex flex-col gap-5">
-                      <div className="grid gap-4 sm:grid-cols-2">
-                        <InfoList title={t("causesLabel")} items={t.raw(`modules.${module.id}.causes`) as string[]} />
-                        <InfoList title={t("tipsLabel")} items={t.raw(`modules.${module.id}.tips`) as string[]} />
-                      </div>
-
-                      {module.flagged ? (
-                        <div className="space-y-3">
-                          <div>
-                            <h4 className="font-serif text-xl">{t("productsForThisArea")}</h4>
-                            <p className="text-sm text-muted-foreground">{t("productsForThisAreaText")}</p>
-                          </div>
-                          <div className="grid gap-3">
-                            {products.length === 0 ? (
-                              <Card className="bg-secondary/40 p-4 text-sm text-muted-foreground">
-                                {t("noProductsForModule")}
-                              </Card>
-                            ) : (
-                              products.map((product) => {
-                                const isAdded = addedProducts.has(product.id);
-                                return (
-                                  <Card
-                                    key={product.id}
-                                    className="grid grid-cols-[auto_1fr] gap-3 p-3 sm:grid-cols-[auto_1fr_auto] sm:items-center"
-                                  >
-                                    <ProductImage
-                                      imageUrl={product.imageUrl}
-                                      category={product.category}
-                                      name={product.name}
-                                      size="sm"
-                                      className="size-16 rounded-2xl"
-                                    />
-                                    <div className="min-w-0">
-                                      <p className="line-clamp-2 font-medium">{product.name}</p>
-                                      <p className="text-sm text-muted-foreground">{product.brand}</p>
-                                      <p className="mt-1 text-xs text-muted-foreground">
-                                        {tCategories(product.category)}
-                                      </p>
-                                    </div>
-                                    <Button
-                                      size="sm"
-                                      className="col-span-2 sm:col-span-1"
-                                      variant={isAdded ? "outline" : "default"}
-                                      onClick={() => {
-                                        addProduct(product);
-                                        setAddedProducts((prev) => new Set(prev).add(product.id));
-                                      }}
-                                    >
-                                      {isAdded ? (
-                                        <>
-                                          <Check className="size-4" />
-                                          {t("addedProduct")}
-                                        </>
-                                      ) : (
-                                        <>
-                                          <ClipboardCheck className="size-4" />
-                                          {t("addProduct")}
-                                        </>
-                                      )}
-                                    </Button>
-                                  </Card>
-                                );
-                              })
-                            )}
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="flex items-start gap-3 rounded-3xl bg-success/10 p-4">
-                          <ShieldCheck className="mt-0.5 size-5 shrink-0 text-success" />
-                          <div>
-                            <p className="font-medium text-success">{t("moduleClearTitle")}</p>
-                            <p className="text-sm text-muted-foreground">{t("moduleClearText")}</p>
-                          </div>
-                        </div>
+              <div
+                ref={pagerRef}
+                onScroll={handlePagerScroll}
+                className="no-scrollbar -mx-1 flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2"
+              >
+                {orderedModules.map((module, index) => {
+                  const Icon = MODULE_ICON[module.id];
+                  const zone = MODULE_ZONE[module.id];
+                  return (
+                    <button
+                      key={module.id}
+                      type="button"
+                      onClick={() => goToModule(index)}
+                      className={cn(
+                        "relative aspect-[4/5] w-[78%] shrink-0 snap-center overflow-hidden rounded-[1.75rem] text-left transition-all sm:w-[280px]",
+                        activeModule === index
+                          ? "ring-2 ring-primary ring-offset-2 ring-offset-background"
+                          : "opacity-70 hover:opacity-100"
                       )}
-                    </div>
-                  </section>
-                );
-              })}
+                    >
+                      {preview ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={preview} alt="" className="absolute inset-0 size-full object-cover" />
+                      ) : (
+                        <div className="absolute inset-0 bg-secondary" />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
+
+                      <span
+                        className="absolute size-5 -translate-x-1/2 -translate-y-1/2"
+                        style={{ left: `${zone.x}%`, top: `${zone.y}%` }}
+                      >
+                        <span
+                          className={cn(
+                            "absolute inset-0 animate-ping rounded-full",
+                            module.severity === "attention" && "bg-destructive/60",
+                            module.severity === "medium" && "bg-am/60",
+                            module.severity === "low" && "bg-success/60"
+                          )}
+                        />
+                        <span
+                          className={cn(
+                            "absolute inset-0 rounded-full border-2 border-white/90",
+                            module.severity === "attention" && "bg-destructive",
+                            module.severity === "medium" && "bg-am",
+                            module.severity === "low" && "bg-success"
+                          )}
+                        />
+                      </span>
+
+                      <div className="absolute inset-x-0 top-0 flex items-center justify-between p-3">
+                        <span className="flex size-8 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-sm">
+                          <Icon className="size-4" />
+                        </span>
+                        <span className="rounded-full bg-black/35 px-2 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+                          {String(index + 1).padStart(2, "0")}/{orderedModules.length}
+                        </span>
+                      </div>
+
+                      <div className="absolute inset-x-0 bottom-0 p-4">
+                        <span className={cn(severityBadgeClass(module.severity), "mb-1.5 inline-flex")}>
+                          {t(`severity.${module.severity}`)}
+                        </span>
+                        <p className="font-serif text-xl text-white">{t(`modules.${module.id}.name`)}</p>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {orderedModules[activeModule] && (
+                <ModuleDetail
+                  module={orderedModules[activeModule]}
+                  t={t}
+                  tCategories={tCategories}
+                  catalog={catalog}
+                  skinType={analysis.skinType}
+                  addedProducts={addedProducts}
+                  onAddProduct={(product) => {
+                    addProduct(product);
+                    setAddedProducts((prev) => new Set(prev).add(product.id));
+                  }}
+                />
+              )}
             </div>
 
             <p className="flex items-start gap-2 rounded-xl bg-muted/60 p-3 text-left text-xs text-muted-foreground">
@@ -544,6 +532,137 @@ export function FaceScanClient() {
         )}
       </AnimatePresence>
     </div>
+  );
+}
+
+function ModuleDetail({
+  module,
+  t,
+  tCategories,
+  catalog,
+  skinType,
+  addedProducts,
+  onAddProduct,
+}: {
+  module: ModuleFinding;
+  t: ReturnType<typeof useTranslations>;
+  tCategories: ReturnType<typeof useTranslations>;
+  catalog: Product[];
+  skinType?: string;
+  addedProducts: Set<string>;
+  onAddProduct: (product: Product) => void;
+}) {
+  const products = pickModuleProducts(catalog, module, skinType);
+  const habits = t.raw(`dailyActions.${module.id}`) as string[];
+
+  return (
+    <motion.div
+      key={module.id}
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25 }}
+      className="grid min-w-0 gap-5 lg:grid-cols-[0.8fr_1.2fr]"
+    >
+      <div className="flex min-w-0 flex-col gap-5">
+        <div>
+          <span className={cn(severityBadgeClass(module.severity), "mb-2 inline-flex")}>
+            {t(`severity.${module.severity}`)}
+          </span>
+          <h3 className="font-serif text-2xl">{t(`modules.${module.id}.name`)}</h3>
+          <p className="mt-2 text-muted-foreground">
+            {module.note || (module.flagged ? t("moduleDefaultNote") : t("noConcern"))}
+          </p>
+        </div>
+
+        <div className="relative min-w-0 overflow-hidden rounded-3xl bg-secondary/60 p-4">
+          <div className="mb-2 flex items-center justify-between text-sm">
+            <span className="font-medium">{t("moduleScoreLabel")}</span>
+            <span className="text-muted-foreground">{9 - module.score}/9</span>
+          </div>
+          <ModuleScoreBar score={module.score} />
+
+          {module.flagged && (
+            <div className="mt-4 -mb-1 -mx-1">
+              <p className="mb-2 px-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                {t("productsForThisArea")}
+              </p>
+              {products.length === 0 ? (
+                <p className="px-1 text-sm text-muted-foreground">{t("noProductsForModule")}</p>
+              ) : (
+                <div className="no-scrollbar flex gap-3 overflow-x-auto px-1 pb-1">
+                  {products.map((product) => {
+                    const isAdded = addedProducts.has(product.id);
+                    return (
+                      <div
+                        key={product.id}
+                        className="relative w-[132px] shrink-0 rounded-2xl border border-white/40 bg-white/50 p-2.5 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.4)] backdrop-blur-xl dark:border-white/10 dark:bg-white/10"
+                      >
+                        <ProductImage
+                          imageUrl={product.imageUrl}
+                          category={product.category}
+                          name={product.name}
+                          size="sm"
+                          className="size-full aspect-square rounded-xl"
+                        />
+                        <p className="mt-2 line-clamp-2 text-xs font-medium leading-snug">{product.name}</p>
+                        <p className="truncate text-[11px] text-muted-foreground">{tCategories(product.category)}</p>
+                        <button
+                          type="button"
+                          onClick={() => onAddProduct(product)}
+                          aria-label={isAdded ? t("addedProduct") : t("addProduct")}
+                          className={cn(
+                            "absolute -right-1.5 -top-1.5 flex size-7 items-center justify-center rounded-full shadow-sm transition-colors",
+                            isAdded ? "bg-success text-white" : "bg-primary text-primary-foreground hover:brightness-105"
+                          )}
+                        >
+                          {isAdded ? <Check className="size-3.5" /> : <ClipboardCheck className="size-3.5" />}
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        <div>
+          <p className="mb-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+            {t("dailyActionsLabel")}
+          </p>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            {habits.map((habit) => (
+              <li key={habit} className="flex gap-2">
+                <Check className="mt-0.5 size-4 shrink-0 text-primary" />
+                <span>{habit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <p className="flex items-start gap-2 rounded-2xl bg-muted/60 p-3 text-xs text-muted-foreground">
+          <ShieldCheck className="mt-0.5 size-4 shrink-0" />
+          {t("moduleDisclaimer")}
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-5">
+        <div className="grid gap-4 sm:grid-cols-2">
+          <InfoList title={t("causesLabel")} items={t.raw(`modules.${module.id}.causes`) as string[]} />
+          <InfoList title={t("tipsLabel")} items={t.raw(`modules.${module.id}.tips`) as string[]} />
+        </div>
+
+        {!module.flagged && (
+          <div className="flex items-start gap-3 rounded-3xl bg-success/10 p-4">
+            <ShieldCheck className="mt-0.5 size-5 shrink-0 text-success" />
+            <div>
+              <p className="font-medium text-success">{t("moduleClearTitle")}</p>
+              <p className="text-sm text-muted-foreground">{t("moduleClearText")}</p>
+            </div>
+          </div>
+        )}
+      </div>
+    </motion.div>
   );
 }
 
