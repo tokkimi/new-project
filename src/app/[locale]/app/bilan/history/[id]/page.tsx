@@ -9,7 +9,21 @@ import { AuditResultView } from "@/components/audit-result-view";
 import type { AuditResult } from "@/lib/audit-engine";
 import { evaluateLifestyle, type LifestyleAnswers } from "@/lib/bilan-engine";
 
-const UI = {
+type Lang = "en" | "ko" | "fr" | "ja";
+
+const INTL_LOCALE: Record<Lang, string> = { en: "en-US", ko: "ko-KR", fr: "fr-FR", ja: "ja-JP" };
+
+const UI: Record<Lang, {
+  title: string;
+  overallScore: string;
+  sectionScan: string;
+  sectionRoutine: string;
+  sectionLifestyle: string;
+  noScan: string;
+  routineIssues: string;
+  flagsNone: string;
+  back: string;
+}> = {
   en: {
     title: "Check-in results",
     overallScore: "Overall score",
@@ -17,6 +31,7 @@ const UI = {
     sectionRoutine: "Routine",
     sectionLifestyle: "Lifestyle & wellbeing",
     noScan: "No face scan was used for this check-in.",
+    routineIssues: "issues",
     flagsNone: "Nothing flagged here — good habits.",
     back: "My check-ins",
   },
@@ -27,8 +42,31 @@ const UI = {
     sectionRoutine: "루틴",
     sectionLifestyle: "생활 습관과 웰빙",
     noScan: "이번 체크인에는 얼굴 스캔이 없어요.",
+    routineIssues: "개 항목",
     flagsNone: "특별히 지적할 사항이 없어요 — 좋은 습관이에요.",
     back: "내 체크인",
+  },
+  fr: {
+    title: "Résultats du bilan",
+    overallScore: "Score global",
+    sectionScan: "Scan visage",
+    sectionRoutine: "Routine",
+    sectionLifestyle: "Mode de vie et bien-être",
+    noScan: "Aucun scan visage n'a été utilisé pour ce bilan.",
+    routineIssues: "points",
+    flagsNone: "Rien à signaler ici — bonnes habitudes.",
+    back: "Mes bilans",
+  },
+  ja: {
+    title: "チェックイン結果",
+    overallScore: "総合スコア",
+    sectionScan: "顔スキャン",
+    sectionRoutine: "ルーティン",
+    sectionLifestyle: "生活習慣とウェルビーイング",
+    noScan: "このチェックインでは顔スキャンは使用されませんでした。",
+    routineIssues: "件の項目",
+    flagsNone: "特に指摘する点はありません — 良い習慣です。",
+    back: "マイチェックイン",
   },
 };
 
@@ -41,7 +79,7 @@ function scoreTone(score: number) {
 export default async function BilanHistoryDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const locale = await getLocale();
-  const lang: "en" | "ko" = locale === "ko" ? "ko" : "en";
+  const lang: Lang = locale === "ko" || locale === "fr" || locale === "ja" ? locale : "en";
   const t = UI[lang];
   const session = await auth();
 
@@ -91,7 +129,7 @@ export default async function BilanHistoryDetailPage({ params }: { params: Promi
         <div className="flex flex-col items-center justify-center gap-2 py-8 text-center">
           <span className={`font-serif text-5xl ${scoreTone(auditResult.score)}`}>{auditResult.score}</span>
           <span className="text-sm text-muted-foreground">
-            {auditResult.issues.length} {lang === "ko" ? "개 항목" : "issues"}
+            {auditResult.issues.length} {t.routineIssues}
           </span>
         </div>
       ),
@@ -106,7 +144,7 @@ export default async function BilanHistoryDetailPage({ params }: { params: Promi
           ) : (
             flags.map((flag) => (
               <p key={flag.id} className="rounded-xl bg-secondary/50 px-3 py-2 text-sm">
-                {lang === "ko" ? flag.ko : flag.en}
+                {flag[lang]}
               </p>
             ))
           )}
@@ -125,7 +163,7 @@ export default async function BilanHistoryDetailPage({ params }: { params: Promi
       <div>
         <h1 className="font-serif text-3xl">{t.title}</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          {new Intl.DateTimeFormat(lang === "ko" ? "ko-KR" : "en-US", { dateStyle: "full" }).format(bilan.createdAt)}
+          {new Intl.DateTimeFormat(INTL_LOCALE[lang], { dateStyle: "full" }).format(bilan.createdAt)}
         </p>
       </div>
 

@@ -17,7 +17,8 @@ export async function POST(request: Request) {
     locale?: string;
   };
   const answers = body.answers ?? {};
-  const lang = body.locale === "ko" ? "ko" : "en";
+  const lang =
+    body.locale === "ko" || body.locale === "fr" || body.locale === "ja" ? body.locale : "en";
 
   const [auditResult, scan] = await Promise.all([
     runUserAudit(userId),
@@ -68,6 +69,6 @@ export async function POST(request: Request) {
     routineScore: auditResult.score,
     lifestyleScore,
     scanScore: ownedScan?.overallScore ?? null,
-    flags: flags.map((f) => ({ id: f.id, severity: f.severity, text: lang === "ko" ? f.ko : f.en })),
+    flags: flags.map((f) => ({ id: f.id, severity: f.severity, text: f[lang] })),
   });
 }

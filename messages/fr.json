@@ -3,10 +3,6 @@
     "title": "Haru - votre routine beauté, organisée",
     "description": "Enregistrez vos produits, construisez vos routines du matin et du soir, et gardez vos notes et inspirations beauté au même endroit."
   },
-  "localeSwitcher": {
-    "en": "English",
-    "ko": "한국어"
-  },
   "nav": {
     "howItWorks": "Comment ça marche",
     "features": "Bonnes habitudes",
@@ -127,322 +123,322 @@
     "confirm": "Ajouter à ma routine"
   },
   "faceScanPage": {
-    "title": "Face scan",
-    "subtitle": "Take a well-lit, makeup-free photo and Haru will analyze visible skin concerns.",
-    "disclaimer": "Not a medical device. This gives a general visual read, not a clinical diagnosis — for real dermatological concerns, see a professional.",
-    "captureTitle": "Take or upload a photo",
-    "captureHint": "Face the camera directly in natural light, no makeup or filters",
+    "title": "Scan visage",
+    "subtitle": "Prenez une photo bien éclairée, sans maquillage, et Haru analysera les préoccupations cutanées visibles.",
+    "disclaimer": "Ce n'est pas un dispositif médical. Cela donne une lecture visuelle générale, pas un diagnostic clinique — pour de vraies préoccupations dermatologiques, consultez un professionnel.",
+    "captureTitle": "Prenez ou importez une photo",
+    "captureHint": "Faites face à la caméra en lumière naturelle, sans maquillage ni filtres",
     "steps": [
-      "Detecting face position...",
-      "Checking lighting and framing...",
-      "Preparing analysis..."
+      "Détection de la position du visage...",
+      "Vérification de l'éclairage et du cadrage...",
+      "Préparation de l'analyse..."
     ],
-    "retake": "Retake photo",
-    "goToQuiz": "Take the skin quiz instead",
-    "privacyNote": "Your photo is analyzed and discarded — it isn't stored.",
-    "signInPrompt": "Sign in to run a face scan.",
-    "signInCta": "Sign in",
+    "retake": "Reprendre la photo",
+    "goToQuiz": "Faire le quiz peau à la place",
+    "privacyNote": "Votre photo est analysée puis supprimée — elle n'est pas stockée.",
+    "signInPrompt": "Connectez-vous pour lancer un scan visage.",
+    "signInCta": "Se connecter",
     "paywallFeatures": [
-      "13-point AI skin analysis from a single photo",
-      "An overall skin score plus a detailed breakdown per module",
-      "Real causes and actionable tips for every flagged area",
-      "A routine and product picks built from your actual result"
+      "Analyse peau par IA en 13 points à partir d'une seule photo",
+      "Un score de peau global plus un détail par module",
+      "De vraies causes et des conseils concrets pour chaque zone signalée",
+      "Une routine et des choix de produits construits à partir de votre résultat réel"
     ],
-    "scanPrice": "€9",
-    "scanPriceHint": "One scan, pay once — no subscription needed",
-    "buyCta": "Buy my scan",
-    "comingSoon": "Payments aren't configured yet — check back soon.",
-    "unlimitedWithPremium": "Unlimited scans with Haru Premium",
-    "premiumGlitchHint": "Something looks off with your account — try refreshing the page.",
-    "noFaceTitle": "No face detected",
-    "noFaceText": "We couldn't find a clear face in that photo. Make sure your face fills the frame, in good lighting, facing the camera — no credit is charged for this attempt.",
-    "noCreditsTitle": "No scan available",
-    "noCreditsText": "You don't have a scan credit left. Buy another scan or subscribe to Haru Premium for unlimited scans.",
-    "noCreditsCta": "Back to face scan",
-    "resultTitle": "Your skin snapshot",
-    "resultSubtitle": "An AI visual read across 13 modules, cross-referenced with our product catalog — not a clinical diagnosis.",
-    "resultDisclaimer": "Haru's AI estimates this from what's actually visible in your photo, in ordinary light — not UV, polarized light, or a 3D scan. It isn't a dermatological device or diagnosis — see a professional for real skin concerns.",
-    "overallScoreLabel": "Overall skin score",
+    "scanPrice": "9 €",
+    "scanPriceHint": "Un scan, payé une fois — aucun abonnement nécessaire",
+    "buyCta": "Acheter mon scan",
+    "comingSoon": "Les paiements ne sont pas encore configurés — revenez bientôt.",
+    "unlimitedWithPremium": "Scans illimités avec Haru Premium",
+    "premiumGlitchHint": "Quelque chose semble anormal avec votre compte — essayez de rafraîchir la page.",
+    "noFaceTitle": "Aucun visage détecté",
+    "noFaceText": "Nous n'avons pas trouvé de visage net sur cette photo. Assurez-vous que votre visage remplit le cadre, avec un bon éclairage, face à la caméra — aucun crédit n'est débité pour cette tentative.",
+    "noCreditsTitle": "Aucun scan disponible",
+    "noCreditsText": "Il ne vous reste plus de crédit de scan. Achetez un autre scan ou abonnez-vous à Haru Premium pour des scans illimités.",
+    "noCreditsCta": "Retour au scan visage",
+    "resultTitle": "Votre bilan peau",
+    "resultSubtitle": "Une lecture visuelle par IA sur 13 modules, recoupée avec notre catalogue de produits — pas un diagnostic clinique.",
+    "resultDisclaimer": "L'IA de Haru estime ce résultat à partir de ce qui est réellement visible sur votre photo, en lumière ordinaire — pas UV, pas lumière polarisée, pas de scan 3D. Ce n'est ni un dispositif dermatologique ni un diagnostic — consultez un professionnel pour de vraies préoccupations cutanées.",
+    "overallScoreLabel": "Score de peau global",
     "skinTypes": {
-      "oily": "Oily skin",
-      "dry": "Dry skin",
-      "combination": "Combination skin",
-      "normal": "Normal skin",
-      "sensitive": "Sensitive skin"
+      "oily": "Peau grasse",
+      "dry": "Peau sèche",
+      "combination": "Peau mixte",
+      "normal": "Peau normale",
+      "sensitive": "Peau sensible"
     },
-    "summaryGood": "Your skin looks balanced overall — keep your current routine going.",
-    "summaryOk": "A few areas could use some extra care.",
-    "summaryAttention": "Several areas stood out this time — here's where to focus.",
-    "modulesSectionTitle": "Detailed breakdown",
-    "causesLabel": "Why this happens",
-    "tipsLabel": "What helps",
-    "noConcern": "Nothing notable here — keep doing what you're doing.",
+    "summaryGood": "Votre peau semble globalement équilibrée — continuez votre routine actuelle.",
+    "summaryOk": "Quelques zones pourraient bénéficier d'un peu plus d'attention.",
+    "summaryAttention": "Plusieurs zones se sont démarquées cette fois — voici où concentrer vos efforts.",
+    "modulesSectionTitle": "Détail complet",
+    "causesLabel": "Pourquoi cela arrive",
+    "tipsLabel": "Ce qui aide",
+    "noConcern": "Rien à signaler ici — continuez comme ça.",
     "severity": {
-      "low": "Clear",
-      "medium": "To watch",
-      "attention": "Priority"
+      "low": "Clair",
+      "medium": "À surveiller",
+      "attention": "Priorité"
     },
+    "unavailableTitle": "L'analyse IA n'est pas encore configurée",
+    "unavailableText": "Le moteur d'analyse photo n'a pas encore été connecté sur ce déploiement. En attendant, vos réponses au quiz peau alimentent déjà l'audit de votre routine.",
+    "errorTitle": "L'analyse n'a pas abouti",
+    "errorText": "Un problème est survenu lors de la lecture de cette photo. Réessayez avec un meilleur éclairage, face à la caméra.",
+    "routineSectionTitle": "Une routine ciblant ce que nous avons trouvé",
+    "routineSectionText": "Construite à partir de notre catalogue de produits pour traiter les modules signalés ci-dessus.",
+    "addToShelf": "Ajouter cette routine à mon étagère",
+    "addedToShelf": "Ajoutée à votre étagère",
+    "resultEyebrow": "Résultat du scan visage",
+    "modulesCount": "{count} zones à examiner",
+    "modulesSectionText": "Chaque section donne le résultat visible, des gestes quotidiens utiles, et des produits pouvant soutenir cette zone précise.",
+    "moduleDefaultNote": "Cette zone a besoin d'un soutien constant plutôt que d'une routine agressive.",
+    "moduleScoreLabel": "Clarté de la peau",
+    "dailyActionsLabel": "Gestes quotidiens",
+    "productsForThisArea": "Produits à envisager pour cette zone",
+    "productsForThisAreaText": "Choisis dans le catalogue selon la catégorie, la préoccupation, le type de peau et les actifs clés.",
+    "noProductsForModule": "Pas encore de correspondance forte dans le catalogue pour cette zone.",
+    "addProduct": "Ajouter à ma routine",
+    "addedProduct": "Ajouté",
+    "moduleDisclaimer": "Utilisez ces suggestions comme repères de routine. Si la peau est douloureuse, gonflée ou irritée de façon persistante, consultez un dermatologue.",
+    "progressCta": "Voir la progression",
+    "moduleClearTitle": "Clair — aucune action nécessaire",
+    "moduleClearText": "Cette zone semble saine sur votre photo. Aucun produit ciblé n'est nécessaire ici pour le moment.",
     "modules": {
       "pores": {
         "name": "Pores",
         "causes": [
-          "Excess sebum production",
-          "Natural collagen loss with age",
-          "Buildup from infrequent exfoliation"
+          "Production excessive de sébum",
+          "Perte naturelle de collagène liée à l'âge",
+          "Accumulation due à une exfoliation peu fréquente"
         ],
         "tips": [
-          "Niacinamide helps regulate oil and refine the look of pores over time",
-          "A gentle BHA toner 2–3x/week keeps pores from clogging",
-          "Daily SPF slows the collagen loss that stretches pores"
+          "La niacinamide aide à réguler l'excès de sébum et affine l'apparence des pores avec le temps",
+          "Une lotion au BHA douce 2 à 3x/semaine évite que les pores ne se bouchent",
+          "Le SPF quotidien ralentit la perte de collagène qui dilate les pores"
         ]
       },
       "blackheads": {
-        "name": "Blackheads",
+        "name": "Points noirs",
         "causes": [
-          "Oxidized sebum trapped in pores",
-          "Buildup of dead skin cells",
-          "Infrequent or incomplete cleansing"
+          "Sébum oxydé piégé dans les pores",
+          "Accumulation de cellules mortes",
+          "Nettoyage peu fréquent ou incomplet"
         ],
         "tips": [
-          "Double cleanse in the evening to fully remove sunscreen and oil",
-          "A BHA (salicylic acid) toner helps dissolve buildup inside pores",
-          "Avoid harsh scrubbing — it can irritate skin without actually clearing pores"
+          "Double nettoyage le soir pour retirer complètement protection solaire et sébum",
+          "Une lotion au BHA (acide salicylique) aide à dissoudre l'accumulation à l'intérieur des pores",
+          "Évitez le gommage agressif — il peut irriter la peau sans réellement désobstruer les pores"
         ]
       },
       "texture": {
         "name": "Texture",
         "causes": [
-          "Buildup of dead skin cells",
-          "Dehydration",
-          "Irregular exfoliation habits"
+          "Accumulation de cellules mortes",
+          "Déshydratation",
+          "Habitudes d'exfoliation irrégulières"
         ],
         "tips": [
-          "A gentle AHA 1–2x/week smooths texture without over-stripping",
-          "Layering hydration (hyaluronic acid) plumps and softens rough patches",
-          "Consistency matters more than intensity — little and often beats occasional harsh treatments"
+          "Un AHA doux 1 à 2x/semaine lisse la texture sans agresser la peau",
+          "Superposer de l'hydratation (acide hyaluronique) repulpe et adoucit les zones rugueuses",
+          "La régularité compte plus que l'intensité — peu mais souvent bat les traitements occasionnels agressifs"
         ]
       },
       "oiliness": {
-        "name": "Oiliness",
+        "name": "Peau grasse",
         "causes": [
-          "Naturally higher sebum production",
-          "Over-cleansing or over-stripping the skin",
-          "Heat and humidity"
+          "Production de sébum naturellement plus élevée",
+          "Nettoyage excessif qui décape la peau",
+          "Chaleur et humidité"
         ],
         "tips": [
-          "Niacinamide helps regulate sebum without over-drying",
-          "Don't skip moisturizer — stripped skin often overproduces oil to compensate",
-          "A lightweight gel moisturizer keeps oil balanced without heaviness"
+          "La niacinamide aide à réguler le sébum sans trop assécher",
+          "Ne sautez pas l'hydratant — une peau décapée produit souvent plus de sébum pour compenser",
+          "Un hydratant gel léger maintient l'équilibre du sébum sans effet gras"
         ]
       },
       "dryness": {
-        "name": "Dryness",
+        "name": "Sécheresse",
         "causes": [
-          "Weakened moisture barrier",
-          "Cold or dry climates",
-          "Over-exfoliation or harsh cleansers"
+          "Barrière cutanée affaiblie",
+          "Climat froid ou sec",
+          "Sur-exfoliation ou nettoyants agressifs"
         ],
         "tips": [
-          "Ceramides help rebuild the skin's natural moisture barrier",
-          "Layer hyaluronic acid on damp skin, then seal it in with a moisturizer",
-          "Cut back on strong actives (retinol, AHA/BHA) until the barrier recovers"
+          "Les céramides aident à reconstruire la barrière d'hydratation naturelle de la peau",
+          "Superposez l'acide hyaluronique sur peau humide, puis scellez avec un hydratant",
+          "Réduisez les actifs forts (rétinol, AHA/BHA) le temps que la barrière récupère"
         ]
       },
       "redness": {
-        "name": "Redness",
+        "name": "Rougeurs",
         "causes": [
-          "Reactive or sensitized skin",
-          "Weather, heat, or friction",
-          "Too many actives layered at once"
+          "Peau réactive ou sensibilisée",
+          "Météo, chaleur ou friction",
+          "Trop d'actifs superposés en même temps"
         ],
         "tips": [
-          "Centella asiatica (cica) is one of the most consistently soothing ingredients for visible redness",
-          "Simplify your routine temporarily while skin recalms",
-          "Patch-test new actives on your inner arm before applying to the face"
+          "La centella asiatica (cica) est l'un des ingrédients les plus fiables pour apaiser les rougeurs visibles",
+          "Simplifiez temporairement votre routine le temps que la peau se calme",
+          "Testez les nouveaux actifs sur l'intérieur du bras avant de les appliquer sur le visage"
         ]
       },
       "sensitivity": {
-        "name": "Sensitivity",
+        "name": "Sensibilité",
         "causes": [
-          "A compromised skin barrier",
-          "Overuse of exfoliating actives",
-          "Fragrance or alcohol in products"
+          "Barrière cutanée compromise",
+          "Usage excessif d'actifs exfoliants",
+          "Parfum ou alcool dans les produits"
         ],
         "tips": [
-          "Prioritize a ceramide-rich moisturizer to rebuild the barrier before reintroducing actives",
-          "Avoid layering multiple actives (retinol + AHA/BHA) until skin calms down",
-          "Look for fragrance-free formulas while your barrier recovers"
+          "Priorisez un hydratant riche en céramides pour reconstruire la barrière avant de réintroduire des actifs",
+          "Évitez de superposer plusieurs actifs (rétinol + AHA/BHA) tant que la peau ne s'est pas calmée",
+          "Recherchez des formules sans parfum le temps que la barrière récupère"
         ]
       },
       "spots": {
-        "name": "Dark spots",
+        "name": "Taches brunes",
         "causes": [
-          "UV exposure over time",
-          "Post-inflammatory marks from old breakouts",
-          "Hormonal changes"
+          "Exposition aux UV au fil du temps",
+          "Marques post-inflammatoires d'anciens boutons",
+          "Changements hormonaux"
         ],
         "tips": [
-          "Vitamin C in the morning helps fade spots and protects against new ones forming",
-          "Daily SPF is the single most effective way to stop spots from getting darker",
-          "Niacinamide can help even out tone alongside a brightening active"
+          "La vitamine C le matin aide à estomper les taches et protège contre l'apparition de nouvelles",
+          "Le SPF quotidien est le moyen le plus efficace d'empêcher les taches de foncer",
+          "La niacinamide peut aider à unifier le teint aux côtés d'un actif éclaircissant"
         ]
       },
       "acne": {
-        "name": "Active blemishes",
+        "name": "Imperfections actives",
         "causes": [
-          "Excess oil combined with clogged pores",
-          "Bacterial overgrowth",
-          "Hormonal fluctuations"
+          "Excès de sébum combiné à des pores obstrués",
+          "Prolifération bactérienne",
+          "Fluctuations hormonales"
         ],
         "tips": [
-          "A BHA (salicylic acid) toner helps clear congestion inside the pore",
-          "Benzoyl peroxide spot-treats active, inflamed blemishes",
-          "Avoid picking — it prolongs healing and increases the odds of scarring"
+          "Une lotion au BHA (acide salicylique) aide à désencombrer l'intérieur du pore",
+          "Le peroxyde de benzoyle traite localement les boutons actifs et enflammés",
+          "Évitez de gratter — cela prolonge la cicatrisation et augmente le risque de marques"
         ]
       },
       "acneScars": {
-        "name": "Post-acne marks",
+        "name": "Marques post-acné",
         "causes": [
-          "Inflammation from past breakouts",
-          "Picking or squeezing blemishes",
-          "Slow cell turnover leaving marks visible longer"
+          "Inflammation liée à d'anciens boutons",
+          "Grattage ou pression sur les boutons",
+          "Renouvellement cellulaire lent qui laisse les marques visibles plus longtemps"
         ],
         "tips": [
-          "Niacinamide and vitamin C both help fade lingering discoloration",
-          "Gentle, regular exfoliation (AHA) speeds up how fast marks fade",
-          "Consistent SPF prevents marks from darkening further in the sun"
+          "La niacinamide et la vitamine C aident toutes deux à estomper les marques persistantes",
+          "Une exfoliation douce et régulière (AHA) accélère l'estompage des marques",
+          "Un SPF constant évite que les marques ne foncent davantage au soleil"
         ]
       },
       "wrinkles": {
-        "name": "Fine lines & wrinkles",
+        "name": "Ridules et rides",
         "causes": [
-          "Natural collagen loss with age",
-          "Repeated facial expressions",
-          "Cumulative sun exposure"
+          "Perte naturelle de collagène liée à l'âge",
+          "Expressions faciales répétées",
+          "Exposition solaire cumulée"
         ],
         "tips": [
-          "Retinol is the best-studied ingredient for softening the look of fine lines over time",
-          "Peptides support skin firmness alongside retinol",
-          "Daily SPF is what actually slows new lines from forming"
+          "Le rétinol est l'ingrédient le mieux étudié pour atténuer l'apparence des ridules avec le temps",
+          "Les peptides soutiennent la fermeté de la peau aux côtés du rétinol",
+          "Le SPF quotidien est ce qui ralentit réellement l'apparition de nouvelles rides"
         ]
       },
       "darkCircles": {
-        "name": "Under-eye circles",
+        "name": "Cernes",
         "causes": [
-          "Thin under-eye skin showing blood vessels",
-          "Lack of sleep or dehydration",
-          "Natural pigmentation in the area"
+          "Peau fine sous les yeux laissant apparaître les vaisseaux sanguins",
+          "Manque de sommeil ou déshydratation",
+          "Pigmentation naturelle de la zone"
         ],
         "tips": [
-          "A peptide eye cream can help with puffiness and the look of fine lines",
-          "Gently pat products in with your ring finger — never rub the eye area",
-          "Sleep and hydration have an outsized visible effect on this area specifically"
+          "Une crème contour des yeux aux peptides peut aider contre les poches et les ridules",
+          "Tapotez délicatement les produits avec l'annulaire — ne frottez jamais le contour de l'œil",
+          "Le sommeil et l'hydratation ont un effet visible particulièrement marqué sur cette zone"
         ]
       },
       "radiance": {
-        "name": "Radiance",
+        "name": "Éclat",
         "causes": [
-          "Buildup of dull, dead skin cells",
-          "Dehydration",
-          "Inconsistent routine"
+          "Accumulation de cellules mortes et de teint terne",
+          "Déshydratation",
+          "Routine irrégulière"
         ],
         "tips": [
-          "Vitamin C brightens and adds visible glow with consistent use",
-          "Gentle exfoliation reveals fresher skin underneath",
-          "Radiance responds fast to hydration — don't skip your moisturizer step"
+          "La vitamine C illumine et apporte un éclat visible avec un usage régulier",
+          "Une exfoliation douce révèle une peau plus fraîche en dessous",
+          "L'éclat répond vite à l'hydratation — ne sautez pas votre étape hydratant"
         ]
       }
     },
-    "unavailableTitle": "AI analysis isn't set up yet",
-    "unavailableText": "The photo analysis engine hasn't been connected on this deployment. Your skin quiz answers already power your routine audit in the meantime.",
-    "errorTitle": "Analysis didn't go through",
-    "errorText": "Something went wrong reading that photo. Try again with better lighting, facing the camera directly.",
-    "routineSectionTitle": "A routine that targets what we found",
-    "routineSectionText": "Built from our product catalog to address the modules flagged above.",
-    "addToShelf": "Add this routine to my shelf",
-    "addedToShelf": "Added to your shelf",
-    "resultEyebrow": "Face Scan result",
-    "modulesCount": "{count} areas to review",
-    "modulesSectionText": "Each section gives the visible result, useful daily gestures, and products that can support this specific area.",
-    "moduleDefaultNote": "This area needs steady support rather than an aggressive routine.",
-    "moduleScoreLabel": "Skin clarity",
-    "dailyActionsLabel": "Daily gestures",
-    "productsForThisArea": "Products to consider for this area",
-    "productsForThisAreaText": "Chosen from the catalog based on category, concern, skin type and key actives.",
-    "noProductsForModule": "No strong catalog match yet for this area.",
-    "addProduct": "Add to my routine",
-    "addedProduct": "Added",
-    "moduleDisclaimer": "Use these suggestions as routine guidance. If the skin is painful, swollen or persistently irritated, ask a dermatologist.",
-    "progressCta": "See progress",
     "dailyActions": {
       "pores": [
-        "Cleanse gently at night so sunscreen and sebum do not sit in the pores.",
-        "Use SPF every morning; stretched-looking pores are worsened by sun damage.",
-        "Keep exfoliating acids to a planned rhythm instead of using them every day."
+        "Nettoyez en douceur le soir pour que protection solaire et sébum ne restent pas dans les pores.",
+        "Appliquez un SPF chaque matin ; les dommages solaires aggravent l'apparence dilatée des pores.",
+        "Gardez un rythme planifié pour les acides exfoliants plutôt que de les utiliser tous les jours."
       ],
       "blackheads": [
-        "Remove makeup and SPF fully before bed, then cleanse without scrubbing.",
-        "Use a BHA product gradually and pause if the skin feels tight or hot.",
-        "Avoid heavy layers on the nose and chin when the area is already congested."
+        "Retirez complètement maquillage et protection solaire avant de dormir, puis nettoyez sans frotter.",
+        "Utilisez un produit au BHA progressivement, et faites une pause si la peau tiraille ou chauffe.",
+        "Évitez les textures lourdes sur le nez et le menton quand la zone est déjà congestionnée."
       ],
       "texture": [
-        "Keep a simple cleanse, moisturize and SPF base before adding strong actives.",
-        "Do not scrub texture; use chemical exfoliation slowly and consistently.",
-        "Sleep and stress matter here because irritation can make texture look rougher."
+        "Gardez une base simple — nettoyant, hydratant, SPF — avant d'ajouter des actifs forts.",
+        "Ne frottez pas la texture ; utilisez l'exfoliation chimique lentement et régulièrement.",
+        "Le sommeil et le stress comptent ici car l'irritation peut rendre la texture plus rugueuse."
       ],
       "oiliness": [
-        "Cleanse morning and evening, but avoid stripping foams that make skin rebound oily.",
-        "Use light layers and wait between products so the routine does not feel greasy.",
-        "Drink water through the day; dehydration can make skin feel oily and tight at once."
+        "Nettoyez matin et soir, mais évitez les mousses décapantes qui font rebondir la production de sébum.",
+        "Utilisez des textures légères et espacez les produits pour que la routine ne devienne pas grasse.",
+        "Buvez de l'eau dans la journée ; la déshydratation peut rendre la peau grasse et tiraillée à la fois."
       ],
       "dryness": [
-        "Apply moisturizer while the skin is slightly damp after cleansing.",
-        "Avoid hot water and long cleansing sessions that remove too much barrier lipid.",
-        "Layer hydration first, then seal it with a cream when the skin feels tight."
+        "Appliquez l'hydratant pendant que la peau est encore légèrement humide après le nettoyage.",
+        "Évitez l'eau chaude et les nettoyages trop longs qui retirent trop de lipides de la barrière.",
+        "Superposez l'hydratation d'abord, puis scellez avec une crème quand la peau tiraille."
       ],
       "redness": [
-        "Keep the routine short while the skin is reactive: cleanser, soothing serum, moisturizer, SPF.",
-        "Avoid stacking acids, retinoids and vitamin C on the same irritated evening.",
-        "Use lukewarm water and press products in gently instead of rubbing."
+        "Gardez la routine courte quand la peau est réactive : nettoyant, sérum apaisant, hydratant, SPF.",
+        "Évitez de superposer acides, rétinoïdes et vitamine C le même soir irrité.",
+        "Utilisez de l'eau tiède et pressez les produits délicatement plutôt que de frotter."
       ],
       "sensitivity": [
-        "Patch test new products for several days before using them all over the face.",
-        "Introduce one new active at a time so reactions are easier to understand.",
-        "Prioritize barrier repair on recovery nights instead of chasing faster results."
+        "Testez les nouveaux produits pendant plusieurs jours avant de les appliquer sur tout le visage.",
+        "Introduisez un seul nouvel actif à la fois pour mieux comprendre les réactions.",
+        "Priorisez la réparation de la barrière lors des nuits de récupération plutôt que de courir après des résultats rapides."
       ],
       "spots": [
-        "Use broad-spectrum SPF every morning and reapply when outdoors.",
-        "Pair brightening actives with patience; visible tone support takes consistent weeks.",
-        "Avoid picking marks because inflammation can deepen discoloration."
+        "Utilisez un SPF large spectre chaque matin et réappliquez à l'extérieur.",
+        "Associez les actifs éclaircissants à de la patience ; un teint visiblement plus uniforme demande des semaines de régularité.",
+        "Évitez de gratter les marques car l'inflammation peut approfondir la décoloration."
       ],
       "acne": [
-        "Cleanse after sweat and remove sunscreen before sleep.",
-        "Keep acne actives targeted; more layers can irritate and worsen breakouts.",
-        "Change pillowcases often and avoid touching active breakouts during the day."
+        "Nettoyez après avoir transpiré et retirez la protection solaire avant de dormir.",
+        "Gardez les actifs anti-acné ciblés ; trop de couches peut irriter et aggraver les poussées.",
+        "Changez souvent de taie d'oreiller et évitez de toucher les boutons actifs pendant la journée."
       ],
       "acneScars": [
-        "Protect marks from sun every morning; UV keeps post-blemish color visible longer.",
-        "Use gentle resurfacing on a schedule, not on already irritated skin.",
-        "Do not pick healing blemishes; calm recovery reduces leftover marks."
+        "Protégez les marques du soleil chaque matin ; les UV maintiennent la couleur post-bouton visible plus longtemps.",
+        "Pratiquez un resurfaçage doux selon un rythme régulier, pas sur une peau déjà irritée.",
+        "Ne grattez pas les boutons en cours de guérison ; une récupération calme réduit les marques restantes."
       ],
       "wrinkles": [
-        "Use SPF daily; UV exposure is the biggest routine-level factor you can control.",
-        "Keep retinoids mostly at night and alternate with recovery nights.",
-        "Moisturize consistently so dehydration lines are less visible."
+        "Utilisez un SPF quotidien ; l'exposition aux UV est le facteur le plus contrôlable au niveau de la routine.",
+        "Réservez les rétinoïdes surtout à la nuit et alternez avec des nuits de récupération.",
+        "Hydratez régulièrement pour que les ridules de déshydratation soient moins visibles."
       ],
       "darkCircles": [
-        "Sleep consistency helps the under-eye area look less tired.",
-        "Use a tiny amount of eye product and avoid rubbing the area.",
-        "If puffiness is present, try a cool compress for a few minutes in the morning."
+        "Un sommeil régulier aide le contour des yeux à paraître moins fatigué.",
+        "Utilisez une petite quantité de soin contour des yeux et évitez de frotter la zone.",
+        "En cas de poches, essayez une compresse fraîche quelques minutes le matin."
       ],
       "radiance": [
-        "Cleanse at night so dull buildup does not stay under the next routine.",
-        "Hydrate before moisturizer; glow often drops when the skin is dehydrated.",
-        "Use SPF daily because pigmentation and dullness come back quickly with UV exposure."
+        "Nettoyez le soir pour que l'accumulation terne ne reste pas sous la routine du lendemain.",
+        "Hydratez avant l'hydratant crème ; l'éclat baisse souvent quand la peau est déshydratée.",
+        "Utilisez un SPF quotidien car pigmentation et teint terne reviennent vite avec l'exposition aux UV."
       ]
-    },
-    "moduleClearTitle": "Clear — no action needed",
-    "moduleClearText": "This area looks healthy in your photo. No targeted products needed here right now."
+    }
   },
   "scanPage": {
     "title": "Scanner un produit",
@@ -935,55 +931,55 @@
     "accept": "Accepter"
   },
   "legal": {
-    "title": "Legal information",
-    "subtitle": "Legal notice, terms of sale, privacy policy and cookie policy for Haru.",
-    "placeholderBadge": "To be completed by the operator",
-    "noticeTitle": "Legal notice",
-    "noticeIntro": "Information published in application of legal transparency requirements for online services.",
-    "noticePublisherLabel": "Publisher",
-    "noticePublisherPlaceholder": "Legal company name, registered address, company registration number and VAT number — to be provided by the Haru operator and added here.",
-    "noticeDirectorLabel": "Publication director",
-    "noticeDirectorPlaceholder": "Name of the person or entity responsible for publication — to be provided by the Haru operator.",
-    "noticeHostingLabel": "Hosting provider",
-    "noticeHostingText": "This website is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, United States.",
+    "title": "Informations légales",
+    "subtitle": "Mentions légales, conditions générales de vente, politique de confidentialité et politique de cookies de Haru.",
+    "placeholderBadge": "À compléter par l'exploitant",
+    "noticeTitle": "Mentions légales",
+    "noticeIntro": "Informations publiées en application des obligations de transparence légale applicables aux services en ligne.",
+    "noticePublisherLabel": "Éditeur",
+    "noticePublisherPlaceholder": "Raison sociale, adresse du siège, numéro d'immatriculation et numéro de TVA — à fournir par l'exploitant de Haru et à ajouter ici.",
+    "noticeDirectorLabel": "Directeur de la publication",
+    "noticeDirectorPlaceholder": "Nom de la personne ou de l'entité responsable de la publication — à fournir par l'exploitant de Haru.",
+    "noticeHostingLabel": "Hébergeur",
+    "noticeHostingText": "Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis.",
     "noticeContactLabel": "Contact",
-    "noticeContactPlaceholder": "A dedicated contact email address — to be provided by the Haru operator and added here.",
-    "termsTitle": "Terms of sale",
-    "termsIntro": "These terms of sale govern the purchase of Haru's paid features: the Premium subscription and one-time face scan credits. Using a paid feature means you accept these terms.",
-    "termsServiceTitle": "What is included",
-    "termsServiceText": "The free plan includes product scanning, the full product database, and a basic shelf and routine builder. Premium (subscription) adds a full routine audit against your skin profile, unlimited saved products, and unlimited face scans. Without a subscription, face scans can be purchased individually as one-time credits.",
-    "termsPriceTitle": "Prices",
-    "termsPriceText": "Premium subscription: €6.99 per month. One-time face scan: €9 per scan, no subscription required. Prices are shown in euros on the Upgrade page before payment and include any applicable tax shown at checkout. Haru may change prices for future billing periods; active subscribers are notified before a price change applies to their next renewal.",
-    "termsPaymentTitle": "Payment",
-    "termsPaymentText": "Payments are handled by Stripe, an independent payment processor. Haru does not receive or store your card number; Stripe's own terms and privacy policy apply to the payment step.",
-    "termsDurationTitle": "Duration, renewal and cancellation",
-    "termsDurationText": "The Premium subscription renews automatically every month until cancelled. You can cancel at any time from the billing portal linked on the Upgrade page. Cancelling stops future renewals; it does not refund the period already paid for, and Premium access continues until that period ends.",
-    "termsWithdrawalTitle": "Right of withdrawal",
-    "termsWithdrawalText": "Haru's paid features are digital services made available immediately once purchased. Where the law allows a consumer to expressly waive the standard withdrawal period for this kind of immediate digital service, starting the service (activating Premium or using a purchased scan) is treated as that waiver from the moment of purchase.",
-    "termsRefundTitle": "Refunds",
-    "termsRefundText": "Outside of the above, refund requests are reviewed individually — for example if a paid feature was genuinely unusable due to a technical fault on Haru's side. Contact support with your account email and the date of the charge.",
-    "privacyTitle": "Privacy policy",
-    "privacyIntro": "This policy explains what personal data Haru processes, why, and how you can control it.",
-    "privacyDataTitle": "Data we process",
-    "privacyDataText": "Account details (name, email, password — stored as a hash, never in plain text); your skin profile answers; your saved shelf, personal notes and saved links; your face scan results; your newsletter subscription status if you opt in; and basic first-party usage data used to operate the app, without third-party advertising trackers.",
-    "privacyScanTitle": "Face and product scan photos",
-    "privacyScanText": "A photo you submit for a face or product scan is sent to Anthropic's Claude API to generate the analysis and is not stored by Haru — only the resulting result (scores, written notes, summary) is saved to your account so you can consult it later.",
-    "privacySubprocessorsTitle": "Who else processes data on Haru's behalf",
-    "privacySubprocessorsText": "Stripe (payment processing), Resend (transactional and newsletter email delivery), Anthropic (photo analysis for scans), and Vercel (application hosting). Each acts as a data processor under its own applicable terms.",
-    "privacyRightsTitle": "Your rights",
-    "privacyRightsText": "You can review and edit your account details from your profile at any time, and permanently delete your account and associated data from Account settings. For any other request about your data, use the contact details in the legal notice above.",
-    "privacyRetentionTitle": "Retention",
-    "privacyRetentionText": "Account and profile data is kept for as long as your account exists. Deleting your account removes your shelf, notes, saved links, skin profile, scan history and audit history.",
-    "cookiesTitle": "Cookie policy",
-    "cookiesIntro": "Haru uses a small number of cookies and locally stored preferences, described below.",
-    "cookiesEssentialTitle": "Essential",
-    "cookiesEssentialText": "A sign-in session cookie keeps you logged in, and a language preference cookie remembers whether you're using the English or Korean interface. These are required for the site to function and are not part of the accept/reject choice below.",
-    "cookiesOptionalTitle": "Optional",
-    "cookiesOptionalText": "Your cookie banner choice and your light/dark theme preference are stored locally in your browser, not as tracking cookies. Haru does not currently set any third-party analytics or advertising cookies, regardless of the choice you make in the banner.",
-    "responsibilityTitle": "Beauty information",
-    "responsibilityText": "Product sheets, routine guidance, face scan results and all other beauty content on Haru are informational and based on general cosmetic knowledge. They do not constitute medical advice and do not replace a consultation with a dermatologist or another healthcare professional, particularly for persistent, painful or worsening skin conditions.",
+    "noticeContactPlaceholder": "Une adresse e-mail de contact dédiée — à fournir par l'exploitant de Haru et à ajouter ici.",
+    "termsTitle": "Conditions générales de vente",
+    "termsIntro": "Ces conditions générales de vente régissent l'achat des fonctionnalités payantes de Haru : l'abonnement Premium et les crédits de scan visage à l'unité. Utiliser une fonctionnalité payante vaut acceptation de ces conditions.",
+    "termsServiceTitle": "Ce qui est inclus",
+    "termsServiceText": "L'offre gratuite comprend le scan produit, l'accès complet à la base de produits, et un constructeur d'étagère et de routine de base. Premium (abonnement) ajoute un audit complet de routine selon votre profil de peau, des produits enregistrés illimités, et des scans visage illimités. Sans abonnement, les scans visage peuvent être achetés individuellement sous forme de crédits à l'unité.",
+    "termsPriceTitle": "Prix",
+    "termsPriceText": "Abonnement Premium : 6,99 € par mois. Scan visage à l'unité : 9 € par scan, sans abonnement. Les prix sont affichés en euros sur la page Premium avant paiement et incluent les taxes applicables affichées au moment du paiement. Haru peut modifier les prix pour les périodes de facturation futures ; les abonnés actifs sont informés avant qu'un changement de prix ne s'applique à leur prochain renouvellement.",
+    "termsPaymentTitle": "Paiement",
+    "termsPaymentText": "Les paiements sont traités par Stripe, un prestataire de paiement indépendant. Haru ne reçoit ni ne conserve votre numéro de carte ; les conditions et la politique de confidentialité propres à Stripe s'appliquent à l'étape de paiement.",
+    "termsDurationTitle": "Durée, renouvellement et résiliation",
+    "termsDurationText": "L'abonnement Premium se renouvelle automatiquement chaque mois jusqu'à résiliation. Vous pouvez résilier à tout moment depuis le portail de facturation accessible sur la page Premium. La résiliation arrête les renouvellements futurs ; elle ne rembourse pas la période déjà payée, et l'accès Premium reste actif jusqu'à la fin de cette période.",
+    "termsWithdrawalTitle": "Droit de rétractation",
+    "termsWithdrawalText": "Les fonctionnalités payantes de Haru sont des services numériques disponibles immédiatement après l'achat. Lorsque la loi permet à un consommateur de renoncer expressément au délai de rétractation habituel pour ce type de service numérique fourni immédiatement, le démarrage du service (activation de Premium ou utilisation d'un scan acheté) est considéré comme cette renonciation dès le moment de l'achat.",
+    "termsRefundTitle": "Remboursements",
+    "termsRefundText": "En dehors du cas ci-dessus, les demandes de remboursement sont examinées au cas par cas — par exemple si une fonctionnalité payante était réellement inutilisable en raison d'un problème technique imputable à Haru. Contactez le support avec l'e-mail de votre compte et la date du prélèvement.",
+    "privacyTitle": "Politique de confidentialité",
+    "privacyIntro": "Cette politique explique quelles données personnelles Haru traite, pourquoi, et comment vous pouvez les contrôler.",
+    "privacyDataTitle": "Données que nous traitons",
+    "privacyDataText": "Les informations de compte (nom, e-mail, mot de passe — stocké sous forme de hash, jamais en clair) ; vos réponses au profil de peau ; votre étagère enregistrée, vos notes personnelles et vos liens sauvegardés ; vos résultats de scan visage ; votre statut d'abonnement à la newsletter si vous y consentez ; et des données d'usage basiques de première partie utilisées pour faire fonctionner l'application, sans traceurs publicitaires tiers.",
+    "privacyScanTitle": "Photos de scan visage et produit",
+    "privacyScanText": "Une photo que vous soumettez pour un scan visage ou produit est envoyée à l'API Claude d'Anthropic pour générer l'analyse et n'est pas stockée par Haru — seul le résultat (scores, notes rédigées, résumé) est enregistré sur votre compte afin que vous puissiez le consulter plus tard.",
+    "privacySubprocessorsTitle": "Qui traite aussi des données pour le compte de Haru",
+    "privacySubprocessorsText": "Stripe (traitement des paiements), Resend (envoi d'e-mails transactionnels et de newsletter), Anthropic (analyse des photos de scan), et Vercel (hébergement de l'application). Chacun agit en tant que sous-traitant selon ses propres conditions applicables.",
+    "privacyRightsTitle": "Vos droits",
+    "privacyRightsText": "Vous pouvez consulter et modifier les informations de votre compte depuis votre profil à tout moment, et supprimer définitivement votre compte et les données associées depuis les paramètres du compte. Pour toute autre demande concernant vos données, utilisez les coordonnées figurant dans les mentions légales ci-dessus.",
+    "privacyRetentionTitle": "Conservation",
+    "privacyRetentionText": "Les données de compte et de profil sont conservées tant que votre compte existe. Supprimer votre compte supprime votre étagère, vos notes, vos liens sauvegardés, votre profil de peau, votre historique de scans et votre historique d'audits.",
+    "cookiesTitle": "Politique de cookies",
+    "cookiesIntro": "Haru utilise un petit nombre de cookies et de préférences stockées localement, décrits ci-dessous.",
+    "cookiesEssentialTitle": "Essentiels",
+    "cookiesEssentialText": "Un cookie de session de connexion vous maintient connecté·e, et un cookie de préférence de langue mémorise si vous utilisez l'interface en anglais, coréen, français ou japonais. Ces cookies sont nécessaires au fonctionnement du site et ne font pas partie du choix accepter/refuser ci-dessous.",
+    "cookiesOptionalTitle": "Optionnels",
+    "cookiesOptionalText": "Votre choix dans la bannière cookies et votre préférence de thème clair/sombre sont stockés localement dans votre navigateur, pas sous forme de cookies traceurs. Haru ne dépose actuellement aucun cookie d'analyse ou publicitaire tiers, quel que soit le choix effectué dans la bannière.",
+    "responsibilityTitle": "Informations beauté",
+    "responsibilityText": "Les fiches produit, les conseils de routine, les résultats de scan visage et tout autre contenu beauté de Haru sont fournis à titre informatif et basés sur des connaissances cosmétiques générales. Ils ne constituent pas un avis médical et ne remplacent pas une consultation avec un dermatologue ou un autre professionnel de santé, en particulier en cas d'affection cutanée persistante, douloureuse ou qui s'aggrave.",
     "contactTitle": "Contact",
-    "contactText": "For any question about these terms, your data, or your account, contact Haru using the address in the legal notice above."
+    "contactText": "Pour toute question concernant ces conditions, vos données, ou votre compte, contactez Haru à l'adresse indiquée dans les mentions légales ci-dessus."
   },
   "auditShowcase": {
     "eyebrow": "Audit peau",

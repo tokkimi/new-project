@@ -15,7 +15,38 @@ import {
   type BilanQuestion,
 } from "@/lib/bilan-questions";
 
-const UI = {
+type Lang = "en" | "ko" | "fr" | "ja";
+
+const INTL_LOCALE: Record<Lang, string> = { en: "en-US", ko: "ko-KR", fr: "fr-FR", ja: "ja-JP" };
+
+const UI: Record<Lang, {
+  introTitle: string;
+  introText: string;
+  start: string;
+  stepScanTitle: string;
+  stepScanText: string;
+  noScan: string;
+  takeScan: string;
+  scanScore: string;
+  stepRoutineTitle: string;
+  stepRoutineText: string;
+  stepPersonalTitle: string;
+  stepLifestyleTitle: string;
+  back: string;
+  next: string;
+  finish: string;
+  saving: string;
+  resultTitle: string;
+  resultSubtitle: string;
+  overallScore: string;
+  sectionScan: string;
+  sectionRoutine: string;
+  sectionLifestyle: string;
+  routineIssues: string;
+  flagsNone: string;
+  viewProfile: string;
+  restart: string;
+}> = {
   en: {
     introTitle: "Your complete beauty check-in",
     introText:
@@ -25,7 +56,6 @@ const UI = {
     stepScanText: "Your most recent scan is used for this check-in.",
     noScan: "No recent face scan found.",
     takeScan: "Take a face scan",
-    skipScan: "Continue without a scan",
     scanScore: "Skin score",
     stepRoutineTitle: "Routine audit",
     stepRoutineText: "Based on your current shelf and skin profile.",
@@ -41,7 +71,7 @@ const UI = {
     sectionScan: "Face scan",
     sectionRoutine: "Routine",
     sectionLifestyle: "Lifestyle & wellbeing",
-    sectionPlan: "Action plan",
+    routineIssues: "issues",
     flagsNone: "Nothing flagged here — good habits.",
     viewProfile: "View in my profile",
     restart: "Start a new check-in",
@@ -55,7 +85,6 @@ const UI = {
     stepScanText: "가장 최근 스캔이 이번 체크인에 사용됩니다.",
     noScan: "최근 얼굴 스캔이 없어요.",
     takeScan: "얼굴 스캔하기",
-    skipScan: "스캔 없이 계속하기",
     scanScore: "피부 점수",
     stepRoutineTitle: "루틴 점검",
     stepRoutineText: "현재 화장대와 피부 프로필을 기준으로 합니다.",
@@ -71,12 +100,78 @@ const UI = {
     sectionScan: "얼굴 스캔",
     sectionRoutine: "루틴",
     sectionLifestyle: "생활 습관과 웰빙",
-    sectionPlan: "실천 계획",
+    routineIssues: "개 항목",
     flagsNone: "특별히 지적할 사항이 없어요 — 좋은 습관이에요.",
     viewProfile: "내 프로필에서 보기",
     restart: "새 체크인 시작",
   },
+  fr: {
+    introTitle: "Votre bilan beauté complet",
+    introText:
+      "Une vue d'ensemble en quelques étapes : votre dernier scan visage, un audit de routine, et quelques questions rapides sur votre forme du jour et au quotidien. Rien ici ne remplace un avis médical — c'est un instantané pratique et honnête.",
+    start: "Démarrer le bilan complet",
+    stepScanTitle: "Scan visage",
+    stepScanText: "Votre scan le plus récent est utilisé pour ce bilan.",
+    noScan: "Aucun scan visage récent trouvé.",
+    takeScan: "Faire un scan visage",
+    scanScore: "Score de peau",
+    stepRoutineTitle: "Audit de routine",
+    stepRoutineText: "Basé sur votre étagère actuelle et votre profil de peau.",
+    stepPersonalTitle: "Vous, aujourd'hui",
+    stepLifestyleTitle: "Habitudes quotidiennes",
+    back: "Retour",
+    next: "Suivant",
+    finish: "Voir mes résultats",
+    saving: "Enregistrement...",
+    resultTitle: "Votre bilan",
+    resultSubtitle: "Glissez pour voir chaque section.",
+    overallScore: "Score global",
+    sectionScan: "Scan visage",
+    sectionRoutine: "Routine",
+    sectionLifestyle: "Mode de vie et bien-être",
+    routineIssues: "points",
+    flagsNone: "Rien à signaler ici — bonnes habitudes.",
+    viewProfile: "Voir dans mon profil",
+    restart: "Commencer un nouveau bilan",
+  },
+  ja: {
+    introTitle: "あなたの総合ビューティーチェックイン",
+    introText:
+      "いくつかのステップで全体像を把握：最新の顔スキャン、ルーティン診断、そして今日と普段の状態についての簡単な質問。ここでの内容は医学的アドバイスに代わるものではなく、実用的で正直なスナップショットです。",
+    start: "総合チェックインを始める",
+    stepScanTitle: "顔スキャン",
+    stepScanText: "最新のスキャン結果がこのチェックインに使用されます。",
+    noScan: "最近の顔スキャンが見つかりません。",
+    takeScan: "顔スキャンを行う",
+    scanScore: "肌スコア",
+    stepRoutineTitle: "ルーティン診断",
+    stepRoutineText: "現在のシェルフと肌プロフィールに基づいています。",
+    stepPersonalTitle: "今日のあなたについて",
+    stepLifestyleTitle: "日々の習慣",
+    back: "戻る",
+    next: "次へ",
+    finish: "結果を見る",
+    saving: "保存中...",
+    resultTitle: "あなたのバイラン",
+    resultSubtitle: "スワイプして各セクションを確認しましょう。",
+    overallScore: "総合スコア",
+    sectionScan: "顔スキャン",
+    sectionRoutine: "ルーティン",
+    sectionLifestyle: "生活習慣とウェルビーイング",
+    routineIssues: "件の項目",
+    flagsNone: "特に指摘する点はありません — 良い習慣です。",
+    viewProfile: "プロフィールで見る",
+    restart: "新しいチェックインを始める",
+  },
 };
+
+function questionLabel(q: BilanQuestion, lang: Lang) {
+  return { en: q.labelEn, ko: q.labelKo, fr: q.labelFr, ja: q.labelJa }[lang];
+}
+
+function optionLabel(opt: BilanQuestion["options"][number], lang: Lang) {
+  return { en: opt.labelEn, ko: opt.labelKo, fr: opt.labelFr, ja: opt.labelJa }[lang];
+}
 
 type ScanSummary = { id: string; overallScore: number; skinType: string | null; createdAt: string } | null;
 
@@ -98,13 +193,13 @@ function QuestionGroup({
   questions: BilanQuestion[];
   answers: Record<string, string>;
   onAnswer: (id: string, value: string) => void;
-  lang: "en" | "ko";
+  lang: Lang;
 }) {
   return (
     <div className="flex flex-col gap-6">
       {questions.map((q) => (
         <div key={q.id}>
-          <p className="mb-2 text-sm font-medium">{lang === "ko" ? q.labelKo : q.labelEn}</p>
+          <p className="mb-2 text-sm font-medium">{questionLabel(q, lang)}</p>
           <div className="flex flex-wrap gap-2">
             {q.options.map((opt) => {
               const selected = answers[q.id] === opt.value;
@@ -119,7 +214,7 @@ function QuestionGroup({
                       : "border-border bg-card text-foreground hover:border-primary/40"
                   }`}
                 >
-                  {lang === "ko" ? opt.labelKo : opt.labelEn}
+                  {optionLabel(opt, lang)}
                 </button>
               );
             })}
@@ -140,7 +235,7 @@ export function BilanWizard({
   initialAnswers: Record<string, string>;
 }) {
   const locale = useLocale();
-  const lang: "en" | "ko" = locale === "ko" ? "ko" : "en";
+  const lang: Lang = locale === "ko" || locale === "fr" || locale === "ja" ? locale : "en";
   const t = UI[lang];
   const router = useRouter();
 
@@ -179,7 +274,6 @@ export function BilanWizard({
         result={result}
         latestScan={latestScan}
         auditResult={auditResult}
-        lang={lang}
         t={t}
         onRestart={() => {
           setResult(null);
@@ -219,7 +313,7 @@ export function BilanWizard({
           {latestScan ? (
             <div className="flex items-center justify-between rounded-2xl bg-secondary/50 px-4 py-3">
               <span className="text-sm">
-                {new Intl.DateTimeFormat(lang === "ko" ? "ko-KR" : "en-US", { dateStyle: "medium" }).format(
+                {new Intl.DateTimeFormat(INTL_LOCALE[lang], { dateStyle: "medium" }).format(
                   new Date(latestScan.createdAt)
                 )}
               </span>
@@ -301,14 +395,12 @@ function BilanResultView({
   result,
   latestScan,
   auditResult,
-  lang,
   t,
   onRestart,
 }: {
   result: BilanResult;
   latestScan: ScanSummary;
   auditResult: AuditResult;
-  lang: "en" | "ko";
   t: (typeof UI)["en"];
   onRestart: () => void;
 }) {
@@ -342,7 +434,7 @@ function BilanResultView({
         <div className="flex flex-col items-center justify-center gap-2 py-8 text-center">
           <span className={`font-serif text-5xl ${scoreTone(auditResult.score)}`}>{auditResult.score}</span>
           <span className="text-sm text-muted-foreground">
-            {auditResult.issues.length} {lang === "ko" ? "개 항목" : "issues"}
+            {auditResult.issues.length} {t.routineIssues}
           </span>
         </div>
       ),

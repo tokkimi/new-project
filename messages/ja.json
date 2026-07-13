@@ -3,10 +3,6 @@
     "title": "Haru - あなたのビューティールーティン、きちんと整理",
     "description": "スキンケア製品を保存し、朝と夜のルーティンを組み立て、ビューティーメモやインスピレーションを一か所にまとめましょう。"
   },
-  "localeSwitcher": {
-    "en": "English",
-    "ko": "한국어"
-  },
   "nav": {
     "howItWorks": "使い方",
     "features": "良い習慣",
@@ -127,322 +123,322 @@
     "confirm": "ルーティンに追加"
   },
   "faceScanPage": {
-    "title": "Face scan",
-    "subtitle": "Take a well-lit, makeup-free photo and Haru will analyze visible skin concerns.",
-    "disclaimer": "Not a medical device. This gives a general visual read, not a clinical diagnosis — for real dermatological concerns, see a professional.",
-    "captureTitle": "Take or upload a photo",
-    "captureHint": "Face the camera directly in natural light, no makeup or filters",
+    "title": "顔スキャン",
+    "subtitle": "明るい場所でメイクなしの写真を撮影すると、Haruが目に見える肌の気になる点を分析します。",
+    "disclaimer": "医療機器ではありません。臨床診断ではなく一般的な視覚的評価です — 実際の皮膚科的な問題については専門医にご相談ください。",
+    "captureTitle": "写真を撮影またはアップロード",
+    "captureHint": "自然光の下でカメラに正面から向き合ってください。メイクやフィルターは使用しないでください",
     "steps": [
-      "Detecting face position...",
-      "Checking lighting and framing...",
-      "Preparing analysis..."
+      "顔の位置を検出中...",
+      "照明とフレーミングを確認中...",
+      "分析を準備中..."
     ],
-    "retake": "Retake photo",
-    "goToQuiz": "Take the skin quiz instead",
-    "privacyNote": "Your photo is analyzed and discarded — it isn't stored.",
-    "signInPrompt": "Sign in to run a face scan.",
-    "signInCta": "Sign in",
+    "retake": "撮り直す",
+    "goToQuiz": "代わりに肌診断クイズを受ける",
+    "privacyNote": "写真は分析後に破棄されます — 保存されません。",
+    "signInPrompt": "ログインして顔スキャンを実行してください。",
+    "signInCta": "ログイン",
     "paywallFeatures": [
-      "13-point AI skin analysis from a single photo",
-      "An overall skin score plus a detailed breakdown per module",
-      "Real causes and actionable tips for every flagged area",
-      "A routine and product picks built from your actual result"
+      "1枚の写真から13項目のAI肌分析",
+      "総合肌スコアとモジュールごとの詳細な内訳",
+      "検出された各部位の実際の原因と実践的なヒント",
+      "実際の結果に基づいたルーティンと製品の提案"
     ],
     "scanPrice": "€9",
-    "scanPriceHint": "One scan, pay once — no subscription needed",
-    "buyCta": "Buy my scan",
-    "comingSoon": "Payments aren't configured yet — check back soon.",
-    "unlimitedWithPremium": "Unlimited scans with Haru Premium",
-    "premiumGlitchHint": "Something looks off with your account — try refreshing the page.",
-    "noFaceTitle": "No face detected",
-    "noFaceText": "We couldn't find a clear face in that photo. Make sure your face fills the frame, in good lighting, facing the camera — no credit is charged for this attempt.",
-    "noCreditsTitle": "No scan available",
-    "noCreditsText": "You don't have a scan credit left. Buy another scan or subscribe to Haru Premium for unlimited scans.",
-    "noCreditsCta": "Back to face scan",
-    "resultTitle": "Your skin snapshot",
-    "resultSubtitle": "An AI visual read across 13 modules, cross-referenced with our product catalog — not a clinical diagnosis.",
-    "resultDisclaimer": "Haru's AI estimates this from what's actually visible in your photo, in ordinary light — not UV, polarized light, or a 3D scan. It isn't a dermatological device or diagnosis — see a professional for real skin concerns.",
-    "overallScoreLabel": "Overall skin score",
+    "scanPriceHint": "1回のスキャン、一度払いきり — 定期購読不要",
+    "buyCta": "スキャンを購入",
+    "comingSoon": "決済機能はまだ設定されていません。しばらくしてから再度お試しください。",
+    "unlimitedWithPremium": "Haruプレミアムでスキャン無制限",
+    "premiumGlitchHint": "アカウントに問題があるようです — ページを更新してみてください。",
+    "noFaceTitle": "顔が検出されませんでした",
+    "noFaceText": "その写真から明確な顔を検出できませんでした。顔がフレームいっぱいに写るように、明るい場所でカメラに向き合ってください — この試行分のクレジットは消費されません。",
+    "noCreditsTitle": "利用可能なスキャンがありません",
+    "noCreditsText": "スキャンクレジットが残っていません。追加でスキャンを購入するか、Haruプレミアムに登録すると無制限にスキャンできます。",
+    "noCreditsCta": "顔スキャンに戻る",
+    "resultTitle": "あなたの肌スナップショット",
+    "resultSubtitle": "13のモジュールにわたるAIによる視覚分析を、当社の製品カタログと照合しています — 臨床診断ではありません。",
+    "resultDisclaimer": "HaruのAIは、通常の光の下で撮影された写真から実際に目に見える情報をもとに推定を行います — UVや偏光、3Dスキャンは使用しません。これは皮膚科的な機器や診断ではありません — 実際の肌の問題については専門医にご相談ください。",
+    "overallScoreLabel": "総合肌スコア",
     "skinTypes": {
-      "oily": "Oily skin",
-      "dry": "Dry skin",
-      "combination": "Combination skin",
-      "normal": "Normal skin",
-      "sensitive": "Sensitive skin"
+      "oily": "オイリー肌",
+      "dry": "乾燥肌",
+      "combination": "混合肌",
+      "normal": "普通肌",
+      "sensitive": "敏感肌"
     },
-    "summaryGood": "Your skin looks balanced overall — keep your current routine going.",
-    "summaryOk": "A few areas could use some extra care.",
-    "summaryAttention": "Several areas stood out this time — here's where to focus.",
-    "modulesSectionTitle": "Detailed breakdown",
-    "causesLabel": "Why this happens",
-    "tipsLabel": "What helps",
-    "noConcern": "Nothing notable here — keep doing what you're doing.",
+    "summaryGood": "全体的にバランスの取れた肌です — 現在のルーティンを続けましょう。",
+    "summaryOk": "いくつかの部位はもう少しケアが必要かもしれません。",
+    "summaryAttention": "今回はいくつかの部位が目立ちました — こちらに注目してケアしましょう。",
+    "modulesSectionTitle": "詳細な内訳",
+    "causesLabel": "この現象が起こる理由",
+    "tipsLabel": "役立つこと",
+    "noConcern": "特に指摘する点はありません — 今のケアを続けましょう。",
     "severity": {
-      "low": "Clear",
-      "medium": "To watch",
-      "attention": "Priority"
+      "low": "良好",
+      "medium": "要観察",
+      "attention": "優先ケア"
     },
+    "unavailableTitle": "AI分析はまだ設定されていません",
+    "unavailableText": "この環境では写真分析エンジンがまだ接続されていません。それまでの間、肌診断クイズの回答がすでにルーティン診断に反映されています。",
+    "errorTitle": "分析が完了しませんでした",
+    "errorText": "写真の読み取り中に問題が発生しました。より明るい場所で、カメラに正面から向き合って再度お試しください。",
+    "routineSectionTitle": "検出結果に対応するルーティン",
+    "routineSectionText": "上記で検出されたモジュールに対応するよう、製品カタログから構成されています。",
+    "addToShelf": "このルーティンをシェルフに追加",
+    "addedToShelf": "シェルフに追加しました",
+    "resultEyebrow": "顔スキャン結果",
+    "modulesCount": "検討すべき部位：{count}箇所",
+    "modulesSectionText": "各セクションには、目に見える結果、役立つ日常のケア、そしてその部位をサポートする製品が示されます。",
+    "moduleDefaultNote": "この部位には積極的なルーティンよりも、着実なサポートが必要です。",
+    "moduleScoreLabel": "肌の透明感",
+    "dailyActionsLabel": "日常のケア",
+    "productsForThisArea": "この部位に検討したい製品",
+    "productsForThisAreaText": "カテゴリー、悩み、肌タイプ、主要な有効成分をもとにカタログから選ばれています。",
+    "noProductsForModule": "この部位に強くマッチする製品はまだカタログにありません。",
+    "addProduct": "ルーティンに追加",
+    "addedProduct": "追加しました",
+    "moduleDisclaimer": "これらの提案はルーティンの参考としてお使いください。肌に痛み、腫れ、または継続する刺激がある場合は皮膚科医に相談してください。",
+    "progressCta": "経過を見る",
+    "moduleClearTitle": "良好 — 特別な対応は不要",
+    "moduleClearText": "写真上ではこの部位は健康的に見えます。現時点でこの部位専用の製品は必要ありません。",
     "modules": {
       "pores": {
-        "name": "Pores",
+        "name": "毛穴",
         "causes": [
-          "Excess sebum production",
-          "Natural collagen loss with age",
-          "Buildup from infrequent exfoliation"
+          "過剰な皮脂分泌",
+          "加齢による自然なコラーゲンの減少",
+          "角質ケア不足による角質の蓄積"
         ],
         "tips": [
-          "Niacinamide helps regulate oil and refine the look of pores over time",
-          "A gentle BHA toner 2–3x/week keeps pores from clogging",
-          "Daily SPF slows the collagen loss that stretches pores"
+          "ナイアシンアミドは皮脂を調整し、時間とともに毛穴の見た目を整えるのに役立ちます",
+          "週2〜3回の優しいBHAトナーで毛穴づまりを防ぎます",
+          "毎日のSPFが毛穴を広げるコラーゲンの減少を遅らせます"
         ]
       },
       "blackheads": {
-        "name": "Blackheads",
+        "name": "黒ずみ毛穴",
         "causes": [
-          "Oxidized sebum trapped in pores",
-          "Buildup of dead skin cells",
-          "Infrequent or incomplete cleansing"
+          "毛穴に閉じ込められた酸化した皮脂",
+          "古い角質の蓄積",
+          "洗顔頻度の不足または不十分な洗顔"
         ],
         "tips": [
-          "Double cleanse in the evening to fully remove sunscreen and oil",
-          "A BHA (salicylic acid) toner helps dissolve buildup inside pores",
-          "Avoid harsh scrubbing — it can irritate skin without actually clearing pores"
+          "夜はダブル洗顔で日焼け止めと皮脂をしっかり落としましょう",
+          "BHA（サリチル酸）トナーは毛穴内部の蓄積を溶かすのに役立ちます",
+          "強いこすり洗いは避けましょう — 実際に毛穴をきれいにすることなく肌を刺激することがあります"
         ]
       },
       "texture": {
-        "name": "Texture",
+        "name": "肌のキメ",
         "causes": [
-          "Buildup of dead skin cells",
-          "Dehydration",
-          "Irregular exfoliation habits"
+          "古い角質の蓄積",
+          "水分不足",
+          "不規則な角質ケア習慣"
         ],
         "tips": [
-          "A gentle AHA 1–2x/week smooths texture without over-stripping",
-          "Layering hydration (hyaluronic acid) plumps and softens rough patches",
-          "Consistency matters more than intensity — little and often beats occasional harsh treatments"
+          "週1〜2回の優しいAHAで肌への負担なくキメを整えます",
+          "保湿を重ねる（ヒアルロン酸）ことでふっくらとなめらかな質感になります",
+          "強さよりも継続が重要です — たまに強いケアをするより、少量を継続する方が効果的です"
         ]
       },
       "oiliness": {
-        "name": "Oiliness",
+        "name": "オイリー肌",
         "causes": [
-          "Naturally higher sebum production",
-          "Over-cleansing or over-stripping the skin",
-          "Heat and humidity"
+          "生まれつき皮脂分泌が多い",
+          "洗いすぎによる肌のバリア機能の低下",
+          "暑さや湿度"
         ],
         "tips": [
-          "Niacinamide helps regulate sebum without over-drying",
-          "Don't skip moisturizer — stripped skin often overproduces oil to compensate",
-          "A lightweight gel moisturizer keeps oil balanced without heaviness"
+          "ナイアシンアミドは過度に乾燥させずに皮脂を調整します",
+          "保湿を省略しないこと — 乾燥した肌は補おうとしてかえって皮脂を過剰分泌することがあります",
+          "軽いジェル状保湿剤で重さを感じさせずに皮脂バランスを保ちます"
         ]
       },
       "dryness": {
-        "name": "Dryness",
+        "name": "乾燥",
         "causes": [
-          "Weakened moisture barrier",
-          "Cold or dry climates",
-          "Over-exfoliation or harsh cleansers"
+          "弱まったバリア機能",
+          "寒冷または乾燥した気候",
+          "過度な角質ケアや強い洗浄成分"
         ],
         "tips": [
-          "Ceramides help rebuild the skin's natural moisture barrier",
-          "Layer hyaluronic acid on damp skin, then seal it in with a moisturizer",
-          "Cut back on strong actives (retinol, AHA/BHA) until the barrier recovers"
+          "セラミドは肌本来の保湿バリアの再構築に役立ちます",
+          "湿った肌にヒアルロン酸を重ね、保湿剤で閉じ込めましょう",
+          "バリア機能が回復するまで強い有効成分（レチノール、AHA/BHA）を控えましょう"
         ]
       },
       "redness": {
-        "name": "Redness",
+        "name": "赤み",
         "causes": [
-          "Reactive or sensitized skin",
-          "Weather, heat, or friction",
-          "Too many actives layered at once"
+          "反応しやすい、敏感になった肌",
+          "気候、暑さ、摩擦",
+          "一度に重ねすぎた有効成分"
         ],
         "tips": [
-          "Centella asiatica (cica) is one of the most consistently soothing ingredients for visible redness",
-          "Simplify your routine temporarily while skin recalms",
-          "Patch-test new actives on your inner arm before applying to the face"
+          "ツボクサ（シカ）は目に見える赤みへの鎮静効果が特に安定している成分の一つです",
+          "肌が落ち着くまで一時的にルーティンをシンプルにしましょう",
+          "顔に使う前に、新しい有効成分は腕の内側でパッチテストしましょう"
         ]
       },
       "sensitivity": {
-        "name": "Sensitivity",
+        "name": "敏感さ",
         "causes": [
-          "A compromised skin barrier",
-          "Overuse of exfoliating actives",
-          "Fragrance or alcohol in products"
+          "損なわれたバリア機能",
+          "角質ケア成分の使いすぎ",
+          "製品に含まれる香料やアルコール"
         ],
         "tips": [
-          "Prioritize a ceramide-rich moisturizer to rebuild the barrier before reintroducing actives",
-          "Avoid layering multiple actives (retinol + AHA/BHA) until skin calms down",
-          "Look for fragrance-free formulas while your barrier recovers"
+          "有効成分を再導入する前に、セラミド豊富な保湿剤でバリア機能の再構築を優先しましょう",
+          "肌が落ち着くまで複数の有効成分（レチノール＋AHA/BHA）の重ね付けは避けましょう",
+          "バリア機能が回復する間は無香料の処方を選びましょう"
         ]
       },
       "spots": {
-        "name": "Dark spots",
+        "name": "シミ",
         "causes": [
-          "UV exposure over time",
-          "Post-inflammatory marks from old breakouts",
-          "Hormonal changes"
+          "長期的な紫外線への曝露",
+          "過去のニキビによる炎症後色素沈着",
+          "ホルモンの変化"
         ],
         "tips": [
-          "Vitamin C in the morning helps fade spots and protects against new ones forming",
-          "Daily SPF is the single most effective way to stop spots from getting darker",
-          "Niacinamide can help even out tone alongside a brightening active"
+          "朝のビタミンCはシミを薄くし、新たなシミの発生を防ぐのに役立ちます",
+          "毎日のSPFはシミが濃くなるのを防ぐ最も効果的な方法です",
+          "ナイアシンアミドは美白系有効成分と組み合わせて肌トーンを均一にするのに役立ちます"
         ]
       },
       "acne": {
-        "name": "Active blemishes",
+        "name": "活動性のニキビ",
         "causes": [
-          "Excess oil combined with clogged pores",
-          "Bacterial overgrowth",
-          "Hormonal fluctuations"
+          "過剰な皮脂と毛穴づまりの組み合わせ",
+          "細菌の過剰増殖",
+          "ホルモンの変動"
         ],
         "tips": [
-          "A BHA (salicylic acid) toner helps clear congestion inside the pore",
-          "Benzoyl peroxide spot-treats active, inflamed blemishes",
-          "Avoid picking — it prolongs healing and increases the odds of scarring"
+          "BHA（サリチル酸）トナーは毛穴内部の詰まりを解消するのに役立ちます",
+          "過酸化ベンゾイルは炎症を起こした活動性のニキビに部分的に使用します",
+          "触ったり潰したりしないこと — 治癒を遅らせ、跡が残るリスクを高めます"
         ]
       },
       "acneScars": {
-        "name": "Post-acne marks",
+        "name": "ニキビ跡",
         "causes": [
-          "Inflammation from past breakouts",
-          "Picking or squeezing blemishes",
-          "Slow cell turnover leaving marks visible longer"
+          "過去のニキビによる炎症",
+          "ニキビを触ったり潰したりすること",
+          "ターンオーバーの遅れにより跡が長く残ること"
         ],
         "tips": [
-          "Niacinamide and vitamin C both help fade lingering discoloration",
-          "Gentle, regular exfoliation (AHA) speeds up how fast marks fade",
-          "Consistent SPF prevents marks from darkening further in the sun"
+          "ナイアシンアミドとビタミンCはどちらも残った色素沈着を薄くするのに役立ちます",
+          "優しく定期的な角質ケア（AHA）は跡が薄くなるスピードを早めます",
+          "継続的なSPFは跡が日光でさらに濃くなるのを防ぎます"
         ]
       },
       "wrinkles": {
-        "name": "Fine lines & wrinkles",
+        "name": "小じわ・しわ",
         "causes": [
-          "Natural collagen loss with age",
-          "Repeated facial expressions",
-          "Cumulative sun exposure"
+          "加齢による自然なコラーゲンの減少",
+          "繰り返される表情の動き",
+          "積み重なった紫外線への曝露"
         ],
         "tips": [
-          "Retinol is the best-studied ingredient for softening the look of fine lines over time",
-          "Peptides support skin firmness alongside retinol",
-          "Daily SPF is what actually slows new lines from forming"
+          "レチノールは小じわの見た目を時間をかけて改善する、最も研究が進んだ成分です",
+          "ペプチドはレチノールと合わせて肌のハリをサポートします",
+          "毎日のSPFが新しいしわの発生を実際に遅らせます"
         ]
       },
       "darkCircles": {
-        "name": "Under-eye circles",
+        "name": "目の下のクマ",
         "causes": [
-          "Thin under-eye skin showing blood vessels",
-          "Lack of sleep or dehydration",
-          "Natural pigmentation in the area"
+          "血管が透けて見える薄い目元の皮膚",
+          "睡眠不足や水分不足",
+          "その部位特有の自然な色素沈着"
         ],
         "tips": [
-          "A peptide eye cream can help with puffiness and the look of fine lines",
-          "Gently pat products in with your ring finger — never rub the eye area",
-          "Sleep and hydration have an outsized visible effect on this area specifically"
+          "ペプチド配合のアイクリームはむくみや小じわの見た目に役立ちます",
+          "薬指で優しくポンポンとなじませ、目元を決してこすらないこと",
+          "睡眠と水分補給はこの部位に特に大きな効果をもたらします"
         ]
       },
       "radiance": {
-        "name": "Radiance",
+        "name": "肌の輝き",
         "causes": [
-          "Buildup of dull, dead skin cells",
-          "Dehydration",
-          "Inconsistent routine"
+          "くすんだ古い角質の蓄積",
+          "水分不足",
+          "不規則なルーティン"
         ],
         "tips": [
-          "Vitamin C brightens and adds visible glow with consistent use",
-          "Gentle exfoliation reveals fresher skin underneath",
-          "Radiance responds fast to hydration — don't skip your moisturizer step"
+          "ビタミンCは継続使用で肌を明るくし、目に見えるツヤを与えます",
+          "優しい角質ケアで下からより新鮮な肌が現れます",
+          "肌の輝きは保湿にすぐ反応します — 保湿ステップを省略しないこと"
         ]
       }
     },
-    "unavailableTitle": "AI analysis isn't set up yet",
-    "unavailableText": "The photo analysis engine hasn't been connected on this deployment. Your skin quiz answers already power your routine audit in the meantime.",
-    "errorTitle": "Analysis didn't go through",
-    "errorText": "Something went wrong reading that photo. Try again with better lighting, facing the camera directly.",
-    "routineSectionTitle": "A routine that targets what we found",
-    "routineSectionText": "Built from our product catalog to address the modules flagged above.",
-    "addToShelf": "Add this routine to my shelf",
-    "addedToShelf": "Added to your shelf",
-    "resultEyebrow": "Face Scan result",
-    "modulesCount": "{count} areas to review",
-    "modulesSectionText": "Each section gives the visible result, useful daily gestures, and products that can support this specific area.",
-    "moduleDefaultNote": "This area needs steady support rather than an aggressive routine.",
-    "moduleScoreLabel": "Skin clarity",
-    "dailyActionsLabel": "Daily gestures",
-    "productsForThisArea": "Products to consider for this area",
-    "productsForThisAreaText": "Chosen from the catalog based on category, concern, skin type and key actives.",
-    "noProductsForModule": "No strong catalog match yet for this area.",
-    "addProduct": "Add to my routine",
-    "addedProduct": "Added",
-    "moduleDisclaimer": "Use these suggestions as routine guidance. If the skin is painful, swollen or persistently irritated, ask a dermatologist.",
-    "progressCta": "See progress",
     "dailyActions": {
       "pores": [
-        "Cleanse gently at night so sunscreen and sebum do not sit in the pores.",
-        "Use SPF every morning; stretched-looking pores are worsened by sun damage.",
-        "Keep exfoliating acids to a planned rhythm instead of using them every day."
+        "日焼け止めや皮脂が毛穴に残らないよう、夜はやさしくクレンジングしましょう。",
+        "毎朝SPFを使用しましょう。紫外線ダメージは広がって見える毛穴を悪化させます。",
+        "角質ケア成分は毎日ではなく、計画的なリズムで使用しましょう。"
       ],
       "blackheads": [
-        "Remove makeup and SPF fully before bed, then cleanse without scrubbing.",
-        "Use a BHA product gradually and pause if the skin feels tight or hot.",
-        "Avoid heavy layers on the nose and chin when the area is already congested."
+        "寝る前にメイクと日焼け止めをしっかり落とし、こすらずにクレンジングしましょう。",
+        "BHA製品は徐々に取り入れ、肌がつっぱったりヒリヒリしたら一旦休みましょう。",
+        "鼻や顎がすでに詰まっている場合、重いテクスチャーの製品を重ねるのは避けましょう。"
       ],
       "texture": [
-        "Keep a simple cleanse, moisturize and SPF base before adding strong actives.",
-        "Do not scrub texture; use chemical exfoliation slowly and consistently.",
-        "Sleep and stress matter here because irritation can make texture look rougher."
+        "強い有効成分を追加する前に、洗顔・保湿・SPFというシンプルな基本を維持しましょう。",
+        "キメをゴシゴシこすらず、化学的な角質ケアをゆっくりと継続的に行いましょう。",
+        "刺激はキメを粗く見せることがあるため、睡眠とストレス管理も重要です。"
       ],
       "oiliness": [
-        "Cleanse morning and evening, but avoid stripping foams that make skin rebound oily.",
-        "Use light layers and wait between products so the routine does not feel greasy.",
-        "Drink water through the day; dehydration can make skin feel oily and tight at once."
+        "朝晩洗顔しますが、かえって皮脂の反動を招く強い洗顔料は避けましょう。",
+        "軽いテクスチャーを使い、製品の間に時間を置いてルーティンがべたつかないようにしましょう。",
+        "日中は十分に水を飲みましょう。水分不足は肌を同時に脂っぽく、つっぱらせることがあります。"
       ],
       "dryness": [
-        "Apply moisturizer while the skin is slightly damp after cleansing.",
-        "Avoid hot water and long cleansing sessions that remove too much barrier lipid.",
-        "Layer hydration first, then seal it with a cream when the skin feels tight."
+        "洗顔後、肌がまだ少し湿っているうちに保湿剤を塗りましょう。",
+        "熱いお湯や長時間の洗顔はバリア機能の脂質を過剰に取り除くため避けましょう。",
+        "まず水分系を重ね、肌がつっぱるときはクリームで仕上げて閉じ込めましょう。"
       ],
       "redness": [
-        "Keep the routine short while the skin is reactive: cleanser, soothing serum, moisturizer, SPF.",
-        "Avoid stacking acids, retinoids and vitamin C on the same irritated evening.",
-        "Use lukewarm water and press products in gently instead of rubbing."
+        "肌が敏感なときは、クレンザー、鎮静美容液、保湿剤、SPFとルーティンを短くしましょう。",
+        "刺激を受けた夜には、酸系成分、レチノイド、ビタミンCを同時に重ねないようにしましょう。",
+        "ぬるま湯を使い、こすらずに優しく押さえるようになじませましょう。"
       ],
       "sensitivity": [
-        "Patch test new products for several days before using them all over the face.",
-        "Introduce one new active at a time so reactions are easier to understand.",
-        "Prioritize barrier repair on recovery nights instead of chasing faster results."
+        "新しい製品は顔全体に使う前に数日間パッチテストしましょう。",
+        "新しい有効成分は一度に1つずつ取り入れ、反応を把握しやすくしましょう。",
+        "早い効果を追い求めるより、回復が必要な夜はバリア機能の修復を優先しましょう。"
       ],
       "spots": [
-        "Use broad-spectrum SPF every morning and reapply when outdoors.",
-        "Pair brightening actives with patience; visible tone support takes consistent weeks.",
-        "Avoid picking marks because inflammation can deepen discoloration."
+        "毎朝広範囲UVカットのSPFを使用し、屋外では塗り直しましょう。",
+        "美白系有効成分は根気強く使いましょう。目に見えるトーン改善には数週間の継続が必要です。",
+        "跡を触ったり引っかいたりしないこと。炎症は色素沈着をより濃くすることがあります。"
       ],
       "acne": [
-        "Cleanse after sweat and remove sunscreen before sleep.",
-        "Keep acne actives targeted; more layers can irritate and worsen breakouts.",
-        "Change pillowcases often and avoid touching active breakouts during the day."
+        "汗をかいた後は洗顔し、寝る前には日焼け止めを必ず落としましょう。",
+        "ニキビケア成分は必要な部分にのみ使用しましょう。重ねすぎると刺激になり悪化することがあります。",
+        "枕カバーはこまめに交換し、日中は活動性のあるニキビを触らないようにしましょう。"
       ],
       "acneScars": [
-        "Protect marks from sun every morning; UV keeps post-blemish color visible longer.",
-        "Use gentle resurfacing on a schedule, not on already irritated skin.",
-        "Do not pick healing blemishes; calm recovery reduces leftover marks."
+        "毎朝跡の部分を紫外線から守りましょう。紫外線はニキビ跡の色をより長く残します。",
+        "すでに刺激を受けた肌ではなく、決まったペースで優しい角質ケアを行いましょう。",
+        "回復中のニキビを触らないこと。落ち着いた回復が跡を減らします。"
       ],
       "wrinkles": [
-        "Use SPF daily; UV exposure is the biggest routine-level factor you can control.",
-        "Keep retinoids mostly at night and alternate with recovery nights.",
-        "Moisturize consistently so dehydration lines are less visible."
+        "毎日SPFを使用しましょう。紫外線への曝露は自分でコントロールできる最大の要因です。",
+        "レチノイドは主に夜に使用し、回復のための休息夜と交互に行いましょう。",
+        "継続的な保湿で乾燥による小じわを目立たなくしましょう。"
       ],
       "darkCircles": [
-        "Sleep consistency helps the under-eye area look less tired.",
-        "Use a tiny amount of eye product and avoid rubbing the area.",
-        "If puffiness is present, try a cool compress for a few minutes in the morning."
+        "規則的な睡眠は目元を疲れにくく見せるのに役立ちます。",
+        "アイ製品は少量だけ使用し、目元をこすらないようにしましょう。",
+        "むくみがある場合は、朝に数分間冷たいコンプレスを試してみましょう。"
       ],
       "radiance": [
-        "Cleanse at night so dull buildup does not stay under the next routine.",
-        "Hydrate before moisturizer; glow often drops when the skin is dehydrated.",
-        "Use SPF daily because pigmentation and dullness come back quickly with UV exposure."
+        "夜に洗顔することで、くすみの原因となる汚れが翌日のルーティンの下に残らないようにしましょう。",
+        "保湿クリームの前に水分ケアを行いましょう。肌が乾燥すると輝きが失われやすくなります。",
+        "毎日SPFを使用しましょう。色素沈着とくすみは紫外線への曝露ですぐに戻ってきます。"
       ]
-    },
-    "moduleClearTitle": "Clear — no action needed",
-    "moduleClearText": "This area looks healthy in your photo. No targeted products needed here right now."
+    }
   },
   "scanPage": {
     "title": "製品をスキャン",
@@ -935,55 +931,55 @@
     "accept": "同意する"
   },
   "legal": {
-    "title": "Legal information",
-    "subtitle": "Legal notice, terms of sale, privacy policy and cookie policy for Haru.",
-    "placeholderBadge": "To be completed by the operator",
-    "noticeTitle": "Legal notice",
-    "noticeIntro": "Information published in application of legal transparency requirements for online services.",
-    "noticePublisherLabel": "Publisher",
-    "noticePublisherPlaceholder": "Legal company name, registered address, company registration number and VAT number — to be provided by the Haru operator and added here.",
-    "noticeDirectorLabel": "Publication director",
-    "noticeDirectorPlaceholder": "Name of the person or entity responsible for publication — to be provided by the Haru operator.",
-    "noticeHostingLabel": "Hosting provider",
-    "noticeHostingText": "This website is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, United States.",
-    "noticeContactLabel": "Contact",
-    "noticeContactPlaceholder": "A dedicated contact email address — to be provided by the Haru operator and added here.",
-    "termsTitle": "Terms of sale",
-    "termsIntro": "These terms of sale govern the purchase of Haru's paid features: the Premium subscription and one-time face scan credits. Using a paid feature means you accept these terms.",
-    "termsServiceTitle": "What is included",
-    "termsServiceText": "The free plan includes product scanning, the full product database, and a basic shelf and routine builder. Premium (subscription) adds a full routine audit against your skin profile, unlimited saved products, and unlimited face scans. Without a subscription, face scans can be purchased individually as one-time credits.",
-    "termsPriceTitle": "Prices",
-    "termsPriceText": "Premium subscription: €6.99 per month. One-time face scan: €9 per scan, no subscription required. Prices are shown in euros on the Upgrade page before payment and include any applicable tax shown at checkout. Haru may change prices for future billing periods; active subscribers are notified before a price change applies to their next renewal.",
-    "termsPaymentTitle": "Payment",
-    "termsPaymentText": "Payments are handled by Stripe, an independent payment processor. Haru does not receive or store your card number; Stripe's own terms and privacy policy apply to the payment step.",
-    "termsDurationTitle": "Duration, renewal and cancellation",
-    "termsDurationText": "The Premium subscription renews automatically every month until cancelled. You can cancel at any time from the billing portal linked on the Upgrade page. Cancelling stops future renewals; it does not refund the period already paid for, and Premium access continues until that period ends.",
-    "termsWithdrawalTitle": "Right of withdrawal",
-    "termsWithdrawalText": "Haru's paid features are digital services made available immediately once purchased. Where the law allows a consumer to expressly waive the standard withdrawal period for this kind of immediate digital service, starting the service (activating Premium or using a purchased scan) is treated as that waiver from the moment of purchase.",
-    "termsRefundTitle": "Refunds",
-    "termsRefundText": "Outside of the above, refund requests are reviewed individually — for example if a paid feature was genuinely unusable due to a technical fault on Haru's side. Contact support with your account email and the date of the charge.",
-    "privacyTitle": "Privacy policy",
-    "privacyIntro": "This policy explains what personal data Haru processes, why, and how you can control it.",
-    "privacyDataTitle": "Data we process",
-    "privacyDataText": "Account details (name, email, password — stored as a hash, never in plain text); your skin profile answers; your saved shelf, personal notes and saved links; your face scan results; your newsletter subscription status if you opt in; and basic first-party usage data used to operate the app, without third-party advertising trackers.",
-    "privacyScanTitle": "Face and product scan photos",
-    "privacyScanText": "A photo you submit for a face or product scan is sent to Anthropic's Claude API to generate the analysis and is not stored by Haru — only the resulting result (scores, written notes, summary) is saved to your account so you can consult it later.",
-    "privacySubprocessorsTitle": "Who else processes data on Haru's behalf",
-    "privacySubprocessorsText": "Stripe (payment processing), Resend (transactional and newsletter email delivery), Anthropic (photo analysis for scans), and Vercel (application hosting). Each acts as a data processor under its own applicable terms.",
-    "privacyRightsTitle": "Your rights",
-    "privacyRightsText": "You can review and edit your account details from your profile at any time, and permanently delete your account and associated data from Account settings. For any other request about your data, use the contact details in the legal notice above.",
-    "privacyRetentionTitle": "Retention",
-    "privacyRetentionText": "Account and profile data is kept for as long as your account exists. Deleting your account removes your shelf, notes, saved links, skin profile, scan history and audit history.",
-    "cookiesTitle": "Cookie policy",
-    "cookiesIntro": "Haru uses a small number of cookies and locally stored preferences, described below.",
-    "cookiesEssentialTitle": "Essential",
-    "cookiesEssentialText": "A sign-in session cookie keeps you logged in, and a language preference cookie remembers whether you're using the English or Korean interface. These are required for the site to function and are not part of the accept/reject choice below.",
-    "cookiesOptionalTitle": "Optional",
-    "cookiesOptionalText": "Your cookie banner choice and your light/dark theme preference are stored locally in your browser, not as tracking cookies. Haru does not currently set any third-party analytics or advertising cookies, regardless of the choice you make in the banner.",
-    "responsibilityTitle": "Beauty information",
-    "responsibilityText": "Product sheets, routine guidance, face scan results and all other beauty content on Haru are informational and based on general cosmetic knowledge. They do not constitute medical advice and do not replace a consultation with a dermatologist or another healthcare professional, particularly for persistent, painful or worsening skin conditions.",
-    "contactTitle": "Contact",
-    "contactText": "For any question about these terms, your data, or your account, contact Haru using the address in the legal notice above."
+    "title": "法的情報",
+    "subtitle": "Haruの法的告知、販売条件、プライバシーポリシー、クッキーポリシーです。",
+    "placeholderBadge": "運営者が入力する項目",
+    "noticeTitle": "法的告知",
+    "noticeIntro": "オンラインサービスに関する法的透明性の要件に従って公開する情報です。",
+    "noticePublisherLabel": "発行者",
+    "noticePublisherPlaceholder": "法人名、登記住所、登録番号、VAT番号 — Haruの運営者が提供し、ここに記載する必要があります。",
+    "noticeDirectorLabel": "発行責任者",
+    "noticeDirectorPlaceholder": "発行を担当する個人または法人の名前 — Haruの運営者が提供する必要があります。",
+    "noticeHostingLabel": "ホスティング事業者",
+    "noticeHostingText": "本サイトはVercel Inc.（340 S Lemon Ave #4133, Walnut, CA 91789, United States）がホスティングしています。",
+    "noticeContactLabel": "連絡先",
+    "noticeContactPlaceholder": "専用の連絡先メールアドレス — Haruの運営者が提供し、ここに記載する必要があります。",
+    "termsTitle": "販売条件",
+    "termsIntro": "この販売条件は、Haruの有料機能であるプレミアム定期購読と1回限りの顔スキャンクレジットの購入に適用されます。有料機能を利用することは、本条件への同意を意味します。",
+    "termsServiceTitle": "含まれる内容",
+    "termsServiceText": "無料プランには製品スキャン、製品データベースの完全な閲覧、基本的なシェルフ・ルーティン作成機能が含まれます。プレミアム（定期購読）では、肌プロフィールに基づく完全なルーティン診断、無制限の製品保存、無制限の顔スキャンが追加されます。定期購読なしでも、顔スキャンは1回限りのクレジットとして個別に購入できます。",
+    "termsPriceTitle": "価格",
+    "termsPriceText": "プレミアム定期購読：月額6.99ユーロ。1回限りの顔スキャン：1回9ユーロ、定期購読不要。価格は決済前にプレミアムページにユーロで表示され、決済時に適用される税金を含みます。Haruは今後の請求期間について価格を変更する場合があり、既存の購読者には次回更新に価格変更が適用される前に通知します。",
+    "termsPaymentTitle": "決済",
+    "termsPaymentText": "決済は独立した決済代行業者であるStripeが処理します。Haruはカード番号を受け取ったり保存したりすることはなく、決済ステップにはStripe独自の利用規約とプライバシーポリシーが適用されます。",
+    "termsDurationTitle": "期間、更新、解約",
+    "termsDurationText": "プレミアム定期購読は解約しない限り毎月自動的に更新されます。プレミアムページからリンクされている請求ポータルからいつでも解約できます。解約すると今後の更新は停止しますが、すでに支払った期間の返金は行われず、その期間が終了するまでプレミアムへのアクセスは継続します。",
+    "termsWithdrawalTitle": "撤回権",
+    "termsWithdrawalText": "Haruの有料機能は、購入後すぐに利用可能となるデジタルサービスです。法律上、このような即時提供されるデジタルサービスについて消費者が標準的な撤回期間を明示的に放棄することが認められている場合、サービスの利用開始（プレミアムの有効化や購入したスキャンの利用）は、購入時点でその放棄が行われたものとして扱われます。",
+    "termsRefundTitle": "返金",
+    "termsRefundText": "上記以外の返金請求は個別に審査されます。例えば、Haru側の技術的な不具合により有料機能が実際に利用できなかった場合などです。アカウントのメールアドレスと決済日を添えてサポートまでご連絡ください。",
+    "privacyTitle": "プライバシーポリシー",
+    "privacyIntro": "このポリシーでは、Haruが処理する個人情報の種類、理由、そしてその管理方法について説明します。",
+    "privacyDataTitle": "処理するデータ",
+    "privacyDataText": "アカウント情報（名前、メールアドレス、パスワード — 平文ではなくハッシュ形式で保存）、肌プロフィールの回答、保存したシェルフ・個人メモ・保存したリンク、顔スキャン結果、同意した場合のニュースレター購読状況、そして第三者広告トラッカーを使わずアプリ運営に使用する基本的な自社利用データです。",
+    "privacyScanTitle": "顔および製品スキャンの写真",
+    "privacyScanText": "顔スキャンまたは製品スキャンのために送信された写真は、分析のためAnthropicのClaude APIに送信され、Haruには保存されません。後で確認できるよう、アカウントには結果（スコア、記述されたメモ、要約）のみが保存されます。",
+    "privacySubprocessorsTitle": "Haruに代わってデータを処理する事業者",
+    "privacySubprocessorsText": "Stripe（決済処理）、Resend（トランザクションメールおよびニュースレター配信）、Anthropic（スキャン写真の分析）、Vercel（アプリケーションのホスティング）です。各社はそれぞれの適用条件のもとでデータ処理者として機能します。",
+    "privacyRightsTitle": "あなたの権利",
+    "privacyRightsText": "プロフィールからいつでもアカウント情報を確認・編集でき、アカウント設定からアカウントと関連データを完全に削除できます。その他のデータに関するリクエストについては、上記の法的告知に記載の連絡先をご利用ください。",
+    "privacyRetentionTitle": "保存期間",
+    "privacyRetentionText": "アカウントおよびプロフィールのデータは、アカウントが存在する限り保存されます。アカウントを削除すると、シェルフ、メモ、保存したリンク、肌プロフィール、スキャン履歴、診断履歴が削除されます。",
+    "cookiesTitle": "クッキーポリシー",
+    "cookiesIntro": "Haruは少数のクッキーとローカルに保存される設定を使用しています。詳細は以下の通りです。",
+    "cookiesEssentialTitle": "必須",
+    "cookiesEssentialText": "ログインセッションクッキーはログイン状態を維持し、言語設定クッキーは英語・韓国語・フランス語・日本語のどのインターフェースを使用しているかを記憶します。これらはサイトの動作に必要であり、以下の同意/拒否の選択とは別のものです。",
+    "cookiesOptionalTitle": "任意",
+    "cookiesOptionalText": "クッキーバナーでの選択とライト/ダークテーマの設定は、追跡クッキーとしてではなく、ブラウザにローカルに保存されます。Haruはバナーでの選択にかかわらず、現在第三者の分析クッキーや広告クッキーを一切設定していません。",
+    "responsibilityTitle": "ビューティー情報について",
+    "responsibilityText": "製品情報、ルーティンガイダンス、顔スキャン結果、およびHaruのその他すべてのビューティーコンテンツは、一般的な化粧品の知識に基づく情報提供を目的としています。これらは医学的アドバイスに該当せず、特に持続的、痛みを伴う、または悪化する肌の状態については、皮膚科医や他の医療専門家への相談に代わるものではありません。",
+    "contactTitle": "お問い合わせ",
+    "contactText": "本条件、あなたのデータ、またはアカウントに関するご質問は、上記の法的告知に記載の連絡先までHaruにお問い合わせください。"
   },
   "auditShowcase": {
     "eyebrow": "肌診断",
