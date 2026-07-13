@@ -364,7 +364,7 @@
     "modulesCount": "{count} areas to review",
     "modulesSectionText": "Each section gives the visible result, useful daily gestures, and products that can support this specific area.",
     "moduleDefaultNote": "This area needs steady support rather than an aggressive routine.",
-    "moduleScoreLabel": "Visible level",
+    "moduleScoreLabel": "Skin clarity",
     "dailyActionsLabel": "Daily gestures",
     "productsForThisArea": "Products to consider for this area",
     "productsForThisAreaText": "Chosen from the catalog based on category, concern, skin type and key actives.",
@@ -439,7 +439,9 @@
         "Hydrate before moisturizer; glow often drops when the skin is dehydrated.",
         "Use SPF daily because pigmentation and dullness come back quickly with UV exposure."
       ]
-    }
+    },
+    "moduleClearTitle": "Clear — no action needed",
+    "moduleClearText": "This area looks healthy in your photo. No targeted products needed here right now."
   },
   "scanPage": {
     "title": "Scan a product",

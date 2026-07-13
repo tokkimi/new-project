@@ -35,7 +35,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ProductImage } from "@/components/product-image";
-import { SkinScoreRing, ModuleScoreBar, severityBadgeClass } from "@/components/skin-score";
+import { SkinScoreRing, ModuleScoreBar } from "@/components/skin-score";
+import { severityBadgeClass } from "@/lib/severity";
 import { useCatalog, useShelf } from "@/lib/shelf-store";
 import { MODULES, type FaceScanAnalysis, type ModuleFinding, type ModuleId } from "@/lib/face-scan-engine";
 
@@ -417,7 +418,7 @@ export function FaceScanClient() {
                         <div className="rounded-3xl bg-secondary/60 p-4">
                           <div className="mb-2 flex items-center justify-between text-sm">
                             <span className="font-medium">{t("moduleScoreLabel")}</span>
-                            <span className="text-muted-foreground">{module.score}/9</span>
+                            <span className="text-muted-foreground">{9 - module.score}/9</span>
                           </div>
                           <ModuleScoreBar score={module.score} />
                         </div>
@@ -447,65 +448,75 @@ export function FaceScanClient() {
                         <InfoList title={t("tipsLabel")} items={t.raw(`modules.${module.id}.tips`) as string[]} />
                       </div>
 
-                      <div className="space-y-3">
-                        <div>
-                          <h4 className="font-serif text-xl">{t("productsForThisArea")}</h4>
-                          <p className="text-sm text-muted-foreground">{t("productsForThisAreaText")}</p>
-                        </div>
-                        <div className="grid gap-3">
-                          {products.length === 0 ? (
-                            <Card className="bg-secondary/40 p-4 text-sm text-muted-foreground">
-                              {t("noProductsForModule")}
-                            </Card>
-                          ) : (
-                            products.map((product) => {
-                              const isAdded = addedProducts.has(product.id);
-                              return (
-                                <Card
-                                  key={product.id}
-                                  className="grid grid-cols-[auto_1fr] gap-3 p-3 sm:grid-cols-[auto_1fr_auto] sm:items-center"
-                                >
-                                  <ProductImage
-                                    imageUrl={product.imageUrl}
-                                    category={product.category}
-                                    name={product.name}
-                                    size="sm"
-                                    className="size-16 rounded-2xl"
-                                  />
-                                  <div className="min-w-0">
-                                    <p className="line-clamp-2 font-medium">{product.name}</p>
-                                    <p className="text-sm text-muted-foreground">{product.brand}</p>
-                                    <p className="mt-1 text-xs text-muted-foreground">
-                                      {tCategories(product.category)}
-                                    </p>
-                                  </div>
-                                  <Button
-                                    size="sm"
-                                    className="col-span-2 sm:col-span-1"
-                                    variant={isAdded ? "outline" : "default"}
-                                    onClick={() => {
-                                      addProduct(product);
-                                      setAddedProducts((prev) => new Set(prev).add(product.id));
-                                    }}
+                      {module.flagged ? (
+                        <div className="space-y-3">
+                          <div>
+                            <h4 className="font-serif text-xl">{t("productsForThisArea")}</h4>
+                            <p className="text-sm text-muted-foreground">{t("productsForThisAreaText")}</p>
+                          </div>
+                          <div className="grid gap-3">
+                            {products.length === 0 ? (
+                              <Card className="bg-secondary/40 p-4 text-sm text-muted-foreground">
+                                {t("noProductsForModule")}
+                              </Card>
+                            ) : (
+                              products.map((product) => {
+                                const isAdded = addedProducts.has(product.id);
+                                return (
+                                  <Card
+                                    key={product.id}
+                                    className="grid grid-cols-[auto_1fr] gap-3 p-3 sm:grid-cols-[auto_1fr_auto] sm:items-center"
                                   >
-                                    {isAdded ? (
-                                      <>
-                                        <Check className="size-4" />
-                                        {t("addedProduct")}
-                                      </>
-                                    ) : (
-                                      <>
-                                        <ClipboardCheck className="size-4" />
-                                        {t("addProduct")}
-                                      </>
-                                    )}
-                                  </Button>
-                                </Card>
-                              );
-                            })
-                          )}
+                                    <ProductImage
+                                      imageUrl={product.imageUrl}
+                                      category={product.category}
+                                      name={product.name}
+                                      size="sm"
+                                      className="size-16 rounded-2xl"
+                                    />
+                                    <div className="min-w-0">
+                                      <p className="line-clamp-2 font-medium">{product.name}</p>
+                                      <p className="text-sm text-muted-foreground">{product.brand}</p>
+                                      <p className="mt-1 text-xs text-muted-foreground">
+                                        {tCategories(product.category)}
+                                      </p>
+                                    </div>
+                                    <Button
+                                      size="sm"
+                                      className="col-span-2 sm:col-span-1"
+                                      variant={isAdded ? "outline" : "default"}
+                                      onClick={() => {
+                                        addProduct(product);
+                                        setAddedProducts((prev) => new Set(prev).add(product.id));
+                                      }}
+                                    >
+                                      {isAdded ? (
+                                        <>
+                                          <Check className="size-4" />
+                                          {t("addedProduct")}
+                                        </>
+                                      ) : (
+                                        <>
+                                          <ClipboardCheck className="size-4" />
+                                          {t("addProduct")}
+                                        </>
+                                      )}
+                                    </Button>
+                                  </Card>
+                                );
+                              })
+                            )}
+                          </div>
                         </div>
-                      </div>
+                      ) : (
+                        <div className="flex items-start gap-3 rounded-3xl bg-success/10 p-4">
+                          <ShieldCheck className="mt-0.5 size-5 shrink-0 text-success" />
+                          <div>
+                            <p className="font-medium text-success">{t("moduleClearTitle")}</p>
+                            <p className="text-sm text-muted-foreground">{t("moduleClearText")}</p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </section>
                 );

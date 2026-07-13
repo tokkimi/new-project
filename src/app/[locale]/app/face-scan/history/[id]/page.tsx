@@ -6,7 +6,8 @@ import { Card } from "@/components/ui/card";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { cn } from "@/lib/utils";
-import { SkinScoreRing, ModuleScoreBar, severityBadgeClass } from "@/components/skin-score";
+import { SkinScoreRing, ModuleScoreBar } from "@/components/skin-score";
+import { severityBadgeClass } from "@/lib/severity";
 import type { FaceScanAnalysis } from "@/lib/face-scan-engine";
 
 export default async function FaceScanHistoryDetailPage({
@@ -71,7 +72,7 @@ export default async function FaceScanHistoryDetailPage({
               <div>
                 <div className="mb-2 flex items-center justify-between text-sm">
                   <span className="font-medium">{t("moduleScoreLabel")}</span>
-                  <span className="text-muted-foreground">{module.score}/9</span>
+                  <span className="text-muted-foreground">{9 - module.score}/9</span>
                 </div>
                 <ModuleScoreBar score={module.score} />
               </div>

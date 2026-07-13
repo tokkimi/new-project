@@ -1,23 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
-import type { ZoneSeverity } from "@/lib/face-scan-engine";
-
-export function severityBadgeClass(severity: ZoneSeverity) {
-  return cn(
-    "inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium",
-    severity === "low" && "bg-success/15 text-success",
-    severity === "medium" && "bg-am/25 text-am-foreground",
-    severity === "attention" && "bg-destructive/15 text-destructive"
-  );
-}
-
-export function scoreColor(score: number) {
-  if (score >= 7) return "var(--destructive)";
-  if (score >= 3) return "var(--am)";
-  return "var(--success)";
-}
+import { scoreColor } from "@/lib/severity";
 
 /** Circular gauge for the 0-100 overall skin score. */
 export function SkinScoreRing({ score, size = 108 }: { score: number; size?: number }) {
@@ -54,9 +38,15 @@ export function SkinScoreRing({ score, size = 108 }: { score: number; size?: num
   );
 }
 
-/** Small inline score gauge used per module row (0-9 scale). */
+/**
+ * Small inline gauge used per module row. `score` is the model's raw 0-9
+ * severity read (0 = clear, 9 = severe) — inverted here to a 0-9 "clear"
+ * reading so a fuller, greener bar always means healthier skin, matching
+ * the overall SkinScoreRing above it instead of running the opposite way.
+ */
 export function ModuleScoreBar({ score }: { score: number }) {
   const color = scoreColor(score);
+  const clear = 9 - score;
   return (
     <div className="flex items-center gap-1.5">
       <div className="h-1.5 w-16 overflow-hidden rounded-full bg-muted">
@@ -64,12 +54,12 @@ export function ModuleScoreBar({ score }: { score: number }) {
           className="h-full rounded-full"
           style={{ backgroundColor: color }}
           initial={{ width: 0 }}
-          animate={{ width: `${(score / 9) * 100}%` }}
+          animate={{ width: `${(clear / 9) * 100}%` }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         />
       </div>
       <span className="w-4 text-right text-xs font-medium tabular-nums text-muted-foreground">
-        {score}
+        {clear}
       </span>
     </div>
   );
