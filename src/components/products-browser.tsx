@@ -17,7 +17,7 @@ import type { Product } from "@/generated/prisma/client";
 import type { ProductSearchFilters } from "@/lib/products";
 
 const SELECT_CLASS =
-  "h-10 rounded-xl border border-input bg-card px-3 text-sm text-foreground";
+  "h-10 min-w-0 max-w-full flex-1 basis-[140px] truncate rounded-xl border border-input bg-card px-3 text-sm text-foreground";
 
 function compactIngredients(value: string | null): string {
   if (!value) return "Unknown";

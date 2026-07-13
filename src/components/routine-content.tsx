@@ -31,7 +31,7 @@ function RoutineColumn({
   onRemove: (productId: string) => void;
 }) {
   return (
-    <Card className="gap-4">
+    <Card className="min-w-0 gap-4">
       <div className="flex items-center gap-2">
         {icon}
         <h2 className="font-serif text-xl">{title}</h2>
@@ -42,11 +42,11 @@ function RoutineColumn({
       {steps.length === 0 ? (
         <p className="py-6 text-center text-sm text-muted-foreground">{emptyLabel}</p>
       ) : (
-        <ol className="flex flex-col gap-2.5">
+        <ol className="flex min-w-0 flex-col gap-2.5">
           {steps.map((step, i) => (
             <li
               key={step.product.id}
-              className="flex items-center gap-2 rounded-xl border border-border bg-background px-3 py-2.5 transition-colors hover:border-primary/40"
+              className="flex min-w-0 items-center gap-2 rounded-xl border border-border bg-background px-3 py-2.5 transition-colors hover:border-primary/40"
             >
               <Link
                 href={`/app/product/${step.product.slug}`}
@@ -88,13 +88,13 @@ export function RoutineContent({ compact = false }: { compact?: boolean }) {
   const routine = buildRoutine(shelf);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex min-w-0 flex-col gap-8">
       <div>
         <h1 className={compact ? "font-serif text-2xl" : "font-serif text-3xl"}>{t("title")}</h1>
         <p className="mt-1 text-muted-foreground">{t("subtitle", { count: shelf.length })}</p>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid min-w-0 gap-5 md:grid-cols-2">
         <RoutineColumn
           title={t("morning")}
           icon={<Sun className="size-5 text-am-foreground" />}
@@ -184,7 +184,7 @@ export function RoutineContent({ compact = false }: { compact?: boolean }) {
                 </div>
                 <p className="flex flex-wrap gap-1.5 text-sm text-muted-foreground">
                   {dup.products.map((p) => (
-                    <Badge key={p.id} variant="outline">
+                    <Badge key={p.id} variant="outline" className="max-w-full truncate whitespace-normal">
                       {p.name}
                     </Badge>
                   ))}

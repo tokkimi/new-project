@@ -105,7 +105,7 @@ export function AddProductDialog({
             </div>
             <div className="grid gap-2 sm:grid-cols-2">
               <select
-                className="h-10 rounded-md border border-input bg-background px-3 text-sm"
+                className="h-10 w-full min-w-0 rounded-md border border-input bg-background px-3 text-sm"
                 value={preference.routineSlot}
                 onChange={(e) => setPreference({ ...preference, routineSlot: e.target.value as InitialPreference["routineSlot"] })}
               >
