@@ -2,12 +2,16 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { Droplet, Sparkles, ShieldAlert, Layers, Sun, Wand2, Moon } from "lucide-react";
 import { INGREDIENTS } from "@/data/ingredients";
 import { Badge } from "@/components/ui/badge";
 
 type DailyItem = { title: string; text: string };
 type RoutineItem = { type: string; am: string; pm: string; avoid: string };
 type IngredientCopy = { name: string; summary: string };
+
+const DAILY_ICON = [Sun, Moon, Sparkles, ShieldAlert];
+const ROUTINE_ICON = [Droplet, Sparkles, ShieldAlert, Layers, Sun, Wand2];
 
 export function GoodHabits() {
   const t = useTranslations("goodHabits");
@@ -25,52 +29,71 @@ export function GoodHabits() {
           <p className="mt-3 text-muted-foreground">{t("subtitle")}</p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-4">
-          {daily.map((item, i) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.35, delay: i * 0.05 }}
-              className="rounded-3xl border border-white/50 bg-white/45 p-5 shadow-[0_18px_50px_-34px_rgba(64,45,31,0.45)] backdrop-blur-xl"
-            >
-              <p className="mb-3 font-serif text-lg">{item.title}</p>
-              <p className="text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+          {daily.map((item, i) => {
+            const Icon = DAILY_ICON[i % DAILY_ICON.length];
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.35, delay: i * 0.05 }}
+                className="rounded-3xl border border-white/50 bg-white/45 p-4 shadow-[0_18px_50px_-34px_rgba(64,45,31,0.45)] backdrop-blur-xl sm:p-5"
+              >
+                <span className="mb-3 flex size-9 items-center justify-center rounded-full bg-primary/12 text-primary">
+                  <Icon className="size-4" />
+                </span>
+                <p className="mb-1.5 font-serif text-base sm:text-lg">{item.title}</p>
+                <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">{item.text}</p>
+              </motion.div>
+            );
+          })}
         </div>
 
-        <div className="mt-12 grid gap-x-10 gap-y-8 lg:grid-cols-3">
-          {routines.map((routine, i) => (
-            <motion.div
-              key={routine.type}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.35, delay: (i % 3) * 0.05 }}
-              className="rounded-3xl border border-white/50 bg-white/45 p-5 shadow-[0_18px_50px_-34px_rgba(64,45,31,0.45)] backdrop-blur-xl"
-            >
-              <div className="mb-4 flex items-center justify-between gap-3">
-                <h3 className="font-serif text-lg">{routine.type}</h3>
-                <Badge variant="secondary">{t("guide")}</Badge>
-              </div>
-              <div className="grid gap-3 text-sm">
-                <p>
-                  <span className="font-medium text-foreground">{t("amLabel")}: </span>
-                  <span className="text-muted-foreground">{routine.am}</span>
-                </p>
-                <p>
-                  <span className="font-medium text-foreground">{t("pmLabel")}: </span>
-                  <span className="text-muted-foreground">{routine.pm}</span>
-                </p>
-                <p className="rounded-2xl border border-warning/25 bg-warning/10 px-3 py-2 text-muted-foreground">
-                  <span className="font-medium text-foreground">{t("watchOutLabel")}: </span>
-                  {routine.avoid}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+        <div className="mt-12">
+          <p className="mb-4 px-1 text-sm font-medium text-muted-foreground sm:hidden">
+            {t("guide")} →
+          </p>
+          <div className="no-scrollbar -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-3">
+            {routines.map((routine, i) => {
+              const Icon = ROUTINE_ICON[i % ROUTINE_ICON.length];
+              return (
+                <motion.div
+                  key={routine.type}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.35, delay: (i % 3) * 0.05 }}
+                  className="w-[86%] shrink-0 snap-center rounded-3xl border border-white/50 bg-white/45 p-5 shadow-[0_18px_50px_-34px_rgba(64,45,31,0.45)] backdrop-blur-xl sm:w-[340px]"
+                >
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2.5">
+                      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/12 text-primary">
+                        <Icon className="size-4" />
+                      </span>
+                      <h3 className="font-serif text-lg leading-tight">{routine.type}</h3>
+                    </div>
+                    <Badge variant="secondary" className="shrink-0">{t("guide")}</Badge>
+                  </div>
+                  <div className="grid gap-3 text-sm">
+                    <p>
+                      <span className="font-medium text-foreground">{t("amLabel")}: </span>
+                      <span className="text-muted-foreground">{routine.am}</span>
+                    </p>
+                    <p>
+                      <span className="font-medium text-foreground">{t("pmLabel")}: </span>
+                      <span className="text-muted-foreground">{routine.pm}</span>
+                    </p>
+                    <p className="rounded-2xl border border-warning/25 bg-warning/10 px-3 py-2 text-muted-foreground">
+                      <span className="font-medium text-foreground">{t("watchOutLabel")}: </span>
+                      {routine.avoid}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
