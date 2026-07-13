@@ -1,0 +1,1201 @@
+{
+  "meta": {
+    "title": "Haru - votre routine beauté, organisée",
+    "description": "Enregistrez vos produits, construisez vos routines du matin et du soir, et gardez vos notes et inspirations beauté au même endroit."
+  },
+  "localeSwitcher": {
+    "en": "English",
+    "ko": "한국어"
+  },
+  "nav": {
+    "howItWorks": "Comment ça marche",
+    "features": "Bonnes habitudes",
+    "ingredients": "Ingrédients",
+    "tryApp": "Ouvrir l'app",
+    "shelf": "Ma étagère",
+    "scan": "Scanner",
+    "products": "Produits",
+    "routine": "Routine",
+    "audit": "Audit",
+    "profile": "Profil",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "today": "Aujourd'hui",
+    "wellness": "Bien-être",
+    "progress": "Progression"
+  },
+  "hero": {
+    "badge": "Inspiré des routines K-beauty",
+    "titleLine1": "Votre routine skincare,",
+    "titleLine2": "enfin décodée.",
+    "subtitle": "Gardez vos produits, routines, notes et inspirations beauté au même endroit. Haru vous aide à comprendre quoi utiliser, quand l'utiliser, et comment rester simple.",
+    "ctaPrimary": "Construire ma routine",
+    "disclaimer": "Gratuit jusqu'à 12 produits sur votre étagère · sans carte bancaire",
+    "matchBadgeTitle": "Correspondance parfaite",
+    "matchBadgeSubtitle": "pour votre profil de peau"
+  },
+  "productShowcase": {
+    "eyebrow": "Le cœur de Haru",
+    "title": "Des produits beauté faciles à comparer",
+    "subtitle": "Parcourez les fiches produit avec origine, composition, type de peau, usage et fréquence.",
+    "latestTitle": "Nouveautés",
+    "koreaTitle": "Made in Korea",
+    "koreaSubtitle": "Les essentiels K-beauty derrière nos routines",
+    "seeAll": "Tout voir",
+    "browseAllCta": "Parcourir les produits"
+  },
+  "featureShowcase": {
+    "eyebrow": "En pratique",
+    "title": "Ce que Haru voit dans une vraie étagère",
+    "subtitle": "Exemple avec 8 produits populaires — ceux que vous possédez probablement déjà.",
+    "eveningRoutine": "Routine du soir",
+    "alertsDetected": "{count, plural, one {# alerte détectée} other {# alertes détectées}}",
+    "whatHaruSuggests": "Ce que Haru suggère",
+    "amCount": "{count} produits",
+    "amLabel": "le matin",
+    "pmCount": "{count} produits",
+    "pmLabel": "le soir",
+    "conflictCount": "{count} conflits",
+    "conflictLabel": "à corriger"
+  },
+  "beautyNews": {
+    "eyebrow": "Actualités beauté",
+    "title": "Quoi de neuf en beauté",
+    "subtitle": "Les dernières innovations, lancements et tendances K-beauty — des deux dernières semaines.",
+    "updatedLabel": "Dernières actualités, mises à jour en continu",
+    "all": "Tout",
+    "readMore": "Lire la suite",
+    "empty": "Pas encore d'actualités — revenez bientôt.",
+    "categories": {
+      "innovation": "Innovation",
+      "launch": "Lancement",
+      "ingredient-trend": "Tendance ingrédient",
+      "brand-news": "Actu marque",
+      "award": "Récompense"
+    }
+  },
+  "newsletterSignup": {
+    "title": "Recevez les actualités beauté dans votre boîte mail, chaque vendredi.",
+    "placeholder": "vous@exemple.com",
+    "cta": "S'abonner",
+    "done": "Vous êtes abonné(e) !"
+  },
+  "ingredientBase": {
+    "eyebrow": "Base d'ingrédients",
+    "title": "Les actifs que nous surveillons pour vous",
+    "subtitle": "Notre moteur de règles s'enrichit sans cesse. Voici le socle d'actifs déjà couverts.",
+    "timeLabel": {
+      "am": "Matin",
+      "pm": "Soir",
+      "both": "Matin et soir"
+    }
+  },
+  "finalCta": {
+    "title": "Arrêtez de deviner ce qui va avec quoi.",
+    "subtitle": "Ajoutez votre étagère, on s'occupe du reste. Gratuit pour commencer.",
+    "cta": "Construire ma routine"
+  },
+  "footer": {
+    "tagline": "Haru décode les ingrédients de votre routine skincare pour éviter les mauvaises combinaisons — et l'argent gaspillé.",
+    "app": "L'application",
+    "ingredients": "Ingrédients",
+    "rights": "Haru. Fait avec soin, sans blabla marketing.",
+    "legal": "Mentions légales"
+  },
+  "shelf": {
+    "title": "Ma étagère",
+    "subtitle": "{count, plural, one {# produit} other {# produits}} suivis par Haru.",
+    "scan": "Scanner",
+    "addProduct": "Ajouter un produit",
+    "emptyTitle": "Votre étagère est vide",
+    "emptyText": "Ajoutez quelques produits pour que Haru puisse construire votre routine et repérer d'éventuels conflits.",
+    "readyTitle": "Prêt·e à voir votre routine ?",
+    "readyText": "Haru organise vos produits et signale les conflits.",
+    "viewRoutine": "Voir ma routine",
+    "remove": "Retirer {name}",
+    "signInRequired": "Connectez-vous pour enregistrer et gérer votre étagère personnelle. Les suggestions de produits restent dans le catalogue ; votre étagère est propre à votre compte.",
+    "signInCta": "Se connecter",
+    "signUpCta": "Créer un compte",
+    "workspaceTitle": "Mon espace routine",
+    "workspaceSignInText": "Connectez-vous pour gérer vos produits, favoris, notes, vidéos et routines personnelles."
+  },
+  "addProductDialog": {
+    "title": "Ajouter à votre étagère",
+    "description": "Cherchez dans notre base de produits, ou scannez l'emballage pour une correspondance instantanée.",
+    "searchPlaceholder": "Chercher une marque ou un produit...",
+    "noResults": "Aucun produit ne correspond.",
+    "confirm": "Ajouter à ma routine"
+  },
+  "faceScanPage": {
+    "title": "Face scan",
+    "subtitle": "Take a well-lit, makeup-free photo and Haru will analyze visible skin concerns.",
+    "disclaimer": "Not a medical device. This gives a general visual read, not a clinical diagnosis — for real dermatological concerns, see a professional.",
+    "captureTitle": "Take or upload a photo",
+    "captureHint": "Face the camera directly in natural light, no makeup or filters",
+    "steps": [
+      "Detecting face position...",
+      "Checking lighting and framing...",
+      "Preparing analysis..."
+    ],
+    "retake": "Retake photo",
+    "goToQuiz": "Take the skin quiz instead",
+    "privacyNote": "Your photo is analyzed and discarded — it isn't stored.",
+    "signInPrompt": "Sign in to run a face scan.",
+    "signInCta": "Sign in",
+    "paywallFeatures": [
+      "13-point AI skin analysis from a single photo",
+      "An overall skin score plus a detailed breakdown per module",
+      "Real causes and actionable tips for every flagged area",
+      "A routine and product picks built from your actual result"
+    ],
+    "scanPrice": "€9",
+    "scanPriceHint": "One scan, pay once — no subscription needed",
+    "buyCta": "Buy my scan",
+    "comingSoon": "Payments aren't configured yet — check back soon.",
+    "unlimitedWithPremium": "Unlimited scans with Haru Premium",
+    "premiumGlitchHint": "Something looks off with your account — try refreshing the page.",
+    "noFaceTitle": "No face detected",
+    "noFaceText": "We couldn't find a clear face in that photo. Make sure your face fills the frame, in good lighting, facing the camera — no credit is charged for this attempt.",
+    "noCreditsTitle": "No scan available",
+    "noCreditsText": "You don't have a scan credit left. Buy another scan or subscribe to Haru Premium for unlimited scans.",
+    "noCreditsCta": "Back to face scan",
+    "resultTitle": "Your skin snapshot",
+    "resultSubtitle": "An AI visual read across 13 modules, cross-referenced with our product catalog — not a clinical diagnosis.",
+    "resultDisclaimer": "Haru's AI estimates this from what's actually visible in your photo, in ordinary light — not UV, polarized light, or a 3D scan. It isn't a dermatological device or diagnosis — see a professional for real skin concerns.",
+    "overallScoreLabel": "Overall skin score",
+    "skinTypes": {
+      "oily": "Oily skin",
+      "dry": "Dry skin",
+      "combination": "Combination skin",
+      "normal": "Normal skin",
+      "sensitive": "Sensitive skin"
+    },
+    "summaryGood": "Your skin looks balanced overall — keep your current routine going.",
+    "summaryOk": "A few areas could use some extra care.",
+    "summaryAttention": "Several areas stood out this time — here's where to focus.",
+    "modulesSectionTitle": "Detailed breakdown",
+    "causesLabel": "Why this happens",
+    "tipsLabel": "What helps",
+    "noConcern": "Nothing notable here — keep doing what you're doing.",
+    "severity": {
+      "low": "Clear",
+      "medium": "To watch",
+      "attention": "Priority"
+    },
+    "modules": {
+      "pores": {
+        "name": "Pores",
+        "causes": [
+          "Excess sebum production",
+          "Natural collagen loss with age",
+          "Buildup from infrequent exfoliation"
+        ],
+        "tips": [
+          "Niacinamide helps regulate oil and refine the look of pores over time",
+          "A gentle BHA toner 2–3x/week keeps pores from clogging",
+          "Daily SPF slows the collagen loss that stretches pores"
+        ]
+      },
+      "blackheads": {
+        "name": "Blackheads",
+        "causes": [
+          "Oxidized sebum trapped in pores",
+          "Buildup of dead skin cells",
+          "Infrequent or incomplete cleansing"
+        ],
+        "tips": [
+          "Double cleanse in the evening to fully remove sunscreen and oil",
+          "A BHA (salicylic acid) toner helps dissolve buildup inside pores",
+          "Avoid harsh scrubbing — it can irritate skin without actually clearing pores"
+        ]
+      },
+      "texture": {
+        "name": "Texture",
+        "causes": [
+          "Buildup of dead skin cells",
+          "Dehydration",
+          "Irregular exfoliation habits"
+        ],
+        "tips": [
+          "A gentle AHA 1–2x/week smooths texture without over-stripping",
+          "Layering hydration (hyaluronic acid) plumps and softens rough patches",
+          "Consistency matters more than intensity — little and often beats occasional harsh treatments"
+        ]
+      },
+      "oiliness": {
+        "name": "Oiliness",
+        "causes": [
+          "Naturally higher sebum production",
+          "Over-cleansing or over-stripping the skin",
+          "Heat and humidity"
+        ],
+        "tips": [
+          "Niacinamide helps regulate sebum without over-drying",
+          "Don't skip moisturizer — stripped skin often overproduces oil to compensate",
+          "A lightweight gel moisturizer keeps oil balanced without heaviness"
+        ]
+      },
+      "dryness": {
+        "name": "Dryness",
+        "causes": [
+          "Weakened moisture barrier",
+          "Cold or dry climates",
+          "Over-exfoliation or harsh cleansers"
+        ],
+        "tips": [
+          "Ceramides help rebuild the skin's natural moisture barrier",
+          "Layer hyaluronic acid on damp skin, then seal it in with a moisturizer",
+          "Cut back on strong actives (retinol, AHA/BHA) until the barrier recovers"
+        ]
+      },
+      "redness": {
+        "name": "Redness",
+        "causes": [
+          "Reactive or sensitized skin",
+          "Weather, heat, or friction",
+          "Too many actives layered at once"
+        ],
+        "tips": [
+          "Centella asiatica (cica) is one of the most consistently soothing ingredients for visible redness",
+          "Simplify your routine temporarily while skin recalms",
+          "Patch-test new actives on your inner arm before applying to the face"
+        ]
+      },
+      "sensitivity": {
+        "name": "Sensitivity",
+        "causes": [
+          "A compromised skin barrier",
+          "Overuse of exfoliating actives",
+          "Fragrance or alcohol in products"
+        ],
+        "tips": [
+          "Prioritize a ceramide-rich moisturizer to rebuild the barrier before reintroducing actives",
+          "Avoid layering multiple actives (retinol + AHA/BHA) until skin calms down",
+          "Look for fragrance-free formulas while your barrier recovers"
+        ]
+      },
+      "spots": {
+        "name": "Dark spots",
+        "causes": [
+          "UV exposure over time",
+          "Post-inflammatory marks from old breakouts",
+          "Hormonal changes"
+        ],
+        "tips": [
+          "Vitamin C in the morning helps fade spots and protects against new ones forming",
+          "Daily SPF is the single most effective way to stop spots from getting darker",
+          "Niacinamide can help even out tone alongside a brightening active"
+        ]
+      },
+      "acne": {
+        "name": "Active blemishes",
+        "causes": [
+          "Excess oil combined with clogged pores",
+          "Bacterial overgrowth",
+          "Hormonal fluctuations"
+        ],
+        "tips": [
+          "A BHA (salicylic acid) toner helps clear congestion inside the pore",
+          "Benzoyl peroxide spot-treats active, inflamed blemishes",
+          "Avoid picking — it prolongs healing and increases the odds of scarring"
+        ]
+      },
+      "acneScars": {
+        "name": "Post-acne marks",
+        "causes": [
+          "Inflammation from past breakouts",
+          "Picking or squeezing blemishes",
+          "Slow cell turnover leaving marks visible longer"
+        ],
+        "tips": [
+          "Niacinamide and vitamin C both help fade lingering discoloration",
+          "Gentle, regular exfoliation (AHA) speeds up how fast marks fade",
+          "Consistent SPF prevents marks from darkening further in the sun"
+        ]
+      },
+      "wrinkles": {
+        "name": "Fine lines & wrinkles",
+        "causes": [
+          "Natural collagen loss with age",
+          "Repeated facial expressions",
+          "Cumulative sun exposure"
+        ],
+        "tips": [
+          "Retinol is the best-studied ingredient for softening the look of fine lines over time",
+          "Peptides support skin firmness alongside retinol",
+          "Daily SPF is what actually slows new lines from forming"
+        ]
+      },
+      "darkCircles": {
+        "name": "Under-eye circles",
+        "causes": [
+          "Thin under-eye skin showing blood vessels",
+          "Lack of sleep or dehydration",
+          "Natural pigmentation in the area"
+        ],
+        "tips": [
+          "A peptide eye cream can help with puffiness and the look of fine lines",
+          "Gently pat products in with your ring finger — never rub the eye area",
+          "Sleep and hydration have an outsized visible effect on this area specifically"
+        ]
+      },
+      "radiance": {
+        "name": "Radiance",
+        "causes": [
+          "Buildup of dull, dead skin cells",
+          "Dehydration",
+          "Inconsistent routine"
+        ],
+        "tips": [
+          "Vitamin C brightens and adds visible glow with consistent use",
+          "Gentle exfoliation reveals fresher skin underneath",
+          "Radiance responds fast to hydration — don't skip your moisturizer step"
+        ]
+      }
+    },
+    "unavailableTitle": "AI analysis isn't set up yet",
+    "unavailableText": "The photo analysis engine hasn't been connected on this deployment. Your skin quiz answers already power your routine audit in the meantime.",
+    "errorTitle": "Analysis didn't go through",
+    "errorText": "Something went wrong reading that photo. Try again with better lighting, facing the camera directly.",
+    "routineSectionTitle": "A routine that targets what we found",
+    "routineSectionText": "Built from our product catalog to address the modules flagged above.",
+    "addToShelf": "Add this routine to my shelf",
+    "addedToShelf": "Added to your shelf",
+    "resultEyebrow": "Face Scan result",
+    "modulesCount": "{count} areas to review",
+    "modulesSectionText": "Each section gives the visible result, useful daily gestures, and products that can support this specific area.",
+    "moduleDefaultNote": "This area needs steady support rather than an aggressive routine.",
+    "moduleScoreLabel": "Skin clarity",
+    "dailyActionsLabel": "Daily gestures",
+    "productsForThisArea": "Products to consider for this area",
+    "productsForThisAreaText": "Chosen from the catalog based on category, concern, skin type and key actives.",
+    "noProductsForModule": "No strong catalog match yet for this area.",
+    "addProduct": "Add to my routine",
+    "addedProduct": "Added",
+    "moduleDisclaimer": "Use these suggestions as routine guidance. If the skin is painful, swollen or persistently irritated, ask a dermatologist.",
+    "progressCta": "See progress",
+    "dailyActions": {
+      "pores": [
+        "Cleanse gently at night so sunscreen and sebum do not sit in the pores.",
+        "Use SPF every morning; stretched-looking pores are worsened by sun damage.",
+        "Keep exfoliating acids to a planned rhythm instead of using them every day."
+      ],
+      "blackheads": [
+        "Remove makeup and SPF fully before bed, then cleanse without scrubbing.",
+        "Use a BHA product gradually and pause if the skin feels tight or hot.",
+        "Avoid heavy layers on the nose and chin when the area is already congested."
+      ],
+      "texture": [
+        "Keep a simple cleanse, moisturize and SPF base before adding strong actives.",
+        "Do not scrub texture; use chemical exfoliation slowly and consistently.",
+        "Sleep and stress matter here because irritation can make texture look rougher."
+      ],
+      "oiliness": [
+        "Cleanse morning and evening, but avoid stripping foams that make skin rebound oily.",
+        "Use light layers and wait between products so the routine does not feel greasy.",
+        "Drink water through the day; dehydration can make skin feel oily and tight at once."
+      ],
+      "dryness": [
+        "Apply moisturizer while the skin is slightly damp after cleansing.",
+        "Avoid hot water and long cleansing sessions that remove too much barrier lipid.",
+        "Layer hydration first, then seal it with a cream when the skin feels tight."
+      ],
+      "redness": [
+        "Keep the routine short while the skin is reactive: cleanser, soothing serum, moisturizer, SPF.",
+        "Avoid stacking acids, retinoids and vitamin C on the same irritated evening.",
+        "Use lukewarm water and press products in gently instead of rubbing."
+      ],
+      "sensitivity": [
+        "Patch test new products for several days before using them all over the face.",
+        "Introduce one new active at a time so reactions are easier to understand.",
+        "Prioritize barrier repair on recovery nights instead of chasing faster results."
+      ],
+      "spots": [
+        "Use broad-spectrum SPF every morning and reapply when outdoors.",
+        "Pair brightening actives with patience; visible tone support takes consistent weeks.",
+        "Avoid picking marks because inflammation can deepen discoloration."
+      ],
+      "acne": [
+        "Cleanse after sweat and remove sunscreen before sleep.",
+        "Keep acne actives targeted; more layers can irritate and worsen breakouts.",
+        "Change pillowcases often and avoid touching active breakouts during the day."
+      ],
+      "acneScars": [
+        "Protect marks from sun every morning; UV keeps post-blemish color visible longer.",
+        "Use gentle resurfacing on a schedule, not on already irritated skin.",
+        "Do not pick healing blemishes; calm recovery reduces leftover marks."
+      ],
+      "wrinkles": [
+        "Use SPF daily; UV exposure is the biggest routine-level factor you can control.",
+        "Keep retinoids mostly at night and alternate with recovery nights.",
+        "Moisturize consistently so dehydration lines are less visible."
+      ],
+      "darkCircles": [
+        "Sleep consistency helps the under-eye area look less tired.",
+        "Use a tiny amount of eye product and avoid rubbing the area.",
+        "If puffiness is present, try a cool compress for a few minutes in the morning."
+      ],
+      "radiance": [
+        "Cleanse at night so dull buildup does not stay under the next routine.",
+        "Hydrate before moisturizer; glow often drops when the skin is dehydrated.",
+        "Use SPF daily because pigmentation and dullness come back quickly with UV exposure."
+      ]
+    },
+    "moduleClearTitle": "Clear — no action needed",
+    "moduleClearText": "This area looks healthy in your photo. No targeted products needed here right now."
+  },
+  "scanPage": {
+    "title": "Scanner un produit",
+    "subtitle": "Scan produit gratuit : photographiez l'étiquette ou l'emballage et Haru essaiera d'ouvrir la fiche produit correspondante.",
+    "dropTitle": "Scannez un produit gratuitement",
+    "dropSubtitle": "Prenez une photo de l'étiquette, ou importez-en une depuis votre galerie",
+    "faceScanCta": "Besoin d'un scan visage à la place ?",
+    "steps": [
+      "Lecture de la liste des ingrédients...",
+      "Identification des actifs...",
+      "Vérification des conflits connus..."
+    ],
+    "scanAnother": "Scanner autre chose",
+    "viewSheet": "Voir la fiche produit complète",
+    "addToShelf": "Ajouter à l'étagère",
+    "unavailableTitle": "Nous n'avons pas encore pu lire ce produit",
+    "unavailableText": "Essayez une photo plus nette, ou tapez la marque, le nom du produit ou le code-barres ci-dessus.",
+    "errorTitle": "L'analyse n'a pas abouti",
+    "errorText": "Un problème est survenu lors de la lecture de cette photo. Réessayez avec l'étiquette bien nette et un bon éclairage.",
+    "unmatchedTitle": "Pas encore dans notre catalogue",
+    "unmatchedText": "Nous avons lu l'étiquette mais ce produit n'est pas encore suivi par Haru. Voici ce que nous avons pu détecter :",
+    "illegibleTitle": "Impossible de lire cette étiquette",
+    "illegibleText": "Réessayez avec la liste des ingrédients bien nette, en remplissant davantage le cadre."
+  },
+  "productsPage": {
+    "title": "Base de produits",
+    "subtitle": "Tous les produits suivis par Haru — libres à parcourir, chercher et scanner. Composition complète, origine, et mode d'emploi de chacun.",
+    "searchPlaceholder": "Chercher une marque ou un produit...",
+    "allCategories": "Tous",
+    "allBrands": "Toutes les marques",
+    "allSkinTypes": "Tous types de peau",
+    "allConcerns": "Toutes les préoccupations",
+    "resultsCount": "{count, plural, one {# produit} other {# produits}}",
+    "noResultsTitle": "Aucun produit ne correspond",
+    "noResultsText": "Essayez un autre terme de recherche ou une autre catégorie.",
+    "country": "Origine",
+    "skinTypesLabel": "Peau",
+    "frequency": "Fréquence",
+    "keyActives": "Actifs clés",
+    "composition": "Composition",
+    "noTrackedActives": "Aucun suivi pour l'instant",
+    "seeMore": "Voir plus"
+  },
+  "productDetail": {
+    "notFound": "Ce produit n'existe pas (ou a été supprimé).",
+    "back": "Retour",
+    "origin": "Origine",
+    "price": "Prix",
+    "howToUse": "Comment l'utiliser",
+    "fullIngredients": "Liste complète des ingrédients (INCI)",
+    "trackedActives": "Actifs suivis",
+    "officialSite": "Site officiel",
+    "suitedFor": "Convient pour",
+    "targets": "Cible",
+    "addToShelf": "Ajouter à l'étagère",
+    "alreadyOnShelf": "Déjà sur votre étagère",
+    "conflictWarning": "L'ajouter créerait {count, plural, one {# conflit} other {# conflits}} avec votre étagère actuelle",
+    "noConflict": "Aucun conflit avec votre étagère actuelle",
+    "signInToAdd": "Connectez-vous pour l'ajouter à mon étagère",
+    "createAccountToSave": "Créez un compte pour enregistrer des produits"
+  },
+  "routinePage": {
+    "title": "Ma routine",
+    "signInPrompt": "Connectez-vous pour construire votre routine personnalisée.",
+    "signInCta": "Se connecter",
+    "subtitle": "{count, plural, one {Construite à partir du # produit de votre étagère.} other {Construite à partir des # produits de votre étagère.}}",
+    "morning": "Matin",
+    "evening": "Soir",
+    "steps": "{count, plural, one {# étape} other {# étapes}}",
+    "noProducts": "Aucun produit pour ce moment de la journée.",
+    "conflictsDetected": "Conflits détectés",
+    "noConflictsTitle": "Aucun conflit détecté 🎉",
+    "noConflictsText": "Les actifs de votre étagère font bon ménage.",
+    "duplicateActives": "Actifs en double",
+    "duplicateTitle": "Vous avez {count} produits avec le même actif fort",
+    "backToRoutine": "Retour à la routine",
+    "remove": "Retirer de la routine"
+  },
+  "conflictDetail": {
+    "notFound": "Ce conflit n'existe pas (plus).",
+    "why": "Pourquoi c'est signalé",
+    "suggestion": "Ce que Haru suggère",
+    "disclaimer": "Ces recommandations sont générales et ne remplacent pas l'avis d'un dermatologue, surtout pour une peau sensible ou un traitement prescrit."
+  },
+  "severity": {
+    "avoid": "À éviter",
+    "space_out": "À espacer",
+    "sequence": "À séquencer",
+    "note": "Bon à savoir"
+  },
+  "categories": {
+    "cleanser": "Nettoyant",
+    "toner": "Lotion tonique",
+    "essence": "Essence",
+    "serum": "Sérum",
+    "spot": "Soin ciblé",
+    "eye": "Soin contour des yeux",
+    "moisturizer": "Hydratant",
+    "oil": "Huile",
+    "sunscreen": "Protection solaire",
+    "cleansing-oil": "Huile démaquillante",
+    "cleansing-balm": "Baume démaquillant",
+    "cleansing-water": "Eau micellaire",
+    "cleansing-foam": "Mousse nettoyante",
+    "cleansing-gel": "Gel nettoyant",
+    "cleansing-cream": "Crème nettoyante",
+    "cleansing-powder": "Poudre nettoyante",
+    "enzyme-cleanser": "Nettoyant enzymatique",
+    "clay-cleanser": "Nettoyant à l'argile",
+    "makeup-remover": "Démaquillant",
+    "toner-hydrating": "Lotion hydratante",
+    "toner-barrier": "Lotion barrière",
+    "toner-brightening": "Lotion éclat",
+    "toner-soothing": "Lotion apaisante",
+    "toner-acne": "Lotion anti-acné",
+    "toner-exfoliating": "Lotion exfoliante",
+    "toner-pore": "Lotion resserrante",
+    "pad": "Disque",
+    "toner-pad": "Disque tonique",
+    "cica-pad": "Disque au cica",
+    "vitamin-pad": "Disque vitaminé",
+    "exfoliating-pad": "Disque exfoliant",
+    "cooling-pad": "Disque rafraîchissant",
+    "moisturizing-pad": "Disque hydratant",
+    "peeling": "Peeling",
+    "peeling-aha": "Peeling AHA",
+    "peeling-bha": "Peeling BHA",
+    "peeling-pha": "Peeling PHA",
+    "peeling-lha": "Peeling LHA",
+    "peeling-enzyme": "Peeling enzymatique",
+    "ampoule": "Ampoule",
+    "lotion": "Lait",
+    "emulsion": "Émulsion",
+    "mask": "Masque",
+    "sleeping-mask": "Masque de nuit",
+    "sheet-mask": "Masque tissu",
+    "wash-off-mask": "Masque à rincer",
+    "modeling-mask": "Masque modelant",
+    "clay-mask": "Masque à l'argile",
+    "eye-cream": "Crème contour des yeux",
+    "eye-patch": "Patch contour des yeux",
+    "gel-cream": "Crème-gel",
+    "barrier-cream": "Crème barrière",
+    "rich-cream": "Crème riche",
+    "sleeping-cream": "Crème de nuit",
+    "acne-cream": "Crème anti-acné",
+    "cica-cream": "Crème au cica",
+    "lip-care": "Soin des lèvres",
+    "sunscreen-chemical": "Protection solaire chimique",
+    "sunscreen-mineral": "Protection solaire minérale",
+    "sunscreen-hybrid": "Protection solaire hybride",
+    "sun-stick": "Stick solaire",
+    "sun-cushion": "Cushion solaire",
+    "sun-serum": "Sérum solaire",
+    "sun-gel": "Gel solaire",
+    "mist": "Brume",
+    "body": "Corps",
+    "scalp": "Cuir chevelu",
+    "hand": "Mains",
+    "foot": "Pieds",
+    "neck": "Cou",
+    "hair": "Cheveux",
+    "treatment": "Traitement"
+  },
+  "skinTypes": {
+    "oily": "Grasse",
+    "dry": "Sèche",
+    "combination": "Mixte",
+    "normal": "Normale",
+    "sensitive": "Sensible"
+  },
+  "concerns": {
+    "acne": "Acné",
+    "aging": "Vieillissement / rides",
+    "hydration": "Hydratation",
+    "redness": "Rougeurs",
+    "pigmentation": "Pigmentation / taches",
+    "pores": "Pores",
+    "dullness": "Teint terne",
+    "barrier": "Réparation de la barrière",
+    "anti-aging": "Anti-âge / fermeté",
+    "uv-protection": "Protection UV"
+  },
+  "sensitivities": {
+    "fragrance": "Parfum",
+    "essential-oils": "Huiles essentielles",
+    "alcohol": "Alcool (denat.)",
+    "silicones": "Silicones"
+  },
+  "climates": {
+    "humid": "Humide",
+    "dry": "Sec",
+    "temperate": "Tempéré",
+    "cold": "Froid"
+  },
+  "ageRanges": {
+    "teens": "Adolescence",
+    "20s": "20 ans",
+    "30s": "30 ans",
+    "40s": "40 ans",
+    "50plus": "50 ans et plus"
+  },
+  "budgets": {
+    "low": "Petit budget",
+    "mid": "Milieu de gamme",
+    "high": "Haut de gamme / dermocosmétique"
+  },
+  "quiz": {
+    "title": "Votre profil de peau",
+    "subtitle": "Quelques questions pour que les conseils de Haru parlent vraiment de votre peau — pas d'une routine générique.",
+    "stepOf": "Étape {current} sur {total}",
+    "skinTypeQuestion": "Comment décririez-vous votre peau ?",
+    "concernsQuestion": "Que souhaitez-vous traiter ? (plusieurs choix possibles)",
+    "ageRangeQuestion": "Quelle est votre tranche d'âge ?",
+    "sensitivitiesQuestion": "Des sensibilités connues ?",
+    "climateQuestion": "Quel est votre climat ?",
+    "budgetQuestion": "Quel est votre budget skincare ?",
+    "back": "Retour",
+    "next": "Suivant",
+    "finish": "Enregistrer mon profil",
+    "skip": "Passer — je ne suis pas sûr·e",
+    "savedTitle": "Profil enregistré",
+    "savedText": "Haru en tiendra désormais compte pour l'audit de votre routine et les suggestions de produits.",
+    "viewAudit": "Voir l'audit de ma routine",
+    "editProfile": "Modifier mon profil de peau"
+  },
+  "auditPage": {
+    "title": "Audit de routine",
+    "subtitle": "Un contrôle complet de votre routine par rapport à votre profil de peau — pas seulement les conflits.",
+    "scoreLabel": "Score de santé de routine",
+    "missingStepsTitle": "Étapes manquantes",
+    "missingStep": {
+      "cleanser": "Aucun nettoyant dans votre routine",
+      "moisturizer": "Aucun hydratant dans votre routine",
+      "sunscreen": "Aucune protection solaire dans votre routine du matin"
+    },
+    "missingStepHint": {
+      "cleanser": "Un nettoyant est la base de toute routine — sans lui, les actifs se posent sur les impuretés de la journée plutôt que sur une peau propre.",
+      "moisturizer": "Sauter l'hydratant peut pousser une peau grasse à produire encore plus de sébum, et prive les actifs d'une base qui soutient la barrière cutanée.",
+      "sunscreen": "L'absence de protection solaire annule le bénéfice de tous les autres produits — surtout après des exfoliants ou du rétinol, qui augmentent la sensibilité aux UV."
+    },
+    "mismatchTitle": "Produits qui ne conviennent peut-être pas à votre peau",
+    "mismatchReason": "Ce produit pourrait être trop fort pour votre type de peau ou votre profil",
+    "alternativesLabel": "Alternatives mieux adaptées",
+    "noAlternatives": "Aucune alternative mieux adaptée dans notre catalogue pour l'instant",
+    "noIssuesTitle": "Rien à signaler — routine solide",
+    "noIssuesText": "Chaque étape essentielle est couverte et chaque produit correspond à votre profil de peau.",
+    "upgradeTitle": "Débloquez votre audit de routine personnalisé",
+    "upgradeText": "L'audit complet — étapes manquantes, correspondance au profil de peau, et alternatives produits — est une fonctionnalité Haru Premium.",
+    "upgradeCta": "Voir Premium",
+    "needsProfileTitle": "Complétez d'abord votre profil de peau",
+    "needsProfileText": "Quelques questions rapides et Haru pourra vérifier votre routine par rapport à votre vraie peau, pas une peau générique.",
+    "needsProfileCta": "Faire le quiz peau",
+    "signInPrompt": "Connectez-vous pour lancer un audit de routine.",
+    "saveCta": "Enregistrer dans mes audits",
+    "saveCtaDone": "Enregistré",
+    "viewHistory": "Voir mon profil"
+  },
+  "upgradePage": {
+    "title": "Haru Premium",
+    "subtitle": "Des conseils personnalisés, pas une routine générique.",
+    "freeTitle": "Gratuit",
+    "freePrice": "0 €",
+    "freeFeatures": [
+      "Scan produit gratuit",
+      "Accès complet à la base de produits",
+      "Fiches produit avec origine, composition, type de peau et usage",
+      "Constructeur d'étagère et de routine de base",
+      "Navigation en bas de l'application"
+    ],
+    "premiumTitle": "Premium",
+    "premiumPrice": "6,99 €/mois",
+    "premiumFeatures": [
+      "Tout ce qui est inclus dans l'offre gratuite",
+      "Audit complet de l'étagère selon votre profil de peau",
+      "Recommandations d'étapes manquantes et de changements de produits",
+      "Produits enregistrés illimités sur votre étagère",
+      "Accès au scan visage"
+    ],
+    "subscribeCta": "S'abonner à Premium",
+    "currentPlanLabel": "Votre offre actuelle",
+    "manageBilling": "Gérer la facturation",
+    "comingSoon": "Les paiements ne sont pas encore configurés — revenez bientôt."
+  },
+  "ingredients": {
+    "retinol": {
+      "name": "Retinol / Retinoids",
+      "summary": "Cell renewal, anti-aging, acne."
+    },
+    "vitamin_c": {
+      "name": "Vitamin C (L-AA)",
+      "summary": "Antioxidant, glow, anti-pollution protection."
+    },
+    "niacinamide": {
+      "name": "Niacinamide",
+      "summary": "Regulates sebum, soothes, strengthens the barrier."
+    },
+    "aha": {
+      "name": "AHA (glycolic / lactic)",
+      "summary": "Exfoliant, texture and tone."
+    },
+    "bha": {
+      "name": "BHA (salicylic acid)",
+      "summary": "Exfoliant, unclogs pores, anti-blemish."
+    },
+    "benzoyl_peroxide": {
+      "name": "Benzoyl peroxide",
+      "summary": "Antibacterial, treats inflammatory acne."
+    },
+    "vitamin_e": {
+      "name": "Vitamin E",
+      "summary": "Antioxidant, often paired with vitamin C."
+    },
+    "peptides": {
+      "name": "Peptides / Copper peptides",
+      "summary": "Firmness, barrier repair."
+    },
+    "hyaluronic_acid": {
+      "name": "Hyaluronic acid",
+      "summary": "Hydration, plumping."
+    },
+    "centella": {
+      "name": "Centella asiatica (Cica)",
+      "summary": "Soothing, repairing — a K-beauty staple."
+    },
+    "spf": {
+      "name": "Sunscreen (SPF)",
+      "summary": "UV protection — the final morning step."
+    },
+    "ceramides": {
+      "name": "Ceramides",
+      "summary": "Restores the skin barrier."
+    }
+  },
+  "conflictRules": {
+    "retinol_aha_bha": {
+      "headline": "High over-exfoliation risk",
+      "reason": "Retinol and AHAs both speed up cell turnover: combined the same night, they multiply redness, sensitivity and peeling.",
+      "recommendation": "Alternate nights (e.g. retinol Mon/Wed/Fri, AHA the other nights) instead of layering them."
+    },
+    "retinol_bha": {
+      "headline": "High over-exfoliation risk",
+      "reason": "Same logic as with AHAs: BHA and retinol stack irritation on an already fragile skin barrier.",
+      "recommendation": "Give each its own evening, never both at once."
+    },
+    "retinol_benzoyl": {
+      "headline": "Benzoyl peroxide deactivates retinol",
+      "reason": "Benzoyl peroxide oxidizes retinol and significantly reduces its efficacy, on top of irritating skin if combined.",
+      "recommendation": "Use benzoyl peroxide in the morning and keep retinol for the evening, spaced by a few hours — or alternate days."
+    },
+    "vitc_retinol_timing": {
+      "headline": "Two powerful actives, two different moments",
+      "reason": "L-AA vitamin C is unstable at a pH close to active retinol; combining them can neutralize part of their efficacy and irritate skin.",
+      "recommendation": "Vitamin C in the morning (antioxidant + protection), retinol at night. Simple, effective, zero conflict."
+    },
+    "aha_bha_together": {
+      "headline": "Stacking exfoliants",
+      "reason": "Using two chemical exfoliants the same evening raises the risk of a damaged skin barrier, especially on sensitive skin.",
+      "recommendation": "Pick one per evening, or reserve the combo for very tolerant skin starting at low frequency."
+    },
+    "niacinamide_vitc_myth": {
+      "headline": "Myth: this combination is actually safe",
+      "reason": "The belief that niacinamide + vitamin C form an ineffective complex comes from old studies at very high temperatures, not representative of a real routine.",
+      "recommendation": "You can use them together without issue. If your skin reacts, this combination isn't the cause — look at concentration instead."
+    },
+    "peptides_aha": {
+      "headline": "Acidic pH can deactivate some peptides",
+      "reason": "Many peptides work best at neutral pH; an acidic exfoliant applied right before can reduce their efficacy.",
+      "recommendation": "Apply peptides at another time (morning routine, or a layer after rinsing/neutralizing the pH)."
+    },
+    "spf_am_only": {
+      "headline": "Retinol increases photosensitivity",
+      "reason": "Retinol makes skin more sensitive to UV. Since it's an evening product, the real thing to manage is your SPF the next morning.",
+      "recommendation": "No same-evening application to manage — just make sure to apply SPF the morning after a retinol night."
+    }
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "Créer un compte",
+    "signOut": "Se déconnecter",
+    "name": "Nom",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "signInCta": "Se connecter",
+    "signUpCta": "Créer mon compte",
+    "noAccount": "Pas encore de compte ?",
+    "hasAccount": "Déjà un compte ?",
+    "createOne": "En créer un",
+    "signInInstead": "Se connecter à la place",
+    "orContinueWith": "ou",
+    "errorInvalidCredentials": "E-mail ou mot de passe incorrect.",
+    "errorEmailTaken": "Un compte existe déjà avec cet e-mail.",
+    "errorGeneric": "Une erreur est survenue. Veuillez réessayer.",
+    "errorWeakPassword": "Le mot de passe doit contenir au moins 8 caractères.",
+    "signInSubtitle": "Connectez-vous pour synchroniser votre étagère sur tous vos appareils.",
+    "signUpSubtitle": "Créez un compte pour enregistrer votre étagère et votre routine."
+  },
+  "profile": {
+    "title": "Profil",
+    "memberSince": "Membre depuis {date}",
+    "shelfCount": "{count, plural, one {# produit suivi} other {# produits suivis}}",
+    "signOutCta": "Se déconnecter",
+    "deleteAccount": "Supprimer le compte",
+    "deleteAccountConfirm": "Cela supprime définitivement votre compte et votre étagère. Cette action est irréversible.",
+    "language": "Langue",
+    "theme": "Apparence",
+    "themeLight": "Clair",
+    "themeDark": "Sombre",
+    "themeSystem": "Système",
+    "settingsTitle": "Paramètres",
+    "settingsSubtitle": "Compte, préférences, sécurité et accès.",
+    "tabs": {
+      "scans": "Mes scans",
+      "audits": "Mes audits",
+      "progress": "Progression",
+      "account": "Paramètres du compte"
+    },
+    "scansEmpty": "Aucun scan enregistré pour le moment. Faites un scan visage et il apparaîtra ici.",
+    "auditsEmpty": "Aucun audit réalisé pour le moment. Vérifiez votre routine depuis l'onglet Audit.",
+    "scoreLabel": "Score",
+    "startScan": "Démarrer un nouveau scan",
+    "openAudit": "Lancer un audit",
+    "compareTitle": "Lire votre historique",
+    "compareText": "Les comparaisons doivent être lues avec précaution : Haru signale la qualité de la photo et ne considère jamais l'éclairage comme une amélioration garantie.",
+    "routineChangesTitle": "Changements de routine",
+    "routineChangesText": "Les produits ajoutés après un scan ou un audit seront regroupés ici pour comprendre ce qui a changé et pourquoi."
+  },
+  "common": {
+    "back": "Retour",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "loading": "Chargement..."
+  },
+  "routineWorkspace": {
+    "title": "Mon espace routine",
+    "subtitle": "Votre routine du matin et du soir, vos produits enregistrés, notes et vidéos beauté au même endroit.",
+    "tipOfTheDay": "Astuce du jour",
+    "scan": "Scanner",
+    "favorite": "Favori",
+    "remove": "Retirer",
+    "edit": "Modifier",
+    "cancel": "Annuler",
+    "categoryPlaceholder": "Catégorie personnalisée : acné, glow, maquillage...",
+    "productNotePlaceholder": "Note sur ce produit, réaction, fréquence, ordre...",
+    "emptyProductsTitle": "Aucun produit enregistré",
+    "emptyProductsText": "Ajoutez des produits depuis le catalogue ou via un scan.",
+    "emptyFavorites": "Pas encore de favoris.",
+    "newNote": "Nouvelle note",
+    "noteTitlePlaceholder": "Titre",
+    "noteBodyPlaceholder": "Routine, réaction, idée maquillage...",
+    "add": "Ajouter",
+    "saveVideo": "Enregistrer une vidéo",
+    "linkTitlePlaceholder": "Titre",
+    "linkUrlPlaceholder": "Lien YouTube, Instagram, TikTok...",
+    "linkNotePlaceholder": "Pourquoi voulez-vous garder cette routine ?",
+    "save": "Enregistrer",
+    "link": "Lien",
+    "tabs": {
+      "routine": "Routine et produits",
+      "favorites": "Favoris",
+      "notes": "Notes",
+      "links": "Vidéos"
+    },
+    "routineSlot": {
+      "both": "Matin et soir",
+      "morning": "Matin",
+      "evening": "Soir",
+      "pause": "En pause"
+    },
+    "routineProductsTitle": "Produits de cette routine",
+    "routineProductsText": "Cliquez sur un produit pour modifier son moment d'utilisation, sa catégorie, ses notes, son statut favori, ou le retirer.",
+    "viewSheet": "Voir la fiche",
+    "embedUnavailable": "Cette vidéo ne peut pas encore être intégrée ici. Enregistrez une vidéo YouTube, Instagram Reel ou TikTok pour la lire directement dans Haru."
+  },
+  "accountSettings": {
+    "title": "Informations du compte",
+    "subtitle": "Nom, e-mail de connexion et mot de passe.",
+    "name": "Nom",
+    "email": "E-mail",
+    "currentPassword": "Mot de passe actuel",
+    "newPassword": "Nouveau mot de passe",
+    "save": "Enregistrer",
+    "saved": "Paramètres enregistrés.",
+    "error": "Impossible d'enregistrer ces modifications."
+  },
+  "cookieBanner": {
+    "text": "Haru utilise des cookies nécessaires au fonctionnement du site. Les cookies de mesure ou d'amélioration ne sont activés qu'avec votre consentement.",
+    "reject": "Refuser",
+    "accept": "Accepter"
+  },
+  "legal": {
+    "title": "Legal information",
+    "subtitle": "Legal notice, terms of sale, privacy policy and cookie policy for Haru.",
+    "placeholderBadge": "To be completed by the operator",
+    "noticeTitle": "Legal notice",
+    "noticeIntro": "Information published in application of legal transparency requirements for online services.",
+    "noticePublisherLabel": "Publisher",
+    "noticePublisherPlaceholder": "Legal company name, registered address, company registration number and VAT number — to be provided by the Haru operator and added here.",
+    "noticeDirectorLabel": "Publication director",
+    "noticeDirectorPlaceholder": "Name of the person or entity responsible for publication — to be provided by the Haru operator.",
+    "noticeHostingLabel": "Hosting provider",
+    "noticeHostingText": "This website is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, United States.",
+    "noticeContactLabel": "Contact",
+    "noticeContactPlaceholder": "A dedicated contact email address — to be provided by the Haru operator and added here.",
+    "termsTitle": "Terms of sale",
+    "termsIntro": "These terms of sale govern the purchase of Haru's paid features: the Premium subscription and one-time face scan credits. Using a paid feature means you accept these terms.",
+    "termsServiceTitle": "What is included",
+    "termsServiceText": "The free plan includes product scanning, the full product database, and a basic shelf and routine builder. Premium (subscription) adds a full routine audit against your skin profile, unlimited saved products, and unlimited face scans. Without a subscription, face scans can be purchased individually as one-time credits.",
+    "termsPriceTitle": "Prices",
+    "termsPriceText": "Premium subscription: €6.99 per month. One-time face scan: €9 per scan, no subscription required. Prices are shown in euros on the Upgrade page before payment and include any applicable tax shown at checkout. Haru may change prices for future billing periods; active subscribers are notified before a price change applies to their next renewal.",
+    "termsPaymentTitle": "Payment",
+    "termsPaymentText": "Payments are handled by Stripe, an independent payment processor. Haru does not receive or store your card number; Stripe's own terms and privacy policy apply to the payment step.",
+    "termsDurationTitle": "Duration, renewal and cancellation",
+    "termsDurationText": "The Premium subscription renews automatically every month until cancelled. You can cancel at any time from the billing portal linked on the Upgrade page. Cancelling stops future renewals; it does not refund the period already paid for, and Premium access continues until that period ends.",
+    "termsWithdrawalTitle": "Right of withdrawal",
+    "termsWithdrawalText": "Haru's paid features are digital services made available immediately once purchased. Where the law allows a consumer to expressly waive the standard withdrawal period for this kind of immediate digital service, starting the service (activating Premium or using a purchased scan) is treated as that waiver from the moment of purchase.",
+    "termsRefundTitle": "Refunds",
+    "termsRefundText": "Outside of the above, refund requests are reviewed individually — for example if a paid feature was genuinely unusable due to a technical fault on Haru's side. Contact support with your account email and the date of the charge.",
+    "privacyTitle": "Privacy policy",
+    "privacyIntro": "This policy explains what personal data Haru processes, why, and how you can control it.",
+    "privacyDataTitle": "Data we process",
+    "privacyDataText": "Account details (name, email, password — stored as a hash, never in plain text); your skin profile answers; your saved shelf, personal notes and saved links; your face scan results; your newsletter subscription status if you opt in; and basic first-party usage data used to operate the app, without third-party advertising trackers.",
+    "privacyScanTitle": "Face and product scan photos",
+    "privacyScanText": "A photo you submit for a face or product scan is sent to Anthropic's Claude API to generate the analysis and is not stored by Haru — only the resulting result (scores, written notes, summary) is saved to your account so you can consult it later.",
+    "privacySubprocessorsTitle": "Who else processes data on Haru's behalf",
+    "privacySubprocessorsText": "Stripe (payment processing), Resend (transactional and newsletter email delivery), Anthropic (photo analysis for scans), and Vercel (application hosting). Each acts as a data processor under its own applicable terms.",
+    "privacyRightsTitle": "Your rights",
+    "privacyRightsText": "You can review and edit your account details from your profile at any time, and permanently delete your account and associated data from Account settings. For any other request about your data, use the contact details in the legal notice above.",
+    "privacyRetentionTitle": "Retention",
+    "privacyRetentionText": "Account and profile data is kept for as long as your account exists. Deleting your account removes your shelf, notes, saved links, skin profile, scan history and audit history.",
+    "cookiesTitle": "Cookie policy",
+    "cookiesIntro": "Haru uses a small number of cookies and locally stored preferences, described below.",
+    "cookiesEssentialTitle": "Essential",
+    "cookiesEssentialText": "A sign-in session cookie keeps you logged in, and a language preference cookie remembers whether you're using the English or Korean interface. These are required for the site to function and are not part of the accept/reject choice below.",
+    "cookiesOptionalTitle": "Optional",
+    "cookiesOptionalText": "Your cookie banner choice and your light/dark theme preference are stored locally in your browser, not as tracking cookies. Haru does not currently set any third-party analytics or advertising cookies, regardless of the choice you make in the banner.",
+    "responsibilityTitle": "Beauty information",
+    "responsibilityText": "Product sheets, routine guidance, face scan results and all other beauty content on Haru are informational and based on general cosmetic knowledge. They do not constitute medical advice and do not replace a consultation with a dermatologist or another healthcare professional, particularly for persistent, painful or worsening skin conditions.",
+    "contactTitle": "Contact",
+    "contactText": "For any question about these terms, your data, or your account, contact Haru using the address in the legal notice above."
+  },
+  "auditShowcase": {
+    "eyebrow": "Audit peau",
+    "title": "Sachez ce que votre routine fait réellement pour votre peau.",
+    "subtitle": "Haru analyse vos produits enregistrés, vos étapes du matin et du soir, les actifs utilisés et votre profil de peau pour montrer ce qui convient, ce qui se chevauche, et ce qui manque peut-être.",
+    "ctaPrimary": "Lancer mon audit",
+    "ctaSecondary": "Commencer par un scan visage",
+    "note": "L'audit donne des conseils beauté à partir de votre routine et de l'état visible de votre peau. Il ne pose pas de diagnostic et ne remplace pas un dermatologue.",
+    "panelEyebrow": "Bilan de routine personnel",
+    "priorityTitle": "Le résultat reste simple",
+    "checks": [
+      {
+        "title": "Audit produit",
+        "text": "Objectif, actifs clés, adéquation au type de peau, risque d'irritation, fréquence, et comment utiliser chaque produit."
+      },
+      {
+        "title": "Audit d'étagère",
+        "text": "Étapes manquantes, produits redondants, actifs répétés, et produits qui ne correspondent pas à vos objectifs."
+      },
+      {
+        "title": "Routine du matin",
+        "text": "Ordre d'application, hydratation, protection solaire, et si les actifs forts sont placés en sécurité pour la journée."
+      },
+      {
+        "title": "Routine du soir",
+        "text": "Nuits de récupération, rythme des exfoliants ou rétinoïdes, superpositions incompatibles, et soutien de la barrière cutanée."
+      }
+    ],
+    "priorities": [
+      "Trois à cinq priorités claires plutôt qu'un mur de conseils.",
+      "Des actions immédiates et un plan réaliste pour les semaines à venir.",
+      "Des suggestions de produits basées sur ce qui manque dans votre routine."
+    ]
+  },
+  "wellnessShowcase": {
+    "eyebrow": "Bien-être",
+    "title": "Le skincare, ce n'est pas que ce que vous appliquez.",
+    "subtitle": "Le stress, le sommeil et les tensions du visage changent l'apparence et la sensation de la peau. L'espace bien-être de Haru garde ce soutien pratique, calme et non médical — respiration, repères de sommeil, sons apaisants et bibliothèque de soins du visage.",
+    "ctaPrimary": "Ouvrir bien-être",
+    "note": "Les outils bien-être sont un soutien relaxation et mode de vie, pas un traitement médical ni un substitut à un suivi professionnel.",
+    "panelEyebrow": "Un soutien calme et pratique",
+    "checks": [
+      {
+        "title": "Stress et peau",
+        "text": "Comment le stress peut se traduire par de l'excès de sébum, des gestes compulsifs ou de l'inflammation — et quoi faire."
+      },
+      {
+        "title": "Respiration guidée",
+        "text": "Un exercice de respiration rythmé de deux minutes, avant une routine du soir ou pour une mâchoire tendue."
+      },
+      {
+        "title": "Sons apaisants",
+        "text": "Bruit blanc, pluie, texture océan et tonalités relaxantes simples, générés en direct."
+      },
+      {
+        "title": "Bibliothèque soin du visage",
+        "text": "Massage doux, bases du gua sha, relâchement de la mâchoire et routines de yoga facial."
+      }
+    ]
+  },
+  "scanShowcase": {
+    "eyebrow": "Scan produit",
+    "title": "Sachez exactement ce que vous appliquez sur votre peau.",
+    "subtitle": "Scannez l'emballage d'un produit ou cherchez dans notre base et Haru affiche le tableau complet : à quoi il sert, comment l'utiliser, à quels types de peau il convient, et où il se place dans votre routine du matin ou du soir.",
+    "ctaPrimary": "Scanner un produit",
+    "ctaSecondary": "Parcourir le catalogue",
+    "note": "Les correspondances proviennent de la base de produits de Haru. Si un produit n'est pas reconnu, vous pouvez le chercher ou l'ajouter manuellement.",
+    "panelEyebrow": "Un scan, la fiche complète",
+    "checks": [
+      {
+        "title": "Identification instantanée",
+        "text": "Photographiez l'emballage ou cherchez par nom et marque — pas besoin de lecteur de code-barres."
+      },
+      {
+        "title": "Composition complète",
+        "text": "Actifs clés, liste complète des ingrédients, et à quoi sert réellement chacun."
+      },
+      {
+        "title": "Comment et quand l'utiliser",
+        "text": "Étapes d'utilisation, fréquence, et si c'est un produit du matin, du soir, ou à tout moment."
+      },
+      {
+        "title": "Adapté à votre peau",
+        "text": "Quels types de peau et préoccupations il convient, et où il se place dans votre routine."
+      }
+    ]
+  },
+  "goodHabits": {
+    "eyebrow": "Good habits",
+    "title": "Start with skin logic, then personalize.",
+    "subtitle": "Haru does not pretend everyone needs the same routine. The base is simple: cleanse, treat carefully, moisturize, protect. Then the details change by skin type.",
+    "guide": "Guide",
+    "amLabel": "AM",
+    "pmLabel": "PM",
+    "bothLabel": "Both",
+    "watchOutLabel": "Watch out",
+    "rulesTitle": "Rules Haru uses when checking a routine",
+    "ingredientsTitle": "Ingredient base Haru watches",
+    "trackedFallback": "Tracked by Haru's compatibility rules.",
+    "disclaimer": "Based on dermatologist-style routine basics: gentle cleansing, moisturizing, broad-spectrum SPF 30+, cautious active use, and sunscreen reapplication outdoors. Haru is guidance, not a medical diagnosis.",
+    "daily": [
+      {
+        "title": "Morning is protection",
+        "text": "Cleanse only if you wake up oily or sweaty, hydrate, then finish with broad-spectrum SPF 30 or higher every day."
+      },
+      {
+        "title": "Evening is removal and repair",
+        "text": "Remove sunscreen and makeup, cleanse gently, then use treatment only if your skin tolerates it. Finish with moisturizer."
+      },
+      {
+        "title": "SPF is the non-negotiable step",
+        "text": "Reapply about every 2 hours when outdoors, and after sweating or swimming. Actives work better when UV is controlled."
+      },
+      {
+        "title": "Do less when skin is irritated",
+        "text": "Pause retinoids, acids, scrubs and fragrance-heavy extras when skin stings, flakes, burns, or stays red."
+      }
+    ],
+    "routines": [
+      {
+        "type": "Dry or tight skin",
+        "am": "Gentle rinse or creamy cleanser -> hydrating toner/serum -> ceramide moisturizer -> SPF.",
+        "pm": "Cleanser -> hydrating serum on damp skin -> richer moisturizer or sleeping mask.",
+        "avoid": "Avoid foaming cleansers that leave skin squeaky, daily acids, and layering too many actives."
+      },
+      {
+        "type": "Oily or breakout-prone skin",
+        "am": "Light cleanser -> niacinamide or calming serum -> gel moisturizer -> lightweight SPF.",
+        "pm": "Cleanser -> BHA 2-4 nights/week or acne treatment -> non-comedogenic moisturizer.",
+        "avoid": "Do not skip moisturizer; over-stripping often makes oiliness worse."
+      },
+      {
+        "type": "Sensitive or redness-prone skin",
+        "am": "Minimal cleanse -> centella/panthenol serum -> barrier cream -> mineral or gentle SPF.",
+        "pm": "Cleanser -> soothing serum -> ceramide moisturizer. Add actives one at a time only.",
+        "avoid": "Avoid starting retinol, vitamin C and exfoliating acids in the same week."
+      },
+      {
+        "type": "Combination skin",
+        "am": "Gentle cleanser where needed -> light hydration -> moisturizer only where dry -> SPF.",
+        "pm": "Cleanser -> treatment by zone: BHA on oily areas, barrier care on dry areas -> moisturizer.",
+        "avoid": "Do not force one heavy routine on the whole face if your T-zone and cheeks behave differently."
+      },
+      {
+        "type": "Dullness or uneven tone",
+        "am": "Cleanser -> vitamin C or niacinamide -> moisturizer -> SPF.",
+        "pm": "Cleanser -> gentle AHA 1-3 nights/week or retinoid on alternate nights -> moisturizer.",
+        "avoid": "Do not exfoliate daily for glow. Irritation creates more uneven tone."
+      },
+      {
+        "type": "First simple routine",
+        "am": "Cleanser if needed -> moisturizer -> SPF.",
+        "pm": "Cleanser -> moisturizer.",
+        "avoid": "Add only one new product at a time, then wait 1-2 weeks before adding another active."
+      }
+    ],
+    "rules": [
+      "Apply thinnest textures before thicker creams.",
+      "Keep retinoids mostly at night and pair them with morning SPF.",
+      "Use exfoliating acids gradually; more tingle is not more result.",
+      "Patch test new actives, especially if your skin is reactive.",
+      "A routine that you can repeat beats a 12-step routine you abandon."
+    ],
+    "ingredients": {
+      "retinol": {
+        "name": "Retinoids",
+        "summary": "Texture, visible aging, breakouts; mostly night use."
+      },
+      "vitamin_c": {
+        "name": "Vitamin C",
+        "summary": "Morning antioxidant and tone support."
+      },
+      "niacinamide": {
+        "name": "Niacinamide",
+        "summary": "Barrier, oil balance, redness and tone support."
+      },
+      "aha": {
+        "name": "AHA",
+        "summary": "Surface exfoliation for texture and glow."
+      },
+      "bha": {
+        "name": "BHA",
+        "summary": "Oil-soluble pore and blackhead support."
+      },
+      "benzoyl_peroxide": {
+        "name": "Benzoyl peroxide",
+        "summary": "Acne active; can be drying and bleaching."
+      },
+      "vitamin_e": {
+        "name": "Vitamin E",
+        "summary": "Antioxidant often paired with vitamin C."
+      },
+      "peptides": {
+        "name": "Peptides",
+        "summary": "Firmness and barrier-supporting signal ingredients."
+      },
+      "hyaluronic_acid": {
+        "name": "Hyaluronic acid",
+        "summary": "Hydration support, best sealed with moisturizer."
+      },
+      "centella": {
+        "name": "Centella / cica",
+        "summary": "Soothing support for visible redness."
+      },
+      "spf": {
+        "name": "SPF",
+        "summary": "Daily UV protection; the final morning step."
+      },
+      "ceramides": {
+        "name": "Ceramides",
+        "summary": "Barrier lipids for dryness and sensitivity."
+      }
+    }
+  }
+}

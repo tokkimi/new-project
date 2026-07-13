@@ -1,10 +1,24 @@
 "use client";
 
 import * as React from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+
+const LOCALE_LABEL: Record<Locale, string> = {
+  en: "EN",
+  ko: "한국어",
+  fr: "FR",
+  ja: "日本語",
+};
+
+const LOCALE_CODE: Record<Locale, string> = {
+  en: "EN",
+  ko: "KO",
+  fr: "FR",
+  ja: "JA",
+};
 
 export function LocaleSwitcher({
   className,
@@ -13,28 +27,31 @@ export function LocaleSwitcher({
   className?: string;
   compact?: boolean;
 }) {
-  const t = useTranslations("localeSwitcher");
-  const locale = useLocale();
+  const locale = useLocale() as Locale;
   const pathname = usePathname();
   const router = useRouter();
   const [pending, startTransition] = React.useTransition();
 
   if (compact) {
-    const other = routing.locales.find((loc) => loc !== locale) ?? routing.locales[0];
     return (
-      <button
-        type="button"
+      <select
+        value={locale}
         disabled={pending}
-        onClick={() => startTransition(() => router.replace(pathname, { locale: other }))}
-        aria-label={locale === "ko" ? "한국어" : t("en")}
-        title={other === "ko" ? "한국어로 전환" : "Switch to English"}
+        onChange={(e) =>
+          startTransition(() => router.replace(pathname, { locale: e.target.value as Locale }))
+        }
+        aria-label="Language"
         className={cn(
-          "flex h-7 items-center justify-center rounded-full border border-border bg-muted px-2.5 text-[11px] font-medium text-muted-foreground transition-colors hover:text-foreground",
+          "h-7 rounded-full border border-border bg-muted px-2 text-[11px] font-medium text-muted-foreground",
           className
         )}
       >
-        {locale === "ko" ? "KO" : "EN"}
-      </button>
+        {routing.locales.map((loc) => (
+          <option key={loc} value={loc}>
+            {LOCALE_CODE[loc]}
+          </option>
+        ))}
+      </select>
     );
   }
 
@@ -62,7 +79,7 @@ export function LocaleSwitcher({
               : "text-muted-foreground hover:text-foreground"
           )}
         >
-          {loc === "ko" ? "한국어" : t("en")}
+          {LOCALE_LABEL[loc]}
         </button>
       ))}
     </div>
