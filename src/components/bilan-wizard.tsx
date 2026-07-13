@@ -1,5 +1,4 @@
 "use client";
-
 import * as React from "react";
 import { useLocale } from "next-intl";
 import { ArrowLeft, ArrowRight, Camera, Check, ShieldCheck } from "lucide-react";
@@ -16,7 +15,21 @@ import {
 
 type Lang = "en" | "ko" | "fr" | "ja";
 type Step = "consent" | "routine" | "face_scan" | `section:${string}`;
-type ScanSummary = { id: string; overallScore: number; skinType: string | null; createdAt: string } | null;
+type ScanModule = {
+  id: string;
+  score: number;
+  severity?: string;
+  note?: string;
+  flagged?: boolean;
+};
+type ScanSummary = {
+  id: string;
+  overallScore: number;
+  skinType: string | null;
+  summary: string | null;
+  analysis: unknown;
+  createdAt: string;
+} | null;
 type BilanResult = {
   id: string;
   overallScore: number;
@@ -51,6 +64,10 @@ const UI: Record<Lang, {
   resultSubtitle: string;
   overallScore: string;
   sectionScan: string;
+  scanObserved: string;
+  scanSignals: string;
+  completeAuditTitle: string;
+  completeAuditText: string;
   sectionLifestyle: string;
   routineIssues: string;
   flagsNone: string;
@@ -85,6 +102,11 @@ const UI: Record<Lang, {
     resultSubtitle: "Each result is separated into a clear page.",
     overallScore: "Overall score",
     sectionScan: "Face scan",
+    scanObserved: "Observed by the scan",
+    scanSignals: "Main visible signals",
+    completeAuditTitle: "Complete audit",
+    completeAuditText:
+      "This score combines the questionnaire, your current routine and the latest face scan into one action plan.",
     sectionLifestyle: "Lifestyle and context",
     routineIssues: "issues",
     flagsNone: "Nothing major flagged here.",
@@ -95,20 +117,20 @@ const UI: Record<Lang, {
   fr: {
     introTitle: "Audit Haru Skin complet",
     introText:
-      "Un audit approfondi qui sépare type de peau de base, état actuel, sécurité, routine, mode de vie, produits et scan visage final.",
-    start: "Démarrer l'audit complet",
+      "Un audit approfondi qui separe type de peau de base, etat actuel, securite, routine, mode de vie, produits et scan visage final.",
+    start: "Demarrer l'audit complet",
     consentTitle: "Consentement et limites",
     consentText:
-      "Haru fournit une analyse cosmétique et éducative. Haru ne pose pas de diagnostic médical et ne remplace pas un dermatologue. Le scan peut être influencé par la lumière, le maquillage, les filtres, l'angle, la qualité de l'appareil et une exposition récente au chaud, au froid ou au soleil.",
-    estimatedTime: "Temps estimé : 8-12 min",
-    routineTitle: "Analyse de l'étagère actuelle",
-    routineText: "Haru vérifie d'abord les étapes manquantes, conflits d'actifs, doublons et l'adéquation des produits.",
+      "Haru fournit une analyse cosmetique et educative. Haru ne pose pas de diagnostic medical et ne remplace pas un dermatologue. Le scan peut etre influence par la lumiere, le maquillage, les filtres, l'angle, la qualite de l'appareil et une exposition recente au chaud, au froid ou au soleil.",
+    estimatedTime: "Temps estime : 8-12 min",
+    routineTitle: "Analyse de l'etagere actuelle",
+    routineText: "Haru verifie d'abord les etapes manquantes, conflits d'actifs, doublons et l'adequation des produits.",
     finalScanTitle: "Scan visage final",
     finalScanText:
-      "L'audit doit finir par un nouveau scan visage afin de croiser vos réponses avec les signaux visibles de la peau.",
+      "L'audit doit finir par un nouveau scan visage afin de croiser vos reponses avec les signaux visibles de la peau.",
     finalScanRequired:
-      "Faites un nouveau scan, puis revenez ici pour générer le résultat complet. Si vous venez de le faire, continuez.",
-    noScan: "Aucun scan visage récent trouvé.",
+      "Faites un nouveau scan, puis revenez ici pour generer le resultat complet. Si vous venez de le faire, continuez.",
+    noScan: "Aucun scan visage recent trouve.",
     takeScan: "Faire un scan visage",
     scanScore: "Score de peau",
     back: "Retour",
@@ -116,12 +138,17 @@ const UI: Record<Lang, {
     finish: "Voir mon audit complet",
     saving: "Enregistrement...",
     resultTitle: "Votre audit",
-    resultSubtitle: "Chaque résultat est séparé en page claire.",
+    resultSubtitle: "Chaque resultat est separe en page claire.",
     overallScore: "Score global",
     sectionScan: "Scan visage",
+    scanObserved: "Observations du scan",
+    scanSignals: "Signaux visibles principaux",
+    completeAuditTitle: "Audit complet",
+    completeAuditText:
+      "Ce score regroupe le questionnaire, la routine actuelle et le dernier scan visage dans un plan d'action.",
     sectionLifestyle: "Mode de vie et contexte",
     routineIssues: "points",
-    flagsNone: "Rien de majeur à signaler ici.",
+    flagsNone: "Rien de majeur a signaler ici.",
     viewProfile: "Voir dans mon profil",
     restart: "Commencer un nouvel audit",
     section: "Section",
@@ -410,6 +437,32 @@ function scoreTone(score: number) {
   return "text-destructive";
 }
 
+function scanModules(latestScan: ScanSummary) {
+  const analysis = latestScan?.analysis;
+  if (!analysis || typeof analysis !== "object") return [];
+  const modules = (analysis as { modules?: unknown }).modules;
+  if (!Array.isArray(modules)) return [];
+  return modules
+    .filter((module): module is ScanModule => {
+      return (
+        !!module &&
+        typeof module === "object" &&
+        typeof (module as ScanModule).id === "string" &&
+        typeof (module as ScanModule).score === "number"
+      );
+    })
+    .sort((a, b) => Number(b.flagged) - Number(a.flagged) || b.score - a.score)
+    .slice(0, 5);
+}
+
+function scanSummary(latestScan: ScanSummary) {
+  const analysis = latestScan?.analysis;
+  if (analysis && typeof analysis === "object" && typeof (analysis as { summary?: unknown }).summary === "string") {
+    return (analysis as { summary: string }).summary;
+  }
+  return latestScan?.summary ?? null;
+}
+
 function BilanResultView({
   result,
   latestScan,
@@ -423,21 +476,45 @@ function BilanResultView({
   t: (typeof UI)["en"];
   onRestart: () => void;
 }) {
+  const modules = scanModules(latestScan);
+  const summary = scanSummary(latestScan);
+
   return (
     <div className="flex flex-col gap-7">
-      <section className="flex min-h-[calc(100svh-10rem)] flex-col items-center justify-center gap-5 rounded-[2rem] bg-card p-6 text-center shadow-[0_22px_80px_-56px_rgba(0,0,0,0.45)]">
-        <p className="text-xs font-medium uppercase tracking-wide text-primary">{t.resultTitle}</p>
-        <h2 className="max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">{t.overallScore}</h2>
-        <span className={`font-serif text-7xl ${scoreTone(result.overallScore)}`}>{result.overallScore}</span>
-        <p className="max-w-xl text-sm text-muted-foreground">{t.resultSubtitle}</p>
-      </section>
-
       <section className="flex min-h-[calc(100svh-9rem)] flex-col justify-center gap-5 rounded-[2rem] border border-border/50 bg-card/90 p-6">
-        <h3 className="font-serif text-3xl">{t.sectionScan}</h3>
+        <div>
+          <p className="text-xs font-medium uppercase tracking-wide text-primary">{t.resultTitle}</p>
+          <h3 className="mt-2 font-serif text-4xl leading-tight sm:text-5xl">{t.sectionScan}</h3>
+        </div>
         {latestScan ? (
-          <div className="rounded-[1.5rem] bg-secondary/60 p-5">
-            <span className={`font-serif text-6xl ${scoreTone(latestScan.overallScore)}`}>{latestScan.overallScore}</span>
-            {latestScan.skinType && <p className="mt-2 text-muted-foreground">{latestScan.skinType}</p>}
+          <div className="grid gap-4 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="rounded-[1.5rem] bg-secondary/60 p-5">
+              <p className="text-sm font-medium text-muted-foreground">{t.scanScore}</p>
+              <span className={`font-serif text-6xl ${scoreTone(latestScan.overallScore)}`}>
+                {latestScan.overallScore}
+              </span>
+              {latestScan.skinType && <p className="mt-2 text-muted-foreground">{latestScan.skinType}</p>}
+            </div>
+            <div className="rounded-[1.5rem] bg-secondary/40 p-5">
+              <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{t.scanObserved}</p>
+              {summary && <p className="mt-3 text-sm leading-7 text-muted-foreground">{summary}</p>}
+              {modules.length > 0 && (
+                <div className="mt-5 space-y-3">
+                  <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{t.scanSignals}</p>
+                  {modules.map((module) => (
+                    <div key={module.id} className="rounded-2xl bg-card/80 p-3">
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="text-sm font-medium capitalize">{module.id.replace(/([A-Z])/g, " $1")}</span>
+                        <span className="rounded-full bg-secondary px-2 py-1 text-xs text-muted-foreground">
+                          {module.score}/9
+                        </span>
+                      </div>
+                      {module.note && <p className="mt-1 text-sm leading-6 text-muted-foreground">{module.note}</p>}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         ) : (
           <Card className="rounded-[1.5rem] bg-secondary/50">
@@ -447,6 +524,13 @@ function BilanResultView({
             </Button>
           </Card>
         )}
+      </section>
+
+      <section className="flex min-h-[calc(100svh-10rem)] flex-col items-center justify-center gap-5 rounded-[2rem] bg-card p-6 text-center shadow-[0_22px_80px_-56px_rgba(0,0,0,0.45)]">
+        <p className="text-xs font-medium uppercase tracking-wide text-primary">{t.completeAuditTitle}</p>
+        <h2 className="max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">{t.overallScore}</h2>
+        <span className={`font-serif text-7xl ${scoreTone(result.overallScore)}`}>{result.overallScore}</span>
+        <p className="max-w-xl text-sm text-muted-foreground">{t.completeAuditText}</p>
       </section>
 
       <section className="flex min-h-[calc(100svh-9rem)] flex-col justify-center gap-5 rounded-[2rem] border border-border/50 bg-card/90 p-6">

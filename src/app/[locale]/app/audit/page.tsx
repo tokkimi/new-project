@@ -31,7 +31,7 @@ export default async function AuditPage() {
     db.faceScanResult.findFirst({
       where: { userId },
       orderBy: { createdAt: "desc" },
-      select: { id: true, overallScore: true, skinType: true, createdAt: true },
+      select: { id: true, overallScore: true, skinType: true, summary: true, analysis: true, createdAt: true },
     }),
   ]);
 

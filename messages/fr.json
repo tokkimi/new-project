@@ -128,6 +128,7 @@
     "disclaimer": "Ce n'est pas un dispositif médical. Cela donne une lecture visuelle générale, pas un diagnostic clinique — pour de vraies préoccupations dermatologiques, consultez un professionnel.",
     "captureTitle": "Prenez ou importez une photo",
     "captureHint": "Faites face à la caméra en lumière naturelle, sans maquillage ni filtres",
+    "captureGuide": "Centrez votre visage dans le cadre",
     "steps": [
       "Détection de la position du visage...",
       "Vérification de l'éclairage et du cadrage...",

@@ -9,55 +9,54 @@ import { buildFaceScanAnalysis, MODULES, type RawModuleResult } from "@/lib/face
 const MODULE_DESCRIPTIONS: Record<string, string> = {
   pores: "visible pore size and density",
   blackheads: "visible blackheads/congestion, mainly around the nose and T-zone",
-  wrinkles: "fine lines and wrinkles (e.g. crow's feet, forehead lines)",
-  redness: "visible redness or reactive-looking skin",
-  spots: "dark spots, sun spots, or uneven pigmentation",
-  acne: "active blemishes and inflammation",
-  acneScars: "post-acne marks or textured scarring",
+  wrinkles: "fine lines and wrinkles on facial skin, such as crow's feet or forehead lines",
+  redness: "visible redness or reactive-looking facial skin",
+  spots: "dark spots, sun spots, or uneven pigmentation on facial skin",
+  acne: "active blemishes and inflammation on facial skin",
+  acneScars: "post-acne marks or textured scarring on facial skin",
   darkCircles: "under-eye darkness or discoloration",
-  texture: "skin texture roughness or unevenness",
-  oiliness: "visible shine / excess sebum",
-  dryness: "visible dryness, flaking, or tightness",
-  sensitivity: "visible signs of a strained/reactive skin barrier",
-  radiance: "overall glow, luminosity, and evenness of the skin",
+  texture: "skin texture roughness or unevenness on facial skin",
+  oiliness: "visible shine or excess sebum on facial skin",
+  dryness: "visible dryness, flaking, or tightness on facial skin",
+  sensitivity: "visible signs of a strained or reactive facial skin barrier",
+  radiance: "overall glow, luminosity, and evenness of the visible facial skin",
 };
 
 const SKIN_TYPES = ["oily", "dry", "combination", "normal", "sensitive"] as const;
 
 const LOCALE_NAMES: Record<string, string> = {
   en: "English",
-  ko: "Korean (한국어)",
-  fr: "French (Français)",
-  ja: "Japanese (日本語)",
+  ko: "Korean",
+  fr: "French",
+  ja: "Japanese",
 };
 
 const TOOL = {
   name: "report_face_scan",
   description:
-    "Report whether a human face is visible, and if so, a full zone-by-zone skin analysis: overall skin type, a written summary, and a 0-9 severity score plus a short observation note for each module.",
+    "Report whether a human face is visible, and if so, a full facial-skin-only analysis: overall skin type, an objective summary, and a 0-9 severity score plus a short observation note for each module.",
   input_schema: {
     type: "object" as const,
     properties: {
       faceDetected: {
         type: "boolean",
         description:
-          "True only if a real human face is clearly visible in the photo. False for objects, rooms, pets, screenshots, blank/blurry images, or anything that isn't a person's face.",
+          "True only if a real human face is clearly visible in the photo. False for objects, rooms, pets, screenshots, blank/blurry images, or anything that is not a person's face.",
       },
       skinType: {
         type: "string",
         enum: [...SKIN_TYPES],
         description:
-          "Overall visible skin type read holistically from the whole face (T-zone shine vs cheeks, visible pore size, flaking, reactivity). Only meaningful when faceDetected is true.",
+          "Overall visible skin type read holistically from facial skin only. Only meaningful when faceDetected is true.",
       },
       summary: {
         type: "string",
         description:
-          "2-3 sentences summarizing what is specifically visible in THIS photo (not generic advice). Encouraging, factual, no medical claims. Only meaningful when faceDetected is true. Write in the requested output language.",
+          "2-3 sentences summarizing what is specifically visible on the facial skin in THIS photo. Objective, factual, no cosmetic reassurance, no medical claims. Only meaningful when faceDetected is true. Write in the requested output language.",
       },
       modules: {
         type: "object",
-        description:
-          "One entry per module. Only meaningful when faceDetected is true.",
+        description: "One entry per module. Only meaningful when faceDetected is true.",
         properties: Object.fromEntries(
           MODULES.map((m) => [
             m,
@@ -73,7 +72,7 @@ const TOOL = {
                 note: {
                   type: "string",
                   description:
-                    "One short specific sentence on what you actually see for this module in THIS photo, naming the facial zone when relevant (e.g. forehead, temples, nose/T-zone, cheeks, under-eyes, jawline, chin). Write in the requested output language.",
+                    "One short specific sentence on what you actually see on facial skin for this module in THIS photo, naming the visible facial zone when relevant. Do not mention background, wall, hair, clothes, neck, lips, eyebrows, or image artifacts. Write in the requested output language.",
                 },
               },
               required: ["score", "note"],
@@ -88,20 +87,22 @@ const TOOL = {
 };
 
 function buildSystemPrompt(localeName: string) {
-  return `You are a meticulous visual skincare estimation assistant embedded in a consumer skincare app called Haru. You are shown a user-submitted photo, in ordinary visible light (not UV, not polarized, no 3D scan — just what's actually visible in this photo).
+  return `You are a strict visual skincare estimation assistant embedded in a consumer skincare app called Haru. You are shown a user-submitted photo in ordinary visible light. This is not UV, polarized, medical, or 3D imaging: assess only what is visibly present in this exact photo.
 
-FIRST, decide faceDetected: true only if a real human face is clearly visible and identifiable as a face in the photo. If the photo shows anything else — a room, an object, a fireplace, a pet, a screenshot, a blank or overly dark/blurry image, or anything where you cannot actually make out a face — set faceDetected to false. Do not be lenient here; when in doubt, false.
+FIRST, decide faceDetected: true only if a real human face is clearly visible and identifiable as a face in the photo. If the photo shows anything else, or if the face is too dark, blurry, cropped, filtered, blocked, or too small to assess, set faceDetected to false. Do not be lenient here; when in doubt, false.
 
-If faceDetected is true, your job is a thorough general COSMETIC visual read, not a medical or dermatological diagnosis. Work zone by zone before you score anything: deliberately look at the forehead, temples, nose bridge and T-zone, both cheeks, under-eye area, jawline, chin, and hairline edge in turn. Then rate each of these 13 modules independently on a 0-9 severity scale, based ONLY on what is actually visible in THIS specific photo:
+CRITICAL BOUNDARY RULE: score facial skin only. Valid zones are forehead, temples, nose bridge, T-zone, cheeks, under-eyes, jawline, and chin. Completely ignore walls, room background, hair, eyebrows, lashes, lips, teeth, clothing, jewelry, neck, shoulders, hands, lighting reflections outside the face, and compression artifacts. Never score wrinkles, spots, pores, redness, texture, acne, or any other module from anything outside the visible face. If a zone is not visible or reliable enough, say so and give a low score for that module.
+
+If faceDetected is true, your job is a thorough general cosmetic visual read, not a medical or dermatological diagnosis. Work zone by zone before you score anything: deliberately look at the forehead, temples, nose bridge and T-zone, both cheeks, under-eye area, jawline, and chin in turn. Then rate each of these 13 modules independently on a 0-9 severity scale, based ONLY on facial skin that is actually visible in THIS specific photo:
 ${MODULES.map((m) => `- ${m}: ${MODULE_DESCRIPTIONS[m]}`).join("\n")}
 
-Scoring guide: 0-2 = clear/not notable, 3-4 = mild, 5-6 = moderate, 7-8 = notable, 9 = severe. Most real photos have a realistic spread across these scores — do not default every module to the same value, and do not assume the worst. Base every score strictly on this photo, not general assumptions about skin.
+Scoring guide: 0-2 = clear/not notable or not reliably visible, 3-4 = mild, 5-6 = moderate, 7-8 = notable, 9 = severe. Most real photos have a realistic spread across these scores. Do not default every module to the same value, do not assume the worst, and do not invent hidden concerns.
 
-For each module also write a one-sentence "note": a specific, concrete observation about what you actually see (mention the facial zone when it's localized, e.g. "light shine across the T-zone, cheeks stay matte"), not a generic definition of the module.
+For each module also write a one-sentence note: a specific, concrete observation about what you actually see on the face. Mention the facial zone when localized. If a concern is not visible, say it is not clearly visible in the photo. Do not write positive reassurance for a module that receives a medium or attention score; describe the visible signal objectively.
 
-Also determine the overall skinType (oily, dry, combination, normal, or sensitive) from the whole face, and write a 2-3 sentence summary of what is specifically visible in this photo — grounded, specific, encouraging tone, no medical claims.
+Also determine the overall skinType (oily, dry, combination, normal, or sensitive) from the whole visible face, and write a 2-3 sentence summary of what is specifically visible in this photo. Keep it objective and specific, with no medical claims and no generic skincare advice.
 
-If faceDetected is false, still fill skinType with "normal", summary with an empty string, and every module's score with 0 and note with an empty string — none of it will be used.
+If faceDetected is false, still fill skinType with "normal", summary with an empty string, and every module's score with 0 and note with an empty string. None of it will be used.
 
 Write every piece of text output (summary and all module notes) in ${localeName}.
 
@@ -216,7 +217,6 @@ export async function POST(request: Request) {
     });
 
     if (!premium) {
-      // Atomic, race-safe decrement: only succeeds if a credit was still there.
       const spent = await db.user.updateMany({
         where: { id: user.id, faceScanCredits: { gt: 0 } },
         data: { faceScanCredits: { decrement: 1 } },

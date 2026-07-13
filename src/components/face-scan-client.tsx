@@ -56,26 +56,56 @@ const MODULE_ICON: Record<ModuleId, React.ComponentType<{ className?: string }>>
   radiance: Sparkles,
 };
 
-/**
- * General anatomical zone for each module, as a % position on a front-facing
- * portrait — illustrative (where this kind of concern is typically assessed),
- * not a per-photo AI detection, since the analysis only returns a severity
- * score per module, not pixel coordinates.
- */
-const MODULE_ZONE: Record<ModuleId, { x: number; y: number }> = {
-  oiliness: { x: 50, y: 25 },
-  wrinkles: { x: 78, y: 49 },
-  darkCircles: { x: 36, y: 53 },
-  pores: { x: 50, y: 61 },
-  blackheads: { x: 50, y: 65 },
-  redness: { x: 24, y: 61 },
-  sensitivity: { x: 76, y: 64 },
-  spots: { x: 32, y: 57 },
-  radiance: { x: 50, y: 50 },
-  texture: { x: 27, y: 66 },
-  dryness: { x: 73, y: 66 },
-  acneScars: { x: 68, y: 72 },
-  acne: { x: 50, y: 85 },
+const MODULE_AREA: Record<ModuleId, Array<{ x: number; y: number; w: number; h: number; rotate?: number }>> = {
+  oiliness: [
+    { x: 43, y: 20, w: 14, h: 22 },
+    { x: 42, y: 42, w: 16, h: 28 },
+  ],
+  wrinkles: [
+    { x: 31, y: 22, w: 38, h: 10 },
+    { x: 24, y: 42, w: 17, h: 10, rotate: -10 },
+    { x: 59, y: 42, w: 17, h: 10, rotate: 10 },
+  ],
+  darkCircles: [
+    { x: 28, y: 43, w: 17, h: 10, rotate: -7 },
+    { x: 55, y: 43, w: 17, h: 10, rotate: 7 },
+  ],
+  pores: [
+    { x: 39, y: 48, w: 22, h: 18 },
+    { x: 29, y: 53, w: 16, h: 16 },
+    { x: 55, y: 53, w: 16, h: 16 },
+  ],
+  blackheads: [{ x: 42, y: 50, w: 16, h: 15 }],
+  redness: [
+    { x: 24, y: 53, w: 22, h: 24, rotate: -8 },
+    { x: 54, y: 53, w: 22, h: 24, rotate: 8 },
+  ],
+  sensitivity: [
+    { x: 22, y: 52, w: 24, h: 30, rotate: -8 },
+    { x: 54, y: 52, w: 24, h: 30, rotate: 8 },
+  ],
+  spots: [
+    { x: 25, y: 46, w: 20, h: 28, rotate: -8 },
+    { x: 55, y: 46, w: 20, h: 28, rotate: 8 },
+  ],
+  radiance: [{ x: 27, y: 26, w: 46, h: 52 }],
+  texture: [
+    { x: 25, y: 45, w: 22, h: 28, rotate: -8 },
+    { x: 53, y: 45, w: 22, h: 28, rotate: 8 },
+  ],
+  dryness: [
+    { x: 24, y: 62, w: 20, h: 24, rotate: -8 },
+    { x: 56, y: 62, w: 20, h: 24, rotate: 8 },
+  ],
+  acneScars: [
+    { x: 28, y: 58, w: 18, h: 24, rotate: -8 },
+    { x: 54, y: 58, w: 18, h: 24, rotate: 8 },
+  ],
+  acne: [
+    { x: 38, y: 68, w: 24, h: 18 },
+    { x: 29, y: 56, w: 16, h: 18, rotate: -8 },
+    { x: 55, y: 56, w: 16, h: 18, rotate: 8 },
+  ],
 };
 
 type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error" | "noFace" | "noCredits";
@@ -264,14 +294,17 @@ export function FaceScanClient() {
           >
             <Card
               onClick={() => fileInputRef.current?.click()}
-              className="w-full cursor-pointer items-center gap-4 border-dashed py-16 transition-colors hover:border-primary/50 hover:bg-primary/5"
+              className="w-full cursor-pointer gap-5 overflow-hidden border-white/70 bg-card/80 p-3 text-left shadow-[0_26px_80px_-58px_rgba(35,28,20,0.65)] backdrop-blur-xl transition-colors hover:border-primary/40 hover:bg-card"
             >
-              <span className="flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Camera className="size-7" />
-              </span>
-              <div>
-                <p className="font-medium">{t("captureTitle")}</p>
-                <p className="text-sm text-muted-foreground">{t("captureHint")}</p>
+              <FaceCaptureGuide label={t("captureGuide")} />
+              <div className="flex items-center gap-3 px-2 pb-2">
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <Camera className="size-5" />
+                </span>
+                <div>
+                  <p className="font-medium">{t("captureTitle")}</p>
+                  <p className="text-sm text-muted-foreground">{t("captureHint")}</p>
+                </div>
               </div>
             </Card>
           </motion.div>
@@ -287,8 +320,11 @@ export function FaceScanClient() {
           >
             <Card className="w-full items-center gap-6 py-14">
               {preview ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={preview} alt="" className="h-32 w-32 rounded-2xl object-cover" />
+                <div className="relative h-40 w-32 overflow-hidden rounded-[1.6rem] bg-secondary">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={preview} alt="" className="absolute inset-0 size-full object-cover" />
+                  <FaceGuideLines compact />
+                </div>
               ) : (
                 <Loader2 className="size-10 animate-spin text-primary" />
               )}
@@ -301,7 +337,13 @@ export function FaceScanClient() {
                     }`}
                   >
                     <span className="mr-2 inline-block w-4 text-center">
-                      {i < stepIndex ? "✓" : i === stepIndex ? "…" : "•"}
+                      {i < stepIndex ? (
+                        <Check className="inline size-3.5 text-success" />
+                      ) : i === stepIndex ? (
+                        <Loader2 className="inline size-3.5 animate-spin text-primary" />
+                      ) : (
+                        <span className="inline-block size-1.5 rounded-full bg-muted-foreground/25" />
+                      )}
                     </span>
                     {step}
                   </p>
@@ -431,64 +473,36 @@ export function FaceScanClient() {
                 className="no-scrollbar -mx-1 flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2"
               >
                 {orderedModules.map((module, index) => {
-                  const Icon = MODULE_ICON[module.id];
-                  const zone = MODULE_ZONE[module.id];
                   return (
                     <button
                       key={module.id}
                       type="button"
                       onClick={() => goToModule(index)}
                       className={cn(
-                        "relative aspect-[4/5] w-[78%] shrink-0 snap-center overflow-hidden rounded-[1.75rem] text-left transition-all sm:w-[280px]",
+                        "relative flex aspect-[4/5] w-[78%] shrink-0 snap-center flex-col overflow-hidden rounded-[1.75rem] border border-border/60 bg-card p-3 text-left shadow-[0_18px_50px_-36px_rgba(0,0,0,0.45)] transition-all sm:w-[280px]",
                         activeModule === index
                           ? "ring-2 ring-primary ring-offset-2 ring-offset-background"
                           : "opacity-70 hover:opacity-100"
                       )}
                     >
-                      {preview ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={preview} alt="" className="absolute inset-0 size-full object-cover" />
-                      ) : (
-                        <div className="absolute inset-0 bg-secondary" />
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
-
-                      <span
-                        className="absolute size-2.5 -translate-x-1/2 -translate-y-1/2"
-                        style={{ left: `${zone.x}%`, top: `${zone.y}%` }}
-                      >
-                        <span
-                          className={cn(
-                            "absolute inset-0 animate-ping rounded-full",
-                            module.severity === "attention" && "bg-destructive/60",
-                            module.severity === "medium" && "bg-am/60",
-                            module.severity === "low" && "bg-success/60"
-                          )}
-                        />
-                        <span
-                          className={cn(
-                            "absolute inset-0 rounded-full border border-white/90",
-                            module.severity === "attention" && "bg-destructive",
-                            module.severity === "medium" && "bg-am",
-                            module.severity === "low" && "bg-success"
-                          )}
-                        />
-                      </span>
-
-                      <div className="absolute inset-x-0 top-0 flex items-center justify-between p-3">
-                        <span className="flex size-8 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-sm">
-                          <Icon className="size-4" />
+                      <div className="flex items-center justify-between">
+                        <span className={cn(severityBadgeClass(module.severity), "inline-flex")}>
+                          {t(`severity.${module.severity}`)}
                         </span>
-                        <span className="rounded-full bg-black/35 px-2 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+                        <span className="rounded-full bg-secondary px-2 py-1 text-[11px] font-medium text-muted-foreground">
                           {String(index + 1).padStart(2, "0")}/{orderedModules.length}
                         </span>
                       </div>
 
-                      <div className="absolute inset-x-0 bottom-0 p-4">
-                        <span className={cn(severityBadgeClass(module.severity), "mb-1.5 inline-flex")}>
-                          {t(`severity.${module.severity}`)}
-                        </span>
-                        <p className="font-serif text-xl text-white">{t(`modules.${module.id}.name`)}</p>
+                      <div className="mt-3 flex min-h-0 flex-1 items-center justify-center rounded-[1.35rem] bg-secondary/45 p-3">
+                        <SkinConcernMap module={module} />
+                      </div>
+
+                      <div className="mt-3">
+                        <p className="font-serif text-xl">{t(`modules.${module.id}.name`)}</p>
+                        <p className="mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground">
+                          {module.note || t("moduleDefaultNote")}
+                        </p>
                       </div>
                     </button>
                   );
@@ -535,6 +549,125 @@ export function FaceScanClient() {
   );
 }
 
+function FaceCaptureGuide({ label }: { label: string }) {
+  return (
+    <div className="relative aspect-[9/13] w-full overflow-hidden rounded-[2rem] bg-[linear-gradient(145deg,#f7eee8_0%,#eef2ed_44%,#f7f4ee_100%)]">
+      <div className="absolute inset-x-[15%] bottom-0 h-[82%] rounded-t-[48%] bg-[linear-gradient(180deg,#e8c8b7_0%,#dcae96_48%,#c88e76_100%)] opacity-40 blur-[1px]" />
+      <div className="absolute inset-x-[20%] top-[11%] h-[18%] rounded-[50%_50%_24%_24%] bg-[#514139]/30 blur-sm" />
+      <FaceGuideLines />
+      <div className="absolute left-4 top-4 flex size-10 items-center justify-center rounded-full border border-white/80 bg-white/60 text-foreground shadow-sm backdrop-blur-xl">
+        <Camera className="size-4" />
+      </div>
+      <div className="absolute inset-x-8 bottom-5 rounded-full border border-white/80 bg-white/55 px-4 py-3 text-center text-sm font-medium text-foreground shadow-[0_14px_40px_-28px_rgba(0,0,0,0.5)] backdrop-blur-xl">
+        {label}
+      </div>
+    </div>
+  );
+}
+
+function FaceGuideLines({ compact = false }: { compact?: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 220 320"
+      aria-hidden="true"
+      className={cn(
+        "pointer-events-none absolute inset-0 size-full text-white drop-shadow-[0_1px_8px_rgba(80,65,55,0.22)]",
+        compact ? "opacity-80" : "opacity-95"
+      )}
+    >
+      <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+        <path strokeDasharray="4 5" strokeWidth="1.5" d="M42 153C42 74 73 31 110 31s68 43 68 122c0 66-28 125-68 125s-68-59-68-125Z" />
+        <path strokeWidth="1" d="M110 52v220M78 78h64M64 105h92M110 79v62M75 141h70M88 209h44M96 239h28" />
+        <path strokeWidth="1" d="M60 139c16-14 34-14 49 0M111 139c15-14 33-14 49 0" />
+        <path strokeWidth="1" d="M66 143c14 16 31 16 43 0M111 143c12 16 29 16 43 0" />
+        <path strokeWidth="1" d="M92 151c5 12 5 25-4 37 10 6 31 6 43 0-9-12-9-25-4-37" />
+        <path strokeWidth="1" d="M60 185l28 21 22 4 22-4 28-21M56 160l-12 37 29 55M164 160l12 37-29 55" />
+        <path strokeWidth="1" d="M82 222c16 11 40 11 56 0M84 235c13 8 39 8 52 0M94 256c9 5 23 5 32 0" />
+        <path strokeWidth="1" d="M48 133l-10 23M172 133l10 23M82 111l-26 11M138 111l26 11" />
+        <path strokeWidth="0.8" opacity="0.65" d="M65 195c13 9 26 14 45 15M155 195c-13 9-26 14-45 15" />
+      </g>
+      <g fill="currentColor">
+        <circle cx="110" cy="78" r="1.8" />
+        <circle cx="142" cy="62" r="1.8" />
+        <circle cx="158" cy="88" r="1.8" />
+        <circle cx="132" cy="92" r="1.8" />
+        <circle cx="128" cy="110" r="1.8" />
+        <circle cx="56" cy="110" r="1.8" />
+        <circle cx="44" cy="176" r="1.8" />
+        <circle cx="176" cy="176" r="1.8" />
+        <circle cx="110" cy="272" r="1.8" />
+      </g>
+    </svg>
+  );
+}
+
+function SkinConcernMap({ module }: { module: ModuleFinding }) {
+  const Icon = MODULE_ICON[module.id];
+  const areas = MODULE_AREA[module.id];
+  const dotCount = module.severity === "low" ? 2 : module.severity === "medium" ? 8 : 16;
+  const dots = React.useMemo(
+    () =>
+      Array.from({ length: dotCount }, (_, index) => {
+        const area = areas[index % areas.length];
+        const xOffset = ((index * 17) % 10) - 5;
+        const yOffset = ((index * 23) % 10) - 5;
+        return {
+          x: area.x + area.w / 2 + xOffset,
+          y: area.y + area.h / 2 + yOffset,
+        };
+      }),
+    [areas, dotCount]
+  );
+
+  return (
+    <div className="relative aspect-[3/4] w-full max-w-[170px]">
+      <div className="absolute inset-x-[16%] inset-y-[4%] overflow-hidden rounded-[48%_48%_44%_44%/38%_38%_56%_56%] border border-foreground/10 bg-gradient-to-b from-background via-background/90 to-primary/5">
+        <div className="absolute left-1/2 top-[37%] h-[10%] w-[42%] -translate-x-1/2 rounded-full border-t border-foreground/10" />
+        <div className="absolute left-[34%] top-[36%] size-[10%] rounded-full border border-foreground/10" />
+        <div className="absolute right-[34%] top-[36%] size-[10%] rounded-full border border-foreground/10" />
+        <div className="absolute left-1/2 top-[45%] h-[16%] w-[12%] -translate-x-1/2 rounded-full border-x border-foreground/10" />
+        <div className="absolute left-1/2 top-[65%] h-[5%] w-[24%] -translate-x-1/2 rounded-full border-b border-foreground/10" />
+
+        {areas.map((area, index) => (
+          <span
+            key={`${module.id}-area-${index}`}
+            className={cn(
+              "absolute rounded-full border backdrop-blur-sm",
+              module.severity === "attention" && "border-destructive/35 bg-destructive/18",
+              module.severity === "medium" && "border-am/35 bg-am/18",
+              module.severity === "low" && "border-success/25 bg-success/10"
+            )}
+            style={{
+              left: `${area.x}%`,
+              top: `${area.y}%`,
+              width: `${area.w}%`,
+              height: `${area.h}%`,
+              transform: area.rotate ? `rotate(${area.rotate}deg)` : undefined,
+            }}
+          />
+        ))}
+
+        {dots.map((dot, index) => (
+          <span
+            key={`${module.id}-dot-${index}`}
+            className={cn(
+              "absolute size-1 -translate-x-1/2 -translate-y-1/2 rounded-full",
+              module.severity === "attention" && "bg-destructive/80",
+              module.severity === "medium" && "bg-am/80",
+              module.severity === "low" && "bg-success/55"
+            )}
+            style={{ left: `${dot.x}%`, top: `${dot.y}%` }}
+          />
+        ))}
+      </div>
+
+      <span className="absolute left-1/2 top-1/2 flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-background/80 text-primary shadow-sm backdrop-blur">
+        <Icon className="size-4" />
+      </span>
+    </div>
+  );
+}
+
 function ModuleDetail({
   module,
   t,
@@ -577,7 +710,7 @@ function ModuleDetail({
         <div className="relative min-w-0 overflow-hidden rounded-3xl bg-secondary/60 p-4">
           <div className="mb-2 flex items-center justify-between text-sm">
             <span className="font-medium">{t("moduleScoreLabel")}</span>
-            <span className="text-muted-foreground">{9 - module.score}/9</span>
+            <span className="text-muted-foreground">{module.score}/9</span>
           </div>
           <ModuleScoreBar score={module.score} />
 

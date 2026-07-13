@@ -128,6 +128,7 @@
     "disclaimer": "Not a medical device. This gives a general visual read, not a clinical diagnosis — for real dermatological concerns, see a professional.",
     "captureTitle": "Take or upload a photo",
     "captureHint": "Face the camera directly in natural light, no makeup or filters",
+    "captureGuide": "Center your face in the frame",
     "steps": [
       "Detecting face position...",
       "Checking lighting and framing...",

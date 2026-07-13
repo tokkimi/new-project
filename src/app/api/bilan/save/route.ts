@@ -44,7 +44,12 @@ export async function POST(request: Request) {
       lifestyle: answers,
       auditSnapshot: JSON.parse(JSON.stringify(auditResult)),
       scanSnapshot: ownedScan
-        ? { overallScore: ownedScan.overallScore, skinType: ownedScan.skinType }
+        ? {
+            overallScore: ownedScan.overallScore,
+            skinType: ownedScan.skinType,
+            summary: ownedScan.summary,
+            analysis: ownedScan.analysis,
+          }
         : undefined,
       overallScore,
     },
