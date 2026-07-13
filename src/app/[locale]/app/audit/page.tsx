@@ -45,7 +45,7 @@ export default async function AuditPage() {
   if (profile?.exerciseFrequency) initialAnswers.exerciseFrequency = profile.exerciseFrequency;
 
   return (
-    <div className="mx-auto flex max-w-2xl flex-col gap-8">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-8">
       <div>
         <h1 className="font-serif text-3xl">{t("title")}</h1>
         <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>

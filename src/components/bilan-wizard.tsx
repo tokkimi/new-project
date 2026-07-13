@@ -336,11 +336,21 @@ export function BilanWizard({
       )}
 
       {current === "routine" && (
-        <div className="flex flex-col gap-3">
+        <Card className="gap-4">
           <h2 className="font-serif text-xl">{t.stepRoutineTitle}</h2>
           <p className="text-sm text-muted-foreground">{t.stepRoutineText}</p>
-          <AuditResultView result={auditResult} />
-        </div>
+          <div className="rounded-3xl bg-secondary/60 p-4">
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-sm font-medium">{t.overallScore}</span>
+              <span className={`font-serif text-3xl ${scoreTone(auditResult.score)}`}>
+                {auditResult.score}
+              </span>
+            </div>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {auditResult.issues.length} {t.routineIssues}
+            </p>
+          </div>
+        </Card>
       )}
 
       {current === "personal" && (
@@ -404,75 +414,53 @@ function BilanResultView({
   t: (typeof UI)["en"];
   onRestart: () => void;
 }) {
-  const sections = [
-    {
-      key: "overall",
-      title: t.overallScore,
-      content: (
-        <div className="flex flex-col items-center justify-center gap-2 py-8 text-center">
-          <span className={`font-serif text-6xl ${scoreTone(result.overallScore)}`}>{result.overallScore}</span>
-          <span className="text-sm text-muted-foreground">/ 100</span>
-        </div>
-      ),
-    },
-    {
-      key: "scan",
-      title: t.sectionScan,
-      content: latestScan ? (
-        <div className="flex flex-col items-center justify-center gap-2 py-8 text-center">
-          <span className={`font-serif text-5xl ${scoreTone(latestScan.overallScore)}`}>{latestScan.overallScore}</span>
-          {latestScan.skinType && <span className="text-sm text-muted-foreground">{latestScan.skinType}</span>}
-        </div>
-      ) : (
-        <p className="py-8 text-center text-sm text-muted-foreground">{t.noScan}</p>
-      ),
-    },
-    {
-      key: "routine",
-      title: t.sectionRoutine,
-      content: (
-        <div className="flex flex-col items-center justify-center gap-2 py-8 text-center">
-          <span className={`font-serif text-5xl ${scoreTone(auditResult.score)}`}>{auditResult.score}</span>
-          <span className="text-sm text-muted-foreground">
-            {auditResult.issues.length} {t.routineIssues}
-          </span>
-        </div>
-      ),
-    },
-    {
-      key: "lifestyle",
-      title: t.sectionLifestyle,
-      content: (
-        <div className="flex flex-col gap-2 py-2">
+  return (
+    <div className="flex flex-col gap-7">
+      <section className="flex min-h-[calc(100svh-10rem)] flex-col items-center justify-center gap-5 rounded-[2rem] bg-card p-6 text-center shadow-[0_22px_80px_-56px_rgba(0,0,0,0.45)]">
+        <p className="text-xs font-medium uppercase tracking-wide text-primary">{t.resultTitle}</p>
+        <h2 className="max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">{t.overallScore}</h2>
+        <span className={`font-serif text-7xl ${scoreTone(result.overallScore)}`}>{result.overallScore}</span>
+        <p className="max-w-xl text-sm text-muted-foreground">{t.resultSubtitle}</p>
+      </section>
+
+      <section className="flex min-h-[calc(100svh-9rem)] flex-col justify-center gap-5 rounded-[2rem] border border-border/50 bg-card/90 p-6">
+        <h3 className="font-serif text-3xl">{t.sectionScan}</h3>
+        {latestScan ? (
+          <div className="rounded-[1.5rem] bg-secondary/60 p-5">
+            <span className={`font-serif text-6xl ${scoreTone(latestScan.overallScore)}`}>{latestScan.overallScore}</span>
+            {latestScan.skinType && <p className="mt-2 text-muted-foreground">{latestScan.skinType}</p>}
+          </div>
+        ) : (
+          <Card className="rounded-[1.5rem] bg-secondary/50">
+            <p className="text-sm text-muted-foreground">{t.noScan}</p>
+            <Button asChild variant="outline" className="self-start">
+              <Link href="/app/face-scan">{t.takeScan}</Link>
+            </Button>
+          </Card>
+        )}
+      </section>
+
+      <section className="flex min-h-[calc(100svh-9rem)] flex-col justify-center gap-5 rounded-[2rem] border border-border/50 bg-card/90 p-6">
+        <h3 className="font-serif text-3xl">{t.sectionLifestyle}</h3>
+        <div className="grid gap-3 md:grid-cols-2">
           {result.flags.length === 0 ? (
-            <p className="py-6 text-center text-sm text-muted-foreground">{t.flagsNone}</p>
+            <Card className="rounded-[1.5rem] bg-secondary/50">
+              <p className="text-sm text-muted-foreground">{t.flagsNone}</p>
+            </Card>
           ) : (
             result.flags.map((flag) => (
-              <p key={flag.id} className="rounded-xl bg-secondary/50 px-3 py-2 text-sm">
-                {flag.text}
-              </p>
+              <Card key={flag.id} className="rounded-[1.5rem] bg-secondary/50">
+                <span className={`w-fit rounded-full px-3 py-1 text-xs font-medium ${flag.severity === "high" ? "bg-destructive/10 text-destructive" : flag.severity === "medium" ? "bg-warning/20 text-am-foreground" : "bg-success/15 text-success"}`}>
+                  {flag.severity}
+                </span>
+                <p className="text-sm leading-6 text-muted-foreground">{flag.text}</p>
+              </Card>
             ))
           )}
         </div>
-      ),
-    },
-  ];
+      </section>
 
-  return (
-    <div className="flex flex-col gap-5">
-      <div>
-        <h2 className="font-serif text-2xl">{t.resultTitle}</h2>
-        <p className="text-sm text-muted-foreground">{t.resultSubtitle}</p>
-      </div>
-
-      <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
-        {sections.map((section) => (
-          <Card key={section.key} className="w-[85%] shrink-0 snap-center sm:w-[360px]">
-            <h3 className="font-serif text-lg">{section.title}</h3>
-            {section.content}
-          </Card>
-        ))}
-      </div>
+      <AuditResultView result={auditResult} />
 
       <div className="flex flex-wrap gap-3">
         <Button asChild>
