@@ -7,14 +7,49 @@ import { BreathingGuide } from "@/components/breathing-guide";
 import { SleepChecklist } from "@/components/sleep-checklist";
 import { db } from "@/lib/db";
 
-const copy = {
+type Lang = "en" | "ko" | "ja" | "fr";
+type WellnessSound = {
+  slug: string;
+  label: string;
+  description: string;
+  mode?: SoundMode;
+  audioUrl?: string;
+  order: number;
+};
+
+const copy: Record<Lang, {
+  title: string;
+  subtitle: string;
+  science: string;
+  scienceText: string;
+  breathing: string;
+  breathingText: string;
+  inhale: string;
+  hold: string;
+  exhale: string;
+  start: string;
+  pause: string;
+  sleep: string;
+  sleepText: string;
+  sleepItems: string[];
+  sounds: string;
+  soundsText: string;
+  fallbackNote: string;
+  audioError: string;
+  faceCare: string;
+  faceCareText: string;
+  openFaceCare: string;
+}> = {
   en: {
     title: "Wellness",
-    subtitle: "Stress, sleep and facial tension can change how skin looks and feels. This space keeps the support practical, calm and non-medical.",
+    subtitle:
+      "Stress, sleep and facial tension can change how skin looks and feels. This space keeps the support practical, calm and non-medical.",
     science: "Stress and skin",
-    scienceText: "Stress can influence sleep, picking, itching, oiliness and inflammation signals. Haru treats this as lifestyle support, not diagnosis or treatment.",
+    scienceText:
+      "Stress can influence sleep, picking, itching, oiliness and inflammation signals. Haru treats this as lifestyle support, not diagnosis or treatment.",
     breathing: "Two-minute breathing",
-    breathingText: "Inhale for 4, hold for 2, exhale for 6. Repeat five times before a night routine or when the jaw feels tense.",
+    breathingText:
+      "Inhale for 4, hold for 2, exhale for 6. Repeat five times before a night routine or when the jaw feels tense.",
     inhale: "Inhale",
     hold: "Hold",
     exhale: "Exhale",
@@ -23,50 +58,154 @@ const copy = {
     sleep: "Sleep cue",
     sleepText: "A simple nightly checklist. It resets automatically every day.",
     sleepItems: [
-      "Cleanse fully (SPF and makeup off)",
+      "Cleanse fully, including SPF and makeup",
       "Moisturize",
-      "Dim phone/screen brightness",
-      "Skip actives tonight if skin feels hot or tight",
+      "Dim phone and screen brightness",
+      "Skip strong actives tonight if skin feels hot or tight",
     ],
     sounds: "Integrated calming sounds",
-    soundsText: "These sounds are relaxation supports only. Frequencies are not presented as skin treatments, collagen boosters or medical therapy.",
+    soundsText:
+      "Tap any sound to listen directly in Haru. These are relaxation supports only, not skin treatments or medical therapy.",
+    fallbackNote: "Built-in sounds are available even when the library is being updated.",
+    audioError: "Tap again or check browser audio permissions.",
     faceCare: "Face care library",
     faceCareText: "Gentle massage, face yoga, jaw release and scalp tension routines.",
     openFaceCare: "Open face care",
   },
   ko: {
     title: "웰니스",
-    subtitle: "스트레스, 수면, 얼굴 긴장은 피부가 보이고 느껴지는 방식에 영향을 줄 수 있어요. 이 공간은 의학적 치료가 아니라 실용적인 회복 지원입니다.",
+    subtitle:
+      "스트레스, 수면, 얼굴 긴장은 피부가 보이고 느껴지는 방식에 영향을 줄 수 있어요. Haru는 차분하고 실용적인 비의료 웰니스 도구를 제공합니다.",
     science: "스트레스와 피부",
-    scienceText: "스트레스는 수면, 만지기 습관, 가려움, 유분감, 염증 신호에 영향을 줄 수 있어요. Haru는 이를 진단이 아닌 생활 지원으로 다룹니다.",
+    scienceText:
+      "스트레스는 수면, 손으로 만지는 습관, 가려움, 유분감, 붉어 보이는 신호에 영향을 줄 수 있어요. Haru는 이를 진단이 아닌 생활 지원으로 다룹니다.",
     breathing: "2분 호흡",
-    breathingText: "4초 들이마시고, 2초 멈추고, 6초 내쉬세요. 밤 루틴 전이나 턱이 긴장될 때 다섯 번 반복하세요.",
+    breathingText: "4초 들이마시고, 2초 멈춘 뒤, 6초 내쉬세요. 저녁 루틴 전이나 턱이 긴장될 때 반복해 보세요.",
     inhale: "들이마시기",
     hold: "멈추기",
     exhale: "내쉬기",
     start: "시작",
-    pause: "일시정지",
-    sleep: "수면 힌트",
-    sleepText: "간단한 밤 체크리스트예요. 매일 자동으로 초기화됩니다.",
-    sleepItems: [
-      "완전히 세안하기 (선크림, 메이크업 제거)",
-      "보습하기",
-      "휴대폰/화면 밝기 줄이기",
-      "피부가 뜨겁거나 당기면 오늘 밤은 활성 성분 쉬기",
-    ],
+    pause: "일시 정지",
+    sleep: "수면 체크",
+    sleepText: "매일 자동으로 초기화되는 간단한 밤 체크리스트입니다.",
+    sleepItems: ["SPF와 메이크업까지 깨끗하게 세안", "보습하기", "휴대폰과 화면 밝기 낮추기", "피부가 뜨겁거나 당기면 강한 활성 성분 쉬기"],
     sounds: "내장 릴랙싱 사운드",
-    soundsText: "이 소리는 휴식 보조용입니다. 주파수를 피부 치료, 콜라겐 증가, 의학적 치료로 설명하지 않습니다.",
+    soundsText: "Haru 안에서 바로 들을 수 있어요. 이 사운드는 휴식 보조용이며 피부 치료나 의학적 치료가 아닙니다.",
+    fallbackNote: "라이브러리 업데이트 중에도 기본 사운드는 사용할 수 있어요.",
+    audioError: "다시 누르거나 브라우저 오디오 권한을 확인해 주세요.",
     faceCare: "페이스 케어 라이브러리",
-    faceCareText: "부드러운 마사지, 페이스 요가, 턱 이완, 두피 긴장 루틴을 확인하세요.",
+    faceCareText: "부드러운 마사지, 페이스 요가, 턱 이완, 두피 긴장 완화 루틴.",
     openFaceCare: "페이스 케어 열기",
+  },
+  ja: {
+    title: "ウェルネス",
+    subtitle:
+      "ストレス、睡眠、顔のこわばりは肌の見え方や感じ方に影響します。Haruでは、落ち着いて使える非医療のサポートをまとめています。",
+    science: "ストレスと肌",
+    scienceText:
+      "ストレスは睡眠、触りぐせ、かゆみ、皮脂感、赤みのサインに関係することがあります。Haruでは診断ではなく生活サポートとして扱います。",
+    breathing: "2分の呼吸",
+    breathingText: "4秒吸って、2秒止めて、6秒吐きます。夜のルーティン前や顎の緊張を感じる時に使えます。",
+    inhale: "吸う",
+    hold: "止める",
+    exhale: "吐く",
+    start: "開始",
+    pause: "一時停止",
+    sleep: "睡眠チェック",
+    sleepText: "毎日自動でリセットされるシンプルな夜のチェックリストです。",
+    sleepItems: ["日焼け止めやメイクまで落とす", "保湿する", "スマホや画面の明るさを落とす", "肌が熱い・つっぱる日は強い成分を休む"],
+    sounds: "内蔵リラックスサウンド",
+    soundsText: "Haru内で直接再生できます。サウンドはリラックス目的で、治療や医療効果を示すものではありません。",
+    fallbackNote: "ライブラリ更新中でも基本サウンドは使えます。",
+    audioError: "もう一度タップするか、ブラウザの音声権限を確認してください。",
+    faceCare: "フェイスケアライブラリ",
+    faceCareText: "やさしいマッサージ、フェイスヨガ、顎のリリース、頭皮の緊張ケア。",
+    openFaceCare: "フェイスケアを開く",
+  },
+  fr: {
+    title: "Wellness",
+    subtitle:
+      "Stress, sommeil et tensions du visage peuvent influencer l'apparence et le confort de la peau. Haru garde cet espace calme, pratique et non medical.",
+    science: "Stress et peau",
+    scienceText:
+      "Le stress peut influencer le sommeil, les gestes repetitifs, les demangeaisons, la sensation de sebum et les rougeurs visibles. Haru reste sur du soutien bien-etre.",
+    breathing: "Respiration deux minutes",
+    breathingText: "Inspirez 4 secondes, bloquez 2 secondes, expirez 6 secondes. A faire avant la routine du soir ou quand la machoire est tendue.",
+    inhale: "Inspirez",
+    hold: "Pause",
+    exhale: "Expirez",
+    start: "Start",
+    pause: "Pause",
+    sleep: "Sommeil",
+    sleepText: "Une checklist simple du soir, remise a zero chaque jour.",
+    sleepItems: ["Nettoyer SPF et maquillage", "Hydrater", "Baisser la luminosite des ecrans", "Mettre les actifs forts en pause si la peau tire"],
+    sounds: "Sons relaxants integres",
+    soundsText: "Touchez un son pour l'ecouter directement dans Haru. Ces sons aident a se detendre, ce ne sont pas des traitements.",
+    fallbackNote: "Les sons integres restent disponibles meme si la bibliotheque est en mise a jour.",
+    audioError: "Touchez encore une fois ou verifiez les autorisations audio du navigateur.",
+    faceCare: "Bibliotheque face care",
+    faceCareText: "Massage doux, face yoga, relachement de la machoire et routines de tension du cuir chevelu.",
+    openFaceCare: "Ouvrir face care",
   },
 };
 
+const FALLBACK_SOUNDS: Record<Lang, WellnessSound[]> = {
+  en: [
+    { slug: "white-noise", label: "White noise", description: "Even sound for focus or winding down", mode: "white", order: 0 },
+    { slug: "pink-noise", label: "Pink noise", description: "Softer low-frequency sound", mode: "pink", order: 1 },
+    { slug: "rain-texture", label: "Rain texture", description: "Short reset before an evening routine", mode: "rain", order: 2 },
+    { slug: "ocean-texture", label: "Ocean texture", description: "Use with slow breathing", mode: "ocean", order: 3 },
+    { slug: "tone-432", label: "432 Hz tone", description: "A simple relaxation tone", mode: "calm432", order: 4 },
+    { slug: "tone-528", label: "528 Hz tone", description: "For calm listening, not medical effect", mode: "soft528", order: 5 },
+  ],
+  ko: [
+    { slug: "white-noise", label: "화이트 노이즈", description: "집중하거나 쉬어갈 때 쓰는 고른 소리", mode: "white", order: 0 },
+    { slug: "pink-noise", label: "핑크 노이즈", description: "조금 더 부드러운 저음 중심 소리", mode: "pink", order: 1 },
+    { slug: "rain-texture", label: "빗소리", description: "저녁 루틴 전 짧은 리셋", mode: "rain", order: 2 },
+    { slug: "ocean-texture", label: "파도 소리", description: "느린 호흡과 함께 사용", mode: "ocean", order: 3 },
+    { slug: "tone-432", label: "432 Hz 톤", description: "단순한 릴랙싱 톤", mode: "calm432", order: 4 },
+    { slug: "tone-528", label: "528 Hz 톤", description: "차분한 청취용, 의학적 효과 아님", mode: "soft528", order: 5 },
+  ],
+  ja: [
+    { slug: "white-noise", label: "ホワイトノイズ", description: "集中やクールダウンに使える一定の音", mode: "white", order: 0 },
+    { slug: "pink-noise", label: "ピンクノイズ", description: "やわらかい低音寄りの音", mode: "pink", order: 1 },
+    { slug: "rain-texture", label: "雨の音", description: "夜のルーティン前の短いリセット", mode: "rain", order: 2 },
+    { slug: "ocean-texture", label: "波の音", description: "ゆっくりした呼吸と一緒に", mode: "ocean", order: 3 },
+    { slug: "tone-432", label: "432 Hz トーン", description: "シンプルなリラックストーン", mode: "calm432", order: 4 },
+    { slug: "tone-528", label: "528 Hz トーン", description: "落ち着いて聴くための音、医療効果ではありません", mode: "soft528", order: 5 },
+  ],
+  fr: [
+    { slug: "white-noise", label: "Bruit blanc", description: "Son stable pour se concentrer ou redescendre", mode: "white", order: 0 },
+    { slug: "pink-noise", label: "Bruit rose", description: "Son plus doux, avec basses frequences", mode: "pink", order: 1 },
+    { slug: "rain-texture", label: "Pluie douce", description: "Petit reset avant la routine du soir", mode: "rain", order: 2 },
+    { slug: "ocean-texture", label: "Ocean", description: "A utiliser avec une respiration lente", mode: "ocean", order: 3 },
+    { slug: "tone-432", label: "Tonalite 432 Hz", description: "Tonalite simple de relaxation", mode: "calm432", order: 4 },
+    { slug: "tone-528", label: "Tonalite 528 Hz", description: "Ecoute calme, pas un effet medical", mode: "soft528", order: 5 },
+  ],
+};
+
+function resolveLang(locale: string): Lang {
+  if (locale === "ko" || locale === "ja" || locale === "fr") return locale;
+  return "en";
+}
+
 export default async function WellnessPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = copy[locale === "ko" ? "ko" : "en"];
+  const lang = resolveLang(locale);
+  const t = copy[lang];
 
-  const sounds = await db.sound.findMany({ where: { active: true }, orderBy: { order: "asc" } });
+  const dbSounds = await db.sound.findMany({ where: { active: true }, orderBy: { order: "asc" } }).catch(() => []);
+  const sounds: WellnessSound[] =
+    dbSounds.length > 0
+      ? dbSounds.map((sound) => ({
+          slug: sound.slug,
+          label: lang === "ko" ? sound.labelKo : sound.labelEn,
+          description: lang === "ko" ? sound.descriptionKo : sound.descriptionEn,
+          mode: (sound.synthesisMode as SoundMode | null) ?? undefined,
+          audioUrl: sound.audioUrl ?? undefined,
+          order: sound.order,
+        }))
+      : FALLBACK_SOUNDS[lang];
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-6">
@@ -99,16 +238,18 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
           <div>
             <h2 className="font-serif text-2xl">{t.sounds}</h2>
             <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.soundsText}</p>
+            {dbSounds.length === 0 && <p className="mt-2 text-xs text-muted-foreground">{t.fallbackNote}</p>}
           </div>
         </div>
         <div className="grid gap-3 md:grid-cols-2">
           {sounds.map((sound) => (
             <WellnessPlayer
-              key={sound.id}
-              mode={(sound.synthesisMode as SoundMode) ?? undefined}
-              audioUrl={sound.audioUrl ?? undefined}
-              label={locale === "ko" ? sound.labelKo : sound.labelEn}
-              description={locale === "ko" ? sound.descriptionKo : sound.descriptionEn}
+              key={sound.slug}
+              mode={sound.mode}
+              audioUrl={sound.audioUrl}
+              label={sound.label}
+              description={sound.description}
+              errorText={t.audioError}
             />
           ))}
         </div>
@@ -138,7 +279,15 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
   );
 }
 
-function WellnessCard({ icon: Icon, title, text }: { icon: React.ComponentType<{ className?: string }>; title: string; text: string }) {
+function WellnessCard({
+  icon: Icon,
+  title,
+  text,
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  text: string;
+}) {
   return (
     <Card className="rounded-[1.5rem]">
       <Icon className="size-5 text-primary" />

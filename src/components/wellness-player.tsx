@@ -30,13 +30,16 @@ export function WellnessPlayer({
   audioUrl,
   label,
   description,
+  errorText = "Tap again or check browser audio permissions.",
 }: {
   mode?: SoundMode;
   audioUrl?: string;
   label: string;
   description: string;
+  errorText?: string;
 }) {
   const [playing, setPlaying] = React.useState(false);
+  const [error, setError] = React.useState(false);
   const cleanupRef = React.useRef<(() => void) | null>(null);
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
 
@@ -47,56 +50,69 @@ export function WellnessPlayer({
       cleanupRef.current?.();
       cleanupRef.current = null;
       setPlaying(false);
+      setError(false);
       return;
     }
 
-    if (audioUrl) {
-      const audio = audioRef.current ?? new Audio(audioUrl);
-      audio.loop = true;
-      audio.volume = 0.5;
-      audioRef.current = audio;
-      await audio.play();
-      cleanupRef.current = () => {
-        audio.pause();
-        audio.currentTime = 0;
-      };
+    setError(false);
+
+    try {
+      if (audioUrl) {
+        const audio = audioRef.current ?? new Audio(audioUrl);
+        audio.loop = true;
+        audio.volume = 0.5;
+        audioRef.current = audio;
+        await audio.play();
+        cleanupRef.current = () => {
+          audio.pause();
+          audio.currentTime = 0;
+        };
+        setPlaying(true);
+        return;
+      }
+
+      if (!mode) return;
+
+      const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextCtor) throw new Error("audio_context_unavailable");
+      const ctx = new AudioContextCtor();
+      if (ctx.state === "suspended") await ctx.resume();
+      const gain = ctx.createGain();
+      gain.gain.value = 0.045;
+      gain.connect(ctx.destination);
+
+      if (mode === "calm432" || mode === "soft528") {
+        const oscillator = ctx.createOscillator();
+        oscillator.type = "sine";
+        oscillator.frequency.value = mode === "calm432" ? 432 : 528;
+        oscillator.connect(gain);
+        oscillator.start();
+        cleanupRef.current = () => {
+          oscillator.stop();
+          ctx.close();
+        };
+      } else {
+        const noise = createNoise(ctx, mode);
+        const filter = ctx.createBiquadFilter();
+        filter.type = mode === "rain" ? "highpass" : "lowpass";
+        filter.frequency.value = mode === "rain" ? 900 : mode === "ocean" ? 650 : 1600;
+        noise.connect(filter);
+        filter.connect(gain);
+        noise.start();
+        cleanupRef.current = () => {
+          noise.stop();
+          ctx.close();
+        };
+      }
+
       setPlaying(true);
-      return;
+    } catch (playError) {
+      console.error("wellness sound failed", playError);
+      cleanupRef.current?.();
+      cleanupRef.current = null;
+      setPlaying(false);
+      setError(true);
     }
-
-    if (!mode) return;
-
-    const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
-    const ctx = new AudioContextCtor();
-    const gain = ctx.createGain();
-    gain.gain.value = 0.045;
-    gain.connect(ctx.destination);
-
-    if (mode === "calm432" || mode === "soft528") {
-      const oscillator = ctx.createOscillator();
-      oscillator.type = "sine";
-      oscillator.frequency.value = mode === "calm432" ? 432 : 528;
-      oscillator.connect(gain);
-      oscillator.start();
-      cleanupRef.current = () => {
-        oscillator.stop();
-        ctx.close();
-      };
-    } else {
-      const noise = createNoise(ctx, mode);
-      const filter = ctx.createBiquadFilter();
-      filter.type = mode === "rain" ? "highpass" : "lowpass";
-      filter.frequency.value = mode === "rain" ? 900 : mode === "ocean" ? 650 : 1600;
-      noise.connect(filter);
-      filter.connect(gain);
-      noise.start();
-      cleanupRef.current = () => {
-        noise.stop();
-        ctx.close();
-      };
-    }
-
-    setPlaying(true);
   };
 
   return (
@@ -107,6 +123,7 @@ export function WellnessPlayer({
       <div className="min-w-0">
         <p className="font-medium">{label}</p>
         <p className="text-sm text-muted-foreground">{description}</p>
+        {error && <p className="mt-1 text-xs text-destructive">{errorText}</p>}
       </div>
     </div>
   );
