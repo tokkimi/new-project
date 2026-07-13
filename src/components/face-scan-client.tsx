@@ -63,19 +63,19 @@ const MODULE_ICON: Record<ModuleId, React.ComponentType<{ className?: string }>>
  * score per module, not pixel coordinates.
  */
 const MODULE_ZONE: Record<ModuleId, { x: number; y: number }> = {
-  oiliness: { x: 50, y: 28 },
-  wrinkles: { x: 76, y: 32 },
-  darkCircles: { x: 34, y: 40 },
-  pores: { x: 50, y: 56 },
-  blackheads: { x: 50, y: 53 },
-  redness: { x: 26, y: 50 },
-  sensitivity: { x: 74, y: 48 },
-  spots: { x: 35, y: 46 },
-  radiance: { x: 50, y: 45 },
-  texture: { x: 30, y: 56 },
-  dryness: { x: 70, y: 56 },
-  acneScars: { x: 65, y: 60 },
-  acne: { x: 50, y: 76 },
+  oiliness: { x: 50, y: 25 },
+  wrinkles: { x: 78, y: 49 },
+  darkCircles: { x: 36, y: 53 },
+  pores: { x: 50, y: 61 },
+  blackheads: { x: 50, y: 65 },
+  redness: { x: 24, y: 61 },
+  sensitivity: { x: 76, y: 64 },
+  spots: { x: 32, y: 57 },
+  radiance: { x: 50, y: 50 },
+  texture: { x: 27, y: 66 },
+  dryness: { x: 73, y: 66 },
+  acneScars: { x: 68, y: 72 },
+  acne: { x: 50, y: 85 },
 };
 
 type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error" | "noFace" | "noCredits";
@@ -454,7 +454,7 @@ export function FaceScanClient() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
 
                       <span
-                        className="absolute size-5 -translate-x-1/2 -translate-y-1/2"
+                        className="absolute size-2.5 -translate-x-1/2 -translate-y-1/2"
                         style={{ left: `${zone.x}%`, top: `${zone.y}%` }}
                       >
                         <span
@@ -467,7 +467,7 @@ export function FaceScanClient() {
                         />
                         <span
                           className={cn(
-                            "absolute inset-0 rounded-full border-2 border-white/90",
+                            "absolute inset-0 rounded-full border border-white/90",
                             module.severity === "attention" && "bg-destructive",
                             module.severity === "medium" && "bg-am",
                             module.severity === "low" && "bg-success"
@@ -589,21 +589,23 @@ function ModuleDetail({
               {products.length === 0 ? (
                 <p className="px-1 text-sm text-muted-foreground">{t("noProductsForModule")}</p>
               ) : (
-                <div className="no-scrollbar flex gap-3 overflow-x-auto px-1 pb-1">
+                <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-1 pb-1">
                   {products.map((product) => {
                     const isAdded = addedProducts.has(product.id);
                     return (
                       <div
                         key={product.id}
-                        className="relative w-[132px] shrink-0 rounded-2xl border border-white/40 bg-white/50 p-2.5 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.4)] backdrop-blur-xl dark:border-white/10 dark:bg-white/10"
+                        className="relative w-[132px] shrink-0 snap-start rounded-2xl border border-white/40 bg-white/50 p-2.5 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.4)] backdrop-blur-xl dark:border-white/10 dark:bg-white/10"
                       >
-                        <ProductImage
-                          imageUrl={product.imageUrl}
-                          category={product.category}
-                          name={product.name}
-                          size="sm"
-                          className="size-full aspect-square rounded-xl"
-                        />
+                        <div className="aspect-square w-full overflow-hidden rounded-xl">
+                          <ProductImage
+                            imageUrl={product.imageUrl}
+                            category={product.category}
+                            name={product.name}
+                            size="sm"
+                            className="size-full rounded-xl"
+                          />
+                        </div>
                         <p className="mt-2 line-clamp-2 text-xs font-medium leading-snug">{product.name}</p>
                         <p className="truncate text-[11px] text-muted-foreground">{tCategories(product.category)}</p>
                         <button

@@ -27,6 +27,8 @@ const SKIN_TYPES = ["oily", "dry", "combination", "normal", "sensitive"] as cons
 const LOCALE_NAMES: Record<string, string> = {
   en: "English",
   ko: "Korean (한국어)",
+  fr: "French (Français)",
+  ja: "Japanese (日本語)",
 };
 
 const TOOL = {
