@@ -2,179 +2,21 @@
 
 import * as React from "react";
 import { useLocale } from "next-intl";
-import { ArrowLeft, ArrowRight, Camera, Check } from "lucide-react";
+import { ArrowLeft, ArrowRight, Camera, Check, ShieldCheck } from "lucide-react";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AuditResultView } from "@/components/audit-result-view";
 import type { AuditResult } from "@/lib/audit-engine";
 import {
-  WELLBEING_QUESTIONS,
-  AGE_QUESTION,
-  LIFESTYLE_QUESTIONS,
+  AUDIT_QUESTION_SECTIONS,
   type BilanQuestion,
+  type BilanQuestionSection,
 } from "@/lib/bilan-questions";
 
 type Lang = "en" | "ko" | "fr" | "ja";
-
-const INTL_LOCALE: Record<Lang, string> = { en: "en-US", ko: "ko-KR", fr: "fr-FR", ja: "ja-JP" };
-
-const UI: Record<Lang, {
-  introTitle: string;
-  introText: string;
-  start: string;
-  stepScanTitle: string;
-  stepScanText: string;
-  noScan: string;
-  takeScan: string;
-  scanScore: string;
-  stepRoutineTitle: string;
-  stepRoutineText: string;
-  stepPersonalTitle: string;
-  stepLifestyleTitle: string;
-  back: string;
-  next: string;
-  finish: string;
-  saving: string;
-  resultTitle: string;
-  resultSubtitle: string;
-  overallScore: string;
-  sectionScan: string;
-  sectionRoutine: string;
-  sectionLifestyle: string;
-  routineIssues: string;
-  flagsNone: string;
-  viewProfile: string;
-  restart: string;
-}> = {
-  en: {
-    introTitle: "Your complete beauty check-in",
-    introText:
-      "A full picture in a few steps: your latest face scan, a routine audit, and a few quick questions about how you're doing today and day to day. Nothing here replaces medical advice — it's a practical, honest snapshot.",
-    start: "Start the full check-in",
-    stepScanTitle: "Face scan",
-    stepScanText: "Your most recent scan is used for this check-in.",
-    noScan: "No recent face scan found.",
-    takeScan: "Take a face scan",
-    scanScore: "Skin score",
-    stepRoutineTitle: "Routine audit",
-    stepRoutineText: "Based on your current shelf and skin profile.",
-    stepPersonalTitle: "About you today",
-    stepLifestyleTitle: "Daily habits",
-    back: "Back",
-    next: "Next",
-    finish: "See my results",
-    saving: "Saving...",
-    resultTitle: "Your bilan",
-    resultSubtitle: "Swipe to see each section.",
-    overallScore: "Overall score",
-    sectionScan: "Face scan",
-    sectionRoutine: "Routine",
-    sectionLifestyle: "Lifestyle & wellbeing",
-    routineIssues: "issues",
-    flagsNone: "Nothing flagged here — good habits.",
-    viewProfile: "View in my profile",
-    restart: "Start a new check-in",
-  },
-  ko: {
-    introTitle: "종합 뷰티 체크인",
-    introText:
-      "몇 단계로 전체 그림을 확인하세요: 최근 얼굴 스캔, 루틴 점검, 그리고 오늘과 평소 컨디션에 대한 짧은 질문들. 의학적 조언을 대체하지 않는, 실용적이고 솔직한 스냅샷이에요.",
-    start: "전체 체크인 시작",
-    stepScanTitle: "얼굴 스캔",
-    stepScanText: "가장 최근 스캔이 이번 체크인에 사용됩니다.",
-    noScan: "최근 얼굴 스캔이 없어요.",
-    takeScan: "얼굴 스캔하기",
-    scanScore: "피부 점수",
-    stepRoutineTitle: "루틴 점검",
-    stepRoutineText: "현재 화장대와 피부 프로필을 기준으로 합니다.",
-    stepPersonalTitle: "오늘의 나",
-    stepLifestyleTitle: "생활 습관",
-    back: "이전",
-    next: "다음",
-    finish: "결과 보기",
-    saving: "저장 중...",
-    resultTitle: "나의 바이런",
-    resultSubtitle: "옆으로 넘겨 각 섹션을 확인하세요.",
-    overallScore: "종합 점수",
-    sectionScan: "얼굴 스캔",
-    sectionRoutine: "루틴",
-    sectionLifestyle: "생활 습관과 웰빙",
-    routineIssues: "개 항목",
-    flagsNone: "특별히 지적할 사항이 없어요 — 좋은 습관이에요.",
-    viewProfile: "내 프로필에서 보기",
-    restart: "새 체크인 시작",
-  },
-  fr: {
-    introTitle: "Votre bilan beauté complet",
-    introText:
-      "Une vue d'ensemble en quelques étapes : votre dernier scan visage, un audit de routine, et quelques questions rapides sur votre forme du jour et au quotidien. Rien ici ne remplace un avis médical — c'est un instantané pratique et honnête.",
-    start: "Démarrer le bilan complet",
-    stepScanTitle: "Scan visage",
-    stepScanText: "Votre scan le plus récent est utilisé pour ce bilan.",
-    noScan: "Aucun scan visage récent trouvé.",
-    takeScan: "Faire un scan visage",
-    scanScore: "Score de peau",
-    stepRoutineTitle: "Audit de routine",
-    stepRoutineText: "Basé sur votre étagère actuelle et votre profil de peau.",
-    stepPersonalTitle: "Vous, aujourd'hui",
-    stepLifestyleTitle: "Habitudes quotidiennes",
-    back: "Retour",
-    next: "Suivant",
-    finish: "Voir mes résultats",
-    saving: "Enregistrement...",
-    resultTitle: "Votre bilan",
-    resultSubtitle: "Glissez pour voir chaque section.",
-    overallScore: "Score global",
-    sectionScan: "Scan visage",
-    sectionRoutine: "Routine",
-    sectionLifestyle: "Mode de vie et bien-être",
-    routineIssues: "points",
-    flagsNone: "Rien à signaler ici — bonnes habitudes.",
-    viewProfile: "Voir dans mon profil",
-    restart: "Commencer un nouveau bilan",
-  },
-  ja: {
-    introTitle: "あなたの総合ビューティーチェックイン",
-    introText:
-      "いくつかのステップで全体像を把握：最新の顔スキャン、ルーティン診断、そして今日と普段の状態についての簡単な質問。ここでの内容は医学的アドバイスに代わるものではなく、実用的で正直なスナップショットです。",
-    start: "総合チェックインを始める",
-    stepScanTitle: "顔スキャン",
-    stepScanText: "最新のスキャン結果がこのチェックインに使用されます。",
-    noScan: "最近の顔スキャンが見つかりません。",
-    takeScan: "顔スキャンを行う",
-    scanScore: "肌スコア",
-    stepRoutineTitle: "ルーティン診断",
-    stepRoutineText: "現在のシェルフと肌プロフィールに基づいています。",
-    stepPersonalTitle: "今日のあなたについて",
-    stepLifestyleTitle: "日々の習慣",
-    back: "戻る",
-    next: "次へ",
-    finish: "結果を見る",
-    saving: "保存中...",
-    resultTitle: "あなたのバイラン",
-    resultSubtitle: "スワイプして各セクションを確認しましょう。",
-    overallScore: "総合スコア",
-    sectionScan: "顔スキャン",
-    sectionRoutine: "ルーティン",
-    sectionLifestyle: "生活習慣とウェルビーイング",
-    routineIssues: "件の項目",
-    flagsNone: "特に指摘する点はありません — 良い習慣です。",
-    viewProfile: "プロフィールで見る",
-    restart: "新しいチェックインを始める",
-  },
-};
-
-function questionLabel(q: BilanQuestion, lang: Lang) {
-  return { en: q.labelEn, ko: q.labelKo, fr: q.labelFr, ja: q.labelJa }[lang];
-}
-
-function optionLabel(opt: BilanQuestion["options"][number], lang: Lang) {
-  return { en: opt.labelEn, ko: opt.labelKo, fr: opt.labelFr, ja: opt.labelJa }[lang];
-}
-
+type Step = "consent" | "routine" | "face_scan" | `section:${string}`;
 type ScanSummary = { id: string; overallScore: number; skinType: string | null; createdAt: string } | null;
-
 type BilanResult = {
   id: string;
   overallScore: number;
@@ -183,6 +25,137 @@ type BilanResult = {
   scanScore: number | null;
   flags: { id: string; severity: string; text: string }[];
 };
+
+const INTL_LOCALE: Record<Lang, string> = { en: "en-US", ko: "ko-KR", fr: "fr-FR", ja: "ja-JP" };
+
+const UI: Record<Lang, {
+  introTitle: string;
+  introText: string;
+  start: string;
+  consentTitle: string;
+  consentText: string;
+  estimatedTime: string;
+  routineTitle: string;
+  routineText: string;
+  finalScanTitle: string;
+  finalScanText: string;
+  finalScanRequired: string;
+  noScan: string;
+  takeScan: string;
+  scanScore: string;
+  back: string;
+  next: string;
+  finish: string;
+  saving: string;
+  resultTitle: string;
+  resultSubtitle: string;
+  overallScore: string;
+  sectionScan: string;
+  sectionLifestyle: string;
+  routineIssues: string;
+  flagsNone: string;
+  viewProfile: string;
+  restart: string;
+  section: string;
+}> = {
+  en: {
+    introTitle: "Complete Haru Skin Audit",
+    introText:
+      "A deeper audit that separates baseline skin tendency, current skin state, safety flags, routine structure, lifestyle context, product fit and a final face scan.",
+    start: "Start the full audit",
+    consentTitle: "Consent and limits",
+    consentText:
+      "Haru provides cosmetic and educational guidance. It does not diagnose medical conditions and does not replace a dermatologist. Camera results can be influenced by light, makeup, filters, angle, device quality and recent heat, cold or sun exposure.",
+    estimatedTime: "Estimated time: 8-12 min",
+    routineTitle: "Current shelf analysis",
+    routineText: "Haru first checks missing basics, active conflicts, duplicate actives and product fit.",
+    finalScanTitle: "Final face scan",
+    finalScanText:
+      "The audit should end with a fresh face scan so Haru can compare declared answers with visible skin signals.",
+    finalScanRequired:
+      "Take a new scan, then return here to generate the complete result. If you just scanned, continue.",
+    noScan: "No recent face scan found.",
+    takeScan: "Take a face scan",
+    scanScore: "Skin score",
+    back: "Back",
+    next: "Next",
+    finish: "See my complete audit",
+    saving: "Saving...",
+    resultTitle: "Your audit",
+    resultSubtitle: "Each result is separated into a clear page.",
+    overallScore: "Overall score",
+    sectionScan: "Face scan",
+    sectionLifestyle: "Lifestyle and context",
+    routineIssues: "issues",
+    flagsNone: "Nothing major flagged here.",
+    viewProfile: "View in my profile",
+    restart: "Start a new audit",
+    section: "Section",
+  },
+  fr: {
+    introTitle: "Audit Haru Skin complet",
+    introText:
+      "Un audit approfondi qui sépare type de peau de base, état actuel, sécurité, routine, mode de vie, produits et scan visage final.",
+    start: "Démarrer l'audit complet",
+    consentTitle: "Consentement et limites",
+    consentText:
+      "Haru fournit une analyse cosmétique et éducative. Haru ne pose pas de diagnostic médical et ne remplace pas un dermatologue. Le scan peut être influencé par la lumière, le maquillage, les filtres, l'angle, la qualité de l'appareil et une exposition récente au chaud, au froid ou au soleil.",
+    estimatedTime: "Temps estimé : 8-12 min",
+    routineTitle: "Analyse de l'étagère actuelle",
+    routineText: "Haru vérifie d'abord les étapes manquantes, conflits d'actifs, doublons et l'adéquation des produits.",
+    finalScanTitle: "Scan visage final",
+    finalScanText:
+      "L'audit doit finir par un nouveau scan visage afin de croiser vos réponses avec les signaux visibles de la peau.",
+    finalScanRequired:
+      "Faites un nouveau scan, puis revenez ici pour générer le résultat complet. Si vous venez de le faire, continuez.",
+    noScan: "Aucun scan visage récent trouvé.",
+    takeScan: "Faire un scan visage",
+    scanScore: "Score de peau",
+    back: "Retour",
+    next: "Suivant",
+    finish: "Voir mon audit complet",
+    saving: "Enregistrement...",
+    resultTitle: "Votre audit",
+    resultSubtitle: "Chaque résultat est séparé en page claire.",
+    overallScore: "Score global",
+    sectionScan: "Scan visage",
+    sectionLifestyle: "Mode de vie et contexte",
+    routineIssues: "points",
+    flagsNone: "Rien de majeur à signaler ici.",
+    viewProfile: "Voir dans mon profil",
+    restart: "Commencer un nouvel audit",
+    section: "Section",
+  },
+  ko: {} as (typeof UI)["en"],
+  ja: {} as (typeof UI)["en"],
+};
+UI.ko = UI.en;
+UI.ja = UI.en;
+
+function localized<T extends { labelEn: string; labelKo: string; labelFr: string; labelJa: string }>(
+  item: T,
+  lang: Lang
+) {
+  return { en: item.labelEn, ko: item.labelKo, fr: item.labelFr, ja: item.labelJa }[lang];
+}
+
+function sectionTitle(section: BilanQuestionSection, lang: Lang) {
+  return {
+    en: section.titleEn,
+    ko: section.titleKo,
+    fr: section.titleFr,
+    ja: section.titleJa,
+  }[lang];
+}
+
+function sectionDescription(section: BilanQuestionSection, lang: Lang) {
+  return {
+    en: section.descriptionEn,
+    ko: section.descriptionKo,
+    fr: section.descriptionFr,
+    ja: section.descriptionJa,
+  }[lang];
+}
 
 function QuestionGroup({
   questions,
@@ -199,7 +172,7 @@ function QuestionGroup({
     <div className="flex flex-col gap-6">
       {questions.map((q) => (
         <div key={q.id}>
-          <p className="mb-2 text-sm font-medium">{questionLabel(q, lang)}</p>
+          <p className="mb-3 text-sm font-medium leading-6">{localized(q, lang)}</p>
           <div className="flex flex-wrap gap-2">
             {q.options.map((opt) => {
               const selected = answers[q.id] === opt.value;
@@ -214,7 +187,7 @@ function QuestionGroup({
                       : "border-border bg-card text-foreground hover:border-primary/40"
                   }`}
                 >
-                  {optionLabel(opt, lang)}
+                  {localized(opt, lang)}
                 </button>
               );
             })}
@@ -246,8 +219,22 @@ export function BilanWizard({
   const [result, setResult] = React.useState<BilanResult | null>(null);
   const [error, setError] = React.useState<string | null>(null);
 
-  const steps = ["scan", "routine", "personal", "lifestyle"] as const;
+  const steps = React.useMemo<Step[]>(
+    () => [
+      "consent",
+      "routine",
+      ...AUDIT_QUESTION_SECTIONS.map((section) => `section:${section.id}` as const),
+      "face_scan",
+    ],
+    []
+  );
 
+  const current = steps[step];
+  const currentSection =
+    current?.startsWith("section:")
+      ? AUDIT_QUESTION_SECTIONS.find((section) => section.id === current.replace("section:", ""))
+      : null;
+  const progress = ((step + 1) / steps.length) * 100;
   const setAnswer = (id: string, value: string) => setAnswers((prev) => ({ ...prev, [id]: value }));
 
   const finish = async () => {
@@ -286,9 +273,12 @@ export function BilanWizard({
 
   if (!started) {
     return (
-      <Card className="items-center gap-4 py-14 text-center">
-        <h2 className="font-serif text-2xl">{t.introTitle}</h2>
-        <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{t.introText}</p>
+      <Card className="items-center gap-5 py-14 text-center">
+        <p className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+          {t.estimatedTime}
+        </p>
+        <h2 className="font-serif text-3xl">{t.introTitle}</h2>
+        <p className="max-w-xl text-sm leading-7 text-muted-foreground">{t.introText}</p>
         <Button size="lg" onClick={() => setStarted(true)}>
           {t.start}
           <ArrowRight className="size-4" />
@@ -297,48 +287,34 @@ export function BilanWizard({
     );
   }
 
-  const current = steps[step];
-  const progress = ((step + 1) / steps.length) * 100;
-
   return (
     <div className="flex flex-col gap-5">
-      <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
-        <div className="h-full rounded-full bg-primary transition-all duration-500" style={{ width: `${progress}%` }} />
+      <div>
+        <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
+          <span>
+            {t.section} {step + 1} / {steps.length}
+          </span>
+          <span>{Math.round(progress)}%</span>
+        </div>
+        <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
+          <div className="h-full rounded-full bg-primary transition-all duration-500" style={{ width: `${progress}%` }} />
+        </div>
       </div>
 
-      {current === "scan" && (
+      {current === "consent" && (
         <Card className="gap-4">
-          <h2 className="font-serif text-xl">{t.stepScanTitle}</h2>
-          <p className="text-sm text-muted-foreground">{t.stepScanText}</p>
-          {latestScan ? (
-            <div className="flex items-center justify-between rounded-2xl bg-secondary/50 px-4 py-3">
-              <span className="text-sm">
-                {new Intl.DateTimeFormat(INTL_LOCALE[lang], { dateStyle: "medium" }).format(
-                  new Date(latestScan.createdAt)
-                )}
-              </span>
-              <span className="font-serif text-lg">
-                {t.scanScore} {latestScan.overallScore}
-              </span>
-            </div>
-          ) : (
-            <div className="flex flex-col items-start gap-3 rounded-2xl bg-secondary/50 px-4 py-4">
-              <p className="text-sm text-muted-foreground">{t.noScan}</p>
-              <Button asChild variant="outline" size="sm">
-                <Link href="/app/face-scan">
-                  <Camera className="size-4" />
-                  {t.takeScan}
-                </Link>
-              </Button>
-            </div>
-          )}
+          <span className="flex size-11 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <ShieldCheck className="size-5" />
+          </span>
+          <h2 className="font-serif text-2xl">{t.consentTitle}</h2>
+          <p className="text-sm leading-7 text-muted-foreground">{t.consentText}</p>
         </Card>
       )}
 
       {current === "routine" && (
         <Card className="gap-4">
-          <h2 className="font-serif text-xl">{t.stepRoutineTitle}</h2>
-          <p className="text-sm text-muted-foreground">{t.stepRoutineText}</p>
+          <h2 className="font-serif text-2xl">{t.routineTitle}</h2>
+          <p className="text-sm leading-7 text-muted-foreground">{t.routineText}</p>
           <div className="rounded-3xl bg-secondary/60 p-4">
             <div className="flex items-center justify-between gap-4">
               <span className="text-sm font-medium">{t.overallScore}</span>
@@ -353,17 +329,50 @@ export function BilanWizard({
         </Card>
       )}
 
-      {current === "personal" && (
-        <Card className="gap-4">
-          <h2 className="font-serif text-xl">{t.stepPersonalTitle}</h2>
-          <QuestionGroup questions={[...WELLBEING_QUESTIONS, AGE_QUESTION]} answers={answers} onAnswer={setAnswer} lang={lang} />
+      {currentSection && (
+        <Card className="gap-5">
+          <div>
+            <h2 className="font-serif text-2xl">{sectionTitle(currentSection, lang)}</h2>
+            <p className="mt-1 text-sm leading-7 text-muted-foreground">
+              {sectionDescription(currentSection, lang)}
+            </p>
+          </div>
+          <QuestionGroup questions={currentSection.questions} answers={answers} onAnswer={setAnswer} lang={lang} />
         </Card>
       )}
 
-      {current === "lifestyle" && (
-        <Card className="gap-4">
-          <h2 className="font-serif text-xl">{t.stepLifestyleTitle}</h2>
-          <QuestionGroup questions={LIFESTYLE_QUESTIONS} answers={answers} onAnswer={setAnswer} lang={lang} />
+      {current === "face_scan" && (
+        <Card className="gap-5">
+          <span className="flex size-11 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <Camera className="size-5" />
+          </span>
+          <div>
+            <h2 className="font-serif text-2xl">{t.finalScanTitle}</h2>
+            <p className="mt-1 text-sm leading-7 text-muted-foreground">{t.finalScanText}</p>
+          </div>
+          <div className="rounded-3xl bg-secondary/60 p-4">
+            {latestScan ? (
+              <div className="flex items-center justify-between gap-4">
+                <div className="text-sm text-muted-foreground">
+                  {new Intl.DateTimeFormat(INTL_LOCALE[lang], { dateStyle: "medium" }).format(
+                    new Date(latestScan.createdAt)
+                  )}
+                </div>
+                <div className="font-serif text-2xl">
+                  {t.scanScore} {latestScan.overallScore}
+                </div>
+              </div>
+            ) : (
+              <p className="text-sm text-muted-foreground">{t.noScan}</p>
+            )}
+          </div>
+          <p className="text-sm leading-7 text-muted-foreground">{t.finalScanRequired}</p>
+          <Button asChild variant="outline" className="self-start">
+            <Link href="/app/face-scan">
+              <Camera className="size-4" />
+              {t.takeScan}
+            </Link>
+          </Button>
         </Card>
       )}
 
