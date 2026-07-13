@@ -729,94 +729,94 @@
   },
   "ingredients": {
     "retinol": {
-      "name": "Retinol / Retinoids",
-      "summary": "Cell renewal, anti-aging, acne."
+      "name": "レチノール／レチノイド",
+      "summary": "細胞のターンオーバー、エイジングケア、ニキビケア。"
     },
     "vitamin_c": {
-      "name": "Vitamin C (L-AA)",
-      "summary": "Antioxidant, glow, anti-pollution protection."
+      "name": "ビタミンC（L-AA）",
+      "summary": "抗酸化、透明感、大気汚染からの保護。"
     },
     "niacinamide": {
-      "name": "Niacinamide",
-      "summary": "Regulates sebum, soothes, strengthens the barrier."
+      "name": "ナイアシンアミド",
+      "summary": "皮脂を調整し、鎮静させ、バリア機能を強化。"
     },
     "aha": {
-      "name": "AHA (glycolic / lactic)",
-      "summary": "Exfoliant, texture and tone."
+      "name": "AHA（グリコール酸／乳酸）",
+      "summary": "角質ケア、キメと透明感の改善。"
     },
     "bha": {
-      "name": "BHA (salicylic acid)",
-      "summary": "Exfoliant, unclogs pores, anti-blemish."
+      "name": "BHA（サリチル酸）",
+      "summary": "角質ケア、毛穴づまりの解消、ニキビ予防。"
     },
     "benzoyl_peroxide": {
-      "name": "Benzoyl peroxide",
-      "summary": "Antibacterial, treats inflammatory acne."
+      "name": "過酸化ベンゾイル",
+      "summary": "抗菌作用、炎症性ニキビの治療。"
     },
     "vitamin_e": {
-      "name": "Vitamin E",
-      "summary": "Antioxidant, often paired with vitamin C."
+      "name": "ビタミンE",
+      "summary": "抗酸化成分、ビタミンCとよく併用される。"
     },
     "peptides": {
-      "name": "Peptides / Copper peptides",
-      "summary": "Firmness, barrier repair."
+      "name": "ペプチド／銅ペプチド",
+      "summary": "ハリ、バリア機能の修復。"
     },
     "hyaluronic_acid": {
-      "name": "Hyaluronic acid",
-      "summary": "Hydration, plumping."
+      "name": "ヒアルロン酸",
+      "summary": "保湿、ふっくら感。"
     },
     "centella": {
-      "name": "Centella asiatica (Cica)",
-      "summary": "Soothing, repairing — a K-beauty staple."
+      "name": "ツボクサエキス（シカ）",
+      "summary": "鎮静、修復 — K-beautyの定番成分。"
     },
     "spf": {
-      "name": "Sunscreen (SPF)",
-      "summary": "UV protection — the final morning step."
+      "name": "日焼け止め（SPF）",
+      "summary": "UV対策 — 朝の最後の仕上げステップ。"
     },
     "ceramides": {
-      "name": "Ceramides",
-      "summary": "Restores the skin barrier."
+      "name": "セラミド",
+      "summary": "肌のバリア機能を回復させる。"
     }
   },
   "conflictRules": {
     "retinol_aha_bha": {
-      "headline": "High over-exfoliation risk",
-      "reason": "Retinol and AHAs both speed up cell turnover: combined the same night, they multiply redness, sensitivity and peeling.",
-      "recommendation": "Alternate nights (e.g. retinol Mon/Wed/Fri, AHA the other nights) instead of layering them."
+      "headline": "過剰な角質ケアのリスクが高い",
+      "reason": "レチノールとAHAはどちらもターンオーバーを促進します。同じ夜に併用すると、赤み、敏感さ、皮むけが増加します。",
+      "recommendation": "重ねて使うのではなく、夜を分けましょう（例：レチノールは月・水・金、AHAはそれ以外の夜）。"
     },
     "retinol_bha": {
-      "headline": "High over-exfoliation risk",
-      "reason": "Same logic as with AHAs: BHA and retinol stack irritation on an already fragile skin barrier.",
-      "recommendation": "Give each its own evening, never both at once."
+      "headline": "過剰な角質ケアのリスクが高い",
+      "reason": "AHAと同様の理由で、BHAとレチノールはすでに繊細になっているバリア機能にさらに刺激を重ねてしまいます。",
+      "recommendation": "それぞれ別の夜に使い、同時には使わないようにしましょう。"
     },
     "retinol_benzoyl": {
-      "headline": "Benzoyl peroxide deactivates retinol",
-      "reason": "Benzoyl peroxide oxidizes retinol and significantly reduces its efficacy, on top of irritating skin if combined.",
-      "recommendation": "Use benzoyl peroxide in the morning and keep retinol for the evening, spaced by a few hours — or alternate days."
+      "headline": "過酸化ベンゾイルはレチノールを分解する",
+      "reason": "過酸化ベンゾイルはレチノールを酸化させ、その効果を大幅に低下させます。併用すると肌への刺激も強まります。",
+      "recommendation": "過酸化ベンゾイルは朝、レチノールは夜に使い、数時間空けましょう。あるいは日を分けて使用してください。"
     },
     "vitc_retinol_timing": {
-      "headline": "Two powerful actives, two different moments",
-      "reason": "L-AA vitamin C is unstable at a pH close to active retinol; combining them can neutralize part of their efficacy and irritate skin.",
-      "recommendation": "Vitamin C in the morning (antioxidant + protection), retinol at night. Simple, effective, zero conflict."
+      "headline": "強力な成分2つ、異なるタイミングで",
+      "reason": "L-AA型ビタミンCは活性型レチノールに近いpHでは不安定になり、併用すると効果の一部が打ち消され、肌への刺激にもなり得ます。",
+      "recommendation": "ビタミンCは朝（抗酸化・保護）、レチノールは夜に。シンプルで効果的、コンフリクトもありません。"
     },
     "aha_bha_together": {
-      "headline": "Stacking exfoliants",
-      "reason": "Using two chemical exfoliants the same evening raises the risk of a damaged skin barrier, especially on sensitive skin.",
-      "recommendation": "Pick one per evening, or reserve the combo for very tolerant skin starting at low frequency."
+      "headline": "角質ケア成分の重ね付け",
+      "reason": "同じ夜に2種類のケミカル角質ケア成分を使うと、特に敏感肌の場合、バリア機能が損なわれるリスクが高まります。",
+      "recommendation": "1晩につき1種類を選ぶか、非常に耐性のある肌に限り低頻度から併用を始めてください。"
     },
     "niacinamide_vitc_myth": {
-      "headline": "Myth: this combination is actually safe",
-      "reason": "The belief that niacinamide + vitamin C form an ineffective complex comes from old studies at very high temperatures, not representative of a real routine.",
-      "recommendation": "You can use them together without issue. If your skin reacts, this combination isn't the cause — look at concentration instead."
+      "headline": "俗説：実はこの組み合わせは問題ありません",
+      "reason": "ナイアシンアミドとビタミンCが無効な複合体を作るという説は、実際のルーティンを反映しない非常に高温での古い研究に基づいています。",
+      "recommendation": "問題なく併用できます。肌が反応する場合、原因はこの組み合わせではなく濃度である可能性が高いです。"
     },
     "peptides_aha": {
-      "headline": "Acidic pH can deactivate some peptides",
-      "reason": "Many peptides work best at neutral pH; an acidic exfoliant applied right before can reduce their efficacy.",
-      "recommendation": "Apply peptides at another time (morning routine, or a layer after rinsing/neutralizing the pH)."
+      "headline": "酸性のpHが一部のペプチドを不活性化することがある",
+      "reason": "多くのペプチドは中性pHで最も効果を発揮します。直前に酸性の角質ケア成分を使うと効果が下がることがあります。",
+      "recommendation": "ペプチドは別のタイミング（朝のルーティン、またはpHをすすぎ・中和した後の重ね付け）で使用してください。"
     },
     "spf_am_only": {
-      "headline": "Retinol increases photosensitivity",
-      "reason": "Retinol makes skin more sensitive to UV. Since it's an evening product, the real thing to manage is your SPF the next morning.",
-      "recommendation": "No same-evening application to manage — just make sure to apply SPF the morning after a retinol night."
+      "headline": "レチノールは光感受性を高める",
+      "reason": "レチノールは肌を紫外線に対してより敏感にします。夜用の製品なので、実際に気をつけるべきは翌朝の日焼け止めです。",
+      "recommendation": "同じ夜に管理すべきことはありません — レチノールを使った翌朝は必ず日焼け止めを塗りましょう。"
     }
   },
   "auth": {
@@ -1072,129 +1072,129 @@
     ]
   },
   "goodHabits": {
-    "eyebrow": "Good habits",
-    "title": "Start with skin logic, then personalize.",
-    "subtitle": "Haru does not pretend everyone needs the same routine. The base is simple: cleanse, treat carefully, moisturize, protect. Then the details change by skin type.",
-    "guide": "Guide",
-    "amLabel": "AM",
-    "pmLabel": "PM",
-    "bothLabel": "Both",
-    "watchOutLabel": "Watch out",
-    "rulesTitle": "Rules Haru uses when checking a routine",
-    "ingredientsTitle": "Ingredient base Haru watches",
-    "trackedFallback": "Tracked by Haru's compatibility rules.",
-    "disclaimer": "Based on dermatologist-style routine basics: gentle cleansing, moisturizing, broad-spectrum SPF 30+, cautious active use, and sunscreen reapplication outdoors. Haru is guidance, not a medical diagnosis.",
+    "eyebrow": "良い習慣",
+    "title": "まず肌の基本ロジックから、そしてパーソナライズを。",
+    "subtitle": "Haruは全員に同じルーティンが必要だとは考えていません。基本はシンプルです：洗う、丁寧にケアする、保湿する、守る。そこから先の細部は肌タイプによって変わります。",
+    "guide": "ガイド",
+    "amLabel": "朝",
+    "pmLabel": "夜",
+    "bothLabel": "朝・夜両方",
+    "watchOutLabel": "注意点",
+    "rulesTitle": "Haruがルーティンをチェックする際のルール",
+    "ingredientsTitle": "Haruが注目する成分",
+    "trackedFallback": "Haruの相性ルールで管理されています。",
+    "disclaimer": "皮膚科医的なルーティンの基本に基づいています：やさしい洗顔、保湿、SPF30以上の広範囲UVカット、有効成分の慎重な使用、屋外での日焼け止めの塗り直し。Haruはガイダンスであり、医学的診断ではありません。",
     "daily": [
       {
-        "title": "Morning is protection",
-        "text": "Cleanse only if you wake up oily or sweaty, hydrate, then finish with broad-spectrum SPF 30 or higher every day."
+        "title": "朝は「守る」ことが中心",
+        "text": "起きたときに皮脂やべたつきがある場合のみ洗顔し、保湿した後、毎日SPF30以上の広範囲UVカット製品で仕上げましょう。"
       },
       {
-        "title": "Evening is removal and repair",
-        "text": "Remove sunscreen and makeup, cleanse gently, then use treatment only if your skin tolerates it. Finish with moisturizer."
+        "title": "夜は「落として整える」ことが中心",
+        "text": "日焼け止めとメイクを落とし、やさしく洗顔した後、肌が耐えられる場合のみ集中ケアを使用します。最後に保湿剤で仕上げます。"
       },
       {
-        "title": "SPF is the non-negotiable step",
-        "text": "Reapply about every 2 hours when outdoors, and after sweating or swimming. Actives work better when UV is controlled."
+        "title": "SPFは省略できないステップ",
+        "text": "屋外では約2時間ごとに塗り直し、汗をかいたり泳いだりした後も塗り直しましょう。紫外線対策ができていると有効成分もより効果的に働きます。"
       },
       {
-        "title": "Do less when skin is irritated",
-        "text": "Pause retinoids, acids, scrubs and fragrance-heavy extras when skin stings, flakes, burns, or stays red."
+        "title": "肌が荒れているときは減らす",
+        "text": "肌がヒリヒリ、皮むけ、ほてり、赤みが続くときは、レチノイド、酸類、スクラブ、香りの強い製品を中止しましょう。"
       }
     ],
     "routines": [
       {
-        "type": "Dry or tight skin",
-        "am": "Gentle rinse or creamy cleanser -> hydrating toner/serum -> ceramide moisturizer -> SPF.",
-        "pm": "Cleanser -> hydrating serum on damp skin -> richer moisturizer or sleeping mask.",
-        "avoid": "Avoid foaming cleansers that leave skin squeaky, daily acids, and layering too many actives."
+        "type": "乾燥・つっぱる肌",
+        "am": "やさしいすすぎまたはクリーム状クレンザー → 保湿化粧水／美容液 → セラミド配合保湿剤 → SPF。",
+        "pm": "クレンザー → 湿った肌に保湿美容液 → よりリッチな保湿剤またはスリーピングマスク。",
+        "avoid": "肌がきしむ洗顔料、毎日の酸系ケア、有効成分の重ねすぎは避けましょう。"
       },
       {
-        "type": "Oily or breakout-prone skin",
-        "am": "Light cleanser -> niacinamide or calming serum -> gel moisturizer -> lightweight SPF.",
-        "pm": "Cleanser -> BHA 2-4 nights/week or acne treatment -> non-comedogenic moisturizer.",
-        "avoid": "Do not skip moisturizer; over-stripping often makes oiliness worse."
+        "type": "オイリー肌・ニキビができやすい肌",
+        "am": "軽めのクレンザー → ナイアシンアミドまたは鎮静系美容液 → ジェル状保湿剤 → 軽めのSPF。",
+        "pm": "クレンザー → 週2〜4晩のBHAまたはニキビケア → ノンコメドジェニックな保湿剤。",
+        "avoid": "保湿を省略しないこと。過剰な皮脂除去はかえって皮脂分泌を悪化させることがあります。"
       },
       {
-        "type": "Sensitive or redness-prone skin",
-        "am": "Minimal cleanse -> centella/panthenol serum -> barrier cream -> mineral or gentle SPF.",
-        "pm": "Cleanser -> soothing serum -> ceramide moisturizer. Add actives one at a time only.",
-        "avoid": "Avoid starting retinol, vitamin C and exfoliating acids in the same week."
+        "type": "敏感肌・赤みが出やすい肌",
+        "am": "最小限の洗顔 → シカ／パンテノール美容液 → バリアクリーム → ミネラル系または低刺激SPF。",
+        "pm": "クレンザー → 鎮静美容液 → セラミド配合保湿剤。有効成分は一度に1つずつ追加してください。",
+        "avoid": "レチノール、ビタミンC、角質ケア酸を同じ週に始めるのは避けましょう。"
       },
       {
-        "type": "Combination skin",
-        "am": "Gentle cleanser where needed -> light hydration -> moisturizer only where dry -> SPF.",
-        "pm": "Cleanser -> treatment by zone: BHA on oily areas, barrier care on dry areas -> moisturizer.",
-        "avoid": "Do not force one heavy routine on the whole face if your T-zone and cheeks behave differently."
+        "type": "混合肌",
+        "am": "必要な部分にやさしいクレンザー → 軽めの保湿 → 乾燥する部分にのみ保湿剤 → SPF。",
+        "pm": "クレンザー → 部位別ケア：オイリーな部分にBHA、乾燥する部分にバリアケア → 保湿剤。",
+        "avoid": "Tゾーンと頬の状態が異なる場合、顔全体に一律の重いルーティンを強いないようにしましょう。"
       },
       {
-        "type": "Dullness or uneven tone",
-        "am": "Cleanser -> vitamin C or niacinamide -> moisturizer -> SPF.",
-        "pm": "Cleanser -> gentle AHA 1-3 nights/week or retinoid on alternate nights -> moisturizer.",
-        "avoid": "Do not exfoliate daily for glow. Irritation creates more uneven tone."
+        "type": "くすみ・肌トーンの不均一",
+        "am": "クレンザー → ビタミンCまたはナイアシンアミド → 保湿剤 → SPF。",
+        "pm": "クレンザー → 週1〜3晩の穏やかなAHAまたは一晩おきのレチノイド → 保湿剤。",
+        "avoid": "ツヤのために毎日角質ケアをしないこと。刺激はさらなる肌トーンの乱れを招きます。"
       },
       {
-        "type": "First simple routine",
-        "am": "Cleanser if needed -> moisturizer -> SPF.",
-        "pm": "Cleanser -> moisturizer.",
-        "avoid": "Add only one new product at a time, then wait 1-2 weeks before adding another active."
+        "type": "初めてのシンプルなルーティン",
+        "am": "必要ならクレンザー → 保湿剤 → SPF。",
+        "pm": "クレンザー → 保湿剤。",
+        "avoid": "一度に新しい製品を1つだけ追加し、次の有効成分を追加するまで1〜2週間待ちましょう。"
       }
     ],
     "rules": [
-      "Apply thinnest textures before thicker creams.",
-      "Keep retinoids mostly at night and pair them with morning SPF.",
-      "Use exfoliating acids gradually; more tingle is not more result.",
-      "Patch test new actives, especially if your skin is reactive.",
-      "A routine that you can repeat beats a 12-step routine you abandon."
+      "軽いテクスチャーのものから重めのクリームの順に重ねましょう。",
+      "レチノイドは主に夜に使用し、朝はSPFと組み合わせましょう。",
+      "角質ケア酸は少しずつ使いましょう。ピリピリ感が強い＝効果が高いわけではありません。",
+      "特に反応しやすい肌の場合、新しい有効成分はパッチテストをしましょう。",
+      "続けられるルーティンの方が、挫折する12ステップのルーティンより優れています。"
     ],
     "ingredients": {
       "retinol": {
-        "name": "Retinoids",
-        "summary": "Texture, visible aging, breakouts; mostly night use."
+        "name": "レチノイド",
+        "summary": "肌のキメ、目立つエイジングサイン、ニキビ；主に夜使用。"
       },
       "vitamin_c": {
-        "name": "Vitamin C",
-        "summary": "Morning antioxidant and tone support."
+        "name": "ビタミンC",
+        "summary": "朝の抗酸化ケアと肌トーンのサポート。"
       },
       "niacinamide": {
-        "name": "Niacinamide",
-        "summary": "Barrier, oil balance, redness and tone support."
+        "name": "ナイアシンアミド",
+        "summary": "バリア機能、皮脂バランス、赤みと肌トーンのサポート。"
       },
       "aha": {
         "name": "AHA",
-        "summary": "Surface exfoliation for texture and glow."
+        "summary": "肌のキメと透明感のための表面的な角質ケア。"
       },
       "bha": {
         "name": "BHA",
-        "summary": "Oil-soluble pore and blackhead support."
+        "summary": "毛穴や黒ずみに働く油溶性の角質ケア成分。"
       },
       "benzoyl_peroxide": {
-        "name": "Benzoyl peroxide",
-        "summary": "Acne active; can be drying and bleaching."
+        "name": "過酸化ベンゾイル",
+        "summary": "ニキビケア成分；乾燥や色抜けを起こすことがあります。"
       },
       "vitamin_e": {
-        "name": "Vitamin E",
-        "summary": "Antioxidant often paired with vitamin C."
+        "name": "ビタミンE",
+        "summary": "ビタミンCとよく併用される抗酸化成分。"
       },
       "peptides": {
-        "name": "Peptides",
-        "summary": "Firmness and barrier-supporting signal ingredients."
+        "name": "ペプチド",
+        "summary": "ハリとバリア機能をサポートするシグナル成分。"
       },
       "hyaluronic_acid": {
-        "name": "Hyaluronic acid",
-        "summary": "Hydration support, best sealed with moisturizer."
+        "name": "ヒアルロン酸",
+        "summary": "保湿サポート、保湿剤でしっかり閉じ込めるのが効果的。"
       },
       "centella": {
-        "name": "Centella / cica",
-        "summary": "Soothing support for visible redness."
+        "name": "ツボクサ／シカ",
+        "summary": "目立つ赤みへの鎮静サポート。"
       },
       "spf": {
         "name": "SPF",
-        "summary": "Daily UV protection; the final morning step."
+        "summary": "毎日のUV対策；朝の最後のステップ。"
       },
       "ceramides": {
-        "name": "Ceramides",
-        "summary": "Barrier lipids for dryness and sensitivity."
+        "name": "セラミド",
+        "summary": "乾燥や敏感さに対応するバリア機能を担う脂質。"
       }
     }
   }

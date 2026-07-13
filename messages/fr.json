@@ -729,94 +729,94 @@
   },
   "ingredients": {
     "retinol": {
-      "name": "Retinol / Retinoids",
-      "summary": "Cell renewal, anti-aging, acne."
+      "name": "Rétinol / Rétinoïdes",
+      "summary": "Renouvellement cellulaire, anti-âge, acné."
     },
     "vitamin_c": {
-      "name": "Vitamin C (L-AA)",
-      "summary": "Antioxidant, glow, anti-pollution protection."
+      "name": "Vitamine C (L-AA)",
+      "summary": "Antioxydant, éclat, protection anti-pollution."
     },
     "niacinamide": {
       "name": "Niacinamide",
-      "summary": "Regulates sebum, soothes, strengthens the barrier."
+      "summary": "Régule le sébum, apaise, renforce la barrière cutanée."
     },
     "aha": {
-      "name": "AHA (glycolic / lactic)",
-      "summary": "Exfoliant, texture and tone."
+      "name": "AHA (glycolique / lactique)",
+      "summary": "Exfoliant, texture et teint."
     },
     "bha": {
-      "name": "BHA (salicylic acid)",
-      "summary": "Exfoliant, unclogs pores, anti-blemish."
+      "name": "BHA (acide salicylique)",
+      "summary": "Exfoliant, désobstrue les pores, anti-imperfections."
     },
     "benzoyl_peroxide": {
-      "name": "Benzoyl peroxide",
-      "summary": "Antibacterial, treats inflammatory acne."
+      "name": "Peroxyde de benzoyle",
+      "summary": "Antibactérien, traite l'acné inflammatoire."
     },
     "vitamin_e": {
-      "name": "Vitamin E",
-      "summary": "Antioxidant, often paired with vitamin C."
+      "name": "Vitamine E",
+      "summary": "Antioxydant, souvent associé à la vitamine C."
     },
     "peptides": {
-      "name": "Peptides / Copper peptides",
-      "summary": "Firmness, barrier repair."
+      "name": "Peptides / Peptides de cuivre",
+      "summary": "Fermeté, réparation de la barrière cutanée."
     },
     "hyaluronic_acid": {
-      "name": "Hyaluronic acid",
-      "summary": "Hydration, plumping."
+      "name": "Acide hyaluronique",
+      "summary": "Hydratation, effet repulpant."
     },
     "centella": {
       "name": "Centella asiatica (Cica)",
-      "summary": "Soothing, repairing — a K-beauty staple."
+      "summary": "Apaisant, réparateur — un incontournable K-beauty."
     },
     "spf": {
-      "name": "Sunscreen (SPF)",
-      "summary": "UV protection — the final morning step."
+      "name": "Protection solaire (SPF)",
+      "summary": "Protection UV — la dernière étape du matin."
     },
     "ceramides": {
-      "name": "Ceramides",
-      "summary": "Restores the skin barrier."
+      "name": "Céramides",
+      "summary": "Restaure la barrière cutanée."
     }
   },
   "conflictRules": {
     "retinol_aha_bha": {
-      "headline": "High over-exfoliation risk",
-      "reason": "Retinol and AHAs both speed up cell turnover: combined the same night, they multiply redness, sensitivity and peeling.",
-      "recommendation": "Alternate nights (e.g. retinol Mon/Wed/Fri, AHA the other nights) instead of layering them."
+      "headline": "Risque élevé de sur-exfoliation",
+      "reason": "Le rétinol et les AHA accélèrent tous deux le renouvellement cellulaire : combinés le même soir, ils multiplient rougeurs, sensibilité et desquamation.",
+      "recommendation": "Alternez les soirs (ex. rétinol lundi/mercredi/vendredi, AHA les autres soirs) plutôt que de les superposer."
     },
     "retinol_bha": {
-      "headline": "High over-exfoliation risk",
-      "reason": "Same logic as with AHAs: BHA and retinol stack irritation on an already fragile skin barrier.",
-      "recommendation": "Give each its own evening, never both at once."
+      "headline": "Risque élevé de sur-exfoliation",
+      "reason": "Même logique qu'avec les AHA : le BHA et le rétinol cumulent l'irritation sur une barrière cutanée déjà fragilisée.",
+      "recommendation": "Donnez à chacun sa propre soirée, jamais les deux en même temps."
     },
     "retinol_benzoyl": {
-      "headline": "Benzoyl peroxide deactivates retinol",
-      "reason": "Benzoyl peroxide oxidizes retinol and significantly reduces its efficacy, on top of irritating skin if combined.",
-      "recommendation": "Use benzoyl peroxide in the morning and keep retinol for the evening, spaced by a few hours — or alternate days."
+      "headline": "Le peroxyde de benzoyle désactive le rétinol",
+      "reason": "Le peroxyde de benzoyle oxyde le rétinol et réduit significativement son efficacité, en plus d'irriter la peau si combinés.",
+      "recommendation": "Utilisez le peroxyde de benzoyle le matin et gardez le rétinol pour le soir, espacés de quelques heures — ou alternez les jours."
     },
     "vitc_retinol_timing": {
-      "headline": "Two powerful actives, two different moments",
-      "reason": "L-AA vitamin C is unstable at a pH close to active retinol; combining them can neutralize part of their efficacy and irritate skin.",
-      "recommendation": "Vitamin C in the morning (antioxidant + protection), retinol at night. Simple, effective, zero conflict."
+      "headline": "Deux actifs puissants, deux moments différents",
+      "reason": "La vitamine C L-AA est instable à un pH proche de celui du rétinol actif ; les combiner peut neutraliser une partie de leur efficacité et irriter la peau.",
+      "recommendation": "Vitamine C le matin (antioxydant + protection), rétinol le soir. Simple, efficace, zéro conflit."
     },
     "aha_bha_together": {
-      "headline": "Stacking exfoliants",
-      "reason": "Using two chemical exfoliants the same evening raises the risk of a damaged skin barrier, especially on sensitive skin.",
-      "recommendation": "Pick one per evening, or reserve the combo for very tolerant skin starting at low frequency."
+      "headline": "Superposition d'exfoliants",
+      "reason": "Utiliser deux exfoliants chimiques le même soir augmente le risque d'endommager la barrière cutanée, surtout sur peau sensible.",
+      "recommendation": "Choisissez-en un par soir, ou réservez la combinaison à une peau très tolérante, en commençant à faible fréquence."
     },
     "niacinamide_vitc_myth": {
-      "headline": "Myth: this combination is actually safe",
-      "reason": "The belief that niacinamide + vitamin C form an ineffective complex comes from old studies at very high temperatures, not representative of a real routine.",
-      "recommendation": "You can use them together without issue. If your skin reacts, this combination isn't the cause — look at concentration instead."
+      "headline": "Mythe : cette combinaison est en réalité sans risque",
+      "reason": "L'idée que niacinamide + vitamine C forment un complexe inefficace vient d'anciennes études à très haute température, non représentatives d'une routine réelle.",
+      "recommendation": "Vous pouvez les utiliser ensemble sans problème. Si votre peau réagit, ce n'est pas cette combinaison qui en est la cause — regardez plutôt la concentration."
     },
     "peptides_aha": {
-      "headline": "Acidic pH can deactivate some peptides",
-      "reason": "Many peptides work best at neutral pH; an acidic exfoliant applied right before can reduce their efficacy.",
-      "recommendation": "Apply peptides at another time (morning routine, or a layer after rinsing/neutralizing the pH)."
+      "headline": "Un pH acide peut désactiver certains peptides",
+      "reason": "De nombreux peptides fonctionnent mieux à pH neutre ; un exfoliant acide appliqué juste avant peut réduire leur efficacité.",
+      "recommendation": "Appliquez les peptides à un autre moment (routine du matin, ou en couche après rinçage/neutralisation du pH)."
     },
     "spf_am_only": {
-      "headline": "Retinol increases photosensitivity",
-      "reason": "Retinol makes skin more sensitive to UV. Since it's an evening product, the real thing to manage is your SPF the next morning.",
-      "recommendation": "No same-evening application to manage — just make sure to apply SPF the morning after a retinol night."
+      "headline": "Le rétinol augmente la photosensibilité",
+      "reason": "Le rétinol rend la peau plus sensible aux UV. Comme c'est un produit du soir, ce qu'il faut vraiment gérer, c'est votre protection solaire le lendemain matin.",
+      "recommendation": "Pas d'application le même soir à gérer — assurez-vous simplement d'appliquer une protection solaire le matin après une soirée rétinol."
     }
   },
   "auth": {
@@ -1072,129 +1072,129 @@
     ]
   },
   "goodHabits": {
-    "eyebrow": "Good habits",
-    "title": "Start with skin logic, then personalize.",
-    "subtitle": "Haru does not pretend everyone needs the same routine. The base is simple: cleanse, treat carefully, moisturize, protect. Then the details change by skin type.",
+    "eyebrow": "Bonnes habitudes",
+    "title": "Commencez par la logique de peau, puis personnalisez.",
+    "subtitle": "Haru ne prétend pas que tout le monde a besoin de la même routine. La base est simple : nettoyer, traiter avec précaution, hydrater, protéger. Ensuite, les détails changent selon le type de peau.",
     "guide": "Guide",
-    "amLabel": "AM",
-    "pmLabel": "PM",
-    "bothLabel": "Both",
-    "watchOutLabel": "Watch out",
-    "rulesTitle": "Rules Haru uses when checking a routine",
-    "ingredientsTitle": "Ingredient base Haru watches",
-    "trackedFallback": "Tracked by Haru's compatibility rules.",
-    "disclaimer": "Based on dermatologist-style routine basics: gentle cleansing, moisturizing, broad-spectrum SPF 30+, cautious active use, and sunscreen reapplication outdoors. Haru is guidance, not a medical diagnosis.",
+    "amLabel": "Matin",
+    "pmLabel": "Soir",
+    "bothLabel": "Les deux",
+    "watchOutLabel": "Attention",
+    "rulesTitle": "Règles utilisées par Haru pour vérifier une routine",
+    "ingredientsTitle": "Base d'ingrédients surveillée par Haru",
+    "trackedFallback": "Suivi par les règles de compatibilité de Haru.",
+    "disclaimer": "Basé sur les principes de base d'une routine façon dermatologue : nettoyage doux, hydratation, SPF 30+ à large spectre, usage prudent des actifs, et réapplication de la protection solaire en extérieur. Haru donne des conseils, pas un diagnostic médical.",
     "daily": [
       {
-        "title": "Morning is protection",
-        "text": "Cleanse only if you wake up oily or sweaty, hydrate, then finish with broad-spectrum SPF 30 or higher every day."
+        "title": "Le matin, c'est la protection",
+        "text": "Nettoyez seulement si votre peau est grasse ou en sueur au réveil, hydratez, puis terminez chaque jour par un SPF 30 ou plus à large spectre."
       },
       {
-        "title": "Evening is removal and repair",
-        "text": "Remove sunscreen and makeup, cleanse gently, then use treatment only if your skin tolerates it. Finish with moisturizer."
+        "title": "Le soir, c'est le démaquillage et la réparation",
+        "text": "Retirez la protection solaire et le maquillage, nettoyez en douceur, puis utilisez un soin ciblé seulement si votre peau le tolère. Terminez par l'hydratant."
       },
       {
-        "title": "SPF is the non-negotiable step",
-        "text": "Reapply about every 2 hours when outdoors, and after sweating or swimming. Actives work better when UV is controlled."
+        "title": "Le SPF est l'étape non négociable",
+        "text": "Réappliquez environ toutes les 2 heures en extérieur, et après avoir transpiré ou nagé. Les actifs fonctionnent mieux quand les UV sont maîtrisés."
       },
       {
-        "title": "Do less when skin is irritated",
-        "text": "Pause retinoids, acids, scrubs and fragrance-heavy extras when skin stings, flakes, burns, or stays red."
+        "title": "Faites moins quand la peau est irritée",
+        "text": "Suspendez rétinoïdes, acides, gommages et produits très parfumés quand la peau tiraille, pèle, brûle ou reste rouge."
       }
     ],
     "routines": [
       {
-        "type": "Dry or tight skin",
-        "am": "Gentle rinse or creamy cleanser -> hydrating toner/serum -> ceramide moisturizer -> SPF.",
-        "pm": "Cleanser -> hydrating serum on damp skin -> richer moisturizer or sleeping mask.",
-        "avoid": "Avoid foaming cleansers that leave skin squeaky, daily acids, and layering too many actives."
+        "type": "Peau sèche ou qui tiraille",
+        "am": "Rinçage doux ou nettoyant crémeux -> lotion/sérum hydratant -> hydratant aux céramides -> SPF.",
+        "pm": "Nettoyant -> sérum hydratant sur peau humide -> hydratant plus riche ou masque de nuit.",
+        "avoid": "Évitez les nettoyants moussants qui tirent la peau, les acides quotidiens, et la superposition de trop d'actifs."
       },
       {
-        "type": "Oily or breakout-prone skin",
-        "am": "Light cleanser -> niacinamide or calming serum -> gel moisturizer -> lightweight SPF.",
-        "pm": "Cleanser -> BHA 2-4 nights/week or acne treatment -> non-comedogenic moisturizer.",
-        "avoid": "Do not skip moisturizer; over-stripping often makes oiliness worse."
+        "type": "Peau grasse ou sujette aux boutons",
+        "am": "Nettoyant léger -> sérum à la niacinamide ou apaisant -> hydratant gel -> SPF léger.",
+        "pm": "Nettoyant -> BHA 2 à 4 soirs/semaine ou soin anti-imperfections -> hydratant non comédogène.",
+        "avoid": "Ne sautez pas l'hydratant ; trop décaper la peau aggrave souvent l'excès de sébum."
       },
       {
-        "type": "Sensitive or redness-prone skin",
-        "am": "Minimal cleanse -> centella/panthenol serum -> barrier cream -> mineral or gentle SPF.",
-        "pm": "Cleanser -> soothing serum -> ceramide moisturizer. Add actives one at a time only.",
-        "avoid": "Avoid starting retinol, vitamin C and exfoliating acids in the same week."
+        "type": "Peau sensible ou sujette aux rougeurs",
+        "am": "Nettoyage minimal -> sérum à la centella/panthénol -> crème barrière -> SPF minéral ou doux.",
+        "pm": "Nettoyant -> sérum apaisant -> hydratant aux céramides. N'ajoutez les actifs qu'un à la fois.",
+        "avoid": "Évitez de démarrer rétinol, vitamine C et acides exfoliants la même semaine."
       },
       {
-        "type": "Combination skin",
-        "am": "Gentle cleanser where needed -> light hydration -> moisturizer only where dry -> SPF.",
-        "pm": "Cleanser -> treatment by zone: BHA on oily areas, barrier care on dry areas -> moisturizer.",
-        "avoid": "Do not force one heavy routine on the whole face if your T-zone and cheeks behave differently."
+        "type": "Peau mixte",
+        "am": "Nettoyant doux si besoin -> hydratation légère -> hydratant seulement sur les zones sèches -> SPF.",
+        "pm": "Nettoyant -> soin par zone : BHA sur les zones grasses, soin barrière sur les zones sèches -> hydratant.",
+        "avoid": "Ne forcez pas une routine lourde unique sur tout le visage si votre zone T et vos joues se comportent différemment."
       },
       {
-        "type": "Dullness or uneven tone",
-        "am": "Cleanser -> vitamin C or niacinamide -> moisturizer -> SPF.",
-        "pm": "Cleanser -> gentle AHA 1-3 nights/week or retinoid on alternate nights -> moisturizer.",
-        "avoid": "Do not exfoliate daily for glow. Irritation creates more uneven tone."
+        "type": "Teint terne ou irrégulier",
+        "am": "Nettoyant -> vitamine C ou niacinamide -> hydratant -> SPF.",
+        "pm": "Nettoyant -> AHA doux 1 à 3 soirs/semaine ou rétinoïde un soir sur deux -> hydratant.",
+        "avoid": "N'exfoliez pas tous les jours pour plus d'éclat. L'irritation crée un teint encore plus irrégulier."
       },
       {
-        "type": "First simple routine",
-        "am": "Cleanser if needed -> moisturizer -> SPF.",
-        "pm": "Cleanser -> moisturizer.",
-        "avoid": "Add only one new product at a time, then wait 1-2 weeks before adding another active."
+        "type": "Première routine simple",
+        "am": "Nettoyant si besoin -> hydratant -> SPF.",
+        "pm": "Nettoyant -> hydratant.",
+        "avoid": "Ajoutez un seul nouveau produit à la fois, puis attendez 1 à 2 semaines avant d'ajouter un autre actif."
       }
     ],
     "rules": [
-      "Apply thinnest textures before thicker creams.",
-      "Keep retinoids mostly at night and pair them with morning SPF.",
-      "Use exfoliating acids gradually; more tingle is not more result.",
-      "Patch test new actives, especially if your skin is reactive.",
-      "A routine that you can repeat beats a 12-step routine you abandon."
+      "Appliquez les textures les plus légères avant les crèmes plus épaisses.",
+      "Réservez les rétinoïdes surtout à la nuit et associez-les à un SPF le matin.",
+      "Utilisez les acides exfoliants progressivement ; plus de picotement ne veut pas dire plus de résultat.",
+      "Testez les nouveaux actifs sur une petite zone, surtout si votre peau est réactive.",
+      "Une routine que vous pouvez tenir dans la durée vaut mieux qu'une routine en 12 étapes que vous abandonnez."
     ],
     "ingredients": {
       "retinol": {
-        "name": "Retinoids",
-        "summary": "Texture, visible aging, breakouts; mostly night use."
+        "name": "Rétinoïdes",
+        "summary": "Texture, signes de l'âge visibles, boutons ; surtout en usage nocturne."
       },
       "vitamin_c": {
-        "name": "Vitamin C",
-        "summary": "Morning antioxidant and tone support."
+        "name": "Vitamine C",
+        "summary": "Antioxydant du matin et soutien du teint."
       },
       "niacinamide": {
         "name": "Niacinamide",
-        "summary": "Barrier, oil balance, redness and tone support."
+        "summary": "Barrière cutanée, équilibre du sébum, rougeurs et teint."
       },
       "aha": {
         "name": "AHA",
-        "summary": "Surface exfoliation for texture and glow."
+        "summary": "Exfoliation de surface pour la texture et l'éclat."
       },
       "bha": {
         "name": "BHA",
-        "summary": "Oil-soluble pore and blackhead support."
+        "summary": "Soutien liposoluble pour pores et points noirs."
       },
       "benzoyl_peroxide": {
-        "name": "Benzoyl peroxide",
-        "summary": "Acne active; can be drying and bleaching."
+        "name": "Peroxyde de benzoyle",
+        "summary": "Actif anti-acné ; peut assécher et décolorer."
       },
       "vitamin_e": {
-        "name": "Vitamin E",
-        "summary": "Antioxidant often paired with vitamin C."
+        "name": "Vitamine E",
+        "summary": "Antioxydant souvent associé à la vitamine C."
       },
       "peptides": {
         "name": "Peptides",
-        "summary": "Firmness and barrier-supporting signal ingredients."
+        "summary": "Ingrédients signal soutenant fermeté et barrière cutanée."
       },
       "hyaluronic_acid": {
-        "name": "Hyaluronic acid",
-        "summary": "Hydration support, best sealed with moisturizer."
+        "name": "Acide hyaluronique",
+        "summary": "Soutien de l'hydratation, à sceller avec un hydratant."
       },
       "centella": {
         "name": "Centella / cica",
-        "summary": "Soothing support for visible redness."
+        "summary": "Soutien apaisant pour les rougeurs visibles."
       },
       "spf": {
         "name": "SPF",
-        "summary": "Daily UV protection; the final morning step."
+        "summary": "Protection UV quotidienne ; la dernière étape du matin."
       },
       "ceramides": {
-        "name": "Ceramides",
-        "summary": "Barrier lipids for dryness and sensitivity."
+        "name": "Céramides",
+        "summary": "Lipides barrière pour la sécheresse et la sensibilité."
       }
     }
   }
