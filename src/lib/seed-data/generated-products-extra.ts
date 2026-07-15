@@ -34404,7 +34404,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "fullIngredients": "Source did not expose full INCI. Visible product information indicates: ceramides, peptides. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "This lightweight, non-greasy, fresh smelling STRETCH MARK CREAM was formulated specifically to help prevent or relieve stretch marks caused by pregnancy. It is both mild and safe and can also help improve the appearance of red lines.Enjoy this lightweight, fast-absorbing stretch mark cream by Atopalm. Specially formulated to relieve and minimize stretch marks during pregnancy with star ingredients such as MLE and Ceramide to strengthen the skin??s moisture barrier and relieve itchiness. Silver Ear Mushroom collagen",
+    "description": "This lightweight, non-greasy, fresh smelling STRETCH MARK CREAM was formulated specifically to help prevent or relieve stretch marks caused by pregnancy. It is both mild and safe and can also help improve the appearance of red lines.Enjoy this lightweight, fast-absorbing stretch mark cream by Atopalm. Specially formulated to relieve and minimize stretch marks during pregnancy with star ingredients such as MLE and Ceramide to strengthen the skin's moisture barrier and relieve itchiness. Silver Ear Mushroom collagen",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -38204,7 +38204,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "Atopalm Intensive Moisturizing Cream is a unique, formulated without the use of parabens, this incredibly rich moisturizing cream is a gentle yet thorough way to replenish hydration. By mimicking natural skin lipids, it is able to replenish lost lipids while simultaneously preventing over-evaporation of the skin??s natural moisture. Intensive Moisturizing Cream shields the skin against the damage and discomfort associated with environmental stress, leaving the skin feeling fresh, soft, and perfectly comfortable. Si",
+    "description": "Atopalm Intensive Moisturizing Cream is a unique, formulated without the use of parabens, this incredibly rich moisturizing cream is a gentle yet thorough way to replenish hydration. By mimicking natural skin lipids, it is able to replenish lost lipids while simultaneously preventing over-evaporation of the skin's natural moisture. Intensive Moisturizing Cream shields the skin against the damage and discomfort associated with environmental stress, leaving the skin feeling fresh, soft, and perfectly comfortable. Si",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -38266,7 +38266,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "fullIngredients": "Source did not expose full INCI. Visible product information indicates: hyaluronic_acid, ceramides. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "MLE - Skin Barrier Function Mild and pH Balanced Facial Foaming Cleanser Mild, pH balanced facial foaming cleanser that is perfect for everyday use. Envelop the face with rich foam to gently and efficiently melt away makeup and pollutants. Also, the special blend of Ceramides-9S??and hyaluronic acid helps keep skin soft and hydrated even after cleansing. MLE® (Multi-Lavender Emulsion) - MLE® perfectly imitates the natural multi-lamellar structure of healthy human skin. NeoPharm developed the long lasting skin prote",
+    "description": "MLE - Skin Barrier Function Mild and pH Balanced Facial Foaming Cleanser Mild, pH balanced facial foaming cleanser that is perfect for everyday use. Envelop the face with rich foam to gently and efficiently melt away makeup and pollutants. Also, the special blend of Ceramides-9S and hyaluronic acid helps keep skin soft and hydrated even after cleansing. MLE® (Multi-Lavender Emulsion) - MLE® perfectly imitates the natural multi-lamellar structure of healthy human skin. NeoPharm developed the long lasting skin prote",
     "usageSteps": [
       "Use as the cleansing step",
       "Massage gently, then rinse well",
@@ -148712,7 +148712,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "fullIngredients": "Source did not expose full INCI. Visible product information indicates: niacinamide, hyaluronic_acid. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "I?™m From ?™s Rice Whip Facial Cleanser gently purifies impurities while delivering hydration for a supple, refreshed finish. Enriched with skin-soothing Yeoju rice extract and a gentle blend of botanical extracts, this rich facial cleanser washes away dirt and excess oil without stripping the skin. Plus, fermented rice extract brightens and smooths for a radiant complexion while hyaluronic acid hydrates to leave the skin plump and dewy even after cleansing. This creamy formula lathers into a dense texture that rin",
+    "description": "I'm From 's Rice Whip Facial Cleanser gently purifies impurities while delivering hydration for a supple, refreshed finish. Enriched with skin-soothing Yeoju rice extract and a gentle blend of botanical extracts, this rich facial cleanser washes away dirt and excess oil without stripping the skin. Plus, fermented rice extract brightens and smooths for a radiant complexion while hyaluronic acid hydrates to leave the skin plump and dewy even after cleansing. This creamy formula lathers into a dense texture that rin",
     "usageSteps": [
       "Use as the cleansing step",
       "Massage gently, then rinse well",
@@ -151867,7 +151867,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "fullIngredients": "Source did not expose full INCI. Visible product information indicates: niacinamide. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "I?™m From ?™s Honey Glow Cream delivers intense nourishment, delivering long-lasting hydration for a supple, plump, and silky smooth finish. Infused with a ?œHoney Glow Queen??complex which features a blend of honey, propolis, and royal jelly, this rich cream deeply moisturises while brightening dullness and elasticity.. Plus, antioxidant-rich cinnamon and turmeric also brighten while softening the look of fine lines, leaving the skin bouncy and radiant. This facial moisturiser absorbs seamlessly without feeling he",
+    "description": "I'm From 's Honey Glow Cream delivers intense nourishment, delivering long-lasting hydration for a supple, plump, and silky smooth finish. Infused with a \"Honey Glow Queen\" complex which features a blend of honey, propolis, and royal jelly, this rich cream deeply moisturises while brightening dullness and elasticity.. Plus, antioxidant-rich cinnamon and turmeric also brighten while softening the look of fine lines, leaving the skin bouncy and radiant. This facial moisturiser absorbs seamlessly without feeling he",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -157717,7 +157717,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "fullIngredients": "Source did not expose full INCI. Visible product information indicates: vitamin_c, niacinamide, hyaluronic_acid, ceramides, peptides. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "I'm From 's best-selling mini Rice Toner is designed to hydrate and brighten dull and tired skin. It effectively boosts collagen which supports better skin elasticity ??leaving visibly plump and supple skin that effortlessly radiates a brighter and healthier complexion. Utilising the powerful benefits of 78% brightening rice extract, organically cultivated in Korea's Yeoju province, this milky toner forms a protective moisture barrier on the skin. This fortified barrier is designed to ward off moisture loss while s",
+    "description": "I'm From 's best-selling mini Rice Toner is designed to hydrate and brighten dull and tired skin. It effectively boosts collagen which supports better skin elasticity — leaving visibly plump and supple skin that effortlessly radiates a brighter and healthier complexion. Utilising the powerful benefits of 78% brightening rice extract, organically cultivated in Korea's Yeoju province, this milky toner forms a protective moisture barrier on the skin. This fortified barrier is designed to ward off moisture loss while s",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -158625,7 +158625,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "fullIngredients": "Source did not expose full INCI. Visible product information indicates: vitamin_c, niacinamide, hyaluronic_acid. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "Needly ?™s Vita Glow Toning Ampoule brightens stubborn dark marks and pigmentation, revitalizing dull skin and deeply nourishing to leave it moist, supple, and radiant. Formulated with Needly?™s unique patented Vita C_Trus complex, this concentrate brightens the complexion using an antioxidant-rich blend of yuzu extract, kakadu plum extract, and grapefruit extract. With a liposome base similar to the skin, a triple layer of hyaluronic acids deeply penetrates to moisturise, smooth and plump. Niacinamide and sodium a",
+    "description": "Needly 's Vita Glow Toning Ampoule brightens stubborn dark marks and pigmentation, revitalizing dull skin and deeply nourishing to leave it moist, supple, and radiant. Formulated with Needly's unique patented Vita C_Trus complex, this concentrate brightens the complexion using an antioxidant-rich blend of yuzu extract, kakadu plum extract, and grapefruit extract. With a liposome base similar to the skin, a triple layer of hyaluronic acids deeply penetrates to moisturise, smooth and plump. Niacinamide and sodium a",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -158660,7 +158660,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "fullIngredients": "Source did not expose full INCI. Visible product information indicates: bha, hyaluronic_acid, centella. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "Needly ?™s Daily Toner enhances the essence of their best-selling Daily Toner Pads to deliver more intense moisture to dry, rough skin. This lightweight formula refreshes the skin with a mild exfoliating blend of BHA (Salicylic acid) and PHA (Gluconolactone), removing dead skin cells, blackheads, and excess sebum for a smooth, supple finish. Infused with sodium hyaluronate and glyceryl glucoside, it immediately boosts moisture levels by 39.7%, leaving the skin plump. Plus, this pH-balanced toner is enriched with a ",
+    "description": "Needly 's Daily Toner enhances the essence of their best-selling Daily Toner Pads to deliver more intense moisture to dry, rough skin. This lightweight formula refreshes the skin with a mild exfoliating blend of BHA (Salicylic acid) and PHA (Gluconolactone), removing dead skin cells, blackheads, and excess sebum for a smooth, supple finish. Infused with sodium hyaluronate and glyceryl glucoside, it immediately boosts moisture levels by 39.7%, leaving the skin plump. Plus, this pH-balanced toner is enriched with a ",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -163501,7 +163501,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips ??the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Glazed Donut ??f eatures",
+    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips — the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Glazed Donut — features",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -164326,7 +164326,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips ??the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Marble Stone ??this chic",
+    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips — the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Marble Stone — this chic",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -164599,7 +164599,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "fullIngredients": "Source did not expose full INCI. Visible product information indicates: hyaluronic_acid, spf. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "DISCLAIMER: This product is on a clearance discount due to an expiry of less than 4 months. Craving gorgeously glossy and hydrated lips? Look no further than athé ?™s Glazm Lip Balm Stick . This K-beauty gem delivers the whole package: a sheer yet buildable coverage for a swash of colour, the nourishment of a balm, and the shine of a gloss. Gliding effortlessly over the lips, the softly melting formula is infused with 84% naturally moisturising goodness keeping lips plump and flake-free all day long. Thanks to its ",
+    "description": "DISCLAIMER: This product is on a clearance discount due to an expiry of less than 4 months. Craving gorgeously glossy and hydrated lips? Look no further than athé 's Glazm Lip Balm Stick . This K-beauty gem delivers the whole package: a sheer yet buildable coverage for a swash of colour, the nourishment of a balm, and the shine of a gloss. Gliding effortlessly over the lips, the softly melting formula is infused with 84% naturally moisturising goodness keeping lips plump and flake-free all day long. Thanks to its ",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -164908,7 +164908,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips ??the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Dreaming ??inspired by t",
+    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips — the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Dreaming — inspired by t",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -164934,7 +164934,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips ??the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Peach Latte ??a soft and",
+    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips — the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Peach Latte — a soft and",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -164960,7 +164960,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     "ingredientIds": [],
     "fullIngredients": "Source did not expose full INCI. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips ??the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Cream Cloud ??a dreamy p",
+    "description": "Discover Korean nail-tech innovation with Ohora 's Semi-Cured Gel Nail Strips — the #1 best-selling gel nail brand in Korea! Designed with a triple layer of 100% real liquid gel (top, colour and base), these jelly-type strips are already 60% cured upon application. This unique, patented technology ensures each strip remains flexible and adaptable, perfectly fitting any nail shape and size. The C-Curved Design guarantees a snug fit that reaches the edges of your nails for strong adhesion. #N Cream Cloud — a dreamy p",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
@@ -165775,7 +165775,7 @@ export const EXTRA_GENERATED_PRODUCTS: SeedProduct[] = [
     ],
     "fullIngredients": "Source did not expose full INCI. Visible product information indicates: vitamin_c, niacinamide, hyaluronic_acid, ceramides, peptides. Verify packaging for complete composition.",
     "origin": "South Korea",
-    "description": "I'm From 's best-selling Rice Toner is designed to hydrate and brighten dull and tired skin. It effectively boosts collagen which supports better skin elasticity ??leaving visibly plump and supple skin that effortlessly radiates a brighter and healthier complexion. Utilising the powerful benefits of 78% brightening rice extract, organically cultivated in Korea's Yeoju province, this milky toner forms a protective moisture barrier on the skin. This fortified barrier is designed to ward off moisture loss while simult",
+    "description": "I'm From 's best-selling Rice Toner is designed to hydrate and brighten dull and tired skin. It effectively boosts collagen which supports better skin elasticity — leaving visibly plump and supple skin that effortlessly radiates a brighter and healthier complexion. Utilising the powerful benefits of 78% brightening rice extract, organically cultivated in Korea's Yeoju province, this milky toner forms a protective moisture barrier on the skin. This fortified barrier is designed to ward off moisture loss while simult",
     "usageSteps": [
       "Use in the appropriate routine step",
       "Start slowly if skin is sensitive",
