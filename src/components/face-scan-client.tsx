@@ -551,9 +551,7 @@ export function FaceScanClient() {
 
 function FaceCaptureGuide({ label }: { label: string }) {
   return (
-    <div className="relative aspect-[9/13] w-full overflow-hidden rounded-[2rem] bg-[linear-gradient(145deg,#f7eee8_0%,#eef2ed_44%,#f7f4ee_100%)]">
-      <div className="absolute inset-x-[15%] bottom-0 h-[82%] rounded-t-[48%] bg-[linear-gradient(180deg,#e8c8b7_0%,#dcae96_48%,#c88e76_100%)] opacity-40 blur-[1px]" />
-      <div className="absolute inset-x-[20%] top-[11%] h-[18%] rounded-[50%_50%_24%_24%] bg-[#514139]/30 blur-sm" />
+    <div className="relative aspect-[9/13] w-full overflow-hidden rounded-[2rem] bg-secondary/40">
       <FaceGuideLines />
       <div className="absolute left-4 top-4 flex size-10 items-center justify-center rounded-full border border-white/80 bg-white/60 text-foreground shadow-sm backdrop-blur-xl">
         <Camera className="size-4" />
