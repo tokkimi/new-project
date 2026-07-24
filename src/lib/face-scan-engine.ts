@@ -83,12 +83,48 @@ const MODULE_CATEGORY: Record<ModuleId, string> = {
 
 export type SkinType = "oily" | "dry" | "combination" | "normal" | "sensitive";
 
+/** Capture-quality problems that make a photo less reliable to read. */
+export type CaptureIssue =
+  | "lighting"
+  | "blur"
+  | "angle"
+  | "makeupOrFilter"
+  | "occlusion"
+  | "resolution";
+
+export const CAPTURE_ISSUES: CaptureIssue[] = [
+  "lighting",
+  "blur",
+  "angle",
+  "makeupOrFilter",
+  "occlusion",
+  "resolution",
+];
+
+export type CaptureQuality = {
+  /** false when the photo is too poor to produce a trustworthy read at all. */
+  usable: boolean;
+  issues: CaptureIssue[];
+};
+
+export type MedicalReferral = {
+  advised: boolean;
+  reason?: string;
+};
+
+/** Below this the module is treated as "not reliably assessable": no product recs, no flag. */
+export const MIN_CONFIDENCE = 0.4;
+
 export type RawModuleResult = {
   id: ModuleId;
   /** 0 (clear) to 9 (severe), a direct visual read of this specific photo. */
   score: number;
   /** Short model-written observation specific to this photo, e.g. "T-zone shows visible shine, cheeks are matte." */
   note?: string;
+  /** 0-1: how reliably this module could be judged from THIS photo. */
+  confidence?: number;
+  /** false when this zone wasn't visible/clear enough to assess. */
+  observable?: boolean;
 };
 
 export type ModuleFinding = {
@@ -100,6 +136,10 @@ export type ModuleFinding = {
   ingredientId: string;
   category: string;
   note?: string;
+  /** 0-1 reliability of this module's read. Defaults to 1 for older saved scans. */
+  confidence: number;
+  /** Whether the zone was actually assessable. Defaults to true for older saved scans. */
+  observable: boolean;
 };
 
 export type FaceScanAnalysis = {
@@ -109,6 +149,10 @@ export type FaceScanAnalysis = {
   suggestedIngredientIds: string[];
   skinType?: SkinType;
   summary?: string;
+  /** Overall confidence 0-1, averaged over the modules that were observable. */
+  confidence?: number;
+  captureQuality?: CaptureQuality;
+  medicalReferral?: MedicalReferral;
 };
 
 function severityFromScore(score: number): ZoneSeverity {
@@ -117,30 +161,57 @@ function severityFromScore(score: number): ZoneSeverity {
   return "low";
 }
 
+function clampConfidence(value: number | undefined): number {
+  if (typeof value !== "number" || Number.isNaN(value)) return 1;
+  return Math.max(0, Math.min(1, value));
+}
+
 /** Turns the model's raw 0-9 per-module scores into the full analysis the UI/routine builder consume. */
 export function buildFaceScanAnalysis(
   rawModules: RawModuleResult[],
-  extra?: { skinType?: SkinType; summary?: string }
+  extra?: {
+    skinType?: SkinType;
+    summary?: string;
+    captureQuality?: CaptureQuality;
+    medicalReferral?: MedicalReferral;
+  }
 ): FaceScanAnalysis {
   const modules: ModuleFinding[] = MODULES.map((id) => {
     const raw = rawModules.find((m) => m.id === id);
     const score = Math.max(0, Math.min(9, Math.round(raw?.score ?? 0)));
+    const confidence = clampConfidence(raw?.confidence);
+    const observable = raw?.observable ?? true;
     const concern = MODULE_CONCERN[id];
+    // Only flag a concern (and recommend products for it) when we could actually
+    // see the zone AND we're confident enough — a low-confidence read must never
+    // drive a product recommendation.
+    const reliable = observable && confidence >= MIN_CONFIDENCE;
     return {
       id,
       score,
       severity: severityFromScore(score),
-      flagged: score >= 3,
+      flagged: reliable && score >= 3,
       concern,
       ingredientId: CONCERN_INGREDIENT[concern],
       category: MODULE_CATEGORY[id],
       note: raw?.note,
+      confidence,
+      observable,
     };
   });
 
+  // Overall score is computed only over the modules we could actually assess,
+  // so an unreadable zone neither inflates ("looks perfect") nor deflates it.
+  const scored = modules.filter((m) => m.observable);
+  const scoredForAverage = scored.length > 0 ? scored : modules;
   const overallScore = Math.round(
-    100 - (modules.reduce((sum, m) => sum + m.score, 0) / (modules.length * 9)) * 100
+    100 - (scoredForAverage.reduce((sum, m) => sum + m.score, 0) / (scoredForAverage.length * 9)) * 100
   );
+
+  const confidence =
+    scored.length > 0
+      ? scored.reduce((sum, m) => sum + m.confidence, 0) / scored.length
+      : 0;
 
   const flaggedConcerns = Array.from(
     new Set(modules.filter((m) => m.flagged).map((m) => m.concern))
@@ -156,6 +227,9 @@ export function buildFaceScanAnalysis(
     suggestedIngredientIds,
     skinType: extra?.skinType,
     summary: extra?.summary,
+    confidence,
+    captureQuality: extra?.captureQuality,
+    medicalReferral: extra?.medicalReferral,
   };
 }
 

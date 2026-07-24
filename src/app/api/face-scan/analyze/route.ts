@@ -4,7 +4,13 @@ import { db } from "@/lib/db";
 import { hasPremiumAccess } from "@/lib/entitlements";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
 import { isVisionConfigured, getVisionClient, parseDataUrl } from "@/lib/vision";
-import { buildFaceScanAnalysis, MODULES, type RawModuleResult } from "@/lib/face-scan-engine";
+import {
+  buildFaceScanAnalysis,
+  CAPTURE_ISSUES,
+  MODULES,
+  type CaptureIssue,
+  type RawModuleResult,
+} from "@/lib/face-scan-engine";
 
 const MODULE_DESCRIPTIONS: Record<string, string> = {
   pores: "visible pore size and density",
@@ -34,7 +40,7 @@ const LOCALE_NAMES: Record<string, string> = {
 const TOOL = {
   name: "report_face_scan",
   description:
-    "Report whether a human face is visible, and if so, a full facial-skin-only analysis: overall skin type, an objective summary, and a 0-9 severity score plus a short observation note for each module.",
+    "Report whether a usable human face photo is present, the capture quality, and if usable, a full facial-skin-only analysis with a confidence and observability flag per zone, plus a medical-referral flag for anything beyond cosmetic concern.",
   input_schema: {
     type: "object" as const,
     properties: {
@@ -42,6 +48,28 @@ const TOOL = {
         type: "boolean",
         description:
           "True only if a real human face is clearly visible in the photo. False for objects, rooms, pets, screenshots, blank/blurry images, or anything that is not a person's face.",
+      },
+      captureQuality: {
+        type: "object",
+        description:
+          "Objective assessment of whether THIS photo is good enough to read skin reliably, independent of what the skin looks like.",
+        properties: {
+          usable: {
+            type: "boolean",
+            description:
+              "True if the photo is clear enough (adequate light, in focus, face front-on and large enough, no heavy makeup/filter, no major occlusion) to produce a trustworthy read. False if it is too poor to assess reliably — when false, prefer asking for a better photo over guessing.",
+          },
+          issues: {
+            type: "array",
+            description:
+              "Every capture problem that is actually present. Empty when the photo is clean.",
+            items: {
+              type: "string",
+              enum: [...CAPTURE_ISSUES],
+            },
+          },
+        },
+        required: ["usable", "issues"],
       },
       skinType: {
         type: "string",
@@ -53,6 +81,23 @@ const TOOL = {
         type: "string",
         description:
           "2-3 sentences summarizing what is specifically visible on the facial skin in THIS photo. Objective, factual, no cosmetic reassurance, no medical claims. Only meaningful when faceDetected is true. Write in the requested output language.",
+      },
+      medicalReferral: {
+        type: "object",
+        description:
+          "Flag when the photo shows something that is beyond ordinary cosmetic concern and warrants seeing a dermatologist/doctor (e.g. a changing or irregular mole, an open/bleeding/crusting lesion, a rapidly spreading rash, signs of possible infection). Never diagnose; only advise a professional check.",
+        properties: {
+          advised: {
+            type: "boolean",
+            description: "True only if a professional check is genuinely warranted. Default false.",
+          },
+          reason: {
+            type: "string",
+            description:
+              "If advised is true, one neutral sentence on what to have checked (no diagnosis, no alarm). Write in the requested output language. Empty otherwise.",
+          },
+        },
+        required: ["advised", "reason"],
       },
       modules: {
         type: "object",
@@ -69,20 +114,32 @@ const TOOL = {
                   maximum: 9,
                   description: MODULE_DESCRIPTIONS[m],
                 },
+                confidence: {
+                  type: "number",
+                  minimum: 0,
+                  maximum: 1,
+                  description:
+                    "How reliably you could judge THIS module from THIS photo (0 = cannot tell at all, 1 = perfectly clear). Lower it when the relevant zone is dim, blurred, angled away, covered by makeup/hair, or out of frame.",
+                },
+                observable: {
+                  type: "boolean",
+                  description:
+                    "False when the zone this module depends on was not actually visible/clear enough to assess in this photo. When false, the score is ignored and no recommendation is made.",
+                },
                 note: {
                   type: "string",
                   description:
-                    "One short specific sentence on what you actually see on facial skin for this module in THIS photo, naming the visible facial zone when relevant. Do not mention background, wall, hair, clothes, neck, lips, eyebrows, or image artifacts. Write in the requested output language.",
+                    "One short specific sentence on what you actually see on facial skin for this module in THIS photo, naming the visible facial zone when relevant. If not observable, say plainly it could not be reliably assessed. Do not mention background, wall, hair, clothes, neck, lips, eyebrows, or image artifacts. Write in the requested output language.",
                 },
               },
-              required: ["score", "note"],
+              required: ["score", "confidence", "observable", "note"],
             },
           ])
         ),
         required: [...MODULES],
       },
     },
-    required: ["faceDetected", "skinType", "summary", "modules"],
+    required: ["faceDetected", "captureQuality", "skinType", "summary", "medicalReferral", "modules"],
   },
 };
 
@@ -90,6 +147,12 @@ function buildSystemPrompt(localeName: string) {
   return `You are a strict visual skincare estimation assistant embedded in a consumer skincare app called Haru. You are shown a user-submitted photo in ordinary visible light. This is not UV, polarized, medical, or 3D imaging: assess only what is visibly present in this exact photo.
 
 FIRST, decide faceDetected: true only if a real human face is clearly visible and identifiable as a face in the photo. If the photo shows anything else, or if the face is too dark, blurry, cropped, filtered, blocked, or too small to assess, set faceDetected to false. Do not be lenient here; when in doubt, false.
+
+SECOND, assess captureQuality independently of what the skin looks like. Set usable=false when the photo is too poor to read skin reliably, and list every problem actually present in issues: "lighting" (too dark, blown-out, or strong coloured cast), "blur" (motion or focus blur), "angle" (face turned or tilted away, or too far/small), "makeupOrFilter" (visible foundation/heavy makeup or a beauty filter that hides real skin), "occlusion" (hair, hand, mask or object covering skin zones), "resolution" (too low-res/compressed to see texture). A good, clean photo has usable=true and an empty issues list. When usable=false, it is better to ask for a better photo than to guess.
+
+THEN, per module, also report confidence (0-1, how reliably you could judge it from THIS photo) and observable (false when the relevant zone was not actually visible/clear enough). Be honest: dim, blurred, angled, covered or out-of-frame zones get low confidence and observable=false. Never report a confident score for a zone you could not actually see.
+
+Also set medicalReferral.advised=true ONLY if the photo shows something beyond ordinary cosmetic concern that a person should have checked by a professional (e.g. a changing/irregular/bleeding mole, an open or crusting lesion, a rapidly spreading rash, possible infection). If so, give one neutral, non-alarming, non-diagnostic sentence in reason. Otherwise advised=false and reason empty. You never diagnose.
 
 CRITICAL BOUNDARY RULE: score facial skin only. Valid zones are forehead, temples, nose bridge, T-zone, cheeks, under-eyes, jawline, and chin. Completely ignore walls, room background, hair, eyebrows, lashes, lips, teeth, clothing, jewelry, neck, shoulders, hands, lighting reflections outside the face, and compression artifacts. Never score wrinkles, spots, pores, redness, texture, acne, or any other module from anything outside the visible face. If a zone is not visible or reliable enough, say so and give a low score for that module.
 
@@ -186,25 +249,46 @@ export async function POST(request: Request) {
 
     const input = toolUse.input as {
       faceDetected: boolean;
+      captureQuality?: { usable?: boolean; issues?: string[] };
       skinType?: string;
       summary?: string;
-      modules: Record<string, { score: number; note?: string }>;
+      medicalReferral?: { advised?: boolean; reason?: string };
+      modules: Record<string, { score: number; note?: string; confidence?: number; observable?: boolean }>;
     };
     if (!input.faceDetected) {
       return NextResponse.json({ error: "no_face_detected" }, { status: 422 });
+    }
+
+    // Reject an unusable photo BEFORE charging a credit — a dark/blurry/filtered
+    // shot should cost the user nothing and prompt a retake, not a fake result.
+    const rawIssues = Array.isArray(input.captureQuality?.issues) ? input.captureQuality!.issues : [];
+    const issues = rawIssues.filter((i): i is CaptureIssue =>
+      (CAPTURE_ISSUES as string[]).includes(i)
+    );
+    if (input.captureQuality && input.captureQuality.usable === false) {
+      return NextResponse.json({ error: "low_quality", issues }, { status: 422 });
     }
 
     const rawModules: RawModuleResult[] = MODULES.map((id) => ({
       id,
       score: Number(input.modules?.[id]?.score ?? 0),
       note: input.modules?.[id]?.note,
+      confidence: typeof input.modules?.[id]?.confidence === "number" ? input.modules[id].confidence : 1,
+      observable: input.modules?.[id]?.observable ?? true,
     }));
 
     const skinType = SKIN_TYPES.includes(input.skinType as (typeof SKIN_TYPES)[number])
       ? (input.skinType as (typeof SKIN_TYPES)[number])
       : undefined;
 
-    const analysis = buildFaceScanAnalysis(rawModules, { skinType, summary: input.summary });
+    const analysis = buildFaceScanAnalysis(rawModules, {
+      skinType,
+      summary: input.summary,
+      captureQuality: { usable: true, issues },
+      medicalReferral: input.medicalReferral?.advised
+        ? { advised: true, reason: input.medicalReferral.reason }
+        : { advised: false },
+    });
 
     await db.faceScanResult.create({
       data: {

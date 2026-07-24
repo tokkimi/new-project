@@ -15,8 +15,10 @@ import {
   Droplet,
   Flame,
   Grid3x3,
+  ImageOff,
   Loader2,
   Lock,
+  Stethoscope,
   MapPin,
   Moon,
   RotateCcw,
@@ -108,7 +110,7 @@ const MODULE_AREA: Record<ModuleId, Array<{ x: number; y: number; w: number; h: 
   ],
 };
 
-type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error" | "noFace" | "noCredits";
+type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error" | "noFace" | "noCredits" | "lowQuality";
 
 function fileToDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -153,6 +155,7 @@ export function FaceScanClient() {
   const [analysis, setAnalysis] = React.useState<FaceScanAnalysis | null>(null);
   const [addedProducts, setAddedProducts] = React.useState<Set<string>>(new Set());
   const [activeModule, setActiveModule] = React.useState(0);
+  const [qualityIssues, setQualityIssues] = React.useState<string[]>([]);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const pagerRef = React.useRef<HTMLDivElement>(null);
   const pagerScrollFrame = React.useRef<number | null>(null);
@@ -181,6 +184,12 @@ export function FaceScanClient() {
         return;
       }
       if (res.status === 422) {
+        const data = await res.json().catch(() => null);
+        if (data?.error === "low_quality") {
+          setQualityIssues(Array.isArray(data.issues) ? data.issues : []);
+          setPhase("lowQuality");
+          return;
+        }
         setPhase("noFace");
         return;
       }
@@ -387,6 +396,27 @@ export function FaceScanClient() {
           />
         )}
 
+        {phase === "lowQuality" && (
+          <StatusCard
+            icon={ImageOff}
+            title={t("lowQualityTitle")}
+            tone="warning"
+            text={
+              qualityIssues.length > 0
+                ? `${t("lowQualityText")} ${qualityIssues
+                    .map((issue) => t(`captureIssues.${issue}`))
+                    .join(" · ")}`
+                : t("lowQualityText")
+            }
+            action={
+              <Button variant="outline" onClick={reset}>
+                <RotateCcw className="size-4" />
+                {t("retake")}
+              </Button>
+            }
+          />
+        )}
+
         {phase === "noCredits" && (
           <StatusCard
             icon={Lock}
@@ -454,12 +484,29 @@ export function FaceScanClient() {
                       count: analysis.modules.filter((module) => module.flagged).length,
                     })}
                   </span>
+                  {typeof analysis.confidence === "number" && (
+                    <span className="rounded-full bg-secondary px-3 py-1 text-sm text-muted-foreground">
+                      {t("confidenceLabel")} {Math.round(analysis.confidence * 100)}%
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="mx-auto sm:mx-0">
                 <SkinScoreRing score={analysis.overallScore} />
               </div>
             </section>
+
+            {analysis.medicalReferral?.advised && (
+              <div className="flex items-start gap-3 rounded-2xl border border-am/30 bg-am/10 p-4 text-left">
+                <Stethoscope className="mt-0.5 size-5 shrink-0 text-am-foreground" />
+                <div>
+                  <p className="font-medium text-am-foreground">{t("medicalReferralTitle")}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {analysis.medicalReferral.reason || t("medicalReferralText")}
+                  </p>
+                </div>
+              </div>
+            )}
 
             <div className="min-w-0 space-y-5">
               <div className="max-w-2xl">
@@ -501,7 +548,9 @@ export function FaceScanClient() {
                       <div className="mt-3">
                         <p className="font-serif text-xl">{t(`modules.${module.id}.name`)}</p>
                         <p className="mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground">
-                          {module.note || t("moduleDefaultNote")}
+                          {module.observable
+                            ? module.note || t("moduleDefaultNote")
+                            : t("moduleNotAssessable")}
                         </p>
                       </div>
                     </button>
@@ -696,21 +745,33 @@ function ModuleDetail({
     >
       <div className="flex min-w-0 flex-col gap-5">
         <div>
-          <span className={cn(severityBadgeClass(module.severity), "mb-2 inline-flex")}>
-            {t(`severity.${module.severity}`)}
+          <span
+            className={cn(
+              module.observable ? severityBadgeClass(module.severity) : severityBadgeClass("low"),
+              "mb-2 inline-flex"
+            )}
+          >
+            {module.observable ? t(`severity.${module.severity}`) : t("notAssessableBadge")}
           </span>
           <h3 className="font-serif text-2xl">{t(`modules.${module.id}.name`)}</h3>
           <p className="mt-2 text-muted-foreground">
-            {module.note || (module.flagged ? t("moduleDefaultNote") : t("noConcern"))}
+            {module.observable
+              ? module.note || (module.flagged ? t("moduleDefaultNote") : t("noConcern"))
+              : t("moduleNotAssessable")}
           </p>
         </div>
 
         <div className="relative min-w-0 overflow-hidden rounded-3xl bg-secondary/60 p-4">
           <div className="mb-2 flex items-center justify-between text-sm">
             <span className="font-medium">{t("moduleScoreLabel")}</span>
-            <span className="text-muted-foreground">{module.score}/9</span>
+            <span className="text-muted-foreground">{module.observable ? `${module.score}/9` : "—"}</span>
           </div>
-          <ModuleScoreBar score={module.score} />
+          <ModuleScoreBar score={module.observable ? module.score : 0} />
+          {module.observable && (
+            <p className="mt-2 text-[11px] text-muted-foreground">
+              {t("confidenceLabel")} {Math.round(module.confidence * 100)}%
+            </p>
+          )}
 
           {module.flagged && (
             <div className="mt-4 -mb-1 -mx-1">
@@ -785,12 +846,22 @@ function ModuleDetail({
           <InfoList title={t("tipsLabel")} items={t.raw(`modules.${module.id}.tips`) as string[]} />
         </div>
 
-        {!module.flagged && (
+        {module.observable && !module.flagged && (
           <div className="flex items-start gap-3 rounded-3xl bg-success/10 p-4">
             <ShieldCheck className="mt-0.5 size-5 shrink-0 text-success" />
             <div>
               <p className="font-medium text-success">{t("moduleClearTitle")}</p>
               <p className="text-sm text-muted-foreground">{t("moduleClearText")}</p>
+            </div>
+          </div>
+        )}
+
+        {!module.observable && (
+          <div className="flex items-start gap-3 rounded-3xl bg-muted/60 p-4">
+            <ImageOff className="mt-0.5 size-5 shrink-0 text-muted-foreground" />
+            <div>
+              <p className="font-medium">{t("notAssessableBadge")}</p>
+              <p className="text-sm text-muted-foreground">{t("moduleNotAssessableHint")}</p>
             </div>
           </div>
         )}
