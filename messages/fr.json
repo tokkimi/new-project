@@ -811,6 +811,31 @@
     "noStrong": "Ton étagère ne contient pas d'actifs forts (rétinoïdes, AHA/BHA) à espacer — une routine du soir simple et régulière convient très bien.",
     "disclaimer": "Un rythme suggéré, pas une prescription — adapte-le à ta tolérance, et saute un actif dès que ta peau tiraille ou s'irrite."
   },
+  "reactions": {
+    "title": "Journal des réactions",
+    "subtitle": "Note comment ta peau a réagi après usage — Haru cherche les récurrences dans le temps.",
+    "types": {
+      "none": "Aucune réaction",
+      "tingling": "Picotements",
+      "burning": "Brûlure",
+      "tightness": "Tiraillement",
+      "breakout": "Boutons",
+      "redness": "Rougeur",
+      "dryness": "Sécheresse",
+      "greasy": "Trop gras",
+      "pilling": "Produit qui peluche",
+      "improvement": "Amélioration ressentie"
+    },
+    "noProduct": "Aucun produit précis",
+    "notePlaceholder": "Note (facultatif)",
+    "save": "Enregistrer",
+    "recentTitle": "Récent",
+    "empty": "Aucune réaction enregistrée pour l'instant.",
+    "recurrenceTitle": "Récurrences à remarquer",
+    "recurrence": "{type} enregistré {count} fois avec {product}.",
+    "recurrenceNote": "Une récurrence personnelle, pas une preuve médicale que le produit en est la cause. Si une réaction est forte ou persistante, suspends le produit et envisage un avis professionnel.",
+    "aProduct": "un produit"
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "Risque élevé de sur-exfoliation",
@@ -939,7 +964,8 @@
       "routine": "Routine et produits",
       "favorites": "Favoris",
       "notes": "Notes",
-      "links": "Vidéos"
+      "links": "Vidéos",
+      "reactions": "Réactions"
     },
     "routineSlot": {
       "both": "Matin et soir",

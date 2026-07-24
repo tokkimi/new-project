@@ -811,6 +811,31 @@
     "noStrong": "棚に分散が必要な強い有効成分（レチノイド、AHA/BHA）はありません — シンプルで一定した夜のルーティンで十分です。",
     "disclaimer": "これは処方ではなくおすすめのリズムです — ご自身の肌の耐性に合わせて調整し、肌が刺激を感じたら有効成分はお休みしてください。"
   },
+  "reactions": {
+    "title": "反応ジャーナル",
+    "subtitle": "使用後の肌の様子を記録すると、Haruが時間の経過に伴うパターンを探します。",
+    "types": {
+      "none": "反応なし",
+      "tingling": "ピリピリ",
+      "burning": "ヒリヒリ",
+      "tightness": "つっぱり",
+      "breakout": "吹き出物",
+      "redness": "赤み",
+      "dryness": "乾燥",
+      "greasy": "ベタつきすぎ",
+      "pilling": "モロモロ",
+      "improvement": "改善を実感"
+    },
+    "noProduct": "特定の製品なし",
+    "notePlaceholder": "メモ（任意）",
+    "save": "記録する",
+    "recentTitle": "最近",
+    "empty": "まだ記録された反応はありません。",
+    "recurrenceTitle": "気づいておきたいパターン",
+    "recurrence": "{product}とともに{type}が{count}回記録されました。",
+    "recurrenceNote": "個人的なパターンであり、その製品が原因だという医学的な証拠ではありません。反応が強い、または続く場合は製品の使用を中止し、専門家への相談を検討してください。",
+    "aProduct": "ある製品"
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "過剰な角質ケアのリスクが高い",
@@ -939,7 +964,8 @@
       "routine": "ルーティンと製品",
       "favorites": "お気に入り",
       "notes": "メモ",
-      "links": "動画"
+      "links": "動画",
+      "reactions": "反応"
     },
     "routineSlot": {
       "both": "朝と夜",

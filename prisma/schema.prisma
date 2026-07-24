@@ -55,6 +55,7 @@ model User {
   productPrefs UserProductPreference[]
   notes      UserNote[]
   savedLinks SavedRoutineLink[]
+  reactions  ProductReaction[]
 
   @@map("users")
 }
@@ -170,6 +171,7 @@ model Product {
   sources    ProductSource[]
   ingredients ProductIngredient[]
   userPrefs UserProductPreference[]
+  reactions ProductReaction[]
 
   @@index([category])
   @@index([brandId])
@@ -297,6 +299,24 @@ model ShelfItem {
   @@unique([userId, productId])
   @@index([userId])
   @@map("shelf_items")
+}
+
+model ProductReaction {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  // Short reaction code (e.g. none, tingling, burning, tightness, breakout,
+  // redness, dryness, greasy, pilling, improvement). Display text is localized
+  // in the UI; the DB stores only the stable code.
+  type      String
+  note      String?
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([userId, productId])
+  @@map("product_reactions")
 }
 
 model UserProductPreference {

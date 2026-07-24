@@ -13,6 +13,7 @@ import { RoutineContent } from "@/components/routine-content";
 import { TipOfTheDay } from "@/components/tip-of-the-day";
 import { IngredientExposurePanel } from "@/components/ingredient-exposure-panel";
 import { WeeklyRhythmPanel } from "@/components/weekly-rhythm-panel";
+import { ReactionJournal } from "@/components/reaction-journal";
 import { useShelf } from "@/lib/shelf-store";
 import type { Product } from "@/generated/prisma/client";
 
@@ -264,6 +265,7 @@ export function RoutineWorkspace() {
   const favorites = shelf.filter((p) => preferences[p.id]?.favorite);
   const tabs = [
     ["routine", t("tabs.routine")],
+    ["reactions", t("tabs.reactions")],
     ["favorites", t("tabs.favorites")],
     ["notes", t("tabs.notes")],
     ["links", t("tabs.links")],
@@ -334,6 +336,8 @@ export function RoutineWorkspace() {
           </section>
         </div>
       )}
+
+      {tab === "reactions" && <ReactionJournal products={shelf} />}
 
       {tab === "favorites" && (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

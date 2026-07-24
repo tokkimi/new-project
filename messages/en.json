@@ -811,6 +811,31 @@
     "noStrong": "Your shelf has no strong actives (retinoids, AHA/BHA) that need spacing out — a simple, consistent evening routine works well.",
     "disclaimer": "A suggested rhythm, not a prescription — adjust to your own tolerance, and skip an active whenever your skin feels irritated."
   },
+  "reactions": {
+    "title": "Reaction journal",
+    "subtitle": "Log how your skin felt after use — Haru looks for patterns over time.",
+    "types": {
+      "none": "No reaction",
+      "tingling": "Tingling",
+      "burning": "Burning",
+      "tightness": "Tightness",
+      "breakout": "Breakout",
+      "redness": "Redness",
+      "dryness": "Dryness",
+      "greasy": "Too greasy",
+      "pilling": "Product pilling",
+      "improvement": "Felt better"
+    },
+    "noProduct": "No specific product",
+    "notePlaceholder": "Optional note",
+    "save": "Log reaction",
+    "recentTitle": "Recent",
+    "empty": "No reactions logged yet.",
+    "recurrenceTitle": "Patterns worth noticing",
+    "recurrence": "{type} logged {count} times with {product}.",
+    "recurrenceNote": "A personal pattern, not medical proof the product caused it. If a reaction is strong or persistent, pause the product and consider a professional.",
+    "aProduct": "a product"
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "High over-exfoliation risk",
@@ -939,7 +964,8 @@
       "routine": "Routine & products",
       "favorites": "Favorites",
       "notes": "Notes",
-      "links": "Videos"
+      "links": "Videos",
+      "reactions": "Reactions"
     },
     "routineSlot": {
       "both": "Morning and evening",

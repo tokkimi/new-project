@@ -811,6 +811,31 @@
     "noStrong": "화장대에 나눠 써야 할 강한 활성 성분(레티노이드, AHA/BHA)이 없어요 — 간단하고 꾸준한 저녁 루틴이면 충분해요.",
     "disclaimer": "제안하는 리듬일 뿐 처방이 아니에요 — 자신의 피부 반응에 맞춰 조절하고, 피부가 자극을 느끼면 활성 성분은 건너뛰세요."
   },
+  "reactions": {
+    "title": "반응 일지",
+    "subtitle": "사용 후 피부가 어땠는지 기록하면 Haru가 시간에 따른 패턴을 찾아줘요.",
+    "types": {
+      "none": "반응 없음",
+      "tingling": "따끔거림",
+      "burning": "화끈거림",
+      "tightness": "당김",
+      "breakout": "트러블",
+      "redness": "붉어짐",
+      "dryness": "건조함",
+      "greasy": "너무 번들거림",
+      "pilling": "밀림(뭉침)",
+      "improvement": "개선된 느낌"
+    },
+    "noProduct": "특정 제품 없음",
+    "notePlaceholder": "메모(선택)",
+    "save": "기록하기",
+    "recentTitle": "최근",
+    "empty": "아직 기록된 반응이 없어요.",
+    "recurrenceTitle": "눈여겨볼 패턴",
+    "recurrence": "{product}와(과) 함께 {type}이(가) {count}번 기록되었어요.",
+    "recurrenceNote": "개인적인 패턴일 뿐, 제품이 원인이라는 의학적 증거는 아니에요. 반응이 심하거나 지속되면 제품 사용을 멈추고 전문가 상담을 고려하세요.",
+    "aProduct": "제품"
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "과도한 각질 제거 위험이 높아요",
@@ -939,7 +964,8 @@
       "routine": "루틴 & 제품",
       "favorites": "즐겨찾기",
       "notes": "메모",
-      "links": "영상"
+      "links": "영상",
+      "reactions": "반응"
     },
     "routineSlot": {
       "both": "아침과 저녁",
