@@ -11,6 +11,7 @@ import { ProductImage } from "@/components/product-image";
 import { AddProductDialog } from "@/components/add-product-dialog";
 import { RoutineContent } from "@/components/routine-content";
 import { TipOfTheDay } from "@/components/tip-of-the-day";
+import { IngredientExposurePanel } from "@/components/ingredient-exposure-panel";
 import { useShelf } from "@/lib/shelf-store";
 import type { Product } from "@/generated/prisma/client";
 
@@ -301,6 +302,12 @@ export function RoutineWorkspace() {
       {tab === "routine" && (
         <div className="grid gap-5">
           <RoutineContent compact />
+          <IngredientExposurePanel
+            items={shelf.map((p) => ({
+              ingredientIds: p.ingredientIds,
+              slot: preferences[p.id]?.routineSlot ?? "both",
+            }))}
+          />
           <section className="grid gap-3">
             <div>
               <h2 className="font-serif text-xl">{t("routineProductsTitle")}</h2>

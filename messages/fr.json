@@ -795,6 +795,14 @@
       "summary": "Restaure la barrière cutanée."
     }
   },
+  "exposure": {
+    "title": "Exposition aux actifs",
+    "subtitle": "Une vue d'ensemble des actifs que ton étagère répète ou cumule.",
+    "redundant": "Tu utilises {ingredient} dans {count} produits. Ce n'est pas forcément un problème, mais cette répétition n'apporte probablement pas {count}× plus de bénéfices.",
+    "irritantStackEvening": "Le soir, ta routine cumule plusieurs actifs potentiellement irritants ({ingredients}). Répartis-les plutôt sur plusieurs soirées qu'un même soir.",
+    "irritantStackMorning": "Le matin, ta routine cumule plusieurs actifs potentiellement irritants ({ingredients}). Espace-les plutôt que de les superposer.",
+    "concentrationNote": "Haru raisonne sur la présence et la fréquence des actifs, pas sur leur dosage — les concentrations ne sont pas communiquées et ne sont jamais déduites de la place dans la liste INCI."
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "Risque élevé de sur-exfoliation",

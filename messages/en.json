@@ -795,6 +795,14 @@
       "summary": "Restores the skin barrier."
     }
   },
+  "exposure": {
+    "title": "Active ingredient exposure",
+    "subtitle": "An overview of the actives your shelf repeats or stacks.",
+    "redundant": "You use {ingredient} across {count} products. That's not necessarily a problem, but the repetition probably doesn't give {count}× the benefit.",
+    "irritantStackEvening": "Your evening routine stacks several potentially irritating actives ({ingredients}). Consider spreading them across different evenings rather than the same night.",
+    "irritantStackMorning": "Your morning routine stacks several potentially irritating actives ({ingredients}). Consider spreading them out rather than layering them together.",
+    "concentrationNote": "Haru reasons about which actives are present and how often, not their dose — concentrations aren't disclosed and are never guessed from a product's place in the INCI list."
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "High over-exfoliation risk",
