@@ -483,7 +483,10 @@
     "unmatchedTitle": "Not in our catalog yet",
     "unmatchedText": "We read the label but this isn't one of our tracked products yet. Here's what we could detect on it:",
     "illegibleTitle": "Couldn't read that label",
-    "illegibleText": "Try again with the ingredients list in focus, filling more of the frame."
+    "illegibleText": "Try again with the ingredients list in focus, filling more of the frame.",
+    "shelfConflictTitle": "Heads-up with your shelf",
+    "shelfConflictOk": "No conflicts with your current shelf.",
+    "ocrDisclaimer": "Label reading can misread small print — double-check against the actual bottle before changing your routine."
   },
   "productsPage": {
     "title": "Product database",

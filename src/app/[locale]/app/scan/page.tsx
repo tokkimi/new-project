@@ -19,6 +19,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useShelf } from "@/lib/shelf-store";
+import { previewAddConflicts } from "@/lib/routine-engine";
+import { conflictsForDetected } from "@/lib/scan-conflicts";
 import { findIngredient } from "@/data/ingredients";
 import { ProductImage } from "@/components/product-image";
 import type { Product } from "@/generated/prisma/client";
@@ -29,6 +31,46 @@ type ScanResult =
   | { kind: "matched"; product: Product }
   | { kind: "unmatched"; brand: string | null; productName: string | null; detectedIngredientIds: string[] }
   | { kind: "illegible" };
+
+function ShelfConflictNote({
+  ruleIds,
+  showOk,
+  ocrDisclaimer,
+}: {
+  ruleIds: string[];
+  showOk: boolean;
+  ocrDisclaimer?: boolean;
+}) {
+  const t = useTranslations("scanPage");
+  const tConflicts = useTranslations("conflictRules");
+
+  if (ruleIds.length === 0 && !showOk && !ocrDisclaimer) return null;
+
+  return (
+    <div className="w-full rounded-xl border border-border bg-muted/40 p-3 text-left text-sm">
+      {ruleIds.length > 0 ? (
+        <div className="flex flex-col gap-2">
+          <p className="flex items-center gap-1.5 font-medium text-destructive">
+            <AlertTriangle className="size-4 shrink-0" />
+            {t("shelfConflictTitle")}
+          </p>
+          <div className="flex flex-wrap gap-1.5">
+            {ruleIds.map((id) => (
+              <Badge key={id} variant="outline">
+                {tConflicts(`${id}.headline`)}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      ) : showOk ? (
+        <p className="text-success">{t("shelfConflictOk")}</p>
+      ) : null}
+      {ocrDisclaimer && (
+        <p className="mt-2 text-xs text-muted-foreground">{t("ocrDisclaimer")}</p>
+      )}
+    </div>
+  );
+}
 
 function fileToDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -45,7 +87,7 @@ export default function ScanPage() {
   const tIngredients = useTranslations("ingredients");
   const analysisSteps = t.raw("steps") as string[];
 
-  const { addProduct } = useShelf();
+  const { shelf, addProduct } = useShelf();
   const [phase, setPhase] = React.useState<Phase>("idle");
   const [stepIndex, setStepIndex] = React.useState(0);
   const [result, setResult] = React.useState<ScanResult | null>(null);
@@ -276,6 +318,16 @@ export default function ScanPage() {
                   ) : null
                 )}
               </div>
+              {shelf.length > 0 && !shelf.some((p) => p.id === result.product.id) && (
+                <ShelfConflictNote
+                  ruleIds={[
+                    ...new Set(
+                      previewAddConflicts(result.product, shelf).map((w) => w.rule.id)
+                    ),
+                  ]}
+                  showOk
+                />
+              )}
               <div className="mt-2 flex flex-wrap justify-center gap-2">
                 <Button variant="outline" onClick={reset}>
                   <RotateCcw className="size-4" />
@@ -325,6 +377,19 @@ export default function ScanPage() {
                     ) : null
                   )}
                 </div>
+              )}
+              {result.detectedIngredientIds.length > 0 && (
+                <ShelfConflictNote
+                  ruleIds={[
+                    ...new Set(
+                      conflictsForDetected(result.detectedIngredientIds, shelf).map(
+                        (c) => c.rule.id
+                      )
+                    ),
+                  ]}
+                  showOk={false}
+                  ocrDisclaimer
+                />
               )}
               <Button variant="outline" onClick={reset} className="mt-1">
                 <RotateCcw className="size-4" />
