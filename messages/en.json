@@ -897,6 +897,21 @@
     "entryText": "Export your profile, scan and reactions as a summary to bring to a dermatologist.",
     "entryCta": "Open summary"
   },
+  "shelfCare": {
+    "title": "Shelf care",
+    "subtitle": "Open dates, expiry and near-duplicates — so nothing sits unused or overlaps.",
+    "shelfValue": "Shelf value:",
+    "duplicate": "You have {count} products in {category} for {concern} — finish one before opening another.",
+    "expiryLabel": "Opened dates & expiry",
+    "openedOn": "Opened on",
+    "pao": "Period after opening",
+    "paoPlaceholder": "After opening…",
+    "months": "{count} months",
+    "expired": "Expired",
+    "soon": "Expiring soon",
+    "until": "Until {date}",
+    "disclaimer": "Expiry is estimated from the date you opened a product plus its period-after-opening (the jar symbol). It's a reminder, not a guarantee — trust changes in smell, colour or texture too."
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "High over-exfoliation risk",

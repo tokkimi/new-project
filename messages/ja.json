@@ -897,6 +897,21 @@
     "entryText": "プロフィール・スキャン・反応を要約として書き出し、皮膚科に持参できます。",
     "entryCta": "要約を開く"
   },
+  "shelfCare": {
+    "title": "棚のケア",
+    "subtitle": "開封日・使用期限・類似の重複を管理し、未使用や重複をなくします。",
+    "shelfValue": "棚の価値：",
+    "duplicate": "{category}に{concern}向けの製品が{count}個あります — 一つを使い切ってから次を開封しましょう。",
+    "expiryLabel": "開封日と使用期限",
+    "openedOn": "開封日",
+    "pao": "開封後の使用期間",
+    "paoPlaceholder": "開封後…",
+    "months": "{count}か月",
+    "expired": "期限切れ",
+    "soon": "まもなく期限",
+    "until": "{date}まで",
+    "disclaimer": "使用期限は開封日と開封後の使用期間（容器のマーク）から推定した目安です。保証ではなくリマインダーなので、におい・色・質感の変化も確認してください。"
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "過剰な角質ケアのリスクが高い",

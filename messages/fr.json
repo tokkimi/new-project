@@ -897,6 +897,21 @@
     "entryText": "Exporte ton profil, ton scan et tes réactions en récapitulatif à apporter à un dermatologue.",
     "entryCta": "Ouvrir le récapitulatif"
   },
+  "shelfCare": {
+    "title": "Entretien de l'étagère",
+    "subtitle": "Dates d'ouverture, péremption et quasi-doublons — pour que rien ne dorme ni ne fasse doublon.",
+    "shelfValue": "Valeur de l'étagère :",
+    "duplicate": "Tu as {count} produits en {category} pour {concern} — termines-en un avant d'en ouvrir un autre.",
+    "expiryLabel": "Dates d'ouverture & péremption",
+    "openedOn": "Ouvert le",
+    "pao": "Période après ouverture",
+    "paoPlaceholder": "Après ouverture…",
+    "months": "{count} mois",
+    "expired": "Périmé",
+    "soon": "Bientôt périmé",
+    "until": "Jusqu'au {date}",
+    "disclaimer": "La péremption est estimée à partir de la date d'ouverture et de la période après ouverture (le symbole du pot). C'est un rappel, pas une garantie — fie-toi aussi aux changements d'odeur, de couleur ou de texture."
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "Risque élevé de sur-exfoliation",

@@ -9,6 +9,8 @@ const schema = z.object({
   routineSlot: z.enum(["morning", "evening", "both", "pause"]).optional(),
   customCategory: z.string().trim().max(60).nullable().optional(),
   note: z.string().trim().max(500).nullable().optional(),
+  openedAt: z.string().datetime().nullable().optional(),
+  paoMonths: z.number().int().min(1).max(60).nullable().optional(),
 });
 
 export async function POST(request: Request) {
@@ -17,7 +19,11 @@ export async function POST(request: Request) {
   const parsed = schema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid_input" }, { status: 400 });
 
-  const { productId, ...data } = parsed.data;
+  const { productId, openedAt, ...rest } = parsed.data;
+  const data = {
+    ...rest,
+    ...(openedAt !== undefined ? { openedAt: openedAt ? new Date(openedAt) : null } : {}),
+  };
   const pref = await db.userProductPreference.upsert({
     where: { userId_productId: { userId: session.user.id, productId } },
     create: { userId: session.user.id, productId, ...data },

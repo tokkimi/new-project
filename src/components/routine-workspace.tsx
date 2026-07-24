@@ -15,6 +15,7 @@ import { IngredientExposurePanel } from "@/components/ingredient-exposure-panel"
 import { WeeklyRhythmPanel } from "@/components/weekly-rhythm-panel";
 import { ReactionJournal } from "@/components/reaction-journal";
 import { RoutineProtocolPanel } from "@/components/routine-protocol-panel";
+import { ShelfCarePanel } from "@/components/shelf-care-panel";
 import { useShelf } from "@/lib/shelf-store";
 import type { Product } from "@/generated/prisma/client";
 
@@ -24,6 +25,8 @@ type Preference = {
   routineSlot: "morning" | "evening" | "both" | "pause";
   customCategory: string | null;
   note: string | null;
+  openedAt: string | null;
+  paoMonths: number | null;
 };
 
 type InitialPreference = Pick<Preference, "routineSlot" | "customCategory" | "note">;
@@ -200,6 +203,8 @@ export function RoutineWorkspace() {
       routineSlot: "both",
       customCategory: null,
       note: null,
+      openedAt: null,
+      paoMonths: null,
     };
     const next = { ...base, ...preferences[productId], ...patch };
     setPreferences((prev) => ({ ...prev, [productId]: next }));
@@ -318,6 +323,9 @@ export function RoutineWorkspace() {
               shelfActiveIds={Array.from(new Set(shelf.flatMap((p) => p.ingredientIds)))}
               locale={locale}
             />
+          )}
+          {shelf.length > 0 && (
+            <ShelfCarePanel products={shelf} prefs={preferences} onPref={savePref} />
           )}
           <section className="grid gap-3">
             <div>

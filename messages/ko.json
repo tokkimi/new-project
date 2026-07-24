@@ -897,6 +897,21 @@
     "entryText": "프로필, 스캔, 반응을 요약으로 내보내 피부과에 가져가세요.",
     "entryCta": "요약 열기"
   },
+  "shelfCare": {
+    "title": "화장대 관리",
+    "subtitle": "개봉일, 유통기한, 유사 중복 제품 — 방치되거나 겹치는 제품이 없도록.",
+    "shelfValue": "화장대 가치:",
+    "duplicate": "{category}에서 {concern}용 제품이 {count}개 있어요 — 하나를 다 쓰고 다른 것을 개봉하세요.",
+    "expiryLabel": "개봉일 & 유통기한",
+    "openedOn": "개봉일",
+    "pao": "개봉 후 사용기간",
+    "paoPlaceholder": "개봉 후…",
+    "months": "{count}개월",
+    "expired": "기한 지남",
+    "soon": "곧 만료",
+    "until": "{date}까지",
+    "disclaimer": "유통기한은 개봉일과 개봉 후 사용기간(용기의 기호)을 바탕으로 추정한 값이에요. 보장이 아니라 알림이며, 냄새·색·질감의 변화도 함께 확인하세요."
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "과도한 각질 제거 위험이 높아요",
