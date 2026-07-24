@@ -836,6 +836,40 @@
     "recurrenceNote": "개인적인 패턴일 뿐, 제품이 원인이라는 의학적 증거는 아니에요. 반응이 심하거나 지속되면 제품 사용을 멈추고 전문가 상담을 고려하세요.",
     "aProduct": "제품"
   },
+  "protocol": {
+    "title": "루틴 랩",
+    "subtitle": "한 가지만 바꾸고, 어떻게 되는지 지켜본 뒤 결정하세요 — 한꺼번에 열 가지를 바꾸지 마세요.",
+    "goalLabel": "목표",
+    "changeLabel": "단 하나의 변화",
+    "noProduct": "특정 제품 없음",
+    "start": "실험 시작",
+    "days": "{count}일",
+    "activeTitle": "실험 진행 중",
+    "dayProgress": "{total}일 중 {elapsed}일째",
+    "checkpointsLabel": "스캔 체크인",
+    "checkpointDay": "{day}일째",
+    "principle": "나머지는 모두 그대로 두세요 — 한 번에 하나만 바꾸는 것이 핵심이에요. 그래야 무엇이 실제로 효과가 있는지 알 수 있어요.",
+    "outcomeLabel": "실험이 끝나면",
+    "abandon": "실험 중단",
+    "disclaimer": "Haru는 가능성 있는 요인을 설명할 뿐, 특정 제품이 변화를 일으켰다는 증거는 아니에요. 피부가 자극을 받으면 활성 성분 사용을 멈추세요.",
+    "goals": {
+      "barrier": "장벽 강화",
+      "irritation": "자극 완화",
+      "congestion": "모공 정리",
+      "marks": "자국 옅게",
+      "hydration": "수분 강화"
+    },
+    "changeKinds": {
+      "pause": "제품 잠시 중단",
+      "reduce": "사용 빈도 줄이기",
+      "add": "제품 하나 추가"
+    },
+    "outcomes": {
+      "keep": "유지하기",
+      "remove": "빼기",
+      "adjust": "조정하기"
+    }
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "과도한 각질 제거 위험이 높아요",

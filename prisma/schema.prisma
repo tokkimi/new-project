@@ -56,6 +56,7 @@ model User {
   notes      UserNote[]
   savedLinks SavedRoutineLink[]
   reactions  ProductReaction[]
+  protocols  RoutineProtocol[]
 
   @@map("users")
 }
@@ -172,6 +173,7 @@ model Product {
   ingredients ProductIngredient[]
   userPrefs UserProductPreference[]
   reactions ProductReaction[]
+  protocols RoutineProtocol[]
 
   @@index([category])
   @@index([brandId])
@@ -317,6 +319,27 @@ model ProductReaction {
   @@index([userId, createdAt])
   @@index([userId, productId])
   @@map("product_reactions")
+}
+
+model RoutineProtocol {
+  id           String    @id @default(cuid())
+  userId       String
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // The single deliberate change under test — the whole point is to change one
+  // thing at a time. changeKind: pause | reduce | add. Optional product it acts on.
+  goal         String
+  changeKind   String
+  productId    String?
+  product      Product?  @relation(fields: [productId], references: [id], onDelete: SetNull)
+  note         String?
+  durationDays Int       @default(14)
+  status       String    @default("active") // active | completed | abandoned
+  outcome      String? // keep | remove | adjust — set when completed
+  startedAt    DateTime  @default(now())
+  completedAt  DateTime?
+
+  @@index([userId, status])
+  @@map("routine_protocols")
 }
 
 model UserProductPreference {

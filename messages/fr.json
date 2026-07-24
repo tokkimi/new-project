@@ -836,6 +836,40 @@
     "recurrenceNote": "Une récurrence personnelle, pas une preuve médicale que le produit en est la cause. Si une réaction est forte ou persistante, suspends le produit et envisage un avis professionnel.",
     "aProduct": "un produit"
   },
+  "protocol": {
+    "title": "Routine Lab",
+    "subtitle": "Change une seule chose, observe ce qui se passe, puis décide — pas dix changements d'un coup.",
+    "goalLabel": "Objectif",
+    "changeLabel": "La seule modification",
+    "noProduct": "Aucun produit précis",
+    "start": "Lancer l'essai",
+    "days": "{count} jours",
+    "activeTitle": "Essai en cours",
+    "dayProgress": "Jour {elapsed} sur {total}",
+    "checkpointsLabel": "Points de scan",
+    "checkpointDay": "Jour {day}",
+    "principle": "Garde tout le reste identique — ne changer qu'une chose à la fois est tout l'intérêt, pour savoir ce qui marche vraiment.",
+    "outcomeLabel": "À la fin de l'essai",
+    "abandon": "Arrêter l'essai",
+    "disclaimer": "Haru décrit des contributeurs probables, pas une preuve qu'un produit a causé un changement. Suspends tout actif si ta peau s'irrite.",
+    "goals": {
+      "barrier": "Renforcer la barrière",
+      "irritation": "Réduire l'irritation",
+      "congestion": "Désobstruer",
+      "marks": "Estomper les marques",
+      "hydration": "Booster l'hydratation"
+    },
+    "changeKinds": {
+      "pause": "Suspendre un produit",
+      "reduce": "Réduire la fréquence",
+      "add": "Ajouter un produit"
+    },
+    "outcomes": {
+      "keep": "Le garder",
+      "remove": "Le retirer",
+      "adjust": "L'ajuster"
+    }
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "Risque élevé de sur-exfoliation",

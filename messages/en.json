@@ -836,6 +836,40 @@
     "recurrenceNote": "A personal pattern, not medical proof the product caused it. If a reaction is strong or persistent, pause the product and consider a professional.",
     "aProduct": "a product"
   },
+  "protocol": {
+    "title": "Routine Lab",
+    "subtitle": "Change one thing, watch what happens, then decide — no ten changes at once.",
+    "goalLabel": "Goal",
+    "changeLabel": "The one change",
+    "noProduct": "No specific product",
+    "start": "Start trial",
+    "days": "{count} days",
+    "activeTitle": "Trial in progress",
+    "dayProgress": "Day {elapsed} of {total}",
+    "checkpointsLabel": "Scan check-ins",
+    "checkpointDay": "Day {day}",
+    "principle": "Keep everything else the same — changing one thing at a time is the whole point, so you can tell what actually works.",
+    "outcomeLabel": "When the trial ends",
+    "abandon": "Stop trial",
+    "disclaimer": "Haru describes likely contributors, not proof that one product caused a change. Stop any active if your skin becomes irritated.",
+    "goals": {
+      "barrier": "Strengthen barrier",
+      "irritation": "Reduce irritation",
+      "congestion": "Clear congestion",
+      "marks": "Fade marks",
+      "hydration": "Boost hydration"
+    },
+    "changeKinds": {
+      "pause": "Pause a product",
+      "reduce": "Reduce frequency",
+      "add": "Add one product"
+    },
+    "outcomes": {
+      "keep": "Keep it",
+      "remove": "Remove it",
+      "adjust": "Adjust it"
+    }
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "High over-exfoliation risk",

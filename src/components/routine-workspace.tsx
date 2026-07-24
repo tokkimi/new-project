@@ -14,6 +14,7 @@ import { TipOfTheDay } from "@/components/tip-of-the-day";
 import { IngredientExposurePanel } from "@/components/ingredient-exposure-panel";
 import { WeeklyRhythmPanel } from "@/components/weekly-rhythm-panel";
 import { ReactionJournal } from "@/components/reaction-journal";
+import { RoutineProtocolPanel } from "@/components/routine-protocol-panel";
 import { useShelf } from "@/lib/shelf-store";
 import type { Product } from "@/generated/prisma/client";
 
@@ -304,6 +305,7 @@ export function RoutineWorkspace() {
 
       {tab === "routine" && (
         <div className="grid gap-5">
+          {shelf.length > 0 && <RoutineProtocolPanel products={shelf} />}
           <RoutineContent compact />
           <IngredientExposurePanel
             items={shelf.map((p) => ({
