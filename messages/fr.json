@@ -928,6 +928,25 @@
     "until": "Jusqu'au {date}",
     "disclaimer": "La péremption est estimée à partir de la date d'ouverture et de la période après ouverture (le symbole du pot). C'est un rappel, pas une garantie — fie-toi aussi aux changements d'odeur, de couleur ou de texture."
   },
+  "environment": {
+    "title": "Conditions locales",
+    "subtitle": "Des conseils du jour selon la météo — UV, humidité et air, au niveau de ta ville seulement.",
+    "enable": "Activer les conditions locales",
+    "loading": "Localisation…",
+    "denied": "L'autorisation de localisation a été refusée.",
+    "unavailable": "Les conditions ne sont pas disponibles pour l'instant.",
+    "disable": "Désactiver",
+    "privacy": "Utilise seulement ta localisation au niveau ville, juste pour cette lecture — jamais stockée.",
+    "uv": "UV",
+    "aqi": "Air",
+    "advice": {
+      "uvHigh": "UV élevés aujourd'hui — mets le SPF en priorité et réapplique dans la journée.",
+      "humidHigh": "Temps humide — garde la routine du matin légère pour ne pas alourdir.",
+      "dryLow": "Air sec aujourd'hui — mise sur le soutien de la barrière et une hydratation plus riche.",
+      "airPoor": "Qualité de l'air moins bonne — nettoie bien le soir.",
+      "cold": "Froid et chauffage intérieur — peau plus sèche, soutiens la barrière."
+    }
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "Risque élevé de sur-exfoliation",

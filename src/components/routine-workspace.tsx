@@ -16,6 +16,7 @@ import { WeeklyRhythmPanel } from "@/components/weekly-rhythm-panel";
 import { ReactionJournal } from "@/components/reaction-journal";
 import { RoutineProtocolPanel } from "@/components/routine-protocol-panel";
 import { ShelfCarePanel } from "@/components/shelf-care-panel";
+import { EnvironmentPanel } from "@/components/environment-panel";
 import { useShelf } from "@/lib/shelf-store";
 import type { Product } from "@/generated/prisma/client";
 
@@ -327,6 +328,7 @@ export function RoutineWorkspace() {
           {shelf.length > 0 && (
             <ShelfCarePanel products={shelf} prefs={preferences} onPref={savePref} />
           )}
+          <EnvironmentPanel />
           <section className="grid gap-3">
             <div>
               <h2 className="font-serif text-xl">{t("routineProductsTitle")}</h2>

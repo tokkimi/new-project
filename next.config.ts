@@ -9,7 +9,9 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   {
     key: "Permissions-Policy",
-    value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+    // geolocation=self enables the opt-in local-weather panel; everything else
+    // stays locked down.
+    value: "camera=(), microphone=(), geolocation=(self), interest-cohort=()",
   },
   {
     key: "Strict-Transport-Security",

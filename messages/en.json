@@ -928,6 +928,25 @@
     "until": "Until {date}",
     "disclaimer": "Expiry is estimated from the date you opened a product plus its period-after-opening (the jar symbol). It's a reminder, not a guarantee — trust changes in smell, colour or texture too."
   },
+  "environment": {
+    "title": "Local conditions",
+    "subtitle": "Weather-aware nudges for today — UV, humidity and air, from your city only.",
+    "enable": "Enable local conditions",
+    "loading": "Locating…",
+    "denied": "Location permission was declined.",
+    "unavailable": "Conditions aren't available right now.",
+    "disable": "Turn off",
+    "privacy": "Uses your city-level location only, just for this reading — it's never stored.",
+    "uv": "UV",
+    "aqi": "Air",
+    "advice": {
+      "uvHigh": "High UV today — make SPF the priority and reapply through the day.",
+      "humidHigh": "Humid today — keep the morning routine light so it doesn't feel heavy.",
+      "dryLow": "Dry air today — lean on barrier support and richer hydration.",
+      "airPoor": "Poorer air quality — cleanse thoroughly in the evening.",
+      "cold": "Cold and indoor heating — expect drier skin and support the barrier."
+    }
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "High over-exfoliation risk",
