@@ -803,6 +803,14 @@
     "irritantStackMorning": "Le matin, ta routine cumule plusieurs actifs potentiellement irritants ({ingredients}). Espace-les plutôt que de les superposer.",
     "concentrationNote": "Haru raisonne sur la présence et la fréquence des actifs, pas sur leur dosage — les concentrations ne sont pas communiquées et ne sont jamais déduites de la place dans la liste INCI."
   },
+  "weeklyRhythm": {
+    "title": "Rythme hebdomadaire",
+    "subtitle": "Une cadence du soir suggérée qui espace tes actifs les plus forts.",
+    "amNote": "Ta routine du matin reste la même chaque jour : nettoyage doux, hydratation, crème, et SPF.",
+    "recovery": "Récupération — soutien de la barrière",
+    "noStrong": "Ton étagère ne contient pas d'actifs forts (rétinoïdes, AHA/BHA) à espacer — une routine du soir simple et régulière convient très bien.",
+    "disclaimer": "Un rythme suggéré, pas une prescription — adapte-le à ta tolérance, et saute un actif dès que ta peau tiraille ou s'irrite."
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "Risque élevé de sur-exfoliation",

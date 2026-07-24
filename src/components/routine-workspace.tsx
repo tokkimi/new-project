@@ -12,6 +12,7 @@ import { AddProductDialog } from "@/components/add-product-dialog";
 import { RoutineContent } from "@/components/routine-content";
 import { TipOfTheDay } from "@/components/tip-of-the-day";
 import { IngredientExposurePanel } from "@/components/ingredient-exposure-panel";
+import { WeeklyRhythmPanel } from "@/components/weekly-rhythm-panel";
 import { useShelf } from "@/lib/shelf-store";
 import type { Product } from "@/generated/prisma/client";
 
@@ -308,6 +309,12 @@ export function RoutineWorkspace() {
               slot: preferences[p.id]?.routineSlot ?? "both",
             }))}
           />
+          {shelf.length > 0 && (
+            <WeeklyRhythmPanel
+              shelfActiveIds={Array.from(new Set(shelf.flatMap((p) => p.ingredientIds)))}
+              locale={locale}
+            />
+          )}
           <section className="grid gap-3">
             <div>
               <h2 className="font-serif text-xl">{t("routineProductsTitle")}</h2>

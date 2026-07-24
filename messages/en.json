@@ -803,6 +803,14 @@
     "irritantStackMorning": "Your morning routine stacks several potentially irritating actives ({ingredients}). Consider spreading them out rather than layering them together.",
     "concentrationNote": "Haru reasons about which actives are present and how often, not their dose — concentrations aren't disclosed and are never guessed from a product's place in the INCI list."
   },
+  "weeklyRhythm": {
+    "title": "Weekly rhythm",
+    "subtitle": "A suggested evening cadence that spaces out your strongest actives.",
+    "amNote": "Your morning stays the same every day: gentle cleanse, hydrate, moisturiser, and SPF.",
+    "recovery": "Recovery — barrier support",
+    "noStrong": "Your shelf has no strong actives (retinoids, AHA/BHA) that need spacing out — a simple, consistent evening routine works well.",
+    "disclaimer": "A suggested rhythm, not a prescription — adjust to your own tolerance, and skip an active whenever your skin feels irritated."
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "High over-exfoliation risk",
