@@ -870,6 +870,33 @@
       "adjust": "調整する"
     }
   },
+  "report": {
+    "title": "肌サマリー",
+    "generatedOn": "{date} 作成",
+    "print": "印刷 / PDFで保存",
+    "intro": "Haruのプロフィール、最新のスキャン、ルーティン、記録された反応をまとめた要約です。皮膚科医などの専門家に見せるためのもので、消費者向けの化粧品ツールであり診断ではありません。痛みがある、続く、悪化する場合は専門家に相談してください。",
+    "profileTitle": "肌プロフィール",
+    "skinType": "肌タイプ",
+    "age": "年代",
+    "concerns": "お悩み",
+    "sensitivities": "敏感要素",
+    "climate": "気候",
+    "noProfile": "まだ肌プロフィールが完成していません。",
+    "scanTitle": "最新の顔スキャン",
+    "scanDate": "日付",
+    "overall": "総合スコア",
+    "confidence": "信頼度",
+    "flaggedTitle": "注意が必要な部位",
+    "flaggedNone": "指摘された部位はありません。",
+    "noScan": "まだ記録された顔スキャンはありません。",
+    "routineTitle": "現在のルーティンの有効成分",
+    "reactionsTitle": "反応のパターン",
+    "reactionLine": "{product}とともに{type}が{count}回記録。",
+    "disclaimer": "スコアは一般的な写真からの視覚的な化粧品上の推定であり、臨床的な測定ではありません。Haruは原因ではなく可能性のある要因を説明します。この要約は対面での診察に代わるものではありません。",
+    "entryTitle": "専門家向けの要約",
+    "entryText": "プロフィール・スキャン・反応を要約として書き出し、皮膚科に持参できます。",
+    "entryCta": "要約を開く"
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "過剰な角質ケアのリスクが高い",

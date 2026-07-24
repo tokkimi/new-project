@@ -870,6 +870,33 @@
       "adjust": "조정하기"
     }
   },
+  "report": {
+    "title": "피부 요약",
+    "generatedOn": "{date} 생성",
+    "print": "인쇄 / PDF로 저장",
+    "intro": "Haru 프로필, 최근 스캔, 루틴, 기록된 반응을 정리한 요약이에요. 피부과 의사나 전문가에게 보여주기 위한 것으로, 소비자용 화장품 도구이며 진단이 아니에요. 통증이 있거나 지속되거나 악화되는 문제는 전문가와 상담하세요.",
+    "profileTitle": "피부 프로필",
+    "skinType": "피부 타입",
+    "age": "연령대",
+    "concerns": "고민",
+    "sensitivities": "민감 요인",
+    "climate": "기후",
+    "noProfile": "아직 완성된 피부 프로필이 없어요.",
+    "scanTitle": "최근 얼굴 스캔",
+    "scanDate": "날짜",
+    "overall": "종합 점수",
+    "confidence": "신뢰도",
+    "flaggedTitle": "주의가 필요한 부위",
+    "flaggedNone": "표시된 부위가 없어요.",
+    "noScan": "아직 기록된 얼굴 스캔이 없어요.",
+    "routineTitle": "현재 루틴의 활성 성분",
+    "reactionsTitle": "반응 패턴",
+    "reactionLine": "{product}와(과) 함께 {type}이(가) {count}번 기록됨.",
+    "disclaimer": "점수는 일반 사진을 바탕으로 한 시각적 화장품 추정치이며 임상 측정이 아니고, Haru는 원인이 아니라 가능성 있는 요인을 설명해요. 이 요약은 대면 진료를 대신하지 않아요.",
+    "entryTitle": "전문가용 요약",
+    "entryText": "프로필, 스캔, 반응을 요약으로 내보내 피부과에 가져가세요.",
+    "entryCta": "요약 열기"
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "과도한 각질 제거 위험이 높아요",

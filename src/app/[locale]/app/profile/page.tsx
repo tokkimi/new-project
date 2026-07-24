@@ -1,7 +1,8 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { redirect } from "@/i18n/navigation";
+import { redirect, Link } from "@/i18n/navigation";
+import { FileText, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ProfileTabs } from "@/components/profile-tabs";
 
@@ -41,6 +42,7 @@ export default async function ProfilePage() {
   }
 
   const t = await getTranslations("profile");
+  const tReport = await getTranslations("report");
   const memberSince = new Intl.DateTimeFormat(locale, {
     year: "numeric",
     month: "long",
@@ -68,6 +70,19 @@ export default async function ProfilePage() {
           <p>{t("shelfCount", { count: shelfCount })}</p>
         </div>
       </Card>
+
+      <Link href="/app/report" className="block">
+        <Card className="flex-row items-center gap-4 transition-colors hover:border-primary/40">
+          <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <FileText className="size-5" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className="font-medium">{tReport("entryTitle")}</p>
+            <p className="text-sm text-muted-foreground">{tReport("entryText")}</p>
+          </div>
+          <ChevronRight className="size-5 shrink-0 text-muted-foreground" />
+        </Card>
+      </Link>
 
       <ProfileTabs
         name={user.name}

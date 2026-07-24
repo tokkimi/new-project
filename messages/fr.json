@@ -870,6 +870,33 @@
       "adjust": "L'ajuster"
     }
   },
+  "report": {
+    "title": "Récapitulatif peau",
+    "generatedOn": "Généré le {date}",
+    "print": "Imprimer / Enregistrer en PDF",
+    "intro": "Un récapitulatif de ton profil Haru, ton dernier scan, ta routine et tes réactions enregistrées, à présenter à un dermatologue ou autre professionnel. C'est un outil cosmétique grand public — pas un diagnostic. Si une préoccupation est douloureuse, persistante ou s'aggrave, consulte un professionnel.",
+    "profileTitle": "Profil de peau",
+    "skinType": "Type de peau",
+    "age": "Tranche d'âge",
+    "concerns": "Préoccupations",
+    "sensitivities": "Sensibilités",
+    "climate": "Climat",
+    "noProfile": "Aucun profil de peau complété pour l'instant.",
+    "scanTitle": "Dernier scan visage",
+    "scanDate": "Date",
+    "overall": "Score global",
+    "confidence": "Confiance",
+    "flaggedTitle": "Zones à surveiller",
+    "flaggedNone": "Aucune zone signalée.",
+    "noScan": "Aucun scan visage enregistré pour l'instant.",
+    "routineTitle": "Actifs de la routine actuelle",
+    "reactionsTitle": "Récurrences de réactions",
+    "reactionLine": "{type} enregistré {count} fois avec {product}.",
+    "disclaimer": "Les scores sont des estimations visuelles cosmétiques à partir de photos ordinaires, pas des mesures cliniques, et Haru décrit des contributeurs probables plutôt que des causes. Ce récapitulatif ne remplace pas un examen en personne.",
+    "entryTitle": "Récapitulatif pour un professionnel",
+    "entryText": "Exporte ton profil, ton scan et tes réactions en récapitulatif à apporter à un dermatologue.",
+    "entryCta": "Ouvrir le récapitulatif"
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "Risque élevé de sur-exfoliation",

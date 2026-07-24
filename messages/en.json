@@ -870,6 +870,33 @@
       "adjust": "Adjust it"
     }
   },
+  "report": {
+    "title": "Skin summary",
+    "generatedOn": "Generated {date}",
+    "print": "Print / Save as PDF",
+    "intro": "A summary of your Haru profile, latest scan, routine and logged reactions to share with a dermatologist or other professional. It's a consumer cosmetic tool — not a diagnosis. If a concern is painful, persistent or worsening, please see a professional.",
+    "profileTitle": "Skin profile",
+    "skinType": "Skin type",
+    "age": "Age range",
+    "concerns": "Concerns",
+    "sensitivities": "Sensitivities",
+    "climate": "Climate",
+    "noProfile": "No skin profile completed yet.",
+    "scanTitle": "Latest face scan",
+    "scanDate": "Date",
+    "overall": "Overall score",
+    "confidence": "Confidence",
+    "flaggedTitle": "Areas flagged for attention",
+    "flaggedNone": "No areas flagged.",
+    "noScan": "No face scan on record yet.",
+    "routineTitle": "Current routine actives",
+    "reactionsTitle": "Logged reaction patterns",
+    "reactionLine": "{type} logged {count} times with {product}.",
+    "disclaimer": "Scores are visual cosmetic estimates from ordinary photos, not clinical measurements, and Haru describes likely contributors rather than causes. This summary does not replace an in-person assessment.",
+    "entryTitle": "Summary for a professional",
+    "entryText": "Export your profile, scan and reactions as a summary to bring to a dermatologist.",
+    "entryCta": "Open summary"
+  },
   "conflictRules": {
     "retinol_aha_bha": {
       "headline": "High over-exfoliation risk",

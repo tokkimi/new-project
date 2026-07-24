@@ -161,3 +161,18 @@
     display: none;
   }
 }
+
+/* Clean print output for the professional report (/app/report). */
+@media print {
+  header,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+  .print-avoid-break {
+    break-inside: avoid;
+  }
+}
