@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { ArrowLeft, Layers } from "lucide-react";
+import { ArrowLeft, Layers, BadgeCheck } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Badge, type badgeVariants } from "@/components/ui/badge";
@@ -81,6 +81,28 @@ export default function ConflictDetailPage() {
         <p className="leading-relaxed text-muted-foreground">
           {tConflicts(`${rule.id}.recommendation`)}
         </p>
+      </Card>
+
+      <Card className="gap-2">
+        <h2 className="flex items-center gap-2 font-serif text-lg">
+          <BadgeCheck className="size-4 text-muted-foreground" />
+          {t("evidenceTitle")}
+        </h2>
+        <span
+          className={`inline-flex w-fit rounded-full px-3 py-1 text-sm font-medium ${
+            rule.evidenceLevel === "established"
+              ? "bg-success/12 text-success"
+              : rule.evidenceLevel === "myth"
+                ? "bg-am/15 text-am-foreground"
+                : "bg-secondary text-muted-foreground"
+          }`}
+        >
+          {t(`evidence.${rule.evidenceLevel}.label`)}
+        </span>
+        <p className="leading-relaxed text-muted-foreground">
+          {t(`evidence.${rule.evidenceLevel}.text`)}
+        </p>
+        <p className="text-xs text-muted-foreground">{t("evidenceCaveat")}</p>
       </Card>
 
       <p className="text-xs text-muted-foreground">{t("disclaimer")}</p>

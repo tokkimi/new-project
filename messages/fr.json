@@ -543,7 +543,23 @@
     "notFound": "Ce conflit n'existe pas (plus).",
     "why": "Pourquoi c'est signalé",
     "suggestion": "Ce que Haru suggère",
-    "disclaimer": "Ces recommandations sont générales et ne remplacent pas l'avis d'un dermatologue, surtout pour une peau sensible ou un traitement prescrit."
+    "disclaimer": "Ces recommandations sont générales et ne remplacent pas l'avis d'un dermatologue, surtout pour une peau sensible ou un traitement prescrit.",
+    "evidenceTitle": "Niveau de certitude",
+    "evidenceCaveat": "Basé sur le consensus cosmétique général — pas sur les concentrations précises de tes produits, qui ne sont pas communiquées et jamais déduites de l'ordre de la liste INCI.",
+    "evidence": {
+      "established": {
+        "label": "Bien établi",
+        "text": "Largement admis en science cosmétique ; à suivre."
+      },
+      "advised": {
+        "label": "Couramment conseillé",
+        "text": "Une recommandation courante plutôt qu'une règle stricte — adapte-la à la réaction réelle de ta peau."
+      },
+      "myth": {
+        "label": "Mythe répandu",
+        "text": "Une croyance répandue mais non fondée — ces deux-là s'utilisent très bien ensemble."
+      }
+    }
   },
   "severity": {
     "avoid": "À éviter",

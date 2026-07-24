@@ -10,11 +10,20 @@ export type Ingredient = {
 
 export type ConflictSeverity = "avoid" | "space_out" | "sequence" | "note";
 
+/**
+ * How settled the guidance behind a rule is — an honest classification of
+ * cosmetic consensus, NOT a specific citation. "established" = widely agreed in
+ * cosmetic science, "advised" = commonly recommended but not a hard rule,
+ * "myth" = a popular belief that's actually unfounded.
+ */
+export type EvidenceLevel = "established" | "advised" | "myth";
+
 export type ConflictRule = {
   id: string;
   a: string;
   b: string;
   severity: ConflictSeverity;
+  evidenceLevel: EvidenceLevel;
 };
 
 // Display text (name, summary, headline, reason, recommendation, category labels)
@@ -39,14 +48,14 @@ export const INGREDIENTS: Ingredient[] = [
 ];
 
 export const CONFLICT_RULES: ConflictRule[] = [
-  { id: "retinol_aha_bha", a: "retinol", b: "aha", severity: "avoid" },
-  { id: "retinol_bha", a: "retinol", b: "bha", severity: "avoid" },
-  { id: "retinol_benzoyl", a: "retinol", b: "benzoyl_peroxide", severity: "avoid" },
-  { id: "vitc_retinol_timing", a: "vitamin_c", b: "retinol", severity: "sequence" },
-  { id: "aha_bha_together", a: "aha", b: "bha", severity: "space_out" },
-  { id: "niacinamide_vitc_myth", a: "niacinamide", b: "vitamin_c", severity: "note" },
-  { id: "peptides_aha", a: "peptides", b: "aha", severity: "space_out" },
-  { id: "spf_am_only", a: "spf", b: "retinol", severity: "note" },
+  { id: "retinol_aha_bha", a: "retinol", b: "aha", severity: "avoid", evidenceLevel: "established" },
+  { id: "retinol_bha", a: "retinol", b: "bha", severity: "avoid", evidenceLevel: "established" },
+  { id: "retinol_benzoyl", a: "retinol", b: "benzoyl_peroxide", severity: "avoid", evidenceLevel: "established" },
+  { id: "vitc_retinol_timing", a: "vitamin_c", b: "retinol", severity: "sequence", evidenceLevel: "advised" },
+  { id: "aha_bha_together", a: "aha", b: "bha", severity: "space_out", evidenceLevel: "advised" },
+  { id: "niacinamide_vitc_myth", a: "niacinamide", b: "vitamin_c", severity: "note", evidenceLevel: "myth" },
+  { id: "peptides_aha", a: "peptides", b: "aha", severity: "space_out", evidenceLevel: "advised" },
+  { id: "spf_am_only", a: "spf", b: "retinol", severity: "note", evidenceLevel: "advised" },
 ];
 
 export function findIngredient(id: string): Ingredient | undefined {

@@ -543,7 +543,23 @@
     "notFound": "This conflict doesn't exist (anymore).",
     "why": "Why it's flagged",
     "suggestion": "What Haru suggests",
-    "disclaimer": "These recommendations are general and don't replace advice from a dermatologist, especially for sensitive skin or a prescribed treatment."
+    "disclaimer": "These recommendations are general and don't replace advice from a dermatologist, especially for sensitive skin or a prescribed treatment.",
+    "evidenceTitle": "How settled this is",
+    "evidenceCaveat": "Based on general cosmetic consensus — not on your products' specific concentrations, which aren't disclosed and are never inferred from the ingredient list order.",
+    "evidence": {
+      "established": {
+        "label": "Well-established",
+        "text": "Widely agreed on in cosmetic science; worth following."
+      },
+      "advised": {
+        "label": "Commonly advised",
+        "text": "A common recommendation rather than a strict rule — adjust it to how your skin actually responds."
+      },
+      "myth": {
+        "label": "Popular myth",
+        "text": "A widespread belief that isn't actually supported — these are fine to use together."
+      }
+    }
   },
   "severity": {
     "avoid": "Avoid",
