@@ -161,6 +161,11 @@
     "moduleNotAssessable": "この部位は写真ではっきり見えなかったため、評価していません。",
     "notAssessableBadge": "評価不可",
     "moduleNotAssessableHint": "明るい場所で正面から、この部位を隠さずに撮り直すと分析できます。",
+    "compareTitle": "前回のスキャンとの比較",
+    "compareSince": "{days}日前のスキャンと比較",
+    "compareOverall": "総合",
+    "compareStable": "前回の比較可能なスキャンから明確な変化はありません — 安定しています。",
+    "compareDisclaimer": "比較可能な写真に基づく推定の変化です — 臨床的な測定ではなく、両方のスキャンではっきり見えた部位のみを比較しています。",
     "captureIssues": {
       "lighting": "照明（暗すぎる／明るすぎる）",
       "blur": "ぶれ／ピンボケ",

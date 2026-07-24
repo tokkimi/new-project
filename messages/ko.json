@@ -161,6 +161,11 @@
     "moduleNotAssessable": "이 부위가 사진에 선명하게 보이지 않아 점수를 매기지 않았어요.",
     "notAssessableBadge": "평가 불가",
     "moduleNotAssessableHint": "이 부위를 가리지 않고 밝은 곳에서 정면으로 다시 촬영하면 분석할 수 있어요.",
+    "compareTitle": "지난 스캔과 비교",
+    "compareSince": "{days}일 전 스캔과 비교",
+    "compareOverall": "종합",
+    "compareStable": "지난 비교 가능한 스캔 이후 뚜렷한 변화가 없어요 — 안정적이에요.",
+    "compareDisclaimer": "비교 가능한 사진을 기반으로 한 추정 변화예요 — 임상 측정이 아니며, 두 스캔 모두에서 뚜렷하게 보이는 부위만 비교해요.",
     "captureIssues": {
       "lighting": "조명 (너무 어둡거나 밝음)",
       "blur": "흐릿함 / 초점 안 맞음",

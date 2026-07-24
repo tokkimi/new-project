@@ -161,6 +161,11 @@
     "moduleNotAssessable": "Cette zone n'était pas assez visible sur ta photo, elle n'a donc pas été notée.",
     "notAssessableBadge": "Non évaluable",
     "moduleNotAssessableHint": "Reprends la photo dans une meilleure lumière, de face et cette zone dégagée pour obtenir un résultat ici.",
+    "compareTitle": "Depuis ton dernier scan",
+    "compareSince": "Par rapport à ton scan d'il y a {days} j",
+    "compareOverall": "Global",
+    "compareStable": "Pas de changement net depuis ton dernier scan comparable — stable.",
+    "compareDisclaimer": "Évolution probable basée sur des photos comparables — ce n'est pas une mesure clinique, et seules les zones bien visibles sur les deux scans sont comparées.",
     "captureIssues": {
       "lighting": "Éclairage (trop sombre ou trop clair)",
       "blur": "Flou / mise au point",

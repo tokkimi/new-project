@@ -290,6 +290,14 @@ export async function POST(request: Request) {
         : { advised: false },
     });
 
+    // Grab the most recent earlier scan BEFORE saving this one, so the result
+    // can show an honest same-person before/after comparison.
+    const priorScan = await db.faceScanResult.findFirst({
+      where: { userId: user.id },
+      orderBy: { createdAt: "desc" },
+      select: { createdAt: true, overallScore: true, analysis: true },
+    });
+
     await db.faceScanResult.create({
       data: {
         userId: user.id,
@@ -310,7 +318,28 @@ export async function POST(request: Request) {
       }
     }
 
-    return NextResponse.json({ analysis });
+    let previous: {
+      createdAt: string;
+      overallScore: number;
+      modules: Array<{ id: string; score: number; observable?: boolean; confidence?: number }>;
+    } | null = null;
+    if (priorScan) {
+      const priorAnalysis = priorScan.analysis as { modules?: Array<{ id: string; score: number; observable?: boolean; confidence?: number }> };
+      previous = {
+        createdAt: priorScan.createdAt.toISOString(),
+        overallScore: priorScan.overallScore,
+        modules: Array.isArray(priorAnalysis?.modules)
+          ? priorAnalysis.modules.map((m) => ({
+              id: m.id,
+              score: m.score,
+              observable: m.observable,
+              confidence: m.confidence,
+            }))
+          : [],
+      };
+    }
+
+    return NextResponse.json({ analysis, previous });
   } catch (error) {
     console.error("face-scan analyze error", error);
     return NextResponse.json({ error: "analysis_failed" }, { status: 502 });

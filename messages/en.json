@@ -161,6 +161,11 @@
     "moduleNotAssessable": "This zone wasn't clearly visible in your photo, so it wasn't scored.",
     "notAssessableBadge": "Not assessable",
     "moduleNotAssessableHint": "Retake in better light, straight-on, with this area uncovered to get a reading here.",
+    "compareTitle": "Since your last scan",
+    "compareSince": "Compared with your scan {days} days ago",
+    "compareOverall": "Overall",
+    "compareStable": "No clear change since your last comparable scan — steady.",
+    "compareDisclaimer": "Probable change based on comparable photos — not a clinical measurement, and only zones both scans could clearly see are compared.",
     "captureIssues": {
       "lighting": "Lighting (too dark or too bright)",
       "blur": "Blurry / out of focus",

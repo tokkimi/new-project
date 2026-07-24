@@ -233,6 +233,74 @@ export function buildFaceScanAnalysis(
   };
 }
 
+/** One zone, compared against the same zone in an earlier scan. */
+export type ModuleComparison = {
+  id: ModuleId;
+  /** current.score - previous.score. Negative = clearer now (improved). */
+  delta: number;
+  direction: "improved" | "stable" | "watch" | "unknown";
+  /** True only when both scans could actually see & confidently read this zone. */
+  comparable: boolean;
+};
+
+export type ScanComparison = {
+  overallDelta: number;
+  daysBetween: number;
+  /** How many zones were reliably comparable between the two scans. */
+  comparableCount: number;
+  modules: ModuleComparison[];
+};
+
+/** A minimal shape of an earlier scan needed for comparison (from stored analysis JSON). */
+export type PreviousScan = {
+  createdAt: string;
+  overallScore: number;
+  modules: Array<{ id: ModuleId; score: number; observable?: boolean; confidence?: number }>;
+};
+
+// Below this absolute change we treat a zone as "stable" rather than claiming a
+// direction — small frame/lighting differences shouldn't read as real change.
+const MEANINGFUL_DELTA = 2;
+
+/**
+ * Compares a fresh analysis to an earlier scan, zone by zone. Deliberately
+ * conservative: a zone is only given a direction when BOTH scans could see and
+ * confidently read it, and only when the change clears a meaningful threshold —
+ * everything else is "stable" or "unknown", never a false "improved/worse".
+ */
+export function compareScans(current: FaceScanAnalysis, previous: PreviousScan): ScanComparison {
+  const prevById = new Map(previous.modules.map((m) => [m.id, m]));
+
+  const modules: ModuleComparison[] = current.modules.map((cur) => {
+    const prev = prevById.get(cur.id);
+    const prevObservable = prev?.observable ?? true;
+    const prevConfident = (prev?.confidence ?? 1) >= MIN_CONFIDENCE;
+    const comparable =
+      !!prev && cur.observable && cur.confidence >= MIN_CONFIDENCE && prevObservable && prevConfident;
+
+    if (!comparable || !prev) {
+      return { id: cur.id, delta: 0, direction: "unknown", comparable: false };
+    }
+    const delta = cur.score - prev.score;
+    const direction: ModuleComparison["direction"] =
+      delta <= -MEANINGFUL_DELTA ? "improved" : delta >= MEANINGFUL_DELTA ? "watch" : "stable";
+    return { id: cur.id, delta, direction, comparable: true };
+  });
+
+  const msPerDay = 1000 * 60 * 60 * 24;
+  const daysBetween = Math.max(
+    0,
+    Math.round((Date.now() - new Date(previous.createdAt).getTime()) / msPerDay)
+  );
+
+  return {
+    overallDelta: current.overallScore - previous.overallScore,
+    daysBetween,
+    comparableCount: modules.filter((m) => m.comparable).length,
+    modules,
+  };
+}
+
 /**
  * Turns the analysis into a real product routine from the actual catalog:
  * always covers cleanse/moisturize/protect, plus one product per flagged

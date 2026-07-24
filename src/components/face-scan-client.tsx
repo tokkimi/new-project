@@ -26,6 +26,8 @@ import {
   ShieldCheck,
   Sparkles,
   Target,
+  TrendingDown,
+  TrendingUp,
   UserX,
   WandSparkles,
   Waves,
@@ -40,7 +42,14 @@ import { ProductImage } from "@/components/product-image";
 import { SkinScoreRing, ModuleScoreBar } from "@/components/skin-score";
 import { severityBadgeClass } from "@/lib/severity";
 import { useCatalog, useShelf } from "@/lib/shelf-store";
-import { MODULES, type FaceScanAnalysis, type ModuleFinding, type ModuleId } from "@/lib/face-scan-engine";
+import {
+  compareScans,
+  MODULES,
+  type FaceScanAnalysis,
+  type ModuleFinding,
+  type ModuleId,
+  type PreviousScan,
+} from "@/lib/face-scan-engine";
 
 const MODULE_ICON: Record<ModuleId, React.ComponentType<{ className?: string }>> = {
   pores: Target,
@@ -153,6 +162,7 @@ export function FaceScanClient() {
   const [stepIndex, setStepIndex] = React.useState(0);
   const [preview, setPreview] = React.useState<string | null>(null);
   const [analysis, setAnalysis] = React.useState<FaceScanAnalysis | null>(null);
+  const [previous, setPrevious] = React.useState<PreviousScan | null>(null);
   const [addedProducts, setAddedProducts] = React.useState<Set<string>>(new Set());
   const [activeModule, setActiveModule] = React.useState(0);
   const [qualityIssues, setQualityIssues] = React.useState<string[]>([]);
@@ -203,6 +213,7 @@ export function FaceScanClient() {
       }
       const data = await res.json();
       setAnalysis(data.analysis);
+      setPrevious((data.previous as PreviousScan) ?? null);
       setPhase("result");
     } catch {
       setPhase("error");
@@ -215,6 +226,7 @@ export function FaceScanClient() {
     if (preview) URL.revokeObjectURL(preview);
     setPreview(null);
     setAnalysis(null);
+    setPrevious(null);
     setAddedProducts(new Set());
     setActiveModule(0);
     setPhase("idle");
@@ -249,6 +261,11 @@ export function FaceScanClient() {
         return Number(b.flagged) - Number(a.flagged) || b.score - a.score;
       }) as ModuleFinding[];
   }, [analysis]);
+
+  const comparison = React.useMemo(
+    () => (analysis && previous ? compareScans(analysis, previous) : null),
+    [analysis, previous]
+  );
 
   const summaryKey = !analysis
     ? "summaryGood"
@@ -505,6 +522,74 @@ export function FaceScanClient() {
                     {analysis.medicalReferral.reason || t("medicalReferralText")}
                   </p>
                 </div>
+              </div>
+            )}
+
+            {comparison && comparison.comparableCount > 0 && (
+              <div className="rounded-[2rem] bg-card p-5 shadow-[0_20px_70px_-48px_rgba(0,0,0,0.35)] sm:p-6">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <h2 className="font-serif text-2xl">{t("compareTitle")}</h2>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {t("compareSince", { days: comparison.daysBetween })}
+                    </p>
+                  </div>
+                  <span
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium",
+                      comparison.overallDelta > 0
+                        ? "bg-success/12 text-success"
+                        : comparison.overallDelta < 0
+                          ? "bg-am/15 text-am-foreground"
+                          : "bg-secondary text-muted-foreground"
+                    )}
+                  >
+                    {comparison.overallDelta > 0 ? (
+                      <TrendingUp className="size-4" />
+                    ) : comparison.overallDelta < 0 ? (
+                      <TrendingDown className="size-4" />
+                    ) : null}
+                    {t("compareOverall")} {comparison.overallDelta > 0 ? "+" : ""}
+                    {comparison.overallDelta}
+                  </span>
+                </div>
+
+                {(() => {
+                  const improved = comparison.modules.filter((m) => m.direction === "improved");
+                  const watch = comparison.modules.filter((m) => m.direction === "watch");
+                  if (improved.length === 0 && watch.length === 0) {
+                    return (
+                      <p className="mt-3 text-sm text-muted-foreground">{t("compareStable")}</p>
+                    );
+                  }
+                  return (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {improved.map((m) => (
+                        <span
+                          key={m.id}
+                          className="inline-flex items-center gap-1.5 rounded-full bg-success/12 px-3 py-1 text-sm text-success"
+                        >
+                          <TrendingUp className="size-3.5" />
+                          {t(`modules.${m.id}.name`)}
+                        </span>
+                      ))}
+                      {watch.map((m) => (
+                        <span
+                          key={m.id}
+                          className="inline-flex items-center gap-1.5 rounded-full bg-am/15 px-3 py-1 text-sm text-am-foreground"
+                        >
+                          <TrendingDown className="size-3.5" />
+                          {t(`modules.${m.id}.name`)}
+                        </span>
+                      ))}
+                    </div>
+                  );
+                })()}
+
+                <p className="mt-4 flex items-start gap-2 text-xs text-muted-foreground">
+                  <ShieldCheck className="mt-0.5 size-4 shrink-0" />
+                  {t("compareDisclaimer")}
+                </p>
               </div>
             )}
 
