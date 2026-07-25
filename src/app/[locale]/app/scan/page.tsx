@@ -343,7 +343,11 @@ export default function ScanPage() {
               <div className="flex flex-wrap justify-center gap-1.5">
                 {result.product.ingredientIds.map((id) =>
                   findIngredient(id) ? (
-                    <Badge key={id}>{tIngredients(`${id}.name`)}</Badge>
+                    <Link key={id} href={`/app/ingredient/${id}`}>
+                      <Badge className="cursor-pointer transition-opacity hover:opacity-80">
+                        {tIngredients(`${id}.name`)}
+                      </Badge>
+                    </Link>
                   ) : null
                 )}
               </div>
@@ -402,7 +406,11 @@ export default function ScanPage() {
                 <div className="flex flex-wrap justify-center gap-1.5">
                   {result.detectedIngredientIds.map((id) =>
                     findIngredient(id) ? (
-                      <Badge key={id}>{tIngredients(`${id}.name`)}</Badge>
+                      <Link key={id} href={`/app/ingredient/${id}`}>
+                        <Badge className="cursor-pointer transition-opacity hover:opacity-80">
+                          {tIngredients(`${id}.name`)}
+                        </Badge>
+                      </Link>
                     ) : null
                   )}
                 </div>

@@ -778,52 +778,154 @@
   "ingredients": {
     "retinol": {
       "name": "Rétinol / Rétinoïdes",
-      "summary": "Renouvellement cellulaire, anti-âge, acné."
+      "summary": "Renouvellement cellulaire, anti-âge, acné.",
+      "benefits": [
+        "Accélère le renouvellement cellulaire",
+        "Atténue les ridules",
+        "Aide à désincruster et prévenir les boutons"
+      ],
+      "howToUse": "Le soir uniquement, 2–3×/semaine au début, puis augmente selon la tolérance ; toujours suivi d'un SPF le lendemain matin.",
+      "caution": "Peut assécher et faire peler le temps que la peau s'habitue. À ne pas associer aux AHA/BHA ni au peroxyde de benzoyle le même soir."
     },
     "vitamin_c": {
       "name": "Vitamine C (L-AA)",
-      "summary": "Antioxydant, éclat, protection anti-pollution."
+      "summary": "Antioxydant, éclat, protection anti-pollution.",
+      "benefits": [
+        "Ravive un teint terne",
+        "Estompe les taches avec le temps",
+        "Défense antioxydante contre la pollution"
+      ],
+      "howToUse": "Le matin, sur peau propre, avant la crème et le SPF.",
+      "caution": "Peut picoter sur peau très sensible ou abîmée — introduis-la progressivement."
     },
     "niacinamide": {
       "name": "Niacinamide",
-      "summary": "Régule le sébum, apaise, renforce la barrière cutanée."
+      "summary": "Régule le sébum, apaise, renforce la barrière cutanée.",
+      "benefits": [
+        "Apaise les rougeurs",
+        "Aide à réguler le sébum",
+        "Soutient la barrière cutanée"
+      ],
+      "howToUse": "Matin ou soir ; se marie avec presque tous les autres actifs.",
+      "caution": "Très bien tolérée ; seules de très fortes doses provoquent parfois des bouffées de chaleur."
     },
     "aha": {
       "name": "AHA (glycolique / lactique)",
-      "summary": "Exfoliant, texture et teint."
+      "summary": "Exfoliant, texture et teint.",
+      "benefits": [
+        "Exfolie les cellules mortes de surface",
+        "Lisse les textures rugueuses",
+        "Unifie le teint"
+      ],
+      "howToUse": "Le soir, 1–3×/semaine ; à rincer ou à laisser selon le produit.",
+      "caution": "Augmente la sensibilité au soleil — le SPF quotidien est indispensable. À ne pas combiner aux rétinoïdes le même soir."
     },
     "bha": {
       "name": "BHA (acide salicylique)",
-      "summary": "Exfoliant, désobstrue les pores, anti-imperfections."
+      "summary": "Exfoliant, désobstrue les pores, anti-imperfections.",
+      "benefits": [
+        "Désincruste les pores",
+        "Réduit les points noirs",
+        "Apaise les peaux grasses et congestionnées"
+      ],
+      "howToUse": "Le soir ou selon indication, quelques fois par semaine ; peut être ciblé sur les zones grasses.",
+      "caution": "À introduire progressivement pour éviter la sécheresse ; fais un test si ta peau est sensible."
     },
     "benzoyl_peroxide": {
       "name": "Peroxyde de benzoyle",
-      "summary": "Antibactérien, traite l'acné inflammatoire."
+      "summary": "Antibactérien, traite l'acné inflammatoire.",
+      "benefits": [
+        "Élimine les bactéries de l'acné",
+        "Réduit les boutons inflammatoires"
+      ],
+      "howToUse": "Une fois par jour au début, en contact court ou en soin sur les zones à boutons.",
+      "caution": "Peut décolorer les tissus et assécher. À ne pas superposer au rétinol en même temps."
     },
     "vitamin_e": {
       "name": "Vitamine E",
-      "summary": "Antioxydant, souvent associé à la vitamine C."
+      "summary": "Antioxydant, souvent associé à la vitamine C.",
+      "benefits": [
+        "Protection antioxydante",
+        "Soutient l'hydratation",
+        "Aide à stabiliser la vitamine C"
+      ],
+      "howToUse": "Matin ou soir — souvent déjà intégrée aux sérums et crèmes.",
+      "caution": "Rarement irritante ; de très fortes doses peuvent gêner les peaux acnéiques."
     },
     "peptides": {
       "name": "Peptides / Peptides de cuivre",
-      "summary": "Fermeté, réparation de la barrière cutanée."
+      "summary": "Fermeté, réparation de la barrière cutanée.",
+      "benefits": [
+        "Soutiennent la fermeté",
+        "Aident la peau à paraître repulpée",
+        "Doux et faciles à superposer"
+      ],
+      "howToUse": "Matin ou soir ; compatibles avec la plupart des ingrédients.",
+      "caution": "Les effets sont progressifs — la régularité compte plus que la concentration."
     },
     "hyaluronic_acid": {
       "name": "Acide hyaluronique",
-      "summary": "Hydratation, effet repulpant."
+      "summary": "Hydratation, effet repulpant.",
+      "benefits": [
+        "Attire l'eau dans la peau",
+        "Repulpe et adoucit",
+        "Convient à tous les types de peau"
+      ],
+      "howToUse": "Matin ou soir sur peau légèrement humide, puis scelle avec une crème.",
+      "caution": "Par air très sec, scelle toujours avec une crème pour éviter qu'elle ne puise l'eau des couches profondes."
     },
     "centella": {
       "name": "Centella asiatica (Cica)",
-      "summary": "Apaisant, réparateur — un incontournable K-beauty."
+      "summary": "Apaisant, réparateur — un incontournable K-beauty.",
+      "benefits": [
+        "Apaise les irritations",
+        "Soutient la réparation de la barrière",
+        "Calme les rougeurs"
+      ],
+      "howToUse": "Matin ou soir ; idéale pour les peaux stressées ou réactives.",
+      "caution": "Généralement très douce et bien tolérée."
     },
     "spf": {
       "name": "Protection solaire (SPF)",
-      "summary": "Protection UV — la dernière étape du matin."
+      "summary": "Protection UV — la dernière étape du matin.",
+      "benefits": [
+        "Prévient les dommages UV et les taches",
+        "Ralentit le vieillissement visible",
+        "Protège la peau traitée aux actifs"
+      ],
+      "howToUse": "Chaque matin, en dernière étape ; réapplique dans la journée en extérieur.",
+      "caution": "L'étape la plus importante — avec le rétinol et les acides, le SPF quotidien n'est pas négociable."
     },
     "ceramides": {
       "name": "Céramides",
-      "summary": "Restaure la barrière cutanée."
+      "summary": "Restaure la barrière cutanée.",
+      "benefits": [
+        "Reconstruisent la barrière cutanée",
+        "Retiennent l'hydratation",
+        "Réduisent la sensibilité avec le temps"
+      ],
+      "howToUse": "Matin ou soir, souvent dans les crèmes ; à appliquer sur des sérums hydratants.",
+      "caution": "Très bien tolérés — idéaux pour les peaux sèches ou fragilisées."
     }
+  },
+  "ingredientDetail": {
+    "backTo": "Tous les actifs",
+    "overview": "Aperçu",
+    "benefits": "Ce que ça fait",
+    "howToUse": "Comment l'utiliser",
+    "typicalStrength": "Concentration typique",
+    "bestTime": "Moment idéal",
+    "timeAm": "Matin",
+    "timePm": "Soir",
+    "timeBoth": "Matin ou soir",
+    "goodToKnow": "Bon à savoir",
+    "photosensitizing": "Augmente la sensibilité au soleil — SPF quotidien",
+    "pregnancyCaution": "Souvent déconseillé pendant la grossesse ou l'allaitement — demande l'avis d'un professionnel",
+    "foundIn": "Dans le catalogue",
+    "pairingNotes": "Associations",
+    "noProducts": "Aucun produit du catalogue n'est encore associé à cet actif.",
+    "notFound": "Nous n'avons pas de page pour cet ingrédient.",
+    "disclaimer": "Information cosmétique générale, pas un avis médical ni un plan de traitement. Les concentrations varient et ne se déduisent pas de l'ordre des ingrédients — pour tout ce qui est douloureux, persistant ou qui s'aggrave, consulte un professionnel."
   },
   "exposure": {
     "title": "Exposition aux actifs",

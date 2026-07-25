@@ -130,6 +130,16 @@ export function findProductBySlug(slug: string) {
     .catch(() => FALLBACK_PRODUCTS.find((product) => product.slug === slug) ?? null);
 }
 
+/** A few catalog products that contain a given tracked active — for the ingredient page. */
+export function listProductsByIngredient(ingredientId: string, limit = 8) {
+  return db.product
+    .findMany({ where: { ingredientIds: { has: ingredientId } }, orderBy: { name: "asc" }, take: limit })
+    .then((products) => products.filter((product) => !shouldExcludeProduct(product)).map(cleanDbProduct))
+    .catch(() =>
+      FALLBACK_PRODUCTS.filter((product) => product.ingredientIds.includes(ingredientId)).slice(0, limit)
+    );
+}
+
 /** Exact lookup by EAN/UPC barcode. Returns null when unknown or DB unavailable. */
 export function findProductByBarcode(barcode: string) {
   return db.product

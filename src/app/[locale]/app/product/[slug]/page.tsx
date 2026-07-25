@@ -103,7 +103,11 @@ export default async function ProductDetailPage({
           <h2 className="font-serif text-lg">{t("trackedActives")}</h2>
           <div className="flex flex-wrap gap-1.5">
             {trackedActives.map((id) => (
-              <Badge key={id}>{tIngredients(`${id}.name`)}</Badge>
+              <Link key={id} href={`/app/ingredient/${id}`}>
+                <Badge className="cursor-pointer transition-opacity hover:opacity-80">
+                  {tIngredients(`${id}.name`)}
+                </Badge>
+              </Link>
             ))}
           </div>
         </Card>

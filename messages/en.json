@@ -778,52 +778,154 @@
   "ingredients": {
     "retinol": {
       "name": "Retinol / Retinoids",
-      "summary": "Cell renewal, anti-aging, acne."
+      "summary": "Cell renewal, anti-aging, acne.",
+      "benefits": [
+        "Speeds cell turnover",
+        "Softens fine lines",
+        "Helps clear and prevent breakouts"
+      ],
+      "howToUse": "Evening only, 2–3×/week to start, then build up as tolerated; always follow with SPF the next morning.",
+      "caution": "Can cause dryness and peeling while skin adjusts. Avoid pairing with AHA/BHA or benzoyl peroxide the same night."
     },
     "vitamin_c": {
       "name": "Vitamin C (L-AA)",
-      "summary": "Antioxidant, glow, anti-pollution protection."
+      "summary": "Antioxidant, glow, anti-pollution protection.",
+      "benefits": [
+        "Brightens a dull tone",
+        "Fades dark spots over time",
+        "Antioxidant defence against pollution"
+      ],
+      "howToUse": "Morning, on clean skin, before moisturizer and SPF.",
+      "caution": "Can sting on very sensitive or broken skin — introduce slowly."
     },
     "niacinamide": {
       "name": "Niacinamide",
-      "summary": "Regulates sebum, soothes, strengthens the barrier."
+      "summary": "Regulates sebum, soothes, strengthens the barrier.",
+      "benefits": [
+        "Calms redness",
+        "Helps regulate oil",
+        "Supports the skin barrier"
+      ],
+      "howToUse": "Morning or evening; pairs well with almost every other active.",
+      "caution": "Very well tolerated; only very high amounts occasionally cause flushing."
     },
     "aha": {
       "name": "AHA (glycolic / lactic)",
-      "summary": "Exfoliant, texture and tone."
+      "summary": "Exfoliant, texture and tone.",
+      "benefits": [
+        "Exfoliates dull surface cells",
+        "Smooths rough texture",
+        "Evens tone"
+      ],
+      "howToUse": "Evening, 1–3×/week; rinse-off or leave-on depending on the product.",
+      "caution": "Increases sun sensitivity — daily SPF is essential. Don't combine with retinoids the same night."
     },
     "bha": {
       "name": "BHA (salicylic acid)",
-      "summary": "Exfoliant, unclogs pores, anti-blemish."
+      "summary": "Exfoliant, unclogs pores, anti-blemish.",
+      "benefits": [
+        "Unclogs pores",
+        "Reduces blackheads",
+        "Calms oily, congested skin"
+      ],
+      "howToUse": "Evening or as directed, a few times a week; can be targeted on oily zones.",
+      "caution": "Introduce slowly to avoid dryness; patch-test if your skin is sensitive."
     },
     "benzoyl_peroxide": {
       "name": "Benzoyl peroxide",
-      "summary": "Antibacterial, treats inflammatory acne."
+      "summary": "Antibacterial, treats inflammatory acne.",
+      "benefits": [
+        "Kills acne-causing bacteria",
+        "Reduces inflamed breakouts"
+      ],
+      "howToUse": "Once daily to start, as a short-contact or leave-on treatment on breakout-prone areas.",
+      "caution": "Can bleach fabrics and cause dryness. Avoid layering with retinol at the same time."
     },
     "vitamin_e": {
       "name": "Vitamin E",
-      "summary": "Antioxidant, often paired with vitamin C."
+      "summary": "Antioxidant, often paired with vitamin C.",
+      "benefits": [
+        "Antioxidant protection",
+        "Supports moisture",
+        "Helps stabilise vitamin C"
+      ],
+      "howToUse": "Morning or evening — usually already blended into serums and creams.",
+      "caution": "Rarely irritating; very high amounts can bother acne-prone skin."
     },
     "peptides": {
       "name": "Peptides / Copper peptides",
-      "summary": "Firmness, barrier repair."
+      "summary": "Firmness, barrier repair.",
+      "benefits": [
+        "Support firmness",
+        "Signal skin to look plumper",
+        "Gentle and layer-friendly"
+      ],
+      "howToUse": "Morning or evening; play well with most other ingredients.",
+      "caution": "Effects are gradual — consistency matters more than strength."
     },
     "hyaluronic_acid": {
       "name": "Hyaluronic acid",
-      "summary": "Hydration, plumping."
+      "summary": "Hydration, plumping.",
+      "benefits": [
+        "Draws water into the skin",
+        "Plumps and softens",
+        "Suits every skin type"
+      ],
+      "howToUse": "Morning or evening on slightly damp skin, then seal with a moisturizer.",
+      "caution": "In very dry air, always lock it in with a cream so it doesn't pull moisture from deeper skin."
     },
     "centella": {
       "name": "Centella asiatica (Cica)",
-      "summary": "Soothing, repairing — a K-beauty staple."
+      "summary": "Soothing, repairing — a K-beauty staple.",
+      "benefits": [
+        "Soothes irritation",
+        "Supports barrier recovery",
+        "Calms redness"
+      ],
+      "howToUse": "Morning or evening; ideal for stressed or reactive skin.",
+      "caution": "Generally very gentle and well tolerated."
     },
     "spf": {
       "name": "Sunscreen (SPF)",
-      "summary": "UV protection — the final morning step."
+      "summary": "UV protection — the final morning step.",
+      "benefits": [
+        "Prevents UV damage and dark spots",
+        "Slows visible ageing",
+        "Protects skin treated with actives"
+      ],
+      "howToUse": "Every morning as the last step; reapply through the day when outdoors.",
+      "caution": "The single most important step — actives like retinol and acids make daily SPF non-negotiable."
     },
     "ceramides": {
       "name": "Ceramides",
-      "summary": "Restores the skin barrier."
+      "summary": "Restores the skin barrier.",
+      "benefits": [
+        "Rebuild the skin barrier",
+        "Lock in moisture",
+        "Reduce sensitivity over time"
+      ],
+      "howToUse": "Morning or evening, usually in moisturizers; layer over hydrating serums.",
+      "caution": "Very well tolerated — ideal for dry or compromised skin."
     }
+  },
+  "ingredientDetail": {
+    "backTo": "All actives",
+    "overview": "Overview",
+    "benefits": "What it does",
+    "howToUse": "How to use",
+    "typicalStrength": "Typical strength",
+    "bestTime": "Best time",
+    "timeAm": "Morning",
+    "timePm": "Evening",
+    "timeBoth": "Morning or evening",
+    "goodToKnow": "Good to know",
+    "photosensitizing": "Increases sun sensitivity — wear SPF daily",
+    "pregnancyCaution": "Often advised to pause in pregnancy or breastfeeding — check with a professional",
+    "foundIn": "In the catalog",
+    "pairingNotes": "Pairing notes",
+    "noProducts": "No catalog products tagged with this active yet.",
+    "notFound": "We don't have a page for this ingredient.",
+    "disclaimer": "General cosmetic information, not medical advice or a treatment plan. Product concentrations vary and aren't inferred from ingredient order — for anything painful, persistent or worsening, see a professional."
   },
   "exposure": {
     "title": "Active ingredient exposure",
