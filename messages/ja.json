@@ -909,6 +909,8 @@
     }
   },
   "ingredientDetail": {
+    "indexTitle": "成分ガイド",
+    "indexSubtitle": "Haruが扱う注目のアクティブ — はたらきと使い方。",
     "backTo": "すべてのアクティブ",
     "overview": "概要",
     "benefits": "はたらき",

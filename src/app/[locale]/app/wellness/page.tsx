@@ -42,6 +42,9 @@ const copy: Record<Lang, {
   guides: string;
   guidesText: string;
   openGuides: string;
+  encyclo: string;
+  encycloText: string;
+  openEncyclo: string;
 }> = {
   en: {
     title: "Wellness",
@@ -77,6 +80,9 @@ const copy: Record<Lang, {
     guides: "Routine guides",
     guidesText: "General starting points by goal — glass skin, acne-prone, brightening, sensitive skin and more.",
     openGuides: "Browse guides",
+    encyclo: "Ingredient guide",
+    encycloText: "What each tracked active does, how to use it, and what to know before you start.",
+    openEncyclo: "Browse ingredients",
   },
   ko: {
     title: "웰니스",
@@ -105,6 +111,9 @@ const copy: Record<Lang, {
     guides: "루틴 가이드",
     guidesText: "목표별 시작점 — 글래스 스킨, 트러블 피부, 브라이트닝, 민감 피부 등.",
     openGuides: "가이드 보기",
+    encyclo: "성분 가이드",
+    encycloText: "추적 액티브가 하는 일, 사용법, 시작 전에 알아둘 점.",
+    openEncyclo: "성분 보기",
   },
   ja: {
     title: "ウェルネス",
@@ -133,6 +142,9 @@ const copy: Record<Lang, {
     guides: "ルーティンガイド",
     guidesText: "目的別の出発点 — ガラス肌、ニキビ肌、ブライトニング、敏感肌など。",
     openGuides: "ガイドを見る",
+    encyclo: "成分ガイド",
+    encycloText: "各アクティブのはたらき、使い方、始める前に知っておくこと。",
+    openEncyclo: "成分を見る",
   },
   fr: {
     title: "Wellness",
@@ -161,6 +173,9 @@ const copy: Record<Lang, {
     guides: "Guides de routine",
     guidesText: "Des points de départ par objectif — glass skin, imperfections, éclat, peaux sensibles et plus.",
     openGuides: "Voir les guides",
+    encyclo: "Guide des ingrédients",
+    encycloText: "Ce que fait chaque actif suivi, comment l'utiliser et ce qu'il faut savoir avant.",
+    openEncyclo: "Voir les ingrédients",
   },
 };
 
@@ -297,6 +312,22 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         <Button asChild className="self-start">
           <Link href="/app/routines">
             {t.openGuides}
+            <ArrowRight className="size-4" />
+          </Link>
+        </Button>
+      </Card>
+
+      <Card className="rounded-[2rem] bg-card/90">
+        <div className="flex items-start gap-3">
+          <Brain className="mt-1 size-5 shrink-0 text-primary" />
+          <div className="flex-1">
+            <h2 className="font-serif text-2xl">{t.encyclo}</h2>
+            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.encycloText}</p>
+          </div>
+        </div>
+        <Button asChild className="self-start">
+          <Link href="/app/ingredients">
+            {t.openEncyclo}
             <ArrowRight className="size-4" />
           </Link>
         </Button>

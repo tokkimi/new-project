@@ -909,6 +909,8 @@
     }
   },
   "ingredientDetail": {
+    "indexTitle": "Ingredient guide",
+    "indexSubtitle": "The tracked actives Haru reasons about — what they do and how to use them.",
     "backTo": "All actives",
     "overview": "Overview",
     "benefits": "What it does",

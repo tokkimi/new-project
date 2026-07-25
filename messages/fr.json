@@ -909,6 +909,8 @@
     }
   },
   "ingredientDetail": {
+    "indexTitle": "Guide des ingrédients",
+    "indexSubtitle": "Les actifs suivis par Haru — ce qu'ils font et comment les utiliser.",
     "backTo": "Tous les actifs",
     "overview": "Aperçu",
     "benefits": "Ce que ça fait",

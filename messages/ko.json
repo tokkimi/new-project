@@ -909,6 +909,8 @@
     }
   },
   "ingredientDetail": {
+    "indexTitle": "성분 가이드",
+    "indexSubtitle": "Haru가 다루는 추적 액티브 — 무엇을 하고 어떻게 쓰는지.",
     "backTo": "모든 액티브",
     "overview": "개요",
     "benefits": "어떤 역할을 하나요",
