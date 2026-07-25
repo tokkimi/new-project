@@ -27,8 +27,8 @@ export function Hero() {
     <section className="relative overflow-hidden bg-grain">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-32 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-am/20 blur-3xl" />
-        <div className="absolute left-0 top-96 h-72 w-72 rounded-full bg-pm/15 blur-3xl" />
+        <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute left-0 top-96 h-72 w-72 rounded-full bg-secondary/40 blur-3xl" />
       </div>
 
       <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-20 pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-32 lg:pt-28">
@@ -52,7 +52,7 @@ export function Hero() {
           >
             {t("titleLine1")}
             <br />
-            <span className="text-primary">{t("titleLine2")}</span>
+            {t("titleLine2")}
           </motion.h1>
 
           <motion.p

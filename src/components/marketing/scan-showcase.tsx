@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, Camera, Droplets, ListChecks, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const CHECK_ICONS = [Camera, ListChecks, Droplets, Sparkles];
@@ -32,9 +31,6 @@ export function ScanShowcase() {
           transition={{ duration: 0.45 }}
           className="max-w-xl"
         >
-          <Badge variant="secondary" className="mb-4">
-            {t("eyebrow")}
-          </Badge>
           <h2 className="text-balance font-serif text-3xl md:text-4xl">{t("title")}</h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">{t("subtitle")}</p>
 

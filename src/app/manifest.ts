@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Haru analyzes your skincare products, flags ingredient conflicts, and builds your ideal AM/PM routine.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fbf7f2",
-    theme_color: "#e8583f",
+    background_color: "#f8f5f1",
+    theme_color: "#6a4a35",
     orientation: "portrait-primary",
     icons: [
       { src: "/icon.png", sizes: "512x512", type: "image/png", purpose: "any" },

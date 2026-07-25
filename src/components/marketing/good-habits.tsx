@@ -32,22 +32,19 @@ export function GoodHabits() {
       // legibly) in both light and dark mode.
       style={
         {
-          "--background": "#fbf7f2",
-          "--foreground": "#221c17",
-          "--muted-foreground": "#78705f",
-          "--border": "#e7ded2",
-          "--primary": "#e8583f",
+          "--background": "#f8f5f1",
+          "--foreground": "#2a201a",
+          "--muted-foreground": "#8a7868",
+          "--border": "#e6ddd2",
+          "--primary": "#6a4a35",
         } as React.CSSProperties
       }
-      className="overflow-hidden border-y border-border/60 bg-[#f8f5ef] py-16 sm:py-20"
+      className="overflow-hidden border-y border-border/60 bg-[#f4efe8] py-16 sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <div className="grid gap-8 lg:grid-cols-[0.78fr_1fr] lg:items-end">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-              {t("eyebrow")}
-            </p>
-            <h2 className="mt-3 text-balance font-serif text-4xl leading-tight text-foreground md:text-5xl">
+            <h2 className="text-balance font-serif text-4xl leading-tight text-foreground md:text-5xl">
               {t("title")}
             </h2>
           </div>

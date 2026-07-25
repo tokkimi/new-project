@@ -72,8 +72,7 @@ export function BeautyNews({ items }: { items: NewsItem[] }) {
   return (
     <section className="mx-auto max-w-6xl px-6 py-24">
       <div className="mx-auto mb-8 max-w-xl text-center">
-        <p className="text-sm font-medium text-primary">{t("eyebrow")}</p>
-        <h2 className="mt-2 text-balance font-serif text-3xl md:text-4xl">{t("title")}</h2>
+        <h2 className="text-balance font-serif text-3xl md:text-4xl">{t("title")}</h2>
         <p className="mt-3 text-muted-foreground">{t("subtitle")}</p>
         <p className="mt-2 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
           <Newspaper className="size-3.5" />
