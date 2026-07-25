@@ -47,9 +47,20 @@ function fallbackProducts(filter?: (product: (typeof PRODUCTS)[number]) => boole
 }
 
 async function getHomeProducts() {
+  // Prefer products that actually carry a real (official) product photo so the
+  // home strips are full of genuine imagery, not category swatches.
+  const withImage = { imageUrl: { startsWith: "http" } };
   const [latest, madeInKorea] = await Promise.all([
-    db.product.findMany({ orderBy: { createdAt: "desc" }, take: 10 }).catch(() => []),
-    db.product.findMany({ where: { origin: "South Korea" }, take: 10 }).catch(() => []),
+    db.product
+      .findMany({ where: withImage, orderBy: { createdAt: "desc" }, take: 12 })
+      .catch(() => []),
+    db.product
+      .findMany({
+        where: { origin: "South Korea", ...withImage },
+        orderBy: { featured: "desc" },
+        take: 12,
+      })
+      .catch(() => []),
   ]);
 
   return {

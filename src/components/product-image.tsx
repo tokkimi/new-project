@@ -1,3 +1,6 @@
+"use client";
+
+import * as React from "react";
 import { ProductVisual } from "@/components/product-visual";
 import { cn } from "@/lib/utils";
 
@@ -29,16 +32,18 @@ export function ProductImage({
   className?: string;
 }) {
   const sizeClass = SIZE_CLASS[size];
+  const [failed, setFailed] = React.useState(false);
 
-  if (!imageUrl) {
+  const wrapper = cn(
+    "flex shrink-0 items-center justify-center overflow-hidden bg-white p-3 ring-1 ring-border/70",
+    sizeClass,
+    className
+  );
+
+  // No usable image (missing, or the real one failed to load) → branded swatch.
+  if (!imageUrl || failed) {
     return (
-      <div
-        className={cn(
-          "flex shrink-0 items-center justify-center overflow-hidden bg-white p-3 ring-1 ring-border/70",
-          sizeClass,
-          className
-        )}
-      >
+      <div className={wrapper}>
         <ProductVisual
           category={category}
           size={FALLBACK_SIZE[size]}
@@ -49,19 +54,14 @@ export function ProductImage({
   }
 
   return (
-    <div
-      className={cn(
-        "flex shrink-0 items-center justify-center overflow-hidden bg-white p-3 ring-1 ring-border/70",
-        sizeClass,
-        className
-      )}
-    >
+    <div className={wrapper}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={imageUrl}
         alt={name}
         className="h-full w-full object-contain"
         loading="lazy"
+        onError={() => setFailed(true)}
       />
     </div>
   );
