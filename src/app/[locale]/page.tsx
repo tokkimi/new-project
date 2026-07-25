@@ -29,6 +29,7 @@ function fallbackProducts(filter?: (product: (typeof PRODUCTS)[number]) => boole
       category: product.category,
       ingredientIds: product.ingredientIds,
       fullIngredients: product.fullIngredients,
+      barcode: null,
       origin: product.origin,
       description: product.description,
       usageSteps: product.usageSteps,

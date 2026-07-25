@@ -13,6 +13,7 @@ import {
   AlertTriangle,
   SearchX,
   WandSparkles,
+  Barcode,
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
@@ -30,7 +31,32 @@ type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error";
 type ScanResult =
   | { kind: "matched"; product: Product }
   | { kind: "unmatched"; brand: string | null; productName: string | null; detectedIngredientIds: string[] }
+  | { kind: "barcodeUnknown"; barcode: string }
   | { kind: "illegible" };
+
+type BarcodeDetectorLike = {
+  detect: (source: ImageBitmapSource) => Promise<{ rawValue: string }[]>;
+};
+
+/**
+ * Best-effort local barcode read using the browser BarcodeDetector API
+ * (Chromium/Android). Returns null when unsupported or nothing is found — the
+ * scan then relies on the label photo / typed query as before.
+ */
+async function detectBarcode(file: File): Promise<string | null> {
+  try {
+    const Ctor = (globalThis as unknown as {
+      BarcodeDetector?: new (opts?: { formats?: string[] }) => BarcodeDetectorLike;
+    }).BarcodeDetector;
+    if (!Ctor) return null;
+    const detector = new Ctor({ formats: ["ean_13", "ean_8", "upc_a", "upc_e"] });
+    const bitmap = await createImageBitmap(file);
+    const codes = await detector.detect(bitmap);
+    return codes[0]?.rawValue ?? null;
+  } catch {
+    return null;
+  }
+}
 
 function ShelfConflictNote({
   ruleIds,
@@ -107,10 +133,11 @@ export default function ScanPage() {
 
     try {
       const dataUrl = file ? await fileToDataUrl(file) : null;
+      const barcode = file ? await detectBarcode(file) : null;
       const res = await fetch("/api/scan/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image: dataUrl, query }),
+        body: JSON.stringify({ image: dataUrl, query, barcode }),
       });
 
       if (!res.ok) {
@@ -121,6 +148,8 @@ export default function ScanPage() {
       const data = await res.json();
       if (data.matched) {
         setResult({ kind: "matched", product: data.matched });
+      } else if (data.barcodeUnknown && data.read?.barcode) {
+        setResult({ kind: "barcodeUnknown", barcode: data.read.barcode });
       } else if (!data.read?.legible && data.detectedIngredientIds.length === 0) {
         setResult({ kind: "illegible" });
       } else {
@@ -391,6 +420,30 @@ export default function ScanPage() {
                   ocrDisclaimer
                 />
               )}
+              <Button variant="outline" onClick={reset} className="mt-1">
+                <RotateCcw className="size-4" />
+                {t("scanAnother")}
+              </Button>
+            </Card>
+          </motion.div>
+        )}
+
+        {phase === "result" && result?.kind === "barcodeUnknown" && (
+          <motion.div
+            key="result-barcode"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="w-full"
+          >
+            <Card className="w-full items-center gap-4 py-10">
+              <span className="flex size-14 items-center justify-center rounded-full bg-am/20 text-am-foreground">
+                <Barcode className="size-6" />
+              </span>
+              <div>
+                <p className="font-serif text-xl">{t("barcodeReadTitle")}</p>
+                <p className="mt-1 font-mono text-sm text-foreground">{result.barcode}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{t("barcodeUnknownText")}</p>
+              </div>
               <Button variant="outline" onClick={reset} className="mt-1">
                 <RotateCcw className="size-4" />
                 {t("scanAnother")}

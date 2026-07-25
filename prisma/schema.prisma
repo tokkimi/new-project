@@ -152,6 +152,7 @@ model Product {
   category        String
   ingredientIds   String[]
   fullIngredients String? // raw INCI list
+  barcode         String? // EAN/UPC, when known — enables exact barcode-scan lookup
   origin          String? // country of origin / brand HQ
   description     String?
   usageSteps      String[]
@@ -179,6 +180,7 @@ model Product {
   @@index([category])
   @@index([brandId])
   @@index([origin])
+  @@index([barcode])
   @@index([ingredientIds], type: Gin)
   @@index([skinTypes], type: Gin)
   @@index([concerns], type: Gin)

@@ -484,6 +484,8 @@
     "unmatchedText": "Nous avons lu l'étiquette mais ce produit n'est pas encore suivi par Haru. Voici ce que nous avons pu détecter :",
     "illegibleTitle": "Impossible de lire cette étiquette",
     "illegibleText": "Réessayez avec la liste des ingrédients bien nette, en remplissant davantage le cadre.",
+    "barcodeReadTitle": "Code-barres lu",
+    "barcodeUnknownText": "Nous avons lu ce code-barres mais ce produit n'est pas encore dans le catalogue. Essaie plutôt de photographier l'étiquette avant, ou cherche par nom.",
     "shelfConflictTitle": "Attention avec ton étagère",
     "shelfConflictOk": "Aucun conflit avec ton étagère actuelle.",
     "ocrDisclaimer": "La lecture d'étiquette peut mal interpréter les petits caractères — vérifie sur le flacon avant de changer ta routine."

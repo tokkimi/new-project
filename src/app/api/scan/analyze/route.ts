@@ -3,7 +3,13 @@ import { rateLimit, clientKey } from "@/lib/rate-limit";
 import { isVisionConfigured, getVisionClient, parseDataUrl } from "@/lib/vision";
 import { PRODUCT_CATEGORIES } from "@/lib/categories";
 import { INGREDIENTS } from "@/data/ingredients";
-import { listProducts } from "@/lib/products";
+import { listProducts, findProductByBarcode } from "@/lib/products";
+
+/** EAN-8/13 and UPC-A/E are 8–13 digits. Keep only digits, validate length. */
+function normalizeBarcode(raw: string): string | null {
+  const digits = raw.replace(/\D/g, "");
+  return digits.length >= 8 && digits.length <= 14 ? digits : null;
+}
 
 const TOOL = {
   name: "report_label_read",
@@ -72,13 +78,58 @@ export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
   const image = typeof body?.image === "string" ? body.image : null;
   const query = typeof body?.query === "string" ? body.query.trim() : "";
-  if (!image && !query) {
+  // A barcode can arrive either decoded client-side (body.barcode) or typed
+  // straight into the search box as an all-digits query.
+  const barcode =
+    normalizeBarcode(typeof body?.barcode === "string" ? body.barcode : "") ??
+    normalizeBarcode(query);
+  // If the query itself was just the barcode digits, don't also treat it as a
+  // product-name search term.
+  const textQuery = barcode && normalizeBarcode(query) === barcode ? "" : query;
+  if (!image && !textQuery && !barcode) {
     return NextResponse.json({ error: "invalid_input" }, { status: 400 });
   }
 
   const catalog = await listProducts();
-  if (query) {
-    const candidateWords = normalizeWords(query);
+
+  // Exact barcode lookup first — the strongest signal when we have it.
+  if (barcode) {
+    const product = await findProductByBarcode(barcode);
+    if (product) {
+      return NextResponse.json({
+        matched: product,
+        read: {
+          legible: true,
+          brand: product.brand,
+          productName: product.name,
+          category: product.category,
+          ingredientsText: product.fullIngredients,
+          barcode,
+        },
+        detectedIngredientIds: product.ingredientIds,
+      });
+    }
+    // Barcode read but not in the catalog yet: if there's no other signal to
+    // fall back on, say so honestly rather than returning a bare "illegible".
+    if (!textQuery && !image) {
+      return NextResponse.json({
+        matched: null,
+        read: {
+          legible: false,
+          brand: null,
+          productName: null,
+          category: null,
+          ingredientsText: null,
+          barcode,
+        },
+        detectedIngredientIds: [],
+        barcodeUnknown: true,
+      });
+    }
+  }
+
+  if (textQuery) {
+    const candidateWords = normalizeWords(textQuery);
     let best: { product: (typeof catalog)[number]; score: number } | null = null;
     for (const product of catalog) {
       const targetWords = normalizeWords(`${product.brand} ${product.name} ${product.slug}`);
@@ -101,7 +152,7 @@ export async function POST(request: Request) {
   }
 
   if (!image || !isVisionConfigured()) {
-    return NextResponse.json(emptyScanResult(query));
+    return NextResponse.json(emptyScanResult(textQuery));
   }
 
   const parsed = parseDataUrl(image);

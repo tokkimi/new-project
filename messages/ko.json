@@ -484,6 +484,8 @@
     "unmatchedText": "라벨은 읽었지만 아직 저희가 추적하는 제품 목록에는 없어요. 라벨에서 감지된 성분이에요:",
     "illegibleTitle": "라벨을 읽지 못했어요",
     "illegibleText": "전성분 리스트에 초점을 맞추고 화면에 더 크게 담아 다시 시도해주세요.",
+    "barcodeReadTitle": "바코드 인식됨",
+    "barcodeUnknownText": "바코드는 읽었지만 이 제품은 아직 카탈로그에 없어요. 대신 앞면 라벨을 촬영하거나 이름으로 검색해 보세요.",
     "shelfConflictTitle": "화장대와 함께 주의할 점",
     "shelfConflictOk": "현재 화장대와 충돌하는 성분이 없어요.",
     "ocrDisclaimer": "라벨 판독은 작은 글씨를 잘못 읽을 수 있어요 — 루틴을 바꾸기 전에 실제 용기를 다시 확인하세요."

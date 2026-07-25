@@ -17,6 +17,7 @@ function toFallbackProduct(product: (typeof PRODUCTS)[number]): Product {
     category: product.category,
     ingredientIds: product.ingredientIds,
     fullIngredients: product.fullIngredients,
+    barcode: null,
     origin: product.origin,
     description: product.description,
     usageSteps: product.usageSteps,
@@ -127,6 +128,14 @@ export function findProductBySlug(slug: string) {
     .findUnique({ where: { slug } })
     .then((product) => (product && !shouldExcludeProduct(product) ? cleanDbProduct(product) : null))
     .catch(() => FALLBACK_PRODUCTS.find((product) => product.slug === slug) ?? null);
+}
+
+/** Exact lookup by EAN/UPC barcode. Returns null when unknown or DB unavailable. */
+export function findProductByBarcode(barcode: string) {
+  return db.product
+    .findFirst({ where: { barcode } })
+    .then((product) => (product && !shouldExcludeProduct(product) ? cleanDbProduct(product) : null))
+    .catch(() => null);
 }
 
 export function findProductsByIds(ids: string[]) {
