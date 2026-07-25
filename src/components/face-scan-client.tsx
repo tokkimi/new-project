@@ -85,57 +85,6 @@ const MODULE_ZONE: Record<ModuleId, { x: number; y: number }> = {
   acne: { x: 50, y: 85 },
 };
 
-const MODULE_AREA: Record<ModuleId, Array<{ x: number; y: number; w: number; h: number; rotate?: number }>> = {
-  oiliness: [
-    { x: 43, y: 20, w: 14, h: 22 },
-    { x: 42, y: 42, w: 16, h: 28 },
-  ],
-  wrinkles: [
-    { x: 31, y: 22, w: 38, h: 10 },
-    { x: 24, y: 42, w: 17, h: 10, rotate: -10 },
-    { x: 59, y: 42, w: 17, h: 10, rotate: 10 },
-  ],
-  darkCircles: [
-    { x: 28, y: 43, w: 17, h: 10, rotate: -7 },
-    { x: 55, y: 43, w: 17, h: 10, rotate: 7 },
-  ],
-  pores: [
-    { x: 39, y: 48, w: 22, h: 18 },
-    { x: 29, y: 53, w: 16, h: 16 },
-    { x: 55, y: 53, w: 16, h: 16 },
-  ],
-  blackheads: [{ x: 42, y: 50, w: 16, h: 15 }],
-  redness: [
-    { x: 24, y: 53, w: 22, h: 24, rotate: -8 },
-    { x: 54, y: 53, w: 22, h: 24, rotate: 8 },
-  ],
-  sensitivity: [
-    { x: 22, y: 52, w: 24, h: 30, rotate: -8 },
-    { x: 54, y: 52, w: 24, h: 30, rotate: 8 },
-  ],
-  spots: [
-    { x: 25, y: 46, w: 20, h: 28, rotate: -8 },
-    { x: 55, y: 46, w: 20, h: 28, rotate: 8 },
-  ],
-  radiance: [{ x: 27, y: 26, w: 46, h: 52 }],
-  texture: [
-    { x: 25, y: 45, w: 22, h: 28, rotate: -8 },
-    { x: 53, y: 45, w: 22, h: 28, rotate: 8 },
-  ],
-  dryness: [
-    { x: 24, y: 62, w: 20, h: 24, rotate: -8 },
-    { x: 56, y: 62, w: 20, h: 24, rotate: 8 },
-  ],
-  acneScars: [
-    { x: 28, y: 58, w: 18, h: 24, rotate: -8 },
-    { x: 54, y: 58, w: 18, h: 24, rotate: 8 },
-  ],
-  acne: [
-    { x: 38, y: 68, w: 24, h: 18 },
-    { x: 29, y: 56, w: 16, h: 18, rotate: -8 },
-    { x: 55, y: 56, w: 16, h: 18, rotate: 8 },
-  ],
-};
 
 type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error" | "noFace" | "noCredits" | "lowQuality";
 
@@ -680,8 +629,15 @@ export function FaceScanClient() {
                             </span>
                           </>
                         ) : (
-                          <div className="flex size-full items-center justify-center p-3">
-                            <SkinConcernMap module={module} />
+                          <div className="flex size-full items-center justify-center">
+                            {(() => {
+                              const Icon = MODULE_ICON[module.id];
+                              return (
+                                <span className="flex size-12 items-center justify-center rounded-full bg-background/70 text-primary shadow-sm">
+                                  <Icon className="size-5" />
+                                </span>
+                              );
+                            })()}
                           </div>
                         )}
                       </div>
@@ -786,73 +742,6 @@ function FaceGuideLines({ compact = false }: { compact?: boolean }) {
         <circle cx="110" cy="272" r="1.8" />
       </g>
     </svg>
-  );
-}
-
-function SkinConcernMap({ module }: { module: ModuleFinding }) {
-  const Icon = MODULE_ICON[module.id];
-  const areas = MODULE_AREA[module.id];
-  const dotCount = module.severity === "low" ? 2 : module.severity === "medium" ? 8 : 16;
-  const dots = React.useMemo(
-    () =>
-      Array.from({ length: dotCount }, (_, index) => {
-        const area = areas[index % areas.length];
-        const xOffset = ((index * 17) % 10) - 5;
-        const yOffset = ((index * 23) % 10) - 5;
-        return {
-          x: area.x + area.w / 2 + xOffset,
-          y: area.y + area.h / 2 + yOffset,
-        };
-      }),
-    [areas, dotCount]
-  );
-
-  return (
-    <div className="relative aspect-[3/4] w-full max-w-[170px]">
-      <div className="absolute inset-x-[16%] inset-y-[4%] overflow-hidden rounded-[48%_48%_44%_44%/38%_38%_56%_56%] border border-foreground/10 bg-gradient-to-b from-background via-background/90 to-primary/5">
-        <div className="absolute left-1/2 top-[37%] h-[10%] w-[42%] -translate-x-1/2 rounded-full border-t border-foreground/10" />
-        <div className="absolute left-[34%] top-[36%] size-[10%] rounded-full border border-foreground/10" />
-        <div className="absolute right-[34%] top-[36%] size-[10%] rounded-full border border-foreground/10" />
-        <div className="absolute left-1/2 top-[45%] h-[16%] w-[12%] -translate-x-1/2 rounded-full border-x border-foreground/10" />
-        <div className="absolute left-1/2 top-[65%] h-[5%] w-[24%] -translate-x-1/2 rounded-full border-b border-foreground/10" />
-
-        {areas.map((area, index) => (
-          <span
-            key={`${module.id}-area-${index}`}
-            className={cn(
-              "absolute rounded-full border backdrop-blur-sm",
-              module.severity === "attention" && "border-destructive/35 bg-destructive/18",
-              module.severity === "medium" && "border-am/35 bg-am/18",
-              module.severity === "low" && "border-success/25 bg-success/10"
-            )}
-            style={{
-              left: `${area.x}%`,
-              top: `${area.y}%`,
-              width: `${area.w}%`,
-              height: `${area.h}%`,
-              transform: area.rotate ? `rotate(${area.rotate}deg)` : undefined,
-            }}
-          />
-        ))}
-
-        {dots.map((dot, index) => (
-          <span
-            key={`${module.id}-dot-${index}`}
-            className={cn(
-              "absolute size-1 -translate-x-1/2 -translate-y-1/2 rounded-full",
-              module.severity === "attention" && "bg-destructive/80",
-              module.severity === "medium" && "bg-am/80",
-              module.severity === "low" && "bg-success/55"
-            )}
-            style={{ left: `${dot.x}%`, top: `${dot.y}%` }}
-          />
-        ))}
-      </div>
-
-      <span className="absolute left-1/2 top-1/2 flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-background/80 text-primary shadow-sm backdrop-blur">
-        <Icon className="size-4" />
-      </span>
-    </div>
   );
 }
 
