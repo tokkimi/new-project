@@ -991,6 +991,30 @@
         "goal": "Des soins doux en attendant bébé",
         "intro": "Met l'accent sur des ingrédients souvent jugés compatibles avec la grossesse — vitamine C, niacinamide, centella, hydratation et SPF — et laisse de côté rétinoïdes et acide salicylique.",
         "keepInMind": "Ce sont des informations générales, pas un feu vert médical. Confirme toujours chaque produit avec ton médecin ou ta sage-femme pendant la grossesse ou l'allaitement."
+      },
+      "men": {
+        "title": "Essentiel homme",
+        "goal": "Efficace, sans prise de tête",
+        "intro": "Une routine courte et efficace — nettoyage doux, centella apaisante (pratique après le rasage), niacinamide et SPF quotidien.",
+        "keepInMind": "Le rasage fragilise la barrière ; garde des actifs doux et laisse la peau irritée récupérer avant d'ajouter quoi que ce soit de fort."
+      },
+      "teen": {
+        "title": "Peau ado",
+        "goal": "Soin doux pour une peau qui change et fait des boutons",
+        "intro": "Reste simple : nettoyage doux, un BHA léger deux soirs par semaine, niacinamide pour apaiser, hydratant et SPF.",
+        "keepInMind": "Ne décape pas la peau — une barrière décapée aggrave les boutons. Consulte un dermatologue pour une acné douloureuse ou persistante plutôt que d'empiler les actifs."
+      },
+      "winter": {
+        "title": "Barrière hiver",
+        "goal": "Confort dans le froid et l'air sec",
+        "intro": "On mise sur l'hydratation et la barrière — humectants, céramides et une huile visage optionnelle pour sceller, avec un nettoyage doux.",
+        "keepInMind": "En air sec intérieur, scelle toujours les humectants avec une crème ou une huile. Allège les actifs forts si la peau tiraille ou pèle."
+      },
+      "summer": {
+        "title": "Léger été",
+        "goal": "Textures légères, défense solaire forte",
+        "intro": "Vitamine C antioxydante le matin, niacinamide pour l'équilibre du sébum, une émulsion légère et un SPF rigoureux.",
+        "keepInMind": "Réapplique la protection solaire dans la journée. Les antioxydants soutiennent la protection mais ne remplacent jamais le SPF."
       }
     }
   },

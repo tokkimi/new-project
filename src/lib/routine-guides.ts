@@ -95,6 +95,51 @@ export const ROUTINE_GUIDES: RoutineGuide[] = [
     ],
   },
   {
+    slug: "men",
+    actives: ["niacinamide", "centella", "spf"],
+    steps: [
+      { slot: "both", category: "cleanser", freq: "daily" },
+      { slot: "both", category: "essence", activeId: "centella", freq: "daily" },
+      { slot: "both", category: "serum", activeId: "niacinamide", freq: "daily" },
+      { slot: "both", category: "moisturizer", freq: "daily" },
+      { slot: "am", category: "sunscreen", activeId: "spf", freq: "daily" },
+    ],
+  },
+  {
+    slug: "teen",
+    actives: ["bha", "niacinamide", "spf"],
+    steps: [
+      { slot: "both", category: "cleanser", freq: "daily" },
+      { slot: "pm", category: "serum", activeId: "bha", freq: "twiceWeek" },
+      { slot: "both", category: "serum", activeId: "niacinamide", freq: "daily" },
+      { slot: "both", category: "moisturizer", freq: "daily" },
+      { slot: "am", category: "sunscreen", activeId: "spf", freq: "daily" },
+    ],
+  },
+  {
+    slug: "winter",
+    actives: ["hyaluronic_acid", "ceramides"],
+    steps: [
+      { slot: "both", category: "cleanser", freq: "daily" },
+      { slot: "both", category: "toner", freq: "daily" },
+      { slot: "both", category: "serum", activeId: "hyaluronic_acid", freq: "daily" },
+      { slot: "both", category: "moisturizer", activeId: "ceramides", freq: "daily" },
+      { slot: "pm", category: "oil", freq: "asNeeded" },
+      { slot: "am", category: "sunscreen", activeId: "spf", freq: "daily" },
+    ],
+  },
+  {
+    slug: "summer",
+    actives: ["vitamin_c", "niacinamide", "spf"],
+    steps: [
+      { slot: "both", category: "cleanser", freq: "daily" },
+      { slot: "am", category: "serum", activeId: "vitamin_c", freq: "daily" },
+      { slot: "both", category: "serum", activeId: "niacinamide", freq: "daily" },
+      { slot: "both", category: "emulsion", freq: "daily" },
+      { slot: "am", category: "sunscreen", activeId: "spf", freq: "daily" },
+    ],
+  },
+  {
     slug: "pregnancy-safe",
     actives: ["vitamin_c", "niacinamide", "centella"],
     steps: [

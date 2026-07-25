@@ -991,6 +991,30 @@
         "goal": "Gentle care while expecting",
         "intro": "Focuses on ingredients commonly considered pregnancy-friendly — vitamin C, niacinamide, centella, hydration and SPF — and leaves out retinoids and salicylic acid.",
         "keepInMind": "This is general information, not medical clearance. Always confirm any product with your doctor or midwife while pregnant or breastfeeding."
+      },
+      "men": {
+        "title": "Men's essentials",
+        "goal": "Low-fuss, effective care",
+        "intro": "A short, effective routine — gentle cleanse, soothing centella (handy post-shave), niacinamide and daily SPF.",
+        "keepInMind": "Shaving stresses the barrier; keep actives gentle and let irritated skin recover before adding anything strong."
+      },
+      "teen": {
+        "title": "Teen skin",
+        "goal": "Gentle care for changing, breakout-prone skin",
+        "intro": "Keep it simple: gentle cleanse, a light BHA a couple of nights a week, niacinamide to calm, moisturiser and SPF.",
+        "keepInMind": "Don't over-strip — a stripped barrier makes breakouts worse. See a dermatologist for painful or persistent acne rather than stacking more actives."
+      },
+      "winter": {
+        "title": "Winter barrier",
+        "goal": "Comfort in cold, dry air",
+        "intro": "Shift toward hydration and barrier support — humectants, ceramides and an optional facial oil to seal, with cleansing kept gentle.",
+        "keepInMind": "In dry indoor air, always seal humectants with a cream or oil. Ease off strong actives if skin feels tight or flaky."
+      },
+      "summer": {
+        "title": "Summer lightweight",
+        "goal": "Light textures, strong sun defence",
+        "intro": "Antioxidant vitamin C in the morning, niacinamide for oil balance, a light emulsion, and diligent SPF.",
+        "keepInMind": "Reapply sunscreen through the day. Antioxidants support protection but never replace SPF."
       }
     }
   },
