@@ -67,6 +67,24 @@ const MODULE_ICON: Record<ModuleId, React.ComponentType<{ className?: string }>>
   radiance: Sparkles,
 };
 
+// Precise point (in % of the captured photo) marking each module's zone — the
+// marker is drawn directly on the user's own photo.
+const MODULE_ZONE: Record<ModuleId, { x: number; y: number }> = {
+  oiliness: { x: 50, y: 25 },
+  wrinkles: { x: 78, y: 49 },
+  darkCircles: { x: 36, y: 53 },
+  pores: { x: 50, y: 61 },
+  blackheads: { x: 50, y: 65 },
+  redness: { x: 24, y: 61 },
+  sensitivity: { x: 76, y: 64 },
+  spots: { x: 32, y: 57 },
+  radiance: { x: 50, y: 50 },
+  texture: { x: 27, y: 66 },
+  dryness: { x: 73, y: 66 },
+  acneScars: { x: 68, y: 72 },
+  acne: { x: 50, y: 85 },
+};
+
 const MODULE_AREA: Record<ModuleId, Array<{ x: number; y: number; w: number; h: number; rotate?: number }>> = {
   oiliness: [
     { x: 43, y: 20, w: 14, h: 22 },
@@ -626,8 +644,46 @@ export function FaceScanClient() {
                         </span>
                       </div>
 
-                      <div className="mt-3 flex min-h-0 flex-1 items-center justify-center rounded-[1.35rem] bg-secondary/45 p-3">
-                        <SkinConcernMap module={module} />
+                      <div className="relative mt-3 min-h-0 flex-1 overflow-hidden rounded-[1.35rem] bg-secondary/45">
+                        {preview ? (
+                          <>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={preview}
+                              alt=""
+                              className="absolute inset-0 size-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+                            <span
+                              className="absolute size-2.5 -translate-x-1/2 -translate-y-1/2"
+                              style={{
+                                left: `${MODULE_ZONE[module.id].x}%`,
+                                top: `${MODULE_ZONE[module.id].y}%`,
+                              }}
+                            >
+                              <span
+                                className={cn(
+                                  "absolute inset-0 animate-ping rounded-full",
+                                  module.severity === "attention" && "bg-destructive/60",
+                                  module.severity === "medium" && "bg-am/60",
+                                  module.severity === "low" && "bg-success/60"
+                                )}
+                              />
+                              <span
+                                className={cn(
+                                  "absolute inset-0 rounded-full border border-white/90",
+                                  module.severity === "attention" && "bg-destructive",
+                                  module.severity === "medium" && "bg-am",
+                                  module.severity === "low" && "bg-success"
+                                )}
+                              />
+                            </span>
+                          </>
+                        ) : (
+                          <div className="flex size-full items-center justify-center p-3">
+                            <SkinConcernMap module={module} />
+                          </div>
+                        )}
                       </div>
 
                       <div className="mt-3">
