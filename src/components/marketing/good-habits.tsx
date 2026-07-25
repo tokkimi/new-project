@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Droplet, Moon, ShieldAlert, Sparkles, Sun } from "lucide-react";
@@ -23,7 +24,23 @@ export function GoodHabits() {
   const routines = t.raw("routines") as RoutineItem[];
 
   return (
-    <section id="good-habits" className="overflow-hidden border-y border-border/60 bg-[#f8f5ef] py-16 sm:py-20">
+    <section
+      id="good-habits"
+      // This is a light "cream band" by design. The page theme is class-based,
+      // so in dark mode text-foreground/muted flip to light and vanish on the
+      // cream. Pin the light palette here so the band reads identically (and
+      // legibly) in both light and dark mode.
+      style={
+        {
+          "--background": "#fbf7f2",
+          "--foreground": "#221c17",
+          "--muted-foreground": "#78705f",
+          "--border": "#e7ded2",
+          "--primary": "#e8583f",
+        } as React.CSSProperties
+      }
+      className="overflow-hidden border-y border-border/60 bg-[#f8f5ef] py-16 sm:py-20"
+    >
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <div className="grid gap-8 lg:grid-cols-[0.78fr_1fr] lg:items-end">
           <div>
@@ -49,7 +66,7 @@ export function GoodHabits() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.3, delay: index * 0.04 }}
-                className="rounded-full border border-white/70 bg-white/45 px-4 py-3 shadow-[0_18px_50px_-42px_rgba(35,28,20,0.55)] backdrop-blur-xl"
+                className="min-w-0 rounded-full border border-white/70 bg-white/45 px-4 py-3 shadow-[0_18px_50px_-42px_rgba(35,28,20,0.55)] backdrop-blur-xl"
               >
                 <div className="flex items-center gap-3">
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-background/80 text-primary">
