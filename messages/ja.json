@@ -514,6 +514,15 @@
     "price": "価格",
     "howToUse": "使い方",
     "fullIngredients": "全成分リスト（INCI）",
+    "generalFormula": "一般的な成分表",
+    "formulaSource": "出典",
+    "formulaCountryNote": "成分は国によって異なることがあります（UVフィルター、防腐剤など）。同じ製品名でも常に同じ処方とは限りません。上に市場別の成分表がない場合、これは一般的なINCIです — 実際のボトルを必ず確認してください。",
+    "markets": {
+      "KR": "韓国処方",
+      "EU": "ヨーロッパ処方",
+      "US": "米国処方",
+      "JP": "日本処方"
+    },
     "trackedActives": "追跡中の有効成分",
     "officialSite": "公式サイト",
     "suitedFor": "適した肌タイプ",

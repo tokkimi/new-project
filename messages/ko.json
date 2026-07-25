@@ -514,6 +514,15 @@
     "price": "가격",
     "howToUse": "사용 방법",
     "fullIngredients": "전성분 리스트 (INCI)",
+    "generalFormula": "일반 성분표",
+    "formulaSource": "출처",
+    "formulaCountryNote": "성분 구성은 국가별로 다를 수 있어요(예: 자외선 차단 성분, 방부제). 같은 제품명이라도 항상 같은 성분은 아니에요. 위에 시장별 성분표가 없다면 이것은 일반 INCI예요 — 실제 용기를 꼭 확인하세요.",
+    "markets": {
+      "KR": "한국 성분표",
+      "EU": "유럽 성분표",
+      "US": "미국 성분표",
+      "JP": "일본 성분표"
+    },
     "trackedActives": "Haru가 추적하는 활성 성분",
     "officialSite": "공식 사이트",
     "suitedFor": "추천 피부 타입",

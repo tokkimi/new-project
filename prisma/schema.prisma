@@ -174,6 +174,7 @@ model Product {
   userPrefs UserProductPreference[]
   reactions ProductReaction[]
   protocols RoutineProtocol[]
+  marketFormulas ProductMarketFormula[]
 
   @@index([category])
   @@index([brandId])
@@ -288,6 +289,26 @@ model ProductSource {
 
   @@index([productId])
   @@map("product_sources")
+}
+
+/// A market-specific formulation of a product. The same product name can ship
+/// a different INCI list per country (e.g. sunscreen UV filters allowed in the
+/// EU/KR but not the US, different preservative limits). This table is only
+/// ever populated with a verified per-market INCI list traceable to a source —
+/// never inferred. When empty for a product, the app shows the general INCI.
+model ProductMarketFormula {
+  id         String   @id @default(cuid())
+  productId  String
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  market     String // ISO-ish market code: "KR", "EU", "US", "JP"
+  inciText   String // the market-specific INCI list, verbatim from the label/source
+  sourceName String?
+  sourceUrl  String?
+  fetchedAt  DateTime @default(now())
+
+  @@unique([productId, market])
+  @@index([productId])
+  @@map("product_market_formulas")
 }
 
 model ShelfItem {

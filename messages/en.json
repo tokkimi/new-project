@@ -514,6 +514,15 @@
     "price": "Price",
     "howToUse": "How to use",
     "fullIngredients": "Full ingredient list (INCI)",
+    "generalFormula": "General formula",
+    "formulaSource": "Source",
+    "formulaCountryNote": "Formulas can differ by country (e.g. UV filters, preservatives), so the same product name isn't always the same formula. Unless a market-specific list is shown above, this is the general INCI — always check your own bottle.",
+    "markets": {
+      "KR": "Korea formula",
+      "EU": "Europe formula",
+      "US": "US formula",
+      "JP": "Japan formula"
+    },
     "trackedActives": "Actives we track",
     "officialSite": "Official site",
     "suitedFor": "Suited for",

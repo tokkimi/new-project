@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ProductActions } from "@/components/product-actions";
 import { ProductImage } from "@/components/product-image";
 import { findProductBySlug } from "@/lib/products";
+import { findMarketFormulas } from "@/lib/product-formulas";
 import { findIngredient } from "@/data/ingredients";
 import {
   localizedFullIngredients,
@@ -38,6 +39,7 @@ export default async function ProductDetailPage({
   const description = localizedProductDescription(product, locale);
   const usageSteps = localizedUsageSteps(product, locale);
   const fullIngredients = localizedFullIngredients(product, locale);
+  const marketFormulas = await findMarketFormulas(product.id);
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-6">
@@ -153,10 +155,45 @@ export default async function ProductDetailPage({
       )}
 
       {fullIngredients && (
-        <Card className="gap-2">
+        <Card className="gap-3">
           <h2 className="font-serif text-lg">{t("fullIngredients")}</h2>
-          <p className="text-xs leading-relaxed text-muted-foreground">
-            {fullIngredients}
+          {marketFormulas.length > 0 ? (
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              <span className="font-medium text-foreground">{t("generalFormula")}</span>{" "}
+              — {fullIngredients}
+            </p>
+          ) : (
+            <p className="text-xs leading-relaxed text-muted-foreground">{fullIngredients}</p>
+          )}
+
+          {marketFormulas.map((f) => (
+            <div key={f.market} className="rounded-xl bg-muted/40 p-3">
+              <p className="mb-1 text-xs font-medium text-foreground">
+                {t(`markets.${f.market}`)}
+              </p>
+              <p className="text-xs leading-relaxed text-muted-foreground">{f.inciText}</p>
+              {f.sourceName && (
+                <p className="mt-1 text-[11px] text-muted-foreground/70">
+                  {t("formulaSource")}:{" "}
+                  {f.sourceUrl ? (
+                    <a
+                      href={f.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="text-primary hover:underline"
+                    >
+                      {f.sourceName}
+                    </a>
+                  ) : (
+                    f.sourceName
+                  )}
+                </p>
+              )}
+            </div>
+          ))}
+
+          <p className="text-[11px] leading-relaxed text-muted-foreground/70">
+            {t("formulaCountryNote")}
           </p>
         </Card>
       )}
