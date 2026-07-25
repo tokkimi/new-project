@@ -73,7 +73,7 @@ export function GoodHabits() {
             </span>
           </div>
 
-          <div className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:-mx-6 sm:px-6">
+          <div className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:-mx-6 sm:px-6 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:px-0">
             {routines.map((routine, index) => (
               <motion.article
                 key={routine.type}
@@ -81,7 +81,7 @@ export function GoodHabits() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.32, delay: (index % 4) * 0.04 }}
-                className={`min-h-[330px] w-[82%] max-w-[360px] shrink-0 snap-center rounded-[28px] border border-white/70 bg-gradient-to-br ${ROUTINE_TONE[index % ROUTINE_TONE.length]} p-5 shadow-[0_28px_80px_-58px_rgba(36,30,24,0.7)] backdrop-blur-xl sm:w-[360px]`}
+                className={`min-h-[330px] w-[82%] max-w-[360px] shrink-0 snap-center rounded-[28px] border border-white/70 bg-gradient-to-br ${ROUTINE_TONE[index % ROUTINE_TONE.length]} p-5 shadow-[0_28px_80px_-58px_rgba(36,30,24,0.7)] backdrop-blur-xl sm:w-[360px] lg:w-auto lg:max-w-none`}
               >
                 <div className="flex h-full flex-col">
                   <div className="flex items-start justify-between gap-4">
