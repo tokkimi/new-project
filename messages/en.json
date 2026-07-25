@@ -927,6 +927,71 @@
     "notFound": "We don't have a page for this ingredient.",
     "disclaimer": "General cosmetic information, not medical advice or a treatment plan. Product concentrations vary and aren't inferred from ingredient order — for anything painful, persistent or worsening, see a professional."
   },
+  "routineGuides": {
+    "indexTitle": "Routine guides",
+    "indexSubtitle": "General starting points by goal — then build your own from your shelf.",
+    "slotAm": "Morning",
+    "slotPm": "Evening",
+    "stepFor": "Featured",
+    "backTo": "All guides",
+    "freq": {
+      "daily": "Daily",
+      "everyOther": "Every other day",
+      "twiceWeek": "2–3× a week",
+      "asNeeded": "As needed / spot"
+    },
+    "goalLabel": "Goal",
+    "introLabel": "The idea",
+    "keepInMind": "Keep in mind",
+    "buildCta": "Build a routine from your own shelf",
+    "buildCtaSub": "This is a general guide. Haru can sequence your actual products and flag conflicts.",
+    "disclaimer": "A general template, not personalised or medical advice. Start any strong active slowly, patch-test, and see a professional for anything painful, persistent or worsening.",
+    "notFound": "We don't have this guide.",
+    "guides": {
+      "glass-skin": {
+        "title": "Glass skin",
+        "goal": "Dewy, even, hydrated glow",
+        "intro": "Layered hydration and a barrier-friendly finish — light textures, no harsh actives fighting each other.",
+        "keepInMind": "Glow comes from consistent hydration and daily SPF, not from stacking more actives."
+      },
+      "acne-prone": {
+        "title": "Acne-prone",
+        "goal": "Fewer breakouts, clearer pores",
+        "intro": "Gentle cleansing, a pore-clearing BHA a few nights a week, niacinamide to calm, and spot treatment only where needed.",
+        "keepInMind": "Don't use BHA and benzoyl peroxide plus retinol all at once — introduce one active at a time and give skin recovery nights."
+      },
+      "anti-aging": {
+        "title": "Firmness & fine lines",
+        "goal": "Smoother texture, more bounce",
+        "intro": "Antioxidant vitamin C in the morning, a retinoid a few evenings a week, peptides and rich moisture to support.",
+        "keepInMind": "Retinoids need slow build-up and non-negotiable daytime SPF. Results are measured in months, not days."
+      },
+      "brightening": {
+        "title": "Brightening & dark spots",
+        "goal": "More even tone over time",
+        "intro": "Vitamin C and niacinamide daily, a gentle AHA a couple of nights a week to renew the surface.",
+        "keepInMind": "Sun exposure undoes brightening faster than any serum builds it — daily SPF is the real active here."
+      },
+      "sensitive-barrier": {
+        "title": "Sensitive & barrier repair",
+        "goal": "Calmer, less reactive skin",
+        "intro": "Strip it back: gentle cleanse, soothing centella, humectants and ceramides to rebuild — no acids or retinoids while it settles.",
+        "keepInMind": "Fewer steps, fewer actives. Reintroduce anything strong only once skin feels calm and comfortable."
+      },
+      "minimalist": {
+        "title": "Three-step minimalist",
+        "goal": "The essentials, nothing extra",
+        "intro": "Cleanse, moisturise, protect. The smallest routine that still covers what actually matters.",
+        "keepInMind": "A simple routine you do every day beats an elaborate one you skip."
+      },
+      "pregnancy-safe": {
+        "title": "Pregnancy-conscious",
+        "goal": "Gentle care while expecting",
+        "intro": "Focuses on ingredients commonly considered pregnancy-friendly — vitamin C, niacinamide, centella, hydration and SPF — and leaves out retinoids and salicylic acid.",
+        "keepInMind": "This is general information, not medical clearance. Always confirm any product with your doctor or midwife while pregnant or breastfeeding."
+      }
+    }
+  },
   "exposure": {
     "title": "Active ingredient exposure",
     "subtitle": "An overview of the actives your shelf repeats or stacks.",

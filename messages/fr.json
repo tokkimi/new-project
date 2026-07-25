@@ -927,6 +927,71 @@
     "notFound": "Nous n'avons pas de page pour cet ingrédient.",
     "disclaimer": "Information cosmétique générale, pas un avis médical ni un plan de traitement. Les concentrations varient et ne se déduisent pas de l'ordre des ingrédients — pour tout ce qui est douloureux, persistant ou qui s'aggrave, consulte un professionnel."
   },
+  "routineGuides": {
+    "indexTitle": "Guides de routine",
+    "indexSubtitle": "Des points de départ par objectif — puis construis la tienne depuis ton étagère.",
+    "slotAm": "Matin",
+    "slotPm": "Soir",
+    "stepFor": "En vedette",
+    "backTo": "Tous les guides",
+    "freq": {
+      "daily": "Quotidien",
+      "everyOther": "Un jour sur deux",
+      "twiceWeek": "2–3× par semaine",
+      "asNeeded": "Au besoin / localisé"
+    },
+    "goalLabel": "Objectif",
+    "introLabel": "L'idée",
+    "keepInMind": "À garder en tête",
+    "buildCta": "Construire une routine depuis ton étagère",
+    "buildCtaSub": "Ceci est un guide général. Haru peut séquencer tes vrais produits et repérer les conflits.",
+    "disclaimer": "Un modèle général, ni personnalisé ni médical. Introduis tout actif puissant progressivement, fais un test, et consulte un professionnel pour tout ce qui est douloureux, persistant ou qui s'aggrave.",
+    "notFound": "Nous n'avons pas ce guide.",
+    "guides": {
+      "glass-skin": {
+        "title": "Glass skin",
+        "goal": "Éclat rosé, uniforme, hydraté",
+        "intro": "Hydratation en couches et une finition respectueuse de la barrière — textures légères, sans actifs qui se contrarient.",
+        "keepInMind": "L'éclat vient d'une hydratation régulière et du SPF quotidien, pas d'un empilement d'actifs."
+      },
+      "acne-prone": {
+        "title": "Peaux à imperfections",
+        "goal": "Moins de boutons, pores plus nets",
+        "intro": "Nettoyage doux, un BHA désincrustant quelques soirs par semaine, la niacinamide pour apaiser, et un soin ciblé seulement si besoin.",
+        "keepInMind": "N'associe pas BHA, peroxyde de benzoyle et rétinol en même temps — un actif à la fois, avec des soirs de récupération."
+      },
+      "anti-aging": {
+        "title": "Fermeté & ridules",
+        "goal": "Grain lissé, plus de rebond",
+        "intro": "Vitamine C antioxydante le matin, un rétinoïde quelques soirs par semaine, peptides et confort riche pour soutenir.",
+        "keepInMind": "Le rétinoïde demande une montée progressive et un SPF non négociable. Les résultats se comptent en mois, pas en jours."
+      },
+      "brightening": {
+        "title": "Éclat & taches",
+        "goal": "Un teint plus uniforme avec le temps",
+        "intro": "Vitamine C et niacinamide au quotidien, un AHA doux quelques soirs par semaine pour renouveler la surface.",
+        "keepInMind": "Le soleil défait l'éclat plus vite qu'un sérum ne le construit — le vrai actif ici, c'est le SPF quotidien."
+      },
+      "sensitive-barrier": {
+        "title": "Peaux sensibles & barrière",
+        "goal": "Une peau plus calme, moins réactive",
+        "intro": "On épure : nettoyage doux, centella apaisante, humectants et céramides pour reconstruire — ni acides ni rétinoïdes le temps que ça s'apaise.",
+        "keepInMind": "Moins d'étapes, moins d'actifs. Ne réintroduis un actif fort qu'une fois la peau calme et confortable."
+      },
+      "minimalist": {
+        "title": "Minimaliste trois étapes",
+        "goal": "L'essentiel, rien de plus",
+        "intro": "Nettoyer, hydrater, protéger. La plus petite routine qui couvre l'essentiel.",
+        "keepInMind": "Une routine simple faite chaque jour vaut mieux qu'une routine complexe qu'on saute."
+      },
+      "pregnancy-safe": {
+        "title": "Grossesse — prudence",
+        "goal": "Des soins doux en attendant bébé",
+        "intro": "Met l'accent sur des ingrédients souvent jugés compatibles avec la grossesse — vitamine C, niacinamide, centella, hydratation et SPF — et laisse de côté rétinoïdes et acide salicylique.",
+        "keepInMind": "Ce sont des informations générales, pas un feu vert médical. Confirme toujours chaque produit avec ton médecin ou ta sage-femme pendant la grossesse ou l'allaitement."
+      }
+    }
+  },
   "exposure": {
     "title": "Exposition aux actifs",
     "subtitle": "Une vue d'ensemble des actifs que ton étagère répète ou cumule.",

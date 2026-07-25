@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, CloudRain, Moon, ShieldCheck, Waves, Wind } from "lucide-react";
+import { ArrowRight, Brain, CloudRain, Moon, ShieldCheck, Sparkles, Waves, Wind } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -39,6 +39,9 @@ const copy: Record<Lang, {
   faceCare: string;
   faceCareText: string;
   openFaceCare: string;
+  guides: string;
+  guidesText: string;
+  openGuides: string;
 }> = {
   en: {
     title: "Wellness",
@@ -71,6 +74,9 @@ const copy: Record<Lang, {
     faceCare: "Face care library",
     faceCareText: "Gentle massage, face yoga, jaw release and scalp tension routines.",
     openFaceCare: "Open face care",
+    guides: "Routine guides",
+    guidesText: "General starting points by goal — glass skin, acne-prone, brightening, sensitive skin and more.",
+    openGuides: "Browse guides",
   },
   ko: {
     title: "웰니스",
@@ -96,6 +102,9 @@ const copy: Record<Lang, {
     faceCare: "페이스 케어 라이브러리",
     faceCareText: "부드러운 마사지, 페이스 요가, 턱 이완, 두피 긴장 완화 루틴.",
     openFaceCare: "페이스 케어 열기",
+    guides: "루틴 가이드",
+    guidesText: "목표별 시작점 — 글래스 스킨, 트러블 피부, 브라이트닝, 민감 피부 등.",
+    openGuides: "가이드 보기",
   },
   ja: {
     title: "ウェルネス",
@@ -121,6 +130,9 @@ const copy: Record<Lang, {
     faceCare: "フェイスケアライブラリ",
     faceCareText: "やさしいマッサージ、フェイスヨガ、顎のリリース、頭皮の緊張ケア。",
     openFaceCare: "フェイスケアを開く",
+    guides: "ルーティンガイド",
+    guidesText: "目的別の出発点 — ガラス肌、ニキビ肌、ブライトニング、敏感肌など。",
+    openGuides: "ガイドを見る",
   },
   fr: {
     title: "Wellness",
@@ -146,6 +158,9 @@ const copy: Record<Lang, {
     faceCare: "Bibliotheque face care",
     faceCareText: "Massage doux, face yoga, relachement de la machoire et routines de tension du cuir chevelu.",
     openFaceCare: "Ouvrir face care",
+    guides: "Guides de routine",
+    guidesText: "Des points de départ par objectif — glass skin, imperfections, éclat, peaux sensibles et plus.",
+    openGuides: "Voir les guides",
   },
 };
 
@@ -266,6 +281,22 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         <Button asChild className="self-start">
           <Link href="/app/wellness/face-care">
             {t.openFaceCare}
+            <ArrowRight className="size-4" />
+          </Link>
+        </Button>
+      </Card>
+
+      <Card className="rounded-[2rem] bg-card/90">
+        <div className="flex items-start gap-3">
+          <Sparkles className="mt-1 size-5 shrink-0 text-primary" />
+          <div className="flex-1">
+            <h2 className="font-serif text-2xl">{t.guides}</h2>
+            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.guidesText}</p>
+          </div>
+        </div>
+        <Button asChild className="self-start">
+          <Link href="/app/routines">
+            {t.openGuides}
             <ArrowRight className="size-4" />
           </Link>
         </Button>
