@@ -8,7 +8,7 @@ import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Badge, type badgeVariants } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CONFLICT_RULES } from "@/data/ingredients";
+import { CONFLICT_RULES, findIngredient } from "@/data/ingredients";
 import { useCatalog } from "@/lib/shelf-store";
 import { severityTone } from "@/lib/routine-engine";
 import type { VariantProps } from "class-variance-authority";
@@ -20,6 +20,7 @@ export default function ConflictDetailPage() {
   const tSeverity = useTranslations("severity");
   const tConflicts = useTranslations("conflictRules");
   const tRoutine = useTranslations("routinePage");
+  const tIng = useTranslations("ingredients");
   const { catalog } = useCatalog();
 
   const rule = CONFLICT_RULES.find((r) => r.id === params.id);
@@ -56,6 +57,17 @@ export default function ConflictDetailPage() {
         <h1 className="text-balance font-serif text-3xl">
           {tConflicts(`${rule.id}.headline`)}
         </h1>
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {[rule.a, rule.b].map((ingId) =>
+            findIngredient(ingId) ? (
+              <Link key={ingId} href={`/app/ingredient/${ingId}`}>
+                <Badge variant="secondary" className="cursor-pointer transition-opacity hover:opacity-80">
+                  {tIng(`${ingId}.name`)}
+                </Badge>
+              </Link>
+            ) : null
+          )}
+        </div>
       </div>
 
       {(productA || productB) && (
