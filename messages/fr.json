@@ -18,7 +18,38 @@
     "signOut": "Se déconnecter",
     "today": "Aujourd'hui",
     "wellness": "Bien-être",
-    "progress": "Progression"
+    "progress": "Progression",
+    "guides": "Conseils"
+  },
+  "skinGoals": {
+    "eyebrow": "Conseils skincare",
+    "title": "Comprendre les tendances sans maltraiter sa peau.",
+    "subtitle": "Glass skin, barrière cutanée, éclat ou routine minimaliste : des guides publics, concrets et nuancés pour distinguer les bons gestes du marketing.",
+    "cta": "Explorer tous les conseils",
+    "imageAlt": "Portrait naturel d'une femme appliquant doucement un soin hydratant sur sa joue"
+  },
+  "todayPage": {
+    "eyebrow": "Mon espace peau",
+    "title": "Gérer ma peau, simplement.",
+    "subtitle": "Retrouvez vos outils personnels au même endroit : observation, profil, routine et progression. Les guides et tendances restent dans l'espace public.",
+    "primaryCta": "Faire un scan visage",
+    "secondaryCta": "Voir ma routine",
+    "dailyTitle": "Le point du jour",
+    "dailyText": "Trois repères simples avant d'ajouter un nouveau produit.",
+    "daily": {
+      "observe": "Observer comment la peau se sent aujourd'hui",
+      "routine": "Suivre la routine prévue sans multiplier les actifs",
+      "protect": "Terminer la matinée avec une protection solaire"
+    },
+    "manageEyebrow": "Outils personnels",
+    "manageTitle": "Gérer ma peau",
+    "manageText": "Chaque outil répond à un besoin précis, sans mélanger suivi personnel et conseils éditoriaux.",
+    "tools": {
+      "scan": { "title": "Scan visage", "text": "Observer les zones visibles et suivre leur évolution dans le temps." },
+      "profile": { "title": "Profil de peau", "text": "Renseigner vos sensibilités, préoccupations et habitudes." },
+      "routine": { "title": "Ma routine", "text": "Organiser les produits du matin et du soir dans le bon ordre." },
+      "progress": { "title": "Progression", "text": "Comparer vos bilans et comprendre ce qui a réellement changé." }
+    }
   },
   "hero": {
     "badge": "Inspiré des routines K-beauty",
@@ -93,6 +124,7 @@
   },
   "footer": {
     "tagline": "Haru décode les ingrédients de votre routine skincare pour éviter les mauvaises combinaisons — et l'argent gaspillé.",
+    "guides": "Conseils",
     "app": "L'application",
     "ingredients": "Ingrédients",
     "rights": "Haru. Fait avec soin, sans blabla marketing.",

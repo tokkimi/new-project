@@ -15,6 +15,9 @@ export function SiteFooter() {
           <p className="max-w-sm text-sm text-muted-foreground">{t("tagline")}</p>
         </div>
         <div className="flex gap-8 text-sm text-muted-foreground">
+          <Link href="/guides" className="hover:text-foreground">
+            {t("guides")}
+          </Link>
           <Link href="/app/shelf" className="hover:text-foreground">
             {t("app")}
           </Link>

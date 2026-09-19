@@ -17,6 +17,14 @@ export function SiteHeader() {
         <Link href="/" className="shrink-0">
           <Logo />
         </Link>
+        <nav className="hidden items-center gap-5 text-sm font-medium text-muted-foreground md:flex">
+          <Link href="/guides" className="transition-colors hover:text-foreground">
+            {t("guides")}
+          </Link>
+          <Link href="/app/products" className="transition-colors hover:text-foreground">
+            {t("products")}
+          </Link>
+        </nav>
         <div className="flex items-center gap-3">
           <LocaleSwitcher compact className="sm:hidden" />
           <LocaleSwitcher className="hidden sm:inline-flex" />

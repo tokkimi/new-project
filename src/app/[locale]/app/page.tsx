@@ -6,5 +6,5 @@ export default async function AppIndexPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  redirect({ href: "/app/shelf", locale });
+  redirect({ href: "/app/today", locale });
 }

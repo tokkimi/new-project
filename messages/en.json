@@ -18,7 +18,38 @@
     "signOut": "Sign out",
     "today": "Today",
     "wellness": "Wellness",
-    "progress": "Progress"
+    "progress": "Progress",
+    "guides": "Advice"
+  },
+  "skinGoals": {
+    "eyebrow": "Skincare advice",
+    "title": "Understand the trends without punishing your skin.",
+    "subtitle": "Glass skin, barrier care, brightening or a minimalist routine: public, practical and nuanced guides that separate useful habits from marketing.",
+    "cta": "Explore all advice",
+    "imageAlt": "Natural close portrait of a woman gently applying hydrating skincare to her cheek"
+  },
+  "todayPage": {
+    "eyebrow": "My skin space",
+    "title": "Manage my skin, simply.",
+    "subtitle": "Keep your personal tools in one place: observation, profile, routine and progress. Guides and trends stay in the public space.",
+    "primaryCta": "Start a face scan",
+    "secondaryCta": "View my routine",
+    "dailyTitle": "Today's check-in",
+    "dailyText": "Three simple anchors before adding another product.",
+    "daily": {
+      "observe": "Notice how your skin feels today",
+      "routine": "Follow the planned routine without stacking actives",
+      "protect": "Finish the morning with sunscreen"
+    },
+    "manageEyebrow": "Personal tools",
+    "manageTitle": "Manage my skin",
+    "manageText": "Each tool has one clear role, keeping personal tracking separate from editorial advice.",
+    "tools": {
+      "scan": { "title": "Face scan", "text": "Review visible areas and follow changes over time." },
+      "profile": { "title": "Skin profile", "text": "Record sensitivities, concerns and daily habits." },
+      "routine": { "title": "My routine", "text": "Arrange morning and evening products in the right order." },
+      "progress": { "title": "Progress", "text": "Compare check-ins and understand what actually changed." }
+    }
   },
   "hero": {
     "badge": "Inspired by K-beauty routines",
@@ -93,6 +124,7 @@
   },
   "footer": {
     "tagline": "Haru decodes your skincare routine's ingredients so you can avoid bad combinations — and wasted money.",
+    "guides": "Advice",
     "app": "The app",
     "ingredients": "Ingredients",
     "rights": "Haru. Made with care, no marketing fluff.",

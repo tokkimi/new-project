@@ -10,6 +10,7 @@ import { ProductShowcase } from "@/components/marketing/product-showcase";
 import { BeautyNews } from "@/components/marketing/beauty-news";
 import { GoodHabits } from "@/components/marketing/good-habits";
 import { FinalCta } from "@/components/marketing/final-cta";
+import { SkinGoalsShowcase } from "@/components/marketing/skin-goals-showcase";
 import { db } from "@/lib/db";
 import { getRecentNews } from "@/lib/news-queries";
 import { getSeoMetadata } from "@/lib/seo";
@@ -96,6 +97,7 @@ export default async function Home({
       <SiteHeader />
       <main className="flex-1">
         <Hero />
+        <SkinGoalsShowcase />
         <ScanShowcase />
         <AuditShowcase />
         <WellnessShowcase />

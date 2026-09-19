@@ -4,6 +4,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { HeaderAuthStatus } from "@/components/header-auth-status";
 import { Button } from "@/components/ui/button";
+import { AppNav } from "@/components/app-nav";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -13,6 +14,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <Link href="/">
             <Logo className="h-10 w-auto sm:h-14" />
           </Link>
+          <AppNav className="hidden lg:flex" />
           <div className="flex min-w-0 items-center gap-1.5 sm:gap-3">
             <LocaleSwitcher compact className="sm:hidden" />
             <LocaleSwitcher className="hidden sm:inline-flex" />
