@@ -8,7 +8,7 @@
     "features": "Bonnes habitudes",
     "ingredients": "Ingrédients",
     "tryApp": "Ouvrir l'app",
-    "shelf": "Ma étagère",
+    "shelf": "Routine",
     "scan": "Scanner",
     "products": "Produits",
     "routine": "Routine",
@@ -18,38 +18,7 @@
     "signOut": "Se déconnecter",
     "today": "Aujourd'hui",
     "wellness": "Bien-être",
-    "progress": "Progression",
-    "guides": "Conseils"
-  },
-  "skinGoals": {
-    "eyebrow": "Conseils skincare",
-    "title": "Comprendre les tendances sans maltraiter sa peau.",
-    "subtitle": "Glass skin, barrière cutanée, éclat ou routine minimaliste : des guides publics, concrets et nuancés pour distinguer les bons gestes du marketing.",
-    "cta": "Explorer tous les conseils",
-    "imageAlt": "Portrait naturel d'une femme appliquant doucement un soin hydratant sur sa joue"
-  },
-  "todayPage": {
-    "eyebrow": "Mon espace peau",
-    "title": "Gérer ma peau, simplement.",
-    "subtitle": "Retrouvez vos outils personnels au même endroit : observation, profil, routine et progression. Les guides et tendances restent dans l'espace public.",
-    "primaryCta": "Faire un scan visage",
-    "secondaryCta": "Voir ma routine",
-    "dailyTitle": "Le point du jour",
-    "dailyText": "Trois repères simples avant d'ajouter un nouveau produit.",
-    "daily": {
-      "observe": "Observer comment la peau se sent aujourd'hui",
-      "routine": "Suivre la routine prévue sans multiplier les actifs",
-      "protect": "Terminer la matinée avec une protection solaire"
-    },
-    "manageEyebrow": "Outils personnels",
-    "manageTitle": "Gérer ma peau",
-    "manageText": "Chaque outil répond à un besoin précis, sans mélanger suivi personnel et conseils éditoriaux.",
-    "tools": {
-      "scan": { "title": "Scan visage", "text": "Observer les zones visibles et suivre leur évolution dans le temps." },
-      "profile": { "title": "Profil de peau", "text": "Renseigner vos sensibilités, préoccupations et habitudes." },
-      "routine": { "title": "Ma routine", "text": "Organiser les produits du matin et du soir dans le bon ordre." },
-      "progress": { "title": "Progression", "text": "Comparer vos bilans et comprendre ce qui a réellement changé." }
-    }
+    "progress": "Progression"
   },
   "hero": {
     "badge": "Inspiré des routines K-beauty",
@@ -57,7 +26,7 @@
     "titleLine2": "enfin décodée.",
     "subtitle": "Gardez vos produits, routines, notes et inspirations beauté au même endroit. Haru vous aide à comprendre quoi utiliser, quand l'utiliser, et comment rester simple.",
     "ctaPrimary": "Construire ma routine",
-    "disclaimer": "Gratuit jusqu'à 12 produits sur votre étagère · sans carte bancaire",
+    "disclaimer": "Gratuit jusqu'à 12 produits dans votre routine · sans carte bancaire",
     "matchBadgeTitle": "Correspondance parfaite",
     "matchBadgeSubtitle": "pour votre profil de peau"
   },
@@ -73,7 +42,7 @@
   },
   "featureShowcase": {
     "eyebrow": "En pratique",
-    "title": "Ce que Haru voit dans une vraie étagère",
+    "title": "Ce que Haru voit dans une vraie routine",
     "subtitle": "Exemple avec 8 produits populaires — ceux que vous possédez probablement déjà.",
     "eveningRoutine": "Routine du soir",
     "alertsDetected": "{count, plural, one {# alerte détectée} other {# alertes détectées}}",
@@ -119,36 +88,42 @@
   },
   "finalCta": {
     "title": "Arrêtez de deviner ce qui va avec quoi.",
-    "subtitle": "Ajoutez votre étagère, on s'occupe du reste. Gratuit pour commencer.",
+    "subtitle": "Ajoutez votre routine, Haru s'occupe du reste. Gratuit pour commencer.",
     "cta": "Construire ma routine"
   },
   "footer": {
-    "tagline": "Haru décode les ingrédients de votre routine skincare pour éviter les mauvaises combinaisons — et l'argent gaspillé.",
-    "guides": "Conseils",
+    "tagline": "Haru décrypte les ingrédients de votre routine pour éviter les mauvaises associations et les achats inutiles.",
     "app": "L'application",
     "ingredients": "Ingrédients",
     "rights": "Haru. Fait avec soin, sans blabla marketing.",
     "legal": "Mentions légales"
   },
   "shelf": {
-    "title": "Ma étagère",
+    "title": "Ma routine",
     "subtitle": "{count, plural, one {# produit} other {# produits}} suivis par Haru.",
     "scan": "Scanner",
     "addProduct": "Ajouter un produit",
-    "emptyTitle": "Votre étagère est vide",
+    "emptyTitle": "Votre routine est vide",
     "emptyText": "Ajoutez quelques produits pour que Haru puisse construire votre routine et repérer d'éventuels conflits.",
     "readyTitle": "Prêt·e à voir votre routine ?",
     "readyText": "Haru organise vos produits et signale les conflits.",
     "viewRoutine": "Voir ma routine",
     "remove": "Retirer {name}",
-    "signInRequired": "Connectez-vous pour enregistrer et gérer votre étagère personnelle. Les suggestions de produits restent dans le catalogue ; votre étagère est propre à votre compte.",
+    "signInRequired": "Connectez-vous pour enregistrer et gérer votre routine personnelle. Les suggestions de produits restent dans le catalogue ; votre routine est propre à votre compte.",
     "signInCta": "Se connecter",
     "signUpCta": "Créer un compte",
     "workspaceTitle": "Mon espace routine",
-    "workspaceSignInText": "Connectez-vous pour gérer vos produits, favoris, notes, vidéos et routines personnelles."
+    "workspaceSignInText": "Connectez-vous pour gérer vos produits, favoris, notes, vidéos et routines personnelles.",
+    "signInToAdd": "Connectez-vous pour ajouter à ma routine",
+    "shelfConflictTitle": "Attention avec votre routine",
+    "shelfConflictOk": "Aucun conflit avec votre routine actuelle.",
+    "addToShelf": "Ajouter à la routine",
+    "addedToShelf": "Ajouté à votre routine",
+    "alreadyOnShelf": "Déjà dans votre routine",
+    "noConflict": "Aucun conflit avec votre routine actuelle"
   },
   "addProductDialog": {
-    "title": "Ajouter à votre étagère",
+    "title": "Ajouter à votre routine",
     "description": "Cherchez dans notre base de produits, ou scannez l'emballage pour une correspondance instantanée.",
     "searchPlaceholder": "Chercher une marque ou un produit...",
     "noResults": "Aucun produit ne correspond.",
@@ -238,8 +213,8 @@
     "errorText": "Un problème est survenu lors de la lecture de cette photo. Réessayez avec un meilleur éclairage, face à la caméra.",
     "routineSectionTitle": "Une routine ciblant ce que nous avons trouvé",
     "routineSectionText": "Construite à partir de notre catalogue de produits pour traiter les modules signalés ci-dessus.",
-    "addToShelf": "Ajouter cette routine à mon étagère",
-    "addedToShelf": "Ajoutée à votre étagère",
+    "addToShelf": "Ajouter cette routine à ma routine",
+    "addedToShelf": "Ajoutée à votre routine",
     "resultEyebrow": "Résultat du scan visage",
     "modulesCount": "{count} zones à examiner",
     "modulesSectionText": "Chaque section donne le résultat visible, des gestes quotidiens utiles, et des produits pouvant soutenir cette zone précise.",
@@ -492,6 +467,18 @@
         "Hydratez avant l'hydratant crème ; l'éclat baisse souvent quand la peau est déshydratée.",
         "Utilisez un SPF quotidien car pigmentation et teint terne reviennent vite avec l'exposition aux UV."
       ]
+    },
+    "meshFallback": "Camera indisponible ? Importer une photo",
+    "position": {
+      "centerFace": "Centre ton visage dans le guide",
+      "moveCloser": "Rapproche-toi légèrement",
+      "moveFarther": "Éloigne-toi légèrement",
+      "lookStraight": "Regarde bien la caméra",
+      "holdStill": "Reste immobile un instant",
+      "improveLighting": "Place-toi dans une lumière plus douce et plus claire",
+      "faceDetected": "Visage aligné. Ne bouge plus.",
+      "noFace": "Place ton visage dans le guide",
+      "multipleFaces": "Un seul visage dans le cadre"
     }
   },
   "scanPage": {
@@ -507,7 +494,7 @@
     ],
     "scanAnother": "Scanner autre chose",
     "viewSheet": "Voir la fiche produit complète",
-    "addToShelf": "Ajouter à l'étagère",
+    "addToShelf": "Ajouter à la routine",
     "unavailableTitle": "Nous n'avons pas encore pu lire ce produit",
     "unavailableText": "Essayez une photo plus nette, ou tapez la marque, le nom du produit ou le code-barres ci-dessus.",
     "errorTitle": "L'analyse n'a pas abouti",
@@ -518,9 +505,12 @@
     "illegibleText": "Réessayez avec la liste des ingrédients bien nette, en remplissant davantage le cadre.",
     "barcodeReadTitle": "Code-barres lu",
     "barcodeUnknownText": "Nous avons lu ce code-barres mais ce produit n'est pas encore dans le catalogue. Essaie plutôt de photographier l'étiquette avant, ou cherche par nom.",
-    "shelfConflictTitle": "Attention avec ton étagère",
-    "shelfConflictOk": "Aucun conflit avec ton étagère actuelle.",
-    "ocrDisclaimer": "La lecture d'étiquette peut mal interpréter les petits caractères — vérifie sur le flacon avant de changer ta routine."
+    "shelfConflictTitle": "Attention avec votre routine",
+    "shelfConflictOk": "Aucun conflit avec votre routine actuelle.",
+    "ocrDisclaimer": "La lecture d'étiquette peut mal interpréter les petits caractères — vérifie sur le flacon avant de changer ta routine.",
+    "searchLabel": "Code-barres, marque ou nom du produit",
+    "searchPlaceholder": "Ex : COSRX Snail Essence, 880...",
+    "searchCta": "Chercher"
   },
   "productsPage": {
     "title": "Base de produits",
@@ -561,25 +551,25 @@
     "officialSite": "Site officiel",
     "suitedFor": "Convient pour",
     "targets": "Cible",
-    "addToShelf": "Ajouter à l'étagère",
-    "alreadyOnShelf": "Déjà sur votre étagère",
-    "conflictWarning": "L'ajouter créerait {count, plural, one {# conflit} other {# conflits}} avec votre étagère actuelle",
-    "noConflict": "Aucun conflit avec votre étagère actuelle",
-    "signInToAdd": "Connectez-vous pour l'ajouter à mon étagère",
+    "addToShelf": "Ajouter à la routine",
+    "alreadyOnShelf": "Déjà dans votre routine",
+    "conflictWarning": "L'ajouter créerait {count, plural, one {# conflit} other {# conflits}} avec votre routine actuelle",
+    "noConflict": "Aucun conflit avec votre routine actuelle",
+    "signInToAdd": "Connectez-vous pour l'ajouter à ma routine",
     "createAccountToSave": "Créez un compte pour enregistrer des produits"
   },
   "routinePage": {
     "title": "Ma routine",
     "signInPrompt": "Connectez-vous pour construire votre routine personnalisée.",
     "signInCta": "Se connecter",
-    "subtitle": "{count, plural, one {Construite à partir du # produit de votre étagère.} other {Construite à partir des # produits de votre étagère.}}",
+    "subtitle": "{count, plural, one {Construite à partir du # produit de votre routine.} other {Construite à partir des # produits de votre routine.}}",
     "morning": "Matin",
     "evening": "Soir",
     "steps": "{count, plural, one {# étape} other {# étapes}}",
     "noProducts": "Aucun produit pour ce moment de la journée.",
     "conflictsDetected": "Conflits détectés",
     "noConflictsTitle": "Aucun conflit détecté 🎉",
-    "noConflictsText": "Les actifs de votre étagère font bon ménage.",
+    "noConflictsText": "Les actifs de votre routine font bon ménage.",
     "duplicateActives": "Actifs en double",
     "duplicateTitle": "Vous avez {count} produits avec le même actif fort",
     "backToRoutine": "Retour à la routine",
@@ -788,24 +778,39 @@
     "freePrice": "0 €",
     "freeFeatures": [
       "Scan produit gratuit",
-      "Accès complet à la base de produits",
-      "Fiches produit avec origine, composition, type de peau et usage",
-      "Constructeur d'étagère et de routine de base",
-      "Navigation en bas de l'application"
+      "Scan visage gratuit après connexion",
+      "Base produits complète",
+      "Fiches produits avec origine, composition, type de peau et usage",
+      "Routine simple jusqu’à 12 produits"
     ],
     "premiumTitle": "Premium",
-    "premiumPrice": "6,99 €/mois",
+    "premiumPrice": "6,99 € / mois",
     "premiumFeatures": [
-      "Tout ce qui est inclus dans l'offre gratuite",
-      "Audit complet de l'étagère selon votre profil de peau",
-      "Recommandations d'étapes manquantes et de changements de produits",
-      "Produits enregistrés illimités sur votre étagère",
-      "Accès au scan visage"
+      "Tout ce qui est inclus dans le gratuit",
+      "Produits sauvegardés illimités",
+      "Audit complet selon le passeport de peau",
+      "Recommandations produits et changements détaillés",
+      "Rapports PDF imprimables",
+      "Suivi des dates, réactions, favoris, notes et vidéos"
     ],
-    "subscribeCta": "S'abonner à Premium",
+    "subscribeCta": "S’abonner à Premium",
     "currentPlanLabel": "Votre offre actuelle",
     "manageBilling": "Gérer la facturation",
-    "comingSoon": "Les paiements ne sont pas encore configurés — revenez bientôt."
+    "comingSoon": "Les paiements ne sont pas encore configurés ; revenez bientôt.",
+    "kicker": "Premium",
+    "heroTitle": "Transformez Haru en vrai centre de contrôle peau.",
+    "heroText": "Le gratuit garde le scan produit et le scan visage accessibles après connexion. Premium débloque l’intelligence routine complète : produits illimités, audit complet, rapports PDF, suivi des produits et évolution de peau.",
+    "freeNote": "Idéal pour découvrir les produits et démarrer une routine simple.",
+    "premiumNote": "Fait pour suivre toute la routine dans le temps.",
+    "auditIncluded": "Audit complet de routine",
+    "auditText": "Haru vérifie les étapes manquantes, actifs en double, risques d’irritation, placement matin/soir et adéquation au passeport de peau.",
+    "reportIncluded": "Rapport peau imprimable",
+    "reportText": "Exportez graphiques de scan, graphes audit, changements routine, contexte lifestyle, produits et décisions ingrédients en PDF.",
+    "trackingIncluded": "Suivi routine et produits",
+    "trackingText": "Suivez date d’achat, péremption, date d’ouverture, notes, réactions, favoris et vidéos au même endroit.",
+    "wellnessIncluded": "Outils wellness et face care",
+    "wellnessText": "Respiration, sons calmes, exercices visage et conseils récupération restent connectés à la routine.",
+    "ctaText": "Annulation possible à tout moment depuis Stripe. Le paiement est sécurisé par Stripe ; Haru ne stocke jamais votre carte."
   },
   "ingredients": {
     "retinol": {
@@ -963,7 +968,7 @@
   },
   "routineGuides": {
     "indexTitle": "Guides de routine",
-    "indexSubtitle": "Des points de départ par objectif — puis construis la tienne depuis ton étagère.",
+    "indexSubtitle": "Des points de départ par objectif — puis construis la tienne depuis ta routine.",
     "slotAm": "Matin",
     "slotPm": "Soir",
     "stepFor": "En vedette",
@@ -976,8 +981,13 @@
     },
     "goalLabel": "Objectif",
     "introLabel": "L'idée",
+    "productRoutineTitle": "Routine produits complète",
+    "productRoutineText": "Exemples issus du catalogue Haru pour chaque étape. Ouvrez la fiche pour vérifier composition, usage et compatibilité avant de l'ajouter à votre routine.",
+    "suggestedProducts": "Options produits",
+    "openProduct": "Voir la fiche",
+    "noProductSuggestion": "Aucun produit correspondant dans le catalogue pour cette étape pour le moment.",
     "keepInMind": "À garder en tête",
-    "buildCta": "Construire une routine depuis ton étagère",
+    "buildCta": "Construire une routine depuis tes produits",
     "buildCtaSub": "Ceci est un guide général. Haru peut séquencer tes vrais produits et repérer les conflits.",
     "disclaimer": "Un modèle général, ni personnalisé ni médical. Introduis tout actif puissant progressivement, fais un test, et consulte un professionnel pour tout ce qui est douloureux, persistant ou qui s'aggrave.",
     "notFound": "Nous n'avons pas ce guide.",
@@ -1052,7 +1062,7 @@
   },
   "exposure": {
     "title": "Exposition aux actifs",
-    "subtitle": "Une vue d'ensemble des actifs que ton étagère répète ou cumule.",
+    "subtitle": "Une vue d'ensemble des actifs que ta routine répète ou cumule.",
     "redundant": "Tu utilises {ingredient} dans {count} produits. Ce n'est pas forcément un problème, mais cette répétition n'apporte probablement pas {count}× plus de bénéfices.",
     "irritantStackEvening": "Le soir, ta routine cumule plusieurs actifs potentiellement irritants ({ingredients}). Répartis-les plutôt sur plusieurs soirées qu'un même soir.",
     "irritantStackMorning": "Le matin, ta routine cumule plusieurs actifs potentiellement irritants ({ingredients}). Espace-les plutôt que de les superposer.",
@@ -1063,7 +1073,7 @@
     "subtitle": "Une cadence du soir suggérée qui espace tes actifs les plus forts.",
     "amNote": "Ta routine du matin reste la même chaque jour : nettoyage doux, hydratation, crème, et SPF.",
     "recovery": "Récupération — soutien de la barrière",
-    "noStrong": "Ton étagère ne contient pas d'actifs forts (rétinoïdes, AHA/BHA) à espacer — une routine du soir simple et régulière convient très bien.",
+    "noStrong": "Ta routine ne contient pas d'actifs forts (rétinoïdes, AHA/BHA) à espacer — une routine du soir simple et régulière convient très bien.",
     "disclaimer": "Un rythme suggéré, pas une prescription — adapte-le à ta tolérance, et saute un actif dès que ta peau tiraille ou s'irrite."
   },
   "reactions": {
@@ -1126,36 +1136,132 @@
     }
   },
   "report": {
-    "title": "Récapitulatif peau",
+    "title": "Résumé peau",
     "generatedOn": "Généré le {date}",
-    "print": "Imprimer / Enregistrer en PDF",
-    "intro": "Un récapitulatif de ton profil Haru, ton dernier scan, ta routine et tes réactions enregistrées, à présenter à un dermatologue ou autre professionnel. C'est un outil cosmétique grand public — pas un diagnostic. Si une préoccupation est douloureuse, persistante ou s'aggrave, consulte un professionnel.",
+    "print": "Imprimer / enregistrer en PDF",
+    "intro": "Résumé de votre profil Haru, dernier scan, routine et réactions enregistrées à partager avec un dermatologue ou un autre professionnel. C’est un outil cosmétique grand public, pas un diagnostic. En cas de douleur, persistance ou aggravation, consultez un professionnel.",
     "profileTitle": "Profil de peau",
     "skinType": "Type de peau",
-    "age": "Tranche d'âge",
+    "age": "Âge",
     "concerns": "Préoccupations",
     "sensitivities": "Sensibilités",
     "climate": "Climat",
-    "noProfile": "Aucun profil de peau complété pour l'instant.",
+    "noProfile": "Aucun profil peau complété pour l’instant.",
     "scanTitle": "Dernier scan visage",
     "scanDate": "Date",
     "overall": "Score global",
-    "confidence": "Confiance",
+    "confidence": "Fiabilité",
     "flaggedTitle": "Zones à surveiller",
     "flaggedNone": "Aucune zone signalée.",
-    "noScan": "Aucun scan visage enregistré pour l'instant.",
+    "noScan": "Aucun scan visage enregistré pour l’instant.",
     "routineTitle": "Actifs de la routine actuelle",
     "reactionsTitle": "Récurrences de réactions",
     "reactionLine": "{type} enregistré {count} fois avec {product}.",
-    "disclaimer": "Les scores sont des estimations visuelles cosmétiques à partir de photos ordinaires, pas des mesures cliniques, et Haru décrit des contributeurs probables plutôt que des causes. Ce récapitulatif ne remplace pas un examen en personne.",
-    "entryTitle": "Récapitulatif pour un professionnel",
-    "entryText": "Exporte ton profil, ton scan et tes réactions en récapitulatif à apporter à un dermatologue.",
-    "entryCta": "Ouvrir le récapitulatif"
+    "disclaimer": "Les scores sont des estimations visuelles cosmétiques à partir de photos ordinaires, pas des mesures cliniques. Haru décrit des contributeurs probables plutôt que des causes. Ce récapitulatif ne remplace pas un examen en personne.",
+    "entryTitle": "Résumé pour un professionnel",
+    "entryText": "Exportez votre profil, votre scan et vos réactions en récapitulatif à apporter à un dermatologue.",
+    "entryCta": "Ouvrir le récapitulatif",
+    "included": "Inclus",
+    "missing": "Pas encore enregistré",
+    "auditChartTitle": "Graphiques audit",
+    "auditDate": "Dernier audit : {date}",
+    "auditLive": "Calcul direct depuis la routine actuelle",
+    "auditOverall": "Fiabilité globale de la routine",
+    "waterIntake": "Hydratation",
+    "sleep": "Sommeil",
+    "stress": "Stress",
+    "sport": "Sport / mouvement",
+    "sunExposure": "Exposition solaire",
+    "scanChartTitle": "Graphiques du scan par zone",
+    "routineProducts": "Produits analyses",
+    "routineConflicts": "Conflits détectés",
+    "routineDuplicates": "Groupes d’actifs en double",
+    "exposureFindings": "Détails d’exposition aux actifs",
+    "redundantFinding": "{ingredient} apparaît dans {count} produits. Gardez une source principale pour mieux lire la tolérance.",
+    "stackFinding": "{slot} : plusieurs actifs forts sont empilés ({ingredients}). Séparez-les ou ajoutez des nuits de récupération.",
+    "routineChangesTitle": "Changements détaillés de routine",
+    "morningPlan": "Plan du matin",
+    "eveningPlan": "Plan du soir",
+    "hydrationLifestyleTitle": "Hydratation, sommeil et contexte peau",
+    "hydrationAdvice": "Buvez régulièrement dans la journée. La déshydratation peut rendre la peau terne, tiraillée et grasse à la fois.",
+    "sleepAdvice": "Gardez la routine du soir simple quand le sommeil est court. La barrière tolère moins les essais les nuits de fatigue.",
+    "stressAdvice": "Si le stress est élevé, évitez d’ajouter plusieurs actifs à la fois. Surveillez rougeurs, grattage et picotements.",
+    "sunAdvice": "Le SPF est essentiel pour travailler l’éclat, les rétinoïdes et l’exfoliation sans aggraver les marques. Réappliquez dehors et après transpiration.",
+    "movementLifestyleTitle": "Sport, transpiration et récupération",
+    "sportAdvice": "Après le sport, nettoyez la transpiration en douceur et évitez les acides forts juste après si la peau chauffe ou rougit.",
+    "sweatAdvice": "Transpiration et SPF peuvent encombrer les pores. Le nettoyage du soir compte encore plus les jours actifs.",
+    "recoveryAdvice": "Prévoyez des nuits de récupération après sport intense, mauvais sommeil ou irritation visible : nettoyant, hydratant, pas d’actif en plus.",
+    "productDecisionsTitle": "Décisions produits et ingrédients",
+    "timing": "Moment",
+    "frequency": "Fréquence",
+    "openedOn": "Ouvert le",
+    "expiryDate": "Date de péremption",
+    "userNote": "Note utilisateur",
+    "reactionNotesTitle": "Notes de réactions récentes",
+    "bilanTitle": "Questionnaire audit complet",
+    "bilanDate": "Date du questionnaire",
+    "auditScores": {
+      "oiliness_tendency": "Tendance au sébum",
+      "dryness_tendency": "Tendance sécheresse",
+      "combination_pattern": "Profil mixte",
+      "dehydration_risk": "Risque de déshydratation",
+      "barrier_impairment_risk": "Risque de barrière fragilisée",
+      "sensitivity_score": "Sensibilité",
+      "redness_score": "Rougeurs",
+      "congestion_score": "Congestion",
+      "pigmentation_score": "Pigmentation",
+      "routine_irritation_risk": "Risque d’irritation de la routine",
+      "routine_consistency_score": "Cohérence de la routine"
+    },
+    "slots": {
+      "morning": "Matin",
+      "evening": "Soir",
+      "both": "Matin et soir",
+      "pause": "En pause"
+    },
+    "priorityLevels": {
+      "immediate": "Immédiat",
+      "short_term": "Court terme",
+      "later": "Plus tard"
+    },
+    "productDecisions": {
+      "keep": "Garder",
+      "adjust": "Ajuster",
+      "pause": "Mettre en pause",
+      "replace": "Remplacer"
+    },
+    "lifestyle": {
+      "water": {
+        "low": "Faible",
+        "medium": "Moderee",
+        "high": "Elevee"
+      },
+      "sleep": {
+        "under6": "Moins de 6 h",
+        "6to8": "6 a 8 h",
+        "over8": "Plus de 8 h"
+      },
+      "stress": {
+        "low": "Faible",
+        "medium": "Modere",
+        "high": "Eleve"
+      },
+      "exercise": {
+        "rarely": "Rarement",
+        "weekly": "Chaque semaine",
+        "frequent": "Frequent"
+      },
+      "sun": {
+        "low": "Faible",
+        "medium": "Moderee",
+        "high": "Elevee"
+      }
+    }
   },
   "shelfCare": {
-    "title": "Entretien de l'étagère",
+    "title": "Suivi de mes produits",
     "subtitle": "Dates d'ouverture, péremption et quasi-doublons — pour que rien ne dorme ni ne fasse doublon.",
-    "shelfValue": "Valeur de l'étagère :",
+    "shelfValue": "Valeur de la routine :",
     "duplicate": "Tu as {count} produits en {category} pour {concern} — termines-en un avant d'en ouvrir un autre.",
     "expiryLabel": "Dates d'ouverture & péremption",
     "openedOn": "Ouvert le",
@@ -1165,7 +1271,9 @@
     "expired": "Périmé",
     "soon": "Bientôt périmé",
     "until": "Jusqu'au {date}",
-    "disclaimer": "La péremption est estimée à partir de la date d'ouverture et de la période après ouverture (le symbole du pot). C'est un rappel, pas une garantie — fie-toi aussi aux changements d'odeur, de couleur ou de texture."
+    "disclaimer": "La péremption est estimée à partir de la date d'ouverture et de la période après ouverture (le symbole du pot). C'est un rappel, pas une garantie — fie-toi aussi aux changements d'odeur, de couleur ou de texture.",
+    "signInSubtitle": "Connectez-vous pour synchroniser votre routine sur tous vos appareils.",
+    "signUpSubtitle": "Créez un compte pour enregistrer votre routine."
   },
   "environment": {
     "title": "Conditions locales",
@@ -1247,8 +1355,8 @@
     "errorEmailTaken": "Un compte existe déjà avec cet e-mail.",
     "errorGeneric": "Une erreur est survenue. Veuillez réessayer.",
     "errorWeakPassword": "Le mot de passe doit contenir au moins 8 caractères.",
-    "signInSubtitle": "Connectez-vous pour synchroniser votre étagère sur tous vos appareils.",
-    "signUpSubtitle": "Créez un compte pour enregistrer votre étagère et votre routine."
+    "signInSubtitle": "Connectez-vous pour synchroniser votre routine sur tous vos appareils.",
+    "signUpSubtitle": "Créez un compte pour enregistrer votre routine."
   },
   "profile": {
     "title": "Profil",
@@ -1256,7 +1364,7 @@
     "shelfCount": "{count, plural, one {# produit suivi} other {# produits suivis}}",
     "signOutCta": "Se déconnecter",
     "deleteAccount": "Supprimer le compte",
-    "deleteAccountConfirm": "Cela supprime définitivement votre compte et votre étagère. Cette action est irréversible.",
+    "deleteAccountConfirm": "Cela supprime définitivement votre compte et votre routine. Cette action est irréversible.",
     "language": "Langue",
     "theme": "Apparence",
     "themeLight": "Clair",
@@ -1315,7 +1423,9 @@
       "favorites": "Favoris",
       "notes": "Notes",
       "links": "Vidéos",
-      "reactions": "Réactions"
+      "reactions": "Réactions",
+      "analysis": "Analyse routine",
+      "productCare": "Suivi de mes produits"
     },
     "routineSlot": {
       "both": "Matin et soir",
@@ -1326,7 +1436,75 @@
     "routineProductsTitle": "Produits de cette routine",
     "routineProductsText": "Cliquez sur un produit pour modifier son moment d'utilisation, sa catégorie, ses notes, son statut favori, ou le retirer.",
     "viewSheet": "Voir la fiche",
-    "embedUnavailable": "Cette vidéo ne peut pas encore être intégrée ici. Enregistrez une vidéo YouTube, Instagram Reel ou TikTok pour la lire directement dans Haru."
+    "embedUnavailable": "Cette vidéo ne peut pas encore être intégrée ici. Enregistrez une vidéo YouTube, Instagram Reel ou TikTok pour la lire directement dans Haru.",
+    "reliability": {
+      "title": "Moteur de fiabilité Haru",
+      "subtitle": "La routine n’est pas une liste générique : Haru croise la qualité photo, les produits sauvegardés, l’exposition aux actifs, les réactions, le rythme hebdomadaire et l’environnement avant de conseiller.",
+      "scan": "Scan visage avec contrôle qualité",
+      "scanText": "Lumière, flou, angle, filtre et zones couvertes sont signalés pour éviter de prétendre voir ce qui n’est pas fiable.",
+      "passport": "Passeport de peau",
+      "passportText": "Chaque scan devient un point de suivi comparable, avec un niveau de confiance par zone.",
+      "exposure": "Carte d’exposition aux ingrédients",
+      "exposureText": "Les actifs répétés, le placement matin/soir et les empilements irritants sont lus sur toute la routine.",
+      "protocol": "Routine Lab",
+      "protocolText": "Un seul changement à la fois, avec points de contrôle à 7, 14 ou 28 jours.",
+      "reactions": "Journal de réactions",
+      "reactionsText": "Les inconforts récurrents peuvent être reliés à un produit ou à un changement de routine.",
+      "environment": "Adaptation au contexte",
+      "environmentText": "UV, humidité, sécheresse, froid et qualité de l’air peuvent ajuster les conseils du jour.",
+      "report": "Rapport professionnel",
+      "reportText": "L’export sépare ce que Haru sait, ce qui reste incertain et ce qui mérite surveillance ou avis professionnel.",
+      "passportTitle": "Votre passeport de peau",
+      "passportIntro": "Une synthèse claire de votre type de peau, sensibilités, rythme de vie et signaux utiles avant toute recommandation.",
+      "scanCta": "Lancer un scan visage",
+      "skinTypeExerciseCta": "Définir mon type de peau",
+      "skinDetails": "Détails de peau",
+      "noSkinProfile": "Aucun passeport de peau complété. Faites l’exercice de type de peau pour créer une base fiable.",
+      "skinType": "Type de peau",
+      "concerns": "Préoccupations",
+      "sensitivities": "Sensibilités",
+      "climate": "Climat",
+      "hydration": "Hydratation",
+      "sleep": "Sommeil",
+      "stress": "Stress",
+      "age": "Age",
+      "sunExposure": "Exposition solaire",
+      "sport": "Sport"
+    },
+    "productDatesTitle": "Dates du produit",
+    "purchaseDate": "Date d’achat",
+    "expiryDate": "Date de péremption",
+    "periodAfterOpening": "Après ouverture",
+    "datePlaceholder": "AAAA-MM-JJ",
+    "analysisAdvice": {
+      "title": "Priorités pour compléter la routine",
+      "subtitle": "Haru a trouvé quelques bases manquantes avant de lire la routine de façon fiable.",
+      "completeTitle": "La base de routine est lisible.",
+      "completeText": "Nettoyage, hydratation, protection et placement matin/soir sont couverts. Ensuite, surveillez le rythme, les actifs en double et les réactions dans le temps.",
+      "cleanser": {
+        "title": "Ajouter un nettoyant doux",
+        "text": "Un audit de routine a besoin d’une étape de nettoyage claire, surtout le soir, pour éviter que SPF, sébum et maquillage restent sur la peau."
+      },
+      "moisturizer": {
+        "title": "Ajouter un soutien barrière",
+        "text": "Un hydratant ou une crème barrière aide Haru à équilibrer les actifs forts et à éviter une routine trop décapante."
+      },
+      "spf": {
+        "title": "Ajouter un SPF quotidien",
+        "text": "Sans protection solaire le matin, l’éclat, les rétinoïdes et l’exfoliation sont plus difficiles à juger en sécurité."
+      },
+      "morning": {
+        "title": "Construire le matin",
+        "text": "Le matin doit viser la protection : hydratation légère, antioxydant si toléré, puis SPF."
+      },
+      "evening": {
+        "title": "Construire le soir",
+        "text": "Le soir doit viser le retrait et la récupération, avec les actifs forts introduits lentement et pas tous la même nuit."
+      }
+    },
+    "momentLabel": "Moment",
+    "categoryLabel": "Catégorie",
+    "noteLabel": "Note"
   },
   "accountSettings": {
     "title": "Informations du compte",
@@ -1361,7 +1539,7 @@
     "termsTitle": "Conditions générales de vente",
     "termsIntro": "Ces conditions générales de vente régissent l'achat des fonctionnalités payantes de Haru : l'abonnement Premium et les crédits de scan visage à l'unité. Utiliser une fonctionnalité payante vaut acceptation de ces conditions.",
     "termsServiceTitle": "Ce qui est inclus",
-    "termsServiceText": "L'offre gratuite comprend le scan produit, l'accès complet à la base de produits, et un constructeur d'étagère et de routine de base. Premium (abonnement) ajoute un audit complet de routine selon votre profil de peau, des produits enregistrés illimités, et des scans visage illimités. Sans abonnement, les scans visage peuvent être achetés individuellement sous forme de crédits à l'unité.",
+    "termsServiceText": "L'offre gratuite comprend le scan produit, l'accès complet à la base de produits, et un constructeur de routine de base. Premium (abonnement) ajoute un audit complet de routine selon votre profil de peau, des produits enregistrés illimités, et des scans visage illimités. Sans abonnement, les scans visage peuvent être achetés individuellement sous forme de crédits à l'unité.",
     "termsPriceTitle": "Prix",
     "termsPriceText": "Abonnement Premium : 6,99 € par mois. Scan visage à l'unité : 9 € par scan, sans abonnement. Les prix sont affichés en euros sur la page Premium avant paiement et incluent les taxes applicables affichées au moment du paiement. Haru peut modifier les prix pour les périodes de facturation futures ; les abonnés actifs sont informés avant qu'un changement de prix ne s'applique à leur prochain renouvellement.",
     "termsPaymentTitle": "Paiement",
@@ -1375,7 +1553,7 @@
     "privacyTitle": "Politique de confidentialité",
     "privacyIntro": "Cette politique explique quelles données personnelles Haru traite, pourquoi, et comment vous pouvez les contrôler.",
     "privacyDataTitle": "Données que nous traitons",
-    "privacyDataText": "Les informations de compte (nom, e-mail, mot de passe — stocké sous forme de hash, jamais en clair) ; vos réponses au profil de peau ; votre étagère enregistrée, vos notes personnelles et vos liens sauvegardés ; vos résultats de scan visage ; votre statut d'abonnement à la newsletter si vous y consentez ; et des données d'usage basiques de première partie utilisées pour faire fonctionner l'application, sans traceurs publicitaires tiers.",
+    "privacyDataText": "Les informations de compte (nom, e-mail, mot de passe — stocké sous forme de hash, jamais en clair) ; vos réponses au profil de peau ; votre routine enregistrée, vos notes personnelles et vos liens sauvegardés ; vos résultats de scan visage ; votre statut d'abonnement à la newsletter si vous y consentez ; et des données d'usage basiques de première partie utilisées pour faire fonctionner l'application, sans traceurs publicitaires tiers.",
     "privacyScanTitle": "Photos de scan visage et produit",
     "privacyScanText": "Une photo que vous soumettez pour un scan visage ou produit est envoyée à l'API Claude d'Anthropic pour générer l'analyse et n'est pas stockée par Haru — seul le résultat (scores, notes rédigées, résumé) est enregistré sur votre compte afin que vous puissiez le consulter plus tard.",
     "privacySubprocessorsTitle": "Qui traite aussi des données pour le compte de Haru",
@@ -1383,7 +1561,7 @@
     "privacyRightsTitle": "Vos droits",
     "privacyRightsText": "Vous pouvez consulter et modifier les informations de votre compte depuis votre profil à tout moment, et supprimer définitivement votre compte et les données associées depuis les paramètres du compte. Pour toute autre demande concernant vos données, utilisez les coordonnées figurant dans les mentions légales ci-dessus.",
     "privacyRetentionTitle": "Conservation",
-    "privacyRetentionText": "Les données de compte et de profil sont conservées tant que votre compte existe. Supprimer votre compte supprime votre étagère, vos notes, vos liens sauvegardés, votre profil de peau, votre historique de scans et votre historique d'audits.",
+    "privacyRetentionText": "Les données de compte et de profil sont conservées tant que votre compte existe. Supprimer votre compte supprime votre routine, vos notes, vos liens sauvegardés, votre profil de peau, votre historique de scans et votre historique d'audits.",
     "cookiesTitle": "Politique de cookies",
     "cookiesIntro": "Haru utilise un petit nombre de cookies et de préférences stockées localement, décrits ci-dessous.",
     "cookiesEssentialTitle": "Essentiels",
@@ -1397,48 +1575,64 @@
   },
   "auditShowcase": {
     "eyebrow": "Audit peau",
-    "title": "Sachez ce que votre routine fait réellement pour votre peau.",
-    "subtitle": "Haru analyse vos produits enregistrés, vos étapes du matin et du soir, les actifs utilisés et votre profil de peau pour montrer ce qui convient, ce qui se chevauche, et ce qui manque peut-être.",
+    "title": "Comprendre ce que votre routine fait vraiment à votre peau.",
+    "subtitle": "Haru analyse vos produits enregistrés, vos étapes matin et soir, les actifs et votre profil peau pour montrer ce qui convient, ce qui se répète et ce qui manque.",
     "ctaPrimary": "Lancer mon audit",
     "ctaSecondary": "Commencer par un scan visage",
-    "note": "L'audit donne des conseils beauté à partir de votre routine et de l'état visible de votre peau. Il ne pose pas de diagnostic et ne remplace pas un dermatologue.",
-    "panelEyebrow": "Bilan de routine personnel",
-    "priorityTitle": "Le résultat reste simple",
+    "note": "L'audit donne des conseils beauté à partir de votre routine et du contexte visible de la peau. Il ne diagnostique pas et ne remplace pas un dermatologue.",
+    "panelEyebrow": "Vérification de routine",
+    "priorityTitle": "Le résultat reste clair",
     "checks": [
       {
         "title": "Audit produit",
-        "text": "Objectif, actifs clés, adéquation au type de peau, risque d'irritation, fréquence, et comment utiliser chaque produit."
+        "text": "Rôle, actifs clés, adéquation au type de peau, risque d'irritation, fréquence et mode d'utilisation."
       },
       {
-        "title": "Audit d'étagère",
-        "text": "Étapes manquantes, produits redondants, actifs répétés, et produits qui ne correspondent pas à vos objectifs."
+        "title": "Audit routine",
+        "text": "Étapes manquantes, produits redondants, actifs répétés et produits qui ne correspondent pas à vos objectifs."
       },
       {
         "title": "Routine du matin",
-        "text": "Ordre d'application, hydratation, protection solaire, et si les actifs forts sont placés en sécurité pour la journée."
+        "text": "Ordre d'application, hydratation, SPF et placement sécurisé des actifs forts en journée."
       },
       {
         "title": "Routine du soir",
-        "text": "Nuits de récupération, rythme des exfoliants ou rétinoïdes, superpositions incompatibles, et soutien de la barrière cutanée."
+        "text": "Nuits de récupération, rythme des exfoliants ou rétinoïdes, couches incompatibles et soutien de la barrière cutanée."
       }
     ],
     "priorities": [
       "Trois à cinq priorités claires plutôt qu'un mur de conseils.",
-      "Des actions immédiates et un plan réaliste pour les semaines à venir.",
+      "Des actions immédiates et un plan réaliste pour les prochaines semaines.",
       "Des suggestions de produits basées sur ce qui manque dans votre routine."
-    ]
+    ],
+    "comparison": {
+      "scanTitle": "Scan visage",
+      "scanText": "Une lecture visuelle à partir d'une photo. Il observe ce qui est visible sur le visage à cet instant.",
+      "scanItems": [
+        "Zones visibles : texture, rougeurs, pores, taches, ridules, éclat et signes d'hydratation.",
+        "Qualité photo : lumière, flou, angle, zones couvertes et fiabilité du résultat.",
+        "Résultat : un instantané de peau avec gestes ciblés et produits proposés par problématique visible."
+      ],
+      "auditTitle": "Audit de routine",
+      "auditText": "Une vérification complète qui croise vos produits enregistrés, vos étapes matin/soir et votre profil peau.",
+      "auditItems": [
+        "Produits : rôle, actifs clés, notes de composition, adéquation au type de peau et fréquence.",
+        "Structure : étapes manquantes, actifs en double, associations risquées et placement matin/soir.",
+        "Résultat : priorités claires, quoi garder, quoi mettre en pause, et quels gestes ou produits manquent."
+      ]
+    }
   },
   "wellnessShowcase": {
     "eyebrow": "Bien-être",
-    "title": "Le skincare, ce n'est pas que ce que vous appliquez.",
-    "subtitle": "Le stress, le sommeil et les tensions du visage changent l'apparence et la sensation de la peau. L'espace bien-être de Haru garde ce soutien pratique, calme et non médical — respiration, repères de sommeil, sons apaisants et bibliothèque de soins du visage.",
+    "title": "Le skincare, ce n'est pas seulement ce que vous appliquez.",
+    "subtitle": "Le stress, le sommeil et les tensions du visage changent l'apparence et le ressenti de la peau. L'espace bien-être Haru reste pratique, calme et non médical : respiration, repères de sommeil, sons apaisants et bibliothèque de soins du visage.",
     "ctaPrimary": "Ouvrir bien-être",
-    "note": "Les outils bien-être sont un soutien relaxation et mode de vie, pas un traitement médical ni un substitut à un suivi professionnel.",
+    "note": "Les outils bien-être sont un soutien de relaxation et de mode de vie, pas un traitement médical ni un substitut à un suivi professionnel.",
     "panelEyebrow": "Un soutien calme et pratique",
     "checks": [
       {
         "title": "Stress et peau",
-        "text": "Comment le stress peut se traduire par de l'excès de sébum, des gestes compulsifs ou de l'inflammation — et quoi faire."
+        "text": "Comment le stress peut se traduire par de l'excès de sébum, des gestes compulsifs ou de l'inflammation, et quoi faire."
       },
       {
         "title": "Respiration guidée",
@@ -1446,11 +1640,11 @@
       },
       {
         "title": "Sons apaisants",
-        "text": "Bruit blanc, pluie, texture océan et tonalités relaxantes simples, générés en direct."
+        "text": "Bruit blanc, pluie, texture océan et tonalités simples de relaxation générées en direct."
       },
       {
-        "title": "Bibliothèque soin du visage",
-        "text": "Massage doux, bases du gua sha, relâchement de la mâchoire et routines de yoga facial."
+        "title": "Bibliothèque face care",
+        "text": "Massage doux, bases du gua sha, détente de la mâchoire et routines de yoga du visage."
       }
     ]
   },

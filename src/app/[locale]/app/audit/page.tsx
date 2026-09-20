@@ -8,7 +8,9 @@ import { db } from "@/lib/db";
 import { runUserAudit } from "@/lib/run-audit";
 import { BilanWizard } from "@/components/bilan-wizard";
 
-export default async function AuditPage() {
+export default async function AuditPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const lang = locale === "ko" || locale === "fr" || locale === "ja" ? locale : "en";
   const t = await getTranslations("auditPage");
   const session = await auth();
 
@@ -27,7 +29,7 @@ export default async function AuditPage() {
   const userId = session.user.id;
   const [profile, result, latestScan] = await Promise.all([
     db.skinProfile.findUnique({ where: { userId } }),
-    runUserAudit(userId),
+    runUserAudit(userId, lang),
     db.faceScanResult.findFirst({
       where: { userId },
       orderBy: { createdAt: "desc" },

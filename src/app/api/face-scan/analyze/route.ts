@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { hasPremiumAccess } from "@/lib/entitlements";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
 import { isVisionConfigured, getVisionClient, parseDataUrl } from "@/lib/vision";
 import {
@@ -194,11 +193,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const premium = hasPremiumAccess(user);
-  if (!premium && user.faceScanCredits <= 0) {
-    return NextResponse.json({ error: "payment_required" }, { status: 402 });
-  }
-
   if (!isVisionConfigured()) {
     return NextResponse.json({ error: "vision_not_configured" }, { status: 501 });
   }
@@ -307,16 +301,6 @@ export async function POST(request: Request) {
         analysis,
       },
     });
-
-    if (!premium) {
-      const spent = await db.user.updateMany({
-        where: { id: user.id, faceScanCredits: { gt: 0 } },
-        data: { faceScanCredits: { decrement: 1 } },
-      });
-      if (spent.count === 0) {
-        return NextResponse.json({ error: "payment_required" }, { status: 402 });
-      }
-    }
 
     let previous: {
       createdAt: string;

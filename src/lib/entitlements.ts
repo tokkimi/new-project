@@ -22,9 +22,8 @@ type FaceScanUser = {
   faceScanCredits: number;
 } | null | undefined;
 
-/** Premium subscribers get unlimited face scans; everyone else spends a purchased credit. */
+/** Face scans are free for signed-in users; Premium stays for deeper paid features. */
 export function canUseFaceScan(user: FaceScanUser): boolean {
   if (!user) return false;
-  if (hasPremiumAccess(user)) return true;
-  return user.faceScanCredits > 0;
+  return true;
 }

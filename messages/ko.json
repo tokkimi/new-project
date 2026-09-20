@@ -1,14 +1,14 @@
 {
   "meta": {
-    "title": "Haru - your beauty routine, organized",
-    "description": "Save your products, build morning and evening routines, and keep your beauty notes and inspirations in one calm space."
+    "title": "Haru - 정돈된 나만의 뷰티 루틴",
+    "description": "제품을 저장하고, 아침과 저녁 루틴을 만들고, 뷰티 메모와 영감을 한곳에서 차분하게 관리하세요."
   },
   "nav": {
     "howItWorks": "이용 방법",
     "features": "좋은 습관",
     "ingredients": "성분",
     "tryApp": "앱 열기",
-    "shelf": "내 화장대",
+    "shelf": "루틴",
     "scan": "스캔",
     "products": "제품",
     "routine": "루틴",
@@ -18,62 +18,31 @@
     "signOut": "로그아웃",
     "today": "오늘",
     "wellness": "웰니스",
-    "progress": "진행 기록",
-    "guides": "스킨케어 가이드"
-  },
-  "skinGoals": {
-    "eyebrow": "스킨케어 조언",
-    "title": "피부를 혹사하지 않고 트렌드를 이해하세요.",
-    "subtitle": "글라스 스킨, 장벽 관리, 브라이트닝, 미니멀 루틴까지. 실용적이고 균형 잡힌 공개 가이드로 좋은 습관과 마케팅을 구분합니다.",
-    "cta": "모든 가이드 보기",
-    "imageAlt": "볼에 보습 스킨케어를 부드럽게 바르는 여성의 자연스러운 클로즈업"
-  },
-  "todayPage": {
-    "eyebrow": "내 피부 공간",
-    "title": "피부 관리를 더 간단하게.",
-    "subtitle": "관찰, 프로필, 루틴, 진행 기록을 한곳에서 관리하세요. 가이드와 트렌드는 공개 공간에서 확인할 수 있습니다.",
-    "primaryCta": "페이스 스캔 시작",
-    "secondaryCta": "내 루틴 보기",
-    "dailyTitle": "오늘의 체크",
-    "dailyText": "새 제품을 더하기 전에 확인할 세 가지 기준입니다.",
-    "daily": {
-      "observe": "오늘 피부가 어떻게 느껴지는지 살펴보기",
-      "routine": "활성 성분을 겹치지 않고 계획한 루틴 지키기",
-      "protect": "아침에는 자외선 차단제로 마무리하기"
-    },
-    "manageEyebrow": "개인 도구",
-    "manageTitle": "내 피부 관리",
-    "manageText": "개인 기록과 일반 조언을 분리해 각 도구의 역할을 명확하게 합니다.",
-    "tools": {
-      "scan": { "title": "페이스 스캔", "text": "눈에 보이는 부위를 확인하고 시간에 따른 변화를 살펴봅니다." },
-      "profile": { "title": "피부 프로필", "text": "민감도, 고민, 생활 습관을 기록합니다." },
-      "routine": { "title": "내 루틴", "text": "아침과 저녁 제품을 올바른 순서로 정리합니다." },
-      "progress": { "title": "진행 기록", "text": "결과를 비교하고 실제로 무엇이 달라졌는지 확인합니다." }
-    }
+    "progress": "진행 기록"
   },
   "hero": {
     "badge": "K-뷰티 루틴에서 영감을 받았습니다",
     "titleLine1": "내 스킨케어 루틴,",
     "titleLine2": "드디어 완벽 해독.",
-    "subtitle": "Keep your skincare products, routines, notes and beauty inspiration in one place. Haru helps you understand what to use, when to use it, and what to keep simple.",
+    "subtitle": "스킨케어 제품, 루틴, 메모와 뷰티 영감을 한곳에 보관하세요. Haru가 무엇을 언제 쓰고, 무엇을 단순하게 유지할지 이해하도록 도와드려요.",
     "ctaPrimary": "내 루틴 만들기",
-    "disclaimer": "화장대 제품 12개까지 무료 · 신용카드 불필요",
+    "disclaimer": "루틴 제품 12개까지 무료 · 신용카드 불필요",
     "matchBadgeTitle": "완벽한 매칭",
     "matchBadgeSubtitle": "내 피부 프로필 기준"
   },
   "productShowcase": {
     "eyebrow": "Haru의 핵심",
-    "title": "Beauty products, easy to compare",
-    "subtitle": "Browse product sheets with origin, composition notes, skin type, usage and frequency.",
+    "title": "뷰티 제품을 쉽게 비교하세요",
+    "subtitle": "원산지, 성분 메모, 피부 타입, 사용법과 빈도가 정리된 제품 정보를 확인하세요.",
     "latestTitle": "신상품",
     "koreaTitle": "메이드 인 코리아",
     "koreaSubtitle": "우리 루틴의 근간이 되는 K-뷰티 필수템",
     "seeAll": "전체 보기",
-    "browseAllCta": "Browse products"
+    "browseAllCta": "제품 둘러보기"
   },
   "featureShowcase": {
     "eyebrow": "실제 예시",
-    "title": "실제 화장대에서 Haru가 보는 것",
+    "title": "실제 루틴에서 Haru가 보는 것",
     "subtitle": "인기 제품 8개로 만든 예시 — 이미 화장실에 있을 법한 제품들이에요.",
     "eveningRoutine": "저녁 루틴",
     "alertsDetected": "경고 {count}건 감지됨",
@@ -118,37 +87,43 @@
     }
   },
   "finalCta": {
-    "title": "이제 무엇과 무엇이 맞는지 추측하지 마세요.",
-    "subtitle": "화장대를 추가하면 나머지는 저희가 처리할게요. 무료로 시작하세요.",
+    "title": "무엇과 무엇이 맞는지 더 이상 추측하지 마세요.",
+    "subtitle": "루틴을 추가하면 Haru가 나머지를 정리합니다. 무료로 시작할 수 있어요.",
     "cta": "내 루틴 만들기"
   },
   "footer": {
-    "tagline": "Haru는 스킨케어 루틴의 성분을 해독해서 나쁜 조합과 불필요한 지출을 막아드려요.",
-    "guides": "스킨케어 가이드",
+    "tagline": "Haru는 스킨케어 루틴의 성분을 해석해 맞지 않는 조합과 불필요한 구매를 줄여줍니다.",
     "app": "앱 사용하기",
     "ingredients": "성분",
     "rights": "Haru. 마케팅 문구 없이, 정성껏 만들었습니다.",
     "legal": "약관 및 정책"
   },
   "shelf": {
-    "title": "내 화장대",
+    "title": "내 루틴",
     "subtitle": "Haru가 추적 중인 제품 {count}개.",
     "scan": "스캔",
     "addProduct": "제품 추가",
-    "emptyTitle": "화장대가 비어 있어요",
+    "emptyTitle": "루틴이 비어 있어요",
     "emptyText": "몇 가지 제품을 추가하면 Haru가 루틴을 만들고 잠재적인 충돌을 찾아드려요.",
     "readyTitle": "루틴을 확인할 준비가 되셨나요?",
     "readyText": "Haru가 제품 순서를 정하고 충돌을 표시해드려요.",
     "viewRoutine": "내 루틴 보기",
     "remove": "{name} 삭제",
-    "signInRequired": "화장대를 저장하고 관리하려면 로그인하세요. 제품 추천은 카탈로그에 남아있고, 화장대는 내 계정에만 저장돼요.",
+    "signInRequired": "개인 루틴을 저장하고 관리하려면 로그인하세요. 제품 추천은 카탈로그에 남아 있고, 루틴은 내 계정에만 저장됩니다.",
     "signInCta": "로그인",
     "signUpCta": "계정 만들기",
     "workspaceTitle": "내 루틴 공간",
-    "workspaceSignInText": "로그인하면 제품, 즐겨찾기, 메모, 영상, 나만의 루틴을 관리할 수 있어요."
+    "workspaceSignInText": "로그인하면 제품, 즐겨찾기, 메모, 영상, 나만의 루틴을 관리할 수 있어요.",
+    "signInToAdd": "내 루틴에 추가하려면 로그인하세요",
+    "shelfConflictTitle": "루틴에서 주의할 점",
+    "shelfConflictOk": "현재 루틴과 충돌하는 성분이 없어요.",
+    "addToShelf": "루틴에 추가",
+    "addedToShelf": "루틴에 추가됨",
+    "alreadyOnShelf": "이미 루틴에 있어요",
+    "noConflict": "현재 루틴과 충돌이 없어요"
   },
   "addProductDialog": {
-    "title": "화장대에 추가",
+    "title": "루틴에 추가",
     "description": "제품 데이터베이스에서 검색하거나, 포장을 스캔해서 바로 찾아보세요.",
     "searchPlaceholder": "브랜드나 제품을 검색하세요...",
     "noResults": "일치하는 제품이 없어요.",
@@ -409,8 +384,8 @@
     "errorText": "사진을 읽는 중 문제가 발생했어요. 조명을 밝게 하고 카메라를 정면으로 바라본 상태로 다시 시도해주세요.",
     "routineSectionTitle": "발견된 항목을 위한 맞춤 루틴",
     "routineSectionText": "위에서 표시된 항목을 케어하기 위해 제품 카탈로그에서 구성했어요.",
-    "addToShelf": "이 루틴을 내 화장대에 추가하기",
-    "addedToShelf": "화장대에 추가됨",
+    "addToShelf": "이 루틴을 내 루틴에 추가하기",
+    "addedToShelf": "루틴에 추가됨",
     "resultEyebrow": "페이스 스캔 결과",
     "modulesCount": "검토할 부위 {count}곳",
     "modulesSectionText": "각 항목에는 시각적으로 확인된 결과, 도움이 되는 일상 습관, 그리고 해당 부위에 맞는 제품이 안내돼요.",
@@ -492,14 +467,26 @@
       ]
     },
     "moduleClearTitle": "양호 — 특별한 조치 필요 없음",
-    "moduleClearText": "사진상 이 부위는 건강해 보여요. 지금은 이 부위를 위한 별도 제품이 필요하지 않아요."
+    "moduleClearText": "사진상 이 부위는 건강해 보여요. 지금은 이 부위를 위한 별도 제품이 필요하지 않아요.",
+    "meshFallback": "카메라를 사용할 수 없나요? 사진을 업로드하세요",
+    "position": {
+      "centerFace": "가이드 안에 얼굴을 맞춰 주세요",
+      "moveCloser": "조금 더 가까이 와 주세요",
+      "moveFarther": "조금 더 멀리 떨어져 주세요",
+      "lookStraight": "카메라를 정면으로 바라봐 주세요",
+      "holdStill": "잠시 움직이지 말아 주세요",
+      "improveLighting": "더 부드럽고 밝은 빛으로 이동해 주세요",
+      "faceDetected": "얼굴이 맞춰졌어요. 그대로 유지해 주세요.",
+      "noFace": "가이드 안에 얼굴을 넣어 주세요",
+      "multipleFaces": "한 명의 얼굴만 화면에 담아 주세요"
+    }
   },
   "scanPage": {
     "title": "제품 스캔",
-    "subtitle": "Free product scan: photograph the label or packaging and Haru will try to open the matching product sheet.",
-    "dropTitle": "Scan a product for free",
+    "subtitle": "무료 제품 스캔: 라벨이나 패키지를 촬영하면 Haru가 맞는 제품 페이지를 찾아 열어드려요.",
+    "dropTitle": "무료로 제품을 스캔하세요",
     "dropSubtitle": "제품 라벨 사진을 찍거나 갤러리에서 업로드하세요",
-    "faceScanCta": "Need a face scan instead?",
+    "faceScanCta": "얼굴 스캔이 필요하신가요?",
     "steps": [
       "전성분 리스트 읽는 중...",
       "활성 성분 확인 중...",
@@ -507,9 +494,9 @@
     ],
     "scanAnother": "다른 제품 스캔하기",
     "viewSheet": "전체 제품 정보 보기",
-    "addToShelf": "화장대에 추가",
-    "unavailableTitle": "We could not read this product yet",
-    "unavailableText": "Try a clearer photo, or type the brand, product name or barcode above.",
+    "addToShelf": "루틴에 추가",
+    "unavailableTitle": "아직 이 제품을 읽지 못했어요",
+    "unavailableText": "더 선명한 사진으로 다시 시도하거나, 위에 브랜드명, 제품명 또는 바코드를 입력하세요.",
     "errorTitle": "분석이 완료되지 않았어요",
     "errorText": "사진을 읽는 중 문제가 발생했어요. 라벨에 초점을 맞추고 조명을 밝게 하여 다시 시도해주세요.",
     "unmatchedTitle": "아직 카탈로그에 없는 제품이에요",
@@ -518,9 +505,12 @@
     "illegibleText": "전성분 리스트에 초점을 맞추고 화면에 더 크게 담아 다시 시도해주세요.",
     "barcodeReadTitle": "바코드 인식됨",
     "barcodeUnknownText": "바코드는 읽었지만 이 제품은 아직 카탈로그에 없어요. 대신 앞면 라벨을 촬영하거나 이름으로 검색해 보세요.",
-    "shelfConflictTitle": "화장대와 함께 주의할 점",
-    "shelfConflictOk": "현재 화장대와 충돌하는 성분이 없어요.",
-    "ocrDisclaimer": "라벨 판독은 작은 글씨를 잘못 읽을 수 있어요 — 루틴을 바꾸기 전에 실제 용기를 다시 확인하세요."
+    "shelfConflictTitle": "루틴에서 주의할 점",
+    "shelfConflictOk": "현재 루틴과 충돌하는 성분이 없어요.",
+    "ocrDisclaimer": "라벨 판독은 작은 글씨를 잘못 읽을 수 있어요 — 루틴을 바꾸기 전에 실제 용기를 다시 확인하세요.",
+    "searchLabel": "바코드, 브랜드 또는 제품명",
+    "searchPlaceholder": "예: COSRX 스네일 에센스, 880...",
+    "searchCta": "검색"
   },
   "productsPage": {
     "title": "제품 데이터베이스",
@@ -561,25 +551,25 @@
     "officialSite": "공식 사이트",
     "suitedFor": "추천 피부 타입",
     "targets": "타겟 고민",
-    "addToShelf": "화장대에 추가",
-    "alreadyOnShelf": "이미 화장대에 있어요",
-    "conflictWarning": "추가하면 현재 화장대와 {count}건의 충돌이 생겨요",
-    "noConflict": "현재 화장대와 충돌 없음",
-    "signInToAdd": "Sign in to add to my shelf",
-    "createAccountToSave": "Create an account to save products"
+    "addToShelf": "루틴에 추가",
+    "alreadyOnShelf": "이미 루틴에 있어요",
+    "conflictWarning": "추가하면 현재 루틴과 {count}건의 충돌이 생겨요",
+    "noConflict": "현재 루틴과 충돌 없음",
+    "signInToAdd": "내 루틴에 추가하려면 로그인하세요",
+    "createAccountToSave": "제품을 저장하려면 계정을 만드세요"
   },
   "routinePage": {
     "title": "내 루틴",
     "signInPrompt": "맞춤 루틴을 만들려면 로그인하세요.",
     "signInCta": "로그인",
-    "subtitle": "화장대 제품 {count}개를 기반으로 구성했어요.",
+    "subtitle": "루틴 제품 {count}개를 기반으로 구성했어요.",
     "morning": "아침",
     "evening": "저녁",
     "steps": "{count}단계",
     "noProducts": "이 시간대에 해당하는 제품이 없어요.",
     "conflictsDetected": "감지된 충돌",
     "noConflictsTitle": "충돌이 감지되지 않았어요 🎉",
-    "noConflictsText": "화장대의 성분들이 서로 잘 어울려요.",
+    "noConflictsText": "루틴의 성분들이 서로 잘 어울려요.",
     "duplicateActives": "중복된 활성 성분",
     "duplicateTitle": "같은 강력 활성 성분이 들어간 제품이 {count}개 있어요",
     "backToRoutine": "루틴으로 돌아가기",
@@ -703,8 +693,8 @@
     "pores": "모공",
     "dullness": "칙칙함",
     "barrier": "피부 장벽",
-    "anti-aging": "Anti-aging / firmness",
-    "uv-protection": "UV protection"
+    "anti-aging": "탄력 / 노화 징후",
+    "uv-protection": "자외선 차단"
   },
   "sensitivities": {
     "fragrance": "향료",
@@ -787,25 +777,40 @@
     "freeTitle": "무료",
     "freePrice": "₩0",
     "freeFeatures": [
-      "Free product scan",
-      "Full product database browsing",
-      "Product sheets with origin, composition notes, skin type and usage",
-      "Basic shelf and routine builder",
-      "Bottom navigation across the app"
+      "무료 제품 스캔",
+      "로그인 후 무료 얼굴 스캔",
+      "전체 제품 데이터베이스",
+      "원산지, 성분, 피부 타입, 사용법이 포함된 제품 정보",
+      "최대 12개 제품의 간단한 루틴"
     ],
     "premiumTitle": "프리미엄",
     "premiumPrice": "₩9,900/월",
     "premiumFeatures": [
-      "Everything in the free plan",
-      "Complete shelf audit by skin profile",
-      "Missing-step and product-change recommendations",
-      "Unlimited saved products on your shelf",
-      "Face scan access when photo tools are configured"
+      "무료 플랜의 모든 기능",
+      "저장 제품 무제한",
+      "피부 여권 기반 전체 감사",
+      "제품 및 루틴 변경 상세 추천",
+      "인쇄 가능한 PDF 리포트",
+      "제품 날짜, 반응, 즐겨찾기, 메모와 영상 관리"
     ],
     "subscribeCta": "프리미엄 구독하기",
     "currentPlanLabel": "현재 플랜",
     "manageBilling": "결제 관리",
-    "comingSoon": "아직 결제 기능이 설정되지 않았어요 — 곧 확인해주세요."
+    "comingSoon": "결제 기능이 아직 설정되지 않았어요.",
+    "kicker": "프리미엄",
+    "heroTitle": "Haru를 피부 관리의 전체 컨트롤 센터로 바꾸세요.",
+    "heroText": "무료 플랜은 로그인 후 제품 스캔과 얼굴 스캔을 사용할 수 있습니다. 프리미엄은 무제한 저장 제품, 전체 감사, PDF 리포트, 제품 관리와 장기 피부 추적을 열어줍니다.",
+    "freeNote": "제품을 탐색하고 간단한 루틴을 시작하기에 좋아요.",
+    "premiumNote": "전체 루틴을 시간에 따라 관리하고 싶은 사용자를 위한 플랜입니다.",
+    "auditIncluded": "전체 루틴 감사",
+    "auditText": "Haru가 빠진 단계, 중복 활성 성분, 자극 위험, 아침/저녁 배치와 피부 여권 적합도를 확인합니다.",
+    "reportIncluded": "인쇄 가능한 피부 리포트",
+    "reportText": "스캔 그래프, 감사 그래프, 루틴 변경, 생활 컨텍스트, 제품과 성분 결정을 PDF로 내보냅니다.",
+    "trackingIncluded": "루틴과 제품 관리",
+    "trackingText": "구매일, 유통기한, 개봉 후 기간, 메모, 반응, 즐겨찾기와 영상을 한곳에서 관리합니다.",
+    "wellnessIncluded": "웰니스와 얼굴 케어 도구",
+    "wellnessText": "호흡, 차분한 사운드, 얼굴 운동과 회복 조언이 루틴과 연결됩니다.",
+    "ctaText": "Stripe 결제 페이지에서 언제든 취소할 수 있습니다. Haru는 카드 번호를 저장하지 않습니다."
   },
   "ingredients": {
     "retinol": {
@@ -963,7 +968,7 @@
   },
   "routineGuides": {
     "indexTitle": "루틴 가이드",
-    "indexSubtitle": "목표별 시작점 — 그다음 내 화장대로 나만의 루틴을 만들어요.",
+    "indexSubtitle": "목표별 시작점 — 그다음 내 제품으로 나만의 루틴을 만들어요.",
     "slotAm": "아침",
     "slotPm": "저녁",
     "stepFor": "핵심",
@@ -976,8 +981,13 @@
     },
     "goalLabel": "목표",
     "introLabel": "핵심 아이디어",
+    "productRoutineTitle": "완성형 제품 루틴",
+    "productRoutineText": "각 단계에 맞는 Haru 카탈로그 제품 예시입니다. 내 루틴에 추가하기 전에 제품표에서 성분, 사용법, 피부 적합성을 확인하세요.",
+    "suggestedProducts": "제품 옵션",
+    "openProduct": "제품표 보기",
+    "noProductSuggestion": "아직 이 단계와 정확히 맞는 카탈로그 제품이 없습니다.",
     "keepInMind": "기억할 점",
-    "buildCta": "내 화장대로 루틴 만들기",
+    "buildCta": "내 제품으로 루틴 만들기",
     "buildCtaSub": "이건 일반 가이드예요. Haru가 실제 제품을 순서대로 배치하고 충돌을 알려줘요.",
     "disclaimer": "일반적인 템플릿이며 개인 맞춤이나 의학적 조언이 아니에요. 강한 액티브는 천천히 시작하고 패치 테스트를 하며, 통증·지속·악화가 있으면 전문가와 상담하세요.",
     "notFound": "이 가이드는 없어요.",
@@ -1052,7 +1062,7 @@
   },
   "exposure": {
     "title": "활성 성분 노출도",
-    "subtitle": "화장대가 반복하거나 겹쳐 쓰는 활성 성분을 한눈에 볼 수 있어요.",
+    "subtitle": "루틴에서 반복하거나 겹쳐 쓰는 활성 성분을 한눈에 볼 수 있어요.",
     "redundant": "{ingredient} 성분을 {count}개 제품에서 사용하고 있어요. 반드시 문제는 아니지만, 이렇게 반복한다고 해서 효과가 {count}배가 되지는 않아요.",
     "irritantStackEvening": "저녁 루틴에 자극이 될 수 있는 활성 성분({ingredients})이 여러 개 겹쳐 있어요. 같은 날 밤에 몰지 말고 여러 저녁에 나눠 쓰는 걸 고려해 보세요.",
     "irritantStackMorning": "아침 루틴에 자극이 될 수 있는 활성 성분({ingredients})이 여러 개 겹쳐 있어요. 함께 겹쳐 바르기보다 나눠서 사용하는 걸 고려해 보세요.",
@@ -1063,7 +1073,7 @@
     "subtitle": "강한 활성 성분을 나눠서 쓰도록 제안하는 저녁 루틴 리듬이에요.",
     "amNote": "아침 루틴은 매일 동일해요: 순한 세안, 수분 공급, 보습, 그리고 자외선 차단제.",
     "recovery": "회복 — 장벽 케어",
-    "noStrong": "화장대에 나눠 써야 할 강한 활성 성분(레티노이드, AHA/BHA)이 없어요 — 간단하고 꾸준한 저녁 루틴이면 충분해요.",
+    "noStrong": "루틴에 나눠 써야 할 강한 활성 성분(레티노이드, AHA/BHA)이 없어요 — 간단하고 꾸준한 저녁 루틴이면 충분해요.",
     "disclaimer": "제안하는 리듬일 뿐 처방이 아니에요 — 자신의 피부 반응에 맞춰 조절하고, 피부가 자극을 느끼면 활성 성분은 건너뛰세요."
   },
   "reactions": {
@@ -1150,12 +1160,108 @@
     "disclaimer": "점수는 일반 사진을 바탕으로 한 시각적 화장품 추정치이며 임상 측정이 아니고, Haru는 원인이 아니라 가능성 있는 요인을 설명해요. 이 요약은 대면 진료를 대신하지 않아요.",
     "entryTitle": "전문가용 요약",
     "entryText": "프로필, 스캔, 반응을 요약으로 내보내 피부과에 가져가세요.",
-    "entryCta": "요약 열기"
+    "entryCta": "요약 열기",
+    "included": "포함됨",
+    "missing": "아직 기록되지 않음",
+    "auditChartTitle": "감사 그래프",
+    "auditDate": "최근 감사: {date}",
+    "auditLive": "현재 루틴 기준 실시간 계산",
+    "auditOverall": "루틴 전체 신뢰도",
+    "waterIntake": "수분 섭취",
+    "sleep": "수면",
+    "stress": "스트레스",
+    "sport": "운동 / 움직임",
+    "sunExposure": "자외선 노출",
+    "scanChartTitle": "부위별 얼굴 스캔 그래프",
+    "routineProducts": "분석된 제품",
+    "routineConflicts": "감지된 충돌",
+    "routineDuplicates": "중복 활성 성분 그룹",
+    "exposureFindings": "활성 성분 노출 상세",
+    "redundantFinding": "{ingredient} 성분이 {count}개 제품에 반복됩니다. 주 성분 제품을 하나로 정하면 피부 반응을 더 정확히 볼 수 있어요.",
+    "stackFinding": "{slot}: 강한 활성 성분이 함께 겹쳐 있습니다({ingredients}). 시간을 나누거나 회복일을 추가하세요.",
+    "routineChangesTitle": "루틴 변경 상세",
+    "morningPlan": "아침 계획",
+    "eveningPlan": "저녁 계획",
+    "hydrationLifestyleTitle": "수분, 수면, 피부 컨디션",
+    "hydrationAdvice": "하루 동안 물을 규칙적으로 마시세요. 탈수는 피부를 칙칙하고 당기게 만들 수 있어요.",
+    "sleepAdvice": "수면이 짧은 날은 저녁 루틴을 단순하게 유지하세요. 피곤한 날에는 피부 장벽이 새 제품을 덜 견딜 수 있어요.",
+    "stressAdvice": "스트레스가 높을 때는 여러 활성 성분을 한꺼번에 추가하지 말고 붉어짐, 긁음, 따가움을 관찰하세요.",
+    "sunAdvice": "SPF는 광채, 레티노이드, 각질 케어를 안전하게 유지하는 기본 조건입니다. 야외와 땀을 흘린 뒤에는 다시 바르세요.",
+    "movementLifestyleTitle": "운동, 땀, 회복",
+    "sportAdvice": "운동 후에는 땀을 부드럽게 씻어내고 피부가 뜨겁거나 붉으면 강한 산 성분을 바로 쓰지 마세요.",
+    "sweatAdvice": "땀과 SPF는 모공을 막기 쉬우므로 활동적인 날에는 저녁 세안이 더 중요해요.",
+    "recoveryAdvice": "격한 운동, 수면 부족, 눈에 보이는 자극 뒤에는 세안, 보습, 추가 활성 성분 없는 회복 루틴을 두세요.",
+    "productDecisionsTitle": "제품 및 성분 결정",
+    "timing": "사용 시간",
+    "frequency": "빈도",
+    "openedOn": "개봉일",
+    "expiryDate": "유통기한",
+    "userNote": "사용자 메모",
+    "reactionNotesTitle": "최근 반응 메모",
+    "bilanTitle": "전체 감사 설문",
+    "bilanDate": "설문 날짜",
+    "auditScores": {
+      "oiliness_tendency": "유분 경향",
+      "dryness_tendency": "건조 경향",
+      "combination_pattern": "복합 피부 패턴",
+      "dehydration_risk": "탈수 위험",
+      "barrier_impairment_risk": "장벽 약화 위험",
+      "sensitivity_score": "민감도",
+      "redness_score": "붉어짐",
+      "congestion_score": "막힘",
+      "pigmentation_score": "색소 침착",
+      "routine_irritation_risk": "루틴 자극 위험",
+      "routine_consistency_score": "루틴 일관성"
+    },
+    "slots": {
+      "morning": "아침",
+      "evening": "저녁",
+      "both": "아침과 저녁",
+      "pause": "일시 중지"
+    },
+    "priorityLevels": {
+      "immediate": "즉시",
+      "short_term": "단기",
+      "later": "나중에"
+    },
+    "productDecisions": {
+      "keep": "유지",
+      "adjust": "조정",
+      "pause": "중지",
+      "replace": "교체"
+    },
+    "lifestyle": {
+      "water": {
+        "low": "낮음",
+        "medium": "보통",
+        "high": "높음"
+      },
+      "sleep": {
+        "under6": "6시간 미만",
+        "6to8": "6~8시간",
+        "over8": "8시간 이상"
+      },
+      "stress": {
+        "low": "낮음",
+        "medium": "보통",
+        "high": "높음"
+      },
+      "exercise": {
+        "rarely": "드물게",
+        "weekly": "매주",
+        "frequent": "자주"
+      },
+      "sun": {
+        "low": "낮음",
+        "medium": "보통",
+        "high": "높음"
+      }
+    }
   },
   "shelfCare": {
-    "title": "화장대 관리",
+    "title": "제품 관리",
     "subtitle": "개봉일, 유통기한, 유사 중복 제품 — 방치되거나 겹치는 제품이 없도록.",
-    "shelfValue": "화장대 가치:",
+    "shelfValue": "루틴 가치:",
     "duplicate": "{category}에서 {concern}용 제품이 {count}개 있어요 — 하나를 다 쓰고 다른 것을 개봉하세요.",
     "expiryLabel": "개봉일 & 유통기한",
     "openedOn": "개봉일",
@@ -1165,7 +1271,9 @@
     "expired": "기한 지남",
     "soon": "곧 만료",
     "until": "{date}까지",
-    "disclaimer": "유통기한은 개봉일과 개봉 후 사용기간(용기의 기호)을 바탕으로 추정한 값이에요. 보장이 아니라 알림이며, 냄새·색·질감의 변화도 함께 확인하세요."
+    "disclaimer": "유통기한은 개봉일과 개봉 후 사용기간(용기의 기호)을 바탕으로 추정한 값이에요. 보장이 아니라 알림이며, 냄새·색·질감의 변화도 함께 확인하세요.",
+    "signInSubtitle": "로그인하면 모든 기기에서 루틴을 동기화할 수 있어요.",
+    "signUpSubtitle": "계정을 만들어 루틴을 저장하세요."
   },
   "environment": {
     "title": "현재 지역 환경",
@@ -1247,8 +1355,8 @@
     "errorEmailTaken": "이미 이 이메일로 가입된 계정이 있어요.",
     "errorGeneric": "문제가 발생했어요. 다시 시도해주세요.",
     "errorWeakPassword": "비밀번호는 최소 8자 이상이어야 해요.",
-    "signInSubtitle": "로그인하면 여러 기기에서 화장대를 동기화할 수 있어요.",
-    "signUpSubtitle": "계정을 만들면 화장대와 루틴을 저장할 수 있어요."
+    "signInSubtitle": "로그인하면 여러 기기에서 루틴을 동기화할 수 있어요.",
+    "signUpSubtitle": "계정을 만들면 루틴을 저장할 수 있어요."
   },
   "profile": {
     "title": "프로필",
@@ -1256,7 +1364,7 @@
     "shelfCount": "추적 중인 제품 {count}개",
     "signOutCta": "로그아웃",
     "deleteAccount": "계정 삭제",
-    "deleteAccountConfirm": "계정과 화장대가 영구적으로 삭제되며 되돌릴 수 없어요.",
+    "deleteAccountConfirm": "계정과 루틴이 영구적으로 삭제되며 되돌릴 수 없어요.",
     "language": "언어",
     "theme": "테마",
     "themeLight": "라이트",
@@ -1315,7 +1423,9 @@
       "favorites": "즐겨찾기",
       "notes": "메모",
       "links": "영상",
-      "reactions": "반응"
+      "reactions": "반응",
+      "analysis": "루틴 분석",
+      "productCare": "제품 관리"
     },
     "routineSlot": {
       "both": "아침과 저녁",
@@ -1326,7 +1436,77 @@
     "routineProductsTitle": "이 루틴의 제품",
     "routineProductsText": "제품을 클릭하면 시간대, 카테고리, 메모, 즐겨찾기 여부를 수정하거나 삭제할 수 있어요.",
     "viewSheet": "제품 상세 보기",
-    "embedUnavailable": "이 영상은 아직 Haru 안에서 재생할 수 없어요. YouTube, Instagram Reel 또는 TikTok 영상을 저장하면 Haru에서 바로 볼 수 있어요."
+    "embedUnavailable": "이 영상은 아직 Haru 안에서 재생할 수 없어요. YouTube, Instagram Reel 또는 TikTok 영상을 저장하면 Haru에서 바로 볼 수 있어요.",
+    "reliability": {
+      "title": "Haru 신뢰도 엔진",
+      "subtitle": "Haru는 사진 품질, 저장된 제품, 성분 노출, 반응, 주간 리듬과 환경을 함께 확인한 뒤 조언합니다.",
+      "scan": "품질 확인 얼굴 스캔",
+      "scanText": "조명, 흔들림, 각도, 필터와 가려진 부위를 확인해 보이지 않는 것을 본 것처럼 판단하지 않도록 합니다.",
+      "passport": "피부 여권",
+      "passportText": "각 스캔은 부위별 신뢰도와 함께 비교 가능한 체크포인트로 저장됩니다.",
+      "exposure": "성분 노출 지도",
+      "exposureText": "반복되는 활성 성분, 아침/저녁 배치와 강한 성분의 겹침을 전체 루틴에서 확인합니다.",
+      "protocol": "루틴 랩",
+      "protocolText": "한 번에 하나의 변화만 적용하고 7일, 14일, 28일 체크포인트로 관찰합니다.",
+      "reactions": "반응 기록",
+      "reactionsText": "반복되는 불편감이 특정 제품이나 루틴 변화와 연결되는지 확인합니다.",
+      "environment": "환경 반영",
+      "environmentText": "자외선, 습도, 건조함, 추위와 공기 질이 오늘의 조언을 조정할 수 있습니다.",
+      "report": "전문가용 리포트",
+      "reportText": "Haru가 아는 것, 불확실한 것, 지켜보거나 전문가에게 확인할 부분을 나누어 내보냅니다.",
+      "passportTitle": "나의 피부 여권",
+      "passportIntro": "피부 타입, 민감 요인, 생활 리듬과 추천 전 확인해야 할 신호를 한눈에 정리합니다.",
+      "scanCta": "얼굴 스캔 시작",
+      "skinTypeExerciseCta": "피부 타입 확인하기",
+      "skinDetails": "피부 상세",
+      "noSkinProfile": "아직 피부 여권이 없습니다. 피부 타입 확인을 완료하면 더 정확한 기준이 만들어집니다.",
+      "skinType": "피부 타입",
+      "concerns": "고민",
+      "sensitivities": "민감 요인",
+      "climate": "기후",
+      "hydration": "수분 섭취",
+      "sleep": "수면",
+      "stress": "스트레스",
+      "age": "나이",
+      "sunExposure": "자외선 노출",
+      "sport": "운동"
+    },
+    "productDatesTitle": "제품 날짜",
+    "purchaseDate": "구매일",
+    "expiryDate": "유통기한",
+    "periodAfterOpening": "개봉 후 사용 기간",
+    "datePlaceholder": "YYYY-MM-DD",
+    "analysisAdvice": {
+      "title": "루틴을 완성하기 위한 우선순위",
+      "subtitle": "Haru가 루틴을 안정적으로 읽기 전에 필요한 기본 요소를 찾았어요.",
+      "completeTitle": "기본 루틴이 잘 갖춰져 있어요.",
+      "completeText": "세안, 보습, 보호, 아침/저녁 배치가 갖춰져 있어요. 이제 리듬, 중복 성분, 시간에 따른 반응을 관찰하세요.",
+      "cleanser": {
+        "title": "세안 단계 추가",
+        "text": "루틴 감사에는 특히 저녁 세안 단계가 필요해요. SPF, 피지, 메이크업이 피부에 남지 않게 하기 위해서예요."
+      },
+      "moisturizer": {
+        "title": "장벽 보습 추가",
+        "text": "보습제나 장벽 크림은 강한 활성 성분의 균형을 잡고 루틴이 과하게 자극적이지 않도록 도와줘요."
+      },
+      "spf": {
+        "title": "아침 SPF 추가",
+        "text": "아침 SPF가 없으면 광채, 레티노이드, 각질 케어를 안전하게 판단하기 어려워요."
+      },
+      "morning": {
+        "title": "아침 루틴 정리",
+        "text": "아침은 보호가 중심이에요: 가벼운 수분, 견딜 수 있다면 항산화, 그리고 SPF."
+      },
+      "evening": {
+        "title": "저녁 루틴 정리",
+        "text": "저녁은 제거와 회복이 중심이에요. 강한 활성 성분은 천천히, 같은 밤에 모두 겹치지 않게 넣으세요."
+      }
+    },
+    "momentLabel": "사용 시간",
+    "categoryLabel": "카테고리",
+    "noteLabel": "메모",
+    "openedDate": "개봉일",
+    "openedOn": "개봉일"
   },
   "accountSettings": {
     "title": "계정 정보",
@@ -1361,7 +1541,7 @@
     "termsTitle": "판매 약관",
     "termsIntro": "이 판매 약관은 Haru의 유료 기능인 프리미엄 구독과 1회성 얼굴 스캔 크레딧 구매에 적용됩니다. 유료 기능을 이용하면 본 약관에 동의하는 것으로 간주됩니다.",
     "termsServiceTitle": "포함 내용",
-    "termsServiceText": "무료 요금제에는 제품 스캔, 전체 제품 데이터베이스, 기본 화장대 및 루틴 빌더가 포함됩니다. 프리미엄(구독)은 피부 프로필 기반 전체 루틴 점검, 무제한 제품 저장, 무제한 얼굴 스캔을 추가로 제공합니다. 구독 없이도 얼굴 스캔은 1회성 크레딧으로 개별 구매할 수 있습니다.",
+    "termsServiceText": "무료 요금제에는 제품 스캔, 전체 제품 데이터베이스, 기본 루틴 빌더가 포함됩니다. 프리미엄(구독)은 피부 프로필 기반 전체 루틴 점검, 무제한 제품 저장, 무제한 얼굴 스캔을 추가로 제공합니다. 구독 없이도 얼굴 스캔은 1회성 크레딧으로 개별 구매할 수 있습니다.",
     "termsPriceTitle": "가격",
     "termsPriceText": "프리미엄 구독: 월 6.99유로. 1회성 얼굴 스캔: 회당 9유로, 구독 불필요. 가격은 결제 전 업그레이드 페이지에 유로로 표시되며 결제 시 적용되는 세금을 포함합니다. Haru는 다음 결제 주기부터 가격을 변경할 수 있으며, 활성 구독자에게는 변경 사항이 적용되기 전에 안내됩니다.",
     "termsPaymentTitle": "결제",
@@ -1375,7 +1555,7 @@
     "privacyTitle": "개인정보 처리방침",
     "privacyIntro": "이 정책은 Haru가 처리하는 개인정보의 종류, 이유, 그리고 이를 관리하는 방법을 설명합니다.",
     "privacyDataTitle": "처리하는 정보",
-    "privacyDataText": "계정 정보(이름, 이메일, 비밀번호 — 평문이 아닌 해시 형태로 저장), 피부 프로필 답변, 저장한 화장대·개인 메모·저장한 링크, 얼굴 스캔 결과, 동의 시 뉴스레터 구독 상태, 그리고 제3자 광고 추적 없이 앱 운영에 사용되는 기본적인 자체 이용 데이터입니다.",
+    "privacyDataText": "계정 정보(이름, 이메일, 비밀번호 — 평문이 아닌 해시 형태로 저장), 피부 프로필 답변, 저장한 루틴·개인 메모·저장한 링크, 얼굴 스캔 결과, 동의 시 뉴스레터 구독 상태, 그리고 제3자 광고 추적 없이 앱 운영에 사용되는 기본적인 자체 이용 데이터입니다.",
     "privacyScanTitle": "얼굴 및 제품 스캔 사진",
     "privacyScanText": "얼굴 또는 제품 스캔을 위해 제출한 사진은 분석을 위해 Anthropic의 Claude API로 전송되며 Haru에 저장되지 않습니다. 이후 확인할 수 있도록 계정에는 결과(점수, 작성된 메모, 요약)만 저장됩니다.",
     "privacySubprocessorsTitle": "Haru를 대신해 정보를 처리하는 업체",
@@ -1383,7 +1563,7 @@
     "privacyRightsTitle": "이용자의 권리",
     "privacyRightsText": "프로필에서 언제든지 계정 정보를 확인하고 수정할 수 있으며, 계정 설정에서 계정과 관련 데이터를 영구적으로 삭제할 수 있습니다. 그 외 정보 관련 요청은 위 법적 고지의 연락처를 이용해 주세요.",
     "privacyRetentionTitle": "보관 기간",
-    "privacyRetentionText": "계정 및 프로필 정보는 계정이 존재하는 동안 보관됩니다. 계정을 삭제하면 화장대, 메모, 저장한 링크, 피부 프로필, 스캔 기록, 점검 기록이 함께 삭제됩니다.",
+    "privacyRetentionText": "계정 및 프로필 정보는 계정이 존재하는 동안 보관됩니다. 계정을 삭제하면 루틴, 메모, 저장한 링크, 피부 프로필, 스캔 기록, 점검 기록이 함께 삭제됩니다.",
     "cookiesTitle": "쿠키 정책",
     "cookiesIntro": "Haru는 소수의 쿠키와 브라우저에 로컬로 저장되는 설정을 사용하며, 자세한 내용은 아래와 같습니다.",
     "cookiesEssentialTitle": "필수",
@@ -1396,61 +1576,77 @@
     "contactText": "본 약관, 이용자의 정보, 또는 계정에 관한 문의가 있으면 위 법적 고지에 있는 연락처로 Haru에 문의해 주세요."
   },
   "auditShowcase": {
-    "eyebrow": "루틴 점검",
-    "title": "이미 쓰는 제품이 피부에 맞는지 확인하세요.",
-    "subtitle": "Haru는 저장한 제품, 피부 타입, 활성 성분, 아침과 저녁 단계를 함께 보고 루틴에서 부족하거나 과한 부분을 정리해 줍니다.",
-    "ctaPrimary": "내 루틴 점검하기",
-    "ctaSecondary": "제품 먼저 둘러보기",
-    "note": "개인 루틴 점검은 로그인 후 사용할 수 있어요. 제품 스캔과 제품 정보 확인은 무료로 시작할 수 있습니다.",
-    "panelEyebrow": "루틴 분석",
-    "priorityTitle": "우선순위 추천",
+    "eyebrow": "피부 감사",
+    "title": "내 루틴이 피부에 어떤 영향을 주는지 확인하세요.",
+    "subtitle": "Haru는 저장된 제품, 아침과 저녁 단계, 활성 성분, 피부 프로필을 함께 분석해 무엇이 맞고, 무엇이 겹치며, 무엇이 부족한지 보여줍니다.",
+    "ctaPrimary": "내 감사 시작",
+    "ctaSecondary": "얼굴 스캔부터 시작",
+    "note": "감사는 루틴과 보이는 피부 상태를 바탕으로 한 뷰티 가이드입니다. 진단이 아니며 피부과 상담을 대체하지 않습니다.",
+    "panelEyebrow": "개인 루틴 점검",
+    "priorityTitle": "결과는 간단하게",
     "checks": [
       {
-        "title": "필수 단계",
-        "text": "세안, 보습, 자외선 차단처럼 루틴의 기본 단계가 빠져 있는지 확인합니다."
+        "title": "제품 감사",
+        "text": "목적, 주요 활성 성분, 피부 타입 적합도, 자극 위험, 빈도와 각 제품의 사용 방법."
       },
       {
-        "title": "성분 조합",
-        "text": "레티노이드, 산 성분, 비타민 C처럼 같이 쓰기 까다로운 조합을 확인합니다."
+        "title": "루틴 감사",
+        "text": "빠진 단계, 중복 제품, 반복되는 활성 성분, 목표와 맞지 않는 제품."
       },
       {
-        "title": "아침과 저녁",
-        "text": "SPF는 아침에, 자극이 강한 케어는 주로 저녁에 배치되었는지 봅니다."
+        "title": "아침 루틴",
+        "text": "사용 순서, 수분, 자외선 차단, 강한 활성 성분이 낮 시간에 안전하게 배치되었는지 확인합니다."
       },
       {
-        "title": "피부 타입",
-        "text": "건성, 지성, 민감성, 복합성에 맞지 않는 제품이나 과한 단계를 찾아냅니다."
+        "title": "저녁 루틴",
+        "text": "회복 밤, 각질 케어 또는 레티노이드 리듬, 맞지 않는 레이어와 장벽 케어."
       }
     ],
     "priorities": [
-      "이번 주에 바로 바꿀 수 있는 3-5개의 우선 행동.",
-      "아침과 저녁을 나누어 정리한 현실적인 루틴.",
-      "부족한 단계에 맞춘 제품 추천."
-    ]
+      "긴 조언 대신 세 가지에서 다섯 가지의 명확한 우선순위.",
+      "바로 실행할 수 있는 행동과 다음 몇 주를 위한 현실적인 계획.",
+      "루틴에서 부족한 부분에 맞춘 제품 제안."
+    ],
+    "comparison": {
+      "scanTitle": "얼굴 스캔",
+      "scanText": "사진 한 장으로 보이는 피부 상태를 읽습니다. 그 순간 얼굴에 실제로 보이는 부분만 관찰합니다.",
+      "scanItems": [
+        "보이는 영역: 결, 붉어짐, 모공, 잡티, 잔주름, 광채와 수분 신호.",
+        "사진 품질: 조명, 흔들림, 각도, 가려진 부위와 결과 신뢰도.",
+        "결과: 보이는 고민별 맞춤 제스처와 제품 제안을 담은 피부 스냅샷."
+      ],
+      "auditTitle": "루틴 감사",
+      "auditText": "저장된 제품, 아침/저녁 단계, 피부 프로필을 함께 확인하는 전체 루틴 점검입니다.",
+      "auditItems": [
+        "제품: 목적, 주요 활성 성분, 구성 메모, 피부 타입 적합도와 빈도.",
+        "루틴 구조: 빠진 단계, 중복 활성 성분, 위험한 조합과 아침/저녁 배치.",
+        "결과: 우선순위, 유지할 것, 쉬어야 할 것, 부족한 제품이나 습관."
+      ]
+    }
   },
   "wellnessShowcase": {
     "eyebrow": "웰니스",
     "title": "스킨케어는 바르는 것만이 아니에요.",
-    "subtitle": "스트레스, 수면, 얼굴 긴장은 피부가 보이고 느껴지는 방식에 영향을 줘요. Haru의 웰니스 공간은 의학적 치료가 아닌 실용적인 회복 지원입니다 — 호흡, 수면 힌트, 릴랙싱 사운드, 페이스 케어 라이브러리를 담았어요.",
+    "subtitle": "스트레스, 수면, 얼굴 긴장은 피부가 보이고 느껴지는 방식에 영향을 줍니다. Haru의 웰니스 공간은 호흡, 수면 힌트, 편안한 소리, 얼굴 케어 라이브러리로 실용적이고 차분한 비의료적 도움을 제공합니다.",
     "ctaPrimary": "웰니스 열기",
-    "note": "웰니스 도구는 휴식과 생활 지원용이며, 의학적 치료나 전문가 상담을 대신하지 않습니다.",
+    "note": "웰니스 도구는 휴식과 생활 습관 지원용이며, 의학적 치료나 전문가 상담을 대체하지 않습니다.",
     "panelEyebrow": "차분하고 실용적인 지원",
     "checks": [
       {
         "title": "스트레스와 피부",
-        "text": "스트레스가 유분감, 만지기 습관, 염증으로 어떻게 나타나는지, 그리고 어떻게 다루면 좋을지 알아보세요."
+        "text": "스트레스가 유분, 손대는 습관, 염증으로 어떻게 나타날 수 있는지와 대처법."
       },
       {
         "title": "가이드 호흡",
-        "text": "밤 루틴 전이나 턱이 긴장될 때, 2분간 리듬에 맞춰 호흡하는 연습이에요."
+        "text": "저녁 루틴 전이나 턱 긴장이 있을 때 하는 2분 호흡 운동."
       },
       {
-        "title": "릴랙싱 사운드",
-        "text": "화이트 노이즈, 비 소리, 파도 소리, 단순한 릴랙싱 톤을 실시간으로 생성해요."
+        "title": "편안한 소리",
+        "text": "백색소음, 빗소리, 바다 질감, 간단한 이완 톤을 바로 재생합니다."
       },
       {
-        "title": "페이스 케어 라이브러리",
-        "text": "부드러운 마사지, 괄사 기본, 턱 이완, 페이스 요가 루틴이에요."
+        "title": "얼굴 케어 라이브러리",
+        "text": "부드러운 마사지, 괄사 기본, 턱 이완, 얼굴 요가 루틴."
       }
     ]
   },

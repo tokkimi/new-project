@@ -8,16 +8,13 @@ export function SiteFooter() {
   const tNewsletter = useTranslations("newsletterSignup");
 
   return (
-    <footer className="border-t border-border/60">
+    <footer className="bg-transparent">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col gap-2">
           <Logo />
           <p className="max-w-sm text-sm text-muted-foreground">{t("tagline")}</p>
         </div>
         <div className="flex gap-8 text-sm text-muted-foreground">
-          <Link href="/guides" className="hover:text-foreground">
-            {t("guides")}
-          </Link>
           <Link href="/app/shelf" className="hover:text-foreground">
             {t("app")}
           </Link>
@@ -29,14 +26,14 @@ export function SiteFooter() {
           </Link>
         </div>
       </div>
-      <div className="border-t border-border/60 px-6 py-8">
+      <div className="px-6 py-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm font-medium">{tNewsletter("title")}</p>
           <NewsletterSignup />
         </div>
       </div>
-      <div className="border-t border-border/60 py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {t("rights")}
+      <div className="py-4 text-center text-xs text-muted-foreground">
+        &copy; {new Date().getFullYear()} {t("rights")}
       </div>
     </footer>
   );

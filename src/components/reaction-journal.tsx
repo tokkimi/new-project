@@ -19,7 +19,7 @@ type Reaction = {
 };
 
 const SELECT_CLASS =
-  "h-10 w-full min-w-0 rounded-xl border border-input bg-card px-3 text-sm text-foreground";
+  "h-10 w-full min-w-0 rounded-xl border border-white/40 bg-white/[0.025] px-3 text-sm text-white placeholder:text-white/60 backdrop-blur-xl";
 
 export function ReactionJournal({ products }: { products: Product[] }) {
   const t = useTranslations("reactions");
@@ -79,10 +79,10 @@ export function ReactionJournal({ products }: { products: Product[] }) {
               type="button"
               onClick={() => setType(code)}
               className={cn(
-                "rounded-full px-3 py-1.5 text-sm transition-colors",
+                "rounded-full border px-3 py-1.5 text-sm transition-colors",
                 type === code
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-muted-foreground hover:text-foreground"
+                  ? "border-white/55 bg-white/12 text-white"
+                  : "border-white/35 bg-transparent text-white/78 hover:bg-white/8 hover:text-white"
               )}
             >
               {t(`types.${code}`)}
@@ -127,7 +127,7 @@ export function ReactionJournal({ products }: { products: Product[] }) {
             {recurrences.map((r) => (
               <li
                 key={`${r.productId}-${r.type}`}
-                className="flex items-start gap-2.5 rounded-2xl bg-am/10 px-4 py-3 text-sm text-muted-foreground"
+                className="flex items-start gap-2.5 rounded-2xl border border-white/25 bg-white/[0.025] px-4 py-3 text-sm text-white/75"
               >
                 <AlertTriangle className="mt-0.5 size-4 shrink-0 text-am-foreground" />
                 <span>

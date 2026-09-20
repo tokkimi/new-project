@@ -60,7 +60,7 @@ export function WellnessPlayer({
       if (audioUrl) {
         const audio = audioRef.current ?? new Audio(audioUrl);
         audio.loop = true;
-        audio.volume = 0.5;
+        audio.volume = 0.85;
         audioRef.current = audio;
         await audio.play();
         cleanupRef.current = () => {
@@ -78,7 +78,7 @@ export function WellnessPlayer({
       const ctx = new AudioContextCtor();
       if (ctx.state === "suspended") await ctx.resume();
       const gain = ctx.createGain();
-      gain.gain.value = 0.045;
+      gain.gain.value = 0.13;
       gain.connect(ctx.destination);
 
       if (mode === "calm432" || mode === "soft528") {
@@ -116,13 +116,13 @@ export function WellnessPlayer({
   };
 
   return (
-    <div className="flex items-center gap-3 rounded-3xl bg-card/80 p-4 ring-1 ring-border/50">
+    <div className="flex items-center gap-3 rounded-3xl border border-white/30 bg-white/[0.035] p-4 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl">
       <Button type="button" size="icon" variant={playing ? "default" : "outline"} onClick={toggle}>
         {playing ? <Pause className="size-4" /> : <Play className="size-4" />}
       </Button>
       <div className="min-w-0">
         <p className="font-medium">{label}</p>
-        <p className="text-sm text-muted-foreground">{description}</p>
+        <p className="text-sm text-white/64">{description}</p>
         {error && <p className="mt-1 text-xs text-destructive">{errorText}</p>}
       </div>
     </div>

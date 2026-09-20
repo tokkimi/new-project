@@ -8,26 +8,27 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { HeaderAuthStatus } from "@/components/header-auth-status";
 
-export function SiteHeader() {
+export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
   const t = useTranslations("nav");
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="shrink-0">
-          <Logo />
-        </Link>
-        <nav className="hidden items-center gap-5 text-sm font-medium text-muted-foreground md:flex">
-          <Link href="/guides" className="transition-colors hover:text-foreground">
-            {t("guides")}
-          </Link>
-          <Link href="/app/products" className="transition-colors hover:text-foreground">
-            {t("products")}
-          </Link>
-        </nav>
-        <div className="flex items-center gap-3">
+    <header
+      className={
+        overlay
+          ? "fixed inset-x-0 top-0 z-40 bg-white/[0.025] backdrop-blur-[2px] dark:bg-black/[0.025]"
+          : "sticky top-0 z-40 bg-white/[0.025] backdrop-blur-[2px] dark:bg-black/[0.025]"
+      }
+    >
+      <div className="relative mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <div className="absolute left-4 flex items-center sm:left-6">
           <LocaleSwitcher compact className="sm:hidden" />
           <LocaleSwitcher className="hidden sm:inline-flex" />
+        </div>
+        <Link href="/" className="absolute left-1/2 shrink-0 -translate-x-1/2">
+          <Logo />
+        </Link>
+        <div className="w-16 sm:w-32" />
+        <div className="ml-auto flex items-center gap-2 sm:gap-3">
           <ThemeToggle />
           <Button asChild size="sm" variant="outline" className="hidden sm:inline-flex">
             <Link href="/app/upgrade">Premium</Link>

@@ -21,11 +21,10 @@ export function FeatureShowcase() {
   const headlineWarning = routine.warnings.find((w) => w.rule.severity === "avoid");
 
   return (
-    <section id="features" className="bg-secondary/40 py-24">
+    <section id="features" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto mb-14 max-w-xl text-center">
-          <p className="text-sm font-medium text-primary">{t("eyebrow")}</p>
-          <h2 className="mt-2 text-balance font-serif text-3xl md:text-4xl">
+          <h2 className="text-balance text-3xl font-semibold md:text-5xl">
             {t("title")}
           </h2>
           <p className="mt-3 text-muted-foreground">{t("subtitle")}</p>
@@ -42,7 +41,7 @@ export function FeatureShowcase() {
             <Card className="h-full gap-5">
               <div className="flex items-center gap-2">
                 <Moon className="size-4 text-pm" />
-                <h3 className="font-serif text-lg">{t("eveningRoutine")}</h3>
+                <h3 className="text-lg font-semibold">{t("eveningRoutine")}</h3>
               </div>
               <ol className="flex flex-col gap-3">
                 {routine.pm.map((step, i) => {
@@ -54,7 +53,7 @@ export function FeatureShowcase() {
                   return (
                     <li
                       key={step.product.id}
-                      className="flex items-center gap-3 rounded-xl bg-background px-3 py-2.5"
+                      className="haru-glow-card flex items-center gap-3 rounded-xl px-3 py-2.5"
                     >
                       <span className="w-4 shrink-0 text-center text-xs font-medium text-muted-foreground">
                         {i + 1}
@@ -99,7 +98,7 @@ export function FeatureShowcase() {
 
                 {headlineWarning && (
                   <>
-                    <h3 className="font-serif text-xl leading-snug">
+                    <h3 className="text-xl font-semibold leading-snug">
                       {tConflicts(`${headlineWarning.rule.id}.headline`)}
                     </h3>
                     <p className="text-sm leading-relaxed text-muted-foreground">
@@ -110,7 +109,7 @@ export function FeatureShowcase() {
                       <span className="text-muted-foreground">+</span>
                       <Badge variant="outline">{headlineWarning.productB.name}</Badge>
                     </div>
-                    <div className="rounded-xl bg-card p-4 text-sm">
+                    <div className="haru-glow-card rounded-xl p-4 text-sm">
                       <p className="mb-1 flex items-center gap-1.5 font-medium">
                         <Layers className="size-3.5 text-primary" />
                         {t("whatHaruSuggests")}
@@ -141,7 +140,7 @@ export function FeatureShowcase() {
                 <span className="text-muted-foreground">{t("amLabel")}</span>
               </p>
             </div>
-            <div className="h-4 w-px bg-border" />
+            <div className="hidden h-4 w-px bg-white/30 sm:block" />
             <div className="flex items-center gap-2">
               <Moon className="size-4 text-pm" />
               <p className="text-sm">

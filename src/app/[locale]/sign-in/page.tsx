@@ -43,7 +43,7 @@ export default function SignInPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-secondary/30 px-6 py-16">
+    <div className="flex min-h-screen items-center justify-center px-6 py-16">
       <div className="flex w-full max-w-sm flex-col items-center gap-6">
         <Link href="/">
           <Logo />

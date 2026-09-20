@@ -7,7 +7,6 @@ import {
   AlertCircle,
   AlertTriangle,
   ArrowRight,
-  Camera,
   Check,
   CircleDashed,
   CircleDot,
@@ -39,9 +38,14 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ProductImage } from "@/components/product-image";
+import { FaceGuideOverlay } from "@/components/face-guide-overlay";
+import { FaceScanMarkerOverlay } from "@/components/face-scan-marker-overlay";
+import { FaceScanCapture } from "@/components/face-scan-capture";
 import { SkinScoreRing, ModuleScoreBar } from "@/components/skin-score";
 import { severityBadgeClass } from "@/lib/severity";
 import { useCatalog, useShelf } from "@/lib/shelf-store";
+import type { FaceLandmarkPoint } from "@/lib/face-mesh/faceMesh.types";
+import { detectFaceScanMarkers, type FaceScanMarker } from "@/lib/face-mesh/faceScanMarkers";
 import {
   compareScans,
   MODULES,
@@ -67,25 +71,6 @@ const MODULE_ICON: Record<ModuleId, React.ComponentType<{ className?: string }>>
   radiance: Sparkles,
 };
 
-// Precise point (in % of the captured photo) marking each module's zone — the
-// marker is drawn directly on the user's own photo.
-const MODULE_ZONE: Record<ModuleId, { x: number; y: number }> = {
-  oiliness: { x: 50, y: 25 },
-  wrinkles: { x: 78, y: 49 },
-  darkCircles: { x: 36, y: 53 },
-  pores: { x: 50, y: 61 },
-  blackheads: { x: 50, y: 65 },
-  redness: { x: 24, y: 61 },
-  sensitivity: { x: 76, y: 64 },
-  spots: { x: 32, y: 57 },
-  radiance: { x: 50, y: 50 },
-  texture: { x: 27, y: 66 },
-  dryness: { x: 73, y: 66 },
-  acneScars: { x: 68, y: 72 },
-  acne: { x: 50, y: 85 },
-};
-
-
 type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error" | "noFace" | "noCredits" | "lowQuality";
 
 function fileToDataUrl(file: File): Promise<string> {
@@ -107,12 +92,18 @@ function productScore(product: Product, module: ModuleFinding, skinType?: string
   return score;
 }
 
-function pickModuleProducts(catalog: Product[], module: ModuleFinding, skinType?: string) {
+function pickModuleProducts(
+  catalog: Product[],
+  module: ModuleFinding,
+  skinType?: string,
+  excludedProductIds: Set<string> = new Set(),
+  limit = 6
+) {
   return catalog
     .map((product) => ({ product, score: productScore(product, module, skinType) }))
-    .filter(({ score }) => score > 0)
+    .filter(({ product, score }) => score > 0 && !excludedProductIds.has(product.id))
     .sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name))
-    .slice(0, 3)
+    .slice(0, limit)
     .map(({ product }) => product);
 }
 
@@ -133,16 +124,26 @@ export function FaceScanClient() {
   const [addedProducts, setAddedProducts] = React.useState<Set<string>>(new Set());
   const [activeModule, setActiveModule] = React.useState(0);
   const [qualityIssues, setQualityIssues] = React.useState<string[]>([]);
+  const [captureLandmarks, setCaptureLandmarks] = React.useState<FaceLandmarkPoint[] | null>(null);
+  const [captureSize, setCaptureSize] = React.useState({ width: 720, height: 960 });
+  const [scanMarkers, setScanMarkers] = React.useState<FaceScanMarker[]>([]);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const pagerRef = React.useRef<HTMLDivElement>(null);
   const pagerScrollFrame = React.useRef<number | null>(null);
 
-  const startScan = async (file: File) => {
+  const startScan = async (
+    file: File,
+    landmarks?: FaceLandmarkPoint[],
+    imageSize?: { width: number; height: number }
+  ) => {
     const url = URL.createObjectURL(file);
     setPreview(url);
+    setCaptureLandmarks(landmarks ?? null);
+    if (imageSize) setCaptureSize(imageSize);
     setPhase("analyzing");
     setStepIndex(0);
     setAddedProducts(new Set());
+    setScanMarkers([]);
 
     const stepTimer = setInterval(() => {
       setStepIndex((i) => Math.min(i + 1, analysisSteps.length - 1));
@@ -196,6 +197,8 @@ export function FaceScanClient() {
     setPrevious(null);
     setAddedProducts(new Set());
     setActiveModule(0);
+    setCaptureLandmarks(null);
+    setScanMarkers([]);
     setPhase("idle");
   };
 
@@ -234,6 +237,49 @@ export function FaceScanClient() {
     [analysis, previous]
   );
 
+  React.useEffect(() => {
+    let cancelled = false;
+    if (!preview || !analysis || !captureLandmarks?.length) {
+      setScanMarkers([]);
+      return;
+    }
+
+    void detectFaceScanMarkers({
+      imageSrc: preview,
+      landmarks: captureLandmarks,
+      imageSize: captureSize,
+      modules: analysis.modules,
+    })
+      .then((markers) => {
+        if (!cancelled) setScanMarkers(markers);
+      })
+      .catch((error) => {
+        console.error("face scan marker detection error", error);
+        if (!cancelled) setScanMarkers([]);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [analysis, captureLandmarks, captureSize, preview]);
+
+  const moduleProducts = React.useMemo(() => {
+    const used = new Set<string>();
+    const byModule = new Map<ModuleId, Product[]>();
+    for (const module of orderedModules) {
+      const firstPass = pickModuleProducts(catalog, module, analysis?.skinType, used, 6);
+      firstPass.forEach((product) => used.add(product.id));
+      const fallback =
+        firstPass.length >= 4
+          ? []
+          : pickModuleProducts(catalog, module, analysis?.skinType, new Set(), 6).filter(
+              (product) => !firstPass.some((picked) => picked.id === product.id)
+            );
+      byModule.set(module.id, [...firstPass, ...fallback].slice(0, 6));
+    }
+    return byModule;
+  }, [analysis?.skinType, catalog, orderedModules]);
+
   const summaryKey = !analysis
     ? "summaryGood"
     : analysis.overallScore >= 75
@@ -247,10 +293,12 @@ export function FaceScanClient() {
       className={
         phase === "result"
           ? "mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-6"
+          : phase === "idle"
+            ? "mx-auto flex w-full max-w-[min(94vw,560px)] flex-col items-center gap-3 text-center"
           : "mx-auto flex max-w-lg flex-col items-center gap-6 text-center"
       }
     >
-      {phase !== "result" && (
+      {phase !== "result" && phase !== "idle" && (
         <>
           <div>
             <h1 className="font-serif text-3xl">{t("title")}</h1>
@@ -285,21 +333,24 @@ export function FaceScanClient() {
             exit={{ opacity: 0 }}
             className="w-full"
           >
-            <Card
-              onClick={() => fileInputRef.current?.click()}
-              className="w-full cursor-pointer gap-5 overflow-hidden border-white/70 bg-card/80 p-3 text-left shadow-[0_26px_80px_-58px_rgba(35,28,20,0.65)] backdrop-blur-xl transition-colors hover:border-primary/40 hover:bg-card"
-            >
-              <FaceCaptureGuide label={t("captureGuide")} />
-              <div className="flex items-center gap-3 px-2 pb-2">
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <Camera className="size-5" />
-                </span>
-                <div>
-                  <p className="font-medium">{t("captureTitle")}</p>
-                  <p className="text-sm text-muted-foreground">{t("captureHint")}</p>
-                </div>
-              </div>
-            </Card>
+            <FaceScanCapture
+              labels={{
+                start: t("captureTitle"),
+                retake: t("retake"),
+                fallback: t("meshFallback"),
+                centerFace: t("position.centerFace"),
+                moveCloser: t("position.moveCloser"),
+                moveFarther: t("position.moveFarther"),
+                lookStraight: t("position.lookStraight"),
+                holdStill: t("position.holdStill"),
+                improveLighting: t("position.improveLighting"),
+                faceDetected: t("position.faceDetected"),
+                noFace: t("position.noFace"),
+                multipleFaces: t("position.multipleFaces"),
+              }}
+              onCapture={(file, landmarks, imageSize) => void startScan(file, landmarks, imageSize)}
+              onFallbackUpload={() => fileInputRef.current?.click()}
+            />
           </motion.div>
         )}
 
@@ -316,7 +367,7 @@ export function FaceScanClient() {
                 <div className="relative h-40 w-32 overflow-hidden rounded-[1.6rem] bg-secondary">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={preview} alt="" className="absolute inset-0 size-full object-cover" />
-                  <FaceGuideLines compact />
+                  <FaceGuideOverlay compact className="opacity-45" />
                 </div>
               ) : (
                 <Loader2 className="size-10 animate-spin text-primary" />
@@ -438,12 +489,18 @@ export function FaceScanClient() {
           >
             <section className="grid min-h-[calc(100svh-10rem)] items-center gap-6 rounded-[2rem] bg-card p-5 shadow-[0_20px_70px_-48px_rgba(0,0,0,0.35)] sm:grid-cols-[auto_1fr_auto] sm:p-8">
               {preview && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={preview}
-                  alt=""
-                  className="mx-auto aspect-square w-full max-w-[220px] rounded-[1.5rem] object-cover sm:mx-0"
-                />
+                <div className="relative mx-auto aspect-square w-full max-w-[220px] overflow-hidden rounded-[1.5rem] bg-black sm:mx-0">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={preview} alt="" className="absolute inset-0 size-full object-cover" />
+                  {captureLandmarks?.length ? (
+                    <FaceScanMarkerOverlay
+                      markers={scanMarkers}
+                      sourceWidth={captureSize.width}
+                      sourceHeight={captureSize.height}
+                      className="opacity-90"
+                    />
+                  ) : null}
+                </div>
               )}
               <div className="space-y-4 text-center sm:text-left">
                 <div>
@@ -603,30 +660,16 @@ export function FaceScanClient() {
                               className="absolute inset-0 size-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
-                            <span
-                              className="absolute size-2.5 -translate-x-1/2 -translate-y-1/2"
-                              style={{
-                                left: `${MODULE_ZONE[module.id].x}%`,
-                                top: `${MODULE_ZONE[module.id].y}%`,
-                              }}
-                            >
-                              <span
-                                className={cn(
-                                  "absolute inset-0 animate-ping rounded-full",
-                                  module.severity === "attention" && "bg-destructive/60",
-                                  module.severity === "medium" && "bg-am/60",
-                                  module.severity === "low" && "bg-success/60"
-                                )}
+                            {captureLandmarks?.length ? (
+                              <FaceScanMarkerOverlay
+                                markers={scanMarkers}
+                                sourceWidth={captureSize.width}
+                                sourceHeight={captureSize.height}
+                                moduleId={module.id}
+                                pulse={activeModule === index}
+                                className="opacity-95"
                               />
-                              <span
-                                className={cn(
-                                  "absolute inset-0 rounded-full border border-white/90",
-                                  module.severity === "attention" && "bg-destructive",
-                                  module.severity === "medium" && "bg-am",
-                                  module.severity === "low" && "bg-success"
-                                )}
-                              />
-                            </span>
+                            ) : null}
                           </>
                         ) : (
                           <div className="flex size-full items-center justify-center">
@@ -660,8 +703,7 @@ export function FaceScanClient() {
                   module={orderedModules[activeModule]}
                   t={t}
                   tCategories={tCategories}
-                  catalog={catalog}
-                  skinType={analysis.skinType}
+                  products={moduleProducts.get(orderedModules[activeModule].id) ?? []}
                   addedProducts={addedProducts}
                   onAddProduct={(product) => {
                     addProduct(product);
@@ -695,74 +737,21 @@ export function FaceScanClient() {
   );
 }
 
-function FaceCaptureGuide({ label }: { label: string }) {
-  return (
-    <div className="relative aspect-[9/13] w-full overflow-hidden rounded-[2rem] bg-secondary/40">
-      <FaceGuideLines />
-      <div className="absolute left-4 top-4 flex size-10 items-center justify-center rounded-full border border-white/80 bg-white/60 text-foreground shadow-sm backdrop-blur-xl">
-        <Camera className="size-4" />
-      </div>
-      <div className="absolute inset-x-8 bottom-5 rounded-full border border-white/80 bg-white/55 px-4 py-3 text-center text-sm font-medium text-foreground shadow-[0_14px_40px_-28px_rgba(0,0,0,0.5)] backdrop-blur-xl">
-        {label}
-      </div>
-    </div>
-  );
-}
-
-function FaceGuideLines({ compact = false }: { compact?: boolean }) {
-  return (
-    <svg
-      viewBox="0 0 220 320"
-      aria-hidden="true"
-      className={cn(
-        "pointer-events-none absolute inset-0 size-full text-white drop-shadow-[0_1px_8px_rgba(80,65,55,0.22)]",
-        compact ? "opacity-80" : "opacity-95"
-      )}
-    >
-      <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-        <path strokeDasharray="4 5" strokeWidth="1.5" d="M42 153C42 74 73 31 110 31s68 43 68 122c0 66-28 125-68 125s-68-59-68-125Z" />
-        <path strokeWidth="1" d="M110 52v220M78 78h64M64 105h92M110 79v62M75 141h70M88 209h44M96 239h28" />
-        <path strokeWidth="1" d="M60 139c16-14 34-14 49 0M111 139c15-14 33-14 49 0" />
-        <path strokeWidth="1" d="M66 143c14 16 31 16 43 0M111 143c12 16 29 16 43 0" />
-        <path strokeWidth="1" d="M92 151c5 12 5 25-4 37 10 6 31 6 43 0-9-12-9-25-4-37" />
-        <path strokeWidth="1" d="M60 185l28 21 22 4 22-4 28-21M56 160l-12 37 29 55M164 160l12 37-29 55" />
-        <path strokeWidth="1" d="M82 222c16 11 40 11 56 0M84 235c13 8 39 8 52 0M94 256c9 5 23 5 32 0" />
-        <path strokeWidth="1" d="M48 133l-10 23M172 133l10 23M82 111l-26 11M138 111l26 11" />
-        <path strokeWidth="0.8" opacity="0.65" d="M65 195c13 9 26 14 45 15M155 195c-13 9-26 14-45 15" />
-      </g>
-      <g fill="currentColor">
-        <circle cx="110" cy="78" r="1.8" />
-        <circle cx="142" cy="62" r="1.8" />
-        <circle cx="158" cy="88" r="1.8" />
-        <circle cx="132" cy="92" r="1.8" />
-        <circle cx="128" cy="110" r="1.8" />
-        <circle cx="56" cy="110" r="1.8" />
-        <circle cx="44" cy="176" r="1.8" />
-        <circle cx="176" cy="176" r="1.8" />
-        <circle cx="110" cy="272" r="1.8" />
-      </g>
-    </svg>
-  );
-}
-
 function ModuleDetail({
   module,
   t,
   tCategories,
-  catalog,
-  skinType,
+  products,
   addedProducts,
   onAddProduct,
 }: {
   module: ModuleFinding;
   t: ReturnType<typeof useTranslations>;
   tCategories: ReturnType<typeof useTranslations>;
-  catalog: Product[];
-  skinType?: string;
+  products: Product[];
   addedProducts: Set<string>;
   onAddProduct: (product: Product) => void;
 }) {
-  const products = pickModuleProducts(catalog, module, skinType);
   const habits = t.raw(`dailyActions.${module.id}`) as string[];
 
   return (
@@ -794,7 +783,7 @@ function ModuleDetail({
         <div className="relative min-w-0 overflow-hidden rounded-3xl bg-secondary/60 p-4">
           <div className="mb-2 flex items-center justify-between text-sm">
             <span className="font-medium">{t("moduleScoreLabel")}</span>
-            <span className="text-muted-foreground">{module.observable ? `${module.score}/9` : "—"}</span>
+            <span className="text-muted-foreground">{module.observable ? `${module.score}/9` : "-"}</span>
           </div>
           <ModuleScoreBar score={module.observable ? module.score : 0} />
           {module.observable && (

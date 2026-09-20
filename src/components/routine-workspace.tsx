@@ -1,7 +1,20 @@
 "use client";
 
 import * as React from "react";
-import { Camera, ChevronDown, Heart, LinkIcon, NotebookPen, Pencil, Plus, Trash2 } from "lucide-react";
+import { useSession } from "next-auth/react";
+import Image from "next/image";
+import {
+  CalendarCheck,
+  Camera,
+  Droplets,
+  LinkIcon,
+  NotebookPen,
+  Pencil,
+  Play,
+  Plus,
+  ShieldCheck,
+  Trash2,
+} from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
@@ -9,14 +22,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ProductImage } from "@/components/product-image";
 import { AddProductDialog } from "@/components/add-product-dialog";
-import { RoutineContent } from "@/components/routine-content";
+import { RoutineContent, RoutineDiagnostics } from "@/components/routine-content";
 import { TipOfTheDay } from "@/components/tip-of-the-day";
 import { IngredientExposurePanel } from "@/components/ingredient-exposure-panel";
 import { WeeklyRhythmPanel } from "@/components/weekly-rhythm-panel";
 import { ReactionJournal } from "@/components/reaction-journal";
 import { RoutineProtocolPanel } from "@/components/routine-protocol-panel";
-import { ShelfCarePanel } from "@/components/shelf-care-panel";
-import { EnvironmentPanel } from "@/components/environment-panel";
 import { useShelf } from "@/lib/shelf-store";
 import type { Product } from "@/generated/prisma/client";
 
@@ -26,6 +37,8 @@ type Preference = {
   routineSlot: "morning" | "evening" | "both" | "pause";
   customCategory: string | null;
   note: string | null;
+  purchasedAt: string | null;
+  expiresAt: string | null;
   openedAt: string | null;
   paoMonths: number | null;
 };
@@ -33,30 +46,168 @@ type Preference = {
 type InitialPreference = Pick<Preference, "routineSlot" | "customCategory" | "note">;
 type Note = { id: string; title: string; body: string };
 type SavedLink = { id: string; title: string; url: string; platform: string | null; note: string | null };
+type EmbedInfo = { src: string; thumbnail?: string };
+type SkinProfileSummary = {
+  skinType: string;
+  concerns: string[];
+  sensitivities: string[];
+  ageRange: string | null;
+  climate: string | null;
+  waterIntake: string | null;
+  sleepHours: string | null;
+  stressLevel: string | null;
+  sunExposure: string | null;
+  exerciseFrequency: string | null;
+};
 
-function embedUrl(rawUrl: string): string | null {
+const FIELD_CLASS =
+  "h-10 rounded-xl border border-white/32 bg-white/[0.035] px-3 text-sm text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl placeholder:text-white/48 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35";
+const TEXTAREA_CLASS =
+  "rounded-xl border border-white/32 bg-white/[0.035] px-3 py-2 text-sm text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl placeholder:text-white/48 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35";
+
+function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) {
+  const t = useTranslations("routineWorkspace.reliability");
+  const tSkin = useTranslations("skinTypes");
+  const tConcerns = useTranslations("concerns");
+  const tSens = useTranslations("sensitivities");
+  const tClimate = useTranslations("climates");
+  const tLifestyle = useTranslations("report.lifestyle");
+  const { data: session } = useSession();
+  const checks = [
+    { icon: ShieldCheck, title: t("passport"), text: t("passportText") },
+    { icon: Camera, title: t("scan"), text: t("scanText") },
+    { icon: CalendarCheck, title: t("environment"), text: t("environmentText") },
+  ];
+  const safe = (fn: () => string, fallback: string) => {
+    try {
+      return fn();
+    } catch {
+      return fallback;
+    }
+  };
+  const initial = (session?.user?.name ?? session?.user?.email ?? "H").charAt(0).toUpperCase();
+  const profileImage = session?.user?.image;
+  const details = profile
+    ? [
+        { label: t("skinType"), value: safe(() => tSkin(profile.skinType), profile.skinType) },
+        profile.ageRange ? { label: t("age"), value: profile.ageRange } : null,
+        profile.concerns.length
+          ? { label: t("concerns"), value: profile.concerns.map((c) => safe(() => tConcerns(c), c)).join(", ") }
+          : null,
+        profile.sensitivities.length
+          ? {
+              label: t("sensitivities"),
+              value: profile.sensitivities.map((s) => safe(() => tSens(s), s)).join(", "),
+            }
+          : null,
+        profile.climate ? { label: t("climate"), value: safe(() => tClimate(profile.climate!), profile.climate) } : null,
+        profile.waterIntake
+          ? { label: t("hydration"), value: safe(() => tLifestyle(`water.${profile.waterIntake}`), profile.waterIntake) }
+          : null,
+        profile.sleepHours
+          ? { label: t("sleep"), value: safe(() => tLifestyle(`sleep.${profile.sleepHours}`), profile.sleepHours) }
+          : null,
+        profile.stressLevel
+          ? { label: t("stress"), value: safe(() => tLifestyle(`stress.${profile.stressLevel}`), profile.stressLevel) }
+          : null,
+        profile.sunExposure
+          ? { label: t("sunExposure"), value: safe(() => tLifestyle(`sun.${profile.sunExposure}`), profile.sunExposure) }
+          : null,
+        profile.exerciseFrequency
+          ? { label: t("sport"), value: safe(() => tLifestyle(`exercise.${profile.exerciseFrequency}`), profile.exerciseFrequency) }
+          : null,
+      ].filter((item): item is { label: string; value: string } => Boolean(item))
+    : [];
+
+  return (
+    <section className="grid gap-4">
+      <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+        <div className="min-w-0">
+          <p className="text-xs font-medium uppercase tracking-[0.32em] text-white/58">{t("passport")}</p>
+          <h2 className="mt-2 font-serif text-2xl text-white sm:text-3xl">{t("passportTitle")}</h2>
+          <p className="mt-3 text-sm leading-6 text-white/70">{t("passportIntro")}</p>
+          <Button asChild variant="outline" className="mt-5 w-fit border-white/45 bg-transparent text-white hover:bg-white/8">
+            <Link href="/app/quiz">
+              <Droplets className="size-4" /> {t("skinTypeExerciseCta")}
+            </Link>
+          </Button>
+        </div>
+
+        <div className="relative min-w-0 px-6">
+          <span className="pointer-events-none absolute left-0 top-1/2 size-2 -translate-y-1/2 rounded-full bg-white/55" />
+          <span className="pointer-events-none absolute right-0 top-1/2 size-2 -translate-y-1/2 rounded-full bg-white/55" />
+          <div className="no-scrollbar flex snap-x gap-3 overflow-x-auto scroll-smooth">
+            {checks.map(({ icon: Icon, title, text }) => (
+              <div
+                key={title}
+                className="min-w-[48%] snap-start rounded-full border border-white/22 bg-white/[0.02] px-4 py-3 sm:min-w-[42%] lg:min-w-[48%]"
+              >
+                <div className="flex items-center gap-2">
+                  <Icon className="size-4 shrink-0 text-white" />
+                  <p className="truncate text-sm font-medium text-white">{title}</p>
+                </div>
+                <p className="mt-1 line-clamp-2 text-xs leading-5 text-white/62">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <Card className="grid gap-4 p-5 sm:grid-cols-[auto_1fr] sm:p-6">
+        <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/28 bg-white/[0.025] text-4xl font-medium text-white sm:size-28">
+          {profileImage ? (
+            <Image src={profileImage} alt="" width={112} height={112} className="size-full object-cover" unoptimized />
+          ) : (
+            initial
+          )}
+        </div>
+        <div className="min-w-0">
+          <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/52">{t("skinDetails")}</p>
+          {profile ? (
+            <div className="mt-3 grid gap-x-5 gap-y-2 sm:grid-cols-2">
+              {details.map((item) => (
+                <div key={item.label} className="border-b border-white/12 pb-2">
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-white/45">{item.label}</p>
+                  <p className="mt-1 text-sm leading-5 text-white">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="mt-3 text-sm leading-6 text-white/66">{t("noSkinProfile")}</p>
+          )}
+        </div>
+      </Card>
+    </section>
+  );
+}
+
+function embedInfo(rawUrl: string): EmbedInfo | null {
   try {
     const url = new URL(rawUrl);
     const host = url.hostname.toLowerCase();
 
     if (host.includes("youtu.be")) {
       const id = url.pathname.split("/").filter(Boolean)[0];
-      return id ? `https://www.youtube-nocookie.com/embed/${id}` : null;
+      return id
+        ? { src: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`, thumbnail: `https://img.youtube.com/vi/${id}/hqdefault.jpg` }
+        : null;
     }
 
     if (host.includes("youtube.com")) {
       const id = url.searchParams.get("v") ?? url.pathname.match(/\/shorts\/([^/?]+)/)?.[1];
-      return id ? `https://www.youtube-nocookie.com/embed/${id}` : null;
+      return id
+        ? { src: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`, thumbnail: `https://img.youtube.com/vi/${id}/hqdefault.jpg` }
+        : null;
     }
 
     if (host.includes("instagram.com")) {
       const path = url.pathname.replace(/\/$/, "");
-      if (/\/(p|reel|tv)\//.test(path)) return `https://www.instagram.com${path}/embed`;
+      if (/\/(p|reel|tv)\//.test(path)) return { src: `https://www.instagram.com${path}/embed` };
     }
 
     if (host.includes("tiktok.com")) {
       const id = url.pathname.match(/video\/(\d+)/)?.[1];
-      return id ? `https://www.tiktok.com/embed/v2/${id}` : null;
+      return id ? { src: `https://www.tiktok.com/embed/v2/${id}` } : null;
     }
   } catch {
     return null;
@@ -67,7 +218,8 @@ function embedUrl(rawUrl: string): string | null {
 
 function SavedVideoCard({ link }: { link: SavedLink }) {
   const t = useTranslations("routineWorkspace");
-  const embed = embedUrl(link.url);
+  const embed = embedInfo(link.url);
+  const [playing, setPlaying] = React.useState(!embed?.thumbnail);
 
   return (
     <Card className="gap-3">
@@ -76,99 +228,45 @@ function SavedVideoCard({ link }: { link: SavedLink }) {
         <Badge className="w-fit">{link.platform ?? t("link")}</Badge>
       </div>
       {embed ? (
-        <div className="overflow-hidden rounded-md border border-border bg-muted">
-          <iframe
-            src={embed}
-            title={link.title}
-            className="aspect-video w-full"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
+        <div className="overflow-hidden rounded-2xl border border-white/35 bg-transparent">
+          {embed.thumbnail && !playing ? (
+            <button
+              type="button"
+              onClick={() => setPlaying(true)}
+              className="relative block aspect-video w-full overflow-hidden text-left"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={embed.thumbnail}
+                alt=""
+                className="h-full w-full object-cover"
+                onError={(event) => {
+                  const img = event.currentTarget;
+                  if (img.src.includes("hqdefault")) img.src = img.src.replace("hqdefault", "mqdefault");
+                }}
+              />
+              <span className="absolute inset-0 bg-black/18" />
+              <span className="absolute left-1/2 top-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-black/15 text-white backdrop-blur-md">
+                <Play className="ml-0.5 size-6 fill-current" />
+              </span>
+            </button>
+          ) : (
+            <iframe
+              src={embed.src}
+              title={link.title}
+              className="aspect-video w-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          )}
         </div>
       ) : (
-        <div className="rounded-md border border-border bg-muted p-4 text-sm text-muted-foreground">
+        <div className="rounded-2xl border border-white/35 bg-white/[0.025] p-4 text-sm text-white/70">
           {t("embedUnavailable")}
         </div>
       )}
-      {link.note && <p className="text-sm text-muted-foreground">{link.note}</p>}
-    </Card>
-  );
-}
-
-function ProductRow({
-  product,
-  pref,
-  onPref,
-  onRemove,
-}: {
-  product: Product;
-  pref?: Preference;
-  onPref: (productId: string, patch: Partial<Preference>) => void;
-  onRemove: (id: string) => void;
-}) {
-  const t = useTranslations("routineWorkspace");
-  const [open, setOpen] = React.useState(false);
-
-  return (
-    <Card className="gap-0 overflow-hidden p-0">
-      <button className="flex w-full items-center gap-3 p-3 text-left" onClick={() => setOpen((v) => !v)}>
-        <ProductImage imageUrl={product.imageUrl} category={product.category} name={product.name} size="sm" />
-        <div className="min-w-0 flex-1">
-          <p className="truncate font-medium">{product.name}</p>
-          <p className="text-xs text-muted-foreground">{product.brand}</p>
-          <div className="mt-1 flex flex-wrap gap-1">
-            <Badge variant="outline">{t(`routineSlot.${pref?.routineSlot ?? "both"}`)}</Badge>
-            {pref?.customCategory && <Badge variant="secondary">{pref.customCategory}</Badge>}
-            {pref?.favorite && <Badge>{t("favorite")}</Badge>}
-          </div>
-        </div>
-        <ChevronDown className={`size-4 shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} />
-      </button>
-
-      {open && (
-        <div className="grid gap-3 border-t border-border p-3">
-          <div className="flex flex-wrap gap-2">
-            <Button asChild variant="outline" size="sm">
-              <Link href={`/app/product/${product.slug}`}>{t("viewSheet")}</Link>
-            </Button>
-            <Button
-              variant={pref?.favorite ? "default" : "outline"}
-              size="sm"
-              onClick={() => onPref(product.id, { favorite: !pref?.favorite })}
-            >
-              <Heart className="size-4" /> {t("favorite")}
-            </Button>
-            <Button variant="ghost" size="sm" onClick={() => onRemove(product.id)}>
-              <Trash2 className="size-4" /> {t("remove")}
-            </Button>
-          </div>
-          <div className="grid gap-2 sm:grid-cols-2">
-            <select
-              className="h-10 w-full min-w-0 rounded-md border border-input bg-background px-3 text-sm"
-              value={pref?.routineSlot ?? "both"}
-              onChange={(e) => onPref(product.id, { routineSlot: e.target.value as Preference["routineSlot"] })}
-            >
-              <option value="both">{t("routineSlot.both")}</option>
-              <option value="morning">{t("routineSlot.morning")}</option>
-              <option value="evening">{t("routineSlot.evening")}</option>
-              <option value="pause">{t("routineSlot.pause")}</option>
-            </select>
-            <input
-              className="h-10 rounded-md border border-input bg-background px-3 text-sm"
-              placeholder={t("categoryPlaceholder")}
-              defaultValue={pref?.customCategory ?? ""}
-              onBlur={(e) => onPref(product.id, { customCategory: e.target.value || null })}
-            />
-          </div>
-          <textarea
-            className="min-h-16 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-            placeholder={t("productNotePlaceholder")}
-            defaultValue={pref?.note ?? ""}
-            onBlur={(e) => onPref(product.id, { note: e.target.value || null })}
-          />
-        </div>
-      )}
+      {link.note && <p className="text-sm text-white/64">{link.note}</p>}
     </Card>
   );
 }
@@ -176,9 +274,10 @@ function ProductRow({
 export function RoutineWorkspace() {
   const t = useTranslations("routineWorkspace");
   const locale = useLocale();
-  const { shelf, addProduct, removeProduct } = useShelf();
+  const { shelf, addProduct } = useShelf();
   const [tab, setTab] = React.useState("routine");
   const [preferences, setPreferences] = React.useState<Record<string, Preference>>({});
+  const [profile, setProfile] = React.useState<SkinProfileSummary | null>(null);
   const [notes, setNotes] = React.useState<Note[]>([]);
   const [links, setLinks] = React.useState<SavedLink[]>([]);
   const [noteDraft, setNoteDraft] = React.useState({ title: "", body: "" });
@@ -191,6 +290,7 @@ export function RoutineWorkspace() {
       .then((data) => {
         if (!data) return;
         setPreferences(Object.fromEntries(data.preferences.map((p: Preference) => [p.productId, p])));
+        setProfile(data.profile ?? null);
         setNotes(data.notes);
         setLinks(data.links);
       })
@@ -204,6 +304,8 @@ export function RoutineWorkspace() {
       routineSlot: "both",
       customCategory: null,
       note: null,
+      purchasedAt: null,
+      expiresAt: null,
       openedAt: null,
       paoMonths: null,
     };
@@ -272,6 +374,7 @@ export function RoutineWorkspace() {
   const favorites = shelf.filter((p) => preferences[p.id]?.favorite);
   const tabs = [
     ["routine", t("tabs.routine")],
+    ["analysis", t("tabs.analysis")],
     ["reactions", t("tabs.reactions")],
     ["favorites", t("tabs.favorites")],
     ["notes", t("tabs.notes")],
@@ -279,30 +382,29 @@ export function RoutineWorkspace() {
   ];
 
   return (
-    <div className="mx-auto flex max-w-5xl flex-col gap-6">
-      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+    <div className="mx-auto flex w-full max-w-5xl min-w-0 flex-col gap-6 overflow-hidden">
+      <div className="flex min-w-0 flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
           <h1 className="font-serif text-3xl">{t("title")}</h1>
-          <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
+          <p className="mt-1 text-white/68">{t("subtitle")}</p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex min-w-0 flex-wrap gap-2">
           <Button variant="outline" asChild>
             <Link href="/app/scan">
               <Camera className="size-4" /> {t("scan")}
             </Link>
           </Button>
-          <AddProductDialog existingProducts={shelf} onProductAdded={handleProductAdded} />
         </div>
       </div>
 
       <TipOfTheDay locale={locale} label={t("tipOfTheDay")} />
 
-      <div className="flex gap-1 overflow-x-auto rounded-full bg-muted p-1">
+      <div className="no-scrollbar flex min-w-0 gap-1 overflow-x-auto rounded-full border border-white/35 bg-transparent p-1 backdrop-blur-xl">
         {tabs.map(([id, label]) => (
           <button
             key={id}
             onClick={() => setTab(id)}
-            className={`rounded-full px-4 py-2 text-sm font-medium ${tab === id ? "bg-card shadow-sm" : "text-muted-foreground"}`}
+            className={`rounded-full px-4 py-2 text-sm font-medium transition ${tab === id ? "border border-white/45 bg-white/[0.035] text-white" : "text-white/76 hover:bg-white/[0.025] hover:text-white"}`}
           >
             {label}
           </button>
@@ -310,9 +412,24 @@ export function RoutineWorkspace() {
       </div>
 
       {tab === "routine" && (
-        <div className="grid gap-5">
+        <div className="grid min-w-0 gap-5">
+          <SkinPassportPanel profile={profile} />
           {shelf.length > 0 && <RoutineProtocolPanel products={shelf} />}
-          <RoutineContent compact />
+          {shelf.length === 0 ? (
+            <Card className="items-center gap-3 py-14 text-center">
+              <p className="font-serif text-xl">{t("emptyProductsTitle")}</p>
+              <p className="text-sm text-white/64">{t("emptyProductsText")}</p>
+              <AddProductDialog existingProducts={shelf} onProductAdded={handleProductAdded} />
+            </Card>
+          ) : (
+            <RoutineContent compact showDiagnostics={false} preferences={preferences} onPref={savePref} />
+          )}
+        </div>
+      )}
+
+      {tab === "analysis" && (
+        <div className="grid min-w-0 gap-5">
+          <RoutineDiagnostics preferences={preferences} />
           <IngredientExposurePanel
             items={shelf.map((p) => ({
               ingredientIds: p.ingredientIds,
@@ -325,27 +442,6 @@ export function RoutineWorkspace() {
               locale={locale}
             />
           )}
-          {shelf.length > 0 && (
-            <ShelfCarePanel products={shelf} prefs={preferences} onPref={savePref} />
-          )}
-          <EnvironmentPanel />
-          <section className="grid gap-3">
-            <div>
-              <h2 className="font-serif text-xl">{t("routineProductsTitle")}</h2>
-              <p className="text-sm text-muted-foreground">{t("routineProductsText")}</p>
-            </div>
-            {shelf.length === 0 ? (
-              <Card className="items-center gap-3 py-14 text-center">
-                <p className="font-serif text-xl">{t("emptyProductsTitle")}</p>
-                <p className="text-sm text-muted-foreground">{t("emptyProductsText")}</p>
-                <AddProductDialog existingProducts={shelf} onProductAdded={handleProductAdded} />
-              </Card>
-            ) : (
-              shelf.map((p) => (
-                <ProductRow key={p.id} product={p} pref={preferences[p.id]} onPref={savePref} onRemove={removeProduct} />
-              ))
-            )}
-          </section>
         </div>
       )}
 
@@ -361,7 +457,7 @@ export function RoutineWorkspace() {
                 <ProductImage imageUrl={p.imageUrl} category={p.category} name={p.name} size="md" />
                 <div>
                   <p className="font-medium">{p.name}</p>
-                  <p className="text-sm text-muted-foreground">{p.brand}</p>
+                  <p className="text-sm text-white/62">{p.brand}</p>
                 </div>
                 {preferences[p.id]?.customCategory && <Badge>{preferences[p.id].customCategory}</Badge>}
               </Card>
@@ -376,8 +472,8 @@ export function RoutineWorkspace() {
             <div className="flex items-center gap-2 font-medium">
               <NotebookPen className="size-4" /> {editingNoteId ? t("edit") : t("newNote")}
             </div>
-            <input className="h-10 rounded-md border border-input bg-background px-3 text-sm" placeholder={t("noteTitlePlaceholder")} value={noteDraft.title} onChange={(e) => setNoteDraft({ ...noteDraft, title: e.target.value })} />
-            <textarea className="min-h-32 rounded-md border border-input bg-background px-3 py-2 text-sm" placeholder={t("noteBodyPlaceholder")} value={noteDraft.body} onChange={(e) => setNoteDraft({ ...noteDraft, body: e.target.value })} />
+            <input className={FIELD_CLASS} placeholder={t("noteTitlePlaceholder")} value={noteDraft.title} onChange={(e) => setNoteDraft({ ...noteDraft, title: e.target.value })} />
+            <textarea className={`${TEXTAREA_CLASS} min-h-32`} placeholder={t("noteBodyPlaceholder")} value={noteDraft.body} onChange={(e) => setNoteDraft({ ...noteDraft, body: e.target.value })} />
             <div className="flex gap-2">
               <Button onClick={saveNote}><Plus className="size-4" /> {editingNoteId ? t("save") : t("add")}</Button>
               {editingNoteId && (
@@ -395,7 +491,7 @@ export function RoutineWorkspace() {
                       type="button"
                       onClick={() => editNote(n)}
                       aria-label={t("edit")}
-                      className="rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                      className="rounded-full p-1.5 text-white/62 transition-colors hover:bg-white/8 hover:text-white"
                     >
                       <Pencil className="size-4" />
                     </button>
@@ -403,13 +499,13 @@ export function RoutineWorkspace() {
                       type="button"
                       onClick={() => deleteNote(n.id)}
                       aria-label={t("remove")}
-                      className="rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-destructive/10 hover:text-destructive"
+                      className="rounded-full p-1.5 text-white/62 transition-colors hover:bg-white/8 hover:text-white"
                     >
                       <Trash2 className="size-4" />
                     </button>
                   </div>
                 </div>
-                <p className="whitespace-pre-wrap text-sm text-muted-foreground">{n.body}</p>
+                <p className="whitespace-pre-wrap text-sm text-white/64">{n.body}</p>
               </Card>
             ))}
           </div>
@@ -420,9 +516,9 @@ export function RoutineWorkspace() {
         <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
           <Card className="gap-3">
             <div className="flex items-center gap-2 font-medium"><LinkIcon className="size-4" /> {t("saveVideo")}</div>
-            <input className="h-10 rounded-md border border-input bg-background px-3 text-sm" placeholder={t("linkTitlePlaceholder")} value={linkDraft.title} onChange={(e) => setLinkDraft({ ...linkDraft, title: e.target.value })} />
-            <input className="h-10 rounded-md border border-input bg-background px-3 text-sm" placeholder={t("linkUrlPlaceholder")} value={linkDraft.url} onChange={(e) => setLinkDraft({ ...linkDraft, url: e.target.value })} />
-            <textarea className="min-h-20 rounded-md border border-input bg-background px-3 py-2 text-sm" placeholder={t("linkNotePlaceholder")} value={linkDraft.note} onChange={(e) => setLinkDraft({ ...linkDraft, note: e.target.value })} />
+            <input className={FIELD_CLASS} placeholder={t("linkTitlePlaceholder")} value={linkDraft.title} onChange={(e) => setLinkDraft({ ...linkDraft, title: e.target.value })} />
+            <input className={FIELD_CLASS} placeholder={t("linkUrlPlaceholder")} value={linkDraft.url} onChange={(e) => setLinkDraft({ ...linkDraft, url: e.target.value })} />
+            <textarea className={`${TEXTAREA_CLASS} min-h-20`} placeholder={t("linkNotePlaceholder")} value={linkDraft.note} onChange={(e) => setLinkDraft({ ...linkDraft, note: e.target.value })} />
             <Button onClick={addLink}><Plus className="size-4" /> {t("save")}</Button>
           </Card>
           <div className="grid gap-3">

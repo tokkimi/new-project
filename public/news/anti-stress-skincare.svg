@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Anti-stress skincare abstract visual">
+  <defs>
+    <radialGradient id="bg" cx="22%" cy="22%" r="85%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".38" stop-color="#dfe8ed"/>
+      <stop offset=".72" stop-color="#9aa7af"/>
+      <stop offset="1" stop-color="#5d6870"/>
+    </radialGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <g filter="url(#blur)" opacity=".72">
+    <ellipse cx="250" cy="215" rx="280" ry="130" fill="#ffffff"/>
+    <ellipse cx="980" cy="720" rx="290" ry="180" fill="#c8d5dc"/>
+    <ellipse cx="640" cy="100" rx="190" ry="150" fill="#73808a"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="8" opacity=".72">
+    <path d="M420 560c74-134 218-183 346-118"/>
+    <path d="M372 640c84 78 245 110 394 36"/>
+    <circle cx="745" cy="430" r="18" fill="#fff"/>
+    <circle cx="508" cy="526" r="14" fill="#fff"/>
+    <circle cx="612" cy="706" r="12" fill="#fff"/>
+  </g>
+</svg>

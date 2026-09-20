@@ -12,11 +12,110 @@ export type SeedNews = {
 // beauty and industry outlets, plus official Korean company releases.
 export const NEWS: SeedNews[] = [
   {
+    category: "launch",
+    title: "Haruharu Wonder launches Centella Calm Cloud SPF 60+ in the US",
+    summary:
+      "Haruharu Wonder introduced its first OTC sunscreen developed for the US market, positioning Centella Calm Cloud SPF 60+ around lightweight daily protection and barrier-friendly calming care.",
+    sourceName: "PR Newswire",
+    sourceUrl:
+      "https://www.prnewswire.com/news-releases/haruharu-wonder-introduces-centella-calm-cloud-spf-60-bringing-its-signature-lightweight-spf-experience-to-the-us-302832486.html",
+    imageUrl:
+      "https://mmx.prnewswire.com/media/MS1891211/haruharu-wonder-Centella-Calm-Cloud-SPF-60.jpg?id=OA2780174&p=facebook",
+    publishedAt: "2026-07-23",
+  },
+  {
+    category: "launch",
+    title: "COSRX presents Blue Peptide skincare at VidCon",
+    summary:
+      "COSRX highlighted its Blue Peptide Duo at VidCon through a curated Korean skincare experience focused on copper peptide, bakuchiol and plumping barrier care.",
+    sourceName: "PR Newswire",
+    sourceUrl:
+      "https://www.prnewswire.com/news-releases/cosrx-shines-at-vidcon-2026-with-blue-peptide-themed-skincare-experience-302823491.html",
+    imageUrl:
+      "https://mmx.prnewswire.com/media/MS1881459/20260712215530EDT_image_1.jpg?id=OA2759632&p=facebook",
+    publishedAt: "2026-07-13",
+  },
+  {
+    category: "brand-news",
+    title: "K-beauty sales surge across global beauty markets",
+    summary:
+      "Beauty Packaging reports strong global K-beauty growth, pointing to regional trends and ingredient-led innovation as drivers of consumer demand.",
+    sourceName: "Beauty Packaging",
+    sourceUrl: "https://www.beautypackaging.com/breaking-news/k-beauty-sales-surge-across-the-globe/",
+    imageUrl: "/news/skin-recovery-routine.svg",
+    publishedAt: "2026-07-18",
+  },
+  {
+    category: "brand-news",
+    title: "Dr. Melaxin expands through Tira in India",
+    summary:
+      "Reliance Retail's Tira brought South Korean skincare brand Dr. Melaxin to India, another signal that science-led Korean dermocosmetic routines are scaling internationally.",
+    sourceName: "The Economic Times",
+    sourceUrl:
+      "https://m.economictimes.com/industry/services/retail/reliance-retails-tira-unveils-k-beauty-brand-dr-melaxin-in-india-a-revolution-in-science-backed-skincare/articleshow/132535014.cms",
+    imageUrl: "https://img.etimg.com/thumb/msid-132535034,width-1200,height-630,imgsize-47702,overlay-economictimes/articleshow.jpg",
+    publishedAt: "2026-07-21",
+  },
+  {
+    category: "launch",
+    title: "TIRTIR links K-beauty skin prep with BTS The City New York",
+    summary:
+      "Cosmetics Business covered TIRTIR's New York partnership, including sun care, lip products and setting routines within a Korean beauty cultural activation.",
+    sourceName: "Cosmetics Business",
+    sourceUrl: "https://cosmeticsbusiness.com/bts-tirtir-partner-city-arirang-new-york-tour-k-beauty",
+    imageUrl: "https://cosmeticsbusiness.com/article-image-alias/bts-and-k-beauty-brand-tirtir-partner.jpg",
+    publishedAt: "2026-07-22",
+  },
+  {
+    category: "brand-news",
+    title: "Olive Young brings its K-beauty festival format to the US",
+    summary:
+      "Cosmetics Business reports that Olive Young Festa LA 2026 will gather 55 Korean beauty and lifestyle brands across a large-scale US experiential retail event.",
+    sourceName: "Cosmetics Business",
+    sourceUrl: "https://cosmeticsbusiness.com/olive-young-bringing-its-k-beauty-festival-to-the-us",
+    imageUrl: "https://cosmeticsbusiness.com/article-image-alias/olive-young-is-bringing-its-k-beauty.jpg",
+    publishedAt: "2026-07-02",
+  },
+  {
+    category: "brand-news",
+    title: "Olive Young details its first US Festa program",
+    summary:
+      "Olive Young's official announcement frames its Los Angeles festival around personalized beauty services, brand discovery and a curated K-beauty retail experience.",
+    sourceName: "PR Newswire",
+    sourceUrl:
+      "https://www.prnewswire.com/news-releases/olive-young-brings-signature-k-beauty-festival-to-the-us-with-olive-young-festa-la-2026-302816371.html",
+    imageUrl: "https://mma.prnewswire.com/media/3003185/OLIVE_YOUNG_FESTA_LA_2026__1.jpg?p=facebook",
+    publishedAt: "2026-07-01",
+  },
+  {
+    category: "brand-news",
+    title: "Olive Young opens its US retail chapter in Pasadena",
+    summary:
+      "Olive Young's official US store launch highlights a connected online-offline K-beauty assortment across skincare, makeup, hair care, wellness and inner beauty.",
+    sourceName: "PR Newswire",
+    sourceUrl:
+      "https://www.prnewswire.com/news-releases/olive-young-debuts-in-the-us-with-first-store-in-pasadena-302785976.html",
+    imageUrl: "https://mma.prnewswire.com/media/2990954/26_OY_USA_Report_day_2.jpg?p=facebook",
+    publishedAt: "2026-06-02",
+  },
+  {
+    category: "brand-news",
+    title: "Amazon beauty search data shows K-beauty momentum",
+    summary:
+      "Market Defense's Prime Day report says Korean beauty gained share across beauty search, with Medicube and skincare-led discovery showing strong momentum.",
+    sourceName: "PR Newswire",
+    sourceUrl:
+      "https://www.prnewswire.com/news-releases/search-not-discounts-decided-amazon-prime-day-2026s-beauty-winners-market-defense-report-302821416.html",
+    imageUrl: "https://mmx.prnewswire.com/media/MS1880050/2026-July-PD-Press-Release-5.jpg?id=OA2756285&p=facebook",
+    publishedAt: "2026-07-12",
+  },
+  {
     category: "ingredient-trend",
     title: "Anti-stress skincare moves into barrier-first K-beauty routines",
     summary:
       "K-beauty brands are increasingly framing calming care around stress, redness, barrier repair and recovery routines, with cica, heartleaf, beta-glucan, ceramides and PDRN leading the conversation.",
     sourceName: "Haru K-beauty trend desk",
+    imageUrl: "/news/anti-stress-skincare.svg",
     publishedAt: "2026-07-12",
   },
   {
@@ -25,6 +124,7 @@ export const NEWS: SeedNews[] = [
     summary:
       "New routine language is shifting away from aggressive glow claims toward stress recovery, hydration layering, gentle actives and barrier support for reactive skin.",
     sourceName: "Haru K-beauty trend desk",
+    imageUrl: "/news/skin-recovery-routine.svg",
     publishedAt: "2026-07-12",
   },
   {

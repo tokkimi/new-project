@@ -375,6 +375,8 @@ model UserProductPreference {
   routineSlot    String   @default("both") // morning | evening | both | pause
   customCategory String?
   note           String?
+  purchasedAt    DateTime? // when the user bought this product
+  expiresAt      DateTime? // printed unopened expiry date, when known
   openedAt       DateTime? // when the user opened this product (for PAO/expiry)
   paoMonths      Int? // period-after-opening in months (from the jar symbol)
   updatedAt      DateTime @updatedAt

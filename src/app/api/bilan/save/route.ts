@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     body.locale === "ko" || body.locale === "fr" || body.locale === "ja" ? body.locale : "en";
 
   const [auditResult, scan] = await Promise.all([
-    runUserAudit(userId),
+    runUserAudit(userId, lang),
     body.faceScanResultId
       ? db.faceScanResult.findUnique({ where: { id: body.faceScanResultId } })
       : Promise.resolve(null),

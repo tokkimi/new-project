@@ -82,24 +82,49 @@ export function FaceDiagram({ variant, className }: { variant: DiagramVariant; c
       aria-label={`Diagram: ${variant.replace(/-/g, " ")}`}
     >
       <defs>
-        <marker id="fc-arrowhead" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
-          <path d="M0 0 L8 4 L0 8 Z" className="fill-primary" />
+        <style>
+          {`
+            .face-care-motion {
+              stroke-dasharray: 9 9;
+              animation: faceCareFlow 1.65s linear infinite;
+            }
+            .face-care-loop {
+              stroke-dasharray: 7 7;
+              animation: faceCareFlow 1.35s linear infinite;
+            }
+            .face-care-zone {
+              animation: faceCareBreathe 1.9s ease-in-out infinite;
+              transform-origin: center;
+            }
+            @keyframes faceCareFlow {
+              to { stroke-dashoffset: -36; }
+            }
+            @keyframes faceCareBreathe {
+              0%, 100% { opacity: .48; }
+              50% { opacity: .82; }
+            }
+          `}
+        </style>
+        <filter id="soft-glow" x="-25%" y="-25%" width="150%" height="150%">
+          <feGaussianBlur stdDeviation="1.8" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <marker id="fc-arrowhead" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#ff7a3d" />
         </marker>
       </defs>
 
-      {/* base face outline */}
-      <g className="stroke-muted-foreground/40" fill="none" strokeWidth="1.5">
-        <ellipse cx="100" cy="120" rx="62" ry="80" />
-        <ellipse cx="38" cy="122" rx="10" ry="16" />
-        <ellipse cx="162" cy="122" rx="10" ry="16" />
-        <ellipse cx="76" cy="110" rx="9" ry="5" />
-        <ellipse cx="124" cy="110" rx="9" ry="5" />
-        <path d="M64 92 Q 76 86 88 92" />
-        <path d="M112 92 Q 124 86 136 92" />
-        <path d="M100 118 L 96 142 Q 100 146 104 142" />
-        <path d="M82 168 Q 100 178 118 168" />
-        <path d="M78 198 L 122 198 L 116 232 L 84 232 Z" />
-      </g>
+      <image
+        href="/face-care/wireframe-face-reference.png"
+        x="0"
+        y="0"
+        width="200"
+        height="240"
+        preserveAspectRatio="xMidYMid meet"
+      />
 
       {layers.map((layer, i) => {
         if (layer.kind === "zone") {
@@ -110,8 +135,9 @@ export function FaceDiagram({ variant, className }: { variant: DiagramVariant; c
               cy={layer.cy}
               rx={layer.rx}
               ry={layer.ry}
-              className="fill-primary/10 stroke-primary/30"
-              strokeWidth="1"
+              className="face-care-zone fill-[#ff7a3d]/26 stroke-[#ff7a3d]/90"
+              strokeWidth="2"
+              filter="url(#soft-glow)"
             />
           );
         }
@@ -120,11 +146,12 @@ export function FaceDiagram({ variant, className }: { variant: DiagramVariant; c
             <path
               key={i}
               d={layer.d}
-              className="stroke-primary"
+              className="face-care-motion stroke-[#ff7a3d]"
               fill="none"
-              strokeWidth="2.5"
+              strokeWidth="4"
               strokeLinecap="round"
               markerEnd="url(#fc-arrowhead)"
+              filter="url(#soft-glow)"
             />
           );
         }
@@ -133,18 +160,19 @@ export function FaceDiagram({ variant, className }: { variant: DiagramVariant; c
             <path
               key={i}
               d={layer.d}
-              className="stroke-primary"
+              className="face-care-loop stroke-[#ff7a3d]"
               fill="none"
-              strokeWidth="2.5"
+              strokeWidth="4"
               strokeLinecap="round"
               markerEnd="url(#fc-arrowhead)"
+              filter="url(#soft-glow)"
             />
           );
         }
         return (
           <g key={i}>
-            <circle cx={layer.cx} cy={layer.cy} r="10" className="fill-primary/20 animate-pulse" />
-            <circle cx={layer.cx} cy={layer.cy} r="4" className="fill-primary" />
+            <circle cx={layer.cx} cy={layer.cy} r="14" className="fill-[#ff7a3d]/30 animate-pulse" />
+            <circle cx={layer.cx} cy={layer.cy} r="5.5" className="fill-[#ff7a3d]" />
           </g>
         );
       })}

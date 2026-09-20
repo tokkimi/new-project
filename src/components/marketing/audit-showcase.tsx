@@ -2,31 +2,51 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ArrowRight, Layers, Moon, Sparkles, Sun } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 
-const CHECK_ICONS = [Sparkles, Layers, Sun, Moon];
-
 export function AuditShowcase() {
   const t = useTranslations("auditShowcase");
-  const checks = t.raw("checks") as { title: string; text: string }[];
-  const priorities = t.raw("priorities") as string[];
+  const comparison = t.raw("comparison") as {
+    scanTitle: string;
+    scanText: string;
+    scanItems: string[];
+    auditTitle: string;
+    auditText: string;
+    auditItems: string[];
+  };
 
   return (
-    <section id="audit" className="border-y border-border bg-secondary/25 py-24">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+    <section id="audit" className="py-20">
+      <div className="mx-auto flex max-w-6xl flex-col items-center px-6">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.45 }}
-          className="max-w-xl"
+          className="w-full"
         >
-          <h2 className="text-balance font-serif text-3xl md:text-4xl">{t("title")}</h2>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/audit-scan-editorial.png"
+            alt=""
+            aria-hidden="true"
+            className="mx-auto block h-auto w-full max-w-5xl object-contain"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.45, delay: 0.06 }}
+          className="mx-auto mt-10 flex max-w-3xl flex-col items-center text-center"
+        >
+          <h2 className="text-balance text-3xl font-semibold md:text-4xl">{t("title")}</h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">{t("subtitle")}</p>
 
-          <div className="mt-7 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Button asChild size="lg">
               <Link href="/app/audit">
                 {t("ctaPrimary")}
@@ -45,47 +65,37 @@ export function AuditShowcase() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.45, delay: 0.08 }}
-          className="overflow-hidden rounded-[1.75rem] border border-border bg-background/70 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.2)]"
+          transition={{ duration: 0.45, delay: 0.12 }}
+          className="mt-10 grid w-full gap-4 md:grid-cols-2"
         >
-          <div className="relative aspect-[16/9] w-full overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/routine-shelf.jpg" alt="" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-            <p className="absolute bottom-3 left-5 text-xs font-medium uppercase tracking-[0.18em] text-white drop-shadow">
-              {t("panelEyebrow")}
-            </p>
-          </div>
-
-          <div className="p-6 md:p-8">
-            <div className="grid gap-5 sm:grid-cols-2">
-              {checks.map((check, index) => {
-                const Icon = CHECK_ICONS[index] ?? Sparkles;
-                return (
-                  <div key={check.title} className="flex gap-3">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Icon className="size-4" />
-                    </span>
-                    <div>
-                      <p className="text-sm font-medium">{check.title}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{check.text}</p>
-                    </div>
+          {[
+            {
+              title: comparison.scanTitle,
+              text: comparison.scanText,
+              items: comparison.scanItems,
+            },
+            {
+              title: comparison.auditTitle,
+              text: comparison.auditText,
+              items: comparison.auditItems,
+            },
+          ].map((card) => (
+            <div
+              key={card.title}
+              className="rounded-[1.25rem] border border-white/40 bg-white/10 p-6 text-left text-white backdrop-blur-2xl dark:border-white/20 dark:bg-white/[0.04]"
+            >
+              <h3 className="text-xl font-semibold">{card.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/78">{card.text}</p>
+              <div className="mt-5 grid gap-3">
+                {card.items.map((item) => (
+                  <div key={item} className="flex gap-3 text-sm leading-relaxed text-white/82">
+                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-white/70" />
+                    <span>{item}</span>
                   </div>
-                );
-              })}
-            </div>
-
-            <div className="mt-7 border-t border-border pt-6">
-              <p className="mb-3 text-sm font-medium">{t("priorityTitle")}</p>
-              <div className="grid gap-2 border-l border-primary/40 pl-4">
-                {priorities.map((priority) => (
-                  <p key={priority} className="text-sm leading-relaxed text-muted-foreground">
-                    {priority}
-                  </p>
                 ))}
               </div>
             </div>
-          </div>
+          ))}
         </motion.div>
       </div>
     </section>

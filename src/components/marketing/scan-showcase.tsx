@@ -1,49 +1,52 @@
 "use client";
 
-import * as React from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, Camera, Droplets, ListChecks, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/button";
 
 const CHECK_ICONS = [Camera, ListChecks, Droplets, Sparkles];
 
 export function ScanShowcase() {
   const t = useTranslations("scanShowcase");
   const checks = t.raw("checks") as { title: string; text: string }[];
-  const videoRef = React.useRef<HTMLVideoElement>(null);
-
-  React.useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.muted = true;
-    video.play().catch(() => {});
-  }, []);
 
   return (
-    <section className="border-y border-border bg-secondary/25 py-24">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+    <section className="pb-20 pt-4">
+      <div className="mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.45 }}
-          className="max-w-xl"
+          className="mx-auto flex max-w-5xl flex-col items-center text-center"
         >
-          <h2 className="text-balance font-serif text-3xl md:text-4xl">{t("title")}</h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground">{t("subtitle")}</p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/scan-product-editorial.png"
+            alt=""
+            className="mb-10 block w-full max-w-[520px] object-contain"
+          />
 
-          <div className="mt-7 flex flex-wrap gap-3">
-            <Button asChild size="lg">
-              <Link href="/app/scan">
+          <h2 className="text-balance text-3xl font-semibold md:text-4xl">{t("title")}</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            {t("subtitle")}
+          </p>
+
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href="/app/scan"
+              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/60 bg-transparent px-7 text-base font-medium text-white shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+            >
                 {t("ctaPrimary")}
                 <ArrowRight className="size-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/app/products">{t("ctaSecondary")}</Link>
-            </Button>
+            </Link>
+            <Link
+              href="/app/products"
+              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/50 bg-transparent px-7 text-base font-medium text-white shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+            >
+              {t("ctaSecondary")}
+            </Link>
           </div>
 
           <p className="mt-5 text-xs leading-relaxed text-muted-foreground">{t("note")}</p>
@@ -54,47 +57,26 @@ export function ScanShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.45, delay: 0.08 }}
-          className="overflow-hidden rounded-[1.75rem] border border-border bg-background/70 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-20px_rgba(0,0,0,0.2)]"
+          className="mt-12"
         >
-          <div className="relative aspect-[16/9] w-full overflow-hidden">
-            <video
-              ref={videoRef}
-              className="h-full w-full object-cover"
-              poster="/scan-mirror-poster.jpg"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              controls={false}
-              aria-hidden="true"
-            >
-              <source src="/scan-mirror.webm" type="video/webm" />
-              <source src="/scan-mirror.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-            <p className="absolute bottom-3 left-5 text-xs font-medium uppercase tracking-[0.18em] text-white drop-shadow">
-              {t("panelEyebrow")}
-            </p>
-          </div>
-
-          <div className="p-6 md:p-8">
-            <div className="grid gap-5 sm:grid-cols-2">
-              {checks.map((check, index) => {
-                const Icon = CHECK_ICONS[index] ?? Sparkles;
-                return (
-                  <div key={check.title} className="flex gap-3">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Icon className="size-4" />
-                    </span>
-                    <div>
-                      <p className="text-sm font-medium">{check.title}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{check.text}</p>
-                    </div>
+          <div className="no-scrollbar -mx-6 flex gap-4 overflow-x-auto px-6 pb-2 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0 lg:pb-0">
+            {checks.map((check, index) => {
+              const Icon = CHECK_ICONS[index] ?? Sparkles;
+              return (
+                <div
+                  key={check.title}
+                  className="haru-glow-card w-[calc((100vw-4rem)/2)] min-w-[calc((100vw-4rem)/2)] rounded-[1.15rem] p-4 lg:w-auto lg:min-w-0"
+                >
+                  <span className="haru-icon-halo mb-4 flex size-10 shrink-0 items-center justify-center rounded-full text-white">
+                    <Icon className="size-4" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-medium">{check.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{check.text}</p>
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
       </div>

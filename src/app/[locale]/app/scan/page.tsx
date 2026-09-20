@@ -215,16 +215,16 @@ export default function ScanPage() {
               </div>
             </Card>
             <Card className="mt-4 gap-3 p-4 text-left">
-              <label className="text-sm font-medium">Code-barres, marque ou nom du produit</label>
+              <label className="text-sm font-medium">{t("searchLabel")}</label>
               <div className="flex gap-2">
                 <input
-                  className="h-10 min-w-0 flex-1 rounded-md border border-input bg-background px-3 text-sm"
-                  placeholder="Ex: COSRX Snail Essence, 880..."
+                  className="h-10 min-w-0 flex-1 rounded-md border border-white/55 bg-white/[0.03] px-3 text-sm text-white outline-none backdrop-blur-xl transition placeholder:text-white/50 focus:border-white/80 focus:ring-2 focus:ring-white/20 dark:bg-white/[0.025]"
+                  placeholder={t("searchPlaceholder")}
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                 />
                 <Button onClick={() => startScan()} disabled={!query.trim()}>
-                  Chercher
+                  {t("searchCta")}
                 </Button>
               </div>
             </Card>
@@ -257,12 +257,18 @@ export default function ScanPage() {
                 {analysisSteps.map((step, i) => (
                   <p
                     key={step}
-                    className={`text-sm transition-colors ${
+                    className={`flex items-center gap-2 text-sm transition-colors ${
                       i <= stepIndex ? "text-foreground" : "text-muted-foreground/40"
                     }`}
                   >
-                    {i < stepIndex ? "✓ " : i === stepIndex ? "… " : "· "}
-                    {step}
+                    {i < stepIndex ? (
+                      <Check className="size-3.5 shrink-0 text-success" />
+                    ) : i === stepIndex ? (
+                      <Loader2 className="size-3.5 shrink-0 animate-spin text-primary" />
+                    ) : (
+                      <span className="size-1.5 shrink-0 rounded-full bg-muted-foreground/30" />
+                    )}
+                    <span>{step}</span>
                   </p>
                 ))}
               </div>

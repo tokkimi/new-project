@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { auth } from "@/lib/auth";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
 import { isVisionConfigured, getVisionClient, parseDataUrl } from "@/lib/vision";
 import { PRODUCT_CATEGORIES } from "@/lib/categories";
@@ -73,6 +74,10 @@ export async function POST(request: Request) {
   const { ok } = rateLimit(clientKey(request, "scan-analyze"), { limit: 15, windowMs: 60 * 1000 });
   if (!ok) {
     return NextResponse.json({ error: "rate_limited" }, { status: 429 });
+  }
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
   const body = await request.json().catch(() => null);

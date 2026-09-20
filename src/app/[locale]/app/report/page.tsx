@@ -1,5 +1,6 @@
 import { getTranslations, getLocale } from "next-intl/server";
-import { Stethoscope } from "lucide-react";
+import { Activity, Droplets, Dumbbell, Moon, ShieldCheck, Stethoscope, Sun } from "lucide-react";
+import type { ReactNode } from "react";
 import { redirect } from "@/i18n/navigation";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
@@ -8,13 +9,38 @@ import { PrintReportButton } from "@/components/print-report-button";
 import { analyzeExposure } from "@/lib/ingredient-exposure";
 import { findRecurrences } from "@/lib/reactions";
 import type { FaceScanAnalysis } from "@/lib/face-scan-engine";
+import { auditRoutine, type AuditResult } from "@/lib/audit-engine";
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex flex-wrap justify-between gap-2 border-b border-border/50 py-2 text-sm last:border-0">
-      <span className="text-muted-foreground">{label}</span>
-      <span className="text-right font-medium text-foreground">{value}</span>
+    <div className="flex flex-wrap justify-between gap-2 border-b border-white/18 py-2 text-sm last:border-0">
+      <span className="text-white/62">{label}</span>
+      <span className="text-right font-medium text-white">{value}</span>
     </div>
+  );
+}
+
+function Meter({ label, value, detail }: { label: string; value: number; detail?: string }) {
+  const safeValue = Math.max(0, Math.min(100, Math.round(value)));
+  return (
+    <div className="grid gap-1.5">
+      <div className="flex items-baseline justify-between gap-3 text-sm">
+        <span className="font-medium text-white">{label}</span>
+        <span className="text-white/62">{safeValue}/100</span>
+      </div>
+      <div className="h-2 overflow-hidden rounded-full bg-white/12">
+        <div className="h-full rounded-full bg-white/78" style={{ width: `${safeValue}%` }} />
+      </div>
+      {detail && <p className="text-xs leading-5 text-white/60">{detail}</p>}
+    </div>
+  );
+}
+
+function SmallTag({ children }: { children: ReactNode }) {
+  return (
+    <span className="rounded-full border border-white/25 bg-white/[0.035] px-2.5 py-1 text-xs text-white/68 backdrop-blur-xl">
+      {children}
+    </span>
   );
 }
 
@@ -37,15 +63,18 @@ export default async function ReportPage() {
   const tIng = await getTranslations("ingredients");
   const tReact = await getTranslations("reactions");
   const tProto = await getTranslations("protocol");
+  const tReliability = await getTranslations("routineWorkspace.reliability");
 
-  const [profile, scan, reactions, protocol, shelf] = await Promise.all([
+  const [profile, scan, auditRun, bilan, reactions, protocol, shelf, preferences, catalog] = await Promise.all([
     db.skinProfile.findUnique({ where: { userId } }),
     db.faceScanResult.findFirst({ where: { userId }, orderBy: { createdAt: "desc" } }),
+    db.auditRun.findFirst({ where: { userId }, orderBy: { createdAt: "desc" } }),
+    db.bilan.findFirst({ where: { userId }, orderBy: { createdAt: "desc" } }),
     db.productReaction.findMany({
       where: { userId },
       orderBy: { createdAt: "desc" },
       take: 100,
-      select: { type: true, productId: true, product: { select: { name: true } } },
+      select: { type: true, note: true, createdAt: true, productId: true, product: { select: { name: true } } },
     }),
     db.routineProtocol.findFirst({
       where: { userId, status: "active" },
@@ -53,14 +82,40 @@ export default async function ReportPage() {
     }),
     db.shelfItem.findMany({
       where: { userId },
-      select: { product: { select: { id: true, name: true, ingredientIds: true } } },
+      include: { product: true },
+    }),
+    db.userProductPreference.findMany({ where: { userId }, include: { product: true } }),
+    db.product.findMany({
+      take: 300,
+      select: { id: true, slug: true, name: true, brand: true, category: true, skinTypes: true, concerns: true },
     }),
   ]);
 
   const analysis = scan ? (scan.analysis as unknown as FaceScanAnalysis) : null;
+  const shelfProducts = shelf.map((s) => s.product);
+  const prefByProduct = new Map(preferences.map((p) => [p.productId, p] as const));
+  const computedAudit = auditRoutine(
+    shelfProducts,
+    catalog,
+    profile
+      ? {
+          skinType: profile.skinType,
+          concerns: profile.concerns,
+          sensitivities: profile.sensitivities,
+        }
+      : null
+  );
+  const savedAudit = auditRun?.result as unknown as Partial<AuditResult> | undefined;
+  const latestAudit =
+    savedAudit?.scores && savedAudit.productDecisions && savedAudit.recommendedRoutine
+      ? (savedAudit as AuditResult)
+      : computedAudit;
   const flagged = analysis?.modules.filter((m) => m.flagged) ?? [];
   const exposure = analyzeExposure(
-    shelf.map((s) => ({ ingredientIds: s.product.ingredientIds, slot: "both" as const }))
+    shelfProducts.map((product) => ({
+      ingredientIds: product.ingredientIds,
+      slot: (prefByProduct.get(product.id)?.routineSlot ?? "both") as "morning" | "evening" | "both" | "pause",
+    }))
   );
   const recurrences = findRecurrences(reactions.map((r) => ({ type: r.type, productId: r.productId })));
   const nameById = new Map(shelf.map((s) => [s.product.id, s.product.name] as const));
@@ -75,25 +130,59 @@ export default async function ReportPage() {
   };
 
   return (
-    <div className="mx-auto flex max-w-2xl flex-col gap-6">
+    <div data-report-content className="mx-auto flex max-w-2xl flex-col gap-6 bg-transparent p-1 text-white">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h1 className="font-serif text-3xl">{t("title")}</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
+          <p className="mt-1 text-sm text-white/62">
             {t("generatedOn", { date: dateFmt.format(new Date()) })}
           </p>
         </div>
         <PrintReportButton label={t("print")} />
       </div>
 
-      <Card className="print-avoid-break gap-2 border-primary/20 bg-primary/5">
+      <Card className="print-avoid-break gap-2 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <Stethoscope className="mt-0.5 size-5 shrink-0 text-primary" />
-          <p className="text-sm text-muted-foreground">{t("intro")}</p>
+          <Stethoscope className="mt-0.5 size-5 shrink-0 text-white" />
+          <p className="text-sm text-white/68">{t("intro")}</p>
         </div>
       </Card>
 
-      <Card className="print-avoid-break gap-3">
+      <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+        <div className="flex items-start gap-3">
+          <ShieldCheck className="mt-0.5 size-5 shrink-0 text-white" />
+          <div>
+            <h2 className="font-serif text-xl">{tReliability("title")}</h2>
+            <p className="mt-1 text-sm text-white/62">{tReliability("subtitle")}</p>
+          </div>
+        </div>
+        <div className="grid gap-2 text-sm">
+          <Row label={tReliability("scan")} value={scan ? t("included") : t("missing")} />
+          <Row label={tReliability("exposure")} value={exposure.actives.length > 0 ? t("included") : t("missing")} />
+          <Row label={tReliability("protocol")} value={protocol ? t("included") : t("missing")} />
+          <Row label={tReliability("reactions")} value={reactions.length > 0 ? t("included") : t("missing")} />
+        </div>
+      </Card>
+
+      <Card className="print-avoid-break gap-4 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+        <div className="flex items-start gap-3">
+          <Activity className="mt-0.5 size-5 shrink-0 text-white" />
+          <div>
+            <h2 className="font-serif text-xl">{t("auditChartTitle")}</h2>
+            <p className="mt-1 text-sm text-white/62">
+              {auditRun ? t("auditDate", { date: dateFmt.format(auditRun.createdAt) }) : t("auditLive")}
+            </p>
+          </div>
+        </div>
+        <Meter label={t("auditOverall")} value={latestAudit.score} detail={latestAudit.profile.summary} />
+        <div className="grid gap-3 sm:grid-cols-2">
+          {Object.entries(latestAudit.scores).map(([key, value]) => (
+            <Meter key={key} label={t(`auditScores.${key}`)} value={value} />
+          ))}
+        </div>
+      </Card>
+
+      <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
         <h2 className="font-serif text-xl">{t("profileTitle")}</h2>
         {profile ? (
           <div>
@@ -116,13 +205,18 @@ export default async function ReportPage() {
             {profile.climate && (
               <Row label={t("climate")} value={safe(() => tClimate(profile.climate!), profile.climate)} />
             )}
+            {profile.waterIntake && <Row label={t("waterIntake")} value={safe(() => t(`lifestyle.water.${profile.waterIntake}`), profile.waterIntake)} />}
+            {profile.sleepHours && <Row label={t("sleep")} value={safe(() => t(`lifestyle.sleep.${profile.sleepHours}`), profile.sleepHours)} />}
+            {profile.stressLevel && <Row label={t("stress")} value={safe(() => t(`lifestyle.stress.${profile.stressLevel}`), profile.stressLevel)} />}
+            {profile.exerciseFrequency && <Row label={t("sport")} value={safe(() => t(`lifestyle.exercise.${profile.exerciseFrequency}`), profile.exerciseFrequency)} />}
+            {profile.sunExposure && <Row label={t("sunExposure")} value={safe(() => t(`lifestyle.sun.${profile.sunExposure}`), profile.sunExposure)} />}
           </div>
         ) : (
-          <p className="text-sm text-muted-foreground">{t("noProfile")}</p>
+          <p className="text-sm text-white/62">{t("noProfile")}</p>
         )}
       </Card>
 
-      <Card className="print-avoid-break gap-3">
+      <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
         <h2 className="font-serif text-xl">{t("scanTitle")}</h2>
         {analysis && scan ? (
           <div>
@@ -135,16 +229,29 @@ export default async function ReportPage() {
               <Row label={t("skinType")} value={safe(() => tSkin(analysis.skinType!), analysis.skinType)} />
             )}
             <div className="mt-3">
+              <p className="mb-2 text-sm font-medium">{t("scanChartTitle")}</p>
+              <div className="grid gap-3">
+                {analysis.modules.map((m) => (
+                  <Meter
+                    key={m.id}
+                    label={safe(() => tFace(`modules.${m.id}.name`), m.id)}
+                    value={Math.round(((9 - m.score) / 9) * 100)}
+                    detail={m.note}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="mt-5">
               <p className="mb-1.5 text-sm font-medium">{t("flaggedTitle")}</p>
               {flagged.length === 0 ? (
-                <p className="text-sm text-muted-foreground">{t("flaggedNone")}</p>
+                <p className="text-sm text-white/62">{t("flaggedNone")}</p>
               ) : (
                 <ul className="grid gap-1.5">
                   {flagged.map((m) => (
                     <li key={m.id} className="flex justify-between text-sm">
                       <span>{safe(() => tFace(`modules.${m.id}.name`), m.id)}</span>
-                      <span className="text-muted-foreground">
-                        {safe(() => tFace(`severity.${m.severity}`), m.severity)} · {9 - m.score}/9
+                      <span className="text-white/62">
+                        {safe(() => tFace(`severity.${m.severity}`), m.severity)} - {9 - m.score}/9
                       </span>
                     </li>
                   ))}
@@ -153,27 +260,50 @@ export default async function ReportPage() {
             </div>
           </div>
         ) : (
-          <p className="text-sm text-muted-foreground">{t("noScan")}</p>
+          <p className="text-sm text-white/62">{t("noScan")}</p>
         )}
       </Card>
 
       {(exposure.actives.length > 0 || protocol) && (
-        <Card className="print-avoid-break gap-3">
+        <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
           <h2 className="font-serif text-xl">{t("routineTitle")}</h2>
+          <div className="grid gap-2 text-sm">
+            <Row label={t("routineProducts")} value={`${shelfProducts.length}`} />
+            <Row label={t("routineConflicts")} value={`${latestAudit.routine.warnings.length}`} />
+            <Row label={t("routineDuplicates")} value={`${latestAudit.routine.duplicateActives.length}`} />
+          </div>
           {exposure.actives.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {exposure.actives.map((a) => (
                 <span
                   key={a.ingredientId}
-                  className="rounded-full bg-secondary px-3 py-1 text-sm text-muted-foreground"
+                  className="rounded-full border border-white/24 bg-white/[0.035] px-3 py-1 text-sm text-white/68 backdrop-blur-xl"
                 >
-                  {safe(() => tIng(`${a.ingredientId}.name`), a.ingredientId)} ×{a.productCount}
+                  {safe(() => tIng(`${a.ingredientId}.name`), a.ingredientId)} x{a.productCount}
                 </span>
               ))}
             </div>
           )}
+          {exposure.findings.length > 0 && (
+            <div className="grid gap-2">
+              <p className="text-sm font-medium">{t("exposureFindings")}</p>
+              {exposure.findings.map((finding, index) => (
+                <p key={index} className="rounded-2xl border border-white/24 bg-white/[0.035] px-3 py-2 text-sm text-white/66 backdrop-blur-xl">
+                  {finding.kind === "redundant"
+                    ? t("redundantFinding", {
+                        ingredient: safe(() => tIng(`${finding.ingredientId}.name`), finding.ingredientId),
+                        count: finding.count,
+                      })
+                    : t("stackFinding", {
+                        slot: t(`slots.${finding.slot}`),
+                        ingredients: finding.ingredientIds.map((id) => safe(() => tIng(`${id}.name`), id)).join(", "),
+                      })}
+                </p>
+              ))}
+            </div>
+          )}
           {protocol && (
-            <p className="rounded-2xl bg-primary/8 px-4 py-3 text-sm">
+            <p className="rounded-2xl border border-white/24 bg-white/[0.035] px-4 py-3 text-sm text-white/72 backdrop-blur-xl">
               <span className="font-medium">{safe(() => tProto(`goals.${protocol.goal}`), protocol.goal)}</span>
               {" — "}
               {safe(() => tProto(`changeKinds.${protocol.changeKind}`), protocol.changeKind)}
@@ -183,8 +313,98 @@ export default async function ReportPage() {
         </Card>
       )}
 
+      <Card className="print-avoid-break gap-4 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+        <h2 className="font-serif text-xl">{t("routineChangesTitle")}</h2>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {latestAudit.priorities.map((priority) => (
+            <div key={priority.id} className="rounded-2xl border border-white/24 bg-white/[0.025] p-3">
+              <SmallTag>{t(`priorityLevels.${priority.level}`)}</SmallTag>
+              <p className="mt-2 text-sm font-medium">{priority.title}</p>
+              <p className="mt-1 text-xs leading-5 text-white/62">{priority.text}</p>
+            </div>
+          ))}
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div>
+            <div className="mb-2 flex items-center gap-2 text-sm font-medium">
+              <Sun className="size-4" /> {t("morningPlan")}
+            </div>
+            <ul className="grid gap-1.5 text-sm text-white/64">
+              {latestAudit.recommendedRoutine.morning.map((item) => <li key={item}>- {item}</li>)}
+            </ul>
+          </div>
+          <div>
+            <div className="mb-2 flex items-center gap-2 text-sm font-medium">
+              <Moon className="size-4" /> {t("eveningPlan")}
+            </div>
+            <ul className="grid gap-1.5 text-sm text-white/64">
+              {latestAudit.recommendedRoutine.evening.map((item) => <li key={item}>- {item}</li>)}
+            </ul>
+          </div>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div>
+            <div className="mb-2 flex items-center gap-2 text-sm font-medium">
+              <Droplets className="size-4" /> {t("hydrationLifestyleTitle")}
+            </div>
+            <ul className="grid gap-1.5 text-sm text-white/64">
+              <li>- {t("hydrationAdvice")}</li>
+              <li>- {t("sleepAdvice")}</li>
+              <li>- {t("stressAdvice")}</li>
+              <li>- {t("sunAdvice")}</li>
+            </ul>
+          </div>
+          <div>
+            <div className="mb-2 flex items-center gap-2 text-sm font-medium">
+              <Dumbbell className="size-4" /> {t("movementLifestyleTitle")}
+            </div>
+            <ul className="grid gap-1.5 text-sm text-white/64">
+              <li>- {t("sportAdvice")}</li>
+              <li>- {t("sweatAdvice")}</li>
+              <li>- {t("recoveryAdvice")}</li>
+            </ul>
+          </div>
+        </div>
+      </Card>
+
+      <Card className="print-avoid-break gap-4 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+        <h2 className="font-serif text-xl">{t("productDecisionsTitle")}</h2>
+        <div className="grid gap-3">
+          {latestAudit.productDecisions.map((decision) => {
+            const pref = prefByProduct.get(decision.product.id);
+            const ingredients = decision.product.ingredientIds.slice(0, 8);
+            return (
+              <div key={decision.product.id} className="rounded-2xl border border-white/24 bg-white/[0.025] p-3">
+                <div className="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <p className="font-medium">{decision.product.name}</p>
+                    <p className="text-xs text-white/58">{decision.product.brand} - {decision.product.category}</p>
+                  </div>
+                  <SmallTag>{t(`productDecisions.${decision.decision}`)}</SmallTag>
+                </div>
+                <p className="mt-2 text-sm text-white/64">{decision.reason}</p>
+                <div className="mt-2 grid gap-1 text-xs text-white/58 sm:grid-cols-2">
+                  <span>{t("timing")}: {t(`slots.${decision.timing === "pause" ? "pause" : decision.timing}`)}</span>
+                  <span>{t("frequency")}: {decision.frequency}</span>
+                  {pref?.openedAt && <span>{t("openedOn")}: {dateFmt.format(pref.openedAt)}</span>}
+                  {pref?.expiresAt && <span>{t("expiryDate")}: {dateFmt.format(pref.expiresAt)}</span>}
+                </div>
+                {ingredients.length > 0 && (
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {ingredients.map((id) => (
+                      <SmallTag key={id}>{safe(() => tIng(`${id}.name`), id)}</SmallTag>
+                    ))}
+                  </div>
+                )}
+                {pref?.note && <p className="mt-2 text-xs text-white/58">{t("userNote")}: {pref.note}</p>}
+              </div>
+            );
+          })}
+        </div>
+      </Card>
+
       {recurrences.length > 0 && (
-        <Card className="print-avoid-break gap-3">
+        <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
           <h2 className="font-serif text-xl">{t("reactionsTitle")}</h2>
           <ul className="grid gap-1.5 text-sm">
             {recurrences.map((r) => (
@@ -197,10 +417,28 @@ export default async function ReportPage() {
               </li>
             ))}
           </ul>
+          {reactions.some((reaction) => reaction.note) && (
+            <div className="mt-3 grid gap-2">
+              <p className="text-sm font-medium">{t("reactionNotesTitle")}</p>
+              {reactions.filter((reaction) => reaction.note).slice(0, 8).map((reaction) => (
+                <p key={`${reaction.createdAt.toISOString()}-${reaction.productId ?? "none"}`} className="text-sm text-white/62">
+                  {dateFmt.format(reaction.createdAt)} - {reaction.product?.name ?? tReact("aProduct")} - {reaction.note}
+                </p>
+              ))}
+            </div>
+          )}
         </Card>
       )}
 
-      <p className="text-xs leading-relaxed text-muted-foreground">{t("disclaimer")}</p>
+      {bilan && (
+        <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+          <h2 className="font-serif text-xl">{t("bilanTitle")}</h2>
+          <Row label={t("bilanDate")} value={dateFmt.format(bilan.createdAt)} />
+          <Row label={t("overall")} value={`${bilan.overallScore} / 100`} />
+        </Card>
+      )}
+
+      <p className="text-xs leading-relaxed text-white/58">{t("disclaimer")}</p>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Geist, Geist_Mono, Fraunces, Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
+import { Geist_Mono, Montserrat, Noto_Sans_KR, Syncopate } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/components/auth-provider";
 import { BottomNav } from "@/components/bottom-nav";
@@ -10,9 +10,10 @@ import { CookieBanner } from "@/components/cookie-banner";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const geistSans = Geist({
+const montserrat = Montserrat({
   variable: "--font-sans-en",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -20,22 +21,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const fraunces = Fraunces({
+const syncopate = Syncopate({
   variable: "--font-serif-en",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
+  weight: ["400", "700"],
 });
 
 const notoSansKr = Noto_Sans_KR({
   variable: "--font-sans-ko",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-});
-
-const notoSerifKr = Noto_Serif_KR({
-  variable: "--font-serif-ko",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
 });
 
 export function generateStaticParams() {
@@ -58,6 +53,16 @@ export async function generateMetadata({
       statusBarStyle: "default",
       title: "Haru",
     },
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      ],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+      shortcut: ["/favicon.ico"],
+    },
     other: {
       "mobile-web-app-capable": "yes",
     },
@@ -68,8 +73,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fbf7f2" },
-    { media: "(prefers-color-scheme: dark)", color: "#17130f" },
+    { media: "(prefers-color-scheme: light)", color: "#f7f8f8" },
+    { media: "(prefers-color-scheme: dark)", color: "#121416" },
   ],
 };
 
@@ -88,8 +93,8 @@ export default async function RootLayout({
 
   const fontVars =
     locale === "ko"
-      ? `${notoSansKr.variable} ${notoSerifKr.variable} ${geistSans.variable} ${fraunces.variable}`
-      : `${geistSans.variable} ${fraunces.variable} ${notoSansKr.variable} ${notoSerifKr.variable}`;
+      ? `${notoSansKr.variable} ${montserrat.variable} ${syncopate.variable}`
+      : `${montserrat.variable} ${syncopate.variable} ${notoSansKr.variable}`;
 
   return (
     <html

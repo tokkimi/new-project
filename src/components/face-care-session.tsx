@@ -72,13 +72,13 @@ export function FaceCareSession({
 
   if (finished) {
     return (
-      <div className="flex flex-col items-center gap-4 rounded-[1.5rem] bg-secondary/50 p-8 text-center">
-        <span className="flex size-14 items-center justify-center rounded-full bg-primary/15 text-primary">
+      <div className="flex flex-col items-center gap-4 rounded-[1.5rem] border border-white/35 bg-transparent p-8 text-center text-white backdrop-blur-md">
+        <span className="flex size-14 items-center justify-center rounded-full border border-white/45 bg-white/[0.04] text-white">
           <Check className="size-7" />
         </span>
         <div>
           <p className="font-serif text-2xl">{labels.done}</p>
-          <p className="mt-1 text-sm text-muted-foreground">{labels.doneText}</p>
+          <p className="mt-1 text-sm text-white/68">{labels.doneText}</p>
         </div>
         <Button variant="outline" onClick={restart}>
           <RotateCcw className="size-4" />
@@ -91,19 +91,19 @@ export function FaceCareSession({
   const progress = ((index + (running || secondsLeft < step.seconds ? (step.seconds - secondsLeft) / step.seconds : 0)) / steps.length) * 100;
 
   return (
-    <div className="flex flex-col gap-5 rounded-[1.5rem] bg-secondary/50 p-5 sm:p-6">
-      <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
-        <div className="h-full rounded-full bg-primary transition-all duration-500" style={{ width: `${progress}%` }} />
+    <div className="flex flex-col gap-5 rounded-[1.5rem] border border-white/35 bg-transparent p-5 text-white backdrop-blur-md sm:p-6">
+      <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/18">
+        <div className="h-full rounded-full bg-white transition-all duration-500" style={{ width: `${progress}%` }} />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-[minmax(0,180px)_1fr] sm:items-center">
-        <FaceDiagram variant={step.diagram} className="mx-auto w-full max-w-[180px]" />
+        <FaceDiagram variant={step.diagram} className="mx-auto w-full max-w-[210px]" />
         <div>
-          <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+          <p className="text-xs font-medium uppercase tracking-wide text-white/62">
             {labels.stepOf.replace("{current}", String(index + 1)).replace("{total}", String(steps.length))}
           </p>
           <h3 className="mt-1 font-serif text-2xl">{step.title}</h3>
-          <p className="mt-2 text-sm leading-6 text-muted-foreground">{step.instruction}</p>
+          <p className="mt-2 text-sm leading-6 text-white/72">{step.instruction}</p>
         </div>
       </div>
 

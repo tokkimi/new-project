@@ -1,14 +1,13 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Moon, Sun, Monitor } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useHasMounted } from "@/lib/use-has-mounted";
 
 const OPTIONS = [
   { value: "light", icon: Sun },
   { value: "dark", icon: Moon },
-  { value: "system", icon: Monitor },
 ] as const;
 
 export function ThemeToggle({ className }: { className?: string }) {
@@ -18,7 +17,7 @@ export function ThemeToggle({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-0.5 rounded-full border border-border bg-muted p-1",
+        "haru-glow-card inline-flex items-center gap-0.5 rounded-full p-1",
         className
       )}
     >
@@ -31,7 +30,7 @@ export function ThemeToggle({ className }: { className?: string }) {
           className={cn(
             "flex size-7 items-center justify-center rounded-full transition-colors",
             mounted && theme === value
-              ? "bg-card text-foreground shadow-sm"
+              ? "bg-transparent text-white ring-1 ring-white/55"
               : "text-muted-foreground hover:text-foreground"
           )}
         >

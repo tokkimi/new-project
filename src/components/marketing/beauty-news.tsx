@@ -1,9 +1,10 @@
 "use client";
 
+import * as React from "react";
 import type { ComponentType } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Newspaper, Sparkles, Rocket, TrendingUp, Building2, Trophy } from "lucide-react";
+import { Sparkles, Rocket, TrendingUp, Building2, Trophy } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { NewsItem } from "@/generated/prisma/client";
@@ -30,10 +31,10 @@ function NewsSlide({ item, index }: { item: NewsItem; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.35, delay: (index % 8) * 0.04 }}
-      className="w-64 shrink-0 sm:w-72"
+      className="block h-full w-[78vw] shrink-0 sm:w-[310px] lg:w-[calc((100vw_-_8rem)/5)]"
     >
-      <Card className="h-full gap-0 overflow-hidden p-0 transition-transform hover:-translate-y-0.5">
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
+      <Card className="h-[360px] gap-0 overflow-hidden p-0 transition-transform hover:-translate-y-0.5 lg:h-[380px]">
+        <div className="relative h-[210px] w-full overflow-hidden bg-muted lg:h-[230px]">
           {item.imageUrl ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -52,9 +53,9 @@ function NewsSlide({ item, index }: { item: NewsItem; index: number }) {
             {tCategories(item.category)}
           </Badge>
         </div>
-        <div className="flex flex-col gap-1 p-3">
-          <p className="line-clamp-2 text-sm font-medium leading-snug">{item.title}</p>
-          <p className="flex items-center justify-between text-xs text-muted-foreground">
+        <div className="flex min-h-0 flex-1 flex-col gap-2 p-4">
+          <p className="line-clamp-3 text-base font-medium leading-snug">{item.title}</p>
+          <p className="mt-auto flex items-center justify-between gap-3 text-xs text-muted-foreground">
             <span className="truncate">{item.sourceName}</span>
             {item.sourceUrl && <span className="shrink-0 text-primary">{t("readMore")}</span>}
           </p>
@@ -66,24 +67,68 @@ function NewsSlide({ item, index }: { item: NewsItem; index: number }) {
 
 export function BeautyNews({ items }: { items: NewsItem[] }) {
   const t = useTranslations("beautyNews");
+  const railRef = React.useRef<HTMLDivElement>(null);
 
   if (items.length === 0) return null;
 
+  const scrollNews = (direction: -1 | 1) => {
+    const rail = railRef.current;
+    if (!rail) return;
+
+    const card = rail.querySelector<HTMLElement>("[data-news-card]");
+    const step = card ? card.offsetWidth + 16 : Math.round(rail.clientWidth * 0.8);
+    const maxScroll = rail.scrollWidth - rail.clientWidth;
+    const atStart = rail.scrollLeft <= 8;
+    const atEnd = rail.scrollLeft >= maxScroll - 8;
+
+    if (direction < 0 && atStart) {
+      rail.scrollTo({ left: maxScroll, behavior: "smooth" });
+      return;
+    }
+
+    if (direction > 0 && atEnd) {
+      rail.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
+
+    rail.scrollBy({ left: direction * step, behavior: "smooth" });
+  };
+
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
-      <div className="mx-auto mb-8 max-w-xl text-center">
-        <h2 className="text-balance font-serif text-3xl md:text-4xl">{t("title")}</h2>
+    <section className="overflow-hidden py-24">
+      <div className="mx-auto mb-8 max-w-xl px-6 text-center">
+        <h2 className="text-balance text-3xl font-semibold md:text-4xl">{t("title")}</h2>
         <p className="mt-3 text-muted-foreground">{t("subtitle")}</p>
-        <p className="mt-2 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
-          <Newspaper className="size-3.5" />
-          {t("updatedLabel")}
-        </p>
       </div>
 
-      <div className="no-scrollbar flex gap-4 overflow-x-auto px-6 pb-2 sm:justify-center sm:px-0">
-        {items.map((item, i) => (
-          <NewsSlide key={item.id} item={item} index={i} />
-        ))}
+      <div className="relative mx-[calc(50%-50vw)]">
+        <button
+          type="button"
+          aria-label="Previous news"
+          onClick={() => scrollNews(-1)}
+          className="absolute left-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+        >
+          <span className="size-2.5 rounded-full bg-[#7f878d]/70 dark:bg-white/85" />
+        </button>
+        <button
+          type="button"
+          aria-label="Next news"
+          onClick={() => scrollNews(1)}
+          className="absolute right-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+        >
+          <span className="size-2.5 rounded-full bg-[#7f878d]/70 dark:bg-white/85" />
+        </button>
+
+        <div
+          ref={railRef}
+          className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-5 pb-3 sm:px-8 lg:px-16"
+        >
+          {items.map((item, i) => (
+            <div key={item.id} data-news-card className="snap-start">
+              <NewsSlide item={item} index={i} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

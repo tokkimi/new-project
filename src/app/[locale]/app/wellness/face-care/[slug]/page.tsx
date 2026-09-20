@@ -1,10 +1,31 @@
+import type { ComponentType } from "react";
 import { notFound } from "next/navigation";
 import { AlertTriangle, ArrowLeft, Clock, ShieldCheck } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { FaceCareSession } from "@/components/face-care-session";
-import { getFaceCareRoutine } from "@/lib/face-care-data";
+import { getFaceCareRoutine, type FaceCareLang } from "@/lib/face-care-data";
 
-const labels = {
+const labels: Record<
+  FaceCareLang,
+  {
+    back: string;
+    goal: string;
+    duration: string;
+    difficulty: string;
+    zones: string;
+    frequency: string;
+    precautions: string;
+    evidence: string;
+    start: string;
+    pause: string;
+    next: string;
+    previous: string;
+    restart: string;
+    stepOf: string;
+    done: string;
+    doneText: string;
+  }
+> = {
   en: {
     back: "Face care",
     goal: "Goal",
@@ -26,22 +47,63 @@ const labels = {
   ko: {
     back: "페이스 케어",
     goal: "목표",
-    duration: "시간",
+    duration: "소요 시간",
     difficulty: "난이도",
     zones: "부위",
     frequency: "빈도",
     precautions: "주의",
-    evidence: "근거",
+    evidence: "기준",
     start: "시작",
-    pause: "일시정지",
+    pause: "일시 정지",
     next: "다음",
     previous: "이전",
     restart: "다시 하기",
     stepOf: "{total}단계 중 {current}단계",
     done: "세션 완료",
-    doneText: "잘하셨어요. 얼굴이 긴장될 때 언제든 다시 오세요.",
+    doneText: "가볍게 마무리했어요. 얼굴이 긴장될 때 다시 열어보세요.",
+  },
+  fr: {
+    back: "Face care",
+    goal: "Objectif",
+    duration: "Duree",
+    difficulty: "Niveau",
+    zones: "Zones",
+    frequency: "Frequence",
+    precautions: "Precautions",
+    evidence: "Base",
+    start: "Demarrer",
+    pause: "Pause",
+    next: "Suivant",
+    previous: "Precedent",
+    restart: "Recommencer",
+    stepOf: "Etape {current} sur {total}",
+    done: "Session terminee",
+    doneText: "Simple et doux. Revenez quand le visage semble tendu.",
+  },
+  ja: {
+    back: "フェイスケア",
+    goal: "目的",
+    duration: "所要時間",
+    difficulty: "難易度",
+    zones: "部位",
+    frequency: "頻度",
+    precautions: "注意",
+    evidence: "目安",
+    start: "開始",
+    pause: "一時停止",
+    next: "次へ",
+    previous: "前へ",
+    restart: "もう一度",
+    stepOf: "{total}ステップ中 {current}ステップ",
+    done: "セッション完了",
+    doneText: "やさしく完了しました。顔がこわばる時にまた開いてください。",
   },
 };
+
+function resolveLang(locale: string): FaceCareLang {
+  if (locale === "ko" || locale === "fr" || locale === "ja") return locale;
+  return "en";
+}
 
 export default async function FaceCareRoutinePage({
   params,
@@ -49,7 +111,7 @@ export default async function FaceCareRoutinePage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const lang = locale === "ko" ? "ko" : "en";
+  const lang = resolveLang(locale);
   const t = labels[lang];
 
   const routine = getFaceCareRoutine(slug);
@@ -96,7 +158,15 @@ export default async function FaceCareRoutinePage({
   );
 }
 
-function Fact({ label, value, icon: Icon }: { label: string; value: string; icon?: React.ComponentType<{ className?: string }> }) {
+function Fact({
+  label,
+  value,
+  icon: Icon,
+}: {
+  label: string;
+  value: string;
+  icon?: ComponentType<{ className?: string }>;
+}) {
   return (
     <div className="rounded-2xl bg-secondary/60 p-3">
       <p className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">

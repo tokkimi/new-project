@@ -42,7 +42,7 @@ export function LocaleSwitcher({
         }
         aria-label="Language"
         className={cn(
-          "h-7 rounded-full border border-border bg-muted px-2 text-[11px] font-medium text-muted-foreground",
+          "haru-glow-card h-7 rounded-full px-2 text-[11px] font-medium text-muted-foreground",
           className
         )}
       >
@@ -58,7 +58,7 @@ export function LocaleSwitcher({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-0.5 rounded-full border border-border bg-muted p-1 text-xs font-medium",
+        "haru-glow-card inline-flex items-center gap-0.5 rounded-full p-1 text-xs font-medium",
         className
       )}
     >
@@ -75,7 +75,7 @@ export function LocaleSwitcher({
           className={cn(
             "rounded-full px-2.5 py-1 transition-colors",
             locale === loc
-              ? "bg-card text-foreground shadow-sm"
+              ? "bg-transparent text-white ring-1 ring-white/55"
               : "text-muted-foreground hover:text-foreground"
           )}
         >

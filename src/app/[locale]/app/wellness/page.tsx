@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import { ArrowRight, Brain, CloudRain, Moon, ShieldCheck, Sparkles, Waves, Wind } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
@@ -17,35 +18,38 @@ type WellnessSound = {
   order: number;
 };
 
-const copy: Record<Lang, {
-  title: string;
-  subtitle: string;
-  science: string;
-  scienceText: string;
-  breathing: string;
-  breathingText: string;
-  inhale: string;
-  hold: string;
-  exhale: string;
-  start: string;
-  pause: string;
-  sleep: string;
-  sleepText: string;
-  sleepItems: string[];
-  sounds: string;
-  soundsText: string;
-  fallbackNote: string;
-  audioError: string;
-  faceCare: string;
-  faceCareText: string;
-  openFaceCare: string;
-  guides: string;
-  guidesText: string;
-  openGuides: string;
-  encyclo: string;
-  encycloText: string;
-  openEncyclo: string;
-}> = {
+const copy: Record<
+  Lang,
+  {
+    title: string;
+    subtitle: string;
+    science: string;
+    scienceText: string;
+    breathing: string;
+    breathingText: string;
+    inhale: string;
+    hold: string;
+    exhale: string;
+    start: string;
+    pause: string;
+    sleep: string;
+    sleepText: string;
+    sleepItems: string[];
+    sounds: string;
+    soundsText: string;
+    fallbackNote: string;
+    audioError: string;
+    faceCare: string;
+    faceCareText: string;
+    openFaceCare: string;
+    guides: string;
+    guidesText: string;
+    openGuides: string;
+    encyclo: string;
+    encycloText: string;
+    openEncyclo: string;
+  }
+> = {
   en: {
     title: "Wellness",
     subtitle:
@@ -78,7 +82,7 @@ const copy: Record<Lang, {
     faceCareText: "Gentle massage, face yoga, jaw release and scalp tension routines.",
     openFaceCare: "Open face care",
     guides: "Routine guides",
-    guidesText: "General starting points by goal — glass skin, acne-prone, brightening, sensitive skin and more.",
+    guidesText: "Starting points by goal: glass skin, acne-prone, brightening, sensitive skin and more.",
     openGuides: "Browse guides",
     encyclo: "Ingredient guide",
     encycloText: "What each tracked active does, how to use it, and what to know before you start.",
@@ -87,43 +91,43 @@ const copy: Record<Lang, {
   ko: {
     title: "웰니스",
     subtitle:
-      "스트레스, 수면, 얼굴 긴장은 피부가 보이고 느껴지는 방식에 영향을 줄 수 있어요. Haru는 차분하고 실용적인 비의료 웰니스 도구를 제공합니다.",
+      "스트레스, 수면, 얼굴 긴장은 피부가 보이고 느껴지는 방식에 영향을 줄 수 있어요. 이 공간은 차분하고 실용적인 비의료 웰니스 지원을 제공합니다.",
     science: "스트레스와 피부",
     scienceText:
-      "스트레스는 수면, 손으로 만지는 습관, 가려움, 유분감, 붉어 보이는 신호에 영향을 줄 수 있어요. Haru는 이를 진단이 아닌 생활 지원으로 다룹니다.",
+      "스트레스는 수면, 피부를 만지는 습관, 가려움, 유분감, 염증 신호에 영향을 줄 수 있어요. Haru는 이를 진단이나 치료가 아닌 생활 지원으로 다룹니다.",
     breathing: "2분 호흡",
-    breathingText: "4초 들이마시고, 2초 멈춘 뒤, 6초 내쉬세요. 저녁 루틴 전이나 턱이 긴장될 때 반복해 보세요.",
+    breathingText: "4초 들이마시고, 2초 멈춘 뒤, 6초 내쉬세요. 저녁 루틴 전이나 턱이 긴장될 때 다섯 번 반복하세요.",
     inhale: "들이마시기",
     hold: "멈추기",
     exhale: "내쉬기",
     start: "시작",
-    pause: "일시 정지",
+    pause: "일시정지",
     sleep: "수면 체크",
-    sleepText: "매일 자동으로 초기화되는 간단한 밤 체크리스트입니다.",
-    sleepItems: ["SPF와 메이크업까지 깨끗하게 세안", "보습하기", "휴대폰과 화면 밝기 낮추기", "피부가 뜨겁거나 당기면 강한 활성 성분 쉬기"],
+    sleepText: "매일 자동으로 초기화되는 간단한 저녁 체크리스트입니다.",
+    sleepItems: ["SPF와 메이크업까지 충분히 세안", "보습하기", "휴대폰과 화면 밝기 낮추기", "피부가 뜨겁거나 당기면 강한 활성 성분은 쉬기"],
     sounds: "내장 릴랙싱 사운드",
-    soundsText: "Haru 안에서 바로 들을 수 있어요. 이 사운드는 휴식 보조용이며 피부 치료나 의학적 치료가 아닙니다.",
-    fallbackNote: "라이브러리 업데이트 중에도 기본 사운드는 사용할 수 있어요.",
-    audioError: "다시 누르거나 브라우저 오디오 권한을 확인해 주세요.",
+    soundsText: "Haru 안에서 바로 재생할 수 있어요. 이 사운드는 휴식을 돕는 용도이며 피부 치료나 의료 행위가 아닙니다.",
+    fallbackNote: "라이브러리가 업데이트 중이어도 기본 사운드는 사용할 수 있어요.",
+    audioError: "다시 탭하거나 브라우저 오디오 권한을 확인해주세요.",
     faceCare: "페이스 케어 라이브러리",
     faceCareText: "부드러운 마사지, 페이스 요가, 턱 이완, 두피 긴장 완화 루틴.",
     openFaceCare: "페이스 케어 열기",
     guides: "루틴 가이드",
-    guidesText: "목표별 시작점 — 글래스 스킨, 트러블 피부, 브라이트닝, 민감 피부 등.",
+    guidesText: "목표별 시작점: 글래스 스킨, 트러블 피부, 브라이트닝, 민감 피부 등.",
     openGuides: "가이드 보기",
     encyclo: "성분 가이드",
-    encycloText: "추적 액티브가 하는 일, 사용법, 시작 전에 알아둘 점.",
+    encycloText: "Haru가 추적하는 활성 성분의 역할, 사용법, 시작 전 확인할 점.",
     openEncyclo: "성분 보기",
   },
   ja: {
     title: "ウェルネス",
     subtitle:
-      "ストレス、睡眠、顔のこわばりは肌の見え方や感じ方に影響します。Haruでは、落ち着いて使える非医療のサポートをまとめています。",
+      "ストレス、睡眠、顔の緊張は肌の見え方や感じ方に影響します。ここでは落ち着いて実践できる非医療のサポートをまとめています。",
     science: "ストレスと肌",
     scienceText:
-      "ストレスは睡眠、触りぐせ、かゆみ、皮脂感、赤みのサインに関係することがあります。Haruでは診断ではなく生活サポートとして扱います。",
-    breathing: "2分の呼吸",
-    breathingText: "4秒吸って、2秒止めて、6秒吐きます。夜のルーティン前や顎の緊張を感じる時に使えます。",
+      "ストレスは睡眠、肌を触る癖、かゆみ、皮脂感、炎症サインに影響することがあります。Haruでは診断や治療ではなく生活面のサポートとして扱います。",
+    breathing: "2分ブリージング",
+    breathingText: "4秒吸って、2秒止めて、6秒吐きます。夜のルーティン前や顎がこわばる時に5回くり返します。",
     inhale: "吸う",
     hold: "止める",
     exhale: "吐く",
@@ -131,19 +135,19 @@ const copy: Record<Lang, {
     pause: "一時停止",
     sleep: "睡眠チェック",
     sleepText: "毎日自動でリセットされるシンプルな夜のチェックリストです。",
-    sleepItems: ["日焼け止めやメイクまで落とす", "保湿する", "スマホや画面の明るさを落とす", "肌が熱い・つっぱる日は強い成分を休む"],
+    sleepItems: ["SPFとメイクをきちんと落とす", "保湿する", "スマホと画面の明るさを下げる", "肌が熱い・つっぱる夜は強い成分を休む"],
     sounds: "内蔵リラックスサウンド",
-    soundsText: "Haru内で直接再生できます。サウンドはリラックス目的で、治療や医療効果を示すものではありません。",
-    fallbackNote: "ライブラリ更新中でも基本サウンドは使えます。",
-    audioError: "もう一度タップするか、ブラウザの音声権限を確認してください。",
+    soundsText: "Haru内で直接再生できます。これはリラックスのためのサポートで、治療ではありません。",
+    fallbackNote: "ライブラリ更新中でも基本サウンドは利用できます。",
+    audioError: "もう一度タップするか、ブラウザの音声許可を確認してください。",
     faceCare: "フェイスケアライブラリ",
     faceCareText: "やさしいマッサージ、フェイスヨガ、顎のリリース、頭皮の緊張ケア。",
     openFaceCare: "フェイスケアを開く",
     guides: "ルーティンガイド",
-    guidesText: "目的別の出発点 — ガラス肌、ニキビ肌、ブライトニング、敏感肌など。",
+    guidesText: "目標別の始め方: グラススキン、ニキビ肌、ブライトニング、敏感肌など。",
     openGuides: "ガイドを見る",
     encyclo: "成分ガイド",
-    encycloText: "各アクティブのはたらき、使い方、始める前に知っておくこと。",
+    encycloText: "Haruが追跡する成分の役割、使い方、始める前の注意点。",
     openEncyclo: "成分を見る",
   },
   fr: {
@@ -154,11 +158,12 @@ const copy: Record<Lang, {
     scienceText:
       "Le stress peut influencer le sommeil, les gestes repetitifs, les demangeaisons, la sensation de sebum et les rougeurs visibles. Haru reste sur du soutien bien-etre.",
     breathing: "Respiration deux minutes",
-    breathingText: "Inspirez 4 secondes, bloquez 2 secondes, expirez 6 secondes. A faire avant la routine du soir ou quand la machoire est tendue.",
+    breathingText:
+      "Inspirez 4 secondes, bloquez 2 secondes, expirez 6 secondes. A faire avant la routine du soir ou quand la machoire est tendue.",
     inhale: "Inspirez",
     hold: "Pause",
     exhale: "Expirez",
-    start: "Start",
+    start: "Demarrer",
     pause: "Pause",
     sleep: "Sommeil",
     sleepText: "Une checklist simple du soir, remise a zero chaque jour.",
@@ -171,11 +176,11 @@ const copy: Record<Lang, {
     faceCareText: "Massage doux, face yoga, relachement de la machoire et routines de tension du cuir chevelu.",
     openFaceCare: "Ouvrir face care",
     guides: "Guides de routine",
-    guidesText: "Des points de départ par objectif — glass skin, imperfections, éclat, peaux sensibles et plus.",
+    guidesText: "Des points de depart par objectif: glass skin, imperfections, eclat, peaux sensibles et plus.",
     openGuides: "Voir les guides",
-    encyclo: "Guide des ingrédients",
+    encyclo: "Guide des ingredients",
     encycloText: "Ce que fait chaque actif suivi, comment l'utiliser et ce qu'il faut savoir avant.",
-    openEncyclo: "Voir les ingrédients",
+    openEncyclo: "Voir les ingredients",
   },
 };
 
@@ -189,20 +194,20 @@ const FALLBACK_SOUNDS: Record<Lang, WellnessSound[]> = {
     { slug: "tone-528", label: "528 Hz tone", description: "For calm listening, not medical effect", mode: "soft528", order: 5 },
   ],
   ko: [
-    { slug: "white-noise", label: "화이트 노이즈", description: "집중하거나 쉬어갈 때 쓰는 고른 소리", mode: "white", order: 0 },
-    { slug: "pink-noise", label: "핑크 노이즈", description: "조금 더 부드러운 저음 중심 소리", mode: "pink", order: 1 },
+    { slug: "white-noise", label: "화이트 노이즈", description: "집중하거나 긴장을 풀 때 쓰기 좋은 균일한 소리", mode: "white", order: 0 },
+    { slug: "pink-noise", label: "핑크 노이즈", description: "더 부드러운 저주파 중심의 소리", mode: "pink", order: 1 },
     { slug: "rain-texture", label: "빗소리", description: "저녁 루틴 전 짧은 리셋", mode: "rain", order: 2 },
-    { slug: "ocean-texture", label: "파도 소리", description: "느린 호흡과 함께 사용", mode: "ocean", order: 3 },
+    { slug: "ocean-texture", label: "바다 소리", description: "느린 호흡과 함께 듣기", mode: "ocean", order: 3 },
     { slug: "tone-432", label: "432 Hz 톤", description: "단순한 릴랙싱 톤", mode: "calm432", order: 4 },
-    { slug: "tone-528", label: "528 Hz 톤", description: "차분한 청취용, 의학적 효과 아님", mode: "soft528", order: 5 },
+    { slug: "tone-528", label: "528 Hz 톤", description: "차분한 감상을 위한 소리, 의료 효과는 아님", mode: "soft528", order: 5 },
   ],
   ja: [
-    { slug: "white-noise", label: "ホワイトノイズ", description: "集中やクールダウンに使える一定の音", mode: "white", order: 0 },
-    { slug: "pink-noise", label: "ピンクノイズ", description: "やわらかい低音寄りの音", mode: "pink", order: 1 },
-    { slug: "rain-texture", label: "雨の音", description: "夜のルーティン前の短いリセット", mode: "rain", order: 2 },
-    { slug: "ocean-texture", label: "波の音", description: "ゆっくりした呼吸と一緒に", mode: "ocean", order: 3 },
+    { slug: "white-noise", label: "ホワイトノイズ", description: "集中やクールダウンに使いやすい均一な音", mode: "white", order: 0 },
+    { slug: "pink-noise", label: "ピンクノイズ", description: "低音がやわらかい音", mode: "pink", order: 1 },
+    { slug: "rain-texture", label: "雨音", description: "夜のルーティン前の短いリセット", mode: "rain", order: 2 },
+    { slug: "ocean-texture", label: "海の音", description: "ゆっくりした呼吸と一緒に", mode: "ocean", order: 3 },
     { slug: "tone-432", label: "432 Hz トーン", description: "シンプルなリラックストーン", mode: "calm432", order: 4 },
-    { slug: "tone-528", label: "528 Hz トーン", description: "落ち着いて聴くための音、医療効果ではありません", mode: "soft528", order: 5 },
+    { slug: "tone-528", label: "528 Hz トーン", description: "落ち着いて聴くための音。医療効果ではありません", mode: "soft528", order: 5 },
   ],
   fr: [
     { slug: "white-noise", label: "Bruit blanc", description: "Son stable pour se concentrer ou redescendre", mode: "white", order: 0 },
@@ -219,6 +224,51 @@ function resolveLang(locale: string): Lang {
   return "en";
 }
 
+function localizeDbSound(sound: {
+  slug: string;
+  labelEn: string;
+  labelKo: string;
+  descriptionEn: string;
+  descriptionKo: string;
+  synthesisMode: string | null;
+  audioUrl: string | null;
+  order: number;
+}, lang: Lang): WellnessSound {
+  const fallback = FALLBACK_SOUNDS[lang].find((item) => item.slug === sound.slug);
+  const englishFallback = FALLBACK_SOUNDS.en.find((item) => item.slug === sound.slug);
+
+  if (lang === "ko") {
+    return {
+      slug: sound.slug,
+      label: sound.labelKo || fallback?.label || sound.labelEn,
+      description: sound.descriptionKo || fallback?.description || sound.descriptionEn,
+      mode: (sound.synthesisMode as SoundMode | null) ?? fallback?.mode,
+      audioUrl: sound.audioUrl ?? undefined,
+      order: sound.order,
+    };
+  }
+
+  if (lang === "fr" || lang === "ja") {
+    return {
+      slug: sound.slug,
+      label: fallback?.label || sound.labelEn,
+      description: fallback?.description || sound.descriptionEn,
+      mode: (sound.synthesisMode as SoundMode | null) ?? fallback?.mode,
+      audioUrl: sound.audioUrl ?? undefined,
+      order: sound.order,
+    };
+  }
+
+  return {
+    slug: sound.slug,
+    label: sound.labelEn || englishFallback?.label || sound.slug,
+    description: sound.descriptionEn || englishFallback?.description || "",
+    mode: (sound.synthesisMode as SoundMode | null) ?? englishFallback?.mode,
+    audioUrl: sound.audioUrl ?? undefined,
+    order: sound.order,
+  };
+}
+
 export default async function WellnessPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const lang = resolveLang(locale);
@@ -226,49 +276,40 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
 
   const dbSounds = await db.sound.findMany({ where: { active: true }, orderBy: { order: "asc" } }).catch(() => []);
   const sounds: WellnessSound[] =
-    dbSounds.length > 0
-      ? dbSounds.map((sound) => ({
-          slug: sound.slug,
-          label: lang === "ko" ? sound.labelKo : sound.labelEn,
-          description: lang === "ko" ? sound.descriptionKo : sound.descriptionEn,
-          mode: (sound.synthesisMode as SoundMode | null) ?? undefined,
-          audioUrl: sound.audioUrl ?? undefined,
-          order: sound.order,
-        }))
-      : FALLBACK_SOUNDS[lang];
+    dbSounds.length > 0 ? dbSounds.map((sound) => localizeDbSound(sound, lang)) : FALLBACK_SOUNDS[lang];
 
   return (
-    <div className="mx-auto flex max-w-5xl flex-col gap-6">
-      <section className="rounded-[2rem] bg-card p-6 shadow-[0_20px_70px_-50px_rgba(0,0,0,0.4)] sm:p-8">
+    <div className="mx-auto flex max-w-5xl flex-col gap-6 text-white">
+      <section className="rounded-[2rem] border border-white/35 bg-white/[0.025] p-6 shadow-[0_20px_70px_-50px_rgba(255,255,255,0.24)] backdrop-blur-xl sm:p-8">
         <h1 className="font-serif text-4xl">{t.title}</h1>
-        <p className="mt-2 max-w-3xl text-muted-foreground">{t.subtitle}</p>
+        <p className="mt-2 max-w-3xl text-white/70">{t.subtitle}</p>
       </section>
 
       <div className="grid gap-4 md:grid-cols-3">
         <WellnessCard icon={Brain} title={t.science} text={t.scienceText} />
-        <Card className="rounded-[1.5rem]">
-          <Wind className="size-5 text-primary" />
+        <Card className="rounded-[1.5rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+          <Wind className="size-5 text-white" />
           <h2 className="font-serif text-xl">{t.breathing}</h2>
-          <p className="text-sm leading-6 text-muted-foreground">{t.breathingText}</p>
+          <p className="text-sm leading-6 text-white/68">{t.breathingText}</p>
           <BreathingGuide
             labels={{ inhale: t.inhale, hold: t.hold, exhale: t.exhale, start: t.start, pause: t.pause }}
           />
         </Card>
-        <Card className="rounded-[1.5rem]">
-          <Moon className="size-5 text-primary" />
+        <Card className="rounded-[1.5rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+          <Moon className="size-5 text-white" />
           <h2 className="font-serif text-xl">{t.sleep}</h2>
-          <p className="text-sm leading-6 text-muted-foreground">{t.sleepText}</p>
+          <p className="text-sm leading-6 text-white/68">{t.sleepText}</p>
           <SleepChecklist items={t.sleepItems} />
         </Card>
       </div>
 
-      <section className="rounded-[2rem] bg-secondary/60 p-5 sm:p-6">
+      <section className="rounded-[2rem] border border-white/35 bg-white/[0.025] p-5 text-white backdrop-blur-xl sm:p-6">
         <div className="mb-4 flex items-start gap-3">
-          <CloudRain className="mt-1 size-5 shrink-0 text-primary" />
+          <CloudRain className="mt-1 size-5 shrink-0 text-white" />
           <div>
             <h2 className="font-serif text-2xl">{t.sounds}</h2>
-            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.soundsText}</p>
-            {dbSounds.length === 0 && <p className="mt-2 text-xs text-muted-foreground">{t.fallbackNote}</p>}
+            <p className="mt-1 text-sm leading-6 text-white/68">{t.soundsText}</p>
+            {dbSounds.length === 0 && <p className="mt-2 text-xs text-white/58">{t.fallbackNote}</p>}
           </div>
         </div>
         <div className="grid gap-3 md:grid-cols-2">
@@ -285,12 +326,12 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         </div>
       </section>
 
-      <Card className="rounded-[2rem] bg-card/90">
+      <Card className="rounded-[2rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <Waves className="mt-1 size-5 shrink-0 text-primary" />
+          <Waves className="mt-1 size-5 shrink-0 text-white" />
           <div className="flex-1">
             <h2 className="font-serif text-2xl">{t.faceCare}</h2>
-            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.faceCareText}</p>
+            <p className="mt-1 text-sm leading-6 text-white/68">{t.faceCareText}</p>
           </div>
         </div>
         <Button asChild className="self-start">
@@ -301,12 +342,12 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         </Button>
       </Card>
 
-      <Card className="rounded-[2rem] bg-card/90">
+      <Card className="rounded-[2rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <Sparkles className="mt-1 size-5 shrink-0 text-primary" />
+          <Sparkles className="mt-1 size-5 shrink-0 text-white" />
           <div className="flex-1">
             <h2 className="font-serif text-2xl">{t.guides}</h2>
-            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.guidesText}</p>
+            <p className="mt-1 text-sm leading-6 text-white/68">{t.guidesText}</p>
           </div>
         </div>
         <Button asChild className="self-start">
@@ -317,12 +358,12 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         </Button>
       </Card>
 
-      <Card className="rounded-[2rem] bg-card/90">
+      <Card className="rounded-[2rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <Brain className="mt-1 size-5 shrink-0 text-primary" />
+          <Brain className="mt-1 size-5 shrink-0 text-white" />
           <div className="flex-1">
             <h2 className="font-serif text-2xl">{t.encyclo}</h2>
-            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.encycloText}</p>
+            <p className="mt-1 text-sm leading-6 text-white/68">{t.encycloText}</p>
           </div>
         </div>
         <Button asChild className="self-start">
@@ -333,7 +374,7 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         </Button>
       </Card>
 
-      <p className="flex items-start gap-2 rounded-2xl bg-muted/60 p-3 text-xs text-muted-foreground">
+      <p className="flex items-start gap-2 rounded-2xl border border-white/25 bg-white/[0.025] p-3 text-xs text-white/62 backdrop-blur-xl">
         <ShieldCheck className="mt-0.5 size-4 shrink-0" />
         {t.soundsText}
       </p>
@@ -346,15 +387,15 @@ function WellnessCard({
   title,
   text,
 }: {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: ComponentType<{ className?: string }>;
   title: string;
   text: string;
 }) {
   return (
-    <Card className="rounded-[1.5rem]">
-      <Icon className="size-5 text-primary" />
+    <Card className="rounded-[1.5rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+      <Icon className="size-5 text-white" />
       <h2 className="font-serif text-xl">{title}</h2>
-      <p className="text-sm leading-6 text-muted-foreground">{text}</p>
+      <p className="text-sm leading-6 text-white/68">{text}</p>
     </Card>
   );
 }

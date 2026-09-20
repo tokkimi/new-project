@@ -51,18 +51,15 @@ export function ProductShowcase({
   return (
     <section className="mx-auto max-w-6xl px-6 py-24">
       <div className="mx-auto mb-10 max-w-xl text-center">
-        <h2 className="text-balance font-serif text-3xl md:text-4xl">{t("title")}</h2>
+        <h2 className="text-balance text-3xl font-semibold md:text-5xl">{t("title")}</h2>
         <p className="mt-3 text-muted-foreground">{t("subtitle")}</p>
       </div>
 
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between gap-4">
-            <h3 className="font-serif text-xl">{t("latestTitle")}</h3>
-            <Link
-              href="/app/products"
-              className="shrink-0 text-sm font-medium text-primary hover:underline"
-            >
+            <h3 className="text-xl font-semibold">{t("latestTitle")}</h3>
+            <Link href="/app/products" className="shrink-0 text-sm font-medium text-primary hover:underline">
               {t("seeAll")}
             </Link>
           </div>
@@ -72,13 +69,10 @@ export function ProductShowcase({
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between gap-4">
             <div>
-              <h3 className="font-serif text-xl">{t("koreaTitle")}</h3>
+              <h3 className="text-xl font-semibold">{t("koreaTitle")}</h3>
               <p className="text-sm text-muted-foreground">{t("koreaSubtitle")}</p>
             </div>
-            <Link
-              href="/app/products"
-              className="shrink-0 text-sm font-medium text-primary hover:underline"
-            >
+            <Link href="/app/products" className="shrink-0 text-sm font-medium text-primary hover:underline">
               {t("seeAll")}
             </Link>
           </div>

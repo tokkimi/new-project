@@ -9,42 +9,44 @@ type DailyItem = { title: string; text: string };
 type RoutineItem = { type: string; am: string; pm: string; avoid: string };
 
 const DAILY_ICON = [Sun, Moon, Sparkles, ShieldAlert];
-const ROUTINE_TONE = [
-  "from-[#f7e6df]/80 via-white/70 to-[#e9edf6]/80",
-  "from-[#e8f1ec]/80 via-white/70 to-[#f7eadf]/80",
-  "from-[#f5e5ea]/80 via-white/70 to-[#e7eff0]/80",
-  "from-[#edf0e5]/80 via-white/70 to-[#efe7f4]/80",
-  "from-[#f2e4d8]/80 via-white/70 to-[#e8eef7]/80",
-  "from-[#e9f0f0]/80 via-white/70 to-[#f6e5df]/80",
-];
-
 export function GoodHabits() {
   const t = useTranslations("goodHabits");
   const daily = (t.raw("daily") as DailyItem[]).slice(0, 4);
   const routines = t.raw("routines") as RoutineItem[];
+  const guideRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollGuide = (direction: -1 | 1) => {
+    const rail = guideRef.current;
+    if (!rail) return;
+
+    const card = rail.querySelector<HTMLElement>("[data-guide-card]");
+    const step = card ? card.offsetWidth + 16 : Math.round(rail.clientWidth * 0.8);
+    const maxScroll = rail.scrollWidth - rail.clientWidth;
+    const atStart = rail.scrollLeft <= 8;
+    const atEnd = rail.scrollLeft >= maxScroll - 8;
+
+    if (direction < 0 && atStart) {
+      rail.scrollTo({ left: maxScroll, behavior: "smooth" });
+      return;
+    }
+
+    if (direction > 0 && atEnd) {
+      rail.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
+
+    rail.scrollBy({ left: direction * step, behavior: "smooth" });
+  };
 
   return (
     <section
       id="good-habits"
-      // This is a light "cream band" by design. The page theme is class-based,
-      // so in dark mode text-foreground/muted flip to light and vanish on the
-      // cream. Pin the light palette here so the band reads identically (and
-      // legibly) in both light and dark mode.
-      style={
-        {
-          "--background": "#f8f5f1",
-          "--foreground": "#2a201a",
-          "--muted-foreground": "#8a7868",
-          "--border": "#e6ddd2",
-          "--primary": "#6a4a35",
-        } as React.CSSProperties
-      }
-      className="overflow-hidden border-y border-border/60 bg-[#f4efe8] py-16 sm:py-20"
+      className="relative overflow-hidden py-14 sm:py-18"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
-        <div className="grid gap-8 lg:grid-cols-[0.78fr_1fr] lg:items-end">
+        <div className="grid gap-5 lg:grid-cols-[0.78fr_1fr] lg:items-end">
           <div>
-            <h2 className="text-balance font-serif text-4xl leading-tight text-foreground md:text-5xl">
+            <h2 className="text-balance text-3xl font-semibold leading-tight text-foreground md:text-4xl">
               {t("title")}
             </h2>
           </div>
@@ -63,10 +65,10 @@ export function GoodHabits() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.3, delay: index * 0.04 }}
-                className="min-w-0 rounded-full border border-white/70 bg-white/45 px-4 py-3 shadow-[0_18px_50px_-42px_rgba(35,28,20,0.55)] backdrop-blur-xl"
+                className="haru-glow-card min-w-0 rounded-full px-4 py-3"
               >
                 <div className="flex items-center gap-3">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-background/80 text-primary">
+                  <span className="haru-icon-halo flex size-10 shrink-0 items-center justify-center rounded-full text-primary dark:text-white">
                     <Icon className="size-4" />
                   </span>
                   <div className="min-w-0">
@@ -81,53 +83,73 @@ export function GoodHabits() {
 
         <div className="mt-10">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <h3 className="font-serif text-2xl text-foreground">{t("guide")}</h3>
-            <span className="hidden rounded-full border border-white/70 bg-white/45 px-3 py-1 text-xs text-muted-foreground backdrop-blur-xl sm:inline-flex">
+            <h3 className="text-xl font-semibold text-foreground md:text-2xl">{t("guide")}</h3>
+            <span className="haru-glow-card hidden rounded-full px-3 py-1 text-xs text-muted-foreground sm:inline-flex">
               {t("amLabel")} / {t("pmLabel")}
             </span>
           </div>
 
-          <div className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:-mx-6 sm:px-6 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:px-0">
-            {routines.map((routine, index) => (
-              <motion.article
-                key={routine.type}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.32, delay: (index % 4) * 0.04 }}
-                className={`min-h-[330px] w-[82%] max-w-[360px] shrink-0 snap-center rounded-[28px] border border-white/70 bg-gradient-to-br ${ROUTINE_TONE[index % ROUTINE_TONE.length]} p-5 shadow-[0_28px_80px_-58px_rgba(36,30,24,0.7)] backdrop-blur-xl sm:w-[360px] lg:w-auto lg:max-w-none`}
-              >
-                <div className="flex h-full flex-col">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                        {String(index + 1).padStart(2, "0")}
-                      </p>
-                      <h4 className="mt-2 font-serif text-3xl leading-tight text-foreground">
-                        {routine.type}
-                      </h4>
-                    </div>
-                    <span className="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/70 bg-white/55 text-primary backdrop-blur-xl">
-                      <Droplet className="size-5" />
-                    </span>
-                  </div>
+          <div className="relative">
+            <button
+              type="button"
+              aria-label="Previous guide"
+              onClick={() => scrollGuide(-1)}
+              className="absolute left-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+            >
+              <span className="size-2.5 rounded-full bg-[#7f878d]/70 dark:bg-white/85" />
+            </button>
+            <button
+              type="button"
+              aria-label="Next guide"
+              onClick={() => scrollGuide(1)}
+              className="absolute right-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+            >
+              <span className="size-2.5 rounded-full bg-[#7f878d]/70 dark:bg-white/85" />
+            </button>
 
-                  <div className="mt-7 grid gap-3 text-sm leading-6">
-                    <RoutineLine label={t("amLabel")} text={routine.am} />
-                    <RoutineLine label={t("pmLabel")} text={routine.pm} />
-                  </div>
+            <div
+              ref={guideRef}
+              className="no-scrollbar mx-auto flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-[calc((100%_-_84vw)/2)] pb-3 sm:px-[calc((100%_-_340px)/2)] lg:px-0"
+            >
+              {routines.map((routine, index) => (
+                <motion.article
+                  key={routine.type}
+                  data-guide-card
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.32, delay: (index % 4) * 0.04 }}
+                  className="haru-glow-card min-h-[315px] w-[84vw] max-w-[360px] shrink-0 snap-center rounded-[1.25rem] p-5 sm:w-[340px] lg:w-[calc((100%_-_3rem)/4)] lg:max-w-none"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h4 className="text-2xl font-semibold leading-tight text-foreground">
+                          {routine.type}
+                        </h4>
+                      </div>
+                      <span className="haru-icon-halo flex size-12 shrink-0 items-center justify-center rounded-full text-primary dark:text-white">
+                        <Droplet className="size-5" />
+                      </span>
+                    </div>
 
-                  <div className="mt-auto pt-6">
-                    <div className="rounded-[22px] border border-white/70 bg-white/45 p-4 backdrop-blur-xl">
-                      <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-                        {t("watchOutLabel")}
-                      </p>
-                      <p className="mt-2 text-sm leading-6 text-muted-foreground">{routine.avoid}</p>
+                    <div className="mt-7 grid gap-3 text-sm leading-6">
+                      <RoutineLine label={t("amLabel")} text={routine.am} />
+                      <RoutineLine label={t("pmLabel")} text={routine.pm} />
+                    </div>
+
+                    <div className="mt-auto pt-6">
+                      <div className="haru-glow-card rounded-[1.1rem] p-4">
+                        <p className="text-xs font-medium uppercase tracking-[0.14em] text-primary dark:text-white">
+                          {t("watchOutLabel")}
+                        </p>
+                        <p className="mt-2 text-sm leading-6 text-muted-foreground">{routine.avoid}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.article>
-            ))}
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -141,8 +163,8 @@ export function GoodHabits() {
 
 function RoutineLine({ label, text }: { label: string; text: string }) {
   return (
-    <div className="rounded-[22px] border border-white/70 bg-white/45 p-4 backdrop-blur-xl">
-      <p className="mb-1 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">{label}</p>
+    <div className="haru-glow-card rounded-[1.1rem] p-4">
+      <p className="mb-1 text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">{label}</p>
       <p className="text-foreground">{text}</p>
     </div>
   );

@@ -8,11 +8,12 @@ export async function GET() {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const [preferences, notes, links] = await Promise.all([
+  const [preferences, notes, links, profile] = await Promise.all([
     db.userProductPreference.findMany({ where: { userId: session.user.id } }),
     db.userNote.findMany({ where: { userId: session.user.id }, orderBy: { updatedAt: "desc" } }),
     db.savedRoutineLink.findMany({ where: { userId: session.user.id }, orderBy: { updatedAt: "desc" } }),
+    db.skinProfile.findUnique({ where: { userId: session.user.id } }),
   ]);
 
-  return NextResponse.json({ preferences, notes, links });
+  return NextResponse.json({ preferences, notes, links, profile });
 }

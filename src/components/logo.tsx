@@ -5,9 +5,9 @@ export function Logo({ className }: { className?: string }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src="/haru-logo-full.png"
+      src="/haru-logo-white-flat.png"
       alt="Haru Skin"
-      className={cn("h-14 w-auto object-contain", className)}
+      className={cn("h-14 w-auto object-contain opacity-95 sm:h-[4.375rem]", className)}
     />
   );
 }

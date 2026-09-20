@@ -13,8 +13,7 @@ export function IngredientBase() {
   return (
     <section id="ingredients" className="mx-auto max-w-6xl px-6 py-24">
       <div className="mx-auto mb-14 max-w-xl text-center">
-        <p className="text-sm font-medium text-primary">{t("eyebrow")}</p>
-        <h2 className="mt-2 text-balance font-serif text-3xl md:text-4xl">
+        <h2 className="text-balance text-3xl font-semibold md:text-5xl">
           {t("title")}
         </h2>
         <p className="mt-3 text-muted-foreground">{t("subtitle")}</p>

@@ -29,7 +29,7 @@ type Protocol = {
 };
 
 const SELECT_CLASS =
-  "h-10 w-full min-w-0 rounded-xl border border-input bg-card px-3 text-sm text-foreground";
+  "h-10 w-full min-w-0 rounded-xl border border-white/40 bg-white/[0.025] px-3 text-sm text-white backdrop-blur-xl";
 
 export function RoutineProtocolPanel({ products }: { products: Product[] }) {
   const t = useTranslations("protocol");
@@ -97,7 +97,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
 
   const header = (
     <div className="flex items-start gap-3">
-      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+      <span className="flex size-10 shrink-0 items-center justify-center text-white">
         <Beaker className="size-5" />
       </span>
       <div>
@@ -115,7 +115,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
       <Card className="gap-4">
         {header}
 
-        <div className="rounded-2xl bg-primary/8 px-4 py-3">
+        <div className="rounded-2xl border border-white/28 bg-white/[0.025] px-4 py-3">
           <p className="text-xs font-medium uppercase tracking-wide text-primary">
             {t(`goals.${protocol.goal}`)}
           </p>
@@ -130,8 +130,8 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
             <span className="font-medium">{t("dayProgress", { elapsed, total: protocol.durationDays })}</span>
             <span className="text-muted-foreground">{pct}%</span>
           </div>
-          <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
-            <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${pct}%` }} />
+          <div className="h-2 w-full overflow-hidden rounded-full bg-white/12">
+            <div className="h-full rounded-full bg-white/75 transition-all" style={{ width: `${pct}%` }} />
           </div>
         </div>
 
@@ -147,7 +147,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
                   key={day}
                   className={cn(
                     "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm",
-                    done ? "bg-success/12 text-success" : "bg-secondary text-muted-foreground"
+                    done ? "border border-white/35 bg-white/10 text-white" : "border border-white/25 bg-transparent text-white/65"
                   )}
                 >
                   {done ? <Check className="size-3.5" /> : <Circle className="size-3.5" />}
@@ -158,7 +158,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
           </div>
         </div>
 
-        <p className="flex items-start gap-2 rounded-2xl bg-am/10 px-4 py-3 text-sm text-muted-foreground">
+        <p className="flex items-start gap-2 rounded-2xl border border-white/25 bg-white/[0.025] px-4 py-3 text-sm text-white/72">
           <Flag className="mt-0.5 size-4 shrink-0 text-am-foreground" />
           {t("principle")}
         </p>
@@ -196,8 +196,8 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
               type="button"
               onClick={() => setGoal(g)}
               className={cn(
-                "rounded-full px-3 py-1.5 text-sm transition-colors",
-                goal === g ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:text-foreground"
+                "rounded-full border px-3 py-1.5 text-sm transition-colors",
+                goal === g ? "border-white/55 bg-white/12 text-white" : "border-white/35 bg-transparent text-white/78 hover:bg-white/8 hover:text-white"
               )}
             >
               {t(`goals.${g}`)}
@@ -215,8 +215,8 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
               type="button"
               onClick={() => setChangeKind(k)}
               className={cn(
-                "rounded-full px-3 py-1.5 text-sm transition-colors",
-                changeKind === k ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:text-foreground"
+                "rounded-full border px-3 py-1.5 text-sm transition-colors",
+                changeKind === k ? "border-white/55 bg-white/12 text-white" : "border-white/35 bg-transparent text-white/78 hover:bg-white/8 hover:text-white"
               )}
             >
               {t(`changeKinds.${k}`)}

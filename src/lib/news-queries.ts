@@ -28,7 +28,21 @@ export async function getRecentNews(limit: number) {
       take: limit,
     })
     .catch(() => []);
-  const byTitle = new Map([...fallback, ...rows].map((item) => [item.title, item]));
+  const byTitle = new Map(rows.map((item) => [item.title, item]));
+  for (const item of fallback) {
+    const existing = byTitle.get(item.title);
+    byTitle.set(
+      item.title,
+      existing
+        ? {
+            ...existing,
+            summary: existing.summary || item.summary,
+            sourceUrl: existing.sourceUrl || item.sourceUrl,
+            imageUrl: existing.imageUrl || item.imageUrl,
+          }
+        : item
+    );
+  }
   return [...byTitle.values()]
     .sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt))
     .slice(0, limit);

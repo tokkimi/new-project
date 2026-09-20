@@ -26,6 +26,7 @@ const securityHeaders = [
       "img-src 'self' https: data: blob:",
       "font-src 'self' data:",
       "connect-src 'self'",
+      "frame-src 'self' https://www.youtube-nocookie.com https://www.instagram.com https://www.tiktok.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
