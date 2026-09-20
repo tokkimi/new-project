@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/marketing/hero";
+import { SkinGoalsShowcase } from "@/components/marketing/skin-goals-showcase";
+import { StartHere } from "@/components/marketing/start-here";
 import { ScanShowcase } from "@/components/marketing/scan-showcase";
 import { AuditShowcase } from "@/components/marketing/audit-showcase";
 import { WellnessShowcase } from "@/components/marketing/wellness-showcase";
@@ -89,22 +92,31 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [newsItems, products] = await Promise.all([getRecentNews(24), getHomeProducts()]);
-
   return (
-    <>
-      <SiteHeader overlay />
-      <main className="flex-1">
+    <div className="haru-public flex flex-1 flex-col">
+      <SiteHeader />
+      <main id="main-content" className="flex-1">
         <Hero />
+        <SkinGoalsShowcase />
+        <StartHere />
         <ScanShowcase />
         <AuditShowcase />
         <WellnessShowcase />
-        <ProductShowcase latest={products.latest} madeInKorea={products.madeInKorea} />
+        <Suspense fallback={<div className="mx-auto h-80 max-w-6xl rounded-3xl" aria-busy="true" />}><HomeProducts /></Suspense>
         <GoodHabits />
-        <BeautyNews items={newsItems} />
+        <Suspense fallback={null}><HomeNews /></Suspense>
         <FinalCta />
       </main>
       <SiteFooter />
-    </>
+    </div>
   );
+}
+
+async function HomeProducts() {
+  const products = await getHomeProducts();
+  return <ProductShowcase latest={products.latest} madeInKorea={products.madeInKorea} />;
+}
+
+async function HomeNews() {
+  return <BeautyNews items={await getRecentNews(24)} />;
 }

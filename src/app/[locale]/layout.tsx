@@ -9,6 +9,7 @@ import { BottomNav } from "@/components/bottom-nav";
 import { CookieBanner } from "@/components/cookie-banner";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
+import "../haru-public.css";
 
 const montserrat = Montserrat({
   variable: "--font-sans-en",

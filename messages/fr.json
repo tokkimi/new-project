@@ -18,7 +18,8 @@
     "signOut": "Se déconnecter",
     "today": "Aujourd'hui",
     "wellness": "Bien-être",
-    "progress": "Progression"
+    "progress": "Progression",
+    "guides": "Routines"
   },
   "hero": {
     "badge": "Inspiré des routines K-beauty",
@@ -96,7 +97,8 @@
     "app": "L'application",
     "ingredients": "Ingrédients",
     "rights": "Haru. Fait avec soin, sans blabla marketing.",
-    "legal": "Mentions légales"
+    "legal": "Mentions légales",
+    "guides": "Routines"
   },
   "shelf": {
     "title": "Ma routine",
@@ -1801,5 +1803,37 @@
         "summary": "Lipides barrière pour la sécheresse et la sensibilité."
       }
     }
+  },
+  "homeUx": {
+    "eyebrow": "À chaque peau, son rythme",
+    "routinesTitle": "Et si on trouvait votre routine ?",
+    "routinesSubtitle": "Un besoin, un visage, une routine. Explorez les bons gestes, puis adaptez-les à votre peau.",
+    "allGuides": "Toutes les routines",
+    "swipeHint": "Faites défiler pour trouver votre inspiration",
+    "previous": "Routines précédentes",
+    "next": "Routines suivantes",
+    "findRoutine": "Trouver ma routine",
+    "explore": "Explorer les routines",
+    "heroAlt": "Un couple dans une composition éditoriale aux reflets argentés",
+    "heroNote": "Votre peau. Vos produits. Votre rythme.",
+    "startTitle": "On commence par quoi ?",
+    "startSubtitle": "Choisissez ce dont votre peau a besoin aujourd’hui.",
+    "profileTitle": "Comprendre ma peau",
+    "profileText": "Quelques questions pour créer votre profil et choisir vos prochains gestes.",
+    "scanTitle": "Décoder un produit",
+    "scanText": "Scannez un produit pour découvrir ses ingrédients et sa place dans votre routine.",
+    "shelfTitle": "Organiser ma routine",
+    "shelfText": "Retrouvez vos soins et organisez vos étapes du matin et du soir.",
+    "skip": "Aller au contenu",
+    "navigation": "Navigation principale",
+    "home": "Accueil",
+    "guides": "Routines"
+  },
+  "skinGoals": {
+    "eyebrow": "À chaque peau, son rythme",
+    "title": "Et si on trouvait votre routine ?",
+    "subtitle": "Un besoin, un visage, une routine. Explorez les bons gestes, puis adaptez-les à votre peau.",
+    "cta": "Toutes les routines",
+    "imageAlt": "Et si on trouvait votre routine ?"
   }
 }

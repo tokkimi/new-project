@@ -1,0 +1,64 @@
+@layer utilities {
+/* Public discovery surfaces have their own readable palette. The existing
+   private workspace is deliberately isolated from this visual release. */
+.haru-public {
+  --background: #f7faf9; --foreground: #202b29; --primary: #253f39;
+  --primary-foreground: #fff; --card: #fff; --card-foreground: #202b29;
+  --secondary: #e9f1ed; --muted: #edf2ef; --muted-foreground: #55645f;
+  --border: #d9e3de; --ring: #385d50; --glass: rgba(255,255,255,.77);
+  --glass-border: rgba(255,255,255,.92);
+  color: var(--foreground); background: var(--background); font-weight: 400;
+}
+.dark .haru-public {
+  --background: #101715; --foreground: #f0f6f2; --primary: #d8ede1;
+  --primary-foreground: #182d24; --card: #17211c; --card-foreground: #f0f6f2;
+  --secondary: #202f27; --muted: #202c25; --muted-foreground: #b7c7bd;
+  --border: #3d4f43; --ring: #c1e4cf; --glass: rgba(28,42,33,.84);
+  --glass-border: rgba(217,241,222,.22);
+}
+.haru-hero { background: radial-gradient(ellipse at 80% 45%, #d4e6df 0, transparent 55%), radial-gradient(ellipse at 20% 15%, #f5e9e2 0, transparent 50%); }
+.dark .haru-hero { background: radial-gradient(ellipse at 80% 45%, #284237 0, transparent 58%), radial-gradient(ellipse at 20% 15%, #2b2823 0, transparent 50%); }
+.haru-routines { background: linear-gradient(150deg, #eef7f4, #f9f4ee 60%, #eef3fa); }
+.dark .haru-routines { background: linear-gradient(150deg, #15271f, #28221c 60%, #19252e); }
+.haru-public .haru-glass, .haru-public .haru-glow-card, .haru-public main [data-slot="card"] {
+  background: var(--glass) !important; color: var(--foreground) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 12px 40px -26px rgba(30,62,47,.3) !important;
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+}
+.haru-public .haru-routine-card { background: var(--card); box-shadow: 0 6px 22px -16px #1f443d55; }
+.haru-public .haru-routine-card:hover { box-shadow: 0 12px 28px -15px #1f443d66; }
+.haru-public .haru-icon-disc { background: var(--secondary); }
+.haru-public main [class*="text-muted-foreground"], .haru-public main [data-slot="card"] [class*="text-muted-foreground"] { color: var(--muted-foreground) !important; }
+.haru-public main [class*="text-white"], .haru-public main [class*="text-foreground"], .haru-public main [class*="text-card-foreground"], .haru-public .haru-icon-halo { color: var(--foreground) !important; }
+.haru-public main [class*="border-border"], .haru-public main [class*="border-white"] { border-color: var(--border) !important; }
+.haru-public .haru-cta { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 10px; padding: 12px 22px; border-radius: 999px; background: var(--primary); color: var(--primary-foreground); border: 1px solid var(--primary); font-size: 14px; font-weight: 500; transition: transform .18s, box-shadow .18s; }
+.haru-public .haru-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 18px #142f251a; }
+.haru-public .haru-cta-secondary { background: var(--glass); color: var(--foreground); border-color: var(--border); backdrop-filter: blur(12px); }
+.haru-public [data-slot="button"], .haru-public main a.rounded-full { color: var(--foreground); border-color: var(--border) !important; box-shadow: none !important; }
+.haru-public [data-slot="button"]:hover, .haru-public main a.rounded-full:hover { background-color: var(--secondary) !important; }
+.haru-public input, .haru-public textarea, .haru-public select { color: var(--foreground) !important; background-color: var(--glass) !important; border-color: var(--border) !important; }
+.haru-public input::placeholder { color: var(--muted-foreground) !important; }
+.haru-public select option { color: #202b29; background: #fff; }
+.haru-public header button, .haru-public header a { color: var(--foreground); }
+.haru-public header .ring-1 { --tw-ring-color: var(--border); }
+.haru-public img[alt="Haru Skin"] { filter: brightness(0); opacity: .82; }
+.dark .haru-public img[alt="Haru Skin"] { filter: none; opacity: .95; }
+.haru-site-header { background: rgba(90,104,100,.75); backdrop-filter: blur(18px); border-bottom: 1px solid #ffffff44; }
+.haru-public .haru-site-header { background: var(--glass); border-color: var(--border); }
+.haru-public footer { border-top: 1px solid var(--border); padding-bottom: 48px; }
+.haru-public .haru-rail { scrollbar-width: thin; scrollbar-color: #789b8f55 transparent; }
+.haru-public :is(a, button, input, select, [tabindex]):focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+.haru-skip { position: absolute; top: -100px; left: 20px; padding: 12px; background: #fff; color: #13251d !important; border-radius: 8px; }
+.haru-skip:focus { top: 8px; z-index: 60; }
+.haru-bottom-nav { background: rgba(48,60,56,.91); color: #fff; border: 1px solid #ffffff66; backdrop-filter: blur(20px); box-shadow: 0 8px 32px #142f2526; }
+.haru-bottom-public { background: rgba(248,252,249,.93); color: #253f39; border-color: #fff; }
+.dark .haru-bottom-public { background: rgba(25,39,30,.94); color: #e6f2e9; border-color: #ffffff33; }
+.haru-tab-active { background: #ffffff22; }
+.haru-bottom-public .haru-tab-active { background: #466c521a; }
+.dark .haru-bottom-public .haru-tab-active { background: #dcffe51a; }
+.haru-bottom-nav a:focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }
+@media (prefers-reduced-motion: reduce) { .haru-public *, .haru-public *::before, .haru-public *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media (prefers-reduced-transparency: reduce) { .haru-public { --glass: var(--card); } .haru-public .haru-glass { backdrop-filter: none; } }
+
+}

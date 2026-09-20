@@ -28,7 +28,7 @@ export function AuditShowcase() {
           className="w-full"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <img loading="lazy" decoding="async" 
             src="/audit-scan-editorial.png"
             alt=""
             aria-hidden="true"

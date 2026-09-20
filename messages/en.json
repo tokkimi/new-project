@@ -18,7 +18,8 @@
     "signOut": "Sign out",
     "today": "Today",
     "wellness": "Wellness",
-    "progress": "Progress"
+    "progress": "Progress",
+    "guides": "Routines"
   },
   "hero": {
     "badge": "Inspired by K-beauty routines",
@@ -96,7 +97,8 @@
     "app": "The app",
     "ingredients": "Ingredients",
     "rights": "Haru. Made with care, no marketing fluff.",
-    "legal": "Legal"
+    "legal": "Legal",
+    "guides": "Routines"
   },
   "shelf": {
     "title": "My routine",
@@ -1798,5 +1800,37 @@
         "summary": "Barrier lipids for dryness and sensitivity."
       }
     }
+  },
+  "homeUx": {
+    "eyebrow": "Every skin has its own rhythm",
+    "routinesTitle": "Find a routine that feels like you.",
+    "routinesSubtitle": "One need, one face, one routine. Explore the essentials, then make them your own.",
+    "allGuides": "All routines",
+    "swipeHint": "Scroll to find your inspiration",
+    "previous": "Previous routines",
+    "next": "Next routines",
+    "findRoutine": "Find my routine",
+    "explore": "Explore routines",
+    "heroAlt": "A couple in an editorial composition with silver reflections",
+    "heroNote": "Your skin. Your products. Your rhythm.",
+    "startTitle": "Where shall we start?",
+    "startSubtitle": "Choose what your skin needs today.",
+    "profileTitle": "Understand my skin",
+    "profileText": "Answer a few questions to build your skin profile and find your next steps.",
+    "scanTitle": "Decode a product",
+    "scanText": "Scan a product to explore its ingredients and where it fits in your routine.",
+    "shelfTitle": "Organize my routine",
+    "shelfText": "Keep your products together and organize your morning and evening steps.",
+    "skip": "Skip to content",
+    "navigation": "Main navigation",
+    "home": "Home",
+    "guides": "Routines"
+  },
+  "skinGoals": {
+    "eyebrow": "Every skin has its own rhythm",
+    "title": "Find a routine that feels like you.",
+    "subtitle": "One need, one face, one routine. Explore the essentials, then make them your own.",
+    "cta": "All routines",
+    "imageAlt": "Find a routine that feels like you."
   }
 }

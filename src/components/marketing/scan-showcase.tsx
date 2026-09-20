@@ -22,7 +22,7 @@ export function ScanShowcase() {
           className="mx-auto flex max-w-5xl flex-col items-center text-center"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <img loading="lazy" decoding="async" 
             src="/scan-product-editorial.png"
             alt=""
             className="mb-10 block w-full max-w-[520px] object-contain"

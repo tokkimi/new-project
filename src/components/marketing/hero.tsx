@@ -1,81 +1,24 @@
-"use client";
-
+import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
 export function Hero() {
   const t = useTranslations("hero");
-
-  return (
-    <section className="relative overflow-hidden pt-20 md:pt-0">
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.05 }}
-        className="mx-[calc(50%-50vw)] bg-transparent"
-      >
-        <div className="relative w-full">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/hero-haru-editorial-cutout.png"
-            alt=""
-            aria-hidden="true"
-            className="block h-auto w-full"
-          />
-        </div>
-      </motion.div>
-
-      <div className="mx-auto max-w-6xl px-5 pb-4 pt-8 sm:px-6 lg:pb-6 lg:pt-10">
-        <div className="relative px-2 py-4 sm:px-0 lg:py-6">
-          <div className="relative flex w-full max-w-4xl flex-col items-start text-left drop-shadow-[0_2px_18px_rgba(0,0,0,0.18)]">
-            <motion.h1
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.12 }}
-              className="text-balance text-3xl font-semibold leading-[1.08] text-foreground md:text-5xl"
-            >
-              {t("titleLine1")}
-              <br />
-              {t("titleLine2")}
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.18 }}
-              className="mt-5 max-w-xl text-balance text-base leading-7 text-muted-foreground"
-            >
-              {t("subtitle")}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.24 }}
-              className="mt-8 flex flex-col items-start gap-3 sm:flex-row"
-            >
-              <Link
-                href="/app/shelf"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/60 bg-transparent px-7 text-base font-medium text-white shadow-none backdrop-blur-2xl transition hover:bg-white/8"
-              >
-                {t("ctaPrimary")}
-                <ArrowRight className="size-4" />
-              </Link>
-            </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-5 text-xs text-muted-foreground"
-            >
-              {t("disclaimer")}
-            </motion.p>
-          </div>
-        </div>
+  const ux = useTranslations("homeUx");
+  return <section className="haru-hero relative isolate overflow-hidden">
+    <div className="mx-auto grid max-w-7xl items-center gap-4 px-5 pb-10 pt-10 sm:px-8 lg:min-h-[620px] lg:grid-cols-[0.9fr_1.1fr] lg:gap-0 lg:py-14">
+      <div className="relative z-10 max-w-xl">
+        <span className="haru-glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium"><Sparkles className="size-3.5" aria-hidden="true" />{t("badge")}</span>
+        <h1 className="mt-7 text-balance text-[clamp(2.4rem,4.4vw,4.5rem)] leading-[1.08] tracking-tight">{t("titleLine1")}<br />{t("titleLine2")}</h1>
+        <p className="mt-6 max-w-md text-base leading-7 text-muted-foreground">{t("subtitle")}</p>
+        <div className="mt-8 flex flex-wrap items-center gap-3"><Link href="/app/quiz" className="haru-cta">{ux("findRoutine")}<ArrowUpRight className="size-4" aria-hidden="true" /></Link><a href="#routines" className="haru-cta haru-cta-secondary">{ux("explore")}<ArrowDown className="size-4" aria-hidden="true" /></a></div>
+        <p className="mt-4 text-xs leading-5 text-muted-foreground">{t("disclaimer")}</p>
       </div>
-    </section>
-  );
+      <div className="relative mx-auto w-full max-w-2xl lg:w-[110%] lg:max-w-none lg:-translate-x-2">
+        <Image src="/hero-haru-editorial-cutout.png" alt={ux("heroAlt")} width={1672} height={941} sizes="(min-width: 1024px) 58vw, 100vw" preload className="h-auto w-full object-contain" />
+        <div className="haru-glass relative mx-auto mt-2 flex w-fit max-w-[90%] items-center gap-3 rounded-2xl px-5 py-3 text-sm"><Sparkles className="size-4 shrink-0" aria-hidden="true" />{ux("heroNote")}</div>
+      </div>
+    </div>
+  </section>;
 }

@@ -53,7 +53,7 @@ export function WellnessShowcase() {
           className="order-1 lg:order-2"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <img loading="lazy" decoding="async" 
             src="/wellness-editorial-face.png"
             alt=""
             className="mx-auto block w-full max-w-[520px] object-contain lg:max-w-none"

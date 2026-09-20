@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { guideVisual } from "@/lib/guide-visuals";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowLeft, ArrowRight, Moon, Sparkles, Sun } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -21,10 +23,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
 
   if (!guide) {
     return (
-      <><SiteHeader /><main className="mx-auto flex min-h-[60vh] max-w-lg flex-1 flex-col items-center justify-center px-6 text-center">
+      <div className="haru-public flex flex-1 flex-col"><SiteHeader /><main className="mx-auto flex min-h-[60vh] max-w-lg flex-1 flex-col items-center justify-center px-6 text-center">
         <p className="text-muted-foreground">{t("notFound")}</p>
         <Button asChild variant="link"><Link href="/guides">{t("backTo")}</Link></Button>
-      </main><SiteFooter /></>
+      </main><SiteFooter /></div>
     );
   }
 
@@ -45,13 +47,14 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
   const pm = stepsForSlot(guide, "pm");
 
   return (
-    <><SiteHeader /><main className="flex-1">
-      <section className="border-b border-border/60 bg-[#efe6dc] text-[#2a201a]">
+    <div className="haru-public flex flex-1 flex-col"><SiteHeader /><main id="main-content" className="flex-1">
+      <section className="border-b border-border/60 haru-routines">
         <div className="mx-auto max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
-          <Link href="/guides" className="inline-flex items-center gap-2 text-sm font-medium text-[#79573f] hover:text-[#4f3526]"><ArrowLeft className="size-4" />{t("backTo")}</Link>
-          <p className="mt-10 text-xs font-semibold uppercase tracking-[0.22em] text-[#79573f]">{t("goalLabel")}</p>
+          <Link href="/guides" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-[#4f3526]"><ArrowLeft className="size-4" />{t("backTo")}</Link>
+          <div className="relative mt-8 h-64 overflow-hidden rounded-3xl sm:h-80"><Image src={guideVisual(slug)} alt="" fill preload sizes="(min-width: 1024px) 850px, 100vw" className="object-cover object-[center_35%]" /></div>
+          <p className="mt-10 text-xs font-semibold uppercase tracking-[0.22em] text-primary">{t("goalLabel")}</p>
           <h1 className="mt-3 text-balance font-serif text-5xl leading-tight sm:text-6xl">{t(`guides.${slug}.title`)}</h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-[#75675d]">{t(`guides.${slug}.goal`)}</p>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">{t(`guides.${slug}.goal`)}</p>
         </div>
       </section>
 
@@ -74,6 +77,6 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
         </div>
         <p className="max-w-3xl text-xs leading-relaxed text-muted-foreground">{t("disclaimer")}</p>
       </div>
-    </main><SiteFooter /></>
+    </main><SiteFooter /></div>
   );
 }

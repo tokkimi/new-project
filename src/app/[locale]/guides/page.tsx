@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { guideVisual } from "@/lib/guide-visuals";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -23,26 +24,26 @@ export default async function GuidesPage({
   ]);
 
   return (
-    <>
+    <div className="haru-public flex flex-1 flex-col">
       <SiteHeader />
-      <main className="flex-1">
-        <section className="border-b border-border/60 bg-[#efe6dc] text-[#2a201a]">
+      <main id="main-content" className="flex-1">
+        <section className="border-b border-border/60 haru-routines">
           <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:px-6 sm:py-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#79573f]">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
                 {tGoals("eyebrow")}
               </p>
               <h1 className="mt-4 text-balance font-serif text-4xl leading-tight sm:text-5xl">
                 {t("indexTitle")}
               </h1>
-              <p className="mt-4 max-w-xl leading-7 text-[#75675d]">{t("indexSubtitle")}</p>
+              <p className="mt-4 max-w-xl leading-7 text-muted-foreground">{t("indexSubtitle")}</p>
             </div>
             <div className="relative min-h-[280px] overflow-hidden rounded-[30px] border border-white/60 shadow-[0_28px_80px_-58px_rgba(36,30,24,0.7)] sm:min-h-[360px]">
               <Image
-                src="/today-skincare-ritual.png"
+                src="/images/routine-glow.webp"
                 alt={tGoals("imageAlt")}
                 fill
-                priority
+                preload
                 sizes="(min-width: 1024px) 55vw, 100vw"
                 className="object-cover"
               />
@@ -56,8 +57,10 @@ export default async function GuidesPage({
               <Link
                 key={guide.slug}
                 href={`/guides/${guide.slug}`}
-                className="group flex min-h-64 flex-col rounded-[28px] border border-border/70 bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/35 hover:shadow-xl"
+                className="group flex min-h-64 flex-col rounded-[28px] border border-border/70 bg-card p-0 overflow-hidden transition-all hover:-translate-y-1 hover:border-primary/35 hover:shadow-xl"
               >
+                <div className="relative aspect-[4/3] overflow-hidden"><Image src={guideVisual(guide.slug)} alt="" fill sizes="(min-width: 1024px) 350px, (min-width: 640px) 48vw, 100vw" className="object-cover" /></div>
+                <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-start justify-between gap-4">
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                     {String(index + 1).padStart(2, "0")}
@@ -79,6 +82,7 @@ export default async function GuidesPage({
                     ) : null
                   )}
                 </div>
+                </div>
               </Link>
             ))}
           </div>
@@ -88,6 +92,6 @@ export default async function GuidesPage({
         </section>
       </main>
       <SiteFooter />
-    </>
+    </div>
   );
 }

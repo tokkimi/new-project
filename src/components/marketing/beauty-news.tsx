@@ -37,10 +37,9 @@ function NewsSlide({ item, index }: { item: NewsItem; index: number }) {
         <div className="relative h-[210px] w-full overflow-hidden bg-muted lg:h-[230px]">
           {item.imageUrl ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img
+            <img loading="lazy" decoding="async" 
               src={item.imageUrl}
               alt=""
-              loading="lazy"
               className="h-full w-full object-cover"
             />
           ) : (

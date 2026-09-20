@@ -18,9 +18,9 @@ export function SiteFooter() {
           <Link href="/app/shelf" className="hover:text-foreground">
             {t("app")}
           </Link>
-          <a href="#ingredients" className="hover:text-foreground">
+          <Link href="/app/ingredients" className="hover:text-foreground">
             {t("ingredients")}
-          </a>
+          </Link>
           <Link href="/legal" className="hover:text-foreground">
             {t("legal")}
           </Link>
