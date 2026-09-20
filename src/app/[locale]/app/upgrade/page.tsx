@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Check, Crown, FileText, ScanFace, ShieldCheck, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,9 +7,11 @@ import { db } from "@/lib/db";
 import { hasPremiumAccess } from "@/lib/entitlements";
 import { SubscribeButton } from "@/components/subscribe-button";
 import { ManageBillingButton } from "@/components/manage-billing-button";
+import { subscriptionPrice } from "@/lib/subscription-plans";
 
 export default async function UpgradePage() {
   const t = await getTranslations("upgradePage");
+  const locale = await getLocale();
   const session = await auth();
 
   const user = session?.user?.id
@@ -76,8 +78,6 @@ export default async function UpgradePage() {
               <Crown className="size-5 text-foreground" />
               <h2 className="font-serif text-2xl text-foreground">{t("premiumTitle")}</h2>
             </div>
-            <p className="mt-1 font-serif text-3xl text-foreground">{t("premiumPrice")}</p>
-            <p className="mt-2 text-sm leading-6 text-muted-foreground">{t("premiumNote")}</p>
           </div>
           <ul className="flex flex-col gap-2">
             {premiumFeatures.map((f) => (
@@ -87,17 +87,20 @@ export default async function UpgradePage() {
               </li>
             ))}
           </ul>
-          {isPremium && user?.stripeCustomerId ? (
+          {isPremium ? (
             <div className="flex items-center gap-2">
               <Badge className="w-fit bg-white text-black">{t("currentPlanLabel")}</Badge>
               {user?.stripeCustomerId && <ManageBillingButton label={t("manageBilling")} />}
             </div>
           ) : (
-            <SubscribeButton
-              subscribeLabel={t("subscribeCta")}
-              comingSoonLabel={t("comingSoon")}
-              signedIn={!!session?.user}
-            />
+            <div className="grid gap-4 sm:grid-cols-2">
+              {(["monthly", "annual"] as const).map(plan => <div key={plan} className="flex flex-col gap-3 rounded-2xl border border-border bg-secondary/40 p-4">
+                <h3 className="font-sans text-base font-semibold">{t(plan)}</h3>
+                <p className="text-2xl font-semibold">{subscriptionPrice(plan, locale)}<span className="ml-1 text-sm font-normal text-muted-foreground">{t(`${plan}Period`)}</span></p>
+                <p className="text-xs leading-5 text-muted-foreground">{t(`${plan}Billing`)}</p>
+                <SubscribeButton plan={plan} subscribeLabel={t("choosePlan")} comingSoonLabel={t("checkoutError")} signedIn={!!session?.user} />
+              </div>)}
+            </div>
           )}
           <p className="text-xs leading-5 text-muted-foreground">{t("ctaText")}</p>
         </Card>

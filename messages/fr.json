@@ -786,7 +786,7 @@
       "Routine simple jusqu’à 12 produits"
     ],
     "premiumTitle": "Premium",
-    "premiumPrice": "6,99 € / mois",
+    "premiumPrice": "1,99 € / mois ou 9,90 € / an",
     "premiumFeatures": [
       "Tout ce qui est inclus dans le gratuit",
       "Produits sauvegardés illimités",
@@ -800,7 +800,7 @@
     "manageBilling": "Gérer la facturation",
     "comingSoon": "Les paiements ne sont pas encore configurés ; revenez bientôt.",
     "kicker": "Premium",
-    "heroTitle": "Transformez Haru en vrai centre de contrôle peau.",
+    "heroTitle": "Haru Premium",
     "heroText": "Le gratuit garde le scan produit et le scan visage accessibles après connexion. Premium débloque l’intelligence routine complète : produits illimités, audit complet, rapports PDF, suivi des produits et évolution de peau.",
     "freeNote": "Idéal pour découvrir les produits et démarrer une routine simple.",
     "premiumNote": "Fait pour suivre toute la routine dans le temps.",
@@ -812,7 +812,16 @@
     "trackingText": "Suivez date d’achat, péremption, date d’ouverture, notes, réactions, favoris et vidéos au même endroit.",
     "wellnessIncluded": "Outils wellness et face care",
     "wellnessText": "Respiration, sons calmes, exercices visage et conseils récupération restent connectés à la routine.",
-    "ctaText": "Annulation possible à tout moment depuis Stripe. Le paiement est sécurisé par Stripe ; Haru ne stocke jamais votre carte."
+    "ctaText": "Annulation possible à tout moment depuis Stripe. Le paiement est sécurisé par Stripe ; Haru ne stocke jamais votre carte.",
+    "monthly": "Mensuel",
+    "annual": "Annuel",
+    "monthlyPeriod": "/ mois",
+    "annualPeriod": "/ an",
+    "monthlyBilling": "1,99 € prélevés chaque mois. Renouvellement automatique.",
+    "annualBilling": "9,90 € prélevés une fois par an. Renouvellement automatique.",
+    "choosePlan": "Choisir",
+    "checkoutLoading": "Ouverture du paiement…",
+    "checkoutError": "Le paiement est indisponible pour le moment. Réessayez."
   },
   "ingredients": {
     "retinol": {
@@ -1543,7 +1552,7 @@
     "termsServiceTitle": "Ce qui est inclus",
     "termsServiceText": "L'offre gratuite comprend le scan produit, l'accès complet à la base de produits, et un constructeur de routine de base. Premium (abonnement) ajoute un audit complet de routine selon votre profil de peau, des produits enregistrés illimités, et des scans visage illimités. Sans abonnement, les scans visage peuvent être achetés individuellement sous forme de crédits à l'unité.",
     "termsPriceTitle": "Prix",
-    "termsPriceText": "Abonnement Premium : 6,99 € par mois. Scan visage à l'unité : 9 € par scan, sans abonnement. Les prix sont affichés en euros sur la page Premium avant paiement et incluent les taxes applicables affichées au moment du paiement. Haru peut modifier les prix pour les périodes de facturation futures ; les abonnés actifs sont informés avant qu'un changement de prix ne s'applique à leur prochain renouvellement.",
+    "termsPriceText": "Abonnement Premium : 1,99 € par mois ou 9,90 € par an. Scan visage à l'unité : 9 € par scan, sans abonnement. Les prix sont affichés en euros sur la page Premium avant paiement et incluent les taxes applicables affichées au moment du paiement. Haru peut modifier les prix pour les périodes de facturation futures ; les abonnés actifs sont informés avant qu'un changement de prix ne s'applique à leur prochain renouvellement.",
     "termsPaymentTitle": "Paiement",
     "termsPaymentText": "Les paiements sont traités par Stripe, un prestataire de paiement indépendant. Haru ne reçoit ni ne conserve votre numéro de carte ; les conditions et la politique de confidentialité propres à Stripe s'appliquent à l'étape de paiement.",
     "termsDurationTitle": "Durée, renouvellement et résiliation",
