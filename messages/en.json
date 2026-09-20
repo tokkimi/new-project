@@ -1841,5 +1841,23 @@
     "subtitle": "One need, one face, one routine. Explore the essentials, then make them your own.",
     "cta": "All routines",
     "imageAlt": "Find a routine that feels like you."
+  },
+  "learn": {
+    "nav": "Learn",
+    "title": "Understand your skin and routine",
+    "description": "Four short modules with examples and questions to learn skin-care basics.",
+    "start": "Start learning",
+    "progress": "{count} / {total} modules completed",
+    "progressLabel": "Learning progress",
+    "modules": "Modules",
+    "completed": "Completed",
+    "saved": "Progress saved on this device, without an account.",
+    "notSaved": "Progress is available during this visit; storage is unavailable.",
+    "source": "Source",
+    "correct": "Correct.",
+    "retry": "Try again.",
+    "next": "Next module",
+    "openRoutine": "Open my routine",
+    "note": "General educational information, not a diagnosis. Consult a healthcare professional for a significant or persistent reaction."
   }
 }

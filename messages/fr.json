@@ -1844,5 +1844,23 @@
     "subtitle": "Un besoin, un visage, une routine. Explorez les bons gestes, puis adaptez-les à votre peau.",
     "cta": "Toutes les routines",
     "imageAlt": "Et si on trouvait votre routine ?"
+  },
+  "learn": {
+    "nav": "Apprendre",
+    "title": "Comprendre sa peau et sa routine",
+    "description": "Quatre modules courts avec des exemples et des questions pour comprendre les bases du soin.",
+    "start": "Commencer",
+    "progress": "{count} / {total} modules terminés",
+    "progressLabel": "Progression",
+    "modules": "Modules",
+    "completed": "Terminé",
+    "saved": "Progression enregistrée sur cet appareil, sans compte.",
+    "notSaved": "La progression reste disponible pendant cette visite ; le stockage est indisponible.",
+    "source": "Source",
+    "correct": "Bonne réponse.",
+    "retry": "Réessayez.",
+    "next": "Module suivant",
+    "openRoutine": "Ouvrir ma routine",
+    "note": "Contenu éducatif général, sans diagnostic. Pour une réaction importante ou persistante, consultez un professionnel de santé."
   }
 }

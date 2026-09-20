@@ -7,7 +7,7 @@ export function BottomNav() {
   const t = useTranslations("nav");
   const ux = useTranslations("homeUx");
   const pathname = usePathname();
-  const isPublic = pathname === "/" || pathname.startsWith("/guides");
+  const isPublic = pathname === "/" || pathname.startsWith("/guides") || pathname.startsWith("/learn");
   if (!isPublic && !pathname.startsWith("/app")) return null;
   const tabs = isPublic ? [
     { href: "/", label: ux("home"), icon: House },

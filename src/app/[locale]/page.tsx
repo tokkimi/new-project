@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/marketing/hero";
 import { SkinGoalsShowcase } from "@/components/marketing/skin-goals-showcase";
 import { StartHere } from "@/components/marketing/start-here";
+import { LearnShowcase } from "@/components/marketing/learn-showcase";
 import { ScanShowcase } from "@/components/marketing/scan-showcase";
 import { AuditShowcase } from "@/components/marketing/audit-showcase";
 import { WellnessShowcase } from "@/components/marketing/wellness-showcase";
@@ -99,6 +100,7 @@ export default async function Home({
         <Hero />
         <SkinGoalsShowcase />
         <StartHere />
+        <LearnShowcase />
         <ScanShowcase />
         <AuditShowcase />
         <WellnessShowcase />
