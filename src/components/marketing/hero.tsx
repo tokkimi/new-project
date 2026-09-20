@@ -15,7 +15,7 @@ export function Hero() {
         <p className="mt-4 text-xs leading-5 text-muted-foreground">{t("disclaimer")}</p>
       </div>
       <div className="relative mx-auto w-full max-w-2xl lg:w-[110%] lg:max-w-none lg:-translate-x-2">
-        <Image src="/images/hero-couple-editorial.webp" alt={ux("heroAlt")} width={1536} height={1024} sizes="(min-width: 1024px) 58vw, 100vw" preload className="h-auto w-full object-contain" />
+        <Image src="/images/hero-couple-chrome.webp" alt={ux("heroAlt")} width={1536} height={1024} sizes="(min-width: 1024px) 58vw, 100vw" preload className="h-auto w-full object-contain" />
       </div>
     </div>
   </section>;

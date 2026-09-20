@@ -6,6 +6,7 @@ import { Geist_Mono, Montserrat, Noto_Sans_KR, Syncopate } from "next/font/googl
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/components/auth-provider";
 import { BottomNav } from "@/components/bottom-nav";
+import { FloatingScanner } from "@/components/floating-scanner";
 import { CookieBanner } from "@/components/cookie-banner";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
@@ -114,6 +115,7 @@ export default async function RootLayout({
             >
               {children}
               <BottomNav />
+              <FloatingScanner />
               <CookieBanner />
             </ThemeProvider>
           </AuthProvider>

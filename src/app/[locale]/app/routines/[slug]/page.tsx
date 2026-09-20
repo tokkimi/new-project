@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductImage } from "@/components/product-image";
+import { GuideProductAdd } from "@/components/guide-product-add";
 import { findGuide, stepsForSlot, type GuideStep } from "@/lib/routine-guides";
 import { findIngredient } from "@/data/ingredients";
 import { db } from "@/lib/db";
@@ -181,18 +182,10 @@ export default async function RoutineGuideDetailPage({
               ) : (
                 <div className="grid gap-2 sm:grid-cols-3">
                   {products.map((product) => (
-                    <Link
-                      key={product.id}
-                      href={`/app/product/${product.slug}`}
-                      className="group flex min-w-0 gap-3 rounded-2xl border border-border bg-white/[0.035] p-3 transition hover:border-border hover:bg-white/[0.06]"
-                    >
-                      <ProductImage imageUrl={product.imageUrl} category={product.category} name={product.name} size="sm" />
-                      <div className="min-w-0">
-                        <p className="line-clamp-2 text-sm font-medium text-foreground">{product.name}</p>
-                        <p className="truncate text-xs text-muted-foreground">{product.brand}</p>
-                        <p className="mt-1 text-[11px] uppercase tracking-[0.16em] text-muted-foreground">{t("openProduct")}</p>
-                      </div>
-                    </Link>
+                    <div key={product.id} className="group flex min-w-0 gap-3 rounded-2xl border border-border bg-white/[0.035] p-3 transition hover:border-border hover:bg-white/[0.06]">
+                      <Link href={`/app/product/${product.slug}`} className="shrink-0"><ProductImage imageUrl={product.imageUrl} category={product.category} name={product.name} size="sm" /></Link>
+                      <div className="min-w-0"><Link href={`/app/product/${product.slug}`}><p className="line-clamp-2 text-sm font-medium text-foreground">{product.name}</p><p className="truncate text-xs text-muted-foreground">{product.brand}</p><p className="mt-1 text-[11px] uppercase tracking-[0.16em] text-muted-foreground">{t("openProduct")}</p></Link><div className="mt-2"><GuideProductAdd productId={product.id} /></div></div>
+                    </div>
                   ))}
                 </div>
               )}

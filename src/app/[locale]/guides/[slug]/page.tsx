@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { guideVisual } from "@/lib/guide-visuals";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, ArrowRight, Moon, Sparkles, Sun } from "lucide-react";
+import { ArrowLeft, Moon, Sparkles, Sun } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { GuideRoutineCta } from "@/components/guide-routine-cta";
 import { findGuide, stepsForSlot, type GuideStep } from "@/lib/routine-guides";
 import { findIngredient } from "@/data/ingredients";
 
@@ -71,10 +72,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
           <h2 className="font-serif text-2xl">{t("keepInMind")}</h2>
           <p className="leading-7 text-muted-foreground">{t(`guides.${slug}.keepInMind`)}</p>
         </Card>
-        <div className="flex flex-col justify-between gap-5 rounded-[28px] border border-primary/20 bg-card p-6 sm:flex-row sm:items-center sm:p-8">
-          <div><p className="font-serif text-2xl">{t("buildCta")}</p><p className="mt-2 max-w-xl text-sm leading-6 text-muted-foreground">{t("buildCtaSub")}</p></div>
-          <Button asChild className="shrink-0"><Link href="/app/routine">{t("buildCta")}<ArrowRight className="size-4" /></Link></Button>
-        </div>
+        <GuideRoutineCta slug={slug} />
         <p className="max-w-3xl text-xs leading-relaxed text-muted-foreground">{t("disclaimer")}</p>
       </div>
     </main><SiteFooter /></div>
