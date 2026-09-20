@@ -1,6 +1,5 @@
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/logo";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { HeaderAuthStatus } from "@/components/header-auth-status";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col overflow-x-hidden">
-      <header className="sticky top-0 z-40 bg-white/[0.025] backdrop-blur-[2px] dark:bg-black/[0.025]">
+      <header className="haru-app-header sticky top-0 z-40">
         <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:h-20 sm:px-6">
           <div className="absolute left-4 flex items-center sm:left-6">
             <LocaleSwitcher compact className="sm:hidden" />
@@ -19,9 +18,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           </Link>
           <div className="w-16 sm:w-32" />
           <div className="ml-auto flex min-w-0 items-center gap-1.5 sm:gap-3">
-            <div>
-              <ThemeToggle />
-            </div>
+            
             <Button asChild size="sm" className="hidden sm:inline-flex">
               <Link href="/app/upgrade">Premium</Link>
             </Button>

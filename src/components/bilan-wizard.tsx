@@ -265,9 +265,9 @@ function sectionDescription(section: BilanQuestionSection, lang: Lang) {
 }
 
 function scoreTone(score: number) {
-  if (score >= 70) return "text-white";
-  if (score >= 40) return "text-white/85";
-  return "text-white";
+  if (score >= 70) return "text-foreground";
+  if (score >= 40) return "text-muted-foreground";
+  return "text-foreground";
 }
 
 function scanModules(latestScan: ScanSummary) {
@@ -314,35 +314,35 @@ function BilanResultView({
 
   return (
     <div className="flex flex-col gap-7">
-      <section className="flex min-h-[calc(100svh-9rem)] flex-col justify-center gap-5 rounded-[2rem] border border-white/35 bg-white/8 p-6 text-white backdrop-blur-md">
+      <section className="flex min-h-[calc(100svh-9rem)] flex-col justify-center gap-5 rounded-[2rem] border border-border bg-white/8 p-6 text-foreground backdrop-blur-md">
         <div>
-          <p className="text-xs font-medium uppercase tracking-[0.28em] text-white/70">{t.resultTitle}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.28em] text-muted-foreground">{t.resultTitle}</p>
           <h3 className="mt-2 text-4xl font-semibold leading-tight sm:text-5xl">{t.sectionScan}</h3>
         </div>
         {latestScan ? (
           <div className="grid gap-4 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="rounded-[1.5rem] border border-white/25 bg-white/10 p-5 backdrop-blur-md">
-              <p className="text-sm font-medium text-white/70">{t.scanScore}</p>
+            <div className="rounded-[1.5rem] border border-border bg-white/10 p-5 backdrop-blur-md">
+              <p className="text-sm font-medium text-muted-foreground">{t.scanScore}</p>
               <span className={`text-6xl font-semibold ${scoreTone(latestScan.overallScore)}`}>
                 {latestScan.overallScore}
               </span>
-              {latestScan.skinType && <p className="mt-2 text-white/75">{latestScan.skinType}</p>}
+              {latestScan.skinType && <p className="mt-2 text-muted-foreground">{latestScan.skinType}</p>}
             </div>
-            <div className="rounded-[1.5rem] border border-white/25 bg-white/10 p-5 backdrop-blur-md">
-              <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/65">{t.scanObserved}</p>
-              {summary && <p className="mt-3 text-sm leading-7 text-white/78">{summary}</p>}
+            <div className="rounded-[1.5rem] border border-border bg-white/10 p-5 backdrop-blur-md">
+              <p className="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">{t.scanObserved}</p>
+              {summary && <p className="mt-3 text-sm leading-7 text-muted-foreground">{summary}</p>}
               {modules.length > 0 && (
                 <div className="mt-5 space-y-3">
-                  <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/65">{t.scanSignals}</p>
+                  <p className="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">{t.scanSignals}</p>
                   {modules.map((module) => (
-                    <div key={module.id} className="rounded-2xl border border-white/20 bg-white/10 p-3">
+                    <div key={module.id} className="rounded-2xl border border-border bg-white/10 p-3">
                       <div className="flex items-center justify-between gap-3">
                         <span className="text-sm font-medium capitalize">{module.id.replace(/([A-Z])/g, " $1")}</span>
-                        <span className="rounded-full border border-white/25 px-2 py-1 text-xs text-white/70">
+                        <span className="rounded-full border border-border px-2 py-1 text-xs text-muted-foreground">
                           {module.score}/9
                         </span>
                       </div>
-                      {module.note && <p className="mt-1 text-sm leading-6 text-white/70">{module.note}</p>}
+                      {module.note && <p className="mt-1 text-sm leading-6 text-muted-foreground">{module.note}</p>}
                     </div>
                   ))}
                 </div>
@@ -350,8 +350,8 @@ function BilanResultView({
             </div>
           </div>
         ) : (
-          <Card className="rounded-[1.5rem] border-white/25 bg-white/10 text-white">
-            <p className="text-sm text-white/75">{t.noScan}</p>
+          <Card className="rounded-[1.5rem] border-border bg-white/10 text-foreground">
+            <p className="text-sm text-muted-foreground">{t.noScan}</p>
             <Button asChild variant="outline" className="self-start">
               <Link href="/app/face-scan">{t.takeScan}</Link>
             </Button>
@@ -359,27 +359,27 @@ function BilanResultView({
         )}
       </section>
 
-      <section className="flex min-h-[calc(100svh-10rem)] flex-col items-center justify-center gap-5 rounded-[2rem] border border-white/35 bg-white/8 p-6 text-center text-white backdrop-blur-md">
-        <p className="text-xs font-medium uppercase tracking-[0.28em] text-white/70">{t.completeAuditTitle}</p>
+      <section className="flex min-h-[calc(100svh-10rem)] flex-col items-center justify-center gap-5 rounded-[2rem] border border-border bg-white/8 p-6 text-center text-foreground backdrop-blur-md">
+        <p className="text-xs font-medium uppercase tracking-[0.28em] text-muted-foreground">{t.completeAuditTitle}</p>
         <h2 className="max-w-2xl text-4xl font-semibold leading-tight sm:text-5xl">{t.overallScore}</h2>
         <span className={`text-7xl font-semibold ${scoreTone(result.overallScore)}`}>{result.overallScore}</span>
-        <p className="max-w-xl text-sm text-white/75">{t.completeAuditText}</p>
+        <p className="max-w-xl text-sm text-muted-foreground">{t.completeAuditText}</p>
       </section>
 
-      <section className="flex min-h-[calc(100svh-9rem)] flex-col justify-center gap-5 rounded-[2rem] border border-white/35 bg-white/8 p-6 text-white backdrop-blur-md">
+      <section className="flex min-h-[calc(100svh-9rem)] flex-col justify-center gap-5 rounded-[2rem] border border-border bg-white/8 p-6 text-foreground backdrop-blur-md">
         <h3 className="text-3xl font-semibold">{t.sectionLifestyle}</h3>
         <div className="grid gap-3 md:grid-cols-2">
           {result.flags.length === 0 ? (
-            <Card className="rounded-[1.5rem] border-white/25 bg-white/10 text-white">
-              <p className="text-sm text-white/75">{t.flagsNone}</p>
+            <Card className="rounded-[1.5rem] border-border bg-white/10 text-foreground">
+              <p className="text-sm text-muted-foreground">{t.flagsNone}</p>
             </Card>
           ) : (
             result.flags.map((flag) => (
-              <Card key={flag.id} className="rounded-[1.5rem] border-white/25 bg-white/10 text-white">
-                <span className="w-fit rounded-full border border-white/25 px-3 py-1 text-xs font-medium text-white/80">
+              <Card key={flag.id} className="rounded-[1.5rem] border-border bg-white/10 text-foreground">
+                <span className="w-fit rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground">
                   {flag.severity}
                 </span>
-                <p className="text-sm leading-6 text-white/75">{flag.text}</p>
+                <p className="text-sm leading-6 text-muted-foreground">{flag.text}</p>
               </Card>
             ))
           )}
@@ -465,26 +465,26 @@ export function BilanWizard({
 
   if (!started) {
     return (
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 text-white">
-        <Card className="rounded-[2rem] border-white/35 bg-white/8 p-7 text-white backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 text-foreground">
+        <Card className="rounded-[2rem] border-border bg-white/8 p-7 text-foreground backdrop-blur-md">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
-              <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/65">{t.estimatedTime}</p>
+              <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground">{t.estimatedTime}</p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">{t.introTitle}</h1>
-              <p className="mt-4 text-base leading-7 text-white/75">{t.introText}</p>
+              <p className="mt-4 text-base leading-7 text-muted-foreground">{t.introText}</p>
             </div>
-            <Button className="rounded-full border border-white/45 bg-transparent text-white hover:bg-white/10" onClick={() => setStarted(true)}>
+            <Button className="rounded-full border border-border bg-transparent text-foreground hover:bg-white/10" onClick={() => setStarted(true)}>
               {t.start}
               <ArrowRight className="size-4" />
             </Button>
           </div>
         </Card>
-        <Card className="rounded-[2rem] border-white/30 bg-white/8 p-6 text-white backdrop-blur-md">
+        <Card className="rounded-[2rem] border-border bg-white/8 p-6 text-foreground backdrop-blur-md">
           <div className="flex gap-4">
-            <ShieldCheck className="mt-1 size-5 shrink-0 text-white" />
+            <ShieldCheck className="mt-1 size-5 shrink-0 text-foreground" />
             <div>
               <h2 className="text-xl font-semibold">{t.consentTitle}</h2>
-              <p className="mt-2 text-sm leading-7 text-white/75">{t.consentText}</p>
+              <p className="mt-2 text-sm leading-7 text-muted-foreground">{t.consentText}</p>
             </div>
           </div>
         </Card>
@@ -493,28 +493,28 @@ export function BilanWizard({
   }
 
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 text-white">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 text-foreground">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/65">{t.auditQuestions}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground">{t.auditQuestions}</p>
           <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">{sectionTitle(activeSection, lang)}</h1>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-white/72">{sectionDescription(activeSection, lang)}</p>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">{sectionDescription(activeSection, lang)}</p>
         </div>
-        <span className="rounded-full border border-white/30 px-4 py-2 text-sm text-white/75">
+        <span className="rounded-full border border-border px-4 py-2 text-sm text-muted-foreground">
           {t.section} {sectionIndex + 1}/{AUDIT_QUESTION_SECTIONS.length}
         </span>
       </div>
 
       {sectionIndex === 0 && (
-        <Card className="rounded-[2rem] border-white/30 bg-white/8 p-5 text-white backdrop-blur-md">
+        <Card className="rounded-[2rem] border-border bg-white/8 p-5 text-foreground backdrop-blur-md">
           <h2 className="text-xl font-semibold">{t.routineTitle}</h2>
-          <p className="mt-2 text-sm leading-6 text-white/75">{t.routineText}</p>
+          <p className="mt-2 text-sm leading-6 text-muted-foreground">{t.routineText}</p>
         </Card>
       )}
 
       <div className="grid gap-4 md:grid-cols-2">
         {activeSection.questions.map((question) => (
-          <Card key={question.id} className="rounded-[1.75rem] border-white/30 bg-white/10 p-5 text-white backdrop-blur-md">
+          <Card key={question.id} className="rounded-[1.75rem] border-border bg-white/10 p-5 text-foreground backdrop-blur-md">
             <h3 className="text-lg font-semibold leading-7">{questionLabel(question, lang)}</h3>
             <div className="mt-4 flex flex-wrap gap-2">
               {question.options.map((option) => {
@@ -526,8 +526,8 @@ export function BilanWizard({
                     onClick={() => updateAnswer(question.id, option.value)}
                     className={`rounded-full border px-4 py-2 text-sm transition ${
                       active
-                        ? "border-white bg-white/20 text-white shadow-[0_0_18px_rgba(255,255,255,0.22)]"
-                        : "border-white/25 bg-transparent text-white/75 hover:bg-white/10"
+                        ? "border-border bg-white/20 text-foreground shadow-[0_0_18px_rgba(255,255,255,0.22)]"
+                        : "border-border bg-transparent text-muted-foreground hover:bg-white/10"
                     }`}
                   >
                     {active && <Check className="mr-1 inline size-3.5" />}
@@ -541,13 +541,13 @@ export function BilanWizard({
       </div>
 
       {isLastSection && (
-        <Card className="rounded-[2rem] border-white/30 bg-white/8 p-5 text-white backdrop-blur-md">
+        <Card className="rounded-[2rem] border-border bg-white/8 p-5 text-foreground backdrop-blur-md">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="text-xl font-semibold">{t.finalScanTitle}</h2>
-              <p className="mt-2 text-sm leading-6 text-white/75">{latestScan ? t.finalScanText : t.scanMissingAdvice}</p>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">{latestScan ? t.finalScanText : t.scanMissingAdvice}</p>
             </div>
-            <Button asChild variant="outline" className="rounded-full border-white/45 bg-transparent text-white hover:bg-white/10">
+            <Button asChild variant="outline" className="rounded-full border-border bg-transparent text-foreground hover:bg-white/10">
               <Link href="/app/face-scan">
                 <Camera className="size-4" />
                 {t.takeScan}
@@ -557,12 +557,12 @@ export function BilanWizard({
         </Card>
       )}
 
-      {error && <p className="text-sm text-white">{error}</p>}
+      {error && <p className="text-sm text-foreground">{error}</p>}
 
       <div className="flex flex-wrap justify-between gap-3">
         <Button
           variant="outline"
-          className="rounded-full border-white/35 bg-transparent text-white hover:bg-white/10"
+          className="rounded-full border-border bg-transparent text-foreground hover:bg-white/10"
           onClick={() => setSectionIndex((index) => Math.max(0, index - 1))}
           disabled={sectionIndex === 0 || saving}
         >
@@ -571,7 +571,7 @@ export function BilanWizard({
         </Button>
         {isLastSection ? (
           <Button
-            className="rounded-full border border-white/45 bg-transparent text-white shadow-[0_0_18px_rgba(255,255,255,0.18)] hover:bg-white/10"
+            className="rounded-full border border-border bg-transparent text-foreground shadow-[0_0_18px_rgba(255,255,255,0.18)] hover:bg-white/10"
             onClick={saveAudit}
             disabled={saving}
           >
@@ -580,7 +580,7 @@ export function BilanWizard({
           </Button>
         ) : (
           <Button
-            className="rounded-full border border-white/45 bg-transparent text-white shadow-[0_0_18px_rgba(255,255,255,0.18)] hover:bg-white/10"
+            className="rounded-full border border-border bg-transparent text-foreground shadow-[0_0_18px_rgba(255,255,255,0.18)] hover:bg-white/10"
             onClick={() => setSectionIndex((index) => Math.min(AUDIT_QUESTION_SECTIONS.length - 1, index + 1))}
           >
             {t.next}

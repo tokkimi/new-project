@@ -29,7 +29,7 @@ type Preference = {
 
 const PAO_OPTIONS = [3, 6, 9, 12, 18, 24];
 const FIELD_CLASS =
-  "h-11 w-full min-w-0 rounded-xl border border-white/35 bg-white/[0.035] px-3 text-sm text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-xl placeholder:text-white/46 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35";
+  "h-11 w-full min-w-0 rounded-xl border border-border bg-white/[0.035] px-3 text-sm text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-xl placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30";
 
 function dateInputValue(value?: string | null) {
   if (!value) return "";
@@ -64,13 +64,13 @@ function ProductRoutineDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-h-[86vh] max-w-2xl overflow-y-auto border-white/28 bg-[#111]/78 text-white shadow-[0_22px_90px_-40px_rgba(255,255,255,0.28)] backdrop-blur-2xl">
+      <DialogContent className="max-h-[86vh] max-w-2xl overflow-y-auto border-border bg-[#111]/78 text-foreground shadow-[0_22px_90px_-40px_rgba(255,255,255,0.28)] backdrop-blur-2xl">
         <DialogHeader>
           <div className="flex items-start gap-3 pr-8">
             <ProductImage imageUrl={product.imageUrl} category={product.category} name={product.name} size="sm" />
             <div className="min-w-0">
-              <DialogTitle className="truncate font-sans text-xl font-semibold text-white">{product.name}</DialogTitle>
-              <p className="text-sm text-white/62">{product.brand}</p>
+              <DialogTitle className="truncate font-sans text-xl font-semibold text-foreground">{product.name}</DialogTitle>
+              <p className="text-sm text-muted-foreground">{product.brand}</p>
               <div className="mt-2 flex flex-wrap gap-1.5">
                 <Badge variant="outline">{t(`routineSlot.${pref?.routineSlot ?? "both"}`)}</Badge>
                 {pref?.customCategory && <Badge variant="secondary">{pref.customCategory}</Badge>}
@@ -104,7 +104,7 @@ function ProductRoutineDialog({
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2">
-          <label className="grid gap-1.5 text-xs font-medium uppercase tracking-[0.18em] text-white/58">
+          <label className="grid gap-1.5 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
             {t("momentLabel")}
             <select
               className={FIELD_CLASS}
@@ -117,7 +117,7 @@ function ProductRoutineDialog({
               <option value="pause">{t("routineSlot.pause")}</option>
             </select>
           </label>
-          <label className="grid gap-1.5 text-xs font-medium uppercase tracking-[0.18em] text-white/58">
+          <label className="grid gap-1.5 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
             {t("categoryLabel")}
             <input
               className={FIELD_CLASS}
@@ -129,9 +129,9 @@ function ProductRoutineDialog({
         </div>
 
         <div className="grid gap-3">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/58">{t("productDatesTitle")}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">{t("productDatesTitle")}</p>
           <div className="grid gap-3 sm:grid-cols-3">
-            <label className="grid gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white/52">
+            <label className="grid gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
               {t("purchaseDate")}
               <input
                 type="text"
@@ -146,7 +146,7 @@ function ProductRoutineDialog({
                 }
               />
             </label>
-            <label className="grid gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white/52">
+            <label className="grid gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
               {t("expiryDate")}
               <input
                 type="text"
@@ -161,7 +161,7 @@ function ProductRoutineDialog({
                 }
               />
             </label>
-            <label className="grid gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white/52">
+            <label className="grid gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
               {tShelf("openedOn")}
             <input
               type="text"
@@ -178,7 +178,7 @@ function ProductRoutineDialog({
             />
             </label>
           </div>
-          <label className="grid gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white/52">
+          <label className="grid gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
             {t("periodAfterOpening")}
             <select
               className={FIELD_CLASS}
@@ -196,10 +196,10 @@ function ProductRoutineDialog({
           </label>
         </div>
 
-        <label className="grid gap-1.5 text-xs font-medium uppercase tracking-[0.18em] text-white/58">
+        <label className="grid gap-1.5 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
           {t("noteLabel")}
           <textarea
-            className="min-h-28 w-full rounded-xl border border-white/35 bg-white/[0.035] px-3 py-2 text-sm text-white backdrop-blur-xl placeholder:text-white/46"
+            className="min-h-28 w-full rounded-xl border border-border bg-white/[0.035] px-3 py-2 text-sm text-foreground backdrop-blur-xl placeholder:text-muted-foreground"
             placeholder={t("productNotePlaceholder")}
             defaultValue={pref?.note ?? ""}
             onBlur={(e) => onPref?.(product.id, { note: e.target.value || null })}
@@ -246,25 +246,25 @@ function RoutineColumn({
         </Badge>
       </div>
       {steps.length === 0 ? (
-        <p className="py-6 text-center text-sm text-white/62">{emptyLabel}</p>
+        <p className="py-6 text-center text-sm text-muted-foreground">{emptyLabel}</p>
       ) : (
         <ol className="flex min-w-0 flex-col gap-2.5">
           {steps.map((step, i) => (
             <li
               key={step.product.id}
-              className="flex min-w-0 items-center gap-2 rounded-xl border border-white/32 bg-white/[0.025] px-3 py-2.5 text-white backdrop-blur-xl transition-colors hover:border-white/55 hover:bg-white/[0.045]"
+              className="flex min-w-0 items-center gap-2 rounded-xl border border-border bg-white/[0.025] px-3 py-2.5 text-foreground backdrop-blur-xl transition-colors hover:border-border hover:bg-white/[0.045]"
             >
               <button
                 type="button"
                 onClick={() => onEdit(step.product)}
                 className="flex min-w-0 flex-1 items-center gap-3"
               >
-                <span className="flex size-6 shrink-0 items-center justify-center rounded-full border border-white/20 bg-transparent text-xs font-medium text-white/80">
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-full border border-border bg-transparent text-xs font-medium text-muted-foreground">
                   {i + 1}
                 </span>
                 <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm font-medium text-white">{step.product.name}</p>
-                  <p className="text-xs text-white/68">
+                  <p className="truncate text-sm font-medium text-foreground">{step.product.name}</p>
+                  <p className="text-xs text-muted-foreground">
                     {step.product.brand} · {categoryLabel(step.product.category)}
                   </p>
                 </div>
@@ -276,11 +276,11 @@ function RoutineColumn({
                   onRemove(step.product.id);
                 }}
                 aria-label={removeLabel}
-                className="shrink-0 rounded-full p-1.5 text-white/65 transition-colors hover:bg-white/8 hover:text-white"
+                className="shrink-0 rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-white/8 hover:text-foreground"
               >
                 <Trash2 className="size-4" />
               </button>
-              <ChevronRight className="size-4 shrink-0 text-white/65" />
+              <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
             </li>
           ))}
         </ol>
@@ -339,22 +339,22 @@ export function RoutineDiagnostics({ preferences = {} }: { preferences?: Record<
     <div className="flex min-w-0 flex-col gap-6">
       <section className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <Sparkles className="size-5 text-white" />
+          <Sparkles className="size-5 text-foreground" />
           <h2 className="font-serif text-xl">{tAdvice("title")}</h2>
         </div>
         {advice.length === 0 ? (
           <Card className="gap-2">
-            <p className="font-medium text-white">{tAdvice("completeTitle")}</p>
-            <p className="text-sm leading-6 text-white/68">{tAdvice("completeText")}</p>
+            <p className="font-medium text-foreground">{tAdvice("completeTitle")}</p>
+            <p className="text-sm leading-6 text-muted-foreground">{tAdvice("completeText")}</p>
           </Card>
         ) : (
           <Card className="gap-3">
-            <p className="text-sm leading-6 text-white/70">{tAdvice("subtitle")}</p>
+            <p className="text-sm leading-6 text-muted-foreground">{tAdvice("subtitle")}</p>
             <div className="grid gap-2 sm:grid-cols-2">
               {advice.map((item) => (
-                <div key={item} className="rounded-2xl border border-white/24 bg-white/[0.025] p-3">
-                  <p className="text-sm font-medium text-white">{tAdvice(`${item}.title`)}</p>
-                  <p className="mt-1 text-xs leading-5 text-white/62">{tAdvice(`${item}.text`)}</p>
+                <div key={item} className="rounded-2xl border border-border bg-white/[0.025] p-3">
+                  <p className="text-sm font-medium text-foreground">{tAdvice(`${item}.title`)}</p>
+                  <p className="mt-1 text-xs leading-5 text-muted-foreground">{tAdvice(`${item}.text`)}</p>
                 </div>
               ))}
             </div>
@@ -368,7 +368,7 @@ export function RoutineDiagnostics({ preferences = {} }: { preferences?: Record<
           <h2 className="font-serif text-xl">
             {t("conflictsDetected")}
             {routine.warnings.length > 0 && (
-              <span className="ml-2 text-base text-white/62">
+              <span className="ml-2 text-base text-muted-foreground">
                 ({routine.warnings.length})
               </span>
             )}
@@ -378,7 +378,7 @@ export function RoutineDiagnostics({ preferences = {} }: { preferences?: Record<
         {routine.warnings.length === 0 ? (
           <Card className="items-center gap-2 py-10 text-center">
             <p className="font-medium">{t("noConflictsTitle")}</p>
-            <p className="text-sm text-white/62">{t("noConflictsText")}</p>
+            <p className="text-sm text-muted-foreground">{t("noConflictsText")}</p>
           </Card>
         ) : (
           <div className="flex flex-col gap-3">
@@ -387,7 +387,7 @@ export function RoutineDiagnostics({ preferences = {} }: { preferences?: Record<
                 key={`${w.rule.id}-${w.productA.id}-${w.productB.id}`}
                 href={`/app/conflict/${w.rule.id}?a=${w.productA.id}&b=${w.productB.id}`}
               >
-                <Card className="flex-row items-center gap-4 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl transition-colors hover:border-white/55">
+                <Card className="flex-row items-center gap-4 border-border bg-white/[0.03] text-foreground backdrop-blur-xl transition-colors hover:border-border">
                   <Badge
                     variant={severityTone(w.rule.severity) as VariantProps<typeof badgeVariants>["variant"]}
                     className="shrink-0"
@@ -398,11 +398,11 @@ export function RoutineDiagnostics({ preferences = {} }: { preferences?: Record<
                     <p className="truncate font-medium">
                       {tConflicts(`${w.rule.id}.headline`)}
                     </p>
-                    <p className="truncate text-sm text-white/62">
+                    <p className="truncate text-sm text-muted-foreground">
                       {w.productA.name} + {w.productB.name}
                     </p>
                   </div>
-                  <ChevronRight className="size-4 shrink-0 text-white/62" />
+                  <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
                 </Card>
               </Link>
             ))}
@@ -413,19 +413,19 @@ export function RoutineDiagnostics({ preferences = {} }: { preferences?: Record<
       {routine.duplicateActives.length > 0 && (
         <section className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <Layers className="size-5 text-white" />
+            <Layers className="size-5 text-foreground" />
             <h2 className="font-serif text-xl">{t("duplicateActives")}</h2>
           </div>
           <div className="flex flex-col gap-3">
             {routine.duplicateActives.map((dup) => (
               <Card key={dup.ingredientId} className="gap-2">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="size-4 text-white" />
+                  <Sparkles className="size-4 text-foreground" />
                   <p className="font-medium">
                     {t("duplicateTitle", { count: dup.products.length })}
                   </p>
                 </div>
-                <p className="flex flex-wrap gap-1.5 text-sm text-white/62">
+                <p className="flex flex-wrap gap-1.5 text-sm text-muted-foreground">
                   {dup.products.map((p) => (
                     <Badge key={p.id} variant="outline" className="max-w-full truncate whitespace-normal">
                       {p.name}
@@ -473,7 +473,7 @@ export function RoutineContent({
         <button
           type="button"
           aria-label="Add product"
-          className="ml-1 inline-flex size-8 items-center justify-center rounded-full border border-white/35 bg-transparent text-white transition hover:bg-white/8"
+          className="ml-1 inline-flex size-8 items-center justify-center rounded-full border border-border bg-transparent text-foreground transition hover:bg-white/8"
         >
           <Plus className="size-4" />
         </button>
@@ -485,13 +485,13 @@ export function RoutineContent({
     <div className="flex min-w-0 flex-col gap-8">
       <div>
         <h1 className={compact ? "font-serif text-2xl" : "font-serif text-3xl"}>{t("title")}</h1>
-        <p className="mt-1 text-white/68">{t("subtitle", { count: shelf.length })}</p>
+        <p className="mt-1 text-muted-foreground">{t("subtitle", { count: shelf.length })}</p>
       </div>
 
       <div className="grid min-w-0 gap-5 md:grid-cols-2">
         <RoutineColumn
           title={t("morning")}
-          icon={<Sun className="size-5 text-white" />}
+          icon={<Sun className="size-5 text-foreground" />}
           steps={routine.am}
           accent="am"
           stepsLabel={t("steps", { count: routine.am.length })}
@@ -504,7 +504,7 @@ export function RoutineContent({
         />
         <RoutineColumn
           title={t("evening")}
-          icon={<Moon className="size-5 text-white" />}
+          icon={<Moon className="size-5 text-foreground" />}
           steps={routine.pm}
           accent="pm"
           stepsLabel={t("steps", { count: routine.pm.length })}

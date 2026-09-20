@@ -116,13 +116,13 @@ export function WellnessPlayer({
   };
 
   return (
-    <div className="flex items-center gap-3 rounded-3xl border border-white/30 bg-white/[0.035] p-4 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl">
+    <div className="flex items-center gap-3 rounded-3xl border border-border bg-white/[0.035] p-4 text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl">
       <Button type="button" size="icon" variant={playing ? "default" : "outline"} onClick={toggle}>
         {playing ? <Pause className="size-4" /> : <Play className="size-4" />}
       </Button>
       <div className="min-w-0">
         <p className="font-medium">{label}</p>
-        <p className="text-sm text-white/64">{description}</p>
+        <p className="text-sm text-muted-foreground">{description}</p>
         {error && <p className="mt-1 text-xs text-destructive">{errorText}</p>}
       </div>
     </div>

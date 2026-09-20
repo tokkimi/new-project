@@ -30,7 +30,7 @@ export function ThemeToggle({ className }: { className?: string }) {
           className={cn(
             "flex size-7 items-center justify-center rounded-full transition-colors",
             mounted && theme === value
-              ? "bg-transparent text-white ring-1 ring-white/55"
+              ? "bg-transparent text-foreground ring-1 ring-ring/30"
               : "text-muted-foreground hover:text-foreground"
           )}
         >

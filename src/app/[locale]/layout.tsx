@@ -73,10 +73,7 @@ export async function generateMetadata({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f7f8f8" },
-    { media: "(prefers-color-scheme: dark)", color: "#121416" },
-  ],
+  themeColor: "#f7faf9",
 };
 
 export default async function RootLayout({
@@ -109,8 +106,10 @@ export default async function RootLayout({
           <AuthProvider>
             <ThemeProvider
               attribute="class"
-              defaultTheme="system"
-              enableSystem
+              defaultTheme="light"
+              forcedTheme="light"
+              themes={["light"]}
+              enableSystem={false}
               disableTransitionOnChange
             >
               {children}

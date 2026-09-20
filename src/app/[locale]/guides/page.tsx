@@ -30,15 +30,12 @@ export default async function GuidesPage({
         <section className="border-b border-border/60 haru-routines">
           <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:px-6 sm:py-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-                {tGoals("eyebrow")}
-              </p>
               <h1 className="mt-4 text-balance font-serif text-4xl leading-tight sm:text-5xl">
                 {t("indexTitle")}
               </h1>
               <p className="mt-4 max-w-xl leading-7 text-muted-foreground">{t("indexSubtitle")}</p>
             </div>
-            <div className="relative min-h-[280px] overflow-hidden rounded-[30px] border border-white/60 shadow-[0_28px_80px_-58px_rgba(36,30,24,0.7)] sm:min-h-[360px]">
+            <div className="relative min-h-[280px] overflow-hidden rounded-[30px] border border-border shadow-[0_28px_80px_-58px_rgba(36,30,24,0.7)] sm:min-h-[360px]">
               <Image
                 src="/images/routine-glow.webp"
                 alt={tGoals("imageAlt")}

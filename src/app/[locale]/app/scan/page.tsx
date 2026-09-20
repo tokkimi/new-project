@@ -218,7 +218,7 @@ export default function ScanPage() {
               <label className="text-sm font-medium">{t("searchLabel")}</label>
               <div className="flex gap-2">
                 <input
-                  className="h-10 min-w-0 flex-1 rounded-md border border-white/55 bg-white/[0.03] px-3 text-sm text-white outline-none backdrop-blur-xl transition placeholder:text-white/50 focus:border-white/80 focus:ring-2 focus:ring-white/20 dark:bg-white/[0.025]"
+                  className="h-10 min-w-0 flex-1 rounded-md border border-border bg-white/[0.03] px-3 text-sm text-foreground outline-none backdrop-blur-xl transition placeholder:text-muted-foreground focus:border-border focus:ring-2 focus:ring-ring/30 dark:bg-white/[0.025]"
                   placeholder={t("searchPlaceholder")}
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}

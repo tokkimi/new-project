@@ -68,7 +68,7 @@ export function GoodHabits() {
                 className="haru-glow-card min-w-0 rounded-full px-4 py-3"
               >
                 <div className="flex items-center gap-3">
-                  <span className="haru-icon-halo flex size-10 shrink-0 items-center justify-center rounded-full text-primary dark:text-white">
+                  <span className="haru-icon-halo flex size-10 shrink-0 items-center justify-center rounded-full text-primary dark:text-foreground">
                     <Icon className="size-4" />
                   </span>
                   <div className="min-w-0">
@@ -94,7 +94,7 @@ export function GoodHabits() {
               type="button"
               aria-label="Previous guide"
               onClick={() => scrollGuide(-1)}
-              className="absolute left-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+              className="absolute left-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
             >
               <span className="size-2.5 rounded-full bg-[#7f878d]/70 dark:bg-white/85" />
             </button>
@@ -102,7 +102,7 @@ export function GoodHabits() {
               type="button"
               aria-label="Next guide"
               onClick={() => scrollGuide(1)}
-              className="absolute right-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+              className="absolute right-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
             >
               <span className="size-2.5 rounded-full bg-[#7f878d]/70 dark:bg-white/85" />
             </button>
@@ -128,7 +128,7 @@ export function GoodHabits() {
                           {routine.type}
                         </h4>
                       </div>
-                      <span className="haru-icon-halo flex size-12 shrink-0 items-center justify-center rounded-full text-primary dark:text-white">
+                      <span className="haru-icon-halo flex size-12 shrink-0 items-center justify-center rounded-full text-primary dark:text-foreground">
                         <Droplet className="size-5" />
                       </span>
                     </div>
@@ -140,7 +140,7 @@ export function GoodHabits() {
 
                     <div className="mt-auto pt-6">
                       <div className="haru-glow-card rounded-[1.1rem] p-4">
-                        <p className="text-xs font-medium uppercase tracking-[0.14em] text-primary dark:text-white">
+                        <p className="text-xs font-medium uppercase tracking-[0.14em] text-primary dark:text-foreground">
                           {t("watchOutLabel")}
                         </p>
                         <p className="mt-2 text-sm leading-6 text-muted-foreground">{routine.avoid}</p>

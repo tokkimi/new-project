@@ -82,13 +82,13 @@ export function AuditShowcase() {
           ].map((card) => (
             <div
               key={card.title}
-              className="rounded-[1.25rem] border border-white/40 bg-white/10 p-6 text-left text-white backdrop-blur-2xl dark:border-white/20 dark:bg-white/[0.04]"
+              className="rounded-[1.25rem] border border-border bg-white/10 p-6 text-left text-foreground backdrop-blur-2xl dark:border-border dark:bg-white/[0.04]"
             >
               <h3 className="text-xl font-semibold">{card.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/78">{card.text}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{card.text}</p>
               <div className="mt-5 grid gap-3">
                 {card.items.map((item) => (
-                  <div key={item} className="flex gap-3 text-sm leading-relaxed text-white/82">
+                  <div key={item} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
                     <span className="mt-2 size-1.5 shrink-0 rounded-full bg-white/70" />
                     <span>{item}</span>
                   </div>

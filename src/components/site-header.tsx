@@ -2,7 +2,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/logo";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { HeaderAuthStatus } from "@/components/header-auth-status";
 
@@ -19,7 +18,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
         <Link href="/app/wellness" className="hover:underline underline-offset-4">{t("wellness")}</Link>
         <Link href="/app/upgrade" className="hover:underline underline-offset-4">Premium</Link>
       </nav>
-      <div className="flex items-center gap-2 sm:gap-3"><LocaleSwitcher compact /><ThemeToggle /><HeaderAuthStatus /></div>
+      <div className="flex items-center gap-2 sm:gap-3"><LocaleSwitcher compact /><HeaderAuthStatus /></div>
     </div>
   </header>;
 }

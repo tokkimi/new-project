@@ -355,15 +355,15 @@ export function AuditResultView({ result }: { result: AuditResult }) {
   const sections = ["profile", "scores", "priorities", "products", "routine", "consult"];
 
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col gap-7 text-white">
-      <section className="grid min-h-[calc(100svh-10rem)] items-center gap-7 rounded-[2rem] border border-white/28 bg-white/[0.06] p-5 shadow-[0_18px_70px_-50px_rgba(255,255,255,0.55)] backdrop-blur-md sm:p-8 lg:grid-cols-[1fr_auto]">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-7 text-foreground">
+      <section className="grid min-h-[calc(100svh-10rem)] items-center gap-7 rounded-[2rem] border border-border bg-white/[0.06] p-5 shadow-[0_18px_70px_-50px_rgba(255,255,255,0.55)] backdrop-blur-md sm:p-8 lg:grid-cols-[1fr_auto]">
         <div className="space-y-5">
-          <p className="text-xs font-medium uppercase tracking-[0.28em] text-white/70">{t.eyebrow}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.28em] text-muted-foreground">{t.eyebrow}</p>
           <div>
-            <h2 className="font-serif text-4xl leading-tight text-white sm:text-5xl">{t.title}</h2>
-            <p className="mt-3 max-w-3xl text-white/70">{result.profile.summary || t.subtitle}</p>
+            <h2 className="font-serif text-4xl leading-tight text-foreground sm:text-5xl">{t.title}</h2>
+            <p className="mt-3 max-w-3xl text-muted-foreground">{result.profile.summary || t.subtitle}</p>
           </div>
-          <p className="max-w-3xl text-lg leading-8 text-white/82">{t.subtitle}</p>
+          <p className="max-w-3xl text-lg leading-8 text-muted-foreground">{t.subtitle}</p>
           <div className="flex flex-wrap gap-2">
             <GlassBadge>
               {t.confidence}: {confidenceLabel(result.profile.confidence, lang)}
@@ -377,17 +377,17 @@ export function AuditResultView({ result }: { result: AuditResult }) {
               </GlassBadge>
             )}
           </div>
-          <Button asChild variant="outline" className="rounded-full border-white/45 bg-transparent text-white hover:bg-white/10">
+          <Button asChild variant="outline" className="rounded-full border-border bg-transparent text-foreground hover:bg-white/10">
             <Link href="/app/shelf">
               {t.viewRoutine}
               <ArrowRight className="size-4" />
             </Link>
           </Button>
         </div>
-        <div className="mx-auto flex size-44 flex-col items-center justify-center rounded-full border border-white/25 bg-white/[0.05] backdrop-blur-md sm:size-56">
-          <span className="font-serif text-6xl text-white">{result.score}</span>
-          <span className="text-sm text-white/70">/ 100</span>
-          <span className="mt-2 text-xs font-medium uppercase tracking-[0.24em] text-white/60">{t.score}</span>
+        <div className="mx-auto flex size-44 flex-col items-center justify-center rounded-full border border-border bg-white/[0.05] backdrop-blur-md sm:size-56">
+          <span className="font-serif text-6xl text-foreground">{result.score}</span>
+          <span className="text-sm text-muted-foreground">/ 100</span>
+          <span className="mt-2 text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">{t.score}</span>
         </div>
       </section>
 
@@ -405,7 +405,7 @@ export function AuditResultView({ result }: { result: AuditResult }) {
               <GlassPanel>
                 <Check className="size-5" />
                 <p className="font-medium">{t.noSignal}</p>
-                <p className="text-sm text-white/65">{t.medicalLimit}</p>
+                <p className="text-sm text-muted-foreground">{t.medicalLimit}</p>
               </GlassPanel>
             ) : (
               result.conclusions.map((conclusion) => (
@@ -413,9 +413,9 @@ export function AuditResultView({ result }: { result: AuditResult }) {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <Badge className={severityClass(conclusion.severity)}>{conclusion.severity}</Badge>
-                      <h3 className="mt-2 font-serif text-xl text-white">{conclusion.label}</h3>
+                      <h3 className="mt-2 font-serif text-xl text-foreground">{conclusion.label}</h3>
                     </div>
-                    <span className="text-sm text-white/60">{Math.round(conclusion.confidence * 100)}%</span>
+                    <span className="text-sm text-muted-foreground">{Math.round(conclusion.confidence * 100)}%</span>
                   </div>
                   <WhyBlock
                     labels={t}
@@ -436,8 +436,8 @@ export function AuditResultView({ result }: { result: AuditResult }) {
           {(Object.entries(result.scores) as Array<[ScoreKey, number]>).map(([key, value]) => (
             <GlassPanel key={key}>
               <div className="flex items-center justify-between gap-3">
-                <p className="text-sm font-medium text-white">{scoreLabels[key]}</p>
-                <p className="font-serif text-2xl text-white">{value}</p>
+                <p className="text-sm font-medium text-foreground">{scoreLabels[key]}</p>
+                <p className="font-serif text-2xl text-foreground">{value}</p>
               </div>
               <Progress value={value} indicatorClassName={key.includes("risk") ? riskBar(value) : scoreBar(value)} />
             </GlassPanel>
@@ -452,8 +452,8 @@ export function AuditResultView({ result }: { result: AuditResult }) {
               <GlassBadge>
                 {priority.level === "immediate" ? t.immediate : priority.level === "short_term" ? t.shortTerm : t.later}
               </GlassBadge>
-              <h3 className="font-serif text-xl text-white">{priority.title}</h3>
-              <p className="text-sm leading-6 text-white/68">{priority.text}</p>
+              <h3 className="font-serif text-xl text-foreground">{priority.title}</h3>
+              <p className="text-sm leading-6 text-muted-foreground">{priority.text}</p>
             </GlassPanel>
           ))}
         </div>
@@ -464,7 +464,7 @@ export function AuditResultView({ result }: { result: AuditResult }) {
                 <GlassPanel key={issue.step}>
                   <AlertTriangle className="size-5" />
                   <p className="font-medium">{t.missingStep[issue.step]}</p>
-                  <p className="text-sm text-white/68">{t.missingHint[issue.step]}</p>
+                  <p className="text-sm text-muted-foreground">{t.missingHint[issue.step]}</p>
                 </GlassPanel>
               ) : null
             )}
@@ -473,7 +473,7 @@ export function AuditResultView({ result }: { result: AuditResult }) {
                 <GlassPanel key={issue.product.id}>
                   <AlertTriangle className="size-5" />
                   <p className="font-medium">{issue.product.name}</p>
-                  <p className="text-sm text-white/68">{t.mismatchReason}</p>
+                  <p className="text-sm text-muted-foreground">{t.mismatchReason}</p>
                 </GlassPanel>
               ) : null
             )}
@@ -485,7 +485,7 @@ export function AuditResultView({ result }: { result: AuditResult }) {
         <div className="grid gap-3">
           {result.productDecisions.length === 0 ? (
             <GlassPanel>
-              <p className="text-sm text-white/68">{t.emptyProducts}</p>
+              <p className="text-sm text-muted-foreground">{t.emptyProducts}</p>
             </GlassPanel>
           ) : (
             result.productDecisions.map((decision) => (
@@ -500,21 +500,21 @@ export function AuditResultView({ result }: { result: AuditResult }) {
                   />
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-center gap-2">
-                      <h3 className="line-clamp-2 font-medium text-white">{decision.product.name}</h3>
+                      <h3 className="line-clamp-2 font-medium text-foreground">{decision.product.name}</h3>
                       <Badge className={decisionClass(decision.decision)}>{decisionLabel(decision.decision, t)}</Badge>
                     </div>
-                    <p className="text-sm text-white/60">
+                    <p className="text-sm text-muted-foreground">
                       {decision.product.brand} - {decision.product.category}
                     </p>
-                    <p className="mt-2 text-sm leading-6 text-white/68">{decision.reason}</p>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">{decision.reason}</p>
                   </div>
-                  <div className="rounded-2xl border border-white/20 bg-white/[0.07] p-3 text-sm">
-                    <p className="font-medium text-white">{t.frequency}</p>
-                    <p className="text-white/68">{decision.frequency}</p>
+                  <div className="rounded-2xl border border-border bg-white/[0.07] p-3 text-sm">
+                    <p className="font-medium text-foreground">{t.frequency}</p>
+                    <p className="text-muted-foreground">{decision.frequency}</p>
                     {decision.caution && (
                       <>
-                        <p className="mt-2 font-medium text-white">{t.caution}</p>
-                        <p className="text-white/68">{decision.caution}</p>
+                        <p className="mt-2 font-medium text-foreground">{t.caution}</p>
+                        <p className="text-muted-foreground">{decision.caution}</p>
                       </>
                     )}
                   </div>
@@ -538,10 +538,10 @@ export function AuditResultView({ result }: { result: AuditResult }) {
 
       <ResultSection index={6} title={t.consult} icon={Stethoscope}>
         <GlassPanel>
-          <p className="text-sm leading-6 text-white/68">{t.consultText}</p>
+          <p className="text-sm leading-6 text-muted-foreground">{t.consultText}</p>
           <ul className="grid gap-2 sm:grid-cols-2">
             {result.consultSignals.map((signal) => (
-              <li key={signal} className="flex gap-2 text-sm text-white/68">
+              <li key={signal} className="flex gap-2 text-sm text-muted-foreground">
                 <AlertTriangle className="mt-0.5 size-4 shrink-0" />
                 <span>{signal}</span>
               </li>
@@ -565,13 +565,13 @@ function ResultSection({
   children: ReactNode;
 }) {
   return (
-    <section className="flex min-h-[calc(100svh-9rem)] scroll-mt-24 flex-col gap-5 rounded-[2rem] border border-white/24 bg-white/[0.055] p-5 shadow-[0_16px_60px_-48px_rgba(255,255,255,0.45)] backdrop-blur-md sm:p-7">
+    <section className="flex min-h-[calc(100svh-9rem)] scroll-mt-24 flex-col gap-5 rounded-[2rem] border border-border bg-white/[0.055] p-5 shadow-[0_16px_60px_-48px_rgba(255,255,255,0.45)] backdrop-blur-md sm:p-7">
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
-          <Icon className="size-5 text-white" />
-          <h2 className="font-serif text-3xl text-white">{title}</h2>
+          <Icon className="size-5 text-foreground" />
+          <h2 className="font-serif text-3xl text-foreground">{title}</h2>
         </div>
-        <span className="text-sm text-white/55">{String(index).padStart(2, "0")}</span>
+        <span className="text-sm text-muted-foreground">{String(index).padStart(2, "0")}</span>
       </div>
       {children}
     </section>
@@ -580,7 +580,7 @@ function ResultSection({
 
 function GlassPanel({ children }: { children: ReactNode }) {
   return (
-    <div className="space-y-3 rounded-[1.5rem] border border-white/22 bg-white/[0.075] p-4 text-white backdrop-blur-md">
+    <div className="space-y-3 rounded-[1.5rem] border border-border bg-white/[0.075] p-4 text-foreground backdrop-blur-md">
       {children}
     </div>
   );
@@ -588,7 +588,7 @@ function GlassPanel({ children }: { children: ReactNode }) {
 
 function GlassBadge({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-white/28 bg-white/[0.08] px-3 py-1 text-xs font-medium text-white/82 backdrop-blur-md">
+    <span className="inline-flex items-center rounded-full border border-border bg-white/[0.08] px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur-md">
       {children}
     </span>
   );
@@ -597,8 +597,8 @@ function GlassBadge({ children }: { children: ReactNode }) {
 function Fact({ label, value }: { label: string; value: string }) {
   return (
     <GlassPanel>
-      <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/55">{label}</p>
-      <p className="mt-1 text-sm leading-6 text-white">{value}</p>
+      <p className="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">{label}</p>
+      <p className="mt-1 text-sm leading-6 text-foreground">{value}</p>
     </GlassPanel>
   );
 }
@@ -617,9 +617,9 @@ function WhyBlock({
   action: string;
 }) {
   return (
-    <div className="grid gap-3 text-sm text-white/68 lg:grid-cols-3">
+    <div className="grid gap-3 text-sm text-muted-foreground lg:grid-cols-3">
       <div>
-        <p className="font-medium text-white">{labels.evidence}</p>
+        <p className="font-medium text-foreground">{labels.evidence}</p>
         <ul className="mt-1 space-y-1">
           {evidence.map((item) => (
             <li key={item}>- {item}</li>
@@ -627,7 +627,7 @@ function WhyBlock({
         </ul>
       </div>
       <div>
-        <p className="font-medium text-white">{labels.limits}</p>
+        <p className="font-medium text-foreground">{labels.limits}</p>
         <ul className="mt-1 space-y-1">
           {limits.map((item) => (
             <li key={item}>- {item}</li>
@@ -635,7 +635,7 @@ function WhyBlock({
         </ul>
       </div>
       <div>
-        <p className="font-medium text-white">{labels.action}</p>
+        <p className="font-medium text-foreground">{labels.action}</p>
         <p className="mt-1">{interpretation}</p>
         <p className="mt-2">{action}</p>
       </div>
@@ -646,11 +646,11 @@ function WhyBlock({
 function RoutineList({ title, items }: { title: string; items: string[] }) {
   return (
     <GlassPanel>
-      <h3 className="font-serif text-xl text-white">{title}</h3>
+      <h3 className="font-serif text-xl text-foreground">{title}</h3>
       <ol className="space-y-2">
         {items.map((item, index) => (
-          <li key={`${title}-${item}-${index}`} className="flex gap-3 text-sm leading-6 text-white/68">
-            <span className="flex size-6 shrink-0 items-center justify-center rounded-full border border-white/24 text-xs text-white">
+          <li key={`${title}-${item}-${index}`} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+            <span className="flex size-6 shrink-0 items-center justify-center rounded-full border border-border text-xs text-foreground">
               {index + 1}
             </span>
             <span>{item}</span>
@@ -674,15 +674,15 @@ function riskBar(score: number) {
 }
 
 function severityClass(severity: "low" | "moderate" | "high") {
-  if (severity === "high") return "border border-white/25 bg-white/12 text-white hover:bg-white/12";
-  if (severity === "moderate") return "border border-white/25 bg-white/10 text-white hover:bg-white/10";
-  return "border border-white/25 bg-white/8 text-white hover:bg-white/8";
+  if (severity === "high") return "border border-border bg-white/12 text-foreground hover:bg-white/12";
+  if (severity === "moderate") return "border border-border bg-white/10 text-foreground hover:bg-white/10";
+  return "border border-border bg-white/8 text-foreground hover:bg-white/8";
 }
 
 function decisionClass(decision: "keep" | "adjust" | "pause" | "replace") {
-  if (decision === "keep") return "border border-white/25 bg-white/10 text-white hover:bg-white/10";
-  if (decision === "pause" || decision === "replace") return "border border-white/25 bg-white/12 text-white hover:bg-white/12";
-  return "border border-white/25 bg-white/8 text-white hover:bg-white/8";
+  if (decision === "keep") return "border border-border bg-white/10 text-foreground hover:bg-white/10";
+  if (decision === "pause" || decision === "replace") return "border border-border bg-white/12 text-foreground hover:bg-white/12";
+  return "border border-border bg-white/8 text-foreground hover:bg-white/8";
 }
 
 function decisionLabel(decision: "keep" | "adjust" | "pause" | "replace", labels: (typeof UI)["en"]) {

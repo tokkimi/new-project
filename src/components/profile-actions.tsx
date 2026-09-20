@@ -6,7 +6,6 @@ import { signOut } from "next-auth/react";
 import { LogOut, Trash2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import {
   Dialog,
@@ -36,10 +35,6 @@ export function ProfileActions() {
         <div className="flex items-center justify-between">
           <p className="text-sm font-medium">{t("language")}</p>
           <LocaleSwitcher />
-        </div>
-        <div className="flex items-center justify-between">
-          <p className="text-sm font-medium">{t("theme")}</p>
-          <ThemeToggle />
         </div>
       </Card>
 

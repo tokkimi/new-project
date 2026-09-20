@@ -175,7 +175,7 @@ export function FaceScanCapture({ labels, onCapture, onFallbackUpload }: FaceSca
 
   if (status === "fallback") {
     return (
-      <div className="w-full rounded-[2rem] border border-white/45 bg-white/10 p-5 text-left text-white backdrop-blur-md">
+      <div className="haru-glow-card w-full rounded-[2rem] p-5 text-left text-foreground">
         <p className="flex items-center gap-2 text-sm">
           <ShieldCheck className="size-4" />
           {labels.fallback}

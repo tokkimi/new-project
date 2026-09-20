@@ -89,34 +89,34 @@ export function AddProductDialog({
           </Button>
         )}
       </DialogTrigger>
-      <DialogContent className="max-h-[84vh] overflow-hidden border-white/30 bg-[#101010]/78 text-white shadow-[0_22px_90px_-42px_rgba(255,255,255,0.24)] backdrop-blur-2xl">
+      <DialogContent className="max-h-[84vh] overflow-hidden border-border bg-[#101010]/78 text-foreground shadow-[0_22px_90px_-42px_rgba(255,255,255,0.24)] backdrop-blur-2xl">
         <DialogHeader>
-          <DialogTitle className="font-sans text-2xl font-semibold text-white">{t("title")}</DialogTitle>
-          <DialogDescription className="text-white/66">{t("description")}</DialogDescription>
+          <DialogTitle className="font-sans text-2xl font-semibold text-foreground">{t("title")}</DialogTitle>
+          <DialogDescription className="text-muted-foreground">{t("description")}</DialogDescription>
         </DialogHeader>
 
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-white/58" />
+          <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t("searchPlaceholder")}
-            className="border-white/32 bg-white/[0.035] pl-9 text-white placeholder:text-white/46"
+            className="border-border bg-white/[0.035] pl-9 text-foreground placeholder:text-muted-foreground"
           />
         </div>
 
         {selected && (
-          <div className="grid gap-3 rounded-2xl border border-white/35 bg-white/[0.035] p-3 text-white backdrop-blur-xl">
+          <div className="grid gap-3 rounded-2xl border border-border bg-white/[0.035] p-3 text-foreground backdrop-blur-xl">
             <div className="flex items-center gap-3">
               <ProductImage imageUrl={selected.imageUrl} category={selected.category} name={selected.name} size="sm" />
               <div className="min-w-0">
                 <p className="truncate text-sm font-medium">{selected.name}</p>
-                <p className="text-xs text-white/58">{selected.brand}</p>
+                <p className="text-xs text-muted-foreground">{selected.brand}</p>
               </div>
             </div>
             <div className="grid gap-2 sm:grid-cols-2">
               <select
-                className="h-10 w-full min-w-0 rounded-xl border border-white/32 bg-white/[0.035] px-3 text-sm text-white backdrop-blur-xl"
+                className="h-10 w-full min-w-0 rounded-xl border border-border bg-white/[0.035] px-3 text-sm text-foreground backdrop-blur-xl"
                 value={preference.routineSlot}
                 onChange={(e) => setPreference({ ...preference, routineSlot: e.target.value as InitialPreference["routineSlot"] })}
               >
@@ -126,14 +126,14 @@ export function AddProductDialog({
                 <option value="pause">{tWorkspace("routineSlot.pause")}</option>
               </select>
               <input
-                className="h-10 rounded-xl border border-white/32 bg-white/[0.035] px-3 text-sm text-white placeholder:text-white/46"
+                className="h-10 rounded-xl border border-border bg-white/[0.035] px-3 text-sm text-foreground placeholder:text-muted-foreground"
                 placeholder={tWorkspace("categoryPlaceholder")}
                 value={preference.customCategory ?? ""}
                 onChange={(e) => setPreference({ ...preference, customCategory: e.target.value || null })}
               />
             </div>
             <textarea
-              className="min-h-20 rounded-xl border border-white/32 bg-white/[0.035] px-3 py-2 text-sm text-white placeholder:text-white/46"
+              className="min-h-20 rounded-xl border border-border bg-white/[0.035] px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground"
               placeholder={tWorkspace("productNotePlaceholder")}
               value={preference.note ?? ""}
               onChange={(e) => setPreference({ ...preference, note: e.target.value || null })}
@@ -145,17 +145,17 @@ export function AddProductDialog({
         )}
 
         <div className="flex max-h-72 flex-col gap-2 overflow-y-auto pr-1">
-          {filtered.length === 0 && <p className="py-6 text-center text-sm text-white/60">{t("noResults")}</p>}
+          {filtered.length === 0 && <p className="py-6 text-center text-sm text-muted-foreground">{t("noResults")}</p>}
           {filtered.map((p) => (
             <button
               key={p.id}
               onClick={() => setSelected(p)}
-              className="flex items-center gap-3 rounded-2xl border border-white/28 bg-white/[0.025] px-3 py-2.5 text-left text-white backdrop-blur-xl transition-colors hover:bg-white/[0.055]"
+              className="flex items-center gap-3 rounded-2xl border border-border bg-white/[0.025] px-3 py-2.5 text-left text-foreground backdrop-blur-xl transition-colors hover:bg-white/[0.055]"
             >
               <ProductImage imageUrl={p.imageUrl} category={p.category} name={p.name} size="sm" />
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium">{p.name}</p>
-                <p className="text-xs text-white/58">
+                <p className="text-xs text-muted-foreground">
                   {p.brand} · {tCategories(p.category)}
                 </p>
                 {p.ingredientIds.length > 0 && (

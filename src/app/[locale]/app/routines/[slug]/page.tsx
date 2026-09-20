@@ -78,7 +78,7 @@ export default async function RoutineGuideDetailPage({
   if (!guide) {
     return (
       <div className="mx-auto max-w-lg text-center">
-        <p className="text-white/64">{t("notFound")}</p>
+        <p className="text-muted-foreground">{t("notFound")}</p>
         <Button asChild variant="link">
           <Link href="/app/routines">{t("backTo")}</Link>
         </Button>
@@ -88,7 +88,7 @@ export default async function RoutineGuideDetailPage({
 
   const renderStep = (step: GuideStep, i: number) => (
     <li key={`${step.category}-${step.activeId ?? ""}-${i}`} className="flex items-start gap-3">
-      <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full border border-white/25 bg-transparent text-xs font-medium text-white">
+      <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full border border-border bg-transparent text-xs font-medium text-foreground">
         {i + 1}
       </span>
       <div className="min-w-0">
@@ -101,7 +101,7 @@ export default async function RoutineGuideDetailPage({
               </Badge>
             </Link>
           )}
-          <span className="text-xs text-white/58">{t(`freq.${step.freq}`)}</span>
+          <span className="text-xs text-muted-foreground">{t(`freq.${step.freq}`)}</span>
         </div>
       </div>
     </li>
@@ -112,7 +112,7 @@ export default async function RoutineGuideDetailPage({
   const productRoutine = await productsForGuide([...am, ...pm]);
 
   return (
-    <div className="mx-auto flex max-w-4xl flex-col gap-6 text-white">
+    <div className="mx-auto flex max-w-4xl flex-col gap-6 text-foreground">
       <Button asChild variant="ghost" size="sm" className="w-fit -ml-2">
         <Link href="/app/routines">
           <ArrowLeft className="size-4" />
@@ -122,75 +122,75 @@ export default async function RoutineGuideDetailPage({
 
       <div>
         <h1 className="text-balance font-serif text-3xl">{t(`guides.${slug}.title`)}</h1>
-        <p className="mt-1 text-white/70">
-          <span className="font-medium text-white">{t("goalLabel")}:</span>{" "}
+        <p className="mt-1 text-muted-foreground">
+          <span className="font-medium text-foreground">{t("goalLabel")}:</span>{" "}
           {t(`guides.${slug}.goal`)}
         </p>
       </div>
 
-      <Card className="gap-2 border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+      <Card className="gap-2 border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
         <h2 className="flex items-center gap-2 font-serif text-lg">
-          <Sparkles className="size-4 text-white" />
+          <Sparkles className="size-4 text-foreground" />
           {t("introLabel")}
         </h2>
-        <p className="leading-relaxed text-white/68">{t(`guides.${slug}.intro`)}</p>
+        <p className="leading-relaxed text-muted-foreground">{t(`guides.${slug}.intro`)}</p>
       </Card>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <Card className="gap-3 border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+        <Card className="gap-3 border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
           <h2 className="flex items-center gap-2 font-serif text-lg">
-            <Sun className="size-4 text-white" />
+            <Sun className="size-4 text-foreground" />
             {t("slotAm")}
           </h2>
           <ol className="flex flex-col gap-3">{am.map(renderStep)}</ol>
         </Card>
-        <Card className="gap-3 border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+        <Card className="gap-3 border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
           <h2 className="flex items-center gap-2 font-serif text-lg">
-            <Moon className="size-4 text-white" />
+            <Moon className="size-4 text-foreground" />
             {t("slotPm")}
           </h2>
           <ol className="flex flex-col gap-3">{pm.map(renderStep)}</ol>
         </Card>
       </div>
 
-      <Card className="gap-2 border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+      <Card className="gap-2 border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
         <h2 className="font-serif text-lg">{t("keepInMind")}</h2>
-        <p className="leading-relaxed text-white/68">{t(`guides.${slug}.keepInMind`)}</p>
+        <p className="leading-relaxed text-muted-foreground">{t(`guides.${slug}.keepInMind`)}</p>
       </Card>
 
       <section className="grid gap-4">
         <div>
           <h2 className="font-serif text-2xl">{t("productRoutineTitle")}</h2>
-          <p className="mt-1 max-w-2xl text-sm leading-6 text-white/68">{t("productRoutineText")}</p>
+          <p className="mt-1 max-w-2xl text-sm leading-6 text-muted-foreground">{t("productRoutineText")}</p>
         </div>
         <div className="grid gap-3">
           {productRoutine.map(({ step, products }, index) => (
-            <Card key={`${step.slot}-${step.category}-${step.activeId ?? "base"}-${index}`} className="gap-3 border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+            <Card key={`${step.slot}-${step.category}-${step.activeId ?? "base"}-${index}`} className="gap-3 border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
               <div className="flex flex-wrap items-center gap-2">
-                <Badge variant="outline" className="border-white/35 text-white">
+                <Badge variant="outline" className="border-border text-foreground">
                   {step.slot === "am" ? t("slotAm") : step.slot === "pm" ? t("slotPm") : `${t("slotAm")} / ${t("slotPm")}`}
                 </Badge>
                 <p className="font-medium">{tCategories(step.category)}</p>
                 {step.activeId && findIngredient(step.activeId) && (
-                  <Badge className="bg-white/10 text-white">{tIng(`${step.activeId}.name`)}</Badge>
+                  <Badge className="bg-white/10 text-foreground">{tIng(`${step.activeId}.name`)}</Badge>
                 )}
-                <span className="text-xs text-white/58">{t(`freq.${step.freq}`)}</span>
+                <span className="text-xs text-muted-foreground">{t(`freq.${step.freq}`)}</span>
               </div>
               {products.length === 0 ? (
-                <p className="text-sm text-white/62">{t("noProductSuggestion")}</p>
+                <p className="text-sm text-muted-foreground">{t("noProductSuggestion")}</p>
               ) : (
                 <div className="grid gap-2 sm:grid-cols-3">
                   {products.map((product) => (
                     <Link
                       key={product.id}
                       href={`/app/product/${product.slug}`}
-                      className="group flex min-w-0 gap-3 rounded-2xl border border-white/24 bg-white/[0.035] p-3 transition hover:border-white/50 hover:bg-white/[0.06]"
+                      className="group flex min-w-0 gap-3 rounded-2xl border border-border bg-white/[0.035] p-3 transition hover:border-border hover:bg-white/[0.06]"
                     >
                       <ProductImage imageUrl={product.imageUrl} category={product.category} name={product.name} size="sm" />
                       <div className="min-w-0">
-                        <p className="line-clamp-2 text-sm font-medium text-white">{product.name}</p>
-                        <p className="truncate text-xs text-white/62">{product.brand}</p>
-                        <p className="mt-1 text-[11px] uppercase tracking-[0.16em] text-white/48">{t("openProduct")}</p>
+                        <p className="line-clamp-2 text-sm font-medium text-foreground">{product.name}</p>
+                        <p className="truncate text-xs text-muted-foreground">{product.brand}</p>
+                        <p className="mt-1 text-[11px] uppercase tracking-[0.16em] text-muted-foreground">{t("openProduct")}</p>
                       </div>
                     </Link>
                   ))}
@@ -201,10 +201,10 @@ export default async function RoutineGuideDetailPage({
         </div>
       </section>
 
-      <Card className="flex-row items-center justify-between gap-3 border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+      <Card className="flex-row items-center justify-between gap-3 border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
         <div className="min-w-0">
           <p className="font-medium">{t("buildCta")}</p>
-          <p className="text-sm text-white/64">{t("buildCtaSub")}</p>
+          <p className="text-sm text-muted-foreground">{t("buildCtaSub")}</p>
         </div>
         <Button asChild size="icon" className="shrink-0" aria-label={t("buildCta")}>
           <Link href="/app/routine">
@@ -213,7 +213,7 @@ export default async function RoutineGuideDetailPage({
         </Button>
       </Card>
 
-      <p className="text-xs leading-relaxed text-white/58">{t("disclaimer")}</p>
+      <p className="text-xs leading-relaxed text-muted-foreground">{t("disclaimer")}</p>
     </div>
   );
 }

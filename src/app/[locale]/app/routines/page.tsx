@@ -20,24 +20,24 @@ export default async function RoutineGuidesPage({
   ]);
 
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-6 text-white">
+    <div className="mx-auto flex max-w-3xl flex-col gap-6 text-foreground">
       <div>
         <h1 className="font-serif text-3xl">{t("indexTitle")}</h1>
-        <p className="mt-1 text-white/68">{t("indexSubtitle")}</p>
+        <p className="mt-1 text-muted-foreground">{t("indexSubtitle")}</p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {ROUTINE_GUIDES.map((guide) => (
           <Link key={guide.slug} href={`/app/routines/${guide.slug}`} className="group">
-            <Card className="h-full gap-3 border-white/35 bg-white/[0.025] text-white backdrop-blur-xl transition-colors group-hover:border-white/55">
+            <Card className="h-full gap-3 border-border bg-white/[0.025] text-foreground backdrop-blur-xl transition-colors group-hover:border-border">
               <div className="flex items-start justify-between gap-2">
                 <div className="min-w-0">
                   <h2 className="font-serif text-xl">{t(`guides.${guide.slug}.title`)}</h2>
-                  <p className="mt-0.5 text-sm text-white/64">
+                  <p className="mt-0.5 text-sm text-muted-foreground">
                     {t(`guides.${guide.slug}.goal`)}
                   </p>
                 </div>
-                <ArrowRight className="mt-1 size-4 shrink-0 text-white/64 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="mt-1 size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {guide.actives.map((id) =>
@@ -53,7 +53,7 @@ export default async function RoutineGuidesPage({
         ))}
       </div>
 
-      <p className="text-xs leading-relaxed text-white/58">{t("disclaimer")}</p>
+      <p className="text-xs leading-relaxed text-muted-foreground">{t("disclaimer")}</p>
     </div>
   );
 }

@@ -105,7 +105,7 @@ export function BeautyNews({ items }: { items: NewsItem[] }) {
           type="button"
           aria-label="Previous news"
           onClick={() => scrollNews(-1)}
-          className="absolute left-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+          className="absolute left-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
         >
           <span className="size-2.5 rounded-full bg-[#7f878d]/70 dark:bg-white/85" />
         </button>
@@ -113,7 +113,7 @@ export function BeautyNews({ items }: { items: NewsItem[] }) {
           type="button"
           aria-label="Next news"
           onClick={() => scrollNews(1)}
-          className="absolute right-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+          className="absolute right-1 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-transparent shadow-none backdrop-blur-2xl transition hover:bg-white/8"
         >
           <span className="size-2.5 rounded-full bg-[#7f878d]/70 dark:bg-white/85" />
         </button>

@@ -12,7 +12,7 @@ export function SkinGoalsShowcase() {
   return <section id="routines" className="haru-routines scroll-mt-28 py-14 sm:py-20" aria-labelledby="routines-title">
     <div className="mx-auto max-w-7xl px-5 sm:px-8">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
-        <div className="max-w-2xl"><p className="text-xs font-medium uppercase tracking-[0.2em]">{t("eyebrow")}</p>
+        <div className="max-w-2xl">
           <h2 id="routines-title" className="mt-3 text-balance text-3xl leading-tight sm:text-4xl">{t("routinesTitle")}</h2>
           <p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">{t("routinesSubtitle")}</p></div>
         <Link href="/guides" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium underline-offset-4 hover:underline">{t("allGuides")}<ArrowUpRight className="size-4" aria-hidden="true" /></Link>

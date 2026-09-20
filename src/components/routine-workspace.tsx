@@ -61,9 +61,9 @@ type SkinProfileSummary = {
 };
 
 const FIELD_CLASS =
-  "h-10 rounded-xl border border-white/32 bg-white/[0.035] px-3 text-sm text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl placeholder:text-white/48 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35";
+  "h-10 rounded-xl border border-border bg-white/[0.035] px-3 text-sm text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30";
 const TEXTAREA_CLASS =
-  "rounded-xl border border-white/32 bg-white/[0.035] px-3 py-2 text-sm text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl placeholder:text-white/48 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35";
+  "rounded-xl border border-border bg-white/[0.035] px-3 py-2 text-sm text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30";
 
 function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) {
   const t = useTranslations("routineWorkspace.reliability");
@@ -123,10 +123,10 @@ function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) 
     <section className="grid gap-4">
       <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
         <div className="min-w-0">
-          <p className="text-xs font-medium uppercase tracking-[0.32em] text-white/58">{t("passport")}</p>
-          <h2 className="mt-2 font-serif text-2xl text-white sm:text-3xl">{t("passportTitle")}</h2>
-          <p className="mt-3 text-sm leading-6 text-white/70">{t("passportIntro")}</p>
-          <Button asChild variant="outline" className="mt-5 w-fit border-white/45 bg-transparent text-white hover:bg-white/8">
+          <p className="text-xs font-medium uppercase tracking-[0.32em] text-muted-foreground">{t("passport")}</p>
+          <h2 className="mt-2 font-serif text-2xl text-foreground sm:text-3xl">{t("passportTitle")}</h2>
+          <p className="mt-3 text-sm leading-6 text-muted-foreground">{t("passportIntro")}</p>
+          <Button asChild variant="outline" className="mt-5 w-fit border-border bg-transparent text-foreground hover:bg-white/8">
             <Link href="/app/quiz">
               <Droplets className="size-4" /> {t("skinTypeExerciseCta")}
             </Link>
@@ -140,13 +140,13 @@ function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) 
             {checks.map(({ icon: Icon, title, text }) => (
               <div
                 key={title}
-                className="min-w-[48%] snap-start rounded-full border border-white/22 bg-white/[0.02] px-4 py-3 sm:min-w-[42%] lg:min-w-[48%]"
+                className="min-w-[48%] snap-start rounded-full border border-border bg-white/[0.02] px-4 py-3 sm:min-w-[42%] lg:min-w-[48%]"
               >
                 <div className="flex items-center gap-2">
-                  <Icon className="size-4 shrink-0 text-white" />
-                  <p className="truncate text-sm font-medium text-white">{title}</p>
+                  <Icon className="size-4 shrink-0 text-foreground" />
+                  <p className="truncate text-sm font-medium text-foreground">{title}</p>
                 </div>
-                <p className="mt-1 line-clamp-2 text-xs leading-5 text-white/62">{text}</p>
+                <p className="mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground">{text}</p>
               </div>
             ))}
           </div>
@@ -154,7 +154,7 @@ function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) 
       </div>
 
       <Card className="grid gap-4 p-5 sm:grid-cols-[auto_1fr] sm:p-6">
-        <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/28 bg-white/[0.025] text-4xl font-medium text-white sm:size-28">
+        <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-white/[0.025] text-4xl font-medium text-foreground sm:size-28">
           {profileImage ? (
             <Image src={profileImage} alt="" width={112} height={112} className="size-full object-cover" unoptimized />
           ) : (
@@ -162,18 +162,18 @@ function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) 
           )}
         </div>
         <div className="min-w-0">
-          <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/52">{t("skinDetails")}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">{t("skinDetails")}</p>
           {profile ? (
             <div className="mt-3 grid gap-x-5 gap-y-2 sm:grid-cols-2">
               {details.map((item) => (
-                <div key={item.label} className="border-b border-white/12 pb-2">
-                  <p className="text-[11px] uppercase tracking-[0.16em] text-white/45">{item.label}</p>
-                  <p className="mt-1 text-sm leading-5 text-white">{item.value}</p>
+                <div key={item.label} className="border-b border-border pb-2">
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground">{item.label}</p>
+                  <p className="mt-1 text-sm leading-5 text-foreground">{item.value}</p>
                 </div>
               ))}
             </div>
           ) : (
-            <p className="mt-3 text-sm leading-6 text-white/66">{t("noSkinProfile")}</p>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">{t("noSkinProfile")}</p>
           )}
         </div>
       </Card>
@@ -228,7 +228,7 @@ function SavedVideoCard({ link }: { link: SavedLink }) {
         <Badge className="w-fit">{link.platform ?? t("link")}</Badge>
       </div>
       {embed ? (
-        <div className="overflow-hidden rounded-2xl border border-white/35 bg-transparent">
+        <div className="overflow-hidden rounded-2xl border border-border bg-transparent">
           {embed.thumbnail && !playing ? (
             <button
               type="button"
@@ -246,7 +246,7 @@ function SavedVideoCard({ link }: { link: SavedLink }) {
                 }}
               />
               <span className="absolute inset-0 bg-black/18" />
-              <span className="absolute left-1/2 top-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-black/15 text-white backdrop-blur-md">
+              <span className="absolute left-1/2 top-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-black/30 text-white backdrop-blur-md">
                 <Play className="ml-0.5 size-6 fill-current" />
               </span>
             </button>
@@ -262,11 +262,11 @@ function SavedVideoCard({ link }: { link: SavedLink }) {
           )}
         </div>
       ) : (
-        <div className="rounded-2xl border border-white/35 bg-white/[0.025] p-4 text-sm text-white/70">
+        <div className="rounded-2xl border border-border bg-white/[0.025] p-4 text-sm text-muted-foreground">
           {t("embedUnavailable")}
         </div>
       )}
-      {link.note && <p className="text-sm text-white/64">{link.note}</p>}
+      {link.note && <p className="text-sm text-muted-foreground">{link.note}</p>}
     </Card>
   );
 }
@@ -386,7 +386,7 @@ export function RoutineWorkspace() {
       <div className="flex min-w-0 flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
           <h1 className="font-serif text-3xl">{t("title")}</h1>
-          <p className="mt-1 text-white/68">{t("subtitle")}</p>
+          <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
         </div>
         <div className="flex min-w-0 flex-wrap gap-2">
           <Button variant="outline" asChild>
@@ -399,12 +399,12 @@ export function RoutineWorkspace() {
 
       <TipOfTheDay locale={locale} label={t("tipOfTheDay")} />
 
-      <div className="no-scrollbar flex min-w-0 gap-1 overflow-x-auto rounded-full border border-white/35 bg-transparent p-1 backdrop-blur-xl">
+      <div className="no-scrollbar flex min-w-0 gap-1 overflow-x-auto rounded-full border border-border bg-transparent p-1 backdrop-blur-xl">
         {tabs.map(([id, label]) => (
           <button
             key={id}
             onClick={() => setTab(id)}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition ${tab === id ? "border border-white/45 bg-white/[0.035] text-white" : "text-white/76 hover:bg-white/[0.025] hover:text-white"}`}
+            className={`rounded-full px-4 py-2 text-sm font-medium transition ${tab === id ? "border border-border bg-white/[0.035] text-foreground" : "text-muted-foreground hover:bg-white/[0.025] hover:text-foreground"}`}
           >
             {label}
           </button>
@@ -418,7 +418,7 @@ export function RoutineWorkspace() {
           {shelf.length === 0 ? (
             <Card className="items-center gap-3 py-14 text-center">
               <p className="font-serif text-xl">{t("emptyProductsTitle")}</p>
-              <p className="text-sm text-white/64">{t("emptyProductsText")}</p>
+              <p className="text-sm text-muted-foreground">{t("emptyProductsText")}</p>
               <AddProductDialog existingProducts={shelf} onProductAdded={handleProductAdded} />
             </Card>
           ) : (
@@ -457,7 +457,7 @@ export function RoutineWorkspace() {
                 <ProductImage imageUrl={p.imageUrl} category={p.category} name={p.name} size="md" />
                 <div>
                   <p className="font-medium">{p.name}</p>
-                  <p className="text-sm text-white/62">{p.brand}</p>
+                  <p className="text-sm text-muted-foreground">{p.brand}</p>
                 </div>
                 {preferences[p.id]?.customCategory && <Badge>{preferences[p.id].customCategory}</Badge>}
               </Card>
@@ -491,7 +491,7 @@ export function RoutineWorkspace() {
                       type="button"
                       onClick={() => editNote(n)}
                       aria-label={t("edit")}
-                      className="rounded-full p-1.5 text-white/62 transition-colors hover:bg-white/8 hover:text-white"
+                      className="rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-white/8 hover:text-foreground"
                     >
                       <Pencil className="size-4" />
                     </button>
@@ -499,13 +499,13 @@ export function RoutineWorkspace() {
                       type="button"
                       onClick={() => deleteNote(n.id)}
                       aria-label={t("remove")}
-                      className="rounded-full p-1.5 text-white/62 transition-colors hover:bg-white/8 hover:text-white"
+                      className="rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-white/8 hover:text-foreground"
                     >
                       <Trash2 className="size-4" />
                     </button>
                   </div>
                 </div>
-                <p className="whitespace-pre-wrap text-sm text-white/64">{n.body}</p>
+                <p className="whitespace-pre-wrap text-sm text-muted-foreground">{n.body}</p>
               </Card>
             ))}
           </div>

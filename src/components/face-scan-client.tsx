@@ -806,7 +806,7 @@ function ModuleDetail({
                     return (
                       <div
                         key={product.id}
-                        className="relative w-[132px] shrink-0 snap-start rounded-2xl border border-white/40 bg-white/50 p-2.5 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.4)] backdrop-blur-xl dark:border-white/10 dark:bg-white/10"
+                        className="relative w-[132px] shrink-0 snap-start rounded-2xl border border-border bg-white/50 p-2.5 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.4)] backdrop-blur-xl dark:border-border dark:bg-white/10"
                       >
                         <div className="aspect-square w-full overflow-hidden rounded-xl">
                           <ProductImage
@@ -825,7 +825,7 @@ function ModuleDetail({
                           aria-label={isAdded ? t("addedProduct") : t("addProduct")}
                           className={cn(
                             "absolute -right-1.5 -top-1.5 flex size-7 items-center justify-center rounded-full shadow-sm transition-colors",
-                            isAdded ? "bg-success text-white" : "bg-primary text-primary-foreground hover:brightness-105"
+                            isAdded ? "bg-success text-foreground" : "bg-primary text-primary-foreground hover:brightness-105"
                           )}
                         >
                           {isAdded ? <Check className="size-3.5" /> : <ClipboardCheck className="size-3.5" />}

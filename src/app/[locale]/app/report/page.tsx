@@ -13,9 +13,9 @@ import { auditRoutine, type AuditResult } from "@/lib/audit-engine";
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex flex-wrap justify-between gap-2 border-b border-white/18 py-2 text-sm last:border-0">
-      <span className="text-white/62">{label}</span>
-      <span className="text-right font-medium text-white">{value}</span>
+    <div className="flex flex-wrap justify-between gap-2 border-b border-border py-2 text-sm last:border-0">
+      <span className="text-muted-foreground">{label}</span>
+      <span className="text-right font-medium text-foreground">{value}</span>
     </div>
   );
 }
@@ -25,20 +25,20 @@ function Meter({ label, value, detail }: { label: string; value: number; detail?
   return (
     <div className="grid gap-1.5">
       <div className="flex items-baseline justify-between gap-3 text-sm">
-        <span className="font-medium text-white">{label}</span>
-        <span className="text-white/62">{safeValue}/100</span>
+        <span className="font-medium text-foreground">{label}</span>
+        <span className="text-muted-foreground">{safeValue}/100</span>
       </div>
       <div className="h-2 overflow-hidden rounded-full bg-white/12">
         <div className="h-full rounded-full bg-white/78" style={{ width: `${safeValue}%` }} />
       </div>
-      {detail && <p className="text-xs leading-5 text-white/60">{detail}</p>}
+      {detail && <p className="text-xs leading-5 text-muted-foreground">{detail}</p>}
     </div>
   );
 }
 
 function SmallTag({ children }: { children: ReactNode }) {
   return (
-    <span className="rounded-full border border-white/25 bg-white/[0.035] px-2.5 py-1 text-xs text-white/68 backdrop-blur-xl">
+    <span className="rounded-full border border-border bg-white/[0.035] px-2.5 py-1 text-xs text-muted-foreground backdrop-blur-xl">
       {children}
     </span>
   );
@@ -130,30 +130,30 @@ export default async function ReportPage() {
   };
 
   return (
-    <div data-report-content className="mx-auto flex max-w-2xl flex-col gap-6 bg-transparent p-1 text-white">
+    <div data-report-content className="mx-auto flex max-w-2xl flex-col gap-6 bg-transparent p-1 text-foreground">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h1 className="font-serif text-3xl">{t("title")}</h1>
-          <p className="mt-1 text-sm text-white/62">
+          <p className="mt-1 text-sm text-muted-foreground">
             {t("generatedOn", { date: dateFmt.format(new Date()) })}
           </p>
         </div>
         <PrintReportButton label={t("print")} />
       </div>
 
-      <Card className="print-avoid-break gap-2 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+      <Card className="print-avoid-break gap-2 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <Stethoscope className="mt-0.5 size-5 shrink-0 text-white" />
-          <p className="text-sm text-white/68">{t("intro")}</p>
+          <Stethoscope className="mt-0.5 size-5 shrink-0 text-foreground" />
+          <p className="text-sm text-muted-foreground">{t("intro")}</p>
         </div>
       </Card>
 
-      <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+      <Card className="print-avoid-break gap-3 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <ShieldCheck className="mt-0.5 size-5 shrink-0 text-white" />
+          <ShieldCheck className="mt-0.5 size-5 shrink-0 text-foreground" />
           <div>
             <h2 className="font-serif text-xl">{tReliability("title")}</h2>
-            <p className="mt-1 text-sm text-white/62">{tReliability("subtitle")}</p>
+            <p className="mt-1 text-sm text-muted-foreground">{tReliability("subtitle")}</p>
           </div>
         </div>
         <div className="grid gap-2 text-sm">
@@ -164,12 +164,12 @@ export default async function ReportPage() {
         </div>
       </Card>
 
-      <Card className="print-avoid-break gap-4 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+      <Card className="print-avoid-break gap-4 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <Activity className="mt-0.5 size-5 shrink-0 text-white" />
+          <Activity className="mt-0.5 size-5 shrink-0 text-foreground" />
           <div>
             <h2 className="font-serif text-xl">{t("auditChartTitle")}</h2>
-            <p className="mt-1 text-sm text-white/62">
+            <p className="mt-1 text-sm text-muted-foreground">
               {auditRun ? t("auditDate", { date: dateFmt.format(auditRun.createdAt) }) : t("auditLive")}
             </p>
           </div>
@@ -182,7 +182,7 @@ export default async function ReportPage() {
         </div>
       </Card>
 
-      <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+      <Card className="print-avoid-break gap-3 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
         <h2 className="font-serif text-xl">{t("profileTitle")}</h2>
         {profile ? (
           <div>
@@ -212,11 +212,11 @@ export default async function ReportPage() {
             {profile.sunExposure && <Row label={t("sunExposure")} value={safe(() => t(`lifestyle.sun.${profile.sunExposure}`), profile.sunExposure)} />}
           </div>
         ) : (
-          <p className="text-sm text-white/62">{t("noProfile")}</p>
+          <p className="text-sm text-muted-foreground">{t("noProfile")}</p>
         )}
       </Card>
 
-      <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+      <Card className="print-avoid-break gap-3 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
         <h2 className="font-serif text-xl">{t("scanTitle")}</h2>
         {analysis && scan ? (
           <div>
@@ -244,13 +244,13 @@ export default async function ReportPage() {
             <div className="mt-5">
               <p className="mb-1.5 text-sm font-medium">{t("flaggedTitle")}</p>
               {flagged.length === 0 ? (
-                <p className="text-sm text-white/62">{t("flaggedNone")}</p>
+                <p className="text-sm text-muted-foreground">{t("flaggedNone")}</p>
               ) : (
                 <ul className="grid gap-1.5">
                   {flagged.map((m) => (
                     <li key={m.id} className="flex justify-between text-sm">
                       <span>{safe(() => tFace(`modules.${m.id}.name`), m.id)}</span>
-                      <span className="text-white/62">
+                      <span className="text-muted-foreground">
                         {safe(() => tFace(`severity.${m.severity}`), m.severity)} - {9 - m.score}/9
                       </span>
                     </li>
@@ -260,12 +260,12 @@ export default async function ReportPage() {
             </div>
           </div>
         ) : (
-          <p className="text-sm text-white/62">{t("noScan")}</p>
+          <p className="text-sm text-muted-foreground">{t("noScan")}</p>
         )}
       </Card>
 
       {(exposure.actives.length > 0 || protocol) && (
-        <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+        <Card className="print-avoid-break gap-3 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
           <h2 className="font-serif text-xl">{t("routineTitle")}</h2>
           <div className="grid gap-2 text-sm">
             <Row label={t("routineProducts")} value={`${shelfProducts.length}`} />
@@ -277,7 +277,7 @@ export default async function ReportPage() {
               {exposure.actives.map((a) => (
                 <span
                   key={a.ingredientId}
-                  className="rounded-full border border-white/24 bg-white/[0.035] px-3 py-1 text-sm text-white/68 backdrop-blur-xl"
+                  className="rounded-full border border-border bg-white/[0.035] px-3 py-1 text-sm text-muted-foreground backdrop-blur-xl"
                 >
                   {safe(() => tIng(`${a.ingredientId}.name`), a.ingredientId)} x{a.productCount}
                 </span>
@@ -288,7 +288,7 @@ export default async function ReportPage() {
             <div className="grid gap-2">
               <p className="text-sm font-medium">{t("exposureFindings")}</p>
               {exposure.findings.map((finding, index) => (
-                <p key={index} className="rounded-2xl border border-white/24 bg-white/[0.035] px-3 py-2 text-sm text-white/66 backdrop-blur-xl">
+                <p key={index} className="rounded-2xl border border-border bg-white/[0.035] px-3 py-2 text-sm text-muted-foreground backdrop-blur-xl">
                   {finding.kind === "redundant"
                     ? t("redundantFinding", {
                         ingredient: safe(() => tIng(`${finding.ingredientId}.name`), finding.ingredientId),
@@ -303,7 +303,7 @@ export default async function ReportPage() {
             </div>
           )}
           {protocol && (
-            <p className="rounded-2xl border border-white/24 bg-white/[0.035] px-4 py-3 text-sm text-white/72 backdrop-blur-xl">
+            <p className="rounded-2xl border border-border bg-white/[0.035] px-4 py-3 text-sm text-muted-foreground backdrop-blur-xl">
               <span className="font-medium">{safe(() => tProto(`goals.${protocol.goal}`), protocol.goal)}</span>
               {" — "}
               {safe(() => tProto(`changeKinds.${protocol.changeKind}`), protocol.changeKind)}
@@ -313,14 +313,14 @@ export default async function ReportPage() {
         </Card>
       )}
 
-      <Card className="print-avoid-break gap-4 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+      <Card className="print-avoid-break gap-4 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
         <h2 className="font-serif text-xl">{t("routineChangesTitle")}</h2>
         <div className="grid gap-3 sm:grid-cols-3">
           {latestAudit.priorities.map((priority) => (
-            <div key={priority.id} className="rounded-2xl border border-white/24 bg-white/[0.025] p-3">
+            <div key={priority.id} className="rounded-2xl border border-border bg-white/[0.025] p-3">
               <SmallTag>{t(`priorityLevels.${priority.level}`)}</SmallTag>
               <p className="mt-2 text-sm font-medium">{priority.title}</p>
-              <p className="mt-1 text-xs leading-5 text-white/62">{priority.text}</p>
+              <p className="mt-1 text-xs leading-5 text-muted-foreground">{priority.text}</p>
             </div>
           ))}
         </div>
@@ -329,7 +329,7 @@ export default async function ReportPage() {
             <div className="mb-2 flex items-center gap-2 text-sm font-medium">
               <Sun className="size-4" /> {t("morningPlan")}
             </div>
-            <ul className="grid gap-1.5 text-sm text-white/64">
+            <ul className="grid gap-1.5 text-sm text-muted-foreground">
               {latestAudit.recommendedRoutine.morning.map((item) => <li key={item}>- {item}</li>)}
             </ul>
           </div>
@@ -337,7 +337,7 @@ export default async function ReportPage() {
             <div className="mb-2 flex items-center gap-2 text-sm font-medium">
               <Moon className="size-4" /> {t("eveningPlan")}
             </div>
-            <ul className="grid gap-1.5 text-sm text-white/64">
+            <ul className="grid gap-1.5 text-sm text-muted-foreground">
               {latestAudit.recommendedRoutine.evening.map((item) => <li key={item}>- {item}</li>)}
             </ul>
           </div>
@@ -347,7 +347,7 @@ export default async function ReportPage() {
             <div className="mb-2 flex items-center gap-2 text-sm font-medium">
               <Droplets className="size-4" /> {t("hydrationLifestyleTitle")}
             </div>
-            <ul className="grid gap-1.5 text-sm text-white/64">
+            <ul className="grid gap-1.5 text-sm text-muted-foreground">
               <li>- {t("hydrationAdvice")}</li>
               <li>- {t("sleepAdvice")}</li>
               <li>- {t("stressAdvice")}</li>
@@ -358,7 +358,7 @@ export default async function ReportPage() {
             <div className="mb-2 flex items-center gap-2 text-sm font-medium">
               <Dumbbell className="size-4" /> {t("movementLifestyleTitle")}
             </div>
-            <ul className="grid gap-1.5 text-sm text-white/64">
+            <ul className="grid gap-1.5 text-sm text-muted-foreground">
               <li>- {t("sportAdvice")}</li>
               <li>- {t("sweatAdvice")}</li>
               <li>- {t("recoveryAdvice")}</li>
@@ -367,23 +367,23 @@ export default async function ReportPage() {
         </div>
       </Card>
 
-      <Card className="print-avoid-break gap-4 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+      <Card className="print-avoid-break gap-4 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
         <h2 className="font-serif text-xl">{t("productDecisionsTitle")}</h2>
         <div className="grid gap-3">
           {latestAudit.productDecisions.map((decision) => {
             const pref = prefByProduct.get(decision.product.id);
             const ingredients = decision.product.ingredientIds.slice(0, 8);
             return (
-              <div key={decision.product.id} className="rounded-2xl border border-white/24 bg-white/[0.025] p-3">
+              <div key={decision.product.id} className="rounded-2xl border border-border bg-white/[0.025] p-3">
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div>
                     <p className="font-medium">{decision.product.name}</p>
-                    <p className="text-xs text-white/58">{decision.product.brand} - {decision.product.category}</p>
+                    <p className="text-xs text-muted-foreground">{decision.product.brand} - {decision.product.category}</p>
                   </div>
                   <SmallTag>{t(`productDecisions.${decision.decision}`)}</SmallTag>
                 </div>
-                <p className="mt-2 text-sm text-white/64">{decision.reason}</p>
-                <div className="mt-2 grid gap-1 text-xs text-white/58 sm:grid-cols-2">
+                <p className="mt-2 text-sm text-muted-foreground">{decision.reason}</p>
+                <div className="mt-2 grid gap-1 text-xs text-muted-foreground sm:grid-cols-2">
                   <span>{t("timing")}: {t(`slots.${decision.timing === "pause" ? "pause" : decision.timing}`)}</span>
                   <span>{t("frequency")}: {decision.frequency}</span>
                   {pref?.openedAt && <span>{t("openedOn")}: {dateFmt.format(pref.openedAt)}</span>}
@@ -396,7 +396,7 @@ export default async function ReportPage() {
                     ))}
                   </div>
                 )}
-                {pref?.note && <p className="mt-2 text-xs text-white/58">{t("userNote")}: {pref.note}</p>}
+                {pref?.note && <p className="mt-2 text-xs text-muted-foreground">{t("userNote")}: {pref.note}</p>}
               </div>
             );
           })}
@@ -404,7 +404,7 @@ export default async function ReportPage() {
       </Card>
 
       {recurrences.length > 0 && (
-        <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+        <Card className="print-avoid-break gap-3 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
           <h2 className="font-serif text-xl">{t("reactionsTitle")}</h2>
           <ul className="grid gap-1.5 text-sm">
             {recurrences.map((r) => (
@@ -421,7 +421,7 @@ export default async function ReportPage() {
             <div className="mt-3 grid gap-2">
               <p className="text-sm font-medium">{t("reactionNotesTitle")}</p>
               {reactions.filter((reaction) => reaction.note).slice(0, 8).map((reaction) => (
-                <p key={`${reaction.createdAt.toISOString()}-${reaction.productId ?? "none"}`} className="text-sm text-white/62">
+                <p key={`${reaction.createdAt.toISOString()}-${reaction.productId ?? "none"}`} className="text-sm text-muted-foreground">
                   {dateFmt.format(reaction.createdAt)} - {reaction.product?.name ?? tReact("aProduct")} - {reaction.note}
                 </p>
               ))}
@@ -431,14 +431,14 @@ export default async function ReportPage() {
       )}
 
       {bilan && (
-        <Card className="print-avoid-break gap-3 border-white/30 bg-white/[0.03] text-white backdrop-blur-xl">
+        <Card className="print-avoid-break gap-3 border-border bg-white/[0.03] text-foreground backdrop-blur-xl">
           <h2 className="font-serif text-xl">{t("bilanTitle")}</h2>
           <Row label={t("bilanDate")} value={dateFmt.format(bilan.createdAt)} />
           <Row label={t("overall")} value={`${bilan.overallScore} / 100`} />
         </Card>
       )}
 
-      <p className="text-xs leading-relaxed text-white/58">{t("disclaimer")}</p>
+      <p className="text-xs leading-relaxed text-muted-foreground">{t("disclaimer")}</p>
     </div>
   );
 }

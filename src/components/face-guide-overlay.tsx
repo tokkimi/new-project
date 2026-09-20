@@ -14,7 +14,7 @@ export function FaceGuideOverlay({ compact = false, active = false, className }:
       aria-hidden="true"
       viewBox="0 0 360 520"
       className={cn(
-        "pointer-events-none absolute inset-0 size-full text-white",
+        "pointer-events-none absolute inset-0 size-full text-foreground",
         active ? "opacity-90" : "opacity-68",
         compact && "opacity-50",
         className

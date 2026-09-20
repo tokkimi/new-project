@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
@@ -54,7 +53,7 @@ export function MobileMenu({ navItems }: { navItems: NavItem[] }) {
 
         <div className="flex items-center justify-between gap-3 border-t border-border pt-4">
           <LocaleSwitcher />
-          <ThemeToggle />
+          
         </div>
 
         <Button asChild size="lg" onClick={() => setOpen(false)}>

@@ -23,11 +23,11 @@ export function WellnessShowcase() {
           <h2 className="text-balance text-3xl font-semibold md:text-4xl">{t("title")}</h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">{t("subtitle")}</p>
 
-          <div className="mt-6 grid gap-3 text-sm leading-relaxed text-white/86">
+          <div className="mt-6 grid gap-3 text-sm leading-relaxed text-muted-foreground">
             {checks.map((check) => (
               <p key={check.title}>
-                <span className="font-medium text-white">{check.title}</span>
-                <span className="text-white/55"> — </span>
+                <span className="font-medium text-foreground">{check.title}</span>
+                <span className="text-muted-foreground"> — </span>
                 <span className="text-muted-foreground">{check.text}</span>
               </p>
             ))}

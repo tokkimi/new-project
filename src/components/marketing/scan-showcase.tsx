@@ -36,14 +36,14 @@ export function ScanShowcase() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="/app/scan"
-              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/60 bg-transparent px-7 text-base font-medium text-white shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+              className="inline-flex min-h-14 items-center justify-center rounded-full border border-border bg-transparent px-7 text-base font-medium text-foreground shadow-none backdrop-blur-2xl transition hover:bg-white/8"
             >
                 {t("ctaPrimary")}
                 <ArrowRight className="size-4" />
             </Link>
             <Link
               href="/app/products"
-              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/50 bg-transparent px-7 text-base font-medium text-white shadow-none backdrop-blur-2xl transition hover:bg-white/8"
+              className="inline-flex min-h-14 items-center justify-center rounded-full border border-border bg-transparent px-7 text-base font-medium text-foreground shadow-none backdrop-blur-2xl transition hover:bg-white/8"
             >
               {t("ctaSecondary")}
             </Link>
@@ -67,7 +67,7 @@ export function ScanShowcase() {
                   key={check.title}
                   className="haru-glow-card w-[calc((100vw-4rem)/2)] min-w-[calc((100vw-4rem)/2)] rounded-[1.15rem] p-4 lg:w-auto lg:min-w-0"
                 >
-                  <span className="haru-icon-halo mb-4 flex size-10 shrink-0 items-center justify-center rounded-full text-white">
+                  <span className="haru-icon-halo mb-4 flex size-10 shrink-0 items-center justify-center rounded-full text-foreground">
                     <Icon className="size-4" />
                   </span>
                   <div>

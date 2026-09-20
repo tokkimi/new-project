@@ -19,7 +19,7 @@ type Reaction = {
 };
 
 const SELECT_CLASS =
-  "h-10 w-full min-w-0 rounded-xl border border-white/40 bg-white/[0.025] px-3 text-sm text-white placeholder:text-white/60 backdrop-blur-xl";
+  "h-10 w-full min-w-0 rounded-xl border border-border bg-white/[0.025] px-3 text-sm text-foreground placeholder:text-muted-foreground backdrop-blur-xl";
 
 export function ReactionJournal({ products }: { products: Product[] }) {
   const t = useTranslations("reactions");
@@ -81,8 +81,8 @@ export function ReactionJournal({ products }: { products: Product[] }) {
               className={cn(
                 "rounded-full border px-3 py-1.5 text-sm transition-colors",
                 type === code
-                  ? "border-white/55 bg-white/12 text-white"
-                  : "border-white/35 bg-transparent text-white/78 hover:bg-white/8 hover:text-white"
+                  ? "border-border bg-white/12 text-foreground"
+                  : "border-border bg-transparent text-muted-foreground hover:bg-white/8 hover:text-foreground"
               )}
             >
               {t(`types.${code}`)}
@@ -127,7 +127,7 @@ export function ReactionJournal({ products }: { products: Product[] }) {
             {recurrences.map((r) => (
               <li
                 key={`${r.productId}-${r.type}`}
-                className="flex items-start gap-2.5 rounded-2xl border border-white/25 bg-white/[0.025] px-4 py-3 text-sm text-white/75"
+                className="flex items-start gap-2.5 rounded-2xl border border-border bg-white/[0.025] px-4 py-3 text-sm text-muted-foreground"
               >
                 <AlertTriangle className="mt-0.5 size-4 shrink-0 text-am-foreground" />
                 <span>

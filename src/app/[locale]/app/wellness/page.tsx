@@ -279,37 +279,37 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
     dbSounds.length > 0 ? dbSounds.map((sound) => localizeDbSound(sound, lang)) : FALLBACK_SOUNDS[lang];
 
   return (
-    <div className="mx-auto flex max-w-5xl flex-col gap-6 text-white">
-      <section className="rounded-[2rem] border border-white/35 bg-white/[0.025] p-6 shadow-[0_20px_70px_-50px_rgba(255,255,255,0.24)] backdrop-blur-xl sm:p-8">
+    <div className="mx-auto flex max-w-5xl flex-col gap-6 text-foreground">
+      <section className="rounded-[2rem] border border-border bg-white/[0.025] p-6 shadow-[0_20px_70px_-50px_rgba(255,255,255,0.24)] backdrop-blur-xl sm:p-8">
         <h1 className="font-serif text-4xl">{t.title}</h1>
-        <p className="mt-2 max-w-3xl text-white/70">{t.subtitle}</p>
+        <p className="mt-2 max-w-3xl text-muted-foreground">{t.subtitle}</p>
       </section>
 
       <div className="grid gap-4 md:grid-cols-3">
         <WellnessCard icon={Brain} title={t.science} text={t.scienceText} />
-        <Card className="rounded-[1.5rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
-          <Wind className="size-5 text-white" />
+        <Card className="rounded-[1.5rem] border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
+          <Wind className="size-5 text-foreground" />
           <h2 className="font-serif text-xl">{t.breathing}</h2>
-          <p className="text-sm leading-6 text-white/68">{t.breathingText}</p>
+          <p className="text-sm leading-6 text-muted-foreground">{t.breathingText}</p>
           <BreathingGuide
             labels={{ inhale: t.inhale, hold: t.hold, exhale: t.exhale, start: t.start, pause: t.pause }}
           />
         </Card>
-        <Card className="rounded-[1.5rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
-          <Moon className="size-5 text-white" />
+        <Card className="rounded-[1.5rem] border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
+          <Moon className="size-5 text-foreground" />
           <h2 className="font-serif text-xl">{t.sleep}</h2>
-          <p className="text-sm leading-6 text-white/68">{t.sleepText}</p>
+          <p className="text-sm leading-6 text-muted-foreground">{t.sleepText}</p>
           <SleepChecklist items={t.sleepItems} />
         </Card>
       </div>
 
-      <section className="rounded-[2rem] border border-white/35 bg-white/[0.025] p-5 text-white backdrop-blur-xl sm:p-6">
+      <section className="rounded-[2rem] border border-border bg-white/[0.025] p-5 text-foreground backdrop-blur-xl sm:p-6">
         <div className="mb-4 flex items-start gap-3">
-          <CloudRain className="mt-1 size-5 shrink-0 text-white" />
+          <CloudRain className="mt-1 size-5 shrink-0 text-foreground" />
           <div>
             <h2 className="font-serif text-2xl">{t.sounds}</h2>
-            <p className="mt-1 text-sm leading-6 text-white/68">{t.soundsText}</p>
-            {dbSounds.length === 0 && <p className="mt-2 text-xs text-white/58">{t.fallbackNote}</p>}
+            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.soundsText}</p>
+            {dbSounds.length === 0 && <p className="mt-2 text-xs text-muted-foreground">{t.fallbackNote}</p>}
           </div>
         </div>
         <div className="grid gap-3 md:grid-cols-2">
@@ -326,12 +326,12 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         </div>
       </section>
 
-      <Card className="rounded-[2rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+      <Card className="rounded-[2rem] border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <Waves className="mt-1 size-5 shrink-0 text-white" />
+          <Waves className="mt-1 size-5 shrink-0 text-foreground" />
           <div className="flex-1">
             <h2 className="font-serif text-2xl">{t.faceCare}</h2>
-            <p className="mt-1 text-sm leading-6 text-white/68">{t.faceCareText}</p>
+            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.faceCareText}</p>
           </div>
         </div>
         <Button asChild className="self-start">
@@ -342,12 +342,12 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         </Button>
       </Card>
 
-      <Card className="rounded-[2rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+      <Card className="rounded-[2rem] border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <Sparkles className="mt-1 size-5 shrink-0 text-white" />
+          <Sparkles className="mt-1 size-5 shrink-0 text-foreground" />
           <div className="flex-1">
             <h2 className="font-serif text-2xl">{t.guides}</h2>
-            <p className="mt-1 text-sm leading-6 text-white/68">{t.guidesText}</p>
+            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.guidesText}</p>
           </div>
         </div>
         <Button asChild className="self-start">
@@ -358,12 +358,12 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         </Button>
       </Card>
 
-      <Card className="rounded-[2rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
+      <Card className="rounded-[2rem] border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
         <div className="flex items-start gap-3">
-          <Brain className="mt-1 size-5 shrink-0 text-white" />
+          <Brain className="mt-1 size-5 shrink-0 text-foreground" />
           <div className="flex-1">
             <h2 className="font-serif text-2xl">{t.encyclo}</h2>
-            <p className="mt-1 text-sm leading-6 text-white/68">{t.encycloText}</p>
+            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.encycloText}</p>
           </div>
         </div>
         <Button asChild className="self-start">
@@ -374,7 +374,7 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         </Button>
       </Card>
 
-      <p className="flex items-start gap-2 rounded-2xl border border-white/25 bg-white/[0.025] p-3 text-xs text-white/62 backdrop-blur-xl">
+      <p className="flex items-start gap-2 rounded-2xl border border-border bg-white/[0.025] p-3 text-xs text-muted-foreground backdrop-blur-xl">
         <ShieldCheck className="mt-0.5 size-4 shrink-0" />
         {t.soundsText}
       </p>
@@ -392,10 +392,10 @@ function WellnessCard({
   text: string;
 }) {
   return (
-    <Card className="rounded-[1.5rem] border-white/35 bg-white/[0.025] text-white backdrop-blur-xl">
-      <Icon className="size-5 text-white" />
+    <Card className="rounded-[1.5rem] border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
+      <Icon className="size-5 text-foreground" />
       <h2 className="font-serif text-xl">{title}</h2>
-      <p className="text-sm leading-6 text-white/68">{text}</p>
+      <p className="text-sm leading-6 text-muted-foreground">{text}</p>
     </Card>
   );
 }

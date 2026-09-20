@@ -29,7 +29,7 @@ type Protocol = {
 };
 
 const SELECT_CLASS =
-  "h-10 w-full min-w-0 rounded-xl border border-white/40 bg-white/[0.025] px-3 text-sm text-white backdrop-blur-xl";
+  "h-10 w-full min-w-0 rounded-xl border border-border bg-white/[0.025] px-3 text-sm text-foreground backdrop-blur-xl";
 
 export function RoutineProtocolPanel({ products }: { products: Product[] }) {
   const t = useTranslations("protocol");
@@ -97,7 +97,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
 
   const header = (
     <div className="flex items-start gap-3">
-      <span className="flex size-10 shrink-0 items-center justify-center text-white">
+      <span className="flex size-10 shrink-0 items-center justify-center text-foreground">
         <Beaker className="size-5" />
       </span>
       <div>
@@ -115,7 +115,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
       <Card className="gap-4">
         {header}
 
-        <div className="rounded-2xl border border-white/28 bg-white/[0.025] px-4 py-3">
+        <div className="rounded-2xl border border-border bg-white/[0.025] px-4 py-3">
           <p className="text-xs font-medium uppercase tracking-wide text-primary">
             {t(`goals.${protocol.goal}`)}
           </p>
@@ -147,7 +147,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
                   key={day}
                   className={cn(
                     "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm",
-                    done ? "border border-white/35 bg-white/10 text-white" : "border border-white/25 bg-transparent text-white/65"
+                    done ? "border border-border bg-white/10 text-foreground" : "border border-border bg-transparent text-muted-foreground"
                   )}
                 >
                   {done ? <Check className="size-3.5" /> : <Circle className="size-3.5" />}
@@ -158,7 +158,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
           </div>
         </div>
 
-        <p className="flex items-start gap-2 rounded-2xl border border-white/25 bg-white/[0.025] px-4 py-3 text-sm text-white/72">
+        <p className="flex items-start gap-2 rounded-2xl border border-border bg-white/[0.025] px-4 py-3 text-sm text-muted-foreground">
           <Flag className="mt-0.5 size-4 shrink-0 text-am-foreground" />
           {t("principle")}
         </p>
@@ -197,7 +197,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
               onClick={() => setGoal(g)}
               className={cn(
                 "rounded-full border px-3 py-1.5 text-sm transition-colors",
-                goal === g ? "border-white/55 bg-white/12 text-white" : "border-white/35 bg-transparent text-white/78 hover:bg-white/8 hover:text-white"
+                goal === g ? "border-border bg-white/12 text-foreground" : "border-border bg-transparent text-muted-foreground hover:bg-white/8 hover:text-foreground"
               )}
             >
               {t(`goals.${g}`)}
@@ -216,7 +216,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
               onClick={() => setChangeKind(k)}
               className={cn(
                 "rounded-full border px-3 py-1.5 text-sm transition-colors",
-                changeKind === k ? "border-white/55 bg-white/12 text-white" : "border-white/35 bg-transparent text-white/78 hover:bg-white/8 hover:text-white"
+                changeKind === k ? "border-border bg-white/12 text-foreground" : "border-border bg-transparent text-muted-foreground hover:bg-white/8 hover:text-foreground"
               )}
             >
               {t(`changeKinds.${k}`)}
