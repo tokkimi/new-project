@@ -19,6 +19,7 @@ export function HeaderAuthStatus() {
     return (
       <Link
         href="/app/profile"
+        aria-label={t("profile")}
         className="flex size-8 items-center justify-center rounded-full bg-primary text-sm font-medium text-primary-foreground"
         title={session.user.name ?? session.user.email ?? undefined}
       >
@@ -29,7 +30,7 @@ export function HeaderAuthStatus() {
 
   return (
     <Button asChild size="sm" variant="ghost">
-      <Link href="/sign-in">
+      <Link href="/sign-in" aria-label={t("signIn")}>
         <User className="size-4" />
         <span className="hidden sm:inline">{t("signIn")}</span>
       </Link>

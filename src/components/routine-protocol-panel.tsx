@@ -130,8 +130,8 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
             <span className="font-medium">{t("dayProgress", { elapsed, total: protocol.durationDays })}</span>
             <span className="text-muted-foreground">{pct}%</span>
           </div>
-          <div className="h-2 w-full overflow-hidden rounded-full bg-white/12">
-            <div className="h-full rounded-full bg-white/75 transition-all" style={{ width: `${pct}%` }} />
+          <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
+            <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${pct}%` }} />
           </div>
         </div>
 

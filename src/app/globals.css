@@ -80,6 +80,7 @@
     @apply bg-background text-foreground;
     font-feature-settings: "ss01", "cv01";
     font-weight: 400;
+    overflow-x: clip;
     background-image: radial-gradient(ellipse at 10% 0%, #edf5ef, transparent 55%), radial-gradient(ellipse at 100% 30%, #f8f0ea, transparent 60%);
     background-attachment: fixed;
   }

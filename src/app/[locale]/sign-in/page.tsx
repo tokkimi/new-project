@@ -38,7 +38,8 @@ export default function SignInPage() {
     }
 
     await importGuestShelf();
-    router.push("/app/shelf");
+    const callback = new URLSearchParams(window.location.search).get("callbackUrl");
+    router.push(callback && /^\/(?:fr|en|ko|ja)\/app\/upgrade$/.test(callback) ? "/app/upgrade" : "/app/shelf");
     router.refresh();
   };
 

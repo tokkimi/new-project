@@ -32,7 +32,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="py-4 text-center text-xs text-muted-foreground">
-        &copy; {new Date().getFullYear()} {t("rights")}
+        &copy; {new Date().getFullYear()} Haru Skin
       </div>
     </footer>
   );

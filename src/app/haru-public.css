@@ -1,6 +1,5 @@
 @layer utilities {
-/* Public discovery surfaces have their own readable palette. The existing
-   private workspace is deliberately isolated from this visual release. */
+/* Public editorial surfaces extend the shared light palette. */
 .haru-public {
   --background: #f7faf9; --foreground: #202b29; --primary: #253f39;
   --primary-foreground: #fff; --card: #fff; --card-foreground: #202b29;
@@ -30,6 +29,7 @@
 .haru-public input::placeholder { color: var(--muted-foreground) !important; }
 .haru-public select option { color: #202b29; background: #fff; }
 .haru-public header button, .haru-public header a { color: var(--foreground); }
+.haru-public header a.bg-primary { color: var(--primary-foreground); }
 .haru-public header .ring-1 { --tw-ring-color: var(--border); }
 .haru-public img[alt="Haru Skin"] { filter: brightness(0); opacity: .82; }
 .haru-site-header { background: rgba(90,104,100,.75); backdrop-filter: blur(18px); border-bottom: 1px solid #ffffff44; }
