@@ -1845,7 +1845,7 @@
   "learn": {
     "nav": "Learn",
     "title": "Understand your skin and routine",
-    "description": "Four short modules with examples and questions to learn skin-care basics.",
+    "description": "Four practical guides with clear checkpoints for observing your skin, building a routine, and introducing actives gradually.",
     "start": "Start learning",
     "progress": "{count} / {total} modules completed",
     "progressLabel": "Learning progress",
