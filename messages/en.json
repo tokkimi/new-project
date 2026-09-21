@@ -1143,8 +1143,13 @@
     "outcomes": {
       "keep": "Keep it",
       "remove": "Remove it",
-      "adjust": "Adjust it"
-    }
+      "adjust": "Adjust it",
+      "inconclusive": "Not enough information"
+    },
+    "evidenceTitle": "Recorded observations",
+    "evidenceStats": "{notes} notes · {days} documented days · {missing} days without notes",
+    "evidenceNote": "Days are counted in UTC. Missing notes do not mean no reaction or confirmed product use. This summary does not establish causation.",
+    "historyTitle": "Recent decisions"
   },
   "report": {
     "title": "Skin summary",

@@ -1143,8 +1143,13 @@
     "outcomes": {
       "keep": "유지하기",
       "remove": "빼기",
-      "adjust": "조정하기"
-    }
+      "adjust": "조정하기",
+      "inconclusive": "정보 부족"
+    },
+    "evidenceTitle": "기록된 관찰",
+    "evidenceStats": "메모 {notes}개 · 기록한 날 {days}일 · 기록 없는 날 {missing}일",
+    "evidenceNote": "날짜는 UTC 기준입니다. 기록이 없다고 반응이 없거나 제품을 사용했다는 뜻은 아닙니다. 인과관계를 입증하는 결과가 아닙니다.",
+    "historyTitle": "최근 결론"
   },
   "report": {
     "title": "피부 요약",

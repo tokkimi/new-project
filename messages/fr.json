@@ -1143,8 +1143,13 @@
     "outcomes": {
       "keep": "Le garder",
       "remove": "Le retirer",
-      "adjust": "L'ajuster"
-    }
+      "adjust": "L'ajuster",
+      "inconclusive": "Pas assez de recul"
+    },
+    "evidenceTitle": "Observations enregistrées",
+    "evidenceStats": "{notes} notes · {days} jours documentés · {missing} jours sans note",
+    "evidenceNote": "Les jours sont comptés en UTC. Une absence de note ne signifie ni absence de réaction, ni application du produit. Ce bilan ne démontre pas un lien de cause à effet.",
+    "historyTitle": "Mes derniers bilans"
   },
   "report": {
     "title": "Résumé peau",
@@ -1848,7 +1853,7 @@
   "learn": {
     "nav": "Apprendre",
     "title": "Comprendre sa peau et sa routine",
-    "description": "Quatre guides détaillés, avec les repères concrets pour observer sa peau, construire une routine et introduire les actifs sans se précipiter.",
+    "description": "Six chapitres pour comprendre ta peau, construire une routine et suivre ce qui change : explications, exemples, exercices et questions pour vérifier tes acquis.",
     "start": "Commencer",
     "progress": "{count} / {total} modules terminés",
     "progressLabel": "Progression",

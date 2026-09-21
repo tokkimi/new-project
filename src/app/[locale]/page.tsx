@@ -4,6 +4,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/marketing/hero";
+import { SkinScannerShowcase } from "@/components/marketing/skin-scanner-showcase";
 import { SkinGoalsShowcase } from "@/components/marketing/skin-goals-showcase";
 import { StartHere } from "@/components/marketing/start-here";
 import { LearnShowcase } from "@/components/marketing/learn-showcase";
@@ -98,6 +99,7 @@ export default async function Home({
       <SiteHeader />
       <main id="main-content" className="flex-1">
         <Hero />
+        <SkinScannerShowcase />
         <SkinGoalsShowcase />
         <StartHere />
         <LearnShowcase />

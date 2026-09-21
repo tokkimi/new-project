@@ -41,7 +41,7 @@ export function AuditShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.45, delay: 0.06 }}
-          className="mx-auto mt-10 flex max-w-3xl flex-col items-center text-center"
+          className="mx-auto mt-10 flex w-full min-w-0 max-w-3xl flex-col items-center text-center"
         >
           <h2 className="text-balance text-3xl font-semibold md:text-4xl">{t("title")}</h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">{t("subtitle")}</p>
@@ -53,8 +53,8 @@ export function AuditShowcase() {
                 <ArrowRight className="size-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/app/scan">{t("ctaSecondary")}</Link>
+            <Button asChild variant="outline" size="lg" className="h-auto min-h-12 max-w-full whitespace-normal py-3 text-center">
+              <Link href="/app/face-scan">{t("ctaSecondary")}</Link>
             </Button>
           </div>
 

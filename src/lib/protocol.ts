@@ -6,7 +6,7 @@ export type ChangeKind = (typeof CHANGE_KINDS)[number];
 export const PROTOCOL_GOALS = ["barrier", "irritation", "congestion", "marks", "hydration"] as const;
 export type ProtocolGoal = (typeof PROTOCOL_GOALS)[number];
 
-export const PROTOCOL_OUTCOMES = ["keep", "remove", "adjust"] as const;
+export const PROTOCOL_OUTCOMES = ["keep", "remove", "adjust", "inconclusive"] as const;
 export type ProtocolOutcome = (typeof PROTOCOL_OUTCOMES)[number];
 
 export const PROTOCOL_DURATIONS = [7, 14, 28] as const;
@@ -20,4 +20,15 @@ export function daysElapsed(startedAt: string | Date): number {
 export function checkpointDays(durationDays: number): number[] {
   const mid = Math.round(durationDays / 2);
   return Array.from(new Set([1, mid, durationDays])).sort((a, b) => a - b);
+}
+
+export function summarizeProtocolEvidence(startedAt: Date | string, now: Date, notes: { createdAt: Date | string }[]) {
+  const start = new Date(startedAt).getTime();
+  const end = now.getTime();
+  const valid = notes.filter(n => { const time = new Date(n.createdAt).getTime(); return time >= start && time <= end; });
+  const days = new Set(valid.map(n => new Date(n.createdAt).toISOString().slice(0,10)));
+  const dayStart = new Date(startedAt); dayStart.setUTCHours(0,0,0,0);
+  const today = new Date(now); today.setUTCHours(0,0,0,0);
+  const totalDays = Math.max(1, Math.floor((today.getTime()-dayStart.getTime())/86400000)+1);
+  return { noteCount: valid.length, observedDays: days.size, noNoteDays: Math.max(0,totalDays-days.size) };
 }

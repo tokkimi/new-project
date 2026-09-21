@@ -15,7 +15,7 @@ export default async function FaceScanPage() {
         <h1 className="font-serif text-2xl">{t("title")}</h1>
         <p className="text-muted-foreground">{t("signInPrompt")}</p>
         <Button asChild>
-          <Link href="/sign-in">{t("signInCta")}</Link>
+          <Link href="/sign-in?callbackUrl=%2Fapp%2Fface-scan">{t("signInCta")}</Link>
         </Button>
       </Card>
     );

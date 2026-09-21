@@ -24,6 +24,7 @@ type Protocol = {
   note: string | null;
   durationDays: number;
   status: string;
+  outcome?: string;
   startedAt: string;
   product: { name: string } | null;
 };
@@ -34,6 +35,8 @@ const SELECT_CLASS =
 export function RoutineProtocolPanel({ products }: { products: Product[] }) {
   const t = useTranslations("protocol");
   const [protocol, setProtocol] = React.useState<Protocol | null>(null);
+  const [history, setHistory] = React.useState<Protocol[]>([]);
+  const [evidence, setEvidence] = React.useState<{noteCount:number;observedDays:number;noNoteDays:number}|null>(null);
   const [loaded, setLoaded] = React.useState(false);
   const [busy, setBusy] = React.useState(false);
   const [goal, setGoal] = React.useState<string>("");
@@ -44,7 +47,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
   React.useEffect(() => {
     fetch("/api/workspace/protocol")
       .then((r) => (r.ok ? r.json() : null))
-      .then((d) => setProtocol(d?.protocol ?? null))
+      .then((d) => { setProtocol(d?.protocol ?? null); setHistory(d?.history ?? []); setEvidence(d?.evidence ?? null); })
       .catch(() => {})
       .finally(() => setLoaded(true));
   }, []);
@@ -61,6 +64,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
       if (res.ok) {
         const d = await res.json();
         setProtocol(d.protocol);
+        setEvidence({ noteCount: 0, observedDays: 0, noNoteDays: 1 });
       }
     } finally {
       setBusy(false);
@@ -76,7 +80,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: protocol.id, outcome }),
       });
-      if (res.ok) setProtocol(null);
+      if (res.ok) { setHistory(previous => [{...protocol,outcome},...previous].slice(0,5)); setProtocol(null); }
     } finally {
       setBusy(false);
     }
@@ -164,6 +168,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
         </p>
 
         <div>
+          {evidence && <section className="mb-5 rounded-2xl bg-secondary/50 p-4"><h3 className="font-semibold">{t("evidenceTitle")}</h3><p className="mt-2 text-sm leading-6">{t("evidenceStats", {notes:evidence.noteCount,days:evidence.observedDays,missing:evidence.noNoteDays})}</p><p className="mt-2 text-xs leading-5 text-muted-foreground">{t("evidenceNote")}</p></section>}
           <p className="mb-2 text-sm font-medium">{t("outcomeLabel")}</p>
           <div className="flex flex-wrap gap-2">
             {PROTOCOL_OUTCOMES.map((outcome) => (
@@ -247,6 +252,7 @@ export function RoutineProtocolPanel({ products }: { products: Product[] }) {
         </select>
       </div>
 
+      {history.length > 0 && <section className="rounded-2xl bg-secondary/50 p-4"><h3 className="font-semibold">{t("historyTitle")}</h3><ul className="mt-3 space-y-3">{history.map(item=><li key={item.id} className="text-sm leading-6">{t(`goals.${item.goal}`)}{item.product ? ` · ${item.product.name}` : ''} — {item.outcome ? t(`outcomes.${item.outcome}`) : ''}</li>)}</ul></section>}
       <div className="flex justify-end">
         <Button onClick={start} disabled={!goal || !changeKind || busy}>
           {t("start")}

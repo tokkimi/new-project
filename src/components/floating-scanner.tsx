@@ -22,18 +22,23 @@ export function FloatingScanner() {
   const [open, setOpen] = useState(false);
   const moved = useRef(false);
   const dragging = useRef(false);
+  const origin = useRef<Position>({x:0,y:0});
 
   useEffect(() => {
-    try {
+    const frame = requestAnimationFrame(() => { try {
       const saved = JSON.parse(localStorage.getItem(STORAGE) ?? "null") as Position | null;
-      if (saved && Number.isFinite(saved.x) && Number.isFinite(saved.y)) setPosition(saved);
-    } catch {}
+      if (saved && Number.isFinite(saved.x) && Number.isFinite(saved.y)) setPosition({x:Math.max(12,Math.min(saved.x,innerWidth-70)),y:Math.max(12,Math.min(saved.y,innerHeight-70))});
+    } catch {} });
+    const resize = () => setPosition(p => p ? {x:Math.max(12,Math.min(p.x,innerWidth-70)),y:Math.max(12,Math.min(p.y,innerHeight-70))} : p);
+    window.addEventListener("resize",resize);
+    return () => {cancelAnimationFrame(frame);window.removeEventListener("resize",resize);};
   }, []);
 
   if (pathname.startsWith("/sign-in") || pathname.startsWith("/sign-up")) return null;
   const move = (event: ReactPointerEvent<HTMLButtonElement>) => {
     if (!dragging.current) return;
-    if (Math.abs(event.movementX) + Math.abs(event.movementY) > 0) moved.current = true;
+    if (Math.abs(event.clientX-origin.current.x) + Math.abs(event.clientY-origin.current.y) > 6) moved.current = true;
+    if (!moved.current) return;
     const x = Math.max(12, Math.min(event.clientX - 29, window.innerWidth - 70));
     const y = Math.max(12, Math.min(event.clientY - 29, window.innerHeight - 70));
     const next = { x, y };
@@ -47,11 +52,11 @@ export function FloatingScanner() {
   };
 
   return <div className="fixed z-50" style={position ? { left: position.x, top: position.y } : { right: "1rem", bottom: "6.25rem" }}>
-    {open && <div className="absolute bottom-[4.25rem] right-0 w-56 rounded-2xl border border-border bg-white/95 p-2 shadow-xl backdrop-blur-xl">
+    {open && <div style={{left:position ? Math.max(12,Math.min(position.x,window.innerWidth-236))-position.x : undefined,right:position ? undefined : 0,top:position && position.y < 190 ? 68 : undefined,bottom:position && position.y < 190 ? undefined : 68}} className="absolute w-56 rounded-2xl border border-border bg-white/95 p-2 shadow-xl backdrop-blur-xl">
       <div className="flex items-center justify-between px-2 py-1 text-xs font-semibold text-muted-foreground"><span>{t.title}</span><button type="button" onClick={() => setOpen(false)} aria-label="Close" className="rounded-full p-1 hover:bg-secondary"><X className="size-4" /></button></div>
       <Link href="/app/scan" onClick={() => setOpen(false)} className="flex min-h-11 items-center gap-3 rounded-xl px-3 text-sm font-medium hover:bg-secondary"><Camera className="size-4" />{t.product}</Link>
       <Link href="/app/face-scan" onClick={() => setOpen(false)} className="flex min-h-11 items-center gap-3 rounded-xl px-3 text-sm font-medium hover:bg-secondary"><ScanFace className="size-4" />{t.face}</Link>
     </div>}
-    <button type="button" aria-label={t.label} aria-expanded={open} onPointerDown={(event) => { dragging.current = true; moved.current = false; event.currentTarget.setPointerCapture(event.pointerId); }} onPointerMove={move} onPointerUp={release} onClick={() => { if (moved.current) { moved.current = false; return; } setOpen((value) => !value); }} className="flex size-[58px] touch-none items-center justify-center rounded-full border border-white/80 bg-[#253f39] text-white shadow-[0_12px_30px_rgba(25,58,48,.35)] transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#385d50]"><Camera className="size-6" aria-hidden="true" /></button>
+    <button type="button" aria-label={t.label} aria-expanded={open} onPointerDown={(event) => { dragging.current = true; moved.current = false; origin.current={x:event.clientX,y:event.clientY}; event.currentTarget.setPointerCapture(event.pointerId); }} onPointerMove={move} onPointerUp={release} onPointerCancel={release} onClick={() => { if (moved.current) { moved.current = false; return; } setOpen((value) => !value); }} className="flex size-[58px] touch-none items-center justify-center rounded-full border border-white/80 bg-[#253f39] text-white shadow-[0_12px_30px_rgba(25,58,48,.35)] transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#385d50]"><Camera className="size-6" aria-hidden="true" /></button>
   </div>;
 }

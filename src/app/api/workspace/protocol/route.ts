@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { CHANGE_KINDS, PROTOCOL_GOALS, PROTOCOL_OUTCOMES, PROTOCOL_DURATIONS } from "@/lib/protocol";
+import { summarizeProtocolEvidence, CHANGE_KINDS, PROTOCOL_GOALS, PROTOCOL_OUTCOMES, PROTOCOL_DURATIONS } from "@/lib/protocol";
 
 const startSchema = z.object({
   goal: z.enum(PROTOCOL_GOALS),
@@ -40,7 +40,10 @@ export async function GET() {
     orderBy: { startedAt: "desc" },
     select: SELECT,
   });
-  return NextResponse.json({ protocol: active });
+  const history = await db.routineProtocol.findMany({where:{userId:session.user.id,status:"completed"},orderBy:{completedAt:"desc"},take:5,select:SELECT});
+  const now = new Date();
+  const notes = active ? await db.productReaction.findMany({where:{userId:session.user.id,createdAt:{gte:active.startedAt,lte:now},...(active.productId ? {productId:active.productId} : {})},select:{createdAt:true}}) : [];
+  return NextResponse.json({ protocol: active, history, evidence: active ? summarizeProtocolEvidence(active.startedAt,now,notes) : null });
 }
 
 export async function POST(request: Request) {

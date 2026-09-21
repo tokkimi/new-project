@@ -1,4 +1,5 @@
-export type SkinLesson = { id: string; title: string; image: string; paragraphs: string[]; question: string; answers: string[]; correct: number; explanation: string; source: string };
+import { skinCourseFr } from './skin-course-fr';
+export type SkinLesson = { id: string; title: string; image: string; paragraphs: string[]; sections?: {title: string; paragraphs: string[]}[]; example?: string; practice?: string[]; question: string; answers: string[]; correct: number; explanation: string; source: string };
 const sources = {
   skin: "https://www.aad.org/public/everyday-care/skin-care-basics/dry/pick-moisturizer",
   routine: "https://www.aad.org/public/everyday-care/skin-care-basics/care/skin-care-budget",
@@ -34,5 +35,6 @@ const entries: Record<string, Omit<SkinLesson, "id" | "image" | "source">[]> = {
 const ids = ["skin", "routine", "actives", "sun"] as const;
 const images = ["glow", "minimal", "brightening", "hydration"];
 export function skinLessons(locale: string): SkinLesson[] {
+  if (locale === 'fr') return skinCourseFr;
   return (entries[locale] ?? entries.en).map((entry, index) => ({ ...entry, id: ids[index], source: sources[ids[index]], image: `/images/routine-${images[index]}.webp` }));
 }

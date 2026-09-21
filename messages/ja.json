@@ -1143,8 +1143,13 @@
     "outcomes": {
       "keep": "続ける",
       "remove": "やめる",
-      "adjust": "調整する"
-    }
+      "adjust": "調整する",
+      "inconclusive": "情報が足りない"
+    },
+    "evidenceTitle": "観察記録",
+    "evidenceStats": "メモ {notes}件 · 記録日 {days}日 · 未記録 {missing}日",
+    "evidenceNote": "日数はUTC基準です。記録がなくても反応がない、または製品を使ったとは限りません。因果関係を示すものではありません。",
+    "historyTitle": "最近の振り返り"
   },
   "report": {
     "title": "肌サマリー",

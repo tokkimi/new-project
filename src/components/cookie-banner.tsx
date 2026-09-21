@@ -22,10 +22,10 @@ export function CookieBanner() {
   if (choice !== null) return null;
 
   return (
-    <div className="haru-glow-card fixed inset-x-4 bottom-24 z-50 mx-auto max-w-3xl rounded-[1.35rem] p-4">
+    <div className="haru-glow-card fixed inset-x-4 bottom-24 z-50 mx-auto w-[calc(100%-2rem)] min-w-0 max-w-3xl rounded-[1.35rem] p-4">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted-foreground">{t("text")}</p>
-        <div className="flex shrink-0 gap-2">
+        <div className="flex flex-wrap gap-2">
           <Button variant="outline" onClick={() => save("necessary")}>{t("reject")}</Button>
           <Button onClick={() => save("all")}>{t("accept")}</Button>
         </div>

@@ -13,7 +13,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-2">
           <Logo />
         </div>
-        <div className="flex gap-8 text-sm text-muted-foreground">
+        <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
           <Link href="/app/shelf" className="hover:text-foreground">
             {t("app")}
           </Link>
