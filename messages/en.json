@@ -414,6 +414,7 @@
     "modulesCount": "{count} areas to review",
     "modulesSectionText": "Each section gives the visible result, useful daily gestures, and products that can support this specific area.",
     "moduleDefaultNote": "This area needs steady support rather than an aggressive routine.",
+    "modulePriorityFallback": "The scan detected a visible signal to watch here. The points on the photo identify the area concerned.",
     "moduleScoreLabel": "Skin clarity",
     "dailyActionsLabel": "Daily gestures",
     "productsForThisArea": "Products to consider for this area",

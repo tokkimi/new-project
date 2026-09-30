@@ -124,14 +124,14 @@ export function severityRank(severity: ZoneSeverity) {
 }
 
 export function statusColor(severity: ZoneSeverity) {
-  if (severity === "attention") return "rgba(255, 82, 82, 0.96)";
-  if (severity === "medium") return "rgba(255, 145, 77, 0.92)";
-  return "rgba(255, 255, 255, 0.94)";
+  if (severity === "attention") return "rgba(225, 125, 117, 0.98)";
+  if (severity === "medium") return "rgba(191, 207, 219, 0.98)";
+  return "rgba(247, 234, 223, 0.98)";
 }
 
 export function pointRadius(severity: ZoneSeverity, score: number, base = 1.45) {
   const multiplier = severity === "attention" ? 2.2 : severity === "medium" ? 1.8 : 1.45;
-  return Math.min(5.4, base * multiplier + Math.max(0, score - 4) * 0.16);
+  return Math.min(5.8, base * multiplier + 0.42 + Math.max(0, score - 4) * 0.16);
 }
 
 export function activeZoneConfigs(activeZones: FaceZoneId[]) {

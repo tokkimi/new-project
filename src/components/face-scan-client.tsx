@@ -372,6 +372,14 @@ export function FaceScanClient() {
         ? "summaryOk"
         : "summaryAttention";
 
+  const moduleObservation = (module: ModuleFinding) => {
+    if (!module.observable) return t("moduleNotAssessable");
+    const note = module.note?.trim();
+    const contradictoryPositive = /\b(clear|healthy|good|balanced|glow(?:ing)?|great|super|bon(?:ne)?|sain(?:e)?|équilibré(?:e)?|éclatant(?:e)?|rien à signaler|aucun(?:e)? (?:problème|signal)|양호|건강|좋(?:아|은)|문제 없|良好|健康|問題ない)\b/i.test(note ?? "");
+    if (module.flagged && (!note || contradictoryPositive)) return t("modulePriorityFallback");
+    return note || (module.flagged ? t("modulePriorityFallback") : t("noConcern"));
+  };
+
   return (
     <div
       className={
@@ -572,7 +580,7 @@ export function FaceScanClient() {
           >
             <section className="grid min-h-[calc(100svh-10rem)] items-center gap-6 rounded-[2rem] bg-card p-5 shadow-[0_20px_70px_-48px_rgba(0,0,0,0.35)] sm:grid-cols-[auto_1fr_auto] sm:p-8">
               {preview && (
-                <div className="relative mx-auto aspect-square w-full max-w-[220px] overflow-hidden rounded-[1.5rem] bg-black sm:mx-0">
+                <div className="relative mx-auto aspect-square w-full max-w-[340px] overflow-hidden rounded-[1.5rem] bg-black sm:mx-0 sm:max-w-[400px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={preview} alt="" className="absolute inset-0 size-full object-cover" />
                   {captureLandmarks?.length ? (
@@ -584,7 +592,9 @@ export function FaceScanClient() {
                       activeZones={activeMeshZones}
                       zoneResults={meshZoneResults}
                       pulse
-                      className="opacity-80"
+                      showGuideMesh={false}
+                      showZoneLines
+                      className="opacity-100"
                     />
                   ) : null}
                   {captureLandmarks?.length ? (
@@ -784,7 +794,7 @@ export function FaceScanClient() {
                         <p className="font-serif text-xl">{t(`modules.${module.id}.name`)}</p>
                         <p className="mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground">
                           {module.observable
-                            ? module.note || t("moduleDefaultNote")
+                            ? moduleObservation(module)
                             : t("moduleNotAssessable")}
                         </p>
                       </div>
@@ -799,6 +809,7 @@ export function FaceScanClient() {
                   t={t}
                   tCategories={tCategories}
                   products={moduleProducts.get(orderedModules[activeModule].id) ?? []}
+                  observation={moduleObservation}
                   addedProducts={addedProducts}
                   onAddProduct={(product) => {
                     addProduct(product);
@@ -837,6 +848,7 @@ function ModuleDetail({
   t,
   tCategories,
   products,
+  observation,
   addedProducts,
   onAddProduct,
 }: {
@@ -844,6 +856,7 @@ function ModuleDetail({
   t: ReturnType<typeof useTranslations>;
   tCategories: ReturnType<typeof useTranslations>;
   products: Product[];
+  observation: (module: ModuleFinding) => string;
   addedProducts: Set<string>;
   onAddProduct: (product: Product) => void;
 }) {
@@ -870,7 +883,7 @@ function ModuleDetail({
           <h3 className="font-serif text-2xl">{t(`modules.${module.id}.name`)}</h3>
           <p className="mt-2 text-muted-foreground">
             {module.observable
-              ? module.note || (module.flagged ? t("moduleDefaultNote") : t("noConcern"))
+              ? observation(module)
               : t("moduleNotAssessable")}
           </p>
         </div>

@@ -414,6 +414,7 @@
     "modulesCount": "검토할 부위 {count}곳",
     "modulesSectionText": "각 항목에는 시각적으로 확인된 결과, 도움이 되는 일상 습관, 그리고 해당 부위에 맞는 제품이 안내돼요.",
     "moduleDefaultNote": "이 부위는 자극적인 루틴보다 꾸준한 관리가 필요해요.",
+    "modulePriorityFallback": "스캔에서 이 부위에 확인이 필요한 시각적 신호를 감지했어요. 사진의 점이 해당 위치를 표시합니다.",
     "moduleScoreLabel": "피부 맑기",
     "dailyActionsLabel": "데일리 케어",
     "productsForThisArea": "이 부위에 고려할 제품",

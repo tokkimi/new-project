@@ -243,6 +243,7 @@
     "modulesCount": "{count} zones à examiner",
     "modulesSectionText": "Chaque section donne le résultat visible, des gestes quotidiens utiles, et des produits pouvant soutenir cette zone précise.",
     "moduleDefaultNote": "Cette zone a besoin d'un soutien constant plutôt que d'une routine agressive.",
+    "modulePriorityFallback": "Le scan a détecté un signal visible à surveiller ici. Les points sur la photo indiquent la zone concernée.",
     "moduleScoreLabel": "Clarté de la peau",
     "dailyActionsLabel": "Gestes quotidiens",
     "productsForThisArea": "Produits à envisager pour cette zone",

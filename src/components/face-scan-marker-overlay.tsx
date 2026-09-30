@@ -59,14 +59,14 @@ export function FaceScanMarkerOverlay({
       for (const marker of visibleMarkers) {
         const x = (offsetX + marker.x * renderedWidth) * ratio;
         const y = (offsetY + marker.y * renderedHeight) * ratio;
-        const severitySize = marker.severity === "attention" ? 2.65 : marker.severity === "medium" ? 2.15 : 1.8;
-        const radius = Math.min(4.2, severitySize + Math.max(0, marker.score - 12) * 0.045) * ratio;
+        const severitySize = marker.severity === "attention" ? 3 : marker.severity === "medium" ? 2.45 : 2.1;
+        const radius = Math.min(4.8, severitySize + Math.max(0, marker.score - 12) * 0.05) * ratio;
         const color =
           marker.severity === "attention"
             ? "rgba(255,106,92,0.94)"
             : marker.severity === "medium"
-              ? "rgba(255,180,115,0.9)"
-              : "rgba(255,255,255,0.9)";
+              ? "rgba(191,207,219,0.96)"
+              : "rgba(247,234,223,0.96)";
 
         ctx.shadowColor = color;
         ctx.shadowBlur = 8 * ratio * pulseValue;

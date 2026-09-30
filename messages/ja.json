@@ -243,6 +243,7 @@
     "modulesCount": "検討すべき部位：{count}箇所",
     "modulesSectionText": "各セクションには、目に見える結果、役立つ日常のケア、そしてその部位をサポートする製品が示されます。",
     "moduleDefaultNote": "この部位には積極的なルーティンよりも、着実なサポートが必要です。",
+    "modulePriorityFallback": "この部位に確認が必要な視覚的サインを検出しました。写真上の点が該当箇所を示します。",
     "moduleScoreLabel": "肌の透明感",
     "dailyActionsLabel": "日常のケア",
     "productsForThisArea": "この部位に検討したい製品",

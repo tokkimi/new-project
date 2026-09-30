@@ -126,7 +126,10 @@ export function FaceMeshOverlay({
           }
         }
 
-        const displayIndices = showGuideMesh ? zone.landmarkIndices : zone.landmarkIndices.filter((_, index) => index % 2 === 0);
+        // On a result photo this is rendered only for the zones the scan flagged.
+        // Keeping the complete local mesh makes the detected area legible without
+        // placing synthetic marks elsewhere on the face.
+        const displayIndices = zone.landmarkIndices;
         for (const index of displayIndices) {
           const point = points[index];
           if (!point) continue;
