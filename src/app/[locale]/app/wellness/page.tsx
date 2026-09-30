@@ -1,5 +1,5 @@
 import type { ComponentType } from "react";
-import { ArrowRight, Brain, CloudRain, Moon, ShieldCheck, Sparkles, Waves, Wind } from "lucide-react";
+import { ArrowRight, Brain, CloudRain, Moon, Waves, Wind } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -342,42 +342,6 @@ export default async function WellnessPage({ params }: { params: Promise<{ local
         </Button>
       </Card>
 
-      <Card className="rounded-[2rem] border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
-        <div className="flex items-start gap-3">
-          <Sparkles className="mt-1 size-5 shrink-0 text-foreground" />
-          <div className="flex-1">
-            <h2 className="font-serif text-2xl">{t.guides}</h2>
-            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.guidesText}</p>
-          </div>
-        </div>
-        <Button asChild className="self-start">
-          <Link href="/app/routines">
-            {t.openGuides}
-            <ArrowRight className="size-4" />
-          </Link>
-        </Button>
-      </Card>
-
-      <Card className="rounded-[2rem] border-border bg-white/[0.025] text-foreground backdrop-blur-xl">
-        <div className="flex items-start gap-3">
-          <Brain className="mt-1 size-5 shrink-0 text-foreground" />
-          <div className="flex-1">
-            <h2 className="font-serif text-2xl">{t.encyclo}</h2>
-            <p className="mt-1 text-sm leading-6 text-muted-foreground">{t.encycloText}</p>
-          </div>
-        </div>
-        <Button asChild className="self-start">
-          <Link href="/app/ingredients">
-            {t.openEncyclo}
-            <ArrowRight className="size-4" />
-          </Link>
-        </Button>
-      </Card>
-
-      <p className="flex items-start gap-2 rounded-2xl border border-border bg-white/[0.025] p-3 text-xs text-muted-foreground backdrop-blur-xl">
-        <ShieldCheck className="mt-0.5 size-4 shrink-0" />
-        {t.soundsText}
-      </p>
     </div>
   );
 }

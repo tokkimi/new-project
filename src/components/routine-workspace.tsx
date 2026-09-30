@@ -4,8 +4,6 @@ import * as React from "react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import {
-  Camera,
-  Droplets,
   LinkIcon,
   NotebookPen,
   Pencil,
@@ -115,17 +113,6 @@ function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) 
 
   return (
     <section className="grid gap-4">
-      <div className="min-w-0">
-        <p className="text-xs font-medium uppercase tracking-[0.32em] text-muted-foreground">{t("passport")}</p>
-          <h2 className="mt-2 font-serif text-2xl text-foreground sm:text-3xl">{t("passportTitle")}</h2>
-          <p className="mt-3 text-sm leading-6 text-muted-foreground">{t("passportIntro")}</p>
-          <Button asChild variant="outline" className="mt-5 w-fit border-border bg-transparent text-foreground hover:bg-white/8">
-            <Link href="/app/quiz">
-              <Droplets className="size-4" /> {t("skinTypeExerciseCta")}
-            </Link>
-          </Button>
-      </div>
-
       <Card className="grid gap-4 p-5 sm:grid-cols-[auto_1fr] sm:p-6">
         <div className="flex shrink-0 flex-col items-center gap-3">
           <div className="flex size-24 items-center justify-center overflow-hidden rounded-full border border-border bg-white/[0.025] text-4xl font-medium text-foreground sm:size-28">
@@ -367,20 +354,6 @@ export function RoutineWorkspace() {
 
   return (
     <div className="mx-auto flex w-full max-w-5xl min-w-0 flex-col gap-6 overflow-hidden">
-      <div className="flex min-w-0 flex-col justify-between gap-4 sm:flex-row sm:items-end">
-        <div>
-          <h1 className="font-serif text-3xl">{t("title")}</h1>
-          <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
-        </div>
-        <div className="flex min-w-0 flex-wrap gap-2">
-          <Button variant="outline" asChild>
-            <Link href="/app/scan">
-              <Camera className="size-4" /> {t("scan")}
-            </Link>
-          </Button>
-        </div>
-      </div>
-
       <TipOfTheDay locale={locale} label={t("tipOfTheDay")} />
 
       <div className="no-scrollbar flex min-w-0 gap-1 overflow-x-auto rounded-full border border-border bg-transparent p-1 backdrop-blur-xl">
