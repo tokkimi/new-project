@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { WheelCarousel } from "@/components/ui/wheel-carousel";
@@ -12,9 +12,24 @@ export function SkinGoalsShowcase() {
   const t = useTranslations("homeUx");
   const guides = useTranslations("routineGuides");
   const [active, setActive] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
   const items = FEATURED.map((slug) => ({ label: guides(`guides.${slug}.title`), image: guideVisual(slug), imageAlt: guides(`guides.${slug}.title`) }));
   const slug = FEATURED[active] ?? FEATURED[0];
-  return <section id="routines" className="haru-routines scroll-mt-28 py-14 sm:py-20" aria-labelledby="routines-title">
+  useEffect(() => {
+    let last = -1;
+    const updateFromScroll = () => {
+      const section = sectionRef.current;
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      const viewport = window.innerHeight;
+      const progress = Math.min(1, Math.max(0, (viewport * 0.72 - rect.top) / Math.max(1, rect.height * 0.72)));
+      const next = Math.min(FEATURED.length - 1, Math.floor(progress * FEATURED.length));
+      if (next !== last) { last = next; setActive(next); }
+    };
+    window.addEventListener("scroll", updateFromScroll, { passive: true });
+    return () => window.removeEventListener("scroll", updateFromScroll);
+  }, []);
+  return <section ref={sectionRef} id="routines" className="haru-routines scroll-mt-28 py-14 sm:py-20" aria-labelledby="routines-title">
     <div className="mx-auto max-w-7xl px-5 sm:px-8">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
         <div className="max-w-2xl">

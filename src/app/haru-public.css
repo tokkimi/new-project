@@ -19,8 +19,8 @@
 .haru-public .haru-hero-glass, .haru-public .haru-score-gauge { border-color:rgba(255,240,226,.2); background:rgba(18,15,15,.58); color:var(--foreground); backdrop-filter:blur(24px) saturate(145%); -webkit-backdrop-filter:blur(24px) saturate(145%); box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 24px 50px rgba(0,0,0,.42); }
 .haru-public .haru-hero :is(.bg-white,.bg-\[\#fafaf8\]) { background:rgba(255,255,255,.065) !important; border-color:var(--border) !important; }
 .haru-public .haru-hero [class*="text-\["] { color:var(--foreground) !important; }
-.haru-public .haru-goals-wheel-panel { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(17rem,.65fr); gap:clamp(1.5rem,5vw,4.5rem); align-items:center; min-height:25rem; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; backdrop-filter:none; }
-.haru-wheel-carousel { display:grid; grid-template-columns:minmax(10rem,.88fr) minmax(11rem,1.12fr); height:25rem; overflow:hidden; border-radius:1.45rem; background:#090808; }
+.haru-public .haru-goals-wheel-panel { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(17rem,.65fr); gap:clamp(1.5rem,5vw,4.5rem); align-items:center; min-height:20rem; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; backdrop-filter:none; }
+.haru-wheel-carousel { display:grid; grid-template-columns:minmax(10rem,.88fr) minmax(11rem,1.12fr); height:21rem; overflow:hidden; border-radius:1.45rem; background:#090808; }
 .haru-wheel-photo { position:relative; overflow:hidden; background:#171313; }
 .haru-wheel-photo::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg,transparent 55%,#090808 100%); }
 .haru-wheel-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
