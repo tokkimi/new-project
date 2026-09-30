@@ -480,3 +480,12 @@ model Event {
   @@index([createdAt])
   @@map("events")
 }
+
+/// Stripe can retry an event until it receives a successful response. Keeping
+/// the provider event ID makes the payment side effects exactly-once.
+model StripeWebhookEvent {
+  id          String   @id
+  processedAt DateTime @default(now())
+
+  @@map("stripe_webhook_events")
+}

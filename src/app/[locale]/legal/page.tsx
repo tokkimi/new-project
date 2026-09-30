@@ -51,6 +51,7 @@ export default async function LegalPage() {
             <h2 className="font-serif text-2xl text-foreground">{t("termsTitle")}</h2>
             <p>{t("termsIntro")}</p>
             {[
+              ["termsSwissTitle", "termsSwissText"],
               ["termsServiceTitle", "termsServiceText"],
               ["termsPriceTitle", "termsPriceText"],
               ["termsPaymentTitle", "termsPaymentText"],

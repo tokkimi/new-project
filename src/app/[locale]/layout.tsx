@@ -8,6 +8,7 @@ import { AuthProvider } from "@/components/auth-provider";
 import { BottomNav } from "@/components/bottom-nav";
 import { CookieBanner } from "@/components/cookie-banner";
 import { BrandSplash } from "@/components/brand-splash";
+import { FloatingScanner } from "@/components/floating-scanner";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import "../haru-public.css";
@@ -112,6 +113,7 @@ export default async function RootLayout({
             >
               <BrandSplash />
               {children}
+              <FloatingScanner />
               <BottomNav />
               <CookieBanner />
             </ThemeProvider>

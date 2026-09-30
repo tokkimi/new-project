@@ -130,7 +130,7 @@ export const MODULE_FACE_ZONES: Record<ModuleId, FaceZoneId[]> = {
   wrinkles: ["forehead", "glabella", "leftUnderEye", "rightUnderEye"],
   redness: ["leftCheek", "rightCheek", "noseSides"],
   spots: ["forehead", "leftCheek", "rightCheek"],
-  acne: ["forehead", "leftCheek", "rightCheek", "chin"],
+  acne: ["forehead", "leftCheek", "rightCheek", "chin", "leftJaw", "rightJaw"],
   acneScars: ["leftCheek", "rightCheek"],
   darkCircles: ["leftUnderEye", "rightUnderEye"],
   texture: ["leftCheek", "rightCheek", "chin"],
