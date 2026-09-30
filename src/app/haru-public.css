@@ -50,12 +50,6 @@
 .haru-public .haru-home-product-card > div:first-child { border:0; border-radius:0; background:#f7f3ef; padding:.8rem; box-shadow:none; }
 .haru-public .haru-home-product-card > span { border-top:1px solid rgba(255,255,255,.14); background:#090909; }
 .haru-video-gallery-visual { position:relative; overflow:hidden; border-radius:1.25rem; box-shadow:0 24px 64px -40px #000; }.haru-video-gallery-visual img { display:block; }
-.haru-decoder-square { display:grid; width:min(100%,25rem); aspect-ratio:1; grid-template-rows:auto 1fr auto; justify-items:center; padding:1.25rem; border:1px solid rgba(255,243,235,.18); border-radius:1.5rem; background:radial-gradient(circle at 50% 44%,rgba(234,209,190,.12),transparent 34%),rgba(255,255,255,.035); box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 24px 70px -48px #000; backdrop-filter:blur(18px) saturate(125%); }
-.haru-decoder-label { display:grid; width:5.5rem; height:5.5rem; place-items:center; border:1px solid rgba(255,243,235,.2); border-radius:50%; background:rgba(15,13,13,.36); color:#f7f0ea; text-align:center; }
-.haru-decoder-label p { max-width:4.25rem; font-family:var(--font-sans),sans-serif; font-size:.68rem !important; font-weight:500; line-height:1.2; }
-.haru-decoder-camera { display:grid; width:4.4rem; height:4.4rem; place-items:center; align-self:center; border:1px solid rgba(255,243,235,.26); border-radius:1.25rem; background:rgba(234,209,190,.12); color:#f5e3d6; box-shadow:inset 0 1px 0 rgba(255,255,255,.23),0 12px 30px -18px #000; transition:transform .18s,background .18s; }
-.haru-decoder-camera:hover { transform:translateY(-2px); background:rgba(234,209,190,.21); }
-.haru-decoder-search { width:min(100%,18rem); align-self:end; }
 .haru-routine-lab-preview { display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:1rem; align-items:center; padding:1.25rem; border:1px solid rgba(255,243,235,.17); border-radius:1.2rem; background:linear-gradient(110deg,rgba(255,255,255,.07),rgba(222,196,178,.06)); box-shadow:inset 0 1px 0 rgba(255,255,255,.16); backdrop-filter:blur(18px); }
 .haru-public :is(.no-scrollbar,[class*="overflow-x-auto"]) { scrollbar-width:none; -ms-overflow-style:none; }.haru-public :is(.no-scrollbar,[class*="overflow-x-auto"])::-webkit-scrollbar { display:none; }
 .haru-scroll-cue { position:relative; }.haru-scroll-cue::before,.haru-scroll-cue::after { content:""; position:sticky; z-index:4; top:50%; width:.42rem; height:.42rem; margin-top:1rem; border-radius:999px; background:#f0d8c7; box-shadow:0 0 12px #efd3c0; pointer-events:none; }.haru-scroll-cue::before { left:.2rem; }.haru-scroll-cue::after { right:.2rem; }
@@ -77,7 +71,7 @@
 .haru-public header a.bg-primary { color: var(--primary-foreground); }
 .haru-public header .ring-1 { --tw-ring-color: var(--border); }
 .haru-public img[alt="Haru Skin"] { filter: none; opacity: 1; }
-.haru-site-header { background: rgba(7,6,6,.7); backdrop-filter: blur(22px) saturate(140%); border-bottom: 1px solid #ffffff22; }
+.haru-site-header { background: rgba(7,6,6,.7); backdrop-filter: blur(22px) saturate(140%); border-bottom:0; }
 .haru-public .haru-site-header { background: linear-gradient(180deg,rgba(5,5,5,.58),rgba(5,5,5,.08)); border-color:rgba(255,255,255,.08); box-shadow:none; }
 .haru-public .haru-site-header img[alt="Haru Skin"] { width:auto; height:2.5rem; object-fit:contain; filter:none; }
 .hero-editorial-bg { z-index:-2; opacity:.88; }
@@ -92,7 +86,7 @@
 .hero-benefit { border-left:1px solid rgba(87,65,55,.15); }.hero-benefit:first-child { border-left:0; }.hero-benefit span { display:block; color:#846b5e; font-size:.6rem; letter-spacing:.14em; }.hero-benefit h2 { margin-top:.45rem; font-family:var(--font-serif),serif; font-size:1rem; font-weight:500; line-height:1.1; }.hero-benefit p { margin-top:.4rem; max-width:11rem; color:#6f615b; font-size:.66rem; line-height:1.42; }
 @media (max-width:1023px) { .hero-editorial-bg { opacity:.52; object-position:72% center; } .hero-editorial-shade { background:linear-gradient(180deg,rgba(5,5,5,.8),rgba(5,5,5,.42) 65%,#050505); } .hero-benefit:nth-child(3) { border-left:0; } .hero-benefit:nth-child(n+3) { margin-top:1rem; } }
 @media (max-width:560px) { .hero-editorial-title { font-size:clamp(1.9rem,9vw,2.5rem); } .hero-benefits { grid-template-columns:1fr 1fr; } .hero-benefit { padding-left:.8rem; padding-right:.8rem; } .hero-benefit h2 { font-size:.95rem; } }
-.haru-public footer { border-top: 1px solid var(--border); padding-bottom: 48px; }
+.haru-public footer { border-top:0; padding-bottom:48px; }
 .haru-public .haru-rail { scrollbar-width: thin; scrollbar-color: #789b8f55 transparent; }
 .haru-public :is(a, button, input, select, [tabindex]):focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
 .haru-skip { position: absolute; top: -100px; left: 20px; padding: 12px; background: #fff; color: #13251d !important; border-radius: 8px; }
