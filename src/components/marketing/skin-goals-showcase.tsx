@@ -30,14 +30,14 @@ export function SkinGoalsShowcase() {
   }, []);
   return <section id="routines" className="haru-routines scroll-mt-28" aria-labelledby="routines-title">
     <div className="mx-auto max-w-7xl px-5 sm:px-8">
-      <div className="haru-goals-heading flex flex-wrap items-end justify-between gap-5">
-        <div className="max-w-2xl">
-          <h2 id="routines-title" className="mt-3 text-balance text-2xl leading-tight sm:text-3xl">{t("routinesTitle")}</h2>
-          <p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">{t("routinesSubtitle")}</p></div>
-        <Link href="/guides" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium underline-offset-4 hover:underline">{t("allGuides")}<ArrowUpRight className="size-4" aria-hidden="true" /></Link>
-      </div>
       <div ref={trackRef} className="haru-goals-pin-track">
         <div className="haru-goals-pin-stage">
+          <div className="haru-goals-heading flex flex-wrap items-end justify-between gap-5">
+            <div className="max-w-2xl">
+              <h2 id="routines-title" className="text-balance text-2xl leading-tight sm:text-3xl">{t("routinesTitle")}</h2>
+              <p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">{t("routinesSubtitle")}</p></div>
+            <Link href="/guides" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium underline-offset-4 hover:underline">{t("allGuides")}<ArrowUpRight className="size-4" aria-hidden="true" /></Link>
+          </div>
           <div className="haru-goals-wheel-panel">
             <WheelCarousel items={items} activeIndex={active} onActiveChange={(_, index) => setActive(index)} photoHref={`/guides/${slug}`} />
             <div className="haru-goals-wheel-copy"><p className="text-[10px] font-medium tracking-[.16em] text-primary">0{active + 1} / 0{FEATURED.length}</p><h3><Link href={`/guides/${slug}`} prefetch={false}>{guides(`guides.${slug}.title`)} <ArrowUpRight className="inline size-4" aria-hidden="true" /></Link></h3><p>{guides(`guides.${slug}.goal`)}</p></div>

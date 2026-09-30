@@ -13,7 +13,7 @@
 .haru-public main h2:not(.hero-benefit h2) { font-size:clamp(1.35rem,2.1vw,2rem) !important; line-height:1.12 !important; }
 .haru-public main h3:not(.haru-goals-wheel-copy h3) { font-size:clamp(1.05rem,1.5vw,1.35rem) !important; line-height:1.2 !important; }
 .haru-hero { background: radial-gradient(ellipse at 82% 40%, rgba(234,209,190,.11), transparent 35%), radial-gradient(ellipse at 25% 10%, rgba(194,174,255,.11), transparent 40%), #050505; }
-.haru-routines { background: radial-gradient(ellipse at 15% 15%, rgba(206,185,173,.13), transparent 38%), linear-gradient(150deg, #080707, #161113 60%, #09090a); }
+.haru-routines { background:#050505; }
 .haru-public .haru-glass, .haru-public .haru-glow-card, .haru-public main [data-slot="card"] {
   background: var(--glass) !important; color: var(--foreground) !important;
   border: 1px solid var(--glass-border) !important;
@@ -23,9 +23,9 @@
 .haru-public .haru-hero-glass, .haru-public .haru-score-gauge { border-color:rgba(255,240,226,.2); background:rgba(18,15,15,.58); color:var(--foreground); backdrop-filter:blur(24px) saturate(145%); -webkit-backdrop-filter:blur(24px) saturate(145%); box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 24px 50px rgba(0,0,0,.42); }
 .haru-public .haru-hero :is(.bg-white,.bg-\[\#fafaf8\]) { background:rgba(255,255,255,.065) !important; border-color:var(--border) !important; }
 .haru-public .haru-hero [class*="text-\["] { color:var(--foreground) !important; }
-.haru-goals-heading { min-height:26svh; padding-top:5rem; }
-.haru-goals-pin-track { height:340svh; }
-.haru-goals-pin-stage { position:sticky; top:0; display:flex; min-height:66svh; align-items:flex-start; padding-top:clamp(3.5rem,8vh,5.5rem); }
+.haru-goals-heading { width:100%; }
+.haru-goals-pin-track { height:210svh; }
+.haru-goals-pin-stage { position:sticky; top:0; display:grid; min-height:100svh; grid-template-rows:auto minmax(0,1fr); align-items:center; padding-block:clamp(1.5rem,4vh,3rem); }
 .haru-public .haru-goals-wheel-panel { display:grid; width:100%; grid-template-columns:minmax(0,1.1fr) minmax(14rem,.58fr); gap:clamp(1.4rem,4vw,3.8rem); align-items:center; min-height:22rem; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; backdrop-filter:none; }
 .haru-wheel-carousel { display:grid; grid-template-columns:11rem minmax(11rem,1fr); gap:1.35rem; height:15.5rem; overflow:visible; border-radius:0; background:transparent; }
 .haru-wheel-photo { position:relative; align-self:center; width:11rem; height:12.75rem; overflow:hidden; border:1px solid rgba(255,244,237,.26); border-radius:1.25rem; background:rgba(255,255,255,.07); box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 20px 44px -28px #000; backdrop-filter:blur(18px) saturate(125%); }
@@ -41,7 +41,7 @@
 .haru-goals-wheel-copy h3 { margin-top:.65rem; font-family:var(--font-serif),serif; font-size:clamp(1.65rem,2.7vw,2.45rem); font-weight:500; line-height:1.02; }
 .haru-goals-wheel-copy > p:not(:first-child) { margin-top:1rem; color:var(--muted-foreground); font-size:.83rem; line-height:1.6; }
 .haru-goals-wheel-copy .haru-cta { margin-top:1.25rem; }
-@media (max-width: 720px) { .haru-goals-heading { min-height:0; padding-top:2.75rem; padding-bottom:1.5rem; } .haru-goals-pin-track { height:220svh; } .haru-goals-pin-stage { min-height:100svh; align-items:center; padding-block:1.5rem; } .haru-public .haru-goals-wheel-panel { grid-template-columns:1fr; gap:1.1rem; min-height:0; } .haru-wheel-carousel { grid-template-columns:8.4rem minmax(0,1fr); gap:.8rem; height:11rem; } .haru-wheel-photo { width:8.4rem; height:10.6rem; border-radius:1rem; } .haru-wheel-item { left:2.55rem; font-size:.92rem; } .haru-wheel-marker { left:1.15rem; } .haru-goals-wheel-copy { padding:0; } }
+@media (max-width: 720px) { .haru-goals-pin-track { height:190svh; } .haru-goals-pin-stage { min-height:100svh; padding-block:1.25rem; } .haru-goals-heading { gap:.75rem; } .haru-public .haru-goals-wheel-panel { grid-template-columns:1fr; gap:1.1rem; min-height:0; } .haru-wheel-carousel { grid-template-columns:8.4rem minmax(0,1fr); gap:.8rem; height:11rem; } .haru-wheel-photo { width:8.4rem; height:10.6rem; border-radius:1rem; } .haru-wheel-item { left:2.55rem; font-size:.92rem; } .haru-wheel-marker { left:1.15rem; } .haru-goals-wheel-copy { padding:0; } }
 .haru-public .haru-routine-card { background: rgba(255,255,255,.055); box-shadow: 0 6px 22px -16px #000; }
 .haru-public .haru-routine-card:hover { box-shadow: 0 20px 42px -24px #000; }
 .haru-start-card { min-width:0; border-radius:1rem; padding:1rem; }.haru-start-card h3 { overflow:hidden; font-size:.83rem !important; white-space:nowrap; text-overflow:ellipsis; }.haru-start-card p { display:-webkit-box; overflow:hidden; -webkit-box-orient:vertical; -webkit-line-clamp:3; font-size:.7rem; }
