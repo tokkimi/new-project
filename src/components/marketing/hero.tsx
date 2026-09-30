@@ -36,8 +36,10 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="hero-benefits relative z-10 mx-auto grid max-w-7xl grid-cols-2 px-5 py-6 sm:px-8 lg:grid-cols-4 lg:py-7">
-        {(t.raw("benefits") as Array<{ title: string; text: string }>).map(({ title, text }, index) => <div key={title} className="hero-benefit px-4 py-2 first:pl-0 lg:px-7"><span>0{index + 1}</span><h2>{title}</h2><p>{text}</p></div>)}
+      <div className="hero-benefits relative z-10">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 px-5 py-6 sm:px-8 lg:grid-cols-4 lg:py-7">
+          {(t.raw("benefits") as Array<{ title: string; text: string }>).map(({ title, text }, index) => <div key={title} className="hero-benefit px-4 py-2 first:pl-0 lg:px-7"><span>0{index + 1}</span><h2>{title}</h2><p>{text}</p></div>)}
+        </div>
       </div>
     </section>
   );

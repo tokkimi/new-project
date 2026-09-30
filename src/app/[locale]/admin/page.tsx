@@ -21,19 +21,23 @@ function StatTile({
   icon: Icon,
   label,
   value,
+  href,
 }: {
   icon: ComponentType<{ className?: string }>;
   label: string;
   value: number | string;
+  href: string;
 }) {
   return (
-    <Card className="gap-2">
+    <Link href={href} className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+    <Card className="gap-2 transition-colors hover:bg-muted/50">
       <div className="flex items-center gap-2 text-muted-foreground">
         <Icon className="size-4" />
         <p className="text-sm">{label}</p>
       </div>
       <p className="font-serif text-3xl">{value}</p>
     </Card>
+    </Link>
   );
 }
 
@@ -82,16 +86,16 @@ export default async function AdminOverviewPage() {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <StatTile icon={Users} label="Total users" value={stats.totalUsers} />
-        <StatTile icon={Sparkles} label="Premium users" value={stats.premiumUsers} />
-        <StatTile icon={Package} label="Products" value={stats.totalProducts} />
-        <StatTile icon={Newspaper} label="News items" value={stats.totalNews} />
-        <StatTile icon={ShoppingBag} label="Shelf items" value={stats.totalShelfItems} />
-        <StatTile icon={Mail} label="Newsletter subscribers" value={stats.newsletterSubscribers} />
-        <StatTile icon={Users} label="New users 7d" value={stats.newUsersThisWeek} />
+        <StatTile icon={Users} label="Utilisateurs" value={stats.totalUsers} href="/admin/users" />
+        <StatTile icon={Sparkles} label="Utilisateurs Premium" value={stats.premiumUsers} href="/admin/users?plan=ACTIVE" />
+        <StatTile icon={Package} label="Produits" value={stats.totalProducts} href="/admin/products" />
+        <StatTile icon={Newspaper} label="Actualités" value={stats.totalNews} href="/admin/news" />
+        <StatTile icon={ShoppingBag} label="Produits enregistrés" value={stats.totalShelfItems} href="/admin/users" />
+        <StatTile icon={Mail} label="Abonnés newsletter" value={stats.newsletterSubscribers} href="/admin/newsletter" />
+        <StatTile icon={Users} label="Nouveaux utilisateurs (7 j)" value={stats.newUsersThisWeek} href="/admin/users" />
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div>
         <Card className="gap-4">
           <h2 className="font-serif text-lg">Signups - last 14 days</h2>
           <div className="flex h-40 items-end gap-1.5">
@@ -198,7 +202,7 @@ export default async function AdminOverviewPage() {
           <h2 className="font-serif text-lg">Nouveaux utilisateurs</h2>
           <div className="grid gap-2">
             {stats.latestUsers.map((user) => (
-              <div key={user.id} className="flex items-center justify-between gap-3 rounded-md border border-border p-3">
+              <Link key={user.id} href={`/admin/users/${user.id}`} className="flex items-center justify-between gap-3 rounded-md border border-border p-3 transition-colors hover:bg-muted/50">
                 <div className="min-w-0">
                   <p className="truncate text-sm font-medium">{user.name ?? user.email}</p>
                   <p className="text-xs text-muted-foreground">{user.email}</p>
@@ -206,24 +210,7 @@ export default async function AdminOverviewPage() {
                 <Badge variant={user.subscriptionStatus === "ACTIVE" ? "default" : "outline"}>
                   {user.subscriptionStatus}
                 </Badge>
-              </div>
-            ))}
-          </div>
-        </Card>
-
-        <Card className="gap-4">
-          <h2 className="font-serif text-lg">Derniers evenements</h2>
-          <div className="grid gap-2">
-            {stats.latestEvents.map((event) => (
-              <div key={event.id} className="rounded-md border border-border p-3">
-                <div className="flex items-center justify-between gap-3">
-                  <p className="text-sm font-medium">{event.type}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {new Intl.DateTimeFormat("en", { dateStyle: "short", timeStyle: "short" }).format(event.createdAt)}
-                  </p>
-                </div>
-                <p className="truncate text-xs text-muted-foreground">{event.path ?? event.userId ?? "No path"}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </Card>

@@ -17,7 +17,7 @@ export function VideoGalleryPreview() {
   const locale = useLocale() as keyof typeof COPY;
   const t = COPY[locale] ?? COPY.fr;
   const { status } = useSession();
-  const href = status === "authenticated" ? "/app/routine" : "/sign-in?callbackUrl=%2Fapp%2Froutine";
+  const href = status === "authenticated" ? "/app/routine?tab=links" : "/sign-in?callbackUrl=%2Fapp%2Froutine%3Ftab%3Dlinks";
   return <section className="haru-video-gallery mx-auto max-w-6xl px-6 py-14 sm:py-18">
     <div className="grid items-center gap-8 lg:grid-cols-[.86fr_1.14fr]">
       <div><p className="text-[10px] font-medium uppercase tracking-[.2em] text-primary">{t.eyebrow}</p><h2 className="mt-3 text-balance font-serif text-2xl font-medium sm:text-3xl">{t.title}</h2><p className="mt-4 max-w-md text-sm leading-6 text-muted-foreground">{t.text}</p><Link href={href} className="haru-cta mt-6">{t.cta} <Plus className="size-3.5" /></Link></div>

@@ -16,6 +16,6 @@ export function RoutineLabPreview() {
   const locale = useLocale() as keyof typeof COPY;
   const t = COPY[locale] ?? COPY.fr;
   const { status } = useSession();
-  const href = status === "authenticated" ? "/app/routine" : "/sign-in?callbackUrl=%2Fapp%2Froutine";
+  const href = status === "authenticated" ? "/app/routine?tab=lab" : "/sign-in?callbackUrl=%2Fapp%2Froutine%3Ftab%3Dlab";
   return <section className="mx-auto max-w-6xl px-6 py-12 sm:py-16"><div className="haru-routine-lab-preview"><FlaskConical className="size-5 text-primary" aria-hidden="true" /><div className="min-w-0"><p className="text-[10px] font-medium uppercase tracking-[.2em] text-primary">Routine Lab</p><h2 className="mt-2 font-serif text-2xl font-medium">{t.title}</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">{t.text}</p></div><Link href={href} className="haru-cta shrink-0">{t.cta} <ArrowUpRight className="size-3.5" /></Link></div></section>;
 }

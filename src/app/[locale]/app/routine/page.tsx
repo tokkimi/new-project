@@ -1,7 +1,5 @@
-import { getLocale } from "next-intl/server";
-import { redirect } from "@/i18n/navigation";
+import { RoutineWorkspace } from "@/components/routine-workspace";
 
-export default async function RoutinePage() {
-  const locale = await getLocale();
-  redirect({ href: "/app/profile", locale });
+export default function RoutinePage() {
+  return <RoutineWorkspace />;
 }

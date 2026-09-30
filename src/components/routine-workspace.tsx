@@ -14,6 +14,7 @@ import {
   Trash2,
 } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
+import { useSearchParams } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -248,9 +249,12 @@ function SavedVideoCard({ link }: { link: SavedLink }) {
 
 export function RoutineWorkspace() {
   const t = useTranslations("routineWorkspace");
+  const tProtocol = useTranslations("protocol");
   const locale = useLocale();
+  const searchParams = useSearchParams();
   const { shelf, addProduct } = useShelf();
-  const [tab, setTab] = React.useState("routine");
+  const requestedTab = searchParams.get("tab");
+  const [tab, setTab] = React.useState(() => requestedTab === "links" || requestedTab === "lab" ? requestedTab : "routine");
   const [preferences, setPreferences] = React.useState<Record<string, Preference>>({});
   const [profile, setProfile] = React.useState<SkinProfileSummary | null>(null);
   const [notes, setNotes] = React.useState<Note[]>([]);
@@ -271,6 +275,10 @@ export function RoutineWorkspace() {
       })
       .catch(() => {});
   }, []);
+
+  React.useEffect(() => {
+    if (requestedTab === "links" || requestedTab === "lab") setTab(requestedTab);
+  }, [requestedTab]);
 
   const savePref = React.useCallback((productId: string, patch: Partial<Preference>) => {
     const base: Preference = {
@@ -354,6 +362,7 @@ export function RoutineWorkspace() {
     ["favorites", t("tabs.favorites")],
     ["notes", t("tabs.notes")],
     ["links", t("tabs.links")],
+    ["lab", tProtocol("title")],
   ];
 
   return (
@@ -389,7 +398,6 @@ export function RoutineWorkspace() {
       {tab === "routine" && (
         <div className="grid min-w-0 gap-5">
           <SkinPassportPanel profile={profile} />
-          {shelf.length > 0 && <RoutineProtocolPanel products={shelf} />}
           {shelf.length === 0 ? (
             <Card className="items-center gap-3 py-14 text-center">
               <p className="font-serif text-xl">{t("emptyProductsTitle")}</p>
@@ -503,6 +511,8 @@ export function RoutineWorkspace() {
           </div>
         </div>
       )}
+
+      {tab === "lab" && <RoutineProtocolPanel products={shelf} />}
     </div>
   );
 }

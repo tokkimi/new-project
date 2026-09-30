@@ -1,13 +1,12 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { Check, Crown, FileText, ScanFace, ShieldCheck, Sparkles } from "lucide-react";
+import { Check, FileText, ScanFace, ShieldCheck, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { hasPremiumAccess } from "@/lib/entitlements";
-import { SubscribeButton } from "@/components/subscribe-button";
 import { ManageBillingButton } from "@/components/manage-billing-button";
-import { subscriptionPrice } from "@/lib/subscription-plans";
+import { HaruPremiumPlan } from "@/components/haru-premium-plan";
 
 export default async function UpgradePage() {
   const t = await getTranslations("upgradePage");
@@ -54,7 +53,7 @@ export default async function UpgradePage() {
         <Card className="gap-5 bg-white/[0.025] p-6">
           <div>
             <h2 className="font-serif text-2xl text-foreground">{t("freeTitle")}</h2>
-            <p className="mt-1 font-serif text-3xl text-foreground">{t("freePrice")}</p>
+          <p className="mt-1 font-serif text-3xl text-foreground">{t("freePrice")}</p>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">{t("freeNote")}</p>
           </div>
           <ul className="flex flex-col gap-2">
@@ -72,37 +71,15 @@ export default async function UpgradePage() {
           )}
         </Card>
 
-        <Card className="gap-5 border-border bg-white/[0.04] p-6">
-          <div>
-            <div className="flex items-center gap-2">
-              <Crown className="size-5 text-foreground" />
-              <h2 className="font-serif text-2xl text-foreground">{t("premiumTitle")}</h2>
-            </div>
-          </div>
-          <ul className="flex flex-col gap-2">
-            {premiumFeatures.map((f) => (
-              <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <Check className="mt-0.5 size-4 shrink-0 text-foreground" />
-                {f}
-              </li>
-            ))}
-          </ul>
+        <Card className="gap-5 border-border bg-transparent p-0">
           {isPremium ? (
             <div className="flex items-center gap-2">
               <Badge className="w-fit bg-white text-black">{t("currentPlanLabel")}</Badge>
               {user?.stripeCustomerId && <ManageBillingButton label={t("manageBilling")} />}
             </div>
           ) : (
-            <div className="grid gap-4 sm:grid-cols-2">
-              {(["monthly", "annual"] as const).map(plan => <div key={plan} className="flex flex-col gap-3 rounded-2xl border border-border bg-secondary/40 p-4">
-                <h3 className="font-sans text-base font-semibold">{t(plan)}</h3>
-                <p className="text-2xl font-semibold">{subscriptionPrice(plan, locale)}<span className="ml-1 text-sm font-normal text-muted-foreground">{t(`${plan}Period`)}</span></p>
-                <p className="text-xs leading-5 text-muted-foreground">{t(`${plan}Billing`)}</p>
-                <SubscribeButton plan={plan} subscribeLabel={t("choosePlan")} comingSoonLabel={t("checkoutError")} signedIn={!!session?.user} />
-              </div>)}
-            </div>
+            <HaruPremiumPlan checkout signedIn={!!session?.user} />
           )}
-          <p className="text-xs leading-5 text-muted-foreground">{t("ctaText")}</p>
         </Card>
       </div>
     </div>
