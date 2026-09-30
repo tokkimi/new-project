@@ -23,6 +23,8 @@
     "myRoutine": "My routine"
   },
   "hero": {
+    "kicker": "Your skin, clearer guidance",
+    "benefits": [{"title":"Advanced analysis","text":"A clear skin overview in just a few moments."},{"title":"Personal routines","text":"Steps adapted to what your skin needs today."},{"title":"Expert guidance","text":"Essential K-beauty reference points."},{"title":"Gentle tracking","text":"See what changes in your routine."}],
     "badge": "Inspired by K-beauty routines",
     "titleLine1": "Your skincare routine,",
     "titleLine2": "finally decoded.",

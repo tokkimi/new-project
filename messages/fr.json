@@ -23,6 +23,8 @@
     "myRoutine": "Ma routine"
   },
   "hero": {
+    "kicker": "Votre peau, des repères plus précis",
+    "benefits": [{"title":"Analyse avancée","text":"Un bilan de peau lisible en quelques instants."},{"title":"Routines personnelles","text":"Des gestes adaptés à vos besoins du moment."},{"title":"Conseils experts","text":"Les repères essentiels de la K-beauty."},{"title":"Suivi en douceur","text":"Visualisez ce qui évolue dans votre routine."}],
     "badge": "Inspiré des routines K-beauty",
     "titleLine1": "Votre routine skincare,",
     "titleLine2": "enfin décodée.",
