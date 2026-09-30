@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, GraduationCap, ShieldCheck } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 
@@ -46,6 +46,11 @@ export function AuditShowcase() {
           <h2 className="text-balance text-3xl font-semibold md:text-4xl">{t("title")}</h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">{t("subtitle")}</p>
 
+          <div className="mt-6 flex w-full max-w-2xl gap-3 rounded-2xl border border-border bg-secondary/35 p-4 text-left">
+            <ShieldCheck className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
+            <div><h3 className="font-semibold">{t("passportTitle")}</h3><p className="mt-1 text-sm leading-6 text-muted-foreground">{t("passportText")}</p></div>
+          </div>
+
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Button asChild size="lg">
               <Link href="/app/audit">
@@ -54,8 +59,9 @@ export function AuditShowcase() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-auto min-h-12 max-w-full whitespace-normal py-3 text-center">
-              <Link href="/app/face-scan">{t("ctaSecondary")}</Link>
+              <Link href="/app/quiz">{t("ctaPassport")}</Link>
             </Button>
+            <Button asChild variant="ghost" size="lg" className="h-auto min-h-12 max-w-full whitespace-normal py-3 text-center"><Link href="/learn"><GraduationCap className="size-4" />{t("ctaLearning")}</Link></Button>
           </div>
 
           <p className="mt-5 text-xs leading-relaxed text-muted-foreground">{t("note")}</p>

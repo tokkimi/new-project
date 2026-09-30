@@ -30,7 +30,13 @@
     "ctaPrimary": "ルーティンを作る",
     "disclaimer": "ルーティン内の12製品まで無料 · クレジットカード不要",
     "matchBadgeTitle": "完璧な相性",
-    "matchBadgeSubtitle": "あなたの肌プロフィールに"
+    "matchBadgeSubtitle": "あなたの肌プロフィールに",
+    "scannerPreview": "肌スキャンのプレビュー",
+    "skinScoreLabel": "肌スコア",
+    "hydration": "うるおい",
+    "veryGood": "とても良好",
+    "texture": "キメ",
+    "toObserve": "要観察"
   },
   "productShowcase": {
     "eyebrow": "Haruの核心",
@@ -1596,6 +1602,10 @@
     "subtitle": "Haruは保存した製品、朝夜のステップ、有効成分、肌プロフィールを合わせて分析し、合うもの、重複するもの、不足しているものを示します。",
     "ctaPrimary": "監査を始める",
     "ctaSecondary": "顔スキャンから始める",
+    "passportTitle": "監査前に肌パスポートを作成",
+    "passportText": "テストで肌タイプ、敏感さ、悩み、習慣をまとめます。Haruはこの情報を使い、監査と提案をよりパーソナルにします。",
+    "ctaPassport": "肌パスポートを作成",
+    "ctaLearning": "Learningクイズを始める",
     "note": "監査はルーティンと見える肌状態をもとにした美容ガイドです。診断ではなく、皮膚科医の診察に代わるものではありません。",
     "panelEyebrow": "個人ルーティンチェック",
     "priorityTitle": "結果はシンプルに",

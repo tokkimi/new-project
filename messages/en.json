@@ -30,7 +30,13 @@
     "ctaPrimary": "Build my routine",
     "disclaimer": "Free for up to 12 products in your routine · no credit card",
     "matchBadgeTitle": "Perfect match",
-    "matchBadgeSubtitle": "for your skin profile"
+    "matchBadgeSubtitle": "for your skin profile",
+    "scannerPreview": "Face scan preview",
+    "skinScoreLabel": "Skin score",
+    "hydration": "Hydration",
+    "veryGood": "Looking good",
+    "texture": "Texture",
+    "toObserve": "To watch"
   },
   "productShowcase": {
     "eyebrow": "The core of Haru",
@@ -1593,6 +1599,10 @@
     "subtitle": "Haru audits your saved products, morning and evening steps, active ingredients, and skin profile to show what fits, what overlaps, and what may be missing.",
     "ctaPrimary": "Run my audit",
     "ctaSecondary": "Start with a face scan",
+    "passportTitle": "Your skin passport, before the audit",
+    "passportText": "The assessment builds your skin overview: type, sensitivities, concerns and habits. Haru uses it to make your audit and recommendations more personal.",
+    "ctaPassport": "Create my skin passport",
+    "ctaLearning": "Take the Learning quizzes",
     "note": "The audit gives beauty guidance from your routine and visible skin context. It does not diagnose or replace a dermatologist.",
     "panelEyebrow": "Personal routine check",
     "priorityTitle": "The result stays simple",

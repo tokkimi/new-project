@@ -30,7 +30,13 @@
     "ctaPrimary": "내 루틴 만들기",
     "disclaimer": "루틴 제품 12개까지 무료 · 신용카드 불필요",
     "matchBadgeTitle": "완벽한 매칭",
-    "matchBadgeSubtitle": "내 피부 프로필 기준"
+    "matchBadgeSubtitle": "내 피부 프로필 기준",
+    "scannerPreview": "피부 스캔 미리보기",
+    "skinScoreLabel": "피부 점수",
+    "hydration": "수분감",
+    "veryGood": "매우 좋아요",
+    "texture": "결",
+    "toObserve": "관찰 필요"
   },
   "productShowcase": {
     "eyebrow": "Haru의 핵심",
@@ -1598,6 +1604,10 @@
     "subtitle": "Haru는 저장된 제품, 아침과 저녁 단계, 활성 성분, 피부 프로필을 함께 분석해 무엇이 맞고, 무엇이 겹치며, 무엇이 부족한지 보여줍니다.",
     "ctaPrimary": "내 감사 시작",
     "ctaSecondary": "얼굴 스캔부터 시작",
+    "passportTitle": "점검 전에 피부 여권 만들기",
+    "passportText": "테스트가 피부 타입, 민감도, 고민과 습관을 정리한 피부 리포트를 만듭니다. Haru는 이를 바탕으로 더 개인적인 점검과 추천을 제공합니다.",
+    "ctaPassport": "내 피부 여권 만들기",
+    "ctaLearning": "Learning 퀴즈 풀기",
     "note": "감사는 루틴과 보이는 피부 상태를 바탕으로 한 뷰티 가이드입니다. 진단이 아니며 피부과 상담을 대체하지 않습니다.",
     "panelEyebrow": "개인 루틴 점검",
     "priorityTitle": "결과는 간단하게",

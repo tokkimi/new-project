@@ -4,16 +4,16 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/marketing/hero";
-import { SkinScannerShowcase } from "@/components/marketing/skin-scanner-showcase";
 import { SkinGoalsShowcase } from "@/components/marketing/skin-goals-showcase";
 import { StartHere } from "@/components/marketing/start-here";
-import { LearnShowcase } from "@/components/marketing/learn-showcase";
 import { ScanShowcase } from "@/components/marketing/scan-showcase";
 import { AuditShowcase } from "@/components/marketing/audit-showcase";
 import { WellnessShowcase } from "@/components/marketing/wellness-showcase";
 import { ProductShowcase } from "@/components/marketing/product-showcase";
+import { SubscriptionPreview } from "@/components/marketing/subscription-preview";
+import { ProductDecoder } from "@/components/marketing/product-decoder";
+import { KBeautyRoutineBuilder } from "@/components/marketing/kbeauty-routine-builder";
 import { BeautyNews } from "@/components/marketing/beauty-news";
-import { GoodHabits } from "@/components/marketing/good-habits";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { db } from "@/lib/db";
 import { getRecentNews } from "@/lib/news-queries";
@@ -55,7 +55,20 @@ async function getHomeProducts() {
   // Prefer products that actually carry a real (official) product photo so the
   // home strips are full of genuine imagery, not category swatches.
   const withImage = { imageUrl: { startsWith: "http" } };
-  const [latest, madeInKorea] = await Promise.all([
+  const routineSlugs = [
+    "round-lab-birch-juice-moisturizing-cleanser",
+    "cosrx-advanced-snail-96-mucin-power-essence",
+    "skin1004-madagascar-centella-ampoule",
+    "beauty-of-joseon-relief-sun",
+    "cosrx-low-ph-good-morning-gel-cleanser",
+    "round-lab-1025-dokdo-toner",
+    "cosrx-bha-blackhead-power-liquid",
+    "round-lab-birch-juice-moisturizing-sun-cream-spf50",
+    "beauty-of-joseon-green-plum-refreshing-toner",
+    "round-lab-vita-niacinamide-dark-spot-serum",
+    "beauty-of-joseon-glow-serum-propolis-niacinamide",
+  ];
+  const [latest, madeInKorea, routinePicks] = await Promise.all([
     db.product
       .findMany({ where: withImage, orderBy: { createdAt: "desc" }, take: 12 })
       .catch(() => []),
@@ -66,6 +79,7 @@ async function getHomeProducts() {
         take: 12,
       })
       .catch(() => []),
+    db.product.findMany({ where: { slug: { in: routineSlugs } } }).catch(() => []),
   ]);
 
   return {
@@ -73,6 +87,9 @@ async function getHomeProducts() {
     madeInKorea: madeInKorea.length
       ? madeInKorea
       : fallbackProducts((product) => product.origin === "South Korea"),
+    routinePicks: routinePicks.length
+      ? routinePicks
+      : fallbackProducts((product) => routineSlugs.includes(product.slug)),
   };
 }
 
@@ -99,15 +116,15 @@ export default async function Home({
       <SiteHeader />
       <main id="main-content" className="flex-1">
         <Hero />
-        <SkinScannerShowcase />
+        <SubscriptionPreview />
+        <WellnessShowcase />
         <SkinGoalsShowcase />
         <StartHere />
-        <LearnShowcase />
         <ScanShowcase />
         <AuditShowcase />
-        <WellnessShowcase />
+        <ProductDecoder />
+        <Suspense fallback={<div className="h-[48rem]" aria-busy="true" />}><HomeRoutineBuilder /></Suspense>
         <Suspense fallback={<div className="mx-auto h-80 max-w-6xl rounded-3xl" aria-busy="true" />}><HomeProducts /></Suspense>
-        <GoodHabits />
         <Suspense fallback={null}><HomeNews /></Suspense>
         <FinalCta />
       </main>
@@ -119,6 +136,11 @@ export default async function Home({
 async function HomeProducts() {
   const products = await getHomeProducts();
   return <ProductShowcase latest={products.latest} madeInKorea={products.madeInKorea} />;
+}
+
+async function HomeRoutineBuilder() {
+  const products = await getHomeProducts();
+  return <KBeautyRoutineBuilder products={products.routinePicks} />;
 }
 
 async function HomeNews() {

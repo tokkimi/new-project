@@ -101,6 +101,8 @@
     box-shadow:inset 0 1px 0 #ffffffb3, 0 12px 40px -28px #294b3d40;
     backdrop-filter:blur(14px);
   }
+  .haru-hero-glass, .haru-score-gauge { border:1px solid rgba(255,255,255,.88); background:rgba(255,255,255,.66); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
+  .haru-score-gauge { box-shadow:inset 0 1px 0 rgba(255,255,255,.7), 0 12px 28px rgba(76,55,48,.16); }
   .haru-icon-halo { position:relative; color:var(--primary); }
   [data-slot="dialog-content"] { background:#fcfefd; color:var(--foreground); border-color:var(--border); max-height:90dvh; overflow-y:auto; width:calc(100% - 2rem); }
   [data-slot="tabs-list"] { background:var(--secondary); }

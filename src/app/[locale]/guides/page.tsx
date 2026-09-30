@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Badge } from "@/components/ui/badge";
+import { GoodHabits } from "@/components/marketing/good-habits";
 import { ROUTINE_GUIDES } from "@/lib/routine-guides";
 import { findIngredient } from "@/data/ingredients";
 
@@ -87,6 +88,7 @@ export default async function GuidesPage({
             {t("disclaimer")}
           </p>
         </section>
+        <GoodHabits />
       </main>
       <SiteFooter />
     </div>

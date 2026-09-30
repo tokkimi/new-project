@@ -8,7 +8,7 @@
   --glass-border: rgba(255,255,255,.92);
   color: var(--foreground); background: var(--background); font-weight: 400;
 }
-.haru-hero { background: radial-gradient(ellipse at 80% 45%, #d4e6df 0, transparent 55%), radial-gradient(ellipse at 20% 15%, #f5e9e2 0, transparent 50%); }
+.haru-hero { background: #fff; }
 .haru-routines { background: linear-gradient(150deg, #eef7f4, #f9f4ee 60%, #eef3fa); }
 .haru-public .haru-glass, .haru-public .haru-glow-card, .haru-public main [data-slot="card"] {
   background: var(--glass) !important; color: var(--foreground) !important;

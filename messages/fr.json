@@ -30,7 +30,13 @@
     "ctaPrimary": "Construire ma routine",
     "disclaimer": "Gratuit jusqu'à 12 produits dans votre routine · sans carte bancaire",
     "matchBadgeTitle": "Correspondance parfaite",
-    "matchBadgeSubtitle": "pour votre profil de peau"
+    "matchBadgeSubtitle": "pour votre profil de peau",
+    "scannerPreview": "Aperçu du scan visage",
+    "skinScoreLabel": "Score peau",
+    "hydration": "Hydratation",
+    "veryGood": "Très bien",
+    "texture": "Texture",
+    "toObserve": "À observer"
   },
   "productShowcase": {
     "eyebrow": "Le cœur de Haru",
@@ -1596,6 +1602,10 @@
     "subtitle": "Haru analyse vos produits enregistrés, vos étapes matin et soir, les actifs et votre profil peau pour montrer ce qui convient, ce qui se répète et ce qui manque.",
     "ctaPrimary": "Lancer mon audit",
     "ctaSecondary": "Commencer par un scan visage",
+    "passportTitle": "Votre passeport de peau, avant l'audit",
+    "passportText": "Le test crée votre bilan de peau : type, sensibilités, préoccupations et habitudes. Haru l'utilise pour rendre l'audit et les recommandations plus personnels.",
+    "ctaPassport": "Créer mon passeport de peau",
+    "ctaLearning": "Faire les QCM Learning",
     "note": "L'audit donne des conseils beauté à partir de votre routine et du contexte visible de la peau. Il ne diagnostique pas et ne remplace pas un dermatologue.",
     "panelEyebrow": "Vérification de routine",
     "priorityTitle": "Le résultat reste clair",
