@@ -12,14 +12,14 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#050505",
     orientation: "portrait-primary",
     icons: [
-      { src: "/icon.png", sizes: "512x512", type: "image/png", purpose: "any" },
+      { src: "/icon.png?v=haru-glass-20260930", sizes: "512x512", type: "image/png", purpose: "any" },
       {
-        src: "/icon-maskable.png",
+        src: "/icon-maskable.png?v=haru-glass-20260930",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
       },
-      { src: "/apple-icon.png", sizes: "180x180", type: "image/png", purpose: "any" },
+      { src: "/apple-icon.png?v=haru-glass-20260930", sizes: "180x180", type: "image/png", purpose: "any" },
     ],
   };
 }

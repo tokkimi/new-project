@@ -2,18 +2,17 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Geist_Mono, Montserrat, Noto_Sans_KR, Syncopate } from "next/font/google";
+import { Cormorant_Garamond, Geist_Mono, Inter, Noto_Sans_KR } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/components/auth-provider";
 import { BottomNav } from "@/components/bottom-nav";
-import { FloatingScanner } from "@/components/floating-scanner";
 import { CookieBanner } from "@/components/cookie-banner";
 import { BrandSplash } from "@/components/brand-splash";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import "../haru-public.css";
 
-const montserrat = Montserrat({
+const inter = Inter({
   variable: "--font-sans-en",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -24,10 +23,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const syncopate = Syncopate({
+const cormorant = Cormorant_Garamond({
   variable: "--font-serif-en",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600"],
 });
 
 const notoSansKr = Noto_Sans_KR({
@@ -58,10 +57,10 @@ export async function generateMetadata({
     },
     icons: {
       icon: [
-        { url: "/icon.png", sizes: "512x512", type: "image/png" },
+        { url: "/icon.png?v=haru-glass-20260930", sizes: "512x512", type: "image/png" },
       ],
-      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-      shortcut: ["/icon.png"],
+      apple: [{ url: "/apple-icon.png?v=haru-glass-20260930", sizes: "180x180", type: "image/png" }],
+      shortcut: ["/icon.png?v=haru-glass-20260930"],
     },
     other: {
       "mobile-web-app-capable": "yes",
@@ -90,8 +89,8 @@ export default async function RootLayout({
 
   const fontVars =
     locale === "ko"
-      ? `${notoSansKr.variable} ${montserrat.variable} ${syncopate.variable}`
-      : `${montserrat.variable} ${syncopate.variable} ${notoSansKr.variable}`;
+      ? `${notoSansKr.variable} ${inter.variable} ${cormorant.variable}`
+      : `${inter.variable} ${cormorant.variable} ${notoSansKr.variable}`;
 
   return (
     <html
@@ -114,7 +113,6 @@ export default async function RootLayout({
               <BrandSplash />
               {children}
               <BottomNav />
-              <FloatingScanner />
               <CookieBanner />
             </ThemeProvider>
           </AuthProvider>

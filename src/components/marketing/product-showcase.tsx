@@ -20,10 +20,10 @@ function ProductStrip({ products }: { products: Product[] }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.35, delay: (i % 8) * 0.04 }}
-          className="w-40 shrink-0 sm:w-44"
+          className="w-44 shrink-0 sm:w-48"
         >
           <Link href={`/app/product/${p.slug}`}>
-            <Card className="h-full gap-0 overflow-hidden p-0 transition-transform hover:-translate-y-0.5">
+            <Card className="haru-home-product-card h-full gap-0 overflow-hidden p-0 transition-transform hover:-translate-y-0.5">
               <ProductImage imageUrl={p.imageUrl} category={p.category} name={p.name} size="lg" />
               <div className="flex flex-col gap-0.5 p-3">
                 <p className="truncate text-sm font-medium leading-snug">{p.name}</p>
@@ -51,7 +51,7 @@ export function ProductShowcase({
   return (
     <section className="mx-auto max-w-6xl px-6 py-24">
       <div className="mx-auto mb-10 max-w-xl text-center">
-        <h2 className="text-balance text-3xl font-semibold md:text-5xl">{t("title")}</h2>
+        <h2 className="text-balance text-2xl font-semibold md:text-3xl">{t("title")}</h2>
         <p className="mt-3 text-muted-foreground">{t("subtitle")}</p>
       </div>
 
