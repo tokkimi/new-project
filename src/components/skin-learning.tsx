@@ -51,9 +51,9 @@ export function SkinLearning({ lessons }: { lessons: SkinLesson[] }) {
       <p className="mt-5 text-xs leading-5 text-muted-foreground">{t(storageUnavailable ? "notSaved" : "saved")}</p>
     </aside>
     <article ref={article} tabIndex={-1} className="haru-glass min-w-0 scroll-mt-24 overflow-hidden rounded-3xl" aria-labelledby="lesson-title">
-      <div className="grid sm:grid-cols-[1fr_200px]">
+      <div className={`grid ${lesson.image ? "sm:grid-cols-[1fr_200px]" : ""}`}>
         <div className="min-w-0 p-5 sm:p-8"><p className="mb-4 flex items-center gap-2 text-xs text-muted-foreground"><BookOpen className="size-4" aria-hidden="true" />{active+1} / {lessons.length} · {minutes} {labels.reading}</p><h2 id="lesson-title">{lesson.title}</h2></div>
-        <div className="relative hidden min-h-52 sm:block"><Image src={lesson.image} alt="" fill sizes="200px" className="object-cover" /></div>
+        {lesson.image && <div className="relative hidden min-h-52 sm:block"><Image src={lesson.image} alt="" fill sizes="200px" className="object-cover" /></div>}
       </div>
       <div className="space-y-7 px-5 pb-8 sm:px-8">
         {lesson.paragraphs.map(text => <p key={text} className="max-w-2xl text-sm leading-7 sm:text-base">{text}</p>)}

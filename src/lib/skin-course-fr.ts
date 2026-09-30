@@ -3,7 +3,7 @@ import type { SkinLesson } from './skin-lessons';
 const care = 'https://www.aad.org/public/everyday-care/skin-care-basics/';
 export const skinCourseFr: SkinLesson[] = [
   {
-    id: 'skin', title: 'Reconnaître les besoins de sa peau', image: '/images/routine-glow.webp',
+    id: 'skin', title: 'Reconnaître les besoins de sa peau',
     paragraphs: ['À la fin de ce chapitre, tu sauras distinguer un type de peau d’un état passager, observer chaque zone et choisir une première action sans acheter une routine entière.'],
     sections: [
       { title: 'Type, état et préoccupation : trois choses différentes', paragraphs: ['Le type décrit une tendance : une peau sèche produit généralement moins de sébum, une peau grasse en produit davantage, et une peau mixte présente des différences selon les zones. Une peau dite normale paraît globalement confortable. Ces catégories sont des repères, pas des cases immuables.', 'L’état décrit ce qui se passe maintenant : tiraillement, déshydratation, irritation. Une préoccupation est ce que tu souhaites améliorer : boutons, marques ou inconfort. Tu peux avoir une peau grasse, déshydratée et sensible en même temps. Un bouton ne suffit donc pas à conclure que toute ta peau est grasse.'] },
