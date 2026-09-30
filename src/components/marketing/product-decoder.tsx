@@ -35,12 +35,12 @@ export function ProductDecoder() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-14 sm:py-18">
         <div className="haru-decoder-square mx-auto">
-          <div className="haru-decoder-label"><h2>{t("decoderTitle")}</h2></div>
+          <div className="haru-decoder-label"><p>{t("decoderScan")}</p></div>
           <Link href="/app/scan" aria-label={t("decoderScan")} className="haru-decoder-camera"><Camera className="size-7" aria-hidden="true" /></Link>
           <form onSubmit={search} className="haru-decoder-search relative">
             <Search className="absolute left-3.5 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground" />
             <Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={t("decoderPlaceholder")} className="h-9 rounded-full bg-black/15 pl-9 pr-10 text-xs" />
-            <Button type="submit" size="icon" disabled={loading} aria-label={t("decoderAction")} className="absolute right-1 top-1 size-7 rounded-full">{loading ? "…" : <ArrowUpRight className="size-3.5" />}</Button>
+            <Button type="submit" size="icon" disabled={loading} aria-label={t("decoderAction")} className="absolute right-1 top-1 !size-7 !min-h-7 rounded-full !p-0">{loading ? "…" : <ArrowUpRight className="size-3.5" />}</Button>
           </form>
         </div>
         <div className="mx-auto mt-4 grid max-w-md gap-3">
