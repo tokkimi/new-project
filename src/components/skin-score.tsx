@@ -10,7 +10,7 @@ export function SkinScoreRing({ score, size = 108 }: { score: number; size?: num
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference * (1 - clamped / 100);
-  const color = clamped >= 75 ? "var(--success)" : clamped >= 50 ? "var(--am)" : "var(--destructive)";
+  const color = clamped >= 75 ? "#e9e1d9" : clamped >= 50 ? "#b7c5d0" : "#cf8178";
 
   return (
     <div className="relative inline-flex shrink-0 items-center justify-center" style={{ width: size, height: size }}>

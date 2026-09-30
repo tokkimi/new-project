@@ -42,6 +42,7 @@ import { FaceGuideOverlay } from "@/components/face-guide-overlay";
 import { FaceMeshOverlay } from "@/components/face-mesh-overlay";
 import { FaceScanMarkerOverlay } from "@/components/face-scan-marker-overlay";
 import { FaceScanCapture } from "@/components/face-scan-capture";
+import { Logo } from "@/components/logo";
 import { SkinScoreRing, ModuleScoreBar } from "@/components/skin-score";
 import { severityBadgeClass } from "@/lib/severity";
 import { useCatalog, useShelf } from "@/lib/shelf-store";
@@ -84,6 +85,43 @@ function fileToDataUrl(file: File): Promise<string> {
   });
 }
 
+type ImageFaceLandmarker = {
+  detect: (image: HTMLImageElement) => { faceLandmarks?: FaceLandmarkPoint[][] };
+  close?: () => void;
+};
+
+async function detectLandmarksInImage(imageSrc: string) {
+  const image = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const element = new Image();
+    element.onload = () => resolve(element);
+    element.onerror = reject;
+    element.src = imageSrc;
+  });
+  const [{ FaceLandmarker, FilesetResolver }] = await Promise.all([import("@mediapipe/tasks-vision")]);
+  const vision = await FilesetResolver.forVisionTasks(
+    "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
+  );
+  const landmarker = (await FaceLandmarker.createFromOptions(vision, {
+    baseOptions: {
+      modelAssetPath:
+        "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task",
+      delegate: "GPU",
+    },
+    runningMode: "IMAGE",
+    numFaces: 1,
+    minFaceDetectionConfidence: 0.55,
+    minFacePresenceConfidence: 0.55,
+  })) as unknown as ImageFaceLandmarker;
+  try {
+    return {
+      landmarks: landmarker.detect(image).faceLandmarks?.[0] ?? [],
+      size: { width: image.naturalWidth || image.width, height: image.naturalHeight || image.height },
+    };
+  } finally {
+    landmarker.close?.();
+  }
+}
+
 function productScore(product: Product, module: ModuleFinding, skinType?: string) {
   let score = 0;
   if (product.category === module.category) score += 8;
@@ -120,6 +158,7 @@ export function FaceScanClient() {
 
   const [phase, setPhase] = React.useState<Phase>("idle");
   const [stepIndex, setStepIndex] = React.useState(0);
+  const [analysisProgress, setAnalysisProgress] = React.useState(0);
   const [preview, setPreview] = React.useState<string | null>(null);
   const [analysis, setAnalysis] = React.useState<FaceScanAnalysis | null>(null);
   const [previous, setPrevious] = React.useState<PreviousScan | null>(null);
@@ -128,6 +167,7 @@ export function FaceScanClient() {
   const [qualityIssues, setQualityIssues] = React.useState<string[]>([]);
   const [captureLandmarks, setCaptureLandmarks] = React.useState<FaceLandmarkPoint[] | null>(null);
   const [captureSize, setCaptureSize] = React.useState({ width: 720, height: 960 });
+  const [captureMirrored, setCaptureMirrored] = React.useState(false);
   const [scanMarkers, setScanMarkers] = React.useState<FaceScanMarker[]>([]);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const pagerRef = React.useRef<HTMLDivElement>(null);
@@ -136,23 +176,39 @@ export function FaceScanClient() {
   const startScan = async (
     file: File,
     landmarks?: FaceLandmarkPoint[],
-    imageSize?: { width: number; height: number }
+    imageSize?: { width: number; height: number },
+    mirrored = false
   ) => {
     const url = URL.createObjectURL(file);
     setPreview(url);
-    setCaptureLandmarks(landmarks ?? null);
-    if (imageSize) setCaptureSize(imageSize);
     setPhase("analyzing");
     setStepIndex(0);
+    setAnalysisProgress(8);
     setAddedProducts(new Set());
     setScanMarkers([]);
 
-    const stepTimer = setInterval(() => {
-      setStepIndex((i) => Math.min(i + 1, analysisSteps.length - 1));
-    }, 700);
-
     try {
+      let resolvedLandmarks = landmarks ?? [];
+      let resolvedSize = imageSize;
+      if (!resolvedLandmarks.length || !resolvedSize) {
+        setStepIndex(0);
+        setAnalysisProgress(24);
+        try {
+          const detected = await detectLandmarksInImage(url);
+          resolvedLandmarks = detected.landmarks;
+          resolvedSize = detected.size;
+        } catch {
+          // The visual analysis can still reject a non-face photo. We never draw guessed points.
+        }
+      }
+      setCaptureLandmarks(resolvedLandmarks.length ? resolvedLandmarks : null);
+      if (resolvedSize) setCaptureSize(resolvedSize);
+      setCaptureMirrored(mirrored);
+      setStepIndex(1);
+      setAnalysisProgress(46);
       const dataUrl = await fileToDataUrl(file);
+      setStepIndex(2);
+      setAnalysisProgress(64);
       const res = await fetch("/api/face-scan/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -182,13 +238,23 @@ export function FaceScanClient() {
         return;
       }
       const data = await res.json();
+      setAnalysisProgress(86);
       setAnalysis(data.analysis);
       setPrevious((data.previous as PreviousScan) ?? null);
+      if (resolvedLandmarks.length && resolvedSize) {
+        const markers = await detectFaceScanMarkers({
+          imageSrc: url,
+          landmarks: resolvedLandmarks,
+          imageSize: resolvedSize,
+          modules: data.analysis.modules,
+          mirrored,
+        }).catch(() => []);
+        setScanMarkers(markers);
+      }
+      setAnalysisProgress(100);
       setPhase("result");
     } catch {
       setPhase("error");
-    } finally {
-      clearInterval(stepTimer);
     }
   };
 
@@ -200,7 +266,9 @@ export function FaceScanClient() {
     setAddedProducts(new Set());
     setActiveModule(0);
     setCaptureLandmarks(null);
+    setCaptureMirrored(false);
     setScanMarkers([]);
+    setAnalysisProgress(0);
     setPhase("idle");
   };
 
@@ -264,6 +332,7 @@ export function FaceScanClient() {
       landmarks: captureLandmarks,
       imageSize: captureSize,
       modules: analysis.modules,
+      mirrored: captureMirrored,
     })
       .then((markers) => {
         if (!cancelled) setScanMarkers(markers);
@@ -276,7 +345,7 @@ export function FaceScanClient() {
     return () => {
       cancelled = true;
     };
-  }, [analysis, captureLandmarks, captureSize, preview]);
+  }, [analysis, captureLandmarks, captureMirrored, captureSize, preview]);
 
   const moduleProducts = React.useMemo(() => {
     const used = new Set<string>();
@@ -363,7 +432,7 @@ export function FaceScanClient() {
                 noFace: t("position.noFace"),
                 multipleFaces: t("position.multipleFaces"),
               }}
-              onCapture={(file, landmarks, imageSize) => void startScan(file, landmarks, imageSize)}
+              onCapture={(file, landmarks, imageSize) => void startScan(file, landmarks, imageSize, true)}
               onFallbackUpload={() => fileInputRef.current?.click()}
             />
           </motion.div>
@@ -378,15 +447,14 @@ export function FaceScanClient() {
             className="w-full"
           >
             <Card className="w-full items-center gap-6 py-14">
-              {preview ? (
-                <div className="relative h-40 w-32 overflow-hidden rounded-[1.6rem] bg-secondary">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={preview} alt="" className="absolute inset-0 size-full object-cover" />
-                  <FaceGuideOverlay compact className="opacity-45" />
+              <div className="relative flex size-40 items-center justify-center rounded-full border border-[#f5dfce]/40 bg-[#151211] shadow-[0_0_42px_rgba(245,223,206,.18)]">
+                <span className="absolute inset-2 rounded-full border border-[#f5dfce]/15" />
+                <span className="absolute inset-0 animate-[spin_2.8s_linear_infinite] rounded-full border-2 border-transparent border-t-[#f5dfce] border-r-[#f5dfce]/30" />
+                <div className="relative flex size-28 items-center justify-center overflow-hidden rounded-full border border-[#f5dfce]/30 bg-black">
+                  <Logo className="w-20 object-contain" />
                 </div>
-              ) : (
-                <Loader2 className="size-10 animate-spin text-primary" />
-              )}
+              </div>
+              <div className="-mt-3 text-2xl font-medium tabular-nums text-foreground">{analysisProgress}%</div>
               <div className="flex flex-col gap-2">
                 {analysisSteps.map((step, i) => (
                   <p
@@ -512,6 +580,7 @@ export function FaceScanClient() {
                       landmarks={captureLandmarks}
                       sourceWidth={captureSize.width}
                       sourceHeight={captureSize.height}
+                      mirrored={captureMirrored}
                       activeZones={activeMeshZones}
                       zoneResults={meshZoneResults}
                       pulse
@@ -519,7 +588,7 @@ export function FaceScanClient() {
                     />
                   ) : null}
                   {captureLandmarks?.length ? (
-                    <FaceScanMarkerOverlay
+                            <FaceScanMarkerOverlay
                       markers={scanMarkers}
                       sourceWidth={captureSize.width}
                       sourceHeight={captureSize.height}
@@ -542,17 +611,17 @@ export function FaceScanClient() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 sm:justify-start">
                   {analysis.skinType && (
-                    <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+                    <span className="rounded-full border border-white/18 bg-[#171413] px-3 py-1 text-sm font-medium text-[#f7eadf]">
                       {t(`skinTypes.${analysis.skinType}`)}
                     </span>
                   )}
-                  <span className="rounded-full bg-secondary px-3 py-1 text-sm text-muted-foreground">
+                  <span className="rounded-full border border-white/18 bg-[#171413] px-3 py-1 text-sm text-[#f7eadf]">
                     {t("modulesCount", {
                       count: analysis.modules.filter((module) => module.flagged).length,
                     })}
                   </span>
                   {typeof analysis.confidence === "number" && (
-                    <span className="rounded-full bg-secondary px-3 py-1 text-sm text-muted-foreground">
+                    <span className="rounded-full border border-white/18 bg-[#171413] px-3 py-1 text-sm text-[#f7eadf]">
                       {t("confidenceLabel")} {Math.round(analysis.confidence * 100)}%
                     </span>
                   )}
@@ -588,10 +657,10 @@ export function FaceScanClient() {
                     className={cn(
                       "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium",
                       comparison.overallDelta > 0
-                        ? "bg-success/12 text-success"
+                        ? "border border-white/18 bg-[#171413] text-[#f7eadf]"
                         : comparison.overallDelta < 0
-                          ? "bg-am/15 text-am-foreground"
-                          : "bg-secondary text-muted-foreground"
+                          ? "border border-[#9ba8b5]/55 bg-[#171413] text-[#f7eadf]"
+                          : "border border-white/18 bg-[#171413] text-[#f7eadf]"
                     )}
                   >
                     {comparison.overallDelta > 0 ? (
@@ -617,7 +686,7 @@ export function FaceScanClient() {
                       {improved.map((m) => (
                         <span
                           key={m.id}
-                          className="inline-flex items-center gap-1.5 rounded-full bg-success/12 px-3 py-1 text-sm text-success"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-white/18 bg-[#171413] px-3 py-1 text-sm text-[#f7eadf]"
                         >
                           <TrendingUp className="size-3.5" />
                           {t(`modules.${m.id}.name`)}
@@ -626,7 +695,7 @@ export function FaceScanClient() {
                       {watch.map((m) => (
                         <span
                           key={m.id}
-                          className="inline-flex items-center gap-1.5 rounded-full bg-am/15 px-3 py-1 text-sm text-am-foreground"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-[#9ba8b5]/55 bg-[#171413] px-3 py-1 text-sm text-[#f7eadf]"
                         >
                           <TrendingDown className="size-3.5" />
                           {t(`modules.${m.id}.name`)}
@@ -693,7 +762,7 @@ export function FaceScanClient() {
                                 sourceHeight={captureSize.height}
                                 moduleId={module.id}
                                 pulse={activeModule === index}
-                                className="opacity-95"
+                              className="opacity-95"
                               />
                             ) : null}
                           </>

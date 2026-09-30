@@ -36,11 +36,14 @@ export async function detectFaceScanMarkers({
   landmarks,
   imageSize,
   modules,
+  mirrored = false,
 }: {
   imageSrc: string;
   landmarks: FaceLandmarkPoint[];
   imageSize: { width: number; height: number };
   modules: ModuleFinding[];
+  /** Camera captures are mirrored; imported photos are not. */
+  mirrored?: boolean;
 }): Promise<FaceScanMarker[]> {
   if (!imageSrc || landmarks.length === 0) return [];
 
@@ -57,15 +60,15 @@ export async function detectFaceScanMarkers({
   ctx.drawImage(image, 0, 0, width, height);
   const pixels = ctx.getImageData(0, 0, width, height);
 
-  const mirroredLandmarks = landmarks.map((point) => ({
-    x: 1 - point.x,
+  const positionedLandmarks = landmarks.map((point) => ({
+    x: mirrored ? 1 - point.x : point.x,
     y: point.y,
     z: point.z,
   }));
-  const facePolygon = FACE_OVAL_LANDMARKS.map((index) => normalizedToPixel(mirroredLandmarks[index], width, height)).filter(Boolean) as PixelPoint[];
+  const facePolygon = FACE_OVAL_LANDMARKS.map((index) => normalizedToPixel(positionedLandmarks[index], width, height)).filter(Boolean) as PixelPoint[];
   if (facePolygon.length < 3) return [];
   const faceBounds = boundsFor(facePolygon);
-  const baseline = skinBaseline(pixels, mirroredLandmarks, width, height);
+  const baseline = skinBaseline(pixels, positionedLandmarks, width, height);
   const allCandidates: Candidate[] = [];
 
   for (const module of modules) {
@@ -77,7 +80,7 @@ export async function detectFaceScanMarkers({
       const zone = FACE_ZONES[zoneId];
       if (!zone) continue;
       const zonePoints = zone.landmarkIndices
-        .map((index) => normalizedToPixel(mirroredLandmarks[index], width, height))
+        .map((index) => normalizedToPixel(positionedLandmarks[index], width, height))
         .filter(Boolean) as PixelPoint[];
       if (zonePoints.length === 0) continue;
 

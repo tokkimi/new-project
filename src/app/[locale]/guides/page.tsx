@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { guideVisual } from "@/lib/guide-visuals";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -18,37 +17,15 @@ export default async function GuidesPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [t, tIng, tGoals] = await Promise.all([
+  const [t, tIng] = await Promise.all([
     getTranslations("routineGuides"),
     getTranslations("ingredients"),
-    getTranslations("skinGoals"),
   ]);
 
   return (
     <div className="haru-public flex flex-1 flex-col">
       <SiteHeader />
       <main id="main-content" className="flex-1">
-        <section className="border-b border-border/60 haru-routines">
-          <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:px-6 sm:py-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-            <div>
-              <h1 className="mt-4 text-balance font-serif text-4xl leading-tight sm:text-5xl">
-                {t("indexTitle")}
-              </h1>
-              <p className="mt-4 max-w-xl leading-7 text-muted-foreground">{t("indexSubtitle")}</p>
-            </div>
-            <div className="relative min-h-[280px] overflow-hidden rounded-[30px] border border-border shadow-[0_28px_80px_-58px_rgba(36,30,24,0.7)] sm:min-h-[360px]">
-              <Image
-                src="/images/routine-glow.webp"
-                alt={tGoals("imageAlt")}
-                fill
-                preload
-                sizes="(min-width: 1024px) 55vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
         <section className="mx-auto max-w-6xl px-5 py-14 sm:px-6 sm:py-20">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {ROUTINE_GUIDES.map((guide, index) => (
