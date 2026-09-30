@@ -118,10 +118,10 @@ export default async function Home({
       <main id="main-content" className="flex-1">
         <Hero />
         <ProductDecoder />
-        <VideoGalleryPreview />
+        <WellnessShowcase />
         <RoutineLabPreview />
         <SubscriptionPreview />
-        <WellnessShowcase />
+        <VideoGalleryPreview />
         <SkinGoalsShowcase />
         <ScanShowcase />
         <AuditShowcase />
