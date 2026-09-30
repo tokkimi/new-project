@@ -184,6 +184,8 @@
     "premiumGlitchHint": "Quelque chose semble anormal avec votre compte — essayez de rafraîchir la page.",
     "noFaceTitle": "Aucun visage détecté",
     "noFaceText": "Nous n'avons pas trouvé de visage net sur cette photo. Assurez-vous que votre visage remplit le cadre, avec un bon éclairage, face à la caméra — aucun crédit n'est débité pour cette tentative.",
+    "localizationTitle": "Visage non localisé avec assez de précision",
+    "localizationText": "Haru ne montre jamais un résultat sans repérer les zones sur votre visage. Reprenez la photo de face, dans une lumière uniforme et sans filtre.",
     "lowQualityTitle": "Photo trop peu nette pour être analysée",
     "lowQualityText": "Nous n'avons pas pu analyser ta peau de façon fiable sur cette photo — aucun crédit n'a été débité. Reprends-la en corrigeant :",
     "confidenceLabel": "Confiance",

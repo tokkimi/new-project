@@ -78,18 +78,23 @@ export function FaceScanCapture({ labels, onCapture, onFallbackUpload }: FaceSca
         const vision = await FilesetResolver.forVisionTasks(
           "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
         );
-        landmarker = (await FaceLandmarker.createFromOptions(vision, {
+        const options = (delegate: "GPU" | "CPU") => ({
           baseOptions: {
             modelAssetPath:
               "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task",
-            delegate: "GPU",
+            delegate,
           },
-          runningMode: "VIDEO",
+          runningMode: "VIDEO" as const,
           numFaces: 2,
           minFaceDetectionConfidence: 0.55,
           minFacePresenceConfidence: 0.55,
           minTrackingConfidence: 0.55,
-        })) as FaceLandmarkerInstance;
+        });
+        try {
+          landmarker = (await FaceLandmarker.createFromOptions(vision, options("GPU"))) as FaceLandmarkerInstance;
+        } catch {
+          landmarker = (await FaceLandmarker.createFromOptions(vision, options("CPU"))) as FaceLandmarkerInstance;
+        }
         landmarkerRef.current = landmarker;
         setMeshAvailable(true);
       } catch (meshError) {

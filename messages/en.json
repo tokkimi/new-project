@@ -184,6 +184,8 @@
     "premiumGlitchHint": "Something looks off with your account — try refreshing the page.",
     "noFaceTitle": "No face detected",
     "noFaceText": "We couldn't find a clear face in that photo. Make sure your face fills the frame, in good lighting, facing the camera — no credit is charged for this attempt.",
+    "localizationTitle": "Face could not be located precisely",
+    "localizationText": "Haru never shows a result without locating the areas on your face. Retake the photo facing forward, in even light and without a filter.",
     "lowQualityTitle": "Photo too unclear to read",
     "lowQualityText": "We couldn't read your skin reliably from this photo — no credit was charged. Please retake it, keeping in mind:",
     "confidenceLabel": "Confidence",

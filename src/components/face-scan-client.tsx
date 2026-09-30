@@ -74,7 +74,7 @@ const MODULE_ICON: Record<ModuleId, React.ComponentType<{ className?: string }>>
   radiance: Sparkles,
 };
 
-type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error" | "noFace" | "noCredits" | "lowQuality";
+type Phase = "idle" | "analyzing" | "result" | "unavailable" | "error" | "noFace" | "noCredits" | "lowQuality" | "localizationRequired";
 
 function fileToDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -193,6 +193,7 @@ export function FaceScanClient() {
     setAnalysisProgress(8);
     setAddedProducts(new Set());
     setScanMarkers([]);
+    let progressTimer: number | undefined;
 
     try {
       let resolvedLandmarks = landmarks ?? [];
@@ -216,6 +217,9 @@ export function FaceScanClient() {
       const dataUrl = await fileToDataUrl(file);
       setStepIndex(2);
       setAnalysisProgress(64);
+      progressTimer = window.setInterval(() => {
+        setAnalysisProgress((value) => (value < 94 ? Math.min(94, value + 2) : value));
+      }, 260);
       const res = await fetch("/api/face-scan/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -245,23 +249,27 @@ export function FaceScanClient() {
         return;
       }
       const data = await res.json();
-      setAnalysisProgress(86);
+      setAnalysisProgress(96);
+      if (!resolvedLandmarks.length || !resolvedSize) {
+        setPhase("localizationRequired");
+        return;
+      }
       setAnalysis(data.analysis);
       setPrevious((data.previous as PreviousScan) ?? null);
-      if (resolvedLandmarks.length && resolvedSize) {
-        const markers = await detectFaceScanMarkers({
-          imageSrc: url,
-          landmarks: resolvedLandmarks,
-          imageSize: resolvedSize,
-          modules: data.analysis.modules,
-          mirrored,
-        }).catch(() => []);
-        setScanMarkers(markers);
-      }
+      const markers = await detectFaceScanMarkers({
+        imageSrc: url,
+        landmarks: resolvedLandmarks,
+        imageSize: resolvedSize,
+        modules: data.analysis.modules,
+        mirrored,
+      }).catch(() => []);
+      setScanMarkers(markers);
       setAnalysisProgress(100);
       setPhase("result");
     } catch {
       setPhase("error");
+    } finally {
+      if (progressTimer) window.clearInterval(progressTimer);
     }
   };
 
@@ -526,6 +534,16 @@ export function FaceScanClient() {
                 {t("retake")}
               </Button>
             }
+          />
+        )}
+
+        {phase === "localizationRequired" && (
+          <StatusCard
+            icon={MapPin}
+            title={t("localizationTitle")}
+            text={t("localizationText")}
+            tone="warning"
+            action={<Button variant="outline" onClick={reset}><RotateCcw className="size-4" />{t("retake")}</Button>}
           />
         )}
 
