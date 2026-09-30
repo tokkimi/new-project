@@ -3,11 +3,10 @@ import { cn } from "@/lib/utils";
 /** The full Haru Skin logo lockup (monogram + wordmark). */
 export function Logo({ className }: { className?: string }) {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src="/haru-logo-white-flat.png"
-      alt="Haru Skin"
-      className={cn("h-14 w-auto object-contain opacity-95 sm:h-[4.375rem]", className)}
-    />
+    <span className={cn("haru-brand-lockup", className)} aria-label="Haru Skin">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/brand/haru-monogram-glass.png" alt="" className="haru-brand-mark" />
+      <span className="haru-brand-type"><strong>HARU</strong><small>— SKIN —</small></span>
+    </span>
   );
 }

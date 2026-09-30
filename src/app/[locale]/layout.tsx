@@ -8,6 +8,7 @@ import { AuthProvider } from "@/components/auth-provider";
 import { BottomNav } from "@/components/bottom-nav";
 import { FloatingScanner } from "@/components/floating-scanner";
 import { CookieBanner } from "@/components/cookie-banner";
+import { BrandSplash } from "@/components/brand-splash";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import "../haru-public.css";
@@ -57,13 +58,10 @@ export async function generateMetadata({
     },
     icons: {
       icon: [
-        { url: "/favicon.ico" },
-        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
         { url: "/icon.png", sizes: "512x512", type: "image/png" },
       ],
       apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-      shortcut: ["/favicon.ico"],
+      shortcut: ["/icon.png"],
     },
     other: {
       "mobile-web-app-capable": "yes",
@@ -74,7 +72,7 @@ export async function generateMetadata({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f7faf9",
+  themeColor: "#050505",
 };
 
 export default async function RootLayout({
@@ -113,6 +111,7 @@ export default async function RootLayout({
               enableSystem={false}
               disableTransitionOnChange
             >
+              <BrandSplash />
               {children}
               <BottomNav />
               <FloatingScanner />
