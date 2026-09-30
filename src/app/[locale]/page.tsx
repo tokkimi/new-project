@@ -10,7 +10,6 @@ import { AuditShowcase } from "@/components/marketing/audit-showcase";
 import { WellnessShowcase } from "@/components/marketing/wellness-showcase";
 import { ProductShowcase } from "@/components/marketing/product-showcase";
 import { SubscriptionPreview } from "@/components/marketing/subscription-preview";
-import { ProductDecoder } from "@/components/marketing/product-decoder";
 import { VideoGalleryPreview } from "@/components/marketing/video-gallery-preview";
 import { RoutineLabPreview } from "@/components/marketing/routine-lab-preview";
 import { KBeautyRoutineBuilder } from "@/components/marketing/kbeauty-routine-builder";
@@ -117,7 +116,6 @@ export default async function Home({
       <SiteHeader />
       <main id="main-content" className="flex-1">
         <Hero />
-        <ProductDecoder />
         <WellnessShowcase />
         <RoutineLabPreview />
         <SubscriptionPreview />

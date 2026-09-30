@@ -5,7 +5,7 @@ import { HaruPremiumPlan } from "@/components/haru-premium-plan";
 export function SubscriptionPreview() {
   const t = useTranslations("upgradePage");
   return (
-    <section className="border-y border-border/70 bg-[#080707] py-20 text-foreground sm:py-24">
+    <section className="bg-[#050505] py-20 text-foreground sm:py-24">
       <div className="mx-auto grid max-w-6xl gap-7 px-6 lg:grid-cols-[1fr_0.9fr] lg:items-center">
         <div className="max-w-xl">
           <div className="mb-5 flex items-center gap-2 text-sm font-medium text-primary"><Crown className="size-4" /> {t("kicker")}</div>
