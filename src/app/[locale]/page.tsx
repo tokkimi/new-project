@@ -5,13 +5,14 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/marketing/hero";
 import { SkinGoalsShowcase } from "@/components/marketing/skin-goals-showcase";
-import { StartHere } from "@/components/marketing/start-here";
 import { ScanShowcase } from "@/components/marketing/scan-showcase";
 import { AuditShowcase } from "@/components/marketing/audit-showcase";
 import { WellnessShowcase } from "@/components/marketing/wellness-showcase";
 import { ProductShowcase } from "@/components/marketing/product-showcase";
 import { SubscriptionPreview } from "@/components/marketing/subscription-preview";
 import { ProductDecoder } from "@/components/marketing/product-decoder";
+import { VideoGalleryPreview } from "@/components/marketing/video-gallery-preview";
+import { RoutineLabPreview } from "@/components/marketing/routine-lab-preview";
 import { KBeautyRoutineBuilder } from "@/components/marketing/kbeauty-routine-builder";
 import { BeautyNews } from "@/components/marketing/beauty-news";
 import { FinalCta } from "@/components/marketing/final-cta";
@@ -117,10 +118,11 @@ export default async function Home({
       <main id="main-content" className="flex-1">
         <Hero />
         <ProductDecoder />
+        <VideoGalleryPreview />
+        <RoutineLabPreview />
         <SubscriptionPreview />
         <WellnessShowcase />
         <SkinGoalsShowcase />
-        <StartHere />
         <ScanShowcase />
         <AuditShowcase />
         <Suspense fallback={<div className="h-[48rem]" aria-busy="true" />}><HomeRoutineBuilder /></Suspense>

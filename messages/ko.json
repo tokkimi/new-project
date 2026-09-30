@@ -105,7 +105,19 @@
     "ingredients": "성분",
     "rights": "Haru. 마케팅 문구 없이, 정성껏 만들었습니다.",
     "legal": "약관 및 정책",
-    "guides": "루틴 가이드"
+    "guides": "루틴 가이드",
+    "decoderTitle": "추가하기 전에 제품을 분석하세요.",
+    "decoderText": "제품을 검색해 성분, 원산지, 사용법을 확인하세요.",
+    "decoderScan": "제품 스캔",
+    "decoderPlaceholder": "예: COSRX Snail 96 또는 Beauty of Joseon",
+    "decoderAction": "분석하기",
+    "decoderHint": "구매를 고민 중인가요? Haru가 제품을 설명하고 루틴과 비교합니다.",
+    "decoderMissing": "아직 카탈로그에 없는 제품입니다. 공식 페이지를 온라인에서 찾아보세요.",
+    "decoderSearchOfficial": "공식 페이지 찾기",
+    "decoderHowTo": "사용 방법",
+    "decoderFull": "전체 정보 보기",
+    "decoderCompare": "내 루틴과 비교",
+    "decoderBuy": "리뷰 및 구매"
   },
   "shelf": {
     "title": "내 루틴",
@@ -1482,6 +1494,7 @@
       "scanCta": "얼굴 스캔 시작",
       "skinTypeExerciseCta": "피부 타입 확인하기",
       "skinDetails": "피부 상세",
+      "generatePassport": "생성하기",
       "noSkinProfile": "아직 피부 여권이 없습니다. 피부 타입 확인을 완료하면 더 정확한 기준이 만들어집니다.",
       "skinType": "피부 타입",
       "concerns": "고민",

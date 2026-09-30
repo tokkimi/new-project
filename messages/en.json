@@ -105,7 +105,19 @@
     "ingredients": "Ingredients",
     "rights": "Haru. Made with care, no marketing fluff.",
     "legal": "Legal",
-    "guides": "Routines"
+    "guides": "Routines",
+    "decoderTitle": "Decode a product before adding it.",
+    "decoderText": "Search a product to see its ingredients, origin and how to use it.",
+    "decoderScan": "Scan a product",
+    "decoderPlaceholder": "e.g. COSRX Snail 96 or Beauty of Joseon",
+    "decoderAction": "Decode",
+    "decoderHint": "Considering a purchase? Haru explains the product and compares it with your routine.",
+    "decoderMissing": "This product is not in the catalogue yet. Search online for its official page.",
+    "decoderSearchOfficial": "Find the official page",
+    "decoderHowTo": "How to use it",
+    "decoderFull": "View full details",
+    "decoderCompare": "Compare with my routine",
+    "decoderBuy": "Reviews & purchase"
   },
   "shelf": {
     "title": "My routine",
@@ -1482,6 +1494,7 @@
       "scanCta": "Start a face scan",
       "skinTypeExerciseCta": "Define my skin type",
       "skinDetails": "Skin details",
+      "generatePassport": "Generate",
       "noSkinProfile": "No skin profile yet. Run the skin type exercise to complete this passport.",
       "skinType": "Skin type",
       "concerns": "Concerns",

@@ -4,7 +4,6 @@ import * as React from "react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import {
-  CalendarCheck,
   Camera,
   Droplets,
   LinkIcon,
@@ -12,7 +11,6 @@ import {
   Pencil,
   Play,
   Plus,
-  ShieldCheck,
   Trash2,
 } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
@@ -73,11 +71,6 @@ function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) 
   const tClimate = useTranslations("climates");
   const tLifestyle = useTranslations("report.lifestyle");
   const { data: session } = useSession();
-  const checks = [
-    { icon: ShieldCheck, title: t("passport"), text: t("passportText") },
-    { icon: Camera, title: t("scan"), text: t("scanText") },
-    { icon: CalendarCheck, title: t("environment"), text: t("environmentText") },
-  ];
   const safe = (fn: () => string, fallback: string) => {
     try {
       return fn();
@@ -121,9 +114,8 @@ function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) 
 
   return (
     <section className="grid gap-4">
-      <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-        <div className="min-w-0">
-          <p className="text-xs font-medium uppercase tracking-[0.32em] text-muted-foreground">{t("passport")}</p>
+      <div className="min-w-0">
+        <p className="text-xs font-medium uppercase tracking-[0.32em] text-muted-foreground">{t("passport")}</p>
           <h2 className="mt-2 font-serif text-2xl text-foreground sm:text-3xl">{t("passportTitle")}</h2>
           <p className="mt-3 text-sm leading-6 text-muted-foreground">{t("passportIntro")}</p>
           <Button asChild variant="outline" className="mt-5 w-fit border-border bg-transparent text-foreground hover:bg-white/8">
@@ -131,38 +123,21 @@ function SkinPassportPanel({ profile }: { profile: SkinProfileSummary | null }) 
               <Droplets className="size-4" /> {t("skinTypeExerciseCta")}
             </Link>
           </Button>
-        </div>
-
-        <div className="relative min-w-0 px-6">
-          <span className="pointer-events-none absolute left-0 top-1/2 size-2 -translate-y-1/2 rounded-full bg-white/55" />
-          <span className="pointer-events-none absolute right-0 top-1/2 size-2 -translate-y-1/2 rounded-full bg-white/55" />
-          <div className="no-scrollbar flex snap-x gap-3 overflow-x-auto scroll-smooth">
-            {checks.map(({ icon: Icon, title, text }) => (
-              <div
-                key={title}
-                className="min-w-[48%] snap-start rounded-full border border-border bg-white/[0.02] px-4 py-3 sm:min-w-[42%] lg:min-w-[48%]"
-              >
-                <div className="flex items-center gap-2">
-                  <Icon className="size-4 shrink-0 text-foreground" />
-                  <p className="truncate text-sm font-medium text-foreground">{title}</p>
-                </div>
-                <p className="mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       <Card className="grid gap-4 p-5 sm:grid-cols-[auto_1fr] sm:p-6">
-        <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-white/[0.025] text-4xl font-medium text-foreground sm:size-28">
+        <div className="flex shrink-0 flex-col items-center gap-3">
+          <div className="flex size-24 items-center justify-center overflow-hidden rounded-full border border-border bg-white/[0.025] text-4xl font-medium text-foreground sm:size-28">
           {profileImage ? (
             <Image src={profileImage} alt="" width={112} height={112} className="size-full object-cover" unoptimized />
           ) : (
             initial
           )}
+          </div>
+          <Button asChild variant="outline"><Link href="/app/quiz">{t("generatePassport")}</Link></Button>
         </div>
         <div className="min-w-0">
-          <p className="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">{t("skinDetails")}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">{t("passport")}</p>
           {profile ? (
             <div className="mt-3 grid gap-x-5 gap-y-2 sm:grid-cols-2">
               {details.map((item) => (

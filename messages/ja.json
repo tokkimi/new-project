@@ -105,7 +105,19 @@
     "ingredients": "成分",
     "rights": "Haru. マーケティングの誇張なく、丁寧に作りました。",
     "legal": "法的情報",
-    "guides": "ルーティン"
+    "guides": "ルーティン",
+    "decoderTitle": "追加する前に、製品を読み解く。",
+    "decoderText": "製品を検索して成分、原産地、使い方を確認できます。",
+    "decoderScan": "製品をスキャン",
+    "decoderPlaceholder": "例: COSRX Snail 96 / Beauty of Joseon",
+    "decoderAction": "読み解く",
+    "decoderHint": "購入を検討中ですか？Haru が製品を説明し、ルーティンと比較します。",
+    "decoderMissing": "この製品はまだカタログにありません。公式ページをオンラインで探してください。",
+    "decoderSearchOfficial": "公式ページを探す",
+    "decoderHowTo": "使い方",
+    "decoderFull": "詳細を見る",
+    "decoderCompare": "ルーティンと比較",
+    "decoderBuy": "レビューと購入"
   },
   "shelf": {
     "title": "マイルーティン",
@@ -1482,6 +1494,7 @@
       "scanCta": "顔スキャンを開始",
       "skinTypeExerciseCta": "肌タイプを確認",
       "skinDetails": "肌の詳細",
+      "generatePassport": "作成する",
       "noSkinProfile": "肌パスポートはまだありません。肌タイプ確認を完了すると、信頼できるベースが作られます。",
       "skinType": "肌タイプ",
       "concerns": "悩み",

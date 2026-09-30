@@ -12,7 +12,7 @@ function ProductStrip({ products }: { products: Product[] }) {
   const tCategories = useTranslations("categories");
 
   return (
-    <div className="no-scrollbar flex gap-4 overflow-x-auto pb-2">
+    <div className="haru-scroll-cue no-scrollbar flex gap-4 overflow-x-auto pb-2">
       {products.map((p, i) => (
         <motion.div
           key={p.id}

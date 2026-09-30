@@ -8,6 +8,10 @@
   --glass-border: rgba(255,255,255,.16);
   color: var(--foreground); background: var(--background); font-weight: 400;
 }
+.haru-public :is(button,input,select,textarea) { font-family:var(--font-sans),sans-serif; }
+.haru-public main h1:not(.hero-editorial-title) { font-size:clamp(1.75rem,3vw,2.7rem) !important; line-height:1.08 !important; }
+.haru-public main h2:not(.hero-benefit h2) { font-size:clamp(1.35rem,2.1vw,2rem) !important; line-height:1.12 !important; }
+.haru-public main h3:not(.haru-goals-wheel-copy h3) { font-size:clamp(1.05rem,1.5vw,1.35rem) !important; line-height:1.2 !important; }
 .haru-hero { background: radial-gradient(ellipse at 82% 40%, rgba(234,209,190,.11), transparent 35%), radial-gradient(ellipse at 25% 10%, rgba(194,174,255,.11), transparent 40%), #050505; }
 .haru-routines { background: radial-gradient(ellipse at 15% 15%, rgba(206,185,173,.13), transparent 38%), linear-gradient(150deg, #080707, #161113 60%, #09090a); }
 .haru-public .haru-glass, .haru-public .haru-glow-card, .haru-public main [data-slot="card"] {
@@ -20,8 +24,8 @@
 .haru-public .haru-hero :is(.bg-white,.bg-\[\#fafaf8\]) { background:rgba(255,255,255,.065) !important; border-color:var(--border) !important; }
 .haru-public .haru-hero [class*="text-\["] { color:var(--foreground) !important; }
 .haru-goals-heading { min-height:26svh; padding-top:5rem; }
-.haru-goals-pin-track { height:400svh; }
-.haru-goals-pin-stage { position:sticky; top:0; display:flex; min-height:100svh; align-items:center; }
+.haru-goals-pin-track { height:340svh; }
+.haru-goals-pin-stage { position:sticky; top:0; display:flex; min-height:66svh; align-items:flex-start; padding-top:clamp(3.5rem,8vh,5.5rem); }
 .haru-public .haru-goals-wheel-panel { display:grid; width:100%; grid-template-columns:minmax(0,1.1fr) minmax(14rem,.58fr); gap:clamp(1.4rem,4vw,3.8rem); align-items:center; min-height:22rem; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; backdrop-filter:none; }
 .haru-wheel-carousel { display:grid; grid-template-columns:11rem minmax(11rem,1fr); gap:1.35rem; height:15.5rem; overflow:visible; border-radius:0; background:transparent; }
 .haru-wheel-photo { position:relative; align-self:center; width:11rem; height:12.75rem; overflow:hidden; border:1px solid rgba(255,244,237,.26); border-radius:1.25rem; background:rgba(255,255,255,.07); box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 20px 44px -28px #000; backdrop-filter:blur(18px) saturate(125%); }
@@ -37,19 +41,29 @@
 .haru-goals-wheel-copy h3 { margin-top:.65rem; font-family:var(--font-serif),serif; font-size:clamp(1.65rem,2.7vw,2.45rem); font-weight:500; line-height:1.02; }
 .haru-goals-wheel-copy > p:not(:first-child) { margin-top:1rem; color:var(--muted-foreground); font-size:.83rem; line-height:1.6; }
 .haru-goals-wheel-copy .haru-cta { margin-top:1.25rem; }
-@media (max-width: 720px) { .haru-goals-heading { min-height:20svh; padding-top:3.5rem; } .haru-goals-pin-track { height:360svh; } .haru-public .haru-goals-wheel-panel { grid-template-columns:1fr; gap:1.5rem; min-height:0; } .haru-wheel-carousel { grid-template-columns:8.4rem minmax(0,1fr); gap:.8rem; height:12.5rem; } .haru-wheel-photo { width:8.4rem; height:10.6rem; border-radius:1rem; } .haru-wheel-item { left:2.55rem; font-size:.92rem; } .haru-wheel-marker { left:1.15rem; } .haru-goals-wheel-copy { padding:0; } }
+@media (max-width: 720px) { .haru-goals-heading { min-height:20svh; padding-top:3.5rem; } .haru-goals-pin-track { height:300svh; } .haru-goals-pin-stage { min-height:58svh; padding-top:3.75rem; } .haru-public .haru-goals-wheel-panel { grid-template-columns:1fr; gap:1.5rem; min-height:0; } .haru-wheel-carousel { grid-template-columns:8.4rem minmax(0,1fr); gap:.8rem; height:12.5rem; } .haru-wheel-photo { width:8.4rem; height:10.6rem; border-radius:1rem; } .haru-wheel-item { left:2.55rem; font-size:.92rem; } .haru-wheel-marker { left:1.15rem; } .haru-goals-wheel-copy { padding:0; } }
 .haru-public .haru-routine-card { background: rgba(255,255,255,.055); box-shadow: 0 6px 22px -16px #000; }
 .haru-public .haru-routine-card:hover { box-shadow: 0 20px 42px -24px #000; }
+.haru-start-card { min-width:0; border-radius:1rem; padding:1rem; }.haru-start-card h3 { overflow:hidden; font-size:.83rem !important; white-space:nowrap; text-overflow:ellipsis; }.haru-start-card p { display:-webkit-box; overflow:hidden; -webkit-box-orient:vertical; -webkit-line-clamp:3; font-size:.7rem; }
+@media (max-width:540px) { .haru-start-card { padding:.7rem; }.haru-start-card .haru-icon-disc { width:2rem; height:2rem; }.haru-start-card h3 { font-size:.7rem !important; }.haru-start-card p { display:none; } }
 .haru-public .haru-home-product-card { border:1px solid rgba(255,255,255,.2) !important; border-radius:1.05rem; background:#090909 !important; color:#f8f3ee !important; box-shadow:0 12px 28px -22px #000 !important; }
 .haru-public .haru-home-product-card > div:first-child { border:0; border-radius:0; background:#f7f3ef; padding:.8rem; box-shadow:none; }
 .haru-public .haru-home-product-card > span { border-top:1px solid rgba(255,255,255,.14); background:#090909; }
+.haru-video-gallery-visual { position:relative; min-height:16rem; padding:1rem; }.haru-video-gallery-frame { position:relative; z-index:1; max-width:25rem; padding:1.1rem; border:1px solid rgba(255,243,235,.22); border-radius:1.2rem; background:rgba(255,255,255,.06); box-shadow:inset 0 1px 0 rgba(255,255,255,.17),0 24px 54px -38px #000; backdrop-filter:blur(20px); }.haru-video-thumbnail { display:flex; height:7.25rem; align-items:center; justify-content:center; border-radius:.9rem; color:#f5e3d4; background:radial-gradient(circle at 72% 30%,rgba(224,196,174,.42),transparent 24%),linear-gradient(135deg,#241d1b,#534139 55%,#161313); box-shadow:inset 0 1px 0 rgba(255,255,255,.2); }.haru-video-orb { position:absolute; border-radius:999px; background:rgba(218,194,236,.18); filter:blur(1px); }.haru-video-orb-a { right:3%; top:6%; width:6rem; height:6rem; }.haru-video-orb-b { bottom:0; right:23%; width:3rem; height:3rem; background:rgba(225,194,173,.26); }
+.haru-routine-lab-preview { display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:1rem; align-items:center; padding:1.25rem; border:1px solid rgba(255,243,235,.17); border-radius:1.2rem; background:linear-gradient(110deg,rgba(255,255,255,.07),rgba(222,196,178,.06)); box-shadow:inset 0 1px 0 rgba(255,255,255,.16); backdrop-filter:blur(18px); }
+.haru-public :is(.no-scrollbar,[class*="overflow-x-auto"]) { scrollbar-width:none; -ms-overflow-style:none; }.haru-public :is(.no-scrollbar,[class*="overflow-x-auto"])::-webkit-scrollbar { display:none; }
+.haru-scroll-cue { position:relative; }.haru-scroll-cue::before,.haru-scroll-cue::after { content:""; position:sticky; z-index:4; top:50%; width:.42rem; height:.42rem; margin-top:1rem; border-radius:999px; background:#f0d8c7; box-shadow:0 0 12px #efd3c0; pointer-events:none; }.haru-scroll-cue::before { left:.2rem; }.haru-scroll-cue::after { right:.2rem; }
+@media(max-width:640px){.haru-routine-lab-preview{grid-template-columns:auto 1fr}.haru-routine-lab-preview .haru-cta{grid-column:1/-1;width:max-content}}
+.haru-public :is(.no-scrollbar,[class*="overflow-x-auto"]) { scrollbar-width:none; -ms-overflow-style:none; }.haru-public :is(.no-scrollbar,[class*="overflow-x-auto"])::-webkit-scrollbar { display:none; }
+.haru-scroll-cue { position:relative; }.haru-scroll-cue::before,.haru-scroll-cue::after { content:""; position:sticky; z-index:4; top:50%; width:.42rem; height:.42rem; margin-top:1rem; border-radius:999px; background:#f0d8c7; box-shadow:0 0 12px #efd3c0; pointer-events:none; }.haru-scroll-cue::before { left:.2rem; }.haru-scroll-cue::after { right:.2rem; }
 .haru-public .haru-icon-disc { background: var(--secondary); }
 .haru-public main [class*="text-muted-foreground"], .haru-public main [data-slot="card"] [class*="text-muted-foreground"] { color: var(--muted-foreground) !important; }
 .haru-public main [class*="text-white"], .haru-public main [class*="text-foreground"], .haru-public main [class*="text-card-foreground"], .haru-public .haru-icon-halo { color: var(--foreground) !important; }
 .haru-public main [class*="border-border"], .haru-public main [class*="border-white"] { border-color: var(--border) !important; }
-.haru-public .haru-cta { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 10px; padding: 12px 22px; border-radius: 999px; background: var(--primary); color: var(--primary-foreground); border: 1px solid var(--primary); font-size: 14px; font-weight: 500; transition: transform .18s, box-shadow .18s; }
+.haru-public .haru-cta { display: inline-flex; min-height: 36px; align-items: center; justify-content: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: var(--primary); color: var(--primary-foreground); border: 1px solid var(--primary); font-size: 12px; font-weight: 500; transition: transform .18s, box-shadow .18s; }
 .haru-public .haru-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 18px #142f251a; }
 .haru-public .haru-cta-secondary { background: var(--glass); color: var(--foreground); border-color: var(--border); backdrop-filter: blur(12px); }
+.haru-public [data-slot="button"] { height:36px !important; min-height:36px !important; padding-inline:14px !important; font-size:12px !important; }
 .haru-public input, .haru-public textarea, .haru-public select { color: var(--foreground) !important; background-color: var(--glass) !important; border-color: var(--border) !important; }
 .haru-public input::placeholder { color: var(--muted-foreground) !important; }
 .haru-public select option { color: #202b29; background: #fff; }
@@ -64,7 +78,7 @@
 .hero-editorial-shade { position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,#050505 0%,rgba(5,5,5,.92) 25%,rgba(5,5,5,.46) 52%,rgba(5,5,5,.08) 100%); }
 .hero-kicker { display:inline-flex; align-items:center; gap:.45rem; color:rgba(250,239,231,.72); font-size:.62rem; font-weight:500; letter-spacing:.17em; text-transform:uppercase; }
 .hero-editorial-title { font-family:var(--font-serif),serif; color:#f8f1eb; font-size:clamp(2.05rem,3.2vw,3.25rem); font-weight:400; letter-spacing:-.04em; line-height:.98; }
-.haru-public .haru-cta-compact { min-height:38px; padding:8px 15px; border-radius:999px; font-size:12px; line-height:1; }
+.haru-public .haru-cta-compact { min-height:36px; padding:8px 14px; border-radius:999px; font-size:12px; line-height:1; }
 .hero-reference-scan { position:absolute; right:6%; top:50%; width:14rem; padding:1.25rem; border:1px solid rgba(255,238,227,.21); border-radius:1.25rem; background:rgba(40,25,21,.33); box-shadow:inset 0 1px 0 rgba(255,255,255,.17),0 20px 55px rgba(0,0,0,.25); backdrop-filter:blur(16px) saturate(125%); transform:translateY(-26%); }
 .hero-reference-scan > p { color:#f3e8df; font-size:10px; letter-spacing:.18em; }
 .hero-reference-scan div > p { display:flex; justify-content:space-between; gap:1rem; }.hero-reference-scan i { display:block; height:1px; background:linear-gradient(90deg,#f5dfce 0 76%,rgba(255,255,255,.18) 76%); opacity:.65; }
@@ -80,13 +94,14 @@
 .haru-bottom-nav { background: rgba(15,13,13,.85); color: var(--foreground); border: 1px solid var(--border); backdrop-filter: blur(24px); box-shadow: 0 8px 32px #0008; }
 .haru-bottom-public { background: rgba(15,13,13,.88); color: var(--foreground); border-color: var(--border); }
 .haru-tab-active { background: #ead1be20; }
+.haru-tab-personal { background:linear-gradient(145deg,rgba(224,204,191,.42),rgba(128,104,96,.36)); border:1px solid rgba(255,236,223,.18); }
 .haru-learning :is(h1,h2,h3) { font-family:var(--font-sans),sans-serif; font-weight:600; letter-spacing:-.02em; line-height:1.35; overflow-wrap:break-word; word-break:normal; text-wrap:pretty; }
 .haru-learning h1 { font-size:clamp(1.8rem,4vw,3rem); }
 .haru-learning h2 { font-size:clamp(1.4rem,3vw,2rem); }
 .haru-learning h3 { font-size:1.125rem; }
 .haru-learning :is(button,a) { white-space:normal; height:auto; min-height:44px; line-height:1.5; }
 .haru-learning select { text-overflow:ellipsis; }
-.haru-bottom-public .haru-tab-active { background: #466c521a; }
+.haru-bottom-public .haru-tab-active { background: #ead1be20; }
 .haru-bottom-nav a:focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }
 @media (prefers-reduced-motion: reduce) { .haru-public *, .haru-public *::before, .haru-public *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 @media (prefers-reduced-transparency: reduce) { .haru-public { --glass: var(--card); } .haru-public .haru-glass { backdrop-filter: none; } }
