@@ -4,7 +4,6 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/marketing/hero";
-import { SkinGoalsShowcase } from "@/components/marketing/skin-goals-showcase";
 import { ScanShowcase } from "@/components/marketing/scan-showcase";
 import { AuditShowcase } from "@/components/marketing/audit-showcase";
 import { WellnessShowcase } from "@/components/marketing/wellness-showcase";
@@ -120,7 +119,6 @@ export default async function Home({
         <RoutineLabPreview />
         <SubscriptionPreview />
         <VideoGalleryPreview />
-        <SkinGoalsShowcase />
         <ScanShowcase />
         <AuditShowcase />
         <Suspense fallback={<div className="h-[48rem]" aria-busy="true" />}><HomeRoutineBuilder /></Suspense>
