@@ -116,13 +116,13 @@ export default async function Home({
       <SiteHeader />
       <main id="main-content" className="flex-1">
         <Hero />
+        <ProductDecoder />
         <SubscriptionPreview />
         <WellnessShowcase />
         <SkinGoalsShowcase />
         <StartHere />
         <ScanShowcase />
         <AuditShowcase />
-        <ProductDecoder />
         <Suspense fallback={<div className="h-[48rem]" aria-busy="true" />}><HomeRoutineBuilder /></Suspense>
         <Suspense fallback={<div className="mx-auto h-80 max-w-6xl rounded-3xl" aria-busy="true" />}><HomeProducts /></Suspense>
         <Suspense fallback={null}><HomeNews /></Suspense>
