@@ -39,12 +39,14 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ProductImage } from "@/components/product-image";
 import { FaceGuideOverlay } from "@/components/face-guide-overlay";
+import { FaceMeshOverlay } from "@/components/face-mesh-overlay";
 import { FaceScanMarkerOverlay } from "@/components/face-scan-marker-overlay";
 import { FaceScanCapture } from "@/components/face-scan-capture";
 import { SkinScoreRing, ModuleScoreBar } from "@/components/skin-score";
 import { severityBadgeClass } from "@/lib/severity";
 import { useCatalog, useShelf } from "@/lib/shelf-store";
 import type { FaceLandmarkPoint } from "@/lib/face-mesh/faceMesh.types";
+import { moduleToZoneResults, zonesForModules } from "@/lib/face-mesh/faceMesh.utils";
 import { detectFaceScanMarkers, type FaceScanMarker } from "@/lib/face-mesh/faceScanMarkers";
 import {
   compareScans,
@@ -231,6 +233,19 @@ export function FaceScanClient() {
         return Number(b.flagged) - Number(a.flagged) || b.score - a.score;
       }) as ModuleFinding[];
   }, [analysis]);
+
+  const activeMeshModules = React.useMemo(
+    () => (analysis?.modules ?? []).filter((module) => module.flagged && module.observable),
+    [analysis]
+  );
+  const activeMeshZones = React.useMemo(
+    () => zonesForModules(activeMeshModules.map((module) => module.id)),
+    [activeMeshModules]
+  );
+  const meshZoneResults = React.useMemo(
+    () => moduleToZoneResults(activeMeshModules),
+    [activeMeshModules]
+  );
 
   const comparison = React.useMemo(
     () => (analysis && previous ? compareScans(analysis, previous) : null),
@@ -492,6 +507,17 @@ export function FaceScanClient() {
                 <div className="relative mx-auto aspect-square w-full max-w-[220px] overflow-hidden rounded-[1.5rem] bg-black sm:mx-0">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={preview} alt="" className="absolute inset-0 size-full object-cover" />
+                  {captureLandmarks?.length ? (
+                    <FaceMeshOverlay
+                      landmarks={captureLandmarks}
+                      sourceWidth={captureSize.width}
+                      sourceHeight={captureSize.height}
+                      activeZones={activeMeshZones}
+                      zoneResults={meshZoneResults}
+                      pulse
+                      className="opacity-80"
+                    />
+                  ) : null}
                   {captureLandmarks?.length ? (
                     <FaceScanMarkerOverlay
                       markers={scanMarkers}
