@@ -101,17 +101,24 @@ async function detectLandmarksInImage(imageSrc: string) {
   const vision = await FilesetResolver.forVisionTasks(
     "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
   );
-  const landmarker = (await FaceLandmarker.createFromOptions(vision, {
+  const options = (delegate: "GPU" | "CPU") => ({
     baseOptions: {
       modelAssetPath:
         "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task",
-      delegate: "GPU",
+      delegate,
     },
-    runningMode: "IMAGE",
+    runningMode: "IMAGE" as const,
     numFaces: 1,
     minFaceDetectionConfidence: 0.55,
     minFacePresenceConfidence: 0.55,
-  })) as unknown as ImageFaceLandmarker;
+  });
+  let landmarker: ImageFaceLandmarker;
+  try {
+    landmarker = (await FaceLandmarker.createFromOptions(vision, options("GPU"))) as unknown as ImageFaceLandmarker;
+  } catch {
+    // Safari and some mobile devices cannot initialise a GPU model for uploads.
+    landmarker = (await FaceLandmarker.createFromOptions(vision, options("CPU"))) as unknown as ImageFaceLandmarker;
+  }
   try {
     return {
       landmarks: landmarker.detect(image).faceLandmarks?.[0] ?? [],
@@ -765,6 +772,20 @@ export function FaceScanClient() {
                               className="absolute inset-0 size-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+                            {captureLandmarks?.length && module.flagged ? (
+                              <FaceMeshOverlay
+                                landmarks={captureLandmarks}
+                                sourceWidth={captureSize.width}
+                                sourceHeight={captureSize.height}
+                                mirrored={captureMirrored}
+                                activeZones={zonesForModules([module.id])}
+                                zoneResults={moduleToZoneResults([module])}
+                                showGuideMesh={false}
+                                showZoneLines
+                                pulse={activeModule === index}
+                                className="opacity-100"
+                              />
+                            ) : null}
                             {captureLandmarks?.length ? (
                               <FaceScanMarkerOverlay
                                 markers={scanMarkers}
