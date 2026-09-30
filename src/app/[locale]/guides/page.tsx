@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { guideVisual } from "@/lib/guide-visuals";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
