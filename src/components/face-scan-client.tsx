@@ -194,6 +194,8 @@ export function FaceScanClient() {
     setAddedProducts(new Set());
     setScanMarkers([]);
     let progressTimer: number | undefined;
+    const requestController = new AbortController();
+    let requestTimer: number | undefined;
 
     try {
       let resolvedLandmarks = landmarks ?? [];
@@ -220,7 +222,9 @@ export function FaceScanClient() {
       progressTimer = window.setInterval(() => {
         setAnalysisProgress((value) => (value < 94 ? Math.min(94, value + 2) : value));
       }, 260);
+      requestTimer = window.setTimeout(() => requestController.abort(), 70_000);
       const res = await fetch("/api/face-scan/analyze", {
+        signal: requestController.signal,
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: dataUrl, locale }),
@@ -270,6 +274,7 @@ export function FaceScanClient() {
       setPhase("error");
     } finally {
       if (progressTimer) window.clearInterval(progressTimer);
+      if (requestTimer) window.clearTimeout(requestTimer);
     }
   };
 
