@@ -224,6 +224,7 @@ export function FaceScanClient() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: dataUrl, locale }),
+        signal: AbortSignal.timeout(100_000),
       });
 
       if (res.status === 501) {

@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+
+export const maxDuration = 120;
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { rateLimit, clientKey } from "@/lib/rate-limit";
@@ -214,7 +216,7 @@ export async function POST(request: Request) {
     const client = getVisionClient();
     const message = await client.messages.create({
       model: "claude-haiku-4-5-20251001",
-      max_tokens: 2048,
+      max_tokens: 4096,
       system: buildSystemPrompt(localeName),
       tools: [TOOL],
       tool_choice: { type: "tool", name: "report_face_scan" },
@@ -234,7 +236,7 @@ export async function POST(request: Request) {
           ],
         },
       ],
-    });
+    }, { timeout: 75_000, maxRetries: 0 });
 
     const toolUse = message.content.find((block) => block.type === "tool_use");
     if (!toolUse || toolUse.type !== "tool_use") {

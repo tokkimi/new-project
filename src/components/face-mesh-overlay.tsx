@@ -106,11 +106,11 @@ export function FaceMeshOverlay({
         const color = statusColor(result?.severity ?? "low");
         const radius = pointRadius(result?.severity ?? "low", result?.score ?? 1, showGuideMesh ? 0.82 : 0.68) * ratio;
 
-        ctx.strokeStyle = color;
-        ctx.fillStyle = color;
+        ctx.strokeStyle = "rgba(255,255,255,0.98)";
+        ctx.fillStyle = "rgba(255,255,255,0.98)";
         ctx.shadowColor = color;
         ctx.shadowBlur = (result?.severity === "attention" ? 7 : 4) * ratio;
-        ctx.lineWidth = (result?.severity === "attention" ? 0.7 : 0.5) * ratio;
+        ctx.lineWidth = 1.25 * ratio;
 
         const localConnections =
           FACE_ZONES[zone.id]?.connections.length > 0 ? FACE_ZONES[zone.id].connections : [];
@@ -177,7 +177,7 @@ export function FaceMeshOverlay({
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className={cn("pointer-events-none absolute inset-0 size-full", className)}
+      className={cn("pointer-events-none absolute inset-0 z-10 size-full", className)}
     />
   );
 }
