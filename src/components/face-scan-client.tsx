@@ -99,12 +99,12 @@ async function detectLandmarksInImage(imageSrc: string) {
   });
   const [{ FaceLandmarker, FilesetResolver }] = await Promise.all([import("@mediapipe/tasks-vision")]);
   const vision = await FilesetResolver.forVisionTasks(
-    "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
+    "/face-model/wasm"
   );
   const options = (delegate: "GPU" | "CPU") => ({
     baseOptions: {
       modelAssetPath:
-        "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task",
+        "/face-model/face_landmarker.task",
       delegate,
     },
     runningMode: "IMAGE" as const,
@@ -260,14 +260,6 @@ export function FaceScanClient() {
       }
       setAnalysis(data.analysis);
       setPrevious((data.previous as PreviousScan) ?? null);
-      const markers = await detectFaceScanMarkers({
-        imageSrc: url,
-        landmarks: resolvedLandmarks,
-        imageSize: resolvedSize,
-        modules: data.analysis.modules,
-        mirrored,
-      }).catch(() => []);
-      setScanMarkers(markers);
       setAnalysisProgress(100);
       setPhase("result");
     } catch {
@@ -342,7 +334,7 @@ export function FaceScanClient() {
 
   React.useEffect(() => {
     let cancelled = false;
-    if (!preview || !analysis || !captureLandmarks?.length) {
+    if (phase !== "result" || !preview || !analysis || !captureLandmarks?.length) {
       setScanMarkers([]);
       return;
     }
@@ -365,24 +357,15 @@ export function FaceScanClient() {
     return () => {
       cancelled = true;
     };
-  }, [analysis, captureLandmarks, captureMirrored, captureSize, preview]);
+  }, [phase, analysis, captureLandmarks, captureMirrored, captureSize, preview]);
 
   const moduleProducts = React.useMemo(() => {
-    const used = new Set<string>();
     const byModule = new Map<ModuleId, Product[]>();
-    for (const module of orderedModules) {
-      const firstPass = pickModuleProducts(catalog, module, analysis?.skinType, used, 6);
-      firstPass.forEach((product) => used.add(product.id));
-      const fallback =
-        firstPass.length >= 4
-          ? []
-          : pickModuleProducts(catalog, module, analysis?.skinType, new Set(), 6).filter(
-              (product) => !firstPass.some((picked) => picked.id === product.id)
-            );
-      byModule.set(module.id, [...firstPass, ...fallback].slice(0, 6));
-    }
+    const module = orderedModules[activeModule];
+    if (phase !== "result" || !module?.flagged) return byModule;
+    byModule.set(module.id, pickModuleProducts(catalog, module, analysis?.skinType));
     return byModule;
-  }, [analysis?.skinType, catalog, orderedModules]);
+  }, [phase, activeModule, analysis?.skinType, catalog, orderedModules]);
 
   const summaryKey = !analysis
     ? "summaryGood"
@@ -436,7 +419,7 @@ export function FaceScanClient() {
         }}
       />
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="sync">
         {phase === "idle" && (
           <motion.div
             key="idle"

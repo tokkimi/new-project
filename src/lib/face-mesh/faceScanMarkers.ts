@@ -48,9 +48,16 @@ export async function detectFaceScanMarkers({
   if (!imageSrc || landmarks.length === 0) return [];
 
   const image = await loadImage(imageSrc);
-  const width = image.naturalWidth || image.width || imageSize.width;
-  const height = image.naturalHeight || image.height || imageSize.height;
-  if (!width || !height) return [];
+  const sourceWidth = image.naturalWidth || image.width || imageSize.width;
+  const sourceHeight = image.naturalHeight || image.height || imageSize.height;
+  if (!sourceWidth || !sourceHeight) return [];
+  // A phone upload can contain tens of millions of pixels. Local markers only
+  // need a small working image; normalised coordinates still match the photo.
+  const scale = Math.min(1, 1024 / Math.max(sourceWidth, sourceHeight));
+  const width = Math.max(1, Math.round(sourceWidth * scale));
+  const height = Math.max(1, Math.round(sourceHeight * scale));
+
+  await yieldToBrowser();
 
   const canvas = document.createElement("canvas");
   canvas.width = width;
@@ -70,6 +77,7 @@ export async function detectFaceScanMarkers({
   const faceBounds = boundsFor(facePolygon);
   const baseline = skinBaseline(pixels, positionedLandmarks, width, height);
   const allCandidates: Candidate[] = [];
+  let lastYield = performance.now();
 
   for (const module of modules) {
     if (!module.flagged || !module.observable) continue;
@@ -88,6 +96,10 @@ export async function detectFaceScanMarkers({
       const samplePoints = gridPoints(zoneBounds, module.id, width, height);
 
       for (const point of samplePoints) {
+        if (performance.now() - lastYield > 8) {
+          await yieldToBrowser();
+          lastYield = performance.now();
+        }
         if (!pointInPolygon(point, facePolygon)) continue;
         const sample = samplePixelArea(pixels, width, height, point.x, point.y, module.id);
         const score = scoreCandidate(module.id, sample, baseline);
@@ -119,11 +131,31 @@ export async function detectFaceScanMarkers({
 function loadImage(src: string) {
   return new Promise<HTMLImageElement>((resolve, reject) => {
     const image = new Image();
-    image.onload = () => resolve(image);
-    image.onerror = reject;
+    const timer = window.setTimeout(() => {
+      image.onload = null;
+      image.onerror = null;
+      image.src = "";
+      reject(new Error("Face marker photo loading timed out"));
+    }, 10_000);
+    image.onload = () => {
+      window.clearTimeout(timer);
+      resolve(image);
+    };
+    image.onerror = () => {
+      window.clearTimeout(timer);
+      reject(new Error("Face marker photo could not be loaded"));
+    };
     image.decoding = "async";
     image.src = src;
   });
+}
+
+function yieldToBrowser(): Promise<void> {
+  const scheduler = (globalThis as typeof globalThis & {
+    scheduler?: { yield?: () => Promise<void> };
+  }).scheduler;
+  if (scheduler?.yield) return scheduler.yield();
+  return new Promise((resolve) => window.setTimeout(resolve, 0));
 }
 
 function normalizedToPixel(point: FaceLandmarkPoint | undefined, width: number, height: number): PixelPoint | null {

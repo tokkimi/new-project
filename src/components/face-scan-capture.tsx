@@ -76,12 +76,12 @@ export function FaceScanCapture({ labels, onCapture, onFallbackUpload }: FaceSca
           import("@mediapipe/tasks-vision"),
         ]);
         const vision = await FilesetResolver.forVisionTasks(
-          "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
+          "/face-model/wasm"
         );
         const options = (delegate: "GPU" | "CPU") => ({
           baseOptions: {
             modelAssetPath:
-              "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task",
+              "/face-model/face_landmarker.task",
             delegate,
           },
           runningMode: "VIDEO" as const,

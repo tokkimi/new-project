@@ -9,9 +9,8 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   {
     key: "Permissions-Policy",
-    // geolocation=self enables the opt-in local-weather panel; everything else
-    // stays locked down.
-    value: "camera=(), microphone=(), geolocation=(self), interest-cohort=()",
+    // The scanner requests camera access on Haru; the browser still asks the user.
+    value: "camera=(self), microphone=(), geolocation=(self), interest-cohort=()",
   },
   {
     key: "Strict-Transport-Security",
@@ -21,7 +20,7 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' https: data: blob:",
       "font-src 'self' data:",
