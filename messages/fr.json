@@ -236,7 +236,7 @@
     "unavailableTitle": "L'analyse IA n'est pas encore configurée",
     "unavailableText": "Le moteur d'analyse photo n'a pas encore été connecté sur ce déploiement. En attendant, vos réponses au quiz peau alimentent déjà l'audit de votre routine.",
     "errorTitle": "L'analyse n'a pas abouti",
-    "errorText": "Un problème est survenu lors de la lecture de cette photo. Réessayez avec un meilleur éclairage, face à la caméra.",
+    "errorText": "Le service d’analyse n’a pas répondu ou a rencontré une erreur technique. Réessayez dans quelques instants. Ce message ne signifie pas que votre photo manque de lumière.",
     "routineSectionTitle": "Une routine ciblant ce que nous avons trouvé",
     "routineSectionText": "Construite à partir de notre catalogue de produits pour traiter les modules signalés ci-dessus.",
     "addToShelf": "Ajouter cette routine à ma routine",

@@ -407,7 +407,7 @@
     "unavailableTitle": "AI analysis isn't set up yet",
     "unavailableText": "The photo analysis engine hasn't been connected on this deployment. Your skin quiz answers already power your routine audit in the meantime.",
     "errorTitle": "Analysis didn't go through",
-    "errorText": "Something went wrong reading that photo. Try again with better lighting, facing the camera directly.",
+    "errorText": "The analysis service timed out or encountered a technical error. Please try again shortly. This message does not mean your photo has poor lighting.",
     "routineSectionTitle": "A routine that targets what we found",
     "routineSectionText": "Built from our product catalog to address the modules flagged above.",
     "addToShelf": "Add this routine to my routine",
